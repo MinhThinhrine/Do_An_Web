@@ -8,6 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/cssRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/cssRegister.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/csslogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/csslogin.css" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/login/lab3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/login/lab3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/register.html" afterDir="false" />
+>>>>>>> 305a715b9ad2f1721370bcdb11d4c230fb8c9d7f
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +73,15 @@
       <workItem from="1697532560074" duration="92000" />
       <workItem from="1697534047347" duration="1633000" />
       <workItem from="1697535922325" duration="1472000" />
+<<<<<<< HEAD
       <workItem from="1697544158754" duration="1177000" />
       <workItem from="1697550382002" duration="614000" />
+=======
+      <workItem from="1697544158754" duration="578000" />
+      <workItem from="1697546696463" duration="166000" />
+      <workItem from="1697547163175" duration="1519000" />
+      <workItem from="1697548739166" duration="4995000" />
+>>>>>>> 305a715b9ad2f1721370bcdb11d4c230fb8c9d7f
     </task>
     <servers />
   </component>

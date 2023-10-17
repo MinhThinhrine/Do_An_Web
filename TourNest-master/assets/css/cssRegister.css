@@ -1,14 +1,14 @@
 body {
     padding: 0px;
     margin: 0px;
-    font-size: 13px;
-    font-family: Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
     background-image: url("../images/login/lab3.png");
-
+    font-weight: 500;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #container {
-
-
 
 }
 #content {
@@ -21,15 +21,15 @@ body {
     border-radius: 10px;
 }
 #content .signin {
-    padding: 74px 95px 50px;
+    padding: 60px 95px 50px;
     text-align: center;
     font-size: 20px;
-
 }
 #content .signin b {
     display: block;
-    width: 150px;
-
+    width: 139px;
+    font-size: 30px;
+    color: #083153;
 }
 #content .user {
     width: 240px;
@@ -79,25 +79,38 @@ body {
 }
 #content .button {
     display: block;
-    width: 140px;
+    width: 240px;
     height: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 #content .button button {
     display: block;
     height: 100%;
     width: 100%;
     border-radius: 15px;
-    background: #5976d7;
+    background: #00d8fe;
     border: none;
     color: white;
+    box-shadow: 0 10px 10px rgba(0, 216, 254, 0.4);
+    cursor: pointer;
 
 }
+<<<<<<< HEAD
 #content .button:hover button {
     background-color: #1da1f3;
     cursor: pointer;
+=======
+#content .button button a{
+    text-decoration: none;
+    color: white;
+    padding: 12px 84px;
+}
+#content .button button:hover{
+    background: #00d8d5;
+    box-shadow: 0 10px 10px rgba(0, 216, 213, 0.3);
+>>>>>>> 305a715b9ad2f1721370bcdb11d4c230fb8c9d7f
 }
 #content .text{
     margin-top: 40px;
@@ -108,15 +121,39 @@ body {
     color: dimgrey;
 }
 
-
+.ques{
+    margin: 15px 0px 15px 0px;
+    color: #bbbbbb;
+    width: 130px;
+    font-weight: bold;
+    font-family: Calibri;
+    margin-left: auto;
+    margin-right: auto;
+}
 #content .signup {
     text-align: center;
-    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    width: 140px;
+    height: 20px;
 }
 #content .signup a {
     text-decoration: none;
-    color: black;
+    color: #083153;
+    height: 100%;
+    width: 100%;
 }
 #content .signup a:hover {
-    color: #3b5999;
+    margin-top: -10px;
+    padding-top: 10px;
+    display: block;
+    height: 140%;
+    width: 100%;
+    border-radius: 15px;
+    background: #00d8fe;
+    border: none;
+    color: white;
+    box-shadow: 0 10px 10px rgba(0, 216, 254, 0.3);
+    cursor: pointer;
 }
