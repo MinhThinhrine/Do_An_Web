@@ -3,7 +3,7 @@ body {
     margin: 0px;
     font-size: 13px;
     font-family: Tahoma, Arial, sans-serif;
-    background-image: url("lab3.png");
+    background-image: url("../images/login/lab3.png");
 
 }
 #container {
@@ -11,25 +11,30 @@ body {
 
 
 }
- #content {
+#content {
     width: 335px;
     height: 600px;
     background: white;
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
-     border-radius: 10px;
+    border-radius: 10px;
 }
 #content .signin {
-    padding: 74px 130px 50px;
+    padding: 74px 95px 50px;
     text-align: center;
     font-size: 20px;
+
+}
+#content .signin b {
+    display: block;
+    width: 150px;
 
 }
 #content .user {
     width: 240px;
     height: 50px;
-margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -38,7 +43,22 @@ margin-bottom: 30px;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
+}
+#content .email {
+    width: 240px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
 
+}
+#content .email input {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    padding-left: 20px;
+    box-shadow: 0px   0px  5px 5px rgba(211, 211, 211, 0.32);
 }
 #content .user input {
     width: 90%;
@@ -59,18 +79,18 @@ margin-bottom: 30px;
 }
 #content .button {
     display: block;
-   width: 140px;
+    width: 140px;
     height: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 #content .button button {
     display: block;
     height: 100%;
     width: 100%;
     border-radius: 15px;
-    background: #bd59d7;
+    background: #5976d7;
     border: none;
     color: white;
 
@@ -78,48 +98,21 @@ margin-bottom: 30px;
 #content .text{
     margin-top: 40px;
     margin-bottom: 30px;
- }
+}
 #content .text p {
     text-align: center;
     color: dimgrey;
 }
-#content .icon {
+
+
+#content .signup {
     text-align: center;
-    display: flex;
+    margin-top: 35px;
 }
-#content .icon .fb {
- width: 40px    ;
-    height: 40px;
-    background: white;
-    text-align: center;
-    margin-right: 20px;
-    border-radius: 50%;
-    margin-left: 115px;
-    box-shadow: 0px   0px  5px 5px rgba(211, 211, 211, 0.32);
+#content .signup a {
+    text-decoration: none;
+    color: black;
 }
-#content .icon .gg {
-    width: 40px    ;
-    height: 40px;
-    background:white;
-    text-align: center;
-    border-radius: 50%;
-    box-shadow: 0px   0px  5px 5px rgba(211, 211, 211, 0.32);
-}
-#content .icon .fb img {
-
-
-     margin-top: 12px;
-
-
-
-}
-
-#content .icon .gg img {
-    margin-top: 12px;
-
-
-}
-#content .signup p {
-    text-align: center;
-    margin-top: 85px;
+#content .signup a:hover {
+    color: #3b5999;
 }
