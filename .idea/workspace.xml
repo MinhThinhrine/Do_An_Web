@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/css/cssRegister.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TourNest-master/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login-css.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/csslogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/csslogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/login.html" afterDir="false" />
-    </list>
+    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,20 +32,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\FPT - ADMIN\OneDrive\Documents\GitHub\Do_An_Web\TourNest-master\assets\css" />
@@ -71,6 +64,7 @@
       <workItem from="1697534047347" duration="1633000" />
       <workItem from="1697535922325" duration="1472000" />
       <workItem from="1697544158754" duration="578000" />
+      <workItem from="1697546696463" duration="166000" />
     </task>
     <servers />
   </component>
