@@ -17,7 +17,8 @@
             <div class="pass"><input id="pass" type="password" placeholder="Mật khẩu từ 6 - 20 kí tự" minlength="6" maxlength="20" >
             </div>
             <div class="button"><button type="submit" name="btn" id="btn"><a>ĐĂNG NHẬP</a></button></div>
-            <div class="ques">Bạn muốn trải nghiệm TourNest?</div>
+            <div class="ques">Bạn muốn trải nghiệm
+                <a href="index.html">TourNest</a>?</div>
             <div class="signup">
                 <a href="register.html">ĐĂNG KÝ</a>
             </div>
@@ -30,8 +31,6 @@
     document.getElementById("btn").disabled=true;
     document.getElementById("btn").style.backgroundColor = "#bbbbbb";
     document.getElementById("btn").style.cursor ="none";
-    var u = document.getElementById("email").value;
-    var p = document.getElementById("pass").value;
 ///
     const validateEmail = (email) => {
         return email.match(
@@ -43,7 +42,7 @@
         const email = $('#email').val();
         $result.text('');
 
-        if(validateEmail(email) && p.length > 6){
+        if(validateEmail(email) ){
             $result.text(email + ' hợp lệ.');
             $result.css('color', 'green');
 

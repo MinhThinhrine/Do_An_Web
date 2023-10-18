@@ -110,7 +110,10 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
+.ques a{
+    text-decoration: none;
+    color: #00d8fe;
+}
 #content .signup {
     text-align: center;
     margin-left: auto;

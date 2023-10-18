@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/cssRegister.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
         <div class="pass">
                 <input id="confirm" type="password" placeholder="Nhập lại mật khẩu" minlength="6" maxlength="20" >
         </div>
-        <div class="email">
+        <div class="emailx">
             <input id="email" type="email" placeholder="Email" required autocomplete="on" autofocus ></input>
             <p id="result"></p>
         </div>
@@ -37,9 +38,7 @@
     document.getElementById("btn").disabled=true;
     document.getElementById("btn").style.backgroundColor = "#bbbbbb";
     document.getElementById("btn").style.cursor ="none";
-    var u = document.getElementById("email").value;
-    var p = document.getElementById("pass").value;
-    var conf = document.getElementById("confirm").value;
+
 
     ///
     const validateEmail = (email) => {
@@ -51,8 +50,10 @@
         const $result = $('#result');
         const email = $('#email').val();
         $result.text('');
+        var p = document.getElementById("pass").value;
+        var conf = document.getElementById("confirm").value;
 
-        if(validateEmail(email) && p.length > 6 && (conf===p)){
+        if(validateEmail(email)){
             $result.text(email + ' hợp lệ.');
             $result.css('color', 'green');
             document.getElementById("btn").disabled = false;
@@ -61,7 +62,7 @@
 
             const button = document.getElementById('btn');
             button.addEventListener('click', function() {
-                window.location.href = 'index.html';
+                window.location.href = 'login.html';
             });
 
         } else{

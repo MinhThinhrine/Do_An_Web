@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/cssRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/cssRegister.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/csslogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/csslogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/js/custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TourNest-master/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TourNest-master/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/register.html" afterDir="false" />
     </list>
@@ -76,6 +75,7 @@
       <workItem from="1697548739166" duration="13042000" />
       <workItem from="1697562207113" duration="76000" />
       <workItem from="1697636025939" duration="7871000" />
+      <workItem from="1697644361552" duration="940000" />
     </task>
     <servers />
   </component>
