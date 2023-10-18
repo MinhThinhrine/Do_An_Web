@@ -7,22 +7,74 @@
 </head>
 <body>
 <div id="container">
-
     <div id="content">
-        <div class="signin">    <b>ĐĂNG KÝ</b></div>
-        <div class="user"><input type="text" placeholder="Tài khoản"></input></div>
-        <div class="pass"><input type="password" placeholder="Mật khẩu"></div>
-        <div class="pass"><input type="password" placeholder="Nhập lại mật khẩu"></div>
-        <div class="email"><input type="email" placeholder="Email"></div>
-        <div class="button"><button><a href="login.html">ĐĂNG KÝ</a></button></div>
+        <div class="signin"><b>ĐĂNG KÝ</b></div>
+        <div class="user">
+            <input type="text" placeholder="Tài khoản"></input>
+        </div>
+        <div class="pass">
+                <input id="pass" type="password" placeholder="Mật khẩu từ 6 - 20 kí tự" minlength="6" maxlength="20" >
+        </div>
+        <div class="pass">
+                <input id="confirm" type="password" placeholder="Nhập lại mật khẩu" minlength="6" maxlength="20" >
+        </div>
+        <div class="email">
+            <input id="email" type="email" placeholder="Email" required autocomplete="on" autofocus ></input>
+            <p id="result"></p>
+        </div>
+        <div class="button">
+            <button type="submit" name="btn" id="btn"><a>ĐĂNG KÝ</a></button>
+        </div>
         <div class="ques">Bạn đã có tài khoản?</div>
         <div class="signup">
             <a href="login.html">ĐĂNG NHẬP</a>
         </div>
-
     </div>
-
-
 </div>
 </body>
+<script>
+    //khoa nut đăng nhập
+    document.getElementById("btn").disabled=true;
+    document.getElementById("btn").style.backgroundColor = "#bbbbbb";
+    document.getElementById("btn").style.cursor ="none";
+    var u = document.getElementById("email").value;
+    var p = document.getElementById("pass").value;
+    var conf = document.getElementById("confirm").value;
+
+    ///
+    const validateEmail = (email) => {
+        return email.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
+    const validate = () => {
+        const $result = $('#result');
+        const email = $('#email').val();
+        $result.text('');
+
+        if(validateEmail(email) && p.length > 6 && (conf===p)){
+            $result.text(email + ' hợp lệ.');
+            $result.css('color', 'green');
+            document.getElementById("btn").disabled = false;
+            document.getElementById("btn").style.backgroundColor = "#00d8d5";
+            document.getElementById("btn").style.cursor ="pointer";
+
+            const button = document.getElementById('btn');
+            button.addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
+
+        } else{
+            $result.text(email + ' không hợp lệ.');
+            $result.css('color', 'red');
+
+            document.getElementById("btn").disabled = true;
+            document.getElementById("btn").style.backgroundColor = "#bbbbbb";
+            document.getElementById("btn").style.cursor ="none";
+        }
+        return false;
+    }
+    $('#email').on('input', validate);
+</script>
+
 </html>
