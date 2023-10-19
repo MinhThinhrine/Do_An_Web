@@ -22,10 +22,7 @@
     document.getElementById("btn").style.backgroundColor = "#00d8d5";
     document.getElementById("btn").style.cursor ="pointer";
 
-    const button = document.getElementById('btn');
-    button.addEventListener('click', function() {
-    window.location.href = 'index.html';
-});
+
 
 } else{
     $result.text(email + ' không hợp lệ.');
@@ -38,3 +35,14 @@
     return false;
 }
     $('#email').on('input', validate);
+    document.addEventListener("DOMContentLoaded", function () {
+        const loginButton = document.getElementById("btn");
+        loginButton.addEventListener("click", function () {
+            // Thực hiện kiểm tra đăng nhập ở đây
+            // Nếu đăng nhập thành công, bạn có thể lưu trạng thái đăng nhập vào localStorage.
+            // Ví dụ:
+            localStorage.setItem("isLoggedIn", "true");
+                window.location.href = "index.html";
+        });
+    });
+
