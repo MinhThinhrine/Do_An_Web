@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/home/1920.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-coin-50.png" afterDir="false" />
@@ -19,16 +20,42 @@
       <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/s3.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TourNest-master/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/index.html" afterDir="false" />
     </list>
+=======
+<<<<<<< HEAD
+    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="">
+<<<<<<< Updated upstream
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/cssRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/cssRegister.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/csslogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/csslogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/register.html" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/login.html" afterDir="false" />
+>>>>>>> Stashed changes
+    </list>
+=======
+    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="" />
+>>>>>>> 674ad144011465eea1f5f8fbf8121fa4bdbbc20b
+>>>>>>> aa60e1c400d8626c3b864fc4e8d4f77108199347
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+<<<<<<< HEAD
         <option value="HTML File" />
+=======
+        <option value="JavaScript File" />
+>>>>>>> aa60e1c400d8626c3b864fc4e8d4f77108199347
       </list>
     </option>
   </component>
@@ -38,6 +65,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -88,9 +116,20 @@
       <workItem from="1697547163175" duration="1519000" />
       <workItem from="1697548739166" duration="13042000" />
       <workItem from="1697562207113" duration="76000" />
+<<<<<<< Updated upstream
       <workItem from="1697636025939" duration="7871000" />
+<<<<<<< HEAD
+      <workItem from="1697644361552" duration="940000" />
+=======
+      <workItem from="1697634848505" duration="3012000" />
+>>>>>>> Stashed changes
+=======
       <workItem from="1697644361552" duration="1812000" />
+<<<<<<< HEAD
       <workItem from="1697683248931" duration="8140000" />
+=======
+>>>>>>> 674ad144011465eea1f5f8fbf8121fa4bdbbc20b
+>>>>>>> aa60e1c400d8626c3b864fc4e8d4f77108199347
     </task>
     <servers />
   </component>
