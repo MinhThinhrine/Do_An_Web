@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/cssRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/cssRegister.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/csslogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/csslogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/register.html" afterDir="false" />
-    </list>
+    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +69,7 @@
       <workItem from="1697548739166" duration="13042000" />
       <workItem from="1697562207113" duration="76000" />
       <workItem from="1697636025939" duration="7871000" />
-      <workItem from="1697644361552" duration="940000" />
+      <workItem from="1697644361552" duration="1812000" />
     </task>
     <servers />
   </component>
