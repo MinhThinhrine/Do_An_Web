@@ -179,6 +179,25 @@ $(document).ready(function(){
             offset:0
         });
 
+    $('.header-area').sticky({
+        topSpacing:0
+    });
+
+    //=============
+
+    $('li.smooth-menu a').bind("click", function(event) {
+        event.preventDefault();
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top - -1
+        }, 1200,'easeInOutExpo');
+    });
+
+    $('body').scrollspy({
+        target:'.navbar-collapse',
+        offset:0
+    });
+
     // 7.animation support
 
         $(window).load(function(){
