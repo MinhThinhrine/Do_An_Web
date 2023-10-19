@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="" />
+    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/home/1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-coin-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-company-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-map-100 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-map-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-service-50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/s1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/s1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/s2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/s3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -28,6 +42,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2Wfhw7nAanNMLuyPjrqeFkSm27g" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,6 +65,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Intellij\Java\Do_An_Web\TourNest-master\assets\images\home" />
+      <recent name="D:\Intellij\Java\Do_An_Web\TourNest-master\assets\images\service" />
+      <recent name="D:\Intellij\Java\Do_An_Web\TourNest-master" />
       <recent name="C:\Users\FPT - ADMIN\OneDrive\Documents\GitHub\Do_An_Web\TourNest-master\assets\css" />
     </key>
   </component>
@@ -70,6 +90,7 @@
       <workItem from="1697562207113" duration="76000" />
       <workItem from="1697636025939" duration="7871000" />
       <workItem from="1697644361552" duration="1812000" />
+      <workItem from="1697683248931" duration="8140000" />
     </task>
     <servers />
   </component>
