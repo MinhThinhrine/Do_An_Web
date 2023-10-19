@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="">
 <<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -17,6 +18,9 @@
       <change beforePath="$PROJECT_DIR$/TourNest-master/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/login.html" afterDir="false" />
 >>>>>>> Stashed changes
     </list>
+=======
+    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="" />
+>>>>>>> 674ad144011465eea1f5f8fbf8121fa4bdbbc20b
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,10 +91,14 @@
       <workItem from="1697562207113" duration="76000" />
 <<<<<<< Updated upstream
       <workItem from="1697636025939" duration="7871000" />
+<<<<<<< HEAD
       <workItem from="1697644361552" duration="940000" />
 =======
       <workItem from="1697634848505" duration="3012000" />
 >>>>>>> Stashed changes
+=======
+      <workItem from="1697644361552" duration="1812000" />
+>>>>>>> 674ad144011465eea1f5f8fbf8121fa4bdbbc20b
     </task>
     <servers />
   </component>
