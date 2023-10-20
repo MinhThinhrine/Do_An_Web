@@ -104,9 +104,9 @@
 										</li><!--/.project-btn-->
 										<li id="icon-user" class="smooth-menu"> <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i></i>
 											<ul id="service_account">
-												<li><a href="">Thông tin tài khoản</a></li>
-												<li><a href="">Tour của tôi</a></li>
-												<li><a href="register.html">Đăng xuất</a></li>
+												<li><a id="myInfor" href="" >Thông tin tài khoản</a></li>
+												<li><a id="myTour" href="">Tour của tôi</a></li>
+												<li><a id="log_out" href="register.html">Đăng xuất</a></li>
 											</ul>
 										</li>
 
@@ -1604,7 +1604,70 @@
 
 		</footer><!-- /.footer-copyright-->
 		<!-- footer-copyright end -->
+		<!-- myInfor start -->
+		<section id="infor">
+			<div class="container">
+				<div class="infor_header">
+						<h3>Thông tin của tôi</h3>
+					<h5>Quản lí thông tin để bảo mật tài khoản</h5>
+				</div>
+					<div id="fomr_infor">
+						<fomr >
+			<table class="form_table">
+				<tr class="username">
+					<td><lable>Tên đăng nhập</lable></td>
+					<td><div>mai xuan thuc</div></td>
+				</tr>
+				<tr class="name">
+					<td><lable>Tên </lable></td>
+					<td><div><input type="text"></div></td>
+				</tr>
+				<tr class="email">
+					<td><lable>Email</lable></td>
+					<td><div  >maixuanthuc@gmail.com</div></td>
+				</tr>
+				<tr class="phone">
+					<td><lable>Số điện thoại</lable></td>
+					<td><div>0912190156</div></td>
+				</tr>
+				<tr class="date">
+					<td><lable>Ngày sinh</lable></td>
+					<td><div>
+						<select id="day" name="day">
+							<option value="">Ngày</option>
+							<!-- Thêm các tùy chọn cho ngày từ 1 đến 31 bằng JavaScript -->
+						</select>
 
+						<select id="month" name="month">
+							<option value="">Tháng</option>
+							<!-- Thêm các tùy chọn cho tháng từ 1 đến 12 bằng JavaScript -->
+						</select>
+
+						<select id="year" name="year">
+							<option value="">Năm</option>
+							<!-- Thêm các tùy chọn cho năm từ 1900 đến năm hiện tại bằng JavaScript -->
+						</select>
+					</div></td>
+				</tr>
+				<tr class="save">
+					<td><lable></lable></td>
+					<td><div><button onclick="showCustomDialog()">Lưu</button></div></td>
+				</tr>
+				<div id="custom-dialog" class="hidden">
+					<div class="dialog-content">
+						<i  class="fa-regular fa-circle-check"></i>
+						<p>Cập nhật thành công !!</p>
+					</div>
+				</div>
+
+			</table>
+					</fomr>
+					</div>
+
+
+			</div>
+		</section>
+		<!-- myInfor end -->
 
 
 
