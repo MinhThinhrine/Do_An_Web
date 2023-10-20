@@ -219,7 +219,6 @@ a{
 }
 .infoshare{
     position: relative;
-    width: 100px;
 }
 .infoshare>div {
     float: left;
@@ -515,7 +514,7 @@ ol, ul {
     border-bottom: solid 1px #fff;
 }
 .boxDesign2 ul li.active a {
-    color: #ed0080;
+    color: #ed0080 !important;
 }
 .boxDesign2 ul li a {
     padding: 9px 10px;
@@ -536,4 +535,120 @@ ol, ul {
 }
 #breadcrumb .wrapperr .navation >ul>li>a>span {
     color: #666666;
+}
+.boxDesign2>ul>li>a {
+    background-color: #938f8f;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+.floatBox.highlight .box-white {
+    min-height: 54px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+    font-size: 16px;
+}
+.text-detail {
+    top: 15px;
+    position: absolute;
+}
+.text-detail .width-70 {
+    width: 86px;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.col-xs-12 {
+    width: 100%;
+    float: left;
+}
+.price-color {
+    color: #ffbd00;
+    font-size: 14px;
+    line-height: 20px;
+    position: absolute;
+    top: 15px;
+    right: 150px;
+}
+.hide-class {
+    display: none;
+}
+.floatBox.highlight .btn-group {
+    width: 117px;
+    height: 30px;
+    float: right;
+    margin-top: 6px;
+}
+
+.floatBox.highlight .btn-group2 {
+    width: 117px;
+    height: 30px;
+    float: right;
+    margin-top: 6px;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn-group2.btn2, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 1px;
+    float: right;
+}
+.btn {
+    font-weight: bold;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+    user-select: none;
+    background-image: none;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+.floatBox.highlight .btn-group .number-detail{
+    float: left;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 4px 0;
+    min-width: 38px;
+    text-align: center;
+    color: #333333;
+}
+span.number-detail.number-child{
+    float: left;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 4px 0;
+    min-width: 38px;
+    text-align: center;
+    color: #333333;
+}
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.btn-group-vertical>.btn, .btn-group>.btn {
+    position: relative;
+    float: left;
+}
+.btn-group-vertical>.btn, .btn-group>.btn.plus-adult {
+    position: relative;
+    float: right;
+}
+div.col-xs-12.box-white{
+    padding-left: 0;
+    padding-right: 0;
 }
