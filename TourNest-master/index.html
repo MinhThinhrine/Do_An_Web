@@ -1957,7 +1957,7 @@
 		<section id="infor">
 			<div class="container">
 				<div class="infor_header">
-						<h3>Thông tin của tôi</h3>
+						<h3>Chỉnh sửa thông tin cá nhân</h3>
 					<h5>Quản lí thông tin để bảo mật tài khoản</h5>
 				</div>
 					<div id="fomr_infor">
@@ -1965,19 +1965,20 @@
 			<table class="form_table">
 				<tr class="username">
 					<td><lable>Tên đăng nhập</lable></td>
-					<td><div>mai xuan thuc</div></td>
+					<td><input class="form-control" id="inputUsername" type="text" placeholder="Nhập tên người dùng">
+					</td>
 				</tr>
 				<tr class="name">
 					<td><lable>Tên </lable></td>
-					<td><div><input type="text"></div></td>
+					<td><input class="form-control" id="inputFirstName" type="text" placeholder="Nhập tên của bạn" ></td>
 				</tr>
 				<tr class="email">
-					<td><lable>Email</lable></td>
-					<td><div  >maixuanthuc@gmail.com</div></td>
+					<td><lable>Địa chỉ</lable></td>
+					<td><input class="form-control" id="inputEmailAddress" type="email" placeholder="Nhập địa chỉ mới"></td>
 				</tr>
 				<tr class="phone">
 					<td><lable>Số điện thoại</lable></td>
-					<td><div>0912190156</div></td>
+					<td><input class="form-control" id="inputPhone" type="tel" placeholder="Nhập số điện thoại mới"></td>
 				</tr>
 				<tr class="date">
 					<td><lable>Ngày sinh</lable></td>
@@ -2000,7 +2001,7 @@
 				</tr>
 				<tr class="save">
 					<td><lable></lable></td>
-					<td><div><button onclick="showCustomDialog()">Lưu</button></div></td>
+					<td><div><button onclick="showCustomDialog()">Lưu thông tin</button></div></td>
 				</tr>
 				<div id="custom-dialog" class="hidden">
 					<div class="dialog-content">
@@ -2012,8 +2013,6 @@
 			</table>
 					</fomr>
 					</div>
-
-
 			</div>
 		</section>
 		<!-- myInfor end -->
