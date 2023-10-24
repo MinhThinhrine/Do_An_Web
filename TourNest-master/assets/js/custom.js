@@ -216,10 +216,33 @@ $(document).ready(function(){
 
 });
     //pagination
-
 var activePage  = document.querySelector('.pagination-active');
 var currentPage = parseInt(activePage.textContent);
 changePage(currentPage);
+
+function changePage(pageNumber) {
+    currentPage = parseInt(pageNumber);
+    var paginationLinks = document.getElementsByClassName('pagination-inner')[0].getElementsByTagName('a');
+    for (var i = 0; i < paginationLinks.length; i++) {
+        paginationLinks[i].classList.remove('pagination-active');
+    }
+    paginationLinks[pageNumber - 1].classList.add('pagination-active');
+
+    var startId = (pageNumber - 1) * 16 + 1;
+    var endId = pageNumber * 16;
+
+    for (var j = 1; j <= 208; j++) {
+        var itemId = document.getElementById(String(j));
+        if (itemId) {
+            if (j >= startId && j <= endId) {
+                itemId.style.display = 'block';
+            } else {
+                itemId.style.display = 'none';
+            }
+        }
+    }
+
+}
 function previousPage() {
     if (currentPage > 1) {
         currentPage--;
@@ -233,35 +256,5 @@ function nextPage() {
         changePage(currentPage);
     }
 }
-function changePage(pageNumber) {
-    var paginationLinks = document.getElementsByClassName('pagination-inner')[0].getElementsByTagName('a');
-    for (var i = 0; i < paginationLinks.length; i++) {
-        paginationLinks[i].classList.remove('pagination-active');
-    }
-    paginationLinks[pageNumber - 1].classList.add('pagination-active');
-
-    var startId = (pageNumber - 1) * 16 + 1;
-    var endId = pageNumber * 16;
-    // var itemContainer = document.getElementById('item-container');
-    // var items = itemContainer.children;
-    for (var j = 1; j <= 208; j++) {
-        var itemId = document.getElementById(String(j));
-        if (itemId) {
-            if (j >= startId && j <= endId) {
-                itemId.style.display = 'block';
-            } else {
-                itemId.style.display = 'none';
-            }
-        }
-    }
-    // for (var i = 0; i < items.length; i++) {
-    //     document.getElementById('i').style.display = 'none';
-    // }
-    //     for (var j = startId; j <= endId; j++) {
-    //         const item = document.getElementById('j');
-    //         item.style.display = 'none';
-    //     }
-}
-
 
 	
