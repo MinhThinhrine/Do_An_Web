@@ -213,7 +213,26 @@ $(document).ready(function(){
 
         });
         
+        //fixed
+    //scroll
+    $(window).on('scroll',function () {
 
+        if ($(this).scrollTop() > 600) {
+            $('.mnfixed_wrap').css({
+                'position': 'fixed',
+                'top': '0',
+                'margin-top': '80px'
+            });
+
+        } else {
+            $('.mnfixed_wrap').css({
+                'position': 'relative',
+                'top': 'auto'
+            });
+
+        }
+
+    });
 });
     //pagination
 var activePage  = document.querySelector('.pagination-active');
@@ -256,5 +275,6 @@ function nextPage() {
         changePage(currentPage);
     }
 }
+
 
 	

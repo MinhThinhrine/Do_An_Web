@@ -412,7 +412,6 @@ em {
     text-align: right;
 }
 .listDay {
-    padding-left: 30px;
     position: relative;
 }
 
@@ -652,3 +651,16 @@ div.col-xs-12.box-white{
     padding-left: 0;
     padding-right: 0;
 }
+.mnfixed_wrap{
+    position: relative;
+    height: 366px;
+}
+.mnfixed_fixed_fixed{
+    width: 376.65px;
+    z-index: 101;
+    position: initial;
+    top: initial;
+    left: initial;
+    bottom: initial;
+}
+
