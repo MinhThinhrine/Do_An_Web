@@ -250,7 +250,7 @@ function changePage(pageNumber) {
     var startId = (pageNumber - 1) * 16 + 1;
     var endId = pageNumber * 16;
 
-    for (var j = 1; j <= 210; j++) {
+    for (var j = 1; j <= 208; j++) {
         var itemId = document.getElementById(String(j));
         if (itemId) {
             if (j >= startId && j <= endId) {
@@ -270,7 +270,7 @@ function previousPage() {
 }
 
 function nextPage() {
-    if (currentPage<14){
+    if (currentPage<13){
         currentPage++;
         changePage(currentPage);
     }
