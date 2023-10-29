@@ -42,7 +42,7 @@
             // Nếu đăng nhập thành công, bạn có thể lưu trạng thái đăng nhập vào localStorage.
             // Ví dụ:
             localStorage.setItem("isLoggedIn", "true");
-                window.location.href = "#pack";
+                window.location.href = "index.html";
         });
     });
 
