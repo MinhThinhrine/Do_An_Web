@@ -293,7 +293,7 @@
           </div>
           <div class="boxTour">
             <div class="title service-more" style="cursor:pointer"><span><i class="fa fa-paperclip"></i> Dịch vụ bao gồm và không bao gồm</span> <span class="xemthem" style="font-size:16px;padding-left:0">(Xem Thêm)</span></div>
-            <div class="content service-more-content" style="display: none">
+            <div class="content service-more-content">
               <div class="the-content desc">
                 <p>Giờ bay có thể thay đổi theo quy định của hàng không. Du Lịch Việt sẽ thay đổi chương trình cho phù hợp với giờ bay mới nhưng sẽ không chịu trách nhiệm về các khoản chi phí phát sinh<br>
                   <strong><u>Giá tour bao gồm:</u></strong></p><ul><li>Vé máy bay khứ hồi TP.HCM – HÀ NỘI – TP.HCM (Vietjet Air, BamBoo, …)</li><li>Xe tham quan (xe 16 chỗ, 29 chỗ, 35 chỗ, 45 chỗ) tùy theo số lượng khách thực tế trên chuyến đi.</li>
@@ -305,7 +305,7 @@
           </div>
           <div class="boxTour" >
             <div class="title note-more" style="cursor:pointer"><span><i  class="fa fa-sticky-note-o"></i> Ghi chú</span> <span style="font-size:16px;padding-left:0">(Xem Thêm)</span></div>
-            <div class="content note-more-content" style="display: none">
+            <div class="content note-more-content">
               <div class="the-content desc">
                 <p>&nbsp;</p><ul></ul><p><strong><u>Giá vé dành cho trẻ em:</u></strong></p><ul><li>Trẻ em dưới 02 tuổi: miễn phí giá tour, giá vé máy bay theo quy định hãng hàng không.
                 Cha, Mẹ hoặc người thân đi kèm tự lo các chi phí ăn, ngủ, tham quan (nếu có) cho bé.</li>
@@ -336,8 +336,8 @@
           <div class="vnt-form mda-quick-contact">
             <h3><span class="fa-phone">ĐỂ LẠI SỐ ĐIỆN THOẠI CHÚNG TÔI SẼ GỌI ĐIỆN TƯ VẤN</span></h3>
             <div id="form-quick-contact">
-              <input type="hidden" class="department" value="7" />
-              <input type="tel" name="phone" class="phonequick" value placeholder="Nhập số điện thoại!" />
+              <input type="hidden" class="department" value="7">
+              <input type="tel" name="phone" class="phonequick" value="" placeholder="Nhập số điện thoại!">
               <button type="button" class="btn-quick-contact">Gửi thông tin!</button>
             </div>
             <div class="mda-box-loading text-center"></div>
@@ -763,23 +763,6 @@
 <script src="assets/js/custom.js"></script>
 <script src="assets/js/modify.js"></script>
 
-<script defer type="text/javascript">
-  $("#xemthem").click(function(event) {
-    $(this).hide();
-    obj=$(this).parent();
-    id=$(this).data("id");
-    tb=$(this).data("table");
-    jQuery.get(ROOT+'user/showmore.php', {mid: id,mtb:tb}, function(data, textStatus, xhr) {
-      obj.after(data);
-    });
-  });
-  $(".service-more").click(function(event) {
-    $(".service-more-content").toggle();
-  });
-  $(".note-more").click(function(event) {
-    $(".note-more-content").toggle();
-  });
-</script>
 </body>
 
 </html>
