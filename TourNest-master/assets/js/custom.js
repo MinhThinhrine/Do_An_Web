@@ -215,24 +215,8 @@ $(document).ready(function(){
         
         //fixed
     //scroll
-    $(window).on('scroll',function () {
 
-        if ($(this).scrollTop() > 600) {
-            $('.mnfixed_wrap').css({
-                'position': 'fixed',
-                'top': '0',
-                'margin-top': '80px'
-            });
 
-        } else {
-            $('.mnfixed_wrap').css({
-                'position': 'relative',
-                'top': 'auto'
-            });
-
-        }
-
-    });
 });
     //pagination
 var activePage  = document.querySelector('.pagination-active');
@@ -275,6 +259,19 @@ function nextPage() {
         changePage(currentPage);
     }
 }
+
+    // đặt tour
+var packageImages = document.getElementsByClassName('packageImage');
+
+// Lặp qua từng phần tử trong HTMLCollection
+for (var i = 0; i < packageImages.length; i++) {
+    packageImages[i].addEventListener('click', function() {
+        window.location.href = "detail.html"; // Thay đổi URL tới liên kết mong muốn
+    });
+
+}
+
+
 
 
 	

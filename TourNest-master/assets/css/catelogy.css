@@ -916,3 +916,14 @@ body {
 .row.head{
     height: 72px!important;
 }
+.packages-btn{
+    cursor: pointer;
+}
+.carts{
+    color: white;
+    font-size: 30px;
+    margin-left: 20px;
+}
+.carts:hover{
+    color: #00d8fe;
+}

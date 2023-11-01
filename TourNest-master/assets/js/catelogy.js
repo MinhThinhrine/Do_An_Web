@@ -39,6 +39,7 @@ function nextPage() {
         changePage(currentPage);
     }
 }
+
 // For Filters
 document.addEventListener("DOMContentLoaded", function () {
     var filterBtn = document.getElementById('filter-btn');
@@ -166,3 +167,5 @@ document.addEventListener("DOMContentLoaded", function () {
         thumbRight.classList.remove("active");
     });
 });
+
+

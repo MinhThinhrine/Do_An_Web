@@ -38,24 +38,24 @@ myInfor.addEventListener("click", function () {
         button.addEventListener("click",function () {
             Swal.fire({
                 title: 'Thông báo',
-                text: 'Đã thêm vào giỏ hàng',
+                text: 'Đã thêm vào Vali',
                 icon: 'success',
                 confirmButtonText: 'Xác nhận'
             });
         })
     });
-////////////////////////// button tim kiem
-// Lấy tham chiếu đến nút "Tìm Kiếm" bằng id
-const searchButton = document.getElementById("searchButton");
-
-// Lấy tham chiếu đến phần "pack" bằng id
-const packSection = document.getElementById("pack");
-
-// Gán sự kiện click cho nút "Tìm Kiếm"
-searchButton.addEventListener("click", function() {
-    // Trượt xuống phần "pack"
-    packSection.scrollIntoView({ behavior: "smooth" });
-});
+// ////////////////////////// button tim kiem
+// // Lấy tham chiếu đến nút "Tìm Kiếm" bằng id
+// const searchButton = document.getElementById("searchButton");
+//
+// // Lấy tham chiếu đến phần "pack" bằng id
+// const packSection = document.getElementById("pack");
+//
+// // Gán sự kiện click cho nút "Tìm Kiếm"
+// searchButton.addEventListener("click", function() {
+//     // Trượt xuống phần "pack"
+//     packSection.scrollIntoView({ behavior: "smooth" });
+// });
 
 
 
