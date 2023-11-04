@@ -116,3 +116,7 @@ function dele(index) {
     let elementId = index.toString();
     document.getElementById(elementId).style.display = "none";
 }
+function link() {
+    // Thực hiện hành động khi nút được nhấp vào
+    window.location.href = "infor.html";
+}

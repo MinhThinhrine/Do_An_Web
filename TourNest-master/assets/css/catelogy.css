@@ -827,7 +827,7 @@ body {
 .main-menu .nav li a{
     padding: 11px 0 25px;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: capitalize;
     font-family: Arial;
     font-weight:550;
@@ -926,4 +926,12 @@ body {
 }
 .carts:hover{
     color: #00d8fe;
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
 }

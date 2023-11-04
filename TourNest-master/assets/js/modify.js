@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
-
     const myinfor = document.getElementById("myInfor");
     const myTour = document.getElementById("myTour");
     const logOut = document.getElementById("log_out");
@@ -23,9 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
 logOut.addEventListener("click",function () {
     window.location.href = "login.html";
 });
-myInfor.addEventListener("click", function () {
+myinfor.addEventListener("click", function () {
     window.location.href ="infor.html";
 
+})
+myTour.addEventListener("click", function (){
+    window.location.href="shopcart.html"
 })
 
 
@@ -44,18 +45,7 @@ myInfor.addEventListener("click", function () {
             });
         })
     });
-// ////////////////////////// button tim kiem
-// // Lấy tham chiếu đến nút "Tìm Kiếm" bằng id
-// const searchButton = document.getElementById("searchButton");
-//
-// // Lấy tham chiếu đến phần "pack" bằng id
-// const packSection = document.getElementById("pack");
-//
-// // Gán sự kiện click cho nút "Tìm Kiếm"
-// searchButton.addEventListener("click", function() {
-//     // Trượt xuống phần "pack"
-//     packSection.scrollIntoView({ behavior: "smooth" });
-// });
+
 
 
 
