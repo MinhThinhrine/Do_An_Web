@@ -2,27 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Đăng ký</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/cssRegister.css">
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+
 </head>
 <body>
 <div id="container">
     <div id="content">
         <div class="signin"><b>ĐĂNG KÝ</b></div>
         <div class="user">
-            <input type="text" placeholder="Tài khoản"></input>
+            <input id="username" type="text" placeholder="Tên người dùng"></input>
+        </div>
+        <div class="emailx">
+            <input id="email" type="email" placeholder="Email" required autocomplete="on" autofocus >
         </div>
         <div class="pass">
                 <input id="pass" type="password" placeholder="Mật khẩu từ 6 - 20 kí tự" minlength="6" maxlength="20" >
         </div>
-        <div class="pass">
+        <div class="pass" style="margin-bottom: 50px">
                 <input id="confirm" type="password" placeholder="Nhập lại mật khẩu" minlength="6" maxlength="20" >
-        </div>
-        <div class="emailx">
-            <input id="email" type="email" placeholder="Email" required autocomplete="on" autofocus ></input>
             <p id="result"></p>
         </div>
+
         <div class="button">
             <button type="submit" name="btn" id="btn"><a>ĐĂNG KÝ</a></button>
         </div>
@@ -34,12 +37,12 @@
 </div>
 </body>
 <script>
+    var btn = document.getElementById("btn");
+
     //khoa nut đăng nhập
-    document.getElementById("btn").disabled=true;
-    document.getElementById("btn").style.backgroundColor = "#bbbbbb";
-    document.getElementById("btn").style.cursor ="none";
-
-
+    btn.disabled=true;
+    btn.style.backgroundColor = "#bbbbbb";
+    btn.style.cursor ="not-allowed";
     ///
     const validateEmail = (email) => {
         return email.match(
@@ -49,29 +52,33 @@
     const validate = () => {
         const $result = $('#result');
         const email = $('#email').val();
+        var passInput = document.getElementById('pass');
+        var confirm = document.getElementById('confirm');
         $result.text('');
-        var p = document.getElementById("pass").value;
-        var conf = document.getElementById("confirm").value;
 
         if(validateEmail(email)){
             $result.text(email + ' hợp lệ.');
             $result.css('color', 'green');
-            document.getElementById("btn").disabled = false;
-            document.getElementById("btn").style.backgroundColor = "#00d8d5";
-            document.getElementById("btn").style.cursor ="pointer";
-
-            const button = document.getElementById('btn');
-            button.addEventListener('click', function() {
-                window.location.href = 'login.html';
-            });
-
-        } else{
+            passInput.addEventListener("input", function (){
+                const pass = passInput.value;
+                if(pass.length >= 6){
+                    confirm.addEventListener("input", function (){
+                    const conf = confirm.value;
+                        if (conf===pass) {
+                            btn.disabled = false;
+                            btn.style.backgroundColor = "#00d8d5";
+                            btn.style.cursor = "pointer";
+                        }else{
+                            btn.disabled = true;
+                            btn.style.backgroundColor = "#bbbbbb";
+                            btn.style.cursor ="not-allowed";
+                        }
+                    })
+                }
+            })
+        } else {
             $result.text(email + ' không hợp lệ.');
             $result.css('color', 'red');
-
-            document.getElementById("btn").disabled = true;
-            document.getElementById("btn").style.backgroundColor = "#bbbbbb";
-            document.getElementById("btn").style.cursor ="none";
         }
         return false;
     }

@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.js"></script>
     <style>
         .return{
-            font-size: 30px;
+            font-size: 28px;
             color: #00d8fe;
         }
         section {
@@ -121,19 +121,22 @@
     </script>
 </head>
 <body>
-<section style="background-color: rgba(103,159,195,0.73)   ;">
+<section style="background-color: #93949f;">
     <div class="container py-5">
         <th scope="col"><a class="return" href="index.html">
-            <i class="fa-solid fa-arrow-left"></i>Trang chủ</a></th>
+            <i class="fa-solid fa-arrow-left"></i>Trang Chủ</a>
+        </th>
+        <th>
+            <a class="return" href="shopcart.html"style="float: right"> VALI <i class="fa-solid fa-suitcase-rolling" ></i></a>
+        </th>
 
         <div class="row">
             <div id="avt" class="col-lg-4">
                 <div style="height: 495px" class="card mb-4">
                     <div style="margin-top: 90px" class="card-body text-center">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                        <img src="assets/images/client/5.png" alt="avatar"
                              class="rounded-circle img-fluid" style="width: 150px;">
                         <h5 class="my-3">John Smith</h5>
-                        <p class="text-muted mb-1">Full Stack Developer</p>
                         <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
 
                     </div>
@@ -145,7 +148,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-3">
-                                <p class="mb-0">Full Name</p>
+                                <p class="mb-0">Tên người dùng</p>
                             </div>
                             <div class="col-sm-9">
                                 <p class="text-muted mb-0">Johnatan Smith</p>
@@ -163,7 +166,7 @@
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <p class="mb-0">Phone</p>
+                                <p class="mb-0">Số điện thoại</p>
                             </div>
                             <div class="col-sm-9" id="phone">
                                 <p class="text-muted mb-0">(097) 234-5678</p>
@@ -181,7 +184,7 @@
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <p class="mb-0">Address</p>
+                                <p class="mb-0">Địa chỉ</p>
                             </div>
                             <div class="col-sm-9" id="address">
                                 <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
@@ -193,9 +196,9 @@
         </div>
         <div >
             <button style="margin-left: 500px;margin-right: 40px" class="btn btn-warning" onclick="enableEdit()">Chỉnh sửa</button>
+            <button class="btn btn-danger" style="margin-right: 40px">Đổi mật khẩu</button>
             <button class="btn btn-info" style="margin-right: 40px" onclick="saveData()">Lưu</button>
             <button class="btn btn-success" onclick="done()"> Hoàn thành</button>
-
         </div>
     </div>
 </section>
