@@ -37,12 +37,23 @@
     $('#email').on('input', validate);
     document.addEventListener("DOMContentLoaded", function () {
         const loginButton = document.getElementById("btn");
+        let user = String(document.getElementById("email"));
+        let pass = String(document.getElementById("pass"));
+        var userAd = "admin@gmail.com";
+        var passAd = "admin123";
+
         loginButton.addEventListener("click", function () {
-            // Thực hiện kiểm tra đăng nhập ở đây
+                // Thực hiện kiểm tra đăng nhập ở đây
+
             // Nếu đăng nhập thành công, bạn có thể lưu trạng thái đăng nhập vào localStorage.
-            // Ví dụ:
-            localStorage.setItem("isLoggedIn", "true");
+            if (user==userAd&&pass==passAd) {
+
+
+                // Ví dụ:
+                localStorage.setItem("isLoggedIn", "true");
                 window.location.href = "index.html";
+            }
+
         });
     });
 
