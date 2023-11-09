@@ -29,6 +29,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="admin/css/monthly.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css" integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- //calendar -->
     <!-- //font-awesome icons -->
+<!--    swal2-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.js"></script>
+    <!--  end  swal2-->
     <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
 
     <link
@@ -40,11 +44,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
             rel="stylesheet"
     />
-    <!-- MDB -->
-    <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
-            rel="stylesheet"
-    />
+<!--    &lt;!&ndash; MDB &ndash;&gt;-->
+<!--    <link-->
+<!--            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"-->
+<!--            rel="stylesheet"-->
+<!--    />-->
     <style>
 
         .return {
@@ -79,19 +83,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="top-nav clearfix">
             <!--search & user info start-->
             <ul class="nav pull-right top-menu">
-                <li>
-                    <input type="text" class="form-control search" placeholder=" Search">
-                </li>
+
                 <!-- user login dropdown start-->
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <img alt="" src="images/2.png">
+                        <img alt="" src="admin/images/3.png">
                         <span class="username">admin</span>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu extended logout">
-                        <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                        <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+
                         <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
                     </ul>
                 </li>
@@ -116,7 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
 
                     <li class="sub-menu">
-                        <a  href="order.html">
+                        <a href="order.html">
                             <i class="fa fa-book"></i>
                             <span>Quản lí đơn hàng</span>
                         </a>
@@ -137,27 +138,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     </li>
 
+
+                    </li>
                     <li class="sub-menu">
-                        <a href="javascript:;">
+                        <a href="statistical.html">
                             <i class=" fa fa-bar-chart-o"></i>
                             <span>Thống kê và báo cáo</span>
                         </a>
 
                     </li>
                     <li class="sub-menu">
-                        <a href="javascript:;">
+                        <a href="customerContact.html">
                             <i class=" fa fa-bar-chart-o"></i>
                             <span>Quản lý liên hệ và hỗ trợ</span>
                         </a>
 
                     </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-glass"></i>
-                            <span>Quản lý đánh giá từ khách hàng</span>
-                        </a>
 
-                    </li>
                     <li>
                         <a href="index.html">
                             <i class="fa fa-user"></i>
@@ -180,9 +177,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <i class="fa fa-eye"> </i>
                         </div>
                         <div class="col-md-8 market-update-left">
-                            <h4>Visitors</h4>
+                            <h4>Người tham quan</h4>
                             <h3>13,500</h3>
-                            <p>Other hand, we denounce</p>
+                            <p>Hãy đến với chúng tôi !</p>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -193,9 +190,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <i class="fa fa-users" ></i>
                         </div>
                         <div class="col-md-8 market-update-left">
-                            <h4>Users</h4>
+                            <h4>Khách hàng</h4>
                             <h3>1,250</h3>
-                            <p>Other hand, we denounce</p>
+                            <p>Khách hàng là thượng đế !</p>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -206,9 +203,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <i class="fa fa-usd"></i>
                         </div>
                         <div class="col-md-8 market-update-left">
-                            <h4>Sales</h4>
-                            <h3>1,500</h3>
-                            <p>Other hand, we denounce</p>
+                            <h4>Tour đã giảm giá</h4>
+                            <h3>199</h3>
+                            <p>Giá cả hợp lí !</p>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -219,9 +216,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         </div>
                         <div class="col-md-8 market-update-left">
-                            <h4>Orders</h4>
+                            <h4>Tour đã bán</h4>
                             <h3>1,500</h3>
-                            <p>Other hand, we denounce</p>
+                            <p>Tuyệt vời Việt Nam !</p>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -232,7 +229,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         </section>
 
-        <div  id="container11" style="height: 100%; margin-top: -70px ">
+        <div  id="container11" style="height: 100%;">
             <section class="h-100 h-custom">
                 <div class="container h-100 py-5">
                     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -254,23 +251,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <tbody>
                                     <tr id="1">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Mai Xuân Thức</div>
                                         </th>
                                         <td class="align-middle">
                                             <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100001</div>
                                         </td>
                                         <td class="align-middle">
                                             <div >Thủ Đức, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">22/02/2002</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                        </a>
                                             </div>
@@ -278,23 +275,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="2">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Trần Quang Vũ</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">tqv@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100002</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Tân Phú, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">25/02/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -302,23 +299,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="3">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Võ Minh Thịnh</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">vmt@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100003</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Quận 2, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">25/03/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -326,23 +323,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="4">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Lê Chí Trường</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">lct@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100004</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Quận 1, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">26/03/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -350,23 +347,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="5">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Trần Thanh Trí</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">ttt@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100005</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Bình Thạnh, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">31/03/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -374,23 +371,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="6">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Lê Đình Văn</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">ndv@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100006</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Tân Bình, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">30/03/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -398,23 +395,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="7">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Trần Thái Linh</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">ttl@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100007</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Quận 3, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">12/10/1999</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -422,23 +419,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="8">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Phan Tân Trung</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">ptt@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100008</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Hóc Môn, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">15/08/2000</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -446,23 +443,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="9">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Nguyễn Duy Vụ</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">ndv@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100009</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Quận 10, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">20/1/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -470,23 +467,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="10">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Nguyễn Hoàng Bảo Trâm</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">nhbt@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100010</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Gò Vấp, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">29/11/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -494,23 +491,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="11">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Nguyễn Thị Kiều My</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">ntkm@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100011</div>
                                         </td>
                                         <td class="align-middle">
                                             <div >Thủ Đức, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">03/03/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -518,23 +515,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="12">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Trần Quốc Toàn</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">tqt@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100012</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Quận 9, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">11/06/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -542,23 +539,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="13">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Nguyễn Trường Thịnh</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">ntt@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100013</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Quận 7, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">13/12/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -566,23 +563,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="14">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Trần Duy Tân</div>
                                         </th>
                                         <td class="align-middle">
                                             <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100014</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Quận 11, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">15/03/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -590,23 +587,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="15">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Huỳnh Tấn Bin</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">htb@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100015</div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div >Bình Thạnh, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">08/03/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -614,23 +611,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     <tr id="16">
                                         <th scope="row">
-                                            <div>emthuczz</div>
+                                            <div>Phạm Nam Thuận</div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;">pnt@gmail.com</p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100000</div>
+                                            <div style="margin-left: 5px">0912100015</div>
                                         </td>
                                         <td class="align-middle">
                                             <div >Thủ Đức, Hồ Chí Minh</div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">33/33/3333</p>
+                                            <p class="mb-0"  style="font-weight: 500;">12/12/2003</p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="dele(1)">
+                                                <a href="#!" class="text-danger" onclick="deleteUser()">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
@@ -663,13 +660,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </section>
     <!--main content end-->
 </section>
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/jquery.slimscroll.js"></script>
-<script src="js/jquery.nicescroll.js"></script>
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-<script src="js/jquery.scrollTo.js"></script>
+<script src="admin/js/bootstrap.js"></script>
+<script src="admin/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="admin/js/scripts.js"></script>
+<script src="admin/js/jquery.slimscroll.js"></script>
+<script src="admin/js/jquery.nicescroll.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="admin/js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="admin/js/jquery.scrollTo.js"></script>
 <!-- morris JavaScript -->
 <script>
     $(document).ready(function() {
@@ -725,6 +722,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
     });
+    function deleteUser() {
+        Swal.fire({
+            title: 'Thông báo',
+            text: 'Đã xóa thành công tài khoản này',
+            icon: 'success',
+            confirmButtonText: 'Đóng' ,
+            customClass: {
+                popup: 'custom-swal'
+            }
+        });
+    }
 </script>
 <!-- calendar -->
 <script type="text/javascript" src="js/monthly.js"></script>
