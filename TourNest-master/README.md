@@ -11,6 +11,33 @@ dẫn, TourNest mang đến trải nghiệm tuyệt vời cho người dùng. Tr
 hoạch du lịch. Điều này giúp người dùng tiện lợi từ kế hoạch du lịch cho đến đặt
 khách sạn thông qua việc chọn chuyến bay.
 
+# Mục tiêu chiến lược
+
+Mục tiêu chiến lược của trang web bán tour du lịch là đạt được những mục tiêu chung của doanh nghiệp, bao gồm:
+
+Tăng trưởng doanh thu: Mục tiêu này thể hiện mong muốn của doanh nghiệp về việc tăng doanh thu từ việc bán tour du lịch.
+
+Tăng thị phần: Mục tiêu này thể hiện mong muốn của doanh nghiệp về việc tăng thị phần trong ngành du lịch.
+
+Tăng độ nhận diện thương hiệu: Mục tiêu này thể hiện mong muốn của doanh nghiệp về việc tăng độ nhận biết của thương hiệu đối với khách hàng.
+
+Ngoài ra, trang web bán tour du lịch cũng có thể đặt ra các mục tiêu chiến lược cụ thể hơn, chẳng hạn như:
+
+Phát triển thị trường mới: Mục tiêu này thể hiện mong muốn của doanh nghiệp về việc mở rộng thị trường bán tour du lịch sang các khu vực mới.
+
+Đa dạng hóa sản phẩm và dịch vụ: Mục tiêu này thể hiện mong muốn của doanh nghiệp về việc cung cấp thêm các sản phẩm và dịch vụ du lịch mới, đáp ứng nhu cầu đa dạng của khách hàng.
+
+Nâng cao chất lượng dịch vụ: Mục tiêu này thể hiện mong muốn của doanh nghiệp về việc cung cấp dịch vụ bán tour du lịch chất lượng cao, đáp ứng kỳ vọng của khách hàng.
+
+Để đạt được các mục tiêu chiến lược này, trang web bán tour du lịch cần xây dựng kế hoạch triển khai cụ thể, bao gồm các hoạt động như:
+
+Tiếp thị và quảng cáo: Trang web cần thực hiện các hoạt động tiếp thị và quảng cáo để thu hút khách hàng.
+
+Cải thiện giao diện và nội dung: Trang web cần được cải thiện giao diện và nội dung để mang lại trải nghiệm tốt nhất cho khách hàng.
+
+Tăng cường dịch vụ khách hàng: Trang web cần tăng cường dịch vụ khách hàng để giải đáp thắc mắc và hỗ trợ khách hàng.
+
+Việc xác định và triển khai mục tiêu chiến lược là một bước quan trọng giúp trang web bán tour du lịch đạt được thành công.
 # Preview
 ![img.png](assets/imgReadme/img.png)
 ![img_1.png](assets/imgReadme/img_1.png)
