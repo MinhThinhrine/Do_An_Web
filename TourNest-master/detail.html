@@ -849,14 +849,28 @@
             obj.after(data);
         });
     });
+
     $(".service-more").click(function (event) {
-        check = check + 500/*500*/;
         $(".service-more-content").toggle();
+
+        if ($(".service-more-content").is(":visible")) {
+            check = check + 500;
+        } else {
+            check = check - 500;
+        }
     });
+
     $(".note-more").click(function (event) {
-        check = check + 1140/*1140*/;
         $(".note-more-content").toggle();
+
+        if ($(".note-more-content").is(":visible")) {
+            check = check + 1140;
+        } else {
+            // Nếu ẩn đi, trừ giá trị
+            check = check - 1140;
+        }
     });
+
     $(window).on('scroll', function () {
         var scrollTop = $(this).scrollTop();
         if (scrollTop > 500 && scrollTop < check) {
@@ -875,6 +889,7 @@
         }
 
     });
+
 </script>
 
 </body>
