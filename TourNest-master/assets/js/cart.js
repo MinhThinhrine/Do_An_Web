@@ -83,15 +83,6 @@ radioItem3.onchange = function() {
         calculateTotal3();
     }
 };
-function changeQuantity(button, change) {
-    let input = button.parentNode.querySelector("input[type=number]");
-    let currentValue = parseInt(input.value);
-    let newValue = currentValue + change;
-    if (newValue >= 0) {
-        input.value = newValue;
-        calculateTotal1();
-    }
-}
 function changeQuantity(button, change, index) {
     let input = button.parentNode.querySelector("input[type=number]");
     let currentValue = parseInt(input.value);
