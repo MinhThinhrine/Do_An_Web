@@ -47,24 +47,7 @@ myTour.addEventListener("click", function (){
     });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    let id = document.querySelectorAll("id")
-    for (let i = 1; i <= 200; i++) {
-        // Tạo một đối tượng div
-        let divElement = document.getElementById(i.toString());
 
-        // Tạo một đối tượng p
-        let pElement = document.createElement("p");
-        pElement.textContent = "CHI TIẾT";
-        pElement.style.fontSize = "30px";
-        pElement.style.color = "rgba(0, 128, 255, 0.75)";
-        pElement.style.fontFamily = "'Times New Roman'";
-        pElement.classList.add("overlay-text");
-
-        // Thêm thẻ p vào thẻ div
-        divElement.appendChild(pElement);
-    }
-});
 
 
 
