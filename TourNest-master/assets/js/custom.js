@@ -271,7 +271,7 @@ for (var i = 0; i < packageImages.length; i++) {
 
 }
 function sendMail(){
-    window.location.href = "mailto:thinh913011@gmail.com?subject=THƯ PHẢN HỒI ĐÁNH GIÁ NGƯỜI DÙNG";
+    window.location.href = "mailto:thinh913011@gmail.com?subject=THƯ GÓP Ý ĐÁNH GIÁ NGƯỜI DÙNG";
 }
 
 
