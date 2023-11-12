@@ -50,11 +50,14 @@ Việc xác định và triển khai mục tiêu chiến lược là một bư�
 Trang web TourNest đã được tạo ra nhờ sự góp sức của 3 thành viên:
 
 [ Võ Minh Thịnh - 21130549 ]: Giúp thiết kế giao diện trang web và tạo ra các tài nguyên đồ họa hấp dẫn.
+(index, catelory, login, register, shopcart, vali, 70 items)
 
 [ Mai Xuân Thức - 21130604 ]: Đảm nhận vai trò phát triển trang web bằng cách sử dụng HTML5 và các công nghệ web khác.
+(admin, infor, login, register, 70 items)
 
 [ Trần Quang Vũ - 21130587 ]: Đóng góp ý tưởng và cung cấp kiến thức chuyên môn về ngành du lịch để tạo ra một trang web hữu ích
 và hấp dẫn.
+(detail, forgetpass, footer, 70 items)
 
 # Cách sử dụng trang web
 
