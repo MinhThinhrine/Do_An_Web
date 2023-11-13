@@ -311,7 +311,7 @@ Số booking:
                         </table>
                     </div>
                 </div>
-                <div class="d-none d-lg-block">
+                <div class="d-none d-lg-block2">
                     <div class="passenger-list p-4 mb-4">
                         <div class="heading">
                             <h5 class="fw-bold">DANH S&#193;CH PHIẾU THU</h5>
@@ -322,92 +322,95 @@ Số booking:
                 </div>
             </div>
         </section>
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                CheckAccountInfo();
-            });
+<!--        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>-->
+<!--        <script type="text/javascript">-->
+<!--            $(document).ready(function() {-->
+<!--                CheckAccountInfo();-->
+<!--            });-->
 
-            $("#btnkichhoat").click(function() {
-                event.preventDefault();
-                var btnchodangnhap = $('#btnchodangnhap');
-                btnchodangnhap.prop('disabled', true);
-                btnchodangnhap.removeClass("hardCode");
-                $("#btnkichhoat").addClass("hardCode");
-                $.ajax({
-                    type: 'GET',
-                    url: '/Booking/PostActiveAcountByTelephone',
-                    data: {
-                        bookingId: "5098aa74-c5d7-4ebb-a669-536afc5a9488"
-                    },
-                    success: function(data, textStatus, XMLHttpRequest) {
-                        if (data.status == 1) {
-                            $("#titlekichhoat").addClass('hardCode');
-                            btnchodangnhap.addClass("hardCode");
-                            alert("Kích hoạt thành công");
-                        } else {
-                            alert(data.message);
-                            btnchodangnhap.addClass("hardCode");
-                            $("#btnkichhoat").removeClass("hardCode");
-                        }
-                    },
-                    dataType: "json"
+<!--            $("#btnkichhoat").click(function() {-->
+<!--                event.preventDefault();-->
+<!--                var btnchodangnhap = $('#btnchodangnhap');-->
+<!--                btnchodangnhap.prop('disabled', true);-->
+<!--                btnchodangnhap.removeClass("hardCode");-->
+<!--                $("#btnkichhoat").addClass("hardCode");-->
+<!--                $.ajax({-->
+<!--                    type: 'GET',-->
+<!--                    url: '/Booking/PostActiveAcountByTelephone',-->
+<!--                    data: {-->
+<!--                        bookingId: "5098aa74-c5d7-4ebb-a669-536afc5a9488"-->
+<!--                    },-->
+<!--                    success: function(data, textStatus, XMLHttpRequest) {-->
+<!--                        if (data.status == 1) {-->
+<!--                            $("#titlekichhoat").addClass('hardCode');-->
+<!--                            btnchodangnhap.addClass("hardCode");-->
+<!--                            alert("Kích hoạt thành công");-->
+<!--                        } else {-->
+<!--                            alert(data.message);-->
+<!--                            btnchodangnhap.addClass("hardCode");-->
+<!--                            $("#btnkichhoat").removeClass("hardCode");-->
+<!--                        }-->
+<!--                    },-->
+<!--                    dataType: "json"-->
 
-                });
+<!--                });-->
 
-            });
+<!--            });-->
 
-            function switchVisible() {
-                $.ajax({
-                    type: 'POST',
-                    url: '/Coupon/GetPromotionCodeByReceiptNo',
-                    data: {
-                        AmountReceiptView: "1",
-                        ReceiptNo: ""
-                    },
-                    success: function(data, textStatus, XMLHttpRequest) {
-                        let voucherCode = data.VoucherCode;
-                        let ReceiptNo = data.ReceiptNo
+<!--            function switchVisible() {-->
+<!--                $.ajax({-->
+<!--                    type: 'POST',-->
+<!--                    url: '/Coupon/GetPromotionCodeByReceiptNo',-->
+<!--                    data: {-->
+<!--                        AmountReceiptView: "1",-->
+<!--                        ReceiptNo: ""-->
+<!--                    },-->
+<!--                    success: function(data, textStatus, XMLHttpRequest) {-->
+<!--                        let voucherCode = data.VoucherCode;-->
+<!--                        let ReceiptNo = data.ReceiptNo-->
 
-                        $("#textPromotionCode").text(voucherCode);
-                        document.getElementById('booking-text').style.display = 'none';
-                        document.getElementById('booking-code').style.display = 'block';
+<!--                        $("#textPromotionCode").text(voucherCode);-->
+<!--                        document.getElementById('booking-text').style.display = 'none';-->
+<!--                        document.getElementById('booking-code').style.display = 'block';-->
 
-                    },
-                    dataType: "json"
-                });
+<!--                    },-->
+<!--                    dataType: "json"-->
+<!--                });-->
 
-            }
+<!--            }-->
 
 
-            function CopyVoucher() {
-                var copyText = document.getElementById("myVoucher");
-                copyText.select();
-                copyText.setSelectionRange(0, 99999);
-                document.execCommand("copy");
-                alert("Đã sao chép mã giảm giá: " + copyText.value);
-            }
+<!--            function CopyVoucher() {-->
+<!--                var copyText = document.getElementById("myVoucher");-->
+<!--                copyText.select();-->
+<!--                copyText.setSelectionRange(0, 99999);-->
+<!--                document.execCommand("copy");-->
+<!--                alert("Đã sao chép mã giảm giá: " + copyText.value);-->
+<!--            }-->
 
-            function CheckAccountInfo() {
-                $.ajax({
-                    type: 'GET',
-                    url: '/Booking/GetCheckActiveAcountByTelephone',
-                    data: {
-                        Telephone: "32323232"
-                    },
-                    success: function(data, textStatus, XMLHttpRequest) {
-                        if (data == 0) {
-                            $("#titlekichhoat").removeClass('hardCode');
-                        } else {
-                            $("#titlekichhoat").addClass('hardCode');
+<!--            function CheckAccountInfo() {-->
+<!--                $.ajax({-->
+<!--                    type: 'GET',-->
+<!--                    url: '/Booking/GetCheckActiveAcountByTelephone',-->
+<!--                    data: {-->
+<!--                        Telephone: "32323232"-->
+<!--                    },-->
+<!--                    success: function(data, textStatus, XMLHttpRequest) {-->
+<!--                        if (data == 0) {-->
+<!--                            $("#titlekichhoat").removeClass('hardCode');-->
+<!--                        } else {-->
+<!--                            $("#titlekichhoat").addClass('hardCode');-->
 
-                        }
-                    },
-                    dataType: "json"
+<!--                        }-->
+<!--                    },-->
+<!--                    dataType: "json"-->
 
-                });
-            }
-        </script>
+<!--                });-->
+<!--            }-->
+<!--        </script>-->
+        <div class="thanks">
+            <h1>Cảm ơn quý khách đã lựa chọn dịch vụ của chúng tôi</h1>
+        </div>
         <div>
             <div id="ConfirmPayment" class="modal fade" role="dialog">
                 <div class="modal-dialog" style="height:500px">

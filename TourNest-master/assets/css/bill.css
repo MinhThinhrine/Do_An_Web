@@ -2435,7 +2435,17 @@ h5.fw-bold.tieude{
         color: #2d4271 !important;
 
     }
-
+    .thanks{
+        justify-content: center;
+        display: flex;
+        color: red;
+    }
+    .d-none.d-lg-block2.passenger-list.p-4.mb-4{
+        display: none;
+    }
+    a#btnChangePayment.btn.btn-primary{
+        display: none;
+    }
     .align-items-sm-start {
         -webkit-box-align: start!important;
         -ms-flex-align: start!important;
