@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const myinfor = document.getElementById("myInfor");
     const myTour = document.getElementById("myTour");
     const logOut = document.getElementById("log_out");
+    const bill = document.getElementById("bill");
 
 
 logOut.addEventListener("click",function () {
@@ -27,6 +28,9 @@ myinfor.addEventListener("click", function () {
 })
 myTour.addEventListener("click", function (){
     window.location.href="shopcart.html"
+})
+bill.addEventListener("click", function (){
+    window.location.href="bill.html"
 })
 
 
