@@ -57,7 +57,7 @@ Trang web TourNest đã được tạo ra nhờ sự góp sức của 3 thành v
 
 [ Trần Quang Vũ - 21130587 ]: Đóng góp ý tưởng và cung cấp kiến thức chuyên môn về ngành du lịch để tạo ra một trang web hữu ích
 và hấp dẫn.
-(detail, forgetpass, footer, 70 items)
+(detail, forgetpass, footer, bill, 70 items)
 
 # Cách sử dụng trang web
 
