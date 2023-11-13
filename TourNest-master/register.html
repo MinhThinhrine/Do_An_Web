@@ -68,10 +68,12 @@
                             btn.disabled = false;
                             btn.style.backgroundColor = "#00d8d5";
                             btn.style.cursor = "pointer";
+                            link();
                         }else{
                             btn.disabled = true;
                             btn.style.backgroundColor = "#bbbbbb";
                             btn.style.cursor ="not-allowed";
+                            link();
                         }
                     })
                 }
@@ -83,6 +85,12 @@
         return false;
     }
     $('#email').on('input', validate);
+    function link() {
+        const loginButton = document.getElementById("btn");
+        loginButton.addEventListener("click", function () {
+        window.location.href = "login.html";
+        });
+    }
 </script>
 
 </html>
