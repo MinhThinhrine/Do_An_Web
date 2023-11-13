@@ -41,7 +41,10 @@ myTour.addEventListener("click", function (){
                 title: 'Thông báo',
                 text: 'Đã thêm vào Vali',
                 icon: 'success',
-                confirmButtonText: 'Xác nhận'
+                confirmButtonText: 'Đóng',
+                customClass: {
+                    popup: 'custom-swal'
+                }
             });
         })
     });
