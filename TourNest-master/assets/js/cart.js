@@ -109,7 +109,7 @@ function dele(index) {
 }
 function link() {
     // Thực hiện hành động khi nút được nhấp vào
-    window.location.href = "infor.html";
+    window.location.href = "bill.html";
 }
 var cartImages = document.getElementsByClassName('img-fluid rounded-3');
 
