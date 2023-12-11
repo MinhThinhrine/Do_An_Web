@@ -1,44 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/home/1920.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-coin-50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-company-50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-map-100 (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-map-50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-service-50.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/s1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/s1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/s2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/s3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/index.html" afterDir="false" />
+    <list default="true" id="66ebe588-d16c-4d20-82ba-3cf9ff690f0f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/blog/b1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/blog/b1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/blog/b2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/blog/b2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/blog/b3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/blog/b3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/client/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/client/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/client/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/client/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/client/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/client/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/client/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/client/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/client/testimonial1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/client/testimonial1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/client/testimonial2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/client/testimonial2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/detail/details_star.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/detail/details_star.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/home/433.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/home/433.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/login/google.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/login/google.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/login/lab3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/login/lab3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/offer/offer-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/offer/offer-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/offer/offer-shape.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/offer/offer-shape.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/offer/wallpaperflare.com_wallpaper.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/offer/wallpaperflare.com_wallpaper.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/packages/p6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-coin-50.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-coin-50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-company-50.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-company-50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-map-100 (1).png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-map-100 (1).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-service-50.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/images/service/icons8-service-50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/imgReadme/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/imgReadme/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/imgReadme/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/imgReadme/img_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/imgReadme/img_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/imgReadme/img_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/imgReadme/img_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/imgReadme/img_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/imgReadme/img_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/imgReadme/img_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TourNest-master/bill.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/bill.html" afterDir="false" />
     </list>
-=======
-<<<<<<< HEAD
-    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="">
-<<<<<<< Updated upstream
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/cssRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/cssRegister.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/assets/css/csslogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/assets/css/csslogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/register.html" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/TourNest-master/assets/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourNest-master/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/TourNest-master/login.html" afterDir="false" />
->>>>>>> Stashed changes
-    </list>
-=======
-    <list default="true" id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="" />
->>>>>>> 674ad144011465eea1f5f8fbf8121fa4bdbbc20b
->>>>>>> aa60e1c400d8626c3b864fc4e8d4f77108199347
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,89 +53,36 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-<<<<<<< HEAD
-        <option value="HTML File" />
-=======
-        <option value="JavaScript File" />
->>>>>>> aa60e1c400d8626c3b864fc4e8d4f77108199347
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2Wfhw7nAanNMLuyPjrqeFkSm27g" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2Z84utwu5fN7vzuhvgvle5T1BRx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Intellij\Java\Do_An_Web\TourNest-master\assets\images\home" />
-      <recent name="D:\Intellij\Java\Do_An_Web\TourNest-master\assets\images\service" />
-      <recent name="D:\Intellij\Java\Do_An_Web\TourNest-master" />
-      <recent name="C:\Users\FPT - ADMIN\OneDrive\Documents\GitHub\Do_An_Web\TourNest-master\assets\css" />
-    </key>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c01cf325-bac4-42e0-8f7f-7917ddc4df55" name="Changes" comment="" />
-      <created>1697129777301</created>
+      <changelist id="66ebe588-d16c-4d20-82ba-3cf9ff690f0f" name="Changes" comment="" />
+      <created>1701790601096</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1697129777301</updated>
-      <workItem from="1697129778536" duration="698000" />
-      <workItem from="1697532560074" duration="92000" />
-      <workItem from="1697534047347" duration="1633000" />
-      <workItem from="1697535922325" duration="1472000" />
-      <workItem from="1697544158754" duration="578000" />
-      <workItem from="1697546696463" duration="166000" />
-      <workItem from="1697547163175" duration="1519000" />
-      <workItem from="1697548739166" duration="13042000" />
-      <workItem from="1697562207113" duration="76000" />
-<<<<<<< Updated upstream
-      <workItem from="1697636025939" duration="7871000" />
-<<<<<<< HEAD
-      <workItem from="1697644361552" duration="940000" />
-=======
-      <workItem from="1697634848505" duration="3012000" />
->>>>>>> Stashed changes
-=======
-      <workItem from="1697644361552" duration="1812000" />
-<<<<<<< HEAD
-      <workItem from="1697683248931" duration="8140000" />
-=======
->>>>>>> 674ad144011465eea1f5f8fbf8121fa4bdbbc20b
->>>>>>> aa60e1c400d8626c3b864fc4e8d4f77108199347
+      <updated>1701790601096</updated>
+      <workItem from="1701790602286" duration="7000" />
     </task>
     <servers />
   </component>
