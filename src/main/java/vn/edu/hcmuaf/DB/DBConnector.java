@@ -3,7 +3,7 @@ package vn.edu.hcmuaf.DB;
 import java.sql.*;
 
 public class DBConnector {
-    String url = "jdbc:mysql://localhost:3306/db";
+    String url = "jdbc:mysql://localhost:3306/DA_WEB";
     String username = "root"; // Thay đổi "ASUS" thành tên người dùng của bạn
     String password = ""; // Thay đổi "mat_khau" thành mật khẩu của bạn
 
@@ -13,11 +13,10 @@ public class DBConnector {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url, username, password);
-        }catch (ClassNotFoundException e) {
+        }  catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        throw new RuntimeException(e);
+    }
     }
     public static DBConnector getInstall() throws SQLException {
         if (install == null) install = new DBConnector();
@@ -31,6 +30,16 @@ public class DBConnector {
             return null;
         }
     }
+
+    public PreparedStatement preStatement(String sql){
+        if (con==null) return null;
+        try {
+            return con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     public static void main(String[] args) throws SQLException {
         Statement statement = DBConnector.getInstall().get();
