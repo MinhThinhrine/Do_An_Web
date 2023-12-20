@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Đăng nhập</title>
-    <link rel="stylesheet" href="assetsZ/css/csslogin.css">
+    <link rel="stylesheet" href="assets/css/csslogin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="shortcut icon" type="image/icon" href="assetsZ/logo/favicon.png"/>
 

@@ -43,7 +43,7 @@ public class LoginController extends HttpServlet {
         if(u!=null){
             HttpSession session = request.getSession();
             session.setAttribute("auth",u);
-            response.sendRedirect("./index1.jsp");
+            response.sendRedirect("./index.jsp");
         }else{
             request.setAttribute("err","Email or Password is incorrect");
             request.getRequestDispatcher("./login.jsp").forward(request,response);
