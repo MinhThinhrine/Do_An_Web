@@ -39,10 +39,11 @@ public class JDBIConnector {
 
     public static void main(String[] args) {
         List<User> users = JDBIConnector.get().withHandle(h ->
-                h.createQuery("SELECT * FROM users")
+                h.createQuery("SELECT email, password, userName FROM users")
                         .mapToBean(User.class)
                         .list()
         );
+
         System.out.println(users);
     }
 

@@ -1,8 +1,9 @@
 package vn.edu.hcmuaf;
 
-import vn.edu.hcmuaf.DAO.UserDao;
+
 
 import vn.edu.hcmuaf.bean.User;
+import vn.edu.hcmuaf.serice.UserService;
 
 
 import javax.servlet.*;
@@ -17,16 +18,28 @@ public class LoginController extends HttpServlet {
         doPost(request,response);
     }
 
+    /**
+     * @param request  an {@link HttpServletRequest} object that
+     *                 contains the request the client has made
+     *                 of the servlet
+     * @param response an {@link HttpServletResponse} object that
+     *                 contains the response the servlet sends
+     *                 to the client
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email")==null?"":request.getParameter("email");
-        String pass = request.getParameter("pass")==null?"":request.getParameter("pass");
+        String pass = request.getParameter("password")==null?"":request.getParameter("password");
 
         if(!email.contains("@")){
             request.setAttribute("emailErr","Email is wrong!");
             request.getRequestDispatcher("./login.jsp").forward(request,response);
         }
-        User u= UserDao.checkLogin1(email,pass);
+
+            User u = UserService.getInstance().checkLogin(email,pass);
+
         if(u!=null){
             HttpSession session = request.getSession();
             session.setAttribute("auth",u);
@@ -37,4 +50,6 @@ public class LoginController extends HttpServlet {
 
         }
     }
+
+
 }

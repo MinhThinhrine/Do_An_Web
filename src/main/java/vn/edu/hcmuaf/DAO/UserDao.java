@@ -7,23 +7,16 @@ import java.util.Optional;
 
 public class UserDao {
 
-    public static User checkLogin1(String email, String password) {
-        Optional<User> user1 = JDBIConnector.get().withHandle(handle ->
-                handle.createQuery("SELECT * FROM users WHERE emailUser = :email AND password = :password")
-                        .bind("email", email)
-                        .bind("password", password)
-                        .mapToBean(User.class)
-                        .findFirst()
-        );
-        return user1.orElse(null);
+    public static User getUserByEmail(String email) {
+      Optional<User> user = JDBIConnector.get().withHandle((handle ->
+                handle.createQuery("SELECT email, password, userName FROM users WHERE email = ?")
+                        .bind(0, email)
+                        .mapToBean(User.class).stream().findFirst()
 
+        ));
+        return user.isEmpty() ? null : user.get();
     }
 
-    public static void main(String[] args) {
-        String email = "admin@gmail.com";
-          String pass = "1234567";
-        System.out.println(checkLogin1(email,pass));
-    }
 
 
 
