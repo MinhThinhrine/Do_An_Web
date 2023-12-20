@@ -1,12 +1,12 @@
 package vn.edu.hcmuaf.bean;
 
 public class User {
-    String username;
-    String fullname;
+    private String username;
+    private String password;
 
-    public User(String username, String fullname) {
+    public User(String username, String password) {
         this.username = username;
-        this.fullname = fullname;
+        this.password = password;
     }
 
     public User() {
@@ -20,11 +20,19 @@ public class User {
         this.username = username;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getPassword() {
+        return password;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User1{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

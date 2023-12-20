@@ -1,14 +1,16 @@
 package vn.edu.hcmuaf;
 
+import vn.edu.hcmuaf.DAO.UserDao;
+
 import vn.edu.hcmuaf.bean.User;
-import vn.edu.hcmuaf.serice.UserService;
+
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "LoginController", value = "/login")
+@WebServlet(name = "Login1Controller", value = "/login")
 public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -24,11 +26,11 @@ public class LoginController extends HttpServlet {
             request.setAttribute("emailErr","Email is wrong!");
             request.getRequestDispatcher("./login.jsp").forward(request,response);
         }
-        User u= UserService.getInstance().checkLogin(email,pass);
+        User u= UserDao.checkLogin1(email,pass);
         if(u!=null){
             HttpSession session = request.getSession();
             session.setAttribute("auth",u);
-            response.sendRedirect("./index.jsp");
+            response.sendRedirect("./index1.jsp");
         }else{
             request.setAttribute("err","Email or Password is incorrect");
             request.getRequestDispatcher("./login.jsp").forward(request,response);
