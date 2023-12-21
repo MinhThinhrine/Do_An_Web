@@ -1,76 +1,13 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: FPT - ADMIN
-  Date: 28/11/2023
-  Time: 12:51 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <!-- META DATA -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!doctype html>
+    <%@ page contentType="text/html; charset=UTF-8" %>
+    <%@include file="common/tablib.jsp" %>
+    <html class="no-js" lang="vi">
 
 
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-ư
-    <!--font-family-->
-    <link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet"/>
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.js"></script>
-
-    <!-- TITLE OF SITE -->
-    <title>TourNest</title>
-
-    <!-- favicon img -->
-    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
-
-    <!--font-awesome.min.css-->
-
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <!--animate.css-->
-    <link rel="stylesheet" href="assets/css/animate.css"/>
-
-    <!--hover.css-->
-    <link rel="stylesheet" href="assets/css/hover-min.css">
-
-    <!--datepicker.css-->
-    <link rel="stylesheet" href="assets/css/datepicker.css">
-
-    <!--owl.carousel.css-->
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
-
-    <!-- range css-->
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css"/>
-
-    <!--bootstrap.min.css-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-
-    <!-- bootsnav -->
-    <link rel="stylesheet" href="assets/css/bootsnav.css"/>
-
-    <!--style.css-->
-    <link rel="stylesheet" href="assets/css/style.css"/>
-
-    <!--responsive.css-->
-    <link rel="stylesheet" href="assets/css/responsive.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
+<%--head--%>
+<%@include file="common/head.jsp" %>
+<title>TourNest</title>
+<%--End head--%>
 <body>
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
@@ -79,61 +16,8 @@
 
 <!-- main-menu Start -->
 <header class="top-area">
-    <div class="header-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="logo">
-                        <a href="index.html">
-                            tour<span>Nest</span>
-                        </a>
-                    </div><!-- /.logo-->
-                </div><!-- /.col-->
-                <div class="col-sm-10">
-                    <div class="main-menu">
-
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target=".navbar-collapse">
-                                <i class="fa fa-bars"></i>
-                            </button><!-- / button-->
-                        </div><!-- /.navbar-header-->
-                        <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="smooth-menu"><a href="#home">Trang Chủ</a></li>
-                                <li class="smooth-menu"><a href="#spo">Ưu Đãi</a></li>
-                                <li class="smooth-menu"><a href="#gallery">Tour Hot</a></li>
-                                <li class="smooth-menu"><a href="#pack">Gói Du Lịch</a></li>
-                                <li class="smooth-menu"><a href="#blog">Tin Tức</a></li>
-                                <li class="smooth-menu"><a href="#feedback">Đánh Giá</a></li>
-                                <li class="smooth-menu"><a href="#service">Liên Hệ</a></li>
-                                <li>
-                                    <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
-                                            href="login.html">Đặt Tour</a>
-                                    </button>
-                                </li><!--/.project-btn-->
-                                <li id="icon-user" class="smooth-menu">
-                                    <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
-                                    <ul id="service_account">
-                                        <li><a id="myInfor" href="infor.html">Thông tin tài khoản</a></li>
-                                        <li><a id="myTour" href="shopcart.html">VALI</a></li>
-                                        <li><a id="bill" href="bill.html">Bill </a></li>
-                                        <li><a id="log_out" href="register.html">Đăng xuất</a></li>
-                                    </ul>
-                                </li>
-
-
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.main-menu-->
-                </div><!-- /.col-->
-            </div><!-- /.row -->
-            <div class="home-border"></div><!-- /.home-border-->
-        </div><!-- /.container-->
-    </div><!-- /.header-area -->
-
-</header><!-- /.top-area-->
+<%@include file="common/header.jsp" %>
+</header>
 <!-- main-menu End -->
 
 
@@ -411,10 +295,10 @@
                                             <div class="about-btn travel-mrt-0 pull-right">
 
                                                 <button id="searchButton" class="about-view travel-btn">
-                                                    <a href="catelogy.html"
+                                                    <a href="catelogy.jsp"
                                                        style="text-decoration: none; text-transform: uppercase;width: 180px; padding: 20px;height: 60px;">tìm
                                                         kiếm
-                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
                                                     </a>
                                                 </button>
                                                 <!--/.travel-btn-->
@@ -539,7 +423,7 @@
                                 <div class="filtr-item" style="height: 310px;width: 555px;">
                                     <img src="assets/images/item/2.jpg" alt="portfolio image"/>
                                     <div class="item-title">
-                                        <a href="detail.html">
+                                        <a href="detail.jsp">
                                             Phú Quốc
                                         </a>
                                         <p><span>tours hằng ngày</span><br><span>7 địa điểm</span></p>
@@ -551,7 +435,7 @@
                                 <div class="filtr-item" style="height: 310px;width: 555px;">
                                     <img src="assets/images/item/193.png" alt="portfolio image"/>
                                     <div class="item-title">
-                                        <a href="detail.html">
+                                        <a href="detail.jsp">
                                             Sapa
                                         </a>
                                         <p><span>tours hằng ngày</span><br><span>4 địa điểm</span></p>
@@ -563,7 +447,7 @@
                                 <div class="filtr-item">
                                     <img src="assets/images/gallary/hoi-an-tren-cao-1%20(1).jpg" alt="portfolio image"/>
                                     <div class="item-title">
-                                        <a href="detail.html">
+                                        <a href="detail.jsp">
                                             Hội An
                                         </a>
                                         <p>Tour Hàng Ngày </br>
@@ -576,7 +460,7 @@
                                 <div class="filtr-item" style="height: 310px;width: 360px;">
                                     <img src="assets/images/item/70.jpg" alt="portfolio image"/>
                                     <div class="item-title">
-                                        <a href="detail.html" style="width: 215px">
+                                        <a href="detail.jsp" style="width: 215px">
                                             Chợ Nổi Cái Răng
                                         </a>
                                         <p><span>tours hằng ngày</span><br><span>7 địa điểm</span></p>
@@ -588,7 +472,7 @@
                                 <div class="filtr-item" style="height: 310px;width: 360px;">
                                     <img src="assets/images/item/204.png" alt="portfolio image"/>
                                     <div class="item-title">
-                                        <a href="detail.html">
+                                        <a href="detail.jsp">
                                             Hạ Long
                                         </a>
                                         <p><span>tours hằng ngày</span><br><span>12 địa điểm</span></p>
@@ -600,7 +484,7 @@
                                 <div class="filtr-item" style="height: 310px;width: 750px;">
                                     <img src="assets/images/item/14.jpeg" alt="portfolio image"/>
                                     <div class="item-title">
-                                        <a href="detail.html">
+                                        <a href="detail.jsp">
                                             Vũng Tàu
                                         </a>
                                         <p><span>tours hằng ngày</span><br><span>6 địa điểm </span></p>
@@ -776,7 +660,7 @@
 
                 <div class="col-md-3 col-sm-6" id="5">
                     <div class="single-package-item">
-                        <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                                                <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
 
                         <img style="cursor: pointer" class="packageImage" src="assets/images/item/5.jpg"
                              alt="package-place">
@@ -847,7 +731,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="7">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/7.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đồng Tháp - Mộc Hóa<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 5,000,000đ</span>
@@ -880,7 +764,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="8">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/8.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Long An - Bến Lức<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -913,7 +797,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="9">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/9.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tiền Giang - Cai Lậy<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,500,000 - 4,000,000đ</span>
@@ -946,7 +830,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="10">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/10.webp" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bình Dương - Suối Tiên<span class="pull-right"
@@ -980,7 +864,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="11">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/11.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bình Phước - Thác Ma Thiên Lân<span class="pull-right"
@@ -1013,7 +897,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="12">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/12.webp" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đồng Nai - Khu du lịch Bửu Long<span class="pull-right"
@@ -1047,7 +931,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="13">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/13.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Vũng Tàu - Hồ Tràm<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,500,000đ</span>
@@ -1080,7 +964,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="14">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/14.jpeg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tp Hồ Chí Minh - Vũng Tàu<span class="pull-right"
@@ -1114,7 +998,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="15">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/15.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tp Hồ Chí Minh - Côn Đảo<span class="pull-right"
@@ -1148,7 +1032,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="16">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/16.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đồng Nai - Nam Cát Tiên<span class="pull-right"
@@ -1182,7 +1066,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="17">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/17.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Núi Bà Đen - Camping<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 5,000,000đ</span>
@@ -1214,7 +1098,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="18">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/18.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đồng Tháp - Đồng sen<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 5,000,000đ</span>
@@ -1246,7 +1130,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="19">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/19.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>An Giang - Miệt vườn<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
@@ -1278,7 +1162,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="20">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/20.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tiền Giang - Tân Phong<span class="pull-right"
@@ -1311,7 +1195,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="21">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/21.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Vĩnh Long - Sa Đéc<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -1343,7 +1227,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="22">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/22.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đồng Tháp - Trà Sư<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 5,000,000đ</span>
@@ -1375,7 +1259,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="23">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/23.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bạc Liêu<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">1,000,000 - 2,000,000đ</span>
@@ -1407,7 +1291,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="24">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/24.webp" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Cà Mau - Đất Mũi<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">4,000,000 - 5,000,000đ</span>
@@ -1439,7 +1323,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="25">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/25.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Sóc Trăng - Chùa Dơi<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,500,000 - 3,500,000đ</span>
@@ -1471,7 +1355,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="26">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/26.webp" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bến Tre - Cồn Phụng<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -1503,7 +1387,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="27">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/27.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Trà Vinh - Ao Bà Om<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -1535,7 +1419,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="28">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/28.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hậu Giang - Chợ nổi<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -1567,7 +1451,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="29">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/29.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Cần Thơ - Mỹ Khánh<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 5,000,000đ</span>
@@ -1599,7 +1483,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="30">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/30.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Kiên Giang - Đảo Nam Du<span class="pull-right"
@@ -1632,7 +1516,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="31">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/31.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Phú Quốc - Vinpearl Land<span class="pull-right"
@@ -1665,7 +1549,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="32">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/32.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Tiên - Mũi Nai<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,500,000 - 4,500,000đ</span>
@@ -1697,7 +1581,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="33">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/33.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đồng Tháp - Gáo Giồng<span class="pull-right" style="margin-top: 8px;;font-size: 15px;">2,500,000 - 3,500,000đ</span>
@@ -1729,7 +1613,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="34">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/34.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Long An - Cồn Long Mỹ<span class="pull-right"
@@ -1762,7 +1646,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="35">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/35.jpeg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bến Tre - Chợ nổi Cái Bè<span class="pull-right"
@@ -1795,7 +1679,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="36">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/36.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tiền Giang - Cù lao Thới Sơn<span class="pull-right"
@@ -1828,7 +1712,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="37">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/37.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Trà Vinh - Chùa Âng<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -1860,7 +1744,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="38">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/38.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đà Lạt - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">4,000,000 - 6,000,000đ</span>
@@ -1892,7 +1776,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="39">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/39.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Nha Trang - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">4,000,000 - 6,000,000đ</span>
@@ -1924,7 +1808,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="40">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/40.webp" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Huế - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">4,500,000 - 5,500,000đ</span>
@@ -1956,7 +1840,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="41">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/41.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đà Nẵng - Tiền Giang<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
@@ -1988,7 +1872,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="42">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/42.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Cần Thơ - Mỹ Khánh<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -2020,7 +1904,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="43">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/43.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Nha Trang - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
@@ -2052,7 +1936,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="44">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/44.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Huế - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">4,500,000 - 5,500,000đ</span>
@@ -2084,7 +1968,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="45">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/45.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bình Dương - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
@@ -2116,7 +2000,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="46">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/46.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đồng Nai - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
@@ -2148,7 +2032,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="47">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/47.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Long An - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,500,000 - 3,500,000đ</span>
@@ -2180,7 +2064,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="48">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/48.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tiền Giang - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -2212,7 +2096,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="49">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/49.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đồng Tháp - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
@@ -2244,7 +2128,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="50">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/50.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>An Giang - Cần Thơ <span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,500,000 - 3,500,000đ</span>
@@ -2276,7 +2160,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="51">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/51.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Kiên Giang - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">4,000,000 - 5,000,000đ</span>
@@ -2308,7 +2192,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="52">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/52.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bạc Liêu - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,500,000 - 3,500,000đ</span>
@@ -2340,7 +2224,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="53">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/53.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Sóc Trăng - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -2372,7 +2256,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="54">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/54.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Cà Mau - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
@@ -2404,7 +2288,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="55">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/55.webp" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bến Tre - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,500,000 - 3,500,000đ</span>
@@ -2436,7 +2320,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="56">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/56.webp" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Long An - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
@@ -2468,7 +2352,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="57">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/57.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3> Tiền Giang - Cần Thơ<span class="pull-right"
@@ -2501,7 +2385,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="58">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/58.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đồng Tháp - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,500,000 - 4,5	00,000đ</span>
@@ -2533,7 +2417,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="59">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/59.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>An Giang - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,500,000 - 4,500,000đ</span>
@@ -2565,7 +2449,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="60">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/60.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Kiên Giang - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
@@ -2597,7 +2481,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="61">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/61.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Châu Đốc - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 5,000,000đ</span>
@@ -2629,7 +2513,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="62">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/62.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Mỹ Tho - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,500,000 - 3,500,000đ</span>
@@ -2661,7 +2545,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="63">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/63.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bến Tre - Cần Thơ <span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,500,000 - 3,500,000đ</span>
@@ -2693,7 +2577,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="64">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/64.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Kiên Giang - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">4,000,000 - 5,000,000đ</span>
@@ -2725,7 +2609,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="65">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/65.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Châu Đốc - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 5,000,000đ</span>
@@ -2757,7 +2641,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="66">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/66.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>An Giang - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,500,000 - 4,500,000đ</span>
@@ -2788,7 +2672,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="67">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/67.webp" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Long An - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
@@ -2820,7 +2704,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="68">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/68.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tiền Giang - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
@@ -2852,7 +2736,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="69">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/69.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bến Tre - Cần Thơ<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,500,000 - 3,500,000đ</span>
@@ -2884,7 +2768,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="70">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/70.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Cần Thơ - Chợ nổi Cái Răng<span class="pull-right"
@@ -2916,7 +2800,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="71">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/71.png" alt="package-place">
                         <div style="height: 270px" class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Hội An<span class="pull-right" style="margin-top: 15px;font-size: 15px;">5,000,000 - 7,000,000đ</span>
@@ -2948,7 +2832,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="72">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/72.png" alt="package-place">
                         <div style="height: 270px" class="single-package-item-txt">
                             <h3>Tour Quảng Bình - Kẻ Gỗ<span class="pull-right"
@@ -2980,7 +2864,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="73">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/73.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Huế - Quảng Bình - Đà Nẵng <span class="pull-right"
@@ -3012,7 +2896,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="74">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/74.png" alt="package-place">
                         <div style="height: 310px" class="single-package-item-txt">
                             <h3>Tour Huế - Đà Nẵng - Hội An<span class="pull-right"
@@ -3044,7 +2928,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="75">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/75.png" alt="package-place">
                         <div style="height: 310px" class="single-package-item-txt">
                             <h3>Tour Quy Nhơn - Phú Yên<span class="pull-right"
@@ -3076,7 +2960,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="76">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/76.png" alt="package-place">
                         <div style="height: 310px" class="single-package-item-txt">
                             <h3>Tour Quảng Nam - Cu Lao Chàm<span class="pull-right"
@@ -3108,7 +2992,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="77">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/77.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Gia Lai - Kon Tum<span class="pull-right"
@@ -3140,7 +3024,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="78">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/78.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Nha Trang - Đảo Hoa Lan<span class="pull-right"
@@ -3172,7 +3056,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="79">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/79.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Quảng Bình - Đèo Ngang<span class="pull-right"
@@ -3204,7 +3088,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="80">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/80.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Phong Nha<span class="pull-right"
@@ -3236,7 +3120,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="81">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/81.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Pleiku - Kon Tum<span class="pull-right" style="margin-top: 10px;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -3267,7 +3151,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="82">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/82.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Tam Kỳ - Quảng Ngãi<span class="pull-right"
@@ -3299,7 +3183,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="83">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/83.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Cửa Lò - Nghệ An<span class="pull-right" style="margin-top: 10px;font-size: 15px;">2,000,000 - 2,500,000đ</span>
@@ -3330,7 +3214,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="84">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/84.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Bình Thuận - Phan Thiết<span class="pull-right"
@@ -3362,7 +3246,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="85">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/85.png" alt="package-place">
                         <div style="height: 270px" class="single-package-item-txt">
                             <h3>Tour Tam Đảo - Vĩnh Phúc<span class="pull-right"
@@ -3394,7 +3278,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="86">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/86.png" alt="package-place">
                         <div style="height: 270px" class="single-package-item-txt">
                             <h3>Tour Tràng An - Ninh Bình<span class="pull-right"
@@ -3426,7 +3310,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="87">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/87.png" alt="package-place">
                         <div style="height: 270px" class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Bà Nà Hills<span class="pull-right"
@@ -3458,7 +3342,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div style="margin-top: 5px" class="col-md-3 col-sm-6" id="88">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/88.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Hội An<span class="pull-right" style="margin-top: 10px;font-size: 15px;">5,000,000 - 7,000,000đ</span>
@@ -3489,7 +3373,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="89">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/89.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Huế - Đà Nẵng<span class="pull-right"
@@ -3521,7 +3405,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="90">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/90.png" alt="package-place">
                         <div style="height: 285px" class="single-package-item-txt">
                             <h3>Tour Huế - Đà Nẵng<span class="pull-right" style="margin-top: 10px;font-size: 15px;">3,000,000 - 5,000,000đ</span>
@@ -3552,7 +3436,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="91">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/91.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Nha Trang - Đà Nẵng<span class="pull-right"
@@ -3584,7 +3468,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="92">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/92.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Nha Trang - Hội An<span class="pull-right"
@@ -3616,7 +3500,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="93">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/93.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Nha Trang - Đà Nẵng - Hội An<span class="pull-right"
@@ -3648,7 +3532,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="94">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/94.png" alt="package-place">
                         <div style="height: 305px" class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Hội An - Bà Nà Hills<span class="pull-right"
@@ -3680,7 +3564,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="95">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/95.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Huế - Hội An - Bà Nà Hills<span class="pull-right"
@@ -3712,7 +3596,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="96">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/96.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Huế - Hội An - Cù Lao<span class="pull-right"
@@ -3744,7 +3628,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="97">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/97.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Cù Lao Chàm<span class="pull-right"
@@ -3776,7 +3660,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="98">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/98.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Huế - Hội An - Cù Lao Chàm<span class="pull-right"
@@ -3808,7 +3692,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="99">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/99.jpg" alt="package-place">
                         <div style="height: 290px" class="single-package-item-txt">
                             <h3> Tour Huế - Cù Lao Chàm<span class="pull-right"
@@ -3840,7 +3724,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="100">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/100.jpg" alt="package-place">
                         <div style="height: 290px" class="single-package-item-txt">
                             <h3>Tour Nha Trang - Vinpearl Land<span class="pull-right"
@@ -3872,7 +3756,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="101">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/101.jpg" alt="package-place">
                         <div style="height: 280px 	" class="single-package-item-txt">
                             <h3>Tour Nha Trang - Vinpearl Safari<span class="pull-right"
@@ -3904,7 +3788,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="102">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/102.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Nha Trang - Vinpearl Land - Vinpearl Safari<span class="pull-right"
@@ -3936,7 +3820,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="103">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/103.jpg" alt="package-place">
                         <div style="height: 280px 	" class="single-package-item-txt">
                             <h3>Tour Quy Nhơn - Eo Gió<span class="pull-right"
@@ -3968,7 +3852,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="104">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/104.jpg" alt="package-place">
                         <div style="height: 280px 	" class="single-package-item-txt">
                             <h3>Tour Quy Nhơn - Kỳ Co 2 ngày 1 đêm<span class="pull-right"
@@ -4000,7 +3884,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="105">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/105.jpg" alt="package-place">
                         <div style="height: 335px	" class="single-package-item-txt">
                             <h3>Tour Quy Nhơn - Gành Đá Dĩa<span class="pull-right"
@@ -4032,7 +3916,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="106">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/106.jpg" alt="package-place">
                         <div style="height: 335px	" class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Huế - Hội An - Quảng Bình<span class="pull-right"
@@ -4064,7 +3948,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="107">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/107.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Huế - Hội An - Phong Nha - Kẻ Bàng<span class="pull-right"
@@ -4096,7 +3980,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div style="margin-top: 5px	" class="col-md-3 col-sm-6" id="108">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/108.jpg" alt="package-place">
                         <div style="height: 335px	" class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Hội An - Đà Lạt <span class="pull-right"
@@ -4128,7 +4012,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="109">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/109.jpg" alt="package-place">
                         <div style="height: 300px	" class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Hội An - Đà Lạt<span class="pull-right"
@@ -4160,7 +4044,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="110">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/110.jpg" alt="package-place">
                         <div style="height: 300px	" class="single-package-item-txt">
                             <h3>Tour Huế - Quảng Bình - Đà Nẵng<span class="pull-right"
@@ -4192,7 +4076,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="111">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/111.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Huế - Quảng Bình - Đà Nẵng<span class="pull-right"
@@ -4224,7 +4108,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="112">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/112.jpg" alt="package-place">
                         <div style="height: 300px	" class="single-package-item-txt">
                             <h3>Tour Huế - Đà Lạt<span class="pull-right" style="margin-top: 10px;font-size: 15px;">4,000,000 - 4,500,000đ</span>
@@ -4255,7 +4139,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="113">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/113.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Huế - Đà Lạt <span class="pull-right" style="margin-top: 10px;font-size: 15px;">5,000,000 - 5,500,000đ</span>
@@ -4286,7 +4170,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="114">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/114.jpg" alt="package-place">
                         <div style="height: 290px	" class="single-package-item-txt">
                             <h3>Tour Quảng Bình - Đà Nẵng<span class="pull-right"
@@ -4318,7 +4202,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="115">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/115.jpg" alt="package-place">
                         <div style="height: 290px	" class="single-package-item-txt">
                             <h3>Tour Quảng Bình - Đà Nẵng<span class="pull-right"
@@ -4350,7 +4234,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div style="margin-top: 5px" class="col-md-3 col-sm-6" id="116">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/116.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Lạt - Nha Trang<span class="pull-right"
@@ -4382,7 +4266,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="117">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/117.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Lạt - Nha Trang<span class="pull-right"
@@ -4414,7 +4298,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="118">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/118.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Lạt - Nha Trang<span class="pull-right"
@@ -4446,7 +4330,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="119">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/119.jpg" alt="package-place">
                         <div style="height: 310px" class="single-package-item-txt">
                             <h3>Tour Phú Yên - Đà Nẵng<span class="pull-right"
@@ -4478,7 +4362,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="120">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/120.jpg" alt="package-place">
                         <div style="height: 310px" class="single-package-item-txt">
                             <h3>Tour Phú Yên - Đà Nẵng<span class="pull-right"
@@ -4510,7 +4394,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="121">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/121.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Ngũ Hành Sơn<span class="pull-right"
@@ -4543,7 +4427,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="122">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/122.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Bà Nà Hills<span class="pull-right"
@@ -4575,7 +4459,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="123">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/123.jpg" alt="package-place">
                         <div style="height: 270px" class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Hội An<span class="pull-right" style="margin-top: 10px;font-size: 15px;">2,000,000 - 2,500,000đ</span>
@@ -4606,7 +4490,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div style="margin-top: 5px" class="col-md-3 col-sm-6" id="124">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/124.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Cù Lao Chàm<span class="pull-right"
@@ -4638,7 +4522,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="125">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/125.jpg" alt="package-place">
                         <div style="height: 290px" class="single-package-item-txt">
                             <h3>Tour Huế - Đại Nội<span class="pull-right" style="margin-top: 10px;font-size: 15px;">2,000,000 - 2,500,000đ</span>
@@ -4669,7 +4553,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="126">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/126.jpg" alt="package-place">
                         <div style="height: 290px" class="single-package-item-txt">
                             <h3>Tour Huế - Chùa Thiên Mụ<span class="pull-right"
@@ -4701,7 +4585,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="127">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/127.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Huế - Phong Nha - Kẻ Bàng<span class="pull-right"
@@ -4733,7 +4617,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="128">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/128.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Huế - Quảng Bình - Đà Nẵng<span class="pull-right"
@@ -4765,7 +4649,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="129">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/129.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Quy Nhơn - Eo Gió<span class="pull-right"
@@ -4797,7 +4681,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="130">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/130.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Quy Nhơn - Kỳ Co<span class="pull-right" style="margin-top: 10px;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -4828,7 +4712,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="131">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/131.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Quy Nhơn - Gành Đá Dĩa<span class="pull-right"
@@ -4860,7 +4744,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="132">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/132.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Phú Yên - Gành Đá Đĩa<span class="pull-right"
@@ -4892,7 +4776,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="133">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/133.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Phú Yên - Tuy Hòa - Vịnh Vũng Rô<span class="pull-right"
@@ -4924,7 +4808,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="134">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/134.jpg" alt="package-place">
                         <div style="height: 270px" class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Hội An - Đà Nẵng<span class="pull-right"
@@ -4956,7 +4840,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="135">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/135.jpg" alt="package-place">
                         <div style="height: 270px" class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Huế - Đà Nẵng<span class="pull-right"
@@ -4988,7 +4872,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="136">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/136.jpg" alt="package-place">
                         <div style="height: 270px" class="single-package-item-txt">
                             <h3>Tour Huế - Hội An - Đà Nẵng<span class="pull-right"
@@ -5020,7 +4904,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="137">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/137.jpg" alt="package-place">
                         <div style="height: 325px" class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Huế - Hội An - Cù Lao Chàm<span class="pull-right"
@@ -5052,7 +4936,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="138">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/138.jpg" alt="package-place">
                         <div style="height: 325px" class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Huế - Hội An - Thánh địa Mỹ Sơn - Đà Nẵng<span class="pull-right"
@@ -5084,7 +4968,7 @@
                     </div><!--/.single-package-item-->
                 </div><!--/.col-->
                 <div class="col-md-3 col-sm-6" id="139">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/139.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Đà Nẵng - Huế - Quảng Bình - Đà Nẵng <span class="pull-right"
@@ -5150,7 +5034,7 @@
 
 
                 <div class="col-md-3 col-sm-6" id="141">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/142.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>>Hà Nội - Ninh Binh<span class="pull-right" style="margin-top: 10px;font-size: 15px;">7,000,000 - 9,000,000đ</span>
@@ -5182,7 +5066,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="142">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/142.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Yên Tử - Hạ Long<span class="pull-right"
@@ -5215,7 +5099,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="143">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/143.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Hà Giang - Cao Bằng<span class="pull-right"
@@ -5248,7 +5132,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="144">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/144.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Hà Giang - Cao Bằng <span class="pull-right"
@@ -5281,7 +5165,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="145">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/145.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Hạ Long - Yên Tử - Sapa
@@ -5314,7 +5198,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="146">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/146.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hạ Long - Yên Tử - Sapa
@@ -5347,7 +5231,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="147">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/147.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hạ Long - Yên Tử - Sapa
@@ -5380,7 +5264,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="148">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/148.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Yên Tử - Hạ Long - Sapa <span class="pull-right"
@@ -5413,7 +5297,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="149">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/149.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Hạ Long - Ninh Bình - Tràng An<span class="pull-right"
@@ -5446,7 +5330,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="150">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/150.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Tết Nguyên Đán 2024 - Hà Nội - Hạ Long<span class="pull-right"
@@ -5479,7 +5363,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="151">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/151.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Mù Cang Chải - Yên Bái - Sapa
@@ -5512,7 +5396,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="152">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/152.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Mộc Châu - Sơn La
@@ -5545,7 +5429,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="153">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/153.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Mộc Châu - Điện Biên<span class="pull-right"
@@ -5578,7 +5462,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="154">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/154.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Tràng An<span class="pull-right" style="margin-top: 10px;font-size: 15px;">8,700,000 - 10,000,000đ</span>
@@ -5610,7 +5494,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="155">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/155.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3> Hà Nội - Ninh Bình<span class="pull-right" style="margin-top: 10px;font-size: 15px;">6,000,000 - 9,000,000đ</span>
@@ -5642,7 +5526,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="156">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/156.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3> Hà Nội - Mù Cang Chải<span class="pull-right"
@@ -5676,7 +5560,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="157">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/157.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Ngọc Chiến dịp Lễ 2/9 từ Hà Nội 2023
@@ -5709,7 +5593,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="158">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/158.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3> Hà Nội - Bản Cát Cát <span class="pull-right"
@@ -5742,7 +5626,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="159">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/159.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nôi - Fansipan<span class="pull-right" style="margin-top: 10px;font-size: 15px;">3,000,000 - 5,000,000đ</span>
@@ -5774,7 +5658,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="160">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/160.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Hà Nội - Hàm Rồng dịp Lễ<span class="pull-right"
@@ -5807,7 +5691,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="161">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/161.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Mộc Châu Mùa Hoa Mơ - Hoa Mận<span class="pull-right"
@@ -5840,7 +5724,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="162">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/164.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Mộc Châu 2 ngày<span class="pull-right"
@@ -5873,7 +5757,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="163">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/162.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch dương lịch 2024 - Tour Mộc Châu<span class="pull-right"
@@ -5906,7 +5790,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="164">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/163.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>HÀ NỘI - CÁT CÁT - HÀM RỒNG<span class="pull-right"
@@ -5939,7 +5823,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="165">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/165.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3> Hà Nội - Sapa - Bản Cát Cát<span class="pull-right"
@@ -5972,7 +5856,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="166">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/166.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Fansipan dịp Lễ 20/11<span class="pull-right"
@@ -6005,7 +5889,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="167">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/167.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tết Nguyên Đán Sin Suối Hồ 2024<span class="pull-right"
@@ -6038,7 +5922,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="168">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/168.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Fansipan - Hà Nội<span class="pull-right" style="margin-top: 10px;font-size: 15px;">8,000,000 - 11,000,000đ</span>
@@ -6070,7 +5954,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="169">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/169.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Sapa 3 ngày 2 đêm giá tốt<span class="pull-right"
@@ -6103,7 +5987,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="170">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/170.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Sapa Tết Dương Lịch<span class="pull-right"
@@ -6136,7 +6020,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="171">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/171.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Tây Bắc Tết Dương lịch 2024<span class="pull-right"
@@ -6169,7 +6053,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="172">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/172.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Phú Thọ - Đền Hùng<span class="pull-right"
@@ -6203,7 +6087,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="173">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/173.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Tây Thiên<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 5,000,000đ</span>
@@ -6236,7 +6120,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="174">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/174.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Tết Âm lịch Tour Hà Nội <span class="pull-right"
@@ -6269,7 +6153,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="175">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/175.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Miền Bắc Tết Âm lịch - Hà Nội<span class="pull-right"
@@ -6302,7 +6186,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="176">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/176.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Miền Bắc Tết Dương lịch<span class="pull-right"
@@ -6335,7 +6219,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="177">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/178.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3> Chùa Bái Đính - Tràng An<span class="pull-right"
@@ -6368,7 +6252,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="178">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/177.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Chùa Tam Chúc - Tuyệt Tình Cốc<span class="pull-right"
@@ -6401,7 +6285,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="179">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/179.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Tam Cốc<span class="pull-right" style="margin-top: 10px;font-size: 15px;">700,000 - 5,490,000đ</span>
@@ -6433,7 +6317,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="180">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/180.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Hoa Lư<span class="pull-right" style="margin-top: 10px;font-size: 15px;">700,000 - 2,400,000đ</span>
@@ -6465,7 +6349,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="181">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/181.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hoa Lư - Hang Múa<span class="pull-right" style="margin-top: 10px;font-size: 15px;">890,000 - 3,000,000đ</span>
@@ -6497,7 +6381,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="182">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/182.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bắc Hà Nội - Chùa Hương<span class="pull-right"
@@ -6530,7 +6414,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="183">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/183.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Yên Tử 1 ngày từ Hà Nội<span class="pull-right"
@@ -6563,7 +6447,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="184">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/184.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Miền Bắc Hà Nội - City Tour Hà Nội 1 ngày<span class="pull-right"
@@ -6596,7 +6480,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="185">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/186.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Chùa Tam Chúc - Chùa Bà Đanh<span class="pull-right"
@@ -6629,7 +6513,7 @@
                 </div><!--/.col-->
                 <!-- ------------------------------------------------------------------- -->
                 <div class="col-md-3 col-sm-6" id="186">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/185.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Miền Bắc Hà Nội - City Tour Hà Nội 1 ngày<span class="pull-right"
@@ -6662,7 +6546,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="187">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/187.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Thanh Hóa<span class="pull-right" style="margin-top: 10px;font-size: 15px;">2,600,000 - 5,600,000đ</span>
@@ -6694,7 +6578,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="188">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/188.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Du lịch Thanh Hóa<span class="pull-right"
@@ -6727,7 +6611,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="189">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/189.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Thanh Hóa - Pù Luông<span class="pull-right"
@@ -6760,7 +6644,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="190">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/190.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Hà Nội - Thung Nai<span class="pull-right"
@@ -6793,7 +6677,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="191">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/191.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Du lịch Sapa<span class="pull-right" style="margin-top: 10px; font-size: 15px;">4,000,000 - 6,000,000đ</span>
@@ -6825,7 +6709,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="192">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/192.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour Du lịch Sapa<span class="pull-right" style="margin-top: 10px;font-size: 15px;">3,000,000 - 8,000,000đ</span>
@@ -6857,7 +6741,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="193">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/193.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Miền Bắc Tour Du lịch Sapa<span class="pull-right"
@@ -6890,7 +6774,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="194">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/194.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour mùa Thu 2023 <span class="pull-right" style="margin-top: 10px;font-size: 15px;">7,000,000 - 9,000,000đ</span>
@@ -6922,7 +6806,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="195">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/195.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Miền Bắc - Trung Quốc<span class="pull-right"
@@ -6955,7 +6839,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="196">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/196.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đông Bắc mùa Hoa Tam Giác Mạch<span class="pull-right"
@@ -6988,7 +6872,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="197">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/197.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Đông Bắc - Hà Nội - Hà Giang<span class="pull-right"
@@ -7021,7 +6905,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="198">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/198.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tour du lịch Mộc Châu Tết Dương Lịch<span class="pull-right"
@@ -7054,7 +6938,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="199">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/199.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Tết Nguyên Đán Hà Giang<span class="pull-right"
@@ -7087,7 +6971,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="200">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/200.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Hà Giang<span class="pull-right" style="margin-top: 10px; font-size: 15px;">7,000,000 - 9,000,000đ</span>
@@ -7119,7 +7003,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="201">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/201.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Land Tour Vịnh Hạ Long<span class="pull-right"
@@ -7152,7 +7036,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="202">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/202.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Yên Tử - Ba Vàng<span class="pull-right"
@@ -7185,7 +7069,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="203">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/203.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Miền Bắc Hà Nội - Hạ Long<span class="pull-right"
@@ -7218,7 +7102,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="204">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/204.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Miền Bắc Hà Nội - Hạ Long<span class="pull-right"
@@ -7251,7 +7135,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="205">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/205.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Hồ Ba Bể - Thác Bản Giốc 3 ngày<span class="pull-right"
@@ -7284,7 +7168,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="206">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/206.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội chùa Thầy - chùa Tây Phương<span class="pull-right"
@@ -7317,7 +7201,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="207">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/207.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Bắc Ninh 1 ngày<span class="pull-right"
@@ -7350,7 +7234,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="208">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/208.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Tam Đảo - Đền Chúa Thượng<span class="pull-right"
@@ -7383,7 +7267,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="209">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/209.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Hà Nội - Aquamarine Du Thuyền Ngủ<span class="pull-right"
@@ -7416,7 +7300,7 @@
                 </div><!--/.col-->
 
                 <div class="col-md-3 col-sm-6" id="210">
-                    <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
+                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
                         <img class="packageImage" src="assets/images/item/210.png" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Du lịch Tết Nguyên Đán Hà Giang<span class="pull-right"
@@ -7952,97 +7836,7 @@
 <!--subscribe end-->
 
 <!-- footer-copyright start -->
-<footer class="footer-copyright">
-    <div class="container">
-        <div class="footer-content">
-            <div class="row">
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <div class="footer-logo">
-                            <a href="index.html">
-                                tour<span>Nest</span>
-                            </a>
-                            <p>
-                                best travel tour guide
-                            </p>
-                        </div>
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <h2>Đối tác hợp tác</h2>
-                        <div class="single-footer-txt">
-                            <p><a href="https://www.traveloka.com/vi-vn/" target=”_blank”>traveloka</a></p>
-                            <p><a href="https://www.ivivu.com/" target=”_blank”>ivivu</a></p>
-                            <p><a href="https://www.saigontourist.net/" target=”_blank”>saigon tourist</a></p>
-                            <p><a href="https://travel.com.vn/" target=”_blank”>travel</a></p>
-                            <p><a href="https://www.vietnambooking.com/" target=”_blank”>vietnam booking</a></p>
-                            <p><a href="https://dulichviet.com.vn/" target=”_blank”>dulichviet</a></p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <h2>Điểm du lịch nổi tiếng</h2>
-                        <div class="single-footer-txt">
-                            <p><a href="#">hà nội</a></p>
-                            <p><a href="#">tp hồ chí minh</a></p>
-                            <p><a href="#">vũng tàu</a></p>
-                            <p><a href="#">đà lạt</a></p>
-                            <p><a href="#">nha trang</a></p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item text-center">
-                        <h2 class="text-left">contacts</h2>
-                        <div class="single-footer-txt text-left">
-                            <p><i class="fa-solid fa-phone"></i> (+84) 249 999 16</p>
-                            <p class="foot-email" style="text-transform:none;">
-                                <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i class="fa-solid fa-map-location-dot"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a></p>
-                            <p>Võ Minh Thịnh</p>
-                            <p class="foot-email" style="text-transform:none;">
-                                <a href="mailto:21130549@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130549@st.hcmuaf.edu.vn</a></p>
-                            <p>Mai Xuân Thức</p>
-                            <p class="foot-email" style="text-transform:none;">
-                                <a href="mailto:21130558@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130558@st.hcmuaf.edu.vn</a></p>
-                            <p>Trần Quang Vũ</p>
-                            <p class="foot-email" style="text-transform:none;">
-                                <a href="mailto:21130615@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130615@st.hcmuaf.edu.vn</a></p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-            </div><!--/.row-->
-
-            <hr>
-            <div class="foot-icons ">
-                <ul class="footer-social-links list-inline list-unstyled">
-                    <li><a href="https://www.facebook.com/TourNest.org" target="_blank" class="foot-icon-bg-1"><i
-                            class="fa-brands fa-facebook fa-xl"></i></a>
-                    </li>
-                    <li><a href="https://twitter.com/tournest_io" target="_blank" class="foot-icon-bg-2"><i
-                            class="fa-brands fa-twitter fa-xl"></i></a>
-                    </li>
-                    <li><a href="https://www.instagram.com/tournest.io/" target="_blank" class="foot-icon-bg-3"><i class="fa-brands fa-instagram fa-xl"></i></a>
-                    </li>
-                </ul>
-                <p>&copy; 2023-2024 <a href="https://github.com/MinhThinhrine/Do_An_Web" target="_blank">Nhóm 18</a>. All Right Reserved.</p>
-
-            </div><!--/.foot-icons-->
-            <div id="scroll-Top">
-                <i class="fa fa-angle-double-up return-to-top" id="scroll-top top" data-toggle="tooltip"
-                   data-placement="top"
-                   title="" data-original-title="Back to Top" aria-hidden="true"></i>
-            </div><!--/.scroll-Top-->
-        </div><!-- /.container-->
-    </div>
-</footer><!-- /.footer-copyright-->
+<%@include file="common/footer.jsp"%><!-- /.footer-copyright-->
 <!-- footer-copyright end -->
 
 
@@ -8085,4 +7879,5 @@
 <script src="assets/js/modify.js"></script>
 
 </body>
+
 </html>
