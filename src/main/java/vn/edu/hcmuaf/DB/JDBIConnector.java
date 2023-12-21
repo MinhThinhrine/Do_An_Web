@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.DB;
 import com.mysql.cj.jdbc.MysqlDataSource;
 import org.jdbi.v3.core.Jdbi;
-import vn.edu.hcmuaf.bean.User;
+import vn.edu.hcmuaf.bean.User2;
 
 
 import java.sql.SQLException;
@@ -38,9 +38,9 @@ public class JDBIConnector {
     }
 
     public static void main(String[] args) {
-        List<User> users = JDBIConnector.get().withHandle(h ->
+        List<User2> users = JDBIConnector.get().withHandle(h ->
                 h.createQuery("SELECT email, password, userName FROM users")
-                        .mapToBean(User.class)
+                        .mapToBean(User2.class)
                         .list()
         );
 

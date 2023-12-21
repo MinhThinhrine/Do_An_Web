@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.serice;
 
-import vn.edu.hcmuaf.DAO.UserDao;
-import vn.edu.hcmuaf.bean.User;
+import vn.edu.hcmuaf.DAO.UserDao2;
+import vn.edu.hcmuaf.bean.User2;
 
 public class UserService {
     private static UserService instance;
@@ -9,8 +9,8 @@ public class UserService {
         if (instance ==null) instance = new UserService();
         return instance;
     }
-    public User checkLogin(String email,String pass) {
-        User userbyEmail = UserDao.getUserByEmail(email);
+    public User2 checkLogin(String email, String pass) {
+        User2 userbyEmail = UserDao2.getUserByEmail(email);
         if(userbyEmail !=null && userbyEmail.getEmail().equals(email) && userbyEmail.getPassword().equals(pass))
             return userbyEmail;
 
@@ -22,7 +22,7 @@ public class UserService {
         String pass ="1234567";
 
         UserService us = new UserService();
-        User user = us.checkLogin(email, pass);
+        User2 user = us.checkLogin(email, pass);
         System.out.println(user);
     }
 }

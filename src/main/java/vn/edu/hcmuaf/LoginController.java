@@ -2,7 +2,7 @@ package vn.edu.hcmuaf;
 
 
 
-import vn.edu.hcmuaf.bean.User;
+import vn.edu.hcmuaf.bean.User2;
 import vn.edu.hcmuaf.serice.UserService;
 
 
@@ -38,7 +38,7 @@ public class LoginController extends HttpServlet {
             request.getRequestDispatcher("./login.jsp").forward(request,response);
         }
 
-            User u = UserService.getInstance().checkLogin(email,pass);
+            User2 u = UserService.getInstance().checkLogin(email,pass);
 
         if(u!=null){
             HttpSession session = request.getSession();
