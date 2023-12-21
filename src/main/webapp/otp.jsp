@@ -58,7 +58,7 @@
 											<span class="input-group-addon"><i
                                                     class="glyphicon glyphicon-envelope color-blue"></i></span> <input
                                             id="opt" name="otp" placeholder="Enter OTP"
-                                            class="form-control" type="number" required="required">
+                                            class="form-control" type="text" required="required">
                                     </div>
                                     <%if(status!=null || !status.equals("")){%>
                                     <div class="ques" style="width: 250px;margin: 40px auto -15px auto; color: #bd1111 !important;text-align: center">

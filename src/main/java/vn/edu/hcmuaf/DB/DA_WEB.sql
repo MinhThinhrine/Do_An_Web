@@ -201,8 +201,9 @@ VALUES
 -- Tạo dữ liệu cho bảng users
 INSERT INTO `users` (`userName`, `email`, `password`, `phoneNumber`, `address`, `roleId`)
 VALUES
-    ('user1', 'user1@example.com', 'password1', '123456789', 'Address 1', 1),
-    ('user2', 'user2@example.com', 'password2', '987654321', 'Address 2', 2);
+    ('thinh', '21130549@st.hcmuaf.edu.vn', '123456', '987654321', 'Address 2', 1),
+    ('vu', '21130615@st.hcmuaf.edu.vn', '123456', '98765431', 'Address 2', 1);
+    ('thuc', '21130558@st.hcmuaf.edu.vn', '123456', '98765431', 'Address 2', 1);
 
 -- Tạo dữ liệu cho bảng categories
 INSERT INTO `categories` (`region`, `session`, `note`)
