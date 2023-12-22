@@ -202,7 +202,7 @@ VALUES
 INSERT INTO `users` (`userName`, `email`, `password`, `phoneNumber`, `address`, `roleId`)
 VALUES
     ('thinh', '21130549@st.hcmuaf.edu.vn', '123456', '987654321', 'Address 2', 1),
-    ('vu', '21130615@st.hcmuaf.edu.vn', '123456', '98765431', 'Address 2', 1);
+    ('vu', '21130615@st.hcmuaf.edu.vn', '123456', '98765431', 'Address 2', 1),
     ('thuc', '21130558@st.hcmuaf.edu.vn', '123456', '98765431', 'Address 2', 1);
 
 -- Tạo dữ liệu cho bảng categories

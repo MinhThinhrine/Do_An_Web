@@ -67,6 +67,7 @@ public class forgotPassword extends HttpServlet {
         } else if (checkError==false) {
             int otpvalue = 0;
             HttpSession forgot_Session = request.getSession();
+            forgot_Session.setMaxInactiveInterval(15 * 60); // chỉnh thời gian cho các session quên mật khẩu
 
             if (email != null || !email.equals("")) {
                 Random rand = new Random();
