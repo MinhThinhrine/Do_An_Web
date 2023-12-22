@@ -27,41 +27,32 @@ public class NewPassword extends HttpServlet {
         String newpass2 = (String) request.getAttribute("newpass2");
         String error = "";
         RequestDispatcher dispatcher = null;
-
-        if ((newpass1 != null && newpass1.length() < 6)) {
+        if (newpass1.length() < 6) {
             error = "Mật khẩu mới phải lớn hơn 6 kí tự";
-            request.setAttribute("error1", error);
-        } else if (newpass1 == null || newpass1.equals("")) {
+            request.setAttribute("error1", "Mật khẩu mới phải lớn hơn 6 kí tự");
+        }
+        if (newpass1 == null || newpass1.equals("")) {
             error = "Vui lòng nhập mật khẩu mới";
-            request.setAttribute("error1", error);
-        } else if (newpass2 == null || newpass2.equals("")) {
+            request.setAttribute("error1", "Vui lòng nhập mật khẩu mới");
+        }
+        if (newpass2 == null || newpass2.equals("")) {
             error = "Vui lòng nhập lại mật khẩu mới";
-            request.setAttribute("error2", error);
-        } else if (newpass1 != newpass2 || !newpass1.equals(newpass2)) {
+            request.setAttribute("error2", "Vui lòng nhập lại mật khẩu mới");
+        }
+        if (newpass1 != newpass2 || !newpass1.equals(newpass2)) {
             error = "Vui lòng nhập lại mật khẩu mới";
-            request.setAttribute("error2", error);
+            request.setAttribute("error1", "Mật khẩu nhập lại phải giống mật khẩu mới ");
         }
 
         if (error != "" || !error.equals(null)) {
-            dispatcher = request.getRequestDispatcher("newpassword.jsp");
-            dispatcher.forward(request,response);
+
         } else {
             try {
                 PreparedStatement pst = ConnectToDatabase.executeUpdate("UPDATE user SET password= ? " + "WHERE email=?");
                 pst.setString(1, newpass1);
                 pst.setString(2, email);
 
-                int rowCount = pst.executeUpdate();
-                if(rowCount >0){
-                    request.setAttribute("status","Thay đổi mật khẩu thành công");
-                    dispatcher = request.getRequestDispatcher("login.jsp");
-                }else{
-                    request.setAttribute("status","Thay đổi mật khẩu không thành công");
-                    dispatcher = request.getRequestDispatcher("newpassword.jsp");
-                }
-                dispatcher.forward(request,response);
             } catch (Exception e) {
-                e.printStackTrace();
                 throw new RuntimeException(e);
             }
 
