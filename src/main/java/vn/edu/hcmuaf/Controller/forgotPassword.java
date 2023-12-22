@@ -2,7 +2,7 @@ package vn.edu.hcmuaf.Controller;
 
 
 import vn.edu.hcmuaf.DAO.userDAO;
-import vn.edu.hcmuaf.bean.user;
+import vn.edu.hcmuaf.bean.User;
 
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
@@ -37,10 +37,10 @@ public class forgotPassword extends HttpServlet {
         String error = "12345";
         boolean checkError = false;
         String url = "otp.jsp";
-        user user = new user();
+        User user = new User();
         userDAO userDAO = new userDAO();
 
-        Map<String, user> checkmail = userDAO.checkMail();
+        Map<String, User> checkmail = userDAO.checkMail();
         Pattern emailPattern = Pattern.compile("\\w+@\\w+(\\.\\w+)+(\\.\\w+)*");
         Matcher emailMatcher = emailPattern.matcher(email);
         RequestDispatcher dispatcher = null;
