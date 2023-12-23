@@ -132,12 +132,13 @@ public class NewPassword extends HttpServlet {
                 int rowCount = pst.executeUpdate();
                 if (rowCount > 0) {
                     request.setAttribute("status", "Thay đổi mật khẩu thành công");
-                    dispatcher = request.getRequestDispatcher("login.jsp");
+//                    dispatcher = request.getRequestDispatcher("login.jsp");
+                    response.sendRedirect("login.jsp");
                 } else {
                     request.setAttribute("error", "Thay đổi mật khẩu không thành công. Xin vui lòng thực hiện lại");
                     dispatcher = request.getRequestDispatcher("newpassword.jsp");
                 }
-                dispatcher.forward(request, response);
+//                dispatcher.forward(request, response);
             } catch (Exception e) {
                 System.out.println("Lỗi" + e.getMessage());
                 e.printStackTrace();
@@ -147,15 +148,18 @@ public class NewPassword extends HttpServlet {
         System.out.print(error);
     }
 
+    //---------------------------------------------------------------------------------------------------
+    // Kiểm tra xem chuỗi có chứa khoảng trắng không
     private static boolean containsWhitespace(String str) {
-        // Kiểm tra xem chuỗi có chứa khoảng trắng không
         return str.contains(" ");
     }
 
+    //không được chứa các ký tự đặc biệt ngoại trừ !@#$" và khoảng trắng
     private boolean containsSpecialCharacters(String str) {
         return !str.matches("^[!@#$//s]*$");
     }
 
+    //không được chứa các kí tự có dấu
     public static boolean checkSpecialCharacters(String string) {
         String normalizedString = Normalizer.normalize(string, Normalizer.Form.NFD);
         Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
@@ -164,8 +168,8 @@ public class NewPassword extends HttpServlet {
         return !string.equals(withoutDiacritics);
     }
 
+    // Loại bỏ khoảng trắng ở hai đầu chuỗi và so sánh với chuỗi gốc
     private static boolean hasLeadingTrailingWhitespace(String str) {
-        // Loại bỏ khoảng trắng ở hai đầu chuỗi và so sánh với chuỗi gốc
         return !str.equals(str.trim());
     }
 }

@@ -1,21 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: HP
-  Date: 12/4/2023
-  Time: 10:30
-  To change this template use File | Settings | File Templates.
---%>
-<!doctype html>
-<html class="no-js" lang="vi">
-<%@ page contentType="text/html; charset=UTF-8" %>
-<%@include file="common/tablib.jsp" %><html lang="vi">
+<html lang="vi">
 
 <head>
     <meta charset="utf-8">
     <title>Thanh toán - TourNest</title>
+    <!-- <script type="text/javascript"
+            src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://apis.google.com/js/api:client.js" gapi_processed="true"></script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=vi"></script> -->
     <link rel="stylesheet" href="assets/css/payment.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="assets/js/payment.js"></script>
+    <script src="../TourNest-master/assets/js/payment.js"></script>
     <script src="assets/js/jquery-3.5.1.slim.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
@@ -33,9 +32,43 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.js"></script>
 
-    <%--head--%>
-    <%@include file="common/head.jsp" %>
-    <%--End head--%>
+    <!-- TITLE OF SITE -->
+    <title>TourNest</title>
+
+    <!-- favicon img -->
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="assets/css/animate.css"/>
+
+    <!--hover.css-->
+    <link rel="stylesheet" href="assets/css/hover-min.css">
+
+    <!--datepicker.css-->
+    <link rel="stylesheet" href="assets/css/datepicker.css">
+
+    <!--owl.carousel.css-->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
+
+    <!-- range css-->
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css"/>
+
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="assets/css/bootsnav.css"/>
+
+    <!--style.css-->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+
+    <!--responsive.css-->
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         .hardCode {
             /*display: block;*/
@@ -761,7 +794,7 @@
                                 <div>
                                     <button class="btn btn-primary btn-order" style="width:100% "
                                             onclick="kiemTraDieuKien()">
-                                        <a href="../TourNest-master/bill.jsp"></a> Đặt ngay
+                                        <a href="../TourNest-master/bill.html"></a> Đặt ngay
                                     </button>
                                 </div>
                             </div>
@@ -781,7 +814,7 @@
         var dieuKienCheckbox = document.getElementById("DieuKien");
         if (dieuKienCheckbox.checked) {
             // Nếu đã chọn, chuyển hướng đến trang "bill.html"
-            window.location.href = "bill.jsp";
+            window.location.href = "bill.html";
         } else {
             // Nếu chưa chọn, hiển thị thông báo
             alert('Bạn cần đồng ý với điều khoản đăng ký online.');
@@ -790,9 +823,97 @@
 </script>
 
 </body>
-
 <!-- footer-copyright start -->
-<%@include file="common/footer.jsp"%><!-- /.footer-copyright-->
-<!-- footer-copyright end -->
+<footer class="footer-copyright">
+    <div class="container">
+        <div class="footer-content">
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                tour<span>Nest</span>
+                            </a>
+                            <p>
+                                best travel tour guide
+                            </p>
+                        </div>
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+                        <h2>Đối tác hợp tác</h2>
+                        <div class="single-footer-txt">
+                            <p><a href="https://www.traveloka.com/vi-vn/">traveloka</a></p>
+                            <p><a href="https://www.ivivu.com/">ivivu</a></p>
+                            <p><a href="https://www.saigontourist.net/">saigon tourist</a></p>
+                            <p><a href="https://travel.com.vn/">travel</a></p>
+                            <p><a href="https://www.vietnambooking.com/">vietnam booking</a></p>
+                            <p><a href="https://dulichviet.com.vn/" target=”_blank”>dulichviet</a></p>
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+
+                </div><!--/.col-->
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+                        <h2>Điểm du lịch nổi tiếng</h2>
+                        <div class="single-footer-txt">
+                            <p><a href="#">hà nội</a></p>
+                            <p><a href="#">tp hồ chí minh</a></p>
+                            <p><a href="#">vũng tàu</a></p>
+                            <p><a href="#">đà lạt</a></p>
+                            <p><a href="#">nha trang</a></p>
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item text-center">
+                        <h2 class="text-left">contacts</h2>
+                        <div class="single-footer-txt text-left">
+                            <p><i class="fa-solid fa-phone"></i> (+84) 249 999 16</p>
+                            <p class="foot-email" style="text-transform:none;">
+                                <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i class="fa-solid fa-map-location-dot"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a></p>
+                            <p>Võ Minh Thịnh</p>
+                            <p class="foot-email" style="text-transform:none;">
+                                <a href="mailto:21130549@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130549@st.hcmuaf.edu.vn</a></p>
+                            <p>Mai Xuân Thức</p>
+                            <p class="foot-email" style="text-transform:none;">
+                                <a href="mailto:21130558@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130558@st.hcmuaf.edu.vn</a></p>
+                            <p>Trần Quang Vũ</p>
+                            <p class="foot-email" style="text-transform:none;">
+                                <a href="mailto:21130615@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130615@st.hcmuaf.edu.vn</a></p>
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+
+            </div><!--/.row-->
+
+        </div><!--/.footer-content-->
+        <hr>
+        <div class="foot-icons ">
+            <ul class="footer-social-links list-inline list-unstyled">
+                <li><a href="https://www.facebook.com/TourNest.org" target="_blank" class="foot-icon-bg-1"><i class="fa-brands fa-facebook fa-xl" style="line-height: 2.1em;"></i></a>
+                </li>
+                <li><a href="https://twitter.com/tournest_io" target="_blank" class="foot-icon-bg-2"><i class="fa-brands fa-twitter fa-xl" style="line-height: 2.1em;"></i></a>
+                </li>
+                <li><a href="https://www.instagram.com/tournest.io/" target="_blank" class="foot-icon-bg-3"><i class="fa-brands fa-instagram fa-xl" style="line-height: 2.1em;"></i></a>
+                </li>
+            </ul>
+            <p>&copy; 2023-2024 <a href="https://github.com/MinhThinhrine/Do_An_Web">Nhóm 18</a>. All Right Reserved.
+            </p>
+
+        </div><!--/.foot-icons-->
+        <div id="scroll-Top">
+            <i class="fa fa-angle-double-up return-to-top" id="scroll-top 1" data-toggle="tooltip" data-placement="top"
+               title="" data-original-title="Back to Top" aria-hidden="true"></i>
+        </div><!--/.scroll-Top-->
+    </div><!-- /.container-->
+
+</footer><!-- /.footer-copyright-->
 
 </html>

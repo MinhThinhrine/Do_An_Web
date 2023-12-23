@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-sm-2">
                     <div class="logo">
-                        <a href="../index.jsp">
+                        <a href="index.jsp">
                             tour<span>Nest</span>
                         </a>
                     </div><!-- /.logo-->
