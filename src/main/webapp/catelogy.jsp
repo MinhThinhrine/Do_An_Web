@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@ page contentType="text/html; charset=UTF-8" %>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -26,7 +25,8 @@
     <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
 
     <!--font-awesome.min.css-->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
     <!--animate.css-->
     <link rel="stylesheet" href="assets/css/animate.css"/>
@@ -47,33 +47,36 @@
             <div class="row head">
                 <div class="col-sm-2">
                     <div class="logo">
-                        <a href="index.jsp">
+                        <a href="index.html">
                             tour<span>Nest</span>
                         </a>
                     </div><!-- /.logo-->
                 </div><!-- /.col-->
-                <div class="col-sm-2"></div>
-                <div class="col-sm-8">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-9">
                     <div class="main-menu">
                         <ul class="nav" style="text-align: right">
-                            <li><a href="index.jsp">Trang Chủ</a></li>
-                            <li><a href="index.jsp#spo">Ưu Đãi</a></li>
-                            <li><a href="index.jsp#gallery">Tour Hot</a></li>
-                            <li><a href="index.jsp#pack">Gói Du Lịch</a></li>
-                            <li><a href="index.jsp#blog">Tin Tức</a></li>
-                            <li><a href="index.jsp#feedback">Đánh Giá</a></li>
-                            <li><a href="index.jsp#service">Liên Hệ</a></li>
+                            <li><a href="index.html">Trang Chủ</a></li>
+                            <li><a href="index.html#spo">Ưu Đãi</a></li>
+                            <li><a href="index.html#gallery">Tour Hot</a></li>
+                            <li><a href="index.html#pack">Gói Du Lịch</a></li>
+                            <li><a href="index.html#blog">Tin Tức</a></li>
+                            <li><a href="index.html#feedback">Đánh Giá</a></li>
+                            <li><a href="index.html#service">Liên Hệ</a></li>
+                            <li class="smooth-menu"><a href="#"><i class="fa fa-suitcase-rolling fa-2x"
+                                                                   style="margin-top: -10px;color: #00d8fe"></i></a>
+                            </li>
                             <li>
                                 <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
-                                        href="login.jsp">Đặt Tour</a>
+                                        href="login.html">Đăng Nhập</a>
                                 </button>
                             </li><!--/.project-btn-->
                             <li id="icon-user" style="display: block;padding-top: 24px">
                                 <i class="fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
                                 <ul id="service_account" style="margin-top: -5px">
-                                    <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
-                                    <li><a id="myTour" href="shopcart.jsp">VALI</a></li>
-                                    <li><a id="log_out" href="register.jsp">Đăng xuất</a></li>
+                                    <li><a id="myInfor" href="infor.html">Thông tin tài khoản</a></li>
+                                    <li><a id="myTour" href="shopcart.html">VALI</a></li>
+                                    <li><a id="log_out" href="register.html">Đăng xuất</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -104,12 +107,12 @@
                     </select></li>
                     <li class="nav-item d-inline-flex align-items-center justify-content-between mb-lg-0 mb-3">
                         <div class="d-inline-flex align-items-center mx-lg-2" id="select2">
-                            <!--                            <div class="pl-2">Products:</div>-->
-                            <!--                            <select name="pro" id="pro">-->
-                            <!--                                <option value="18">18</option>-->
-                            <!--                                <option value="19">19</option>-->
-                            <!--                                <option value="20">20</option>-->
-                            <!--                            </select>-->
+                            <div class="pl-2">Products:</div>
+                            <select name="pro" id="pro">
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                            </select>
                         </div>
                         <div class="font-weight-bold mx-2 result"><span class="nums">9 </span>from 210</div>
                     </li>
@@ -123,20 +126,20 @@
             <div class="box border-bottom">
                 <div class="form-group text-center">
                     <div class="btn-group" data-toggle="buttons"><label class="btn btn-success form-check-label"> <input
-                            class="form-check-input" type="radio"> Ban Đầu </label> <label
+                            class="form-check-input" type="radio"> Reset </label> <label
                             class="btn btn-success form-check-label active"> <input class="form-check-input"
                                                                                     type="radio" checked> Áp Dụng
                     </label>
                     </div>
                 </div>
-                <div><label class="tick">Mới<input type="checkbox" checked="checked"> <span class="check"></span>
+                <div><label class="tick">Hot<input type="checkbox" checked="checked"> <span class="check"></span>
                 </label></div>
                 <div><label class="tick">Giảm giá<input type="checkbox"> <span class="check"></span> </label></div>
             </div>
             <div class="box border-bottom">
                 <div class="box-label text-uppercase d-flex align-items-center">Khu vực
                     <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box"
-                            aria-expanded="false" aria-controls="inner-box" id="out" onclick="outerFilter()"><span
+                            aria-expanded="false" aria-controls="inner-box" id="out" ><span
                             class="fas fa-plus"></span></button>
                 </div>
                 <div id="inner-box" class="collapse mt-2 mr-1">
@@ -149,9 +152,10 @@
                 </div>
             </div>
             <div class="box border-bottom">
-                <div class="box-label text-uppercase d-flex align-items-center">Tỉnh thành
+                <div class="box-label text-uppercase d-flex align-items-center">Tỉnh Thành
                     <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box2"
-                            aria-expanded="false" aria-controls="inner-box2"><span class="fas fa-plus"></span></button>
+                            aria-expanded="false" aria-controls="inner-box2"><span
+                            class="fas fa-plus"></span></button>
                 </div>
                 <div id="inner-box2" class="collapse mt-2 mr-1">
                     <div class="my-1"><label class="tick">Tp Hồ Chí Minh <input type="checkbox"> <span
@@ -164,6 +168,23 @@
                     </label></div>
                     <div class="my-1"><label class="tick">Phú Quốc <input type="checkbox"> <span class="check"></span>
                     </label></div>
+                </div>
+            </div>
+            <div class="box border-bottom">
+                <div class="box-label text-uppercase d-flex align-items-center">Theo Mùa
+                    <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box3"
+                            aria-expanded="false" aria-controls="inner-box3"><span class="fas fa-plus"></span></button>
+                </div>
+                <div id="inner-box3" class="collapse mt-2 mr-1">
+                    <div class="my-1"><label class="tick">Xuân <input type="checkbox"> <span
+                            class="check"></span> </label></div>
+                    <div class="my-1"><label class="tick">Hạ <input type="checkbox"> <span class="check"></span>
+                    </label></div>
+                    <div class="my-1"><label class="tick">Thu <input type="checkbox"> <span
+                            class="check"></span> </label></div>
+                    <div class="my-1"><label class="tick">Đông <input type="checkbox"> <span class="check"></span>
+                    </label></div>
+
                 </div>
             </div>
             <div class="box border-bottom">
@@ -250,11 +271,17 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn">
+                            <div class="about-btn" style="float: left">
                                 <button class="about-view packages-btn" id="btn">
                                     book now
                                 </button>
-                            </div><!--/.about-btn-->
+                            </div>
+                            <div class="about-btn">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase-rolling" style="padding-left: 6px;" ></i>
+                                </button>
+                            </div>
+                            <!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
                     </div><!--/.single-package-item-->
 
@@ -284,9 +311,14 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
+                            <div class="about-btn" style="float: left">
+                                <button class="about-view packages-btn" id="btn">
                                     book now
+                                </button>
+                            </div>
+                            <div class="about-btn">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -319,9 +351,14 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
+                            <div class="about-btn" style="float: left">
+                                <button class="about-view packages-btn" id="btn">
                                     book now
+                                </button>
+                            </div>
+                            <div class="about-btn">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -353,9 +390,14 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
+                            <div class="about-btn" style="float: left">
+                                <button class="about-view packages-btn" id="btn">
                                     book now
+                                </button>
+                            </div>
+                            <div class="about-btn">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -387,9 +429,14 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
+                            <div class="about-btn" style="float: left">
+                                <button class="about-view packages-btn" id="btn">
                                     book now
+                                </button>
+                            </div>
+                            <div class="about-btn">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -422,9 +469,14 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
+                            <div class="about-btn" style="float: left">
+                                <button class="about-view packages-btn" id="btn">
                                     book now
+                                </button>
+                            </div>
+                            <div class="about-btn">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -456,9 +508,14 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
+                            <div class="about-btn" style="float: left">
+                                <button class="about-view packages-btn" id="btn">
                                     book now
+                                </button>
+                            </div>
+                            <div class="about-btn">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -490,9 +547,14 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
+                            <div class="about-btn" style="float: left">
+                                <button class="about-view packages-btn" id="btn">
                                     book now
+                                </button>
+                            </div>
+                            <div class="about-btn">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -524,9 +586,14 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
+                            <div class="about-btn" style="float: left">
+                                <button class="about-view packages-btn" id="btn">
                                     book now
+                                </button>
+                            </div>
+                            <div class="about-btn">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -559,9 +626,14 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
+                            <div class="about-btn" style="float: left">
+                                <button class="about-view packages-btn" id="btn">
                                     book now
+                                </button>
+                            </div>
+                            <div class="about-btn">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -615,7 +687,7 @@
                 <div class="col-sm-3">
                     <div class="single-footer-item">
                         <div class="footer-logo">
-                            <a href="index.jsp">
+                            <a href="index.html">
                                 tour<span>Nest</span>
                             </a>
                             <p>
