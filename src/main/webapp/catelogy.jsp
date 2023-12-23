@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@include file="common/tablib.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,27 +57,26 @@
                 <div class="col-sm-9">
                     <div class="main-menu">
                         <ul class="nav" style="text-align: right">
-                            <li><a href="index.html">Trang Chủ</a></li>
-                            <li><a href="index.html#spo">Ưu Đãi</a></li>
-                            <li><a href="index.html#gallery">Tour Hot</a></li>
-                            <li><a href="index.html#pack">Gói Du Lịch</a></li>
-                            <li><a href="index.html#blog">Tin Tức</a></li>
-                            <li><a href="index.html#feedback">Đánh Giá</a></li>
-                            <li><a href="index.html#service">Liên Hệ</a></li>
-                            <li class="smooth-menu"><a href="#"><i class="fa fa-suitcase-rolling fa-2x"
+                            <li><a href="index.jsp">Trang Chủ</a></li>
+                            <li><a href="index.jsp#spo">Ưu Đãi</a></li>
+                            <li><a href="index.jsp#gallery">Tour Hot</a></li>
+                            <li><a href="index.jsp#pack">Gói Du Lịch</a></li>
+                            <li><a href="index.jsp#blog">Tin Tức</a></li>
+                            <li><a href="index.jsp#feedback">Đánh Giá</a></li>
+                            <li><a href="index.jsp#service">Liên Hệ</a></li>
+                            <li class="smooth-menu"><a href="shopcart.jsp"><i class="fa fa-suitcase-rolling fa-2x"
                                                                    style="margin-top: -10px;color: #00d8fe"></i></a>
                             </li>
                             <li>
                                 <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
-                                        href="login.html">Đăng Nhập</a>
+                                        href="login.jsp">Đăng Nhập</a>
                                 </button>
                             </li><!--/.project-btn-->
                             <li id="icon-user" style="display: block;padding-top: 24px">
                                 <i class="fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
                                 <ul id="service_account" style="margin-top: -5px">
-                                    <li><a id="myInfor" href="infor.html">Thông tin tài khoản</a></li>
-                                    <li><a id="myTour" href="shopcart.html">VALI</a></li>
-                                    <li><a id="log_out" href="register.html">Đăng xuất</a></li>
+                                    <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
+                                    <li><a id="log_out" href="register.jsp">Đăng xuất</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -88,6 +88,7 @@
     </div><!-- /.container -->
     </div><!-- /.header-area -->
 </header><!-- /.top-area -->
+
 <div class="con">
     <div class="bg-white rounded d-flex align-items-center justify-content-between" id="header">
         <button class="btn btn-hide text-uppercase" type="button" data-toggle="collapse" data-target="#filterbar"
