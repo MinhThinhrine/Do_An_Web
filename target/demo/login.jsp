@@ -42,12 +42,12 @@
             </div>
         </form>
 
-        <div class="forget"><a href="forgetpass.html">Quên mật khẩu?</a></div>
+        <div class="forget"><a href="forgetpass.jsp">Quên mật khẩu?</a></div>
         <div class="ques">Bạn muốn trải nghiệm
-            <a href="index.html">TourNest</a>?
+            <a href="index.jsp">TourNest</a>?
         </div>
         <div class="signup">
-            <a href="register.html">ĐĂNG KÝ</a>
+            <a href="register.jsp">ĐĂNG KÝ</a>
         </div>
     </div>
 </div>

@@ -5,7 +5,6 @@ import vn.edu.hcmuaf.DAO.userDAO;
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
 import vn.edu.hcmuaf.bean.User;
 import vn.edu.hcmuaf.bean.User2;
-import vn.edu.hcmuaf.serice.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

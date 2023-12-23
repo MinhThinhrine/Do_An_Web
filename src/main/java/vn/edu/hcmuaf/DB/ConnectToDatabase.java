@@ -20,7 +20,7 @@ public class ConnectToDatabase {
         return connection;
     }
 
-    public static PreparedStatement executeUpdate(String sql) throws Exception {
+    public static void executeUpdate(String sql) throws Exception {
 //        Connection connect = getConnect();
 //        Statement stmt = connect.createStatement();
 //        stmt.executeUpdate(sql);
@@ -28,7 +28,6 @@ public class ConnectToDatabase {
         PreparedStatement stmt = connect.prepareStatement(sql);
         stmt.executeUpdate();
 
-        return stmt;
     }
 
     public static ResultSet executeQuery(String sql) throws Exception {
