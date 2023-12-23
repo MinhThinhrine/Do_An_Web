@@ -542,9 +542,14 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
+                            <div class="about-btn" style="float: left">
+                                <button class="about-view packages-btn" id="btn">
+                                    book now
+                                </button>
+                            </div>
                             <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    Đặt Tour
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase-rolling" style="padding-left: 6px;" ></i>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->

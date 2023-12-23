@@ -29,18 +29,20 @@
                                 <li class="smooth-menu"><a href="#blog">Tin Tức</a></li>
                                 <li class="smooth-menu"><a href="#feedback">Đánh Giá</a></li>
                                 <li class="smooth-menu"><a href="#service">Liên Hệ</a></li>
+                                <li class="smooth-menu" id="myTour"><a href="shopcart.jsp" ><i class="fa fa-suitcase-rolling fa-2x"
+                                                                       style="margin-top: -10px;color: #00d8fe"></i></a>
+                                </li>
                                 <li>
                                     <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
-                                            href="login.jsp">Đặt Tour</a>
+                                            href="login.jsp">Đăng Nhập</a>
                                     </button>
                                 </li><!--/.project-btn-->
                                 <li id="icon-user" class="smooth-menu">
                                     <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
                                     <ul id="service_account">
-                                        <li><a id="myInfor" href="../infor.jsp">Thông tin tài khoản</a></li>
-                                        <li><a id="myTour" href="../shopcart.jsp">VALI</a></li>
-                                        <li><a id="bill" href="../bill.jsp">Bill </a></li>
-                                        <li><a id="log_out" href="../register.jsp">Đăng xuất</a></li>
+                                        <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
+                                        <li><a id="bill" href="bill.jsp">Bill </a></li>
+                                        <li><a id="log_out" href="register.jsp">Đăng xuất</a></li>
                                     </ul>
                                 </li>
 

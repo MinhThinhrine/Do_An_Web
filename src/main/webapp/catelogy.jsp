@@ -64,7 +64,7 @@
                             <li><a href="index.jsp#blog">Tin Tức</a></li>
                             <li><a href="index.jsp#feedback">Đánh Giá</a></li>
                             <li><a href="index.jsp#service">Liên Hệ</a></li>
-                            <li class="smooth-menu"><a href="shopcart.jsp"><i class="fa fa-suitcase-rolling fa-2x"
+                            <li class="smooth-menu"><a href="shopcart.jsp" id="myTour"><i class="fa fa-suitcase-rolling fa-2x"
                                                                    style="margin-top: -10px;color: #00d8fe"></i></a>
                             </li>
                             <li>

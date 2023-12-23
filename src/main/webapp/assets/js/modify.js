@@ -13,25 +13,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-    const myinfor = document.getElementById("myInfor");
-    const myTour = document.getElementById("myTour");
-    const logOut = document.getElementById("log_out");
-    const bill = document.getElementById("bill");
-
-
-logOut.addEventListener("click",function () {
-    window.location.href = "login.html";
+    document.getElementById("log_out").addEventListener("click", function () {
+    window.location.href = "../../login.jsp";
 });
-myinfor.addEventListener("click", function () {
-    window.location.href ="infor.html";
 
-})
-myTour.addEventListener("click", function (){
-    window.location.href="shopcart.html"
-})
-bill.addEventListener("click", function (){
-    window.location.href="bill.html"
-})
+    document.getElementById("myInfor").addEventListener("click", function () {
+    window.location.href = "../../infor.jsp";
+});
+
+    document.getElementById("myTour").addEventListener("click", function () {
+    window.location.href = "../../shopcart.jsp";
+});
+
+    document.getElementById("bill").addEventListener("click", function () {
+    window.location.href = "../../bill.jsp";
+});
 
 
 
