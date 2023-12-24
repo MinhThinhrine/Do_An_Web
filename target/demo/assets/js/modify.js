@@ -14,19 +14,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
     document.getElementById("log_out").addEventListener("click", function () {
-    window.location.href = "../../login.jsp";
+    window.location.href = "login.jsp";
 });
 
     document.getElementById("myInfor").addEventListener("click", function () {
-    window.location.href = "../../infor.jsp";
+    window.location.href = "infor.jsp";
 });
 
     document.getElementById("myTour").addEventListener("click", function () {
-    window.location.href = "../Do_An_Web/shopcart.jsp";
+    window.location.href = "shopcart.jsp";
 });
 
     document.getElementById("bill").addEventListener("click", function () {
-    window.location.href = "../../bill.jsp";
+    window.location.href = "bill.jsp";
 });
 
 

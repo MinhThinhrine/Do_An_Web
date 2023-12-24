@@ -1,3 +1,4 @@
+<%@ page import="vn.edu.hcmuaf.bean.User" %>
 <!DOCTYPE html>
 <html lang="vi">
 <%@ page contentType="text/html; charset=UTF-8" %>
@@ -83,35 +84,7 @@
         let phoneInputValue;
         let addressInputValue;
         let dateInputvalue;
-        function saveData() {
-            const phoneInput = document.querySelector("#phone input");
-            const addressInput = document.querySelector("#address input");``
-            const dateInput = document.querySelector("#date input")
 
-            phoneInputValue = phoneInput.value;
-            addressInputValue = addressInput.value;
-            dateInputvalue = dateInput.value;
-
-            const phone = document.getElementById("phone");
-            phone.innerHTML = phoneInputValue;
-
-            const [year, month, day] = dateInputvalue.split("-");
-            const newDateValue = `${day}-${month}-${year}`;
-
-            const date = document.getElementById("date")
-            date.innerHTML = newDateValue;
-
-            const address = document.getElementById("address");
-            address.innerHTML = addressInputValue;
-
-            Swal.fire({
-                title: 'Thông báo',
-                text: 'Đã lưu thành công',
-                icon: 'success',
-                confirmButtonText: 'Đóng'
-            });
-
-        }
         function done() {
             Swal.fire({
                 title: 'Hoàn tất',
@@ -125,6 +98,14 @@
 </head>
 <body>
 <section style="background-color: #93949f;">
+
+
+    <%
+
+        User user = (User) session.getAttribute("user");
+
+
+    %>
     <div class="container py-5">
         <th scope="col"><a class="return" href="index.jsp">
             <i class="fa-solid fa-arrow-left"></i>Trang Chủ</a>
@@ -139,8 +120,8 @@
                     <div style="margin-top: 90px" class="card-body text-center">
                         <img src="assets/images/client/5.png" alt="avatar"
                              class="rounded-circle img-fluid" style="width: 150px;">
-                        <h5 class="my-3">John Smith</h5>
-                        <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                        <h5 class="my-3"><%=user.getUserName()%></h5>
+                        <p class="text-muted mb-4"><%=user.getAddress()%>></p>
 
                     </div>
                 </div>
@@ -154,7 +135,7 @@
                                 <p class="mb-0">Tên người dùng</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">Johnatan Smith</p>
+                                <p class="text-muted mb-0"><%=user.getUserName()%></p>
                             </div>
                         </div>
                         <hr>
@@ -163,7 +144,7 @@
                                 <p class="mb-0">Email</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">example@example.com</p>
+                                <p class="text-muted mb-0"><%=user.getEmail()%></p>
                             </div>
                         </div>
                         <hr>
@@ -172,7 +153,7 @@
                                 <p class="mb-0">Số điện thoại</p>
                             </div>
                             <div class="col-sm-9" id="phone">
-                                <p class="text-muted mb-0">(097) 234-5678</p>
+                                <p class="text-muted mb-0"><%=user.getPhoneNumber()%></p>
                             </div>
                         </div>
                         <hr>
@@ -190,7 +171,7 @@
                                 <p class="mb-0">Địa chỉ</p>
                             </div>
                             <div class="col-sm-9" id="address">
-                                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                                <p class="text-muted mb-0"><%=user.getAddress()%>></p>
                             </div>
                         </div>
                     </div>
