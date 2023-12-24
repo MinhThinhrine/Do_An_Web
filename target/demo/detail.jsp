@@ -42,11 +42,61 @@
 <![endif]-->
 
 <!-- main-menu Start -->
-<header class="top-area" style="background-color: #4d4e53 !important;margin-top: -120px !important;">
-        <%@include file="common/header.jsp" %>
-    </header>
-<!-- /.header-area -->
+<header class="top-area" style="background-color: #4d4e53;margin-top: -120px;">
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="logo">
+                        <a href="index.jsp">
+                            tour<span>Nest</span>
+                        </a>
+                    </div><!-- /.logo-->
+                </div><!-- /.col-->
+                <div class="col-sm-10">
+                    <div class="main-menu">
 
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target=".navbar-collapse">
+                                <i class="fa fa-bars"></i>
+                            </button><!-- / button-->
+                        </div><!-- /.navbar-header-->
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="index.jsp">Trang Chủ</a></li>
+                                <li><a href="index.jsp#spo">Ưu Đãi</a></li>
+                                <li><a href="index.jsp#gallery">Tour Hot</a></li>
+                                <li><a href="index.jsp#pack">Gói Du Lịch</a></li>
+                                <li><a href="index.jsp#blog">Tin Tức</a></li>
+                                <li><a href="index.jsp#feedback">Đánh Giá</a></li>
+                                <li><a href="index.jsp#service">Liên Hệ</a></li>
+                                <li>
+                                    <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
+                                            href="login.jsp">Đặt Tour</a>
+                                    </button>
+                                </li><!--/.project-btn-->
+                                <li id="icon-user" class="smooth-menu">
+                                    <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
+                                    <ul id="service_account">
+                                        <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
+                                        <li><a id="myTour" href="shopcart.jsp">VALI</a></li>
+                                        <li><a id="log_out" href="register.jsp">Đăng xuất</a></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.main-menu-->
+                </div><!-- /.col-->
+            </div><!-- /.row -->
+            <div class="home-border"></div><!-- /.home-border-->
+        </div><!-- /.container-->
+    </div><!-- /.header-area -->
+
+</header><!-- /.top-area-->
 <!-- main-menu End -->
 <div id="contentbody">
     <!--  <div class="topbody">-->
@@ -432,11 +482,11 @@
                                 </li>
                                 <li>
                                     <div class="at">Xuất phát:</div>
-                                    <div class="as">Từ Hồ Chí Minh </div>
+                                    <div class="as">Từ Hồ Chí Minh</div>
                                 </li>
                                 <li>
-                                    <div class="at">Ngày khởi hành: </div>
-                                    <div class="as" ><input type="date" placeholder="13/11/2023"></div>
+                                    <div class="at">Ngày khởi hành:</div>
+                                    <div class="as"><input type="date" placeholder="13/11/2023"></div>
                                 </li>
 
                             </ul>
@@ -488,242 +538,281 @@
                     <div class="vnt-tour grid">
                         <div class="slideFluid width2 owl-carousel owl-loaded owl-drag">
                             <div class="owl-stage-outer">
-                                <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1190px;"><div class="owl-item active" style="width: auto; margin-right: 10px;"><div class="item col">
-                                <div class="mda-box-item">
-                                    <div class="mda-box-img">
-                                        <a href="catelogy.jsp"><img class="lazy" src="assets/images/item/9.jpg" alt="Tiền Giang - Cai Lậy" data-original="2.jpg" style=""></a>
-                                        <div class="mda-box-lb">Từ Hồ Chí Minh</div>
-                                        <div class="mda-box-fig">
-                                            <div class="des">Tiền Giang - Cai Lậy</div>
-                                            <div class="link"><a href="catelogy.jsp" title="Tiền Giang - Cai Lậy"><span>Xem thêm +</span></a></div>
-                                        </div>
-                                    </div>
-                                    <div class="mda-caption">
-                                        <div class="mda-box-n">
-                                            <a class="mda-box-name" href="catelogy.jsp">Tiền Giang - Cai Lậy</a>
-                                            <p class="mda-box-des">Tp Hồ Chí Minh - Tiền Giang - Cai Lậy</p>
-                                            <p class="mda-time">
-                                                <span>Thời gian</span>
-                                                <span>4 ngày 3 đêm</span>
-                                            </p>
-                                        </div>
-                                        <div class="mda-info mda-grid">
-                                            <h2 class="mda-name"><a href="catelogy.jsp">Tp Hồ Chí Minh - Tiền Giang - Cai Lậy</a></h2>
-                                            <div class="mda-img-box-wrap">
-                                                <p class="mda-time-grid">4 ngày 3 đêm</p>
-                                                <p class="mda-schedule" data-toggle="tooltip" title="" data-original-title="01,08,15,22,29/11; 06/12/2023">Khởi hành hằng ngày</p>
-                                                <p class="mda-price">
+                                <div class="owl-stage"
+                                     style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1190px;">
+                                    <div class="owl-item active" style="width: auto; margin-right: 10px;">
+                                        <div class="item col">
+                                            <div class="mda-box-item">
+                                                <div class="mda-box-img">
+                                                    <a href="catelogy.jsp"><img class="lazy"
+                                                                                 src="assets/images/item/9.jpg"
+                                                                                 alt="Tiền Giang - Cai Lậy"
+                                                                                 data-original="2.jpg" style=""></a>
+                                                    <div class="mda-box-lb">Từ Hồ Chí Minh</div>
+                                                    <div class="mda-box-fig">
+                                                        <div class="des">Tiền Giang - Cai Lậy</div>
+                                                        <div class="link"><a href="catelogy.jsp"
+                                                                             title="Tiền Giang - Cai Lậy"><span>Xem thêm +</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mda-caption">
+                                                    <div class="mda-box-n">
+                                                        <a class="mda-box-name" href="catelogy.jsp">Tiền Giang - Cai
+                                                            Lậy</a>
+                                                        <p class="mda-box-des">Tp Hồ Chí Minh - Tiền Giang - Cai Lậy</p>
+                                                        <p class="mda-time">
+                                                            <span>Thời gian</span>
+                                                            <span>4 ngày 3 đêm</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="mda-info mda-grid">
+                                                        <h2 class="mda-name"><a href="catelogy.jsp">Tp Hồ Chí Minh -
+                                                            Tiền Giang - Cai Lậy</a></h2>
+                                                        <div class="mda-img-box-wrap">
+                                                            <p class="mda-time-grid">4 ngày 3 đêm</p>
+                                                            <p class="mda-schedule" data-toggle="tooltip" title=""
+                                                               data-original-title="01,08,15,22,29/11; 06/12/2023">Khởi
+                                                                hành hằng ngày</p>
+                                                            <p class="mda-price">
                                 <span class="mda-distcoun">
-                                <span class="mda-dis"><span class="mda-money">7,799,000</span> đ</span> <span class="mda-pre"><span class="mda-money">8,099,000</span> đ</span> </span>
-                                                </p>
+                                <span class="mda-dis"><span class="mda-money">7,799,000</span> đ</span> <span
+                                        class="mda-pre"><span class="mda-money">8,099,000</span> đ</span> </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div></div><div class="owl-item active" style="width: auto; margin-right: 10px;"><div class="item col">
-                                <div class="mda-box-item">
-                                    <div class="mda-box-img">
-                                        <a href="catelogy.jsp"><img class="lazy" src="assets/images/item/2.jpg" alt="Du lịch Hà Nội - Hạ Long - Ninh Bình - Tràng An - Sapa mùa Thu từ Sài Gòn 2023" data-original="../images/bandidau/NOI-DIA/Ninh-Binh/mua-thu-ninh-binh-du-lich-viet.jpg" style=""></a>
-                                        <div class="mda-box-lb">Từ Hồ Chí Minh</div>
-                                        <div class="mda-box-fig">
-                                            <div class="des">Thành Phố Hồ Chí Minh - Phú Quốc</div>
-                                            <div class="link"><a href="catelogy.jsp" title="Thành Phố Hồ Chí Minh - Phú Quốc"><span>Xem thêm +</span></a></div>
-                                        </div>
-                                    </div>
-                                    <div class="mda-caption">
-                                        <div class="mda-box-n">
-                                            <a class="mda-box-name" href="catelogy.jsp">Thành Phố Hồ Chí Minh - Phú Quốc</a>
-                                            <p class="mda-box-des">Thành Phố Hồ Chí Minh - Phú Quốc</p>
-                                            <p class="mda-time">
-                                                <span>Thời gian</span>
-                                                <span>5 ngày 4 đêm</span>
-                                            </p>
-                                        </div>
-                                        <div class="mda-info mda-grid">
-                                            <h2 class="mda-name"><a href="catelogy.jsp">Thành Phố Hồ Chí Minh - Phú Quốc</a></h2>
-                                            <div class="mda-img-box-wrap">
-                                                <p class="mda-time-grid">5 ngày 4 đêm</p>
-                                                <p class="mda-schedule" data-toggle="tooltip" title="" data-original-title="28/10; 04,11,18,25/11; 02/12/2023">01/01/2024</p>
-                                                <p class="mda-price">
+                                    <div class="owl-item active" style="width: auto; margin-right: 10px;">
+                                        <div class="item col">
+                                            <div class="mda-box-item">
+                                                <div class="mda-box-img">
+                                                    <a href="catelogy.jsp"><img class="lazy"
+                                                                                 src="assets/images/item/2.jpg"
+                                                                                 alt="Du lịch Hà Nội - Hạ Long - Ninh Bình - Tràng An - Sapa mùa Thu từ Sài Gòn 2023"
+                                                                                 data-original="../images/bandidau/NOI-DIA/Ninh-Binh/mua-thu-ninh-binh-du-lich-viet.jpg"
+                                                                                 style=""></a>
+                                                    <div class="mda-box-lb">Từ Hồ Chí Minh</div>
+                                                    <div class="mda-box-fig">
+                                                        <div class="des">Thành Phố Hồ Chí Minh - Phú Quốc</div>
+                                                        <div class="link"><a href="catelogy.jsp"
+                                                                             title="Thành Phố Hồ Chí Minh - Phú Quốc"><span>Xem thêm +</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mda-caption">
+                                                    <div class="mda-box-n">
+                                                        <a class="mda-box-name" href="catelogy.jsp">Thành Phố Hồ Chí
+                                                            Minh - Phú Quốc</a>
+                                                        <p class="mda-box-des">Thành Phố Hồ Chí Minh - Phú Quốc</p>
+                                                        <p class="mda-time">
+                                                            <span>Thời gian</span>
+                                                            <span>5 ngày 4 đêm</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="mda-info mda-grid">
+                                                        <h2 class="mda-name"><a href="catelogy.jsp">Thành Phố Hồ Chí
+                                                            Minh - Phú Quốc</a></h2>
+                                                        <div class="mda-img-box-wrap">
+                                                            <p class="mda-time-grid">5 ngày 4 đêm</p>
+                                                            <p class="mda-schedule" data-toggle="tooltip" title=""
+                                                               data-original-title="28/10; 04,11,18,25/11; 02/12/2023">
+                                                                01/01/2024</p>
+                                                            <p class="mda-price">
                                         <span class="mda-distcoun">
-                                            <span class="mda-dis"><span class="mda-money">9,099,000</span> đ</span> <span class="mda-pre"><span class="mda-money">9,399,000</span> đ</span> </span>
-                                                </p>
+                                            <span class="mda-dis"><span
+                                                    class="mda-money">9,099,000</span> đ</span> <span
+                                                class="mda-pre"><span
+                                                class="mda-money">9,399,000</span> đ</span> </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div></div><div class="owl-item active" style="width: auto; margin-right: 10px;"><div class="item col">
-                                <div class="mda-box-item">
-                                    <div class="mda-box-img">
-                                        <a href="catelogy.jsp"><img class="lazy" src="assets/images/item/3.jpg" alt="Du lịch mùa Thu Hà Nội - Mai Châu - Mộc Châu - Ninh Bình - Tràng An từ Sài Gòn 2023" data-original="../images/bandidau/NOI-DIA/Trang-An/trang-an-mua-thu-du-lich-viet.jpg" style=""></a>
-                                        <div class="mda-box-lb">Từ Hồ Chí Minh</div>
-                                        <div class="mda-box-fig">
-                                            <div class="des">Hành trình Mai Châu - Mộc Châu - Ninh Bình - Chùa Bái Đính - Tràng An Lịch trình 4 ngày 3 đêm Khởi hành 25/10; 01,08,15,22,29/11; 06/12/2023 Di chuyển Xe du lịch đời mới &amp; Máy Bay khứ hồi Du lịch mùa Thu Hà Nội - Mai Châu -...</div>
-                                            <div class="link"><a href="catelogy.jsp" title="Du lịch mùa Thu Hà Nội - Mai Châu - Mộc Châu - Ninh Bình - Tràng An từ Sài Gòn 2023"><span>Xem thêm +</span></a></div>
+                                    <div class="owl-item active" style="width: auto; margin-right: 10px;">
+                                        <div class="item col">
+                                            <div class="mda-box-item">
+                                                <div class="mda-box-img">
+                                                    <a href="catelogy.jsp"><img class="lazy"
+                                                                                 src="assets/images/item/3.jpg"
+                                                                                 alt="Du lịch mùa Thu Hà Nội - Mai Châu - Mộc Châu - Ninh Bình - Tràng An từ Sài Gòn 2023"
+                                                                                 data-original="../images/bandidau/NOI-DIA/Trang-An/trang-an-mua-thu-du-lich-viet.jpg"
+                                                                                 style=""></a>
+                                                    <div class="mda-box-lb">Từ Hồ Chí Minh</div>
+                                                    <div class="mda-box-fig">
+                                                        <div class="des">Hành trình Mai Châu - Mộc Châu - Ninh Bình -
+                                                            Chùa Bái Đính - Tràng An Lịch trình 4 ngày 3 đêm Khởi hành
+                                                            25/10; 01,08,15,22,29/11; 06/12/2023 Di chuyển Xe du lịch
+                                                            đời mới &amp; Máy Bay khứ hồi Du lịch mùa Thu Hà Nội - Mai
+                                                            Châu -...
+                                                        </div>
+                                                        <div class="link"><a href="catelogy.jsp"
+                                                                             title="Du lịch mùa Thu Hà Nội - Mai Châu - Mộc Châu - Ninh Bình - Tràng An từ Sài Gòn 2023"><span>Xem thêm +</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mda-caption">
+                                                    <div class="mda-box-n">
+                                                        <a class="mda-box-name" href="catelogy.jsp">Cần Thơ - Cồn
+                                                            Sơn-Cồn Ấu</a>
+                                                        <p class="mda-box-des">Hành trình: Tour mùa Thu - Mai Châu - Mộc
+                                                            Châu - Ninh Bình - Chùa Bái Đính - Tràng An</p>
+                                                        <p class="mda-time">
+                                                            <span>Thời gian</span>
+                                                            <span>4 ngày 3 đêm</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="mda-info mda-grid">
+                                                        <h2 class="mda-name"><a href="catelogy.jsp">Cần Thơ - Cồn
+                                                            Sơn-Cồn Ấu</a></h2>
+                                                        <div class="mda-img-box-wrap">
+                                                            <p class="mda-time-grid">4 ngày 3 đêm</p>
+                                                            <p class="mda-schedule" data-toggle="tooltip" title=""
+                                                               data-original-title="25/10; 01,08,15,22,29/11; 06/12/2023">
+                                                                Diễn ra trong tháng 12</p>
+                                                            <p class="mda-price">
+                                <span class="mda-distcoun">
+                                <span class="mda-dis"><span class="mda-money">8,399,000</span> đ</span> <span
+                                        class="mda-pre"><span class="mda-money">8,699,000</span> đ</span> </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="mda-caption">
-                                        <div class="mda-box-n">
-                                            <a class="mda-box-name" href="catelogy.jsp">Cần Thơ - Cồn Sơn-Cồn Ấu</a>
-                                            <p class="mda-box-des">Hành trình: Tour mùa Thu - Mai Châu - Mộc Châu - Ninh Bình - Chùa Bái Đính - Tràng An</p>
-                                            <p class="mda-time">
-                                                <span>Thời gian</span>
-                                                <span>4 ngày 3 đêm</span>
-                                            </p>
-                                        </div>
-                                        <div class="mda-info mda-grid">
-                                            <h2 class="mda-name"><a href="catelogy.jsp">Cần Thơ - Cồn Sơn-Cồn Ấu</a></h2>
-                                            <div class="mda-img-box-wrap">
-                                                <p class="mda-time-grid">4 ngày 3 đêm</p>
-                                                <p class="mda-schedule" data-toggle="tooltip" title="" data-original-title="25/10; 01,08,15,22,29/11; 06/12/2023">Diễn ra trong tháng 12</p>
-                                                <p class="mda-price">
+                                    <div class="owl-item active" style="width: auto; margin-right: 10px;">
+                                        <div class="item col">
+                                            <div class="mda-box-item">
+                                                <div class="mda-box-img">
+                                                    <a href="catelogy.jsp"><img class="lazy"
+                                                                                 src="assets/images/item/4.jpg"
+                                                                                 alt="Du lịch Tây Bắc - Hà Nội - Mộc Châu - Điện Biên - Sapa mùa Hoa Cải Trắng từ Sài Gòn 2023"
+                                                                                 data-original="../images/bandidau/NOI-DIA/Moc-Chau/tour-moc-chau-mua-hoa-cai-trang-du-lich-viet.jpg"
+                                                                                 style=""></a>
+                                                    <div class="mda-box-lb">Từ Hồ Chí Minh</div>
+                                                    <div class="mda-box-fig">
+                                                        <div class="des"></div>
+                                                        <div class="link"><a href="catelogy.jsp"
+                                                                             title="Du lịch Tây Bắc - Hà Nội - Mộc Châu - Điện Biên - Sapa mùa Hoa Cải Trắng từ Sài Gòn 2023"><span>Xem thêm +</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mda-caption">
+                                                    <div class="mda-box-n">
+                                                        <a class="mda-box-name" href="catelogy.jsp"></a>
+                                                        <p class="mda-box-des"></p>
+                                                        <p class="mda-time">
+                                                            <span>Thời gian</span>
+                                                            <span>5 ngày 4 đêm</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="mda-info mda-grid">
+                                                        <h2 class="mda-name"><a href="catelogy.jsp">Tp Hồ Chí Minh - Mỹ
+                                                            Tho - Bến Tre</a></h2>
+                                                        <div class="mda-img-box-wrap">
+                                                            <p class="mda-time-grid">5 ngày 4 đêm</p>
+                                                            <p class="mda-schedule" data-toggle="tooltip" title=""
+                                                               data-original-title="07,14,21,28/10/2023">
+                                                                21,28/03/2024</p>
+                                                            <p class="mda-price">
                                 <span class="mda-distcoun">
-                                <span class="mda-dis"><span class="mda-money">8,399,000</span> đ</span> <span class="mda-pre"><span class="mda-money">8,699,000</span> đ</span> </span>
-                                                </p>
+                                <span class="mda-dis"><span class="mda-money">9,199,000</span> đ</span> </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            </div><div class="owl-item active" style="width: auto; margin-right: 10px;"><div class="item col">
-                                <div class="mda-box-item">
-                                    <div class="mda-box-img">
-                                        <a href="catelogy.jsp"><img class="lazy" src="assets/images/item/4.jpg" alt="Du lịch Tây Bắc - Hà Nội - Mộc Châu - Điện Biên - Sapa mùa Hoa Cải Trắng từ Sài Gòn 2023" data-original="../images/bandidau/NOI-DIA/Moc-Chau/tour-moc-chau-mua-hoa-cai-trang-du-lich-viet.jpg" style=""></a>
-                                        <div class="mda-box-lb">Từ Hồ Chí Minh</div>
-                                        <div class="mda-box-fig">
-                                            <div class="des"></div>
-                                            <div class="link"><a href="catelogy.jsp" title="Du lịch Tây Bắc - Hà Nội - Mộc Châu - Điện Biên - Sapa mùa Hoa Cải Trắng từ Sài Gòn 2023"><span>Xem thêm +</span></a></div>
-                                        </div>
-                                    </div>
-                                    <div class="mda-caption">
-                                        <div class="mda-box-n">
-                                            <a class="mda-box-name" href="catelogy.jsp"></a>
-                                            <p class="mda-box-des"></p>
-                                            <p class="mda-time">
-                                                <span>Thời gian</span>
-                                                <span>5 ngày 4 đêm</span>
-                                            </p>
-                                        </div>
-                                        <div class="mda-info mda-grid">
-                                            <h2 class="mda-name"><a href="catelogy.jsp">Tp Hồ Chí Minh - Mỹ Tho - Bến Tre</a></h2>
-                                            <div class="mda-img-box-wrap">
-                                                <p class="mda-time-grid">5 ngày 4 đêm</p>
-                                                <p class="mda-schedule" data-toggle="tooltip" title="" data-original-title="07,14,21,28/10/2023">21,28/03/2024</p>
-                                                <p class="mda-price">
-                                <span class="mda-distcoun">
-                                <span class="mda-dis"><span class="mda-money">9,199,000</span> đ</span> </span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div></div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
-
     </div>
-
-
 </div>
 
-
-
-<script src="assets/js/jquery.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-
-<!--modernizr.min.js-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-
-<!--bootstrap.min.js-->
-<script src="assets/js/bootstrap.min.js"></script>
-
-<!-- bootsnav js -->
-<script src="assets/js/bootsnav.js"></script>
-
-<!-- jquery.filterizr.min.js -->
-<script src="assets/js/jquery.filterizr.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-<!--jquery-ui.min.js-->
-<script src="assets/js/jquery-ui.min.js"></script>
-
-<!-- counter js -->
-<script src="assets/js/jquery.counterup.min.js"></script>
-<script src="assets/js/waypoints.min.js"></script>
-
-<!--owl.carousel.js-->
-<script src="assets/js/owl.carousel.min.js"></script>
-
-<!-- jquery.sticky.js -->
-<script src="assets/js/jquery.sticky.js"></script>
-
-<!--datepicker.js-->
-<script src="assets/js/datepicker.js"></script>
-
-<!--Custom JS-->
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/modify.js"></script>
-
-<script defer type="text/javascript">
-    var check = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) - 1380;/*980*/
-    $("#xemthem").click(function (event) {
-        $(this).hide();
-        obj = $(this).parent();
-        id = $(this).data("id");
-        tb = $(this).data("table");
-        jQuery.get(ROOT + 'user/showmore.php', {mid: id, mtb: tb}, function (data, textStatus, xhr) {
-            obj.after(data);
-        });
-    });
-
-    $(".service-more").click(function (event) {
-        $(".service-more-content").toggle();
-
-        if ($(".service-more-content").is(":visible")) {
-            check = check + 500;
-        } else {
-            check = check - 500;
-        }
-    });
-
-    $(".note-more").click(function (event) {
-        $(".note-more-content").toggle();
-
-        if ($(".note-more-content").is(":visible")) {
-            check = check + 1140;
-        } else {
-            // Nếu ẩn đi, trừ giá trị
-            check = check - 1140;
-        }
-    });
-
-    $(window).on('scroll', function () {
-        var scrollTop = $(this).scrollTop();
-        if (scrollTop > 500 && scrollTop < check) {
-            $('.mnfixed_wrap').css({
-                'position': 'fixed',
-                'top': '0',
-                'margin-top': '80px'
-            });
-
-        } else {
-            $('.mnfixed_wrap').css({
-                'position': 'relative',
-                'top': 'auto'
-            });
-
-        }
-
-    });
-
-</script>
 </body>
 <!-- footer-copyright start -->
 <%@include file="common/footer.jsp"%><!-- /.footer-copyright-->
 <!-- footer-copyright end -->
+javascript">
+var check = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) - 1380;/*980*/
+$("#xemthem").click(function (event) {
+$(this).hide();
+obj = $(this).parent();
+id = $(this).data("id");
+tb = $(this).data("table");
+jQuery.get(ROOT + 'user/showmore.php', {mid: id, mtb: tb}, function (data, textStatus, xhr) {
+obj.after(data);
+});
+});
+
+$(".service-more").click(function (event) {
+$(".service-more-content").toggle();
+
+if ($(".service-more-content").is(":visible")) {
+check = check + 500;
+} else {
+check = check - 500;
+}
+});
+
+$(".note-more").click(function (event) {
+$(".note-more-content").toggle();
+
+if ($(".note-more-content").is(":visible")) {
+check = check + 1140;
+} else {
+// Nếu ẩn đi, trừ giá trị
+check = check - 1140;
+}
+});
+
+$(window).on('scroll', function () {
+var scrollTop = $(this).scrollTop();
+if (scrollTop > 500 && scrollTop < check) {
+$('.mnfixed_wrap').css({
+'position': 'fixed',
+'top': '0',
+'margin-top': '80px'
+});
+
+} else {
+$('.mnfixed_wrap').css({
+'position': 'relative',
+'top': 'auto'
+});
+
+}
+
+});
+
+</script>
+<script>
+    // Lấy danh sách các nút trong ul
+    var navItems = document.querySelectorAll('ul li');
+
+    // Lặp qua từng nút và gán sự kiện click
+    navItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            // Xóa lớp "active" khỏi tất cả các nút
+            navItems.forEach(function (navItem) {
+                navItem.classList.remove('active');
+            });
+
+            // Thêm lớp "active" vào nút được nhấp
+            item.classList.add('active');
+        });
+    });
+</script>
 
 </html>

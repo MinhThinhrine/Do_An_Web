@@ -14,14 +14,15 @@
 
 %>
 <body>
+
 <form action="NewPassword" method="post" novalidate>
     <div id="container">
         <div id="content">
             <div class="signin" style="padding: 37px 77px 50px;"><b style="font-size: 28px;">Đổi mật khẩu</b></div>
-            <div class="user" style="margin-bottom: 30px;">
-                <input id="oldpassword" type="password" name="oldpassword" placeholder="Nhập lại mật khẩu cũ" required autocomplete="on" autofocus >
-                <p id="result"></p>
-            </div>
+<%--            <div class="user" style="margin-bottom: 30px;">--%>
+<%--                <input id="oldpassword" type="password" name="oldpassword" placeholder="Nhập lại mật khẩu cũ" required autocomplete="on" autofocus >--%>
+<%--                <p id="result"></p>--%>
+<%--            </div>--%>
             <div class="pass">
                 <input id="newpass1" name="newpass1" type="password" placeholder="Nhập mật khẩu mới" minlength="6" maxlength="20" >
             </div>

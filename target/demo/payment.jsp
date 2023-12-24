@@ -761,7 +761,7 @@
                                 <div>
                                     <button class="btn btn-primary btn-order" style="width:100% "
                                             onclick="kiemTraDieuKien()">
-                                        <a href="../TourNest-master/bill.html"></a> Đặt ngay
+                                        <a href="../TourNest-master/bill.jsp"></a> Đặt ngay
                                     </button>
                                 </div>
                             </div>
@@ -781,7 +781,7 @@
         var dieuKienCheckbox = document.getElementById("DieuKien");
         if (dieuKienCheckbox.checked) {
             // Nếu đã chọn, chuyển hướng đến trang "bill.html"
-            window.location.href = "bill.html";
+            window.location.href = "bill.jsp";
         } else {
             // Nếu chưa chọn, hiển thị thông báo
             alert('Bạn cần đồng ý với điều khoản đăng ký online.');

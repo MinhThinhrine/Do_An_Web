@@ -41,7 +41,6 @@ public class LoginController extends HttpServlet {
 
 
 
-
             // Sử dụng hàm getUserByEmail để lấy thông tin người dùng
             userDAO userDao = new userDAO();
             User u = userDAO.checkLogin(email,pass);
