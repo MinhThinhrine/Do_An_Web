@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
     document.getElementById("myTour").addEventListener("click", function () {
-    window.location.href = "../../shopcart.jsp";
+    window.location.href = "../Do_An_Web/shopcart.jsp";
 });
 
     document.getElementById("bill").addEventListener("click", function () {

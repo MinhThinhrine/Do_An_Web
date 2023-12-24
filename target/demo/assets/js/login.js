@@ -54,7 +54,7 @@
 
             }else {
                 localStorage.setItem("isLoggedIn", "true");
-                window.location.href = "index.html";
+                window.location.href = "index.jsp";
             }
         });
     });

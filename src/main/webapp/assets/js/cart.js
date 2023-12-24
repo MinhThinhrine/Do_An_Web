@@ -109,14 +109,14 @@ function dele(index) {
 }
 function link() {
     // Thực hiện hành động khi nút được nhấp vào
-    window.location.href = "bill.html";
+    window.location.href = "bill.jsp";
 }
 var cartImages = document.getElementsByClassName('img-fluid rounded-3');
 
 // Lặp qua từng phần tử trong HTMLCollection
 for (var i = 0; i < cartImages.length; i++) {
     cartImages[i].addEventListener('click', function() {
-        window.location.href = "detail.html"; // Thay đổi URL tới liên kết mong muốn
+        window.location.href = "detail.jsp"; // Thay đổi URL tới liên kết mong muốn
     });
 
 }

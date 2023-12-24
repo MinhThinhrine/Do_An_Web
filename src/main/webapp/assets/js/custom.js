@@ -236,7 +236,7 @@ var packageImages = document.getElementsByClassName('packageImage');
 // Lặp qua từng phần tử trong HTMLCollection
 for (var i = 0; i < packageImages.length; i++) {
     packageImages[i].addEventListener('click', function() {
-        window.location.href = "detail.html"; // Thay đổi URL tới liên kết mong muốn
+        window.location.href = "detail.jsp"; // Thay đổi URL tới liên kết mong muốn
     });
 
 }

@@ -316,8 +316,8 @@ blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, pre, t
     padding: 0;
 }
 .boxPrice .price {
-    background: linear-gradient(90deg,#ed0080 0,#be3b98 100%);
-    color: #fff;
+    background: linear-gradient(90deg,#00d8fe 0,#be3b98 100%);
+    color: #ff0492;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -327,20 +327,21 @@ blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, pre, t
     margin-right: 5px;
 }
 .boxPrice .price .red {
-    font-size: 25px;
+    font-size: 35px;
     line-height: 33px;
     font-weight: 700;
-    margin-right: 5px;
+    margin-top: 10px;
+    padding-left: 10px;
 }
 .boxPrice .bot {
     padding: 15px;
-    background: #ed0080;
-    background: linear-gradient(90deg,#ed0080 0,#be3b98 100%);
+    background: #00d8fe;
+    background: linear-gradient(90deg,#00d8fe 0,#be3b98 100%);
 }
 .boxPrice .bot button{
     width: 100%;
     height: 40px;
-    background-color: #008fea;
+    background: linear-gradient(90deg, #00bafe 0, #f600a9 100%);
     color: #fff;
     border: none;
     text-transform: uppercase;
@@ -421,7 +422,7 @@ em {
 .listDay .day .titDay {
     font-weight: 700;
     position: relative;
-    background-color: #ed0080;
+    background-color: #00a6b2;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -480,7 +481,7 @@ em {
 .boxDesign1 .name {
     font-size: 16px;
     line-height: 24px;
-    color: #ed0080;
+    color: #ff0492;
     font-weight: 700;
     padding-bottom: 10px;
     margin-bottom: 10px;
@@ -513,7 +514,7 @@ ol, ul {
     border-bottom: solid 1px #fff;
 }
 .boxDesign2 ul li.active a {
-    color: #ed0080 !important;
+    color: #00d8fe !important;
 }
 .boxDesign2 ul li a {
     padding: 9px 10px;
@@ -687,7 +688,7 @@ div.col-xs-12.box-white{
     top: 0;
     left: 0;
     font-size: 30px;
-    color: #ed0080;
+    color: #00d8fe;
     font-weight: 400
 }
 
@@ -702,8 +703,8 @@ div.col-xs-12.box-white{
 .mda-quick-contact button {
     width: 30%;
     height: 40px;
-    background: #ed0080;
-    background: linear-gradient(180deg,#ed0080 0,#be3b98 100%);
+    background: #00d8fe;
+    background: linear-gradient(180deg, #00d8fe 0, #3398b7 100%);
     color: #fff;
     font-weight: 700;
     border: none;
@@ -718,7 +719,7 @@ div.col-xs-12.box-white{
 }
 
 .mda-quick-contact #contact-success h3 {
-    color: #ed0080;
+    color: #00d8fe;
     font-size: 18px
 }
 .boxHome {
@@ -754,7 +755,7 @@ div.col-xs-12.box-white{
 }
 
 .titleHome h2 a:hover {
-    color: #ed0080
+    color: #00d8fe;
 }
 
 .titleHome>.link:before {
@@ -764,7 +765,7 @@ div.col-xs-12.box-white{
     top: 50%;
     margin-right: 5px;
     transform: translateY(-50%);
-    color: #ed0080
+    color: #00d8fe;
 }
 
 .titleHome .link span {
@@ -782,7 +783,7 @@ div.col-xs-12.box-white{
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    color: #ed0080
+    color: #00d8fe
 }
 /*------787-----------------------------------------------------------------------------------------*/
 .boxHome {

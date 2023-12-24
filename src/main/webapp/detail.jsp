@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="col-sm-2">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="index.jsp">
                             tour<span>Nest</span>
                         </a>
                     </div><!-- /.logo-->
@@ -65,24 +65,24 @@
                         </div><!-- /.navbar-header-->
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="index.html">Trang Chủ</a></li>
-                                <li><a href="index.html#spo">Ưu Đãi</a></li>
-                                <li><a href="index.html#gallery">Tour Hot</a></li>
-                                <li><a href="index.html#pack">Gói Du Lịch</a></li>
-                                <li><a href="index.html#blog">Tin Tức</a></li>
-                                <li><a href="index.html#feedback">Đánh Giá</a></li>
-                                <li><a href="index.html#service">Liên Hệ</a></li>
+                                <li><a href="index.jsp">Trang Chủ</a></li>
+                                <li><a href="index.jsp#spo">Ưu Đãi</a></li>
+                                <li><a href="index.jsp#gallery">Tour Hot</a></li>
+                                <li><a href="index.jsp#pack">Gói Du Lịch</a></li>
+                                <li><a href="index.jsp#blog">Tin Tức</a></li>
+                                <li><a href="index.jsp#feedback">Đánh Giá</a></li>
+                                <li><a href="index.jsp#service">Liên Hệ</a></li>
                                 <li>
                                     <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
-                                            href="login.html">Đặt Tour</a>
+                                            href="login.jsp">Đặt Tour</a>
                                     </button>
                                 </li><!--/.project-btn-->
                                 <li id="icon-user" class="smooth-menu">
                                     <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
                                     <ul id="service_account">
-                                        <li><a id="myInfor" href="infor.html">Thông tin tài khoản</a></li>
-                                        <li><a id="myTour" href="shopcart.html">VALI</a></li>
-                                        <li><a id="log_out" href="register.html">Đăng xuất</a></li>
+                                        <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
+                                        <li><a id="myTour" href="shopcart.jsp">VALI</a></li>
+                                        <li><a id="log_out" href="register.jsp">Đăng xuất</a></li>
                                     </ul>
                                 </li>
 
@@ -506,7 +506,7 @@
                                             <input type="hidden" name="con" id="con" value="10">
                                             <input type="hidden" name="hasvisa" id="hasvisa" value="">
                                             <button type="button" class="render-form btn-contact-tour"><a
-                                                    href="shopcart.html"
+                                                    href="shopcart.jsp"
                                                     style="text-decoration: none; text-transform: uppercase">Thêm Vào
                                                 Vali</a></button>
                                         </div>
@@ -544,21 +544,21 @@
                                         <div class="item col">
                                             <div class="mda-box-item">
                                                 <div class="mda-box-img">
-                                                    <a href="catelogy.html"><img class="lazy"
+                                                    <a href="catelogy.jsp"><img class="lazy"
                                                                                  src="assets/images/item/9.jpg"
                                                                                  alt="Tiền Giang - Cai Lậy"
                                                                                  data-original="2.jpg" style=""></a>
                                                     <div class="mda-box-lb">Từ Hồ Chí Minh</div>
                                                     <div class="mda-box-fig">
                                                         <div class="des">Tiền Giang - Cai Lậy</div>
-                                                        <div class="link"><a href="catelogy.html"
+                                                        <div class="link"><a href="catelogy.jsp"
                                                                              title="Tiền Giang - Cai Lậy"><span>Xem thêm +</span></a>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="mda-caption">
                                                     <div class="mda-box-n">
-                                                        <a class="mda-box-name" href="catelogy.html">Tiền Giang - Cai
+                                                        <a class="mda-box-name" href="catelogy.jsp">Tiền Giang - Cai
                                                             Lậy</a>
                                                         <p class="mda-box-des">Tp Hồ Chí Minh - Tiền Giang - Cai Lậy</p>
                                                         <p class="mda-time">
@@ -567,7 +567,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="mda-info mda-grid">
-                                                        <h2 class="mda-name"><a href="catelogy.html">Tp Hồ Chí Minh -
+                                                        <h2 class="mda-name"><a href="catelogy.jsp">Tp Hồ Chí Minh -
                                                             Tiền Giang - Cai Lậy</a></h2>
                                                         <div class="mda-img-box-wrap">
                                                             <p class="mda-time-grid">4 ngày 3 đêm</p>
@@ -589,7 +589,7 @@
                                         <div class="item col">
                                             <div class="mda-box-item">
                                                 <div class="mda-box-img">
-                                                    <a href="catelogy.html"><img class="lazy"
+                                                    <a href="catelogy.jsp"><img class="lazy"
                                                                                  src="assets/images/item/2.jpg"
                                                                                  alt="Du lịch Hà Nội - Hạ Long - Ninh Bình - Tràng An - Sapa mùa Thu từ Sài Gòn 2023"
                                                                                  data-original="../images/bandidau/NOI-DIA/Ninh-Binh/mua-thu-ninh-binh-du-lich-viet.jpg"
@@ -597,14 +597,14 @@
                                                     <div class="mda-box-lb">Từ Hồ Chí Minh</div>
                                                     <div class="mda-box-fig">
                                                         <div class="des">Thành Phố Hồ Chí Minh - Phú Quốc</div>
-                                                        <div class="link"><a href="catelogy.html"
+                                                        <div class="link"><a href="catelogy.jsp"
                                                                              title="Thành Phố Hồ Chí Minh - Phú Quốc"><span>Xem thêm +</span></a>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="mda-caption">
                                                     <div class="mda-box-n">
-                                                        <a class="mda-box-name" href="catelogy.html">Thành Phố Hồ Chí
+                                                        <a class="mda-box-name" href="catelogy.jsp">Thành Phố Hồ Chí
                                                             Minh - Phú Quốc</a>
                                                         <p class="mda-box-des">Thành Phố Hồ Chí Minh - Phú Quốc</p>
                                                         <p class="mda-time">
@@ -613,7 +613,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="mda-info mda-grid">
-                                                        <h2 class="mda-name"><a href="catelogy.html">Thành Phố Hồ Chí
+                                                        <h2 class="mda-name"><a href="catelogy.jsp">Thành Phố Hồ Chí
                                                             Minh - Phú Quốc</a></h2>
                                                         <div class="mda-img-box-wrap">
                                                             <p class="mda-time-grid">5 ngày 4 đêm</p>
@@ -637,7 +637,7 @@
                                         <div class="item col">
                                             <div class="mda-box-item">
                                                 <div class="mda-box-img">
-                                                    <a href="catelogy.html"><img class="lazy"
+                                                    <a href="catelogy.jsp"><img class="lazy"
                                                                                  src="assets/images/item/3.jpg"
                                                                                  alt="Du lịch mùa Thu Hà Nội - Mai Châu - Mộc Châu - Ninh Bình - Tràng An từ Sài Gòn 2023"
                                                                                  data-original="../images/bandidau/NOI-DIA/Trang-An/trang-an-mua-thu-du-lich-viet.jpg"
@@ -650,14 +650,14 @@
                                                             đời mới &amp; Máy Bay khứ hồi Du lịch mùa Thu Hà Nội - Mai
                                                             Châu -...
                                                         </div>
-                                                        <div class="link"><a href="catelogy.html"
+                                                        <div class="link"><a href="catelogy.jsp"
                                                                              title="Du lịch mùa Thu Hà Nội - Mai Châu - Mộc Châu - Ninh Bình - Tràng An từ Sài Gòn 2023"><span>Xem thêm +</span></a>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="mda-caption">
                                                     <div class="mda-box-n">
-                                                        <a class="mda-box-name" href="catelogy.html">Cần Thơ - Cồn
+                                                        <a class="mda-box-name" href="catelogy.jsp">Cần Thơ - Cồn
                                                             Sơn-Cồn Ấu</a>
                                                         <p class="mda-box-des">Hành trình: Tour mùa Thu - Mai Châu - Mộc
                                                             Châu - Ninh Bình - Chùa Bái Đính - Tràng An</p>
@@ -667,7 +667,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="mda-info mda-grid">
-                                                        <h2 class="mda-name"><a href="catelogy.html">Cần Thơ - Cồn
+                                                        <h2 class="mda-name"><a href="catelogy.jsp">Cần Thơ - Cồn
                                                             Sơn-Cồn Ấu</a></h2>
                                                         <div class="mda-img-box-wrap">
                                                             <p class="mda-time-grid">4 ngày 3 đêm</p>
@@ -689,7 +689,7 @@
                                         <div class="item col">
                                             <div class="mda-box-item">
                                                 <div class="mda-box-img">
-                                                    <a href="catelogy.html"><img class="lazy"
+                                                    <a href="catelogy.jsp"><img class="lazy"
                                                                                  src="assets/images/item/4.jpg"
                                                                                  alt="Du lịch Tây Bắc - Hà Nội - Mộc Châu - Điện Biên - Sapa mùa Hoa Cải Trắng từ Sài Gòn 2023"
                                                                                  data-original="../images/bandidau/NOI-DIA/Moc-Chau/tour-moc-chau-mua-hoa-cai-trang-du-lich-viet.jpg"
@@ -697,14 +697,14 @@
                                                     <div class="mda-box-lb">Từ Hồ Chí Minh</div>
                                                     <div class="mda-box-fig">
                                                         <div class="des"></div>
-                                                        <div class="link"><a href="catelogy.html"
+                                                        <div class="link"><a href="catelogy.jsp"
                                                                              title="Du lịch Tây Bắc - Hà Nội - Mộc Châu - Điện Biên - Sapa mùa Hoa Cải Trắng từ Sài Gòn 2023"><span>Xem thêm +</span></a>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="mda-caption">
                                                     <div class="mda-box-n">
-                                                        <a class="mda-box-name" href="catelogy.html"></a>
+                                                        <a class="mda-box-name" href="catelogy.jsp"></a>
                                                         <p class="mda-box-des"></p>
                                                         <p class="mda-time">
                                                             <span>Thời gian</span>
@@ -712,7 +712,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="mda-info mda-grid">
-                                                        <h2 class="mda-name"><a href="catelogy.html">Tp Hồ Chí Minh - Mỹ
+                                                        <h2 class="mda-name"><a href="catelogy.jsp">Tp Hồ Chí Minh - Mỹ
                                                             Tho - Bến Tre</a></h2>
                                                         <div class="mda-img-box-wrap">
                                                             <p class="mda-time-grid">5 ngày 4 đêm</p>

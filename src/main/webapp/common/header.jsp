@@ -29,8 +29,10 @@
                                 <li class="smooth-menu"><a href="#blog">Tin Tức</a></li>
                                 <li class="smooth-menu"><a href="#feedback">Đánh Giá</a></li>
                                 <li class="smooth-menu"><a href="#service">Liên Hệ</a></li>
-                                <li class="smooth-menu" id="myTour"><a href="shopcart.jsp" ><i class="fa fa-suitcase-rolling fa-2x"
+                                <li class="smooth-menu" id="myTour"><a href="/Do_An_Web/shopcart.jsp" >vali<i class="fa fa-suitcase-rolling fa-2x"
                                                                        style="margin-top: -10px;color: #00d8fe"></i></a>
+
+
                                 </li>
                                 <li>
                                     <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
