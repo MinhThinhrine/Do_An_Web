@@ -42,62 +42,11 @@
 <![endif]-->
 
 <!-- main-menu Start -->
-<header class="top-area" style="background-color: #4d4e53;margin-top: -120px;">
-    <div class="header-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="logo">
-                        <a href="index.jsp">
-                            tour<span>Nest</span>
-                        </a>
-                    </div><!-- /.logo-->
-                </div><!-- /.col-->
-                <div class="col-sm-10">
-                    <div class="main-menu">
-
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target=".navbar-collapse">
-                                <i class="fa fa-bars"></i>
-                            </button><!-- / button-->
-                        </div><!-- /.navbar-header-->
-                        <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="index.jsp">Trang Chủ</a></li>
-                                <li><a href="index.jsp#spo">Ưu Đãi</a></li>
-                                <li><a href="index.jsp#gallery">Tour Hot</a></li>
-                                <li><a href="index.jsp#pack">Gói Du Lịch</a></li>
-                                <li><a href="index.jsp#blog">Tin Tức</a></li>
-                                <li><a href="index.jsp#feedback">Đánh Giá</a></li>
-                                <li><a href="index.jsp#service">Liên Hệ</a></li>
-                                <li>
-                                    <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
-                                            href="login.jsp">Đặt Tour</a>
-                                    </button>
-                                </li><!--/.project-btn-->
-                                <li id="icon-user" class="smooth-menu">
-                                    <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
-                                    <ul id="service_account">
-                                        <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
-                                        <li><a id="myTour" href="shopcart.jsp">VALI</a></li>
-                                        <li><a id="log_out" href="register.jsp">Đăng xuất</a></li>
-                                    </ul>
-                                </li>
-
-
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.main-menu-->
-                </div><!-- /.col-->
-            </div><!-- /.row -->
-            <div class="home-border"></div><!-- /.home-border-->
-        </div><!-- /.container-->
-    </div><!-- /.header-area -->
-
-</header><!-- /.top-area-->
+<header class="top-area">
+    <%@include file="common/header.jsp" %>
+</header>
 <!-- main-menu End -->
+
 <div id="contentbody">
     <!--  <div class="topbody">-->
     <!--    <div id="breadcrumb">-->
@@ -545,9 +494,9 @@
                                             <div class="mda-box-item">
                                                 <div class="mda-box-img">
                                                     <a href="catelogy.jsp"><img class="lazy"
-                                                                                 src="assets/images/item/9.jpg"
-                                                                                 alt="Tiền Giang - Cai Lậy"
-                                                                                 data-original="2.jpg" style=""></a>
+                                                                                src="assets/images/item/9.jpg"
+                                                                                alt="Tiền Giang - Cai Lậy"
+                                                                                data-original="2.jpg" style=""></a>
                                                     <div class="mda-box-lb">Từ Hồ Chí Minh</div>
                                                     <div class="mda-box-fig">
                                                         <div class="des">Tiền Giang - Cai Lậy</div>
@@ -590,10 +539,10 @@
                                             <div class="mda-box-item">
                                                 <div class="mda-box-img">
                                                     <a href="catelogy.jsp"><img class="lazy"
-                                                                                 src="assets/images/item/2.jpg"
-                                                                                 alt="Du lịch Hà Nội - Hạ Long - Ninh Bình - Tràng An - Sapa mùa Thu từ Sài Gòn 2023"
-                                                                                 data-original="../images/bandidau/NOI-DIA/Ninh-Binh/mua-thu-ninh-binh-du-lich-viet.jpg"
-                                                                                 style=""></a>
+                                                                                src="assets/images/item/2.jpg"
+                                                                                alt="Du lịch Hà Nội - Hạ Long - Ninh Bình - Tràng An - Sapa mùa Thu từ Sài Gòn 2023"
+                                                                                data-original="../images/bandidau/NOI-DIA/Ninh-Binh/mua-thu-ninh-binh-du-lich-viet.jpg"
+                                                                                style=""></a>
                                                     <div class="mda-box-lb">Từ Hồ Chí Minh</div>
                                                     <div class="mda-box-fig">
                                                         <div class="des">Thành Phố Hồ Chí Minh - Phú Quốc</div>
@@ -638,10 +587,10 @@
                                             <div class="mda-box-item">
                                                 <div class="mda-box-img">
                                                     <a href="catelogy.jsp"><img class="lazy"
-                                                                                 src="assets/images/item/3.jpg"
-                                                                                 alt="Du lịch mùa Thu Hà Nội - Mai Châu - Mộc Châu - Ninh Bình - Tràng An từ Sài Gòn 2023"
-                                                                                 data-original="../images/bandidau/NOI-DIA/Trang-An/trang-an-mua-thu-du-lich-viet.jpg"
-                                                                                 style=""></a>
+                                                                                src="assets/images/item/3.jpg"
+                                                                                alt="Du lịch mùa Thu Hà Nội - Mai Châu - Mộc Châu - Ninh Bình - Tràng An từ Sài Gòn 2023"
+                                                                                data-original="../images/bandidau/NOI-DIA/Trang-An/trang-an-mua-thu-du-lich-viet.jpg"
+                                                                                style=""></a>
                                                     <div class="mda-box-lb">Từ Hồ Chí Minh</div>
                                                     <div class="mda-box-fig">
                                                         <div class="des">Hành trình Mai Châu - Mộc Châu - Ninh Bình -
@@ -690,10 +639,10 @@
                                             <div class="mda-box-item">
                                                 <div class="mda-box-img">
                                                     <a href="catelogy.jsp"><img class="lazy"
-                                                                                 src="assets/images/item/4.jpg"
-                                                                                 alt="Du lịch Tây Bắc - Hà Nội - Mộc Châu - Điện Biên - Sapa mùa Hoa Cải Trắng từ Sài Gòn 2023"
-                                                                                 data-original="../images/bandidau/NOI-DIA/Moc-Chau/tour-moc-chau-mua-hoa-cai-trang-du-lich-viet.jpg"
-                                                                                 style=""></a>
+                                                                                src="assets/images/item/4.jpg"
+                                                                                alt="Du lịch Tây Bắc - Hà Nội - Mộc Châu - Điện Biên - Sapa mùa Hoa Cải Trắng từ Sài Gòn 2023"
+                                                                                data-original="../images/bandidau/NOI-DIA/Moc-Chau/tour-moc-chau-mua-hoa-cai-trang-du-lich-viet.jpg"
+                                                                                style=""></a>
                                                     <div class="mda-box-lb">Từ Hồ Chí Minh</div>
                                                     <div class="mda-box-fig">
                                                         <div class="des"></div>
@@ -744,57 +693,57 @@
 <!-- footer-copyright start -->
 <%@include file="common/footer.jsp"%><!-- /.footer-copyright-->
 <!-- footer-copyright end -->
-javascript">
-var check = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) - 1380;/*980*/
-$("#xemthem").click(function (event) {
-$(this).hide();
-obj = $(this).parent();
-id = $(this).data("id");
-tb = $(this).data("table");
-jQuery.get(ROOT + 'user/showmore.php', {mid: id, mtb: tb}, function (data, textStatus, xhr) {
-obj.after(data);
-});
-});
+<script>
+    var check = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) - 1380;/*980*/
+    $("#xemthem").click(function (event) {
+        $(this).hide();
+        obj = $(this).parent();
+        id = $(this).data("id");
+        tb = $(this).data("table");
+        jQuery.get(ROOT + 'user/showmore.php', {mid: id, mtb: tb}, function (data, textStatus, xhr) {
+            obj.after(data);
+        });
+    });
 
-$(".service-more").click(function (event) {
-$(".service-more-content").toggle();
+    $(".service-more").click(function (event) {
+        $(".service-more-content").toggle();
 
-if ($(".service-more-content").is(":visible")) {
-check = check + 500;
-} else {
-check = check - 500;
-}
-});
+        if ($(".service-more-content").is(":visible")) {
+            check = check + 500;
+        } else {
+            check = check - 500;
+        }
+    });
 
-$(".note-more").click(function (event) {
-$(".note-more-content").toggle();
+    $(".note-more").click(function (event) {
+        $(".note-more-content").toggle();
 
-if ($(".note-more-content").is(":visible")) {
-check = check + 1140;
-} else {
+        if ($(".note-more-content").is(":visible")) {
+            check = check + 1140;
+        } else {
 // Nếu ẩn đi, trừ giá trị
-check = check - 1140;
-}
-});
+            check = check - 1140;
+        }
+    });
 
-$(window).on('scroll', function () {
-var scrollTop = $(this).scrollTop();
-if (scrollTop > 500 && scrollTop < check) {
-$('.mnfixed_wrap').css({
-'position': 'fixed',
-'top': '0',
-'margin-top': '80px'
-});
+    $(window).on('scroll', function () {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop > 500 && scrollTop < check) {
+            $('.mnfixed_wrap').css({
+                'position': 'fixed',
+                'top': '0',
+                'margin-top': '80px'
+            });
 
-} else {
-$('.mnfixed_wrap').css({
-'position': 'relative',
-'top': 'auto'
-});
+        } else {
+            $('.mnfixed_wrap').css({
+                'position': 'relative',
+                'top': 'auto'
+            });
 
-}
+        }
 
-});
+    });
 
 </script>
 <script>

@@ -2,9 +2,7 @@ package vn.edu.hcmuaf.Controller;
 
 
 import vn.edu.hcmuaf.DAO.userDAO;
-import vn.edu.hcmuaf.DB.ConnectToDatabase;
 import vn.edu.hcmuaf.bean.User;
-import vn.edu.hcmuaf.bean.User2;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.sql.Connection;
 
 @WebServlet(name = "LoginController", value = "/login")
 public class LoginController extends HttpServlet {
