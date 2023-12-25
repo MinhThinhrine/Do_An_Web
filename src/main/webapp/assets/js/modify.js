@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
     document.getElementById("myTour").addEventListener("click", function () {
-    window.location.href = "shopcart.jsp";
-});
+        window.location.href = "../../shopcart.jsp.js";
+    });
 
     document.getElementById("bill").addEventListener("click", function () {
     window.location.href = "bill.jsp";

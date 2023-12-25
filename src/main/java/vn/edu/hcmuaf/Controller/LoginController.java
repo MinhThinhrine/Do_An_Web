@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.Controller;
 
 
-import vn.edu.hcmuaf.DAO.userDAO;
+import vn.edu.hcmuaf.DAO.UserDAO;
 import vn.edu.hcmuaf.bean.User;
 
 import javax.servlet.ServletException;
@@ -39,8 +39,8 @@ public class LoginController extends HttpServlet {
 
 
             // Sử dụng hàm getUserByEmail để lấy thông tin người dùng
-            userDAO userDao = new userDAO();
-            User u = userDAO.checkLogin(email,pass);
+            UserDAO userDao = new UserDAO();
+            User u = UserDAO.checkLogin(email,pass);
             if(u != null){
                 HttpSession session = request.getSession();
                 session.setAttribute("user", u); // session này dùng để
