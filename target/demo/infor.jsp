@@ -14,25 +14,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.js"></script>
     <style>
-        .return{
+        .return {
             font-size: 28px;
             color: #00d8fe;
         }
+
         section {
             height: 820px;
         }
-        .row {
-            margin-top: 50px ;
 
+        .row {
+            margin-top: 50px;
         }
 
+        .hidden {
+            display: none;
+        }
+        #avt + .nav.nav-tabs {
+            margin-top: -30px;
+        }
     </style>
     <script>
+
+
         function enableEdit() {
-            // Lấy tham chiếu đến phần "Phone" và "Address"
+
             const phone = document.getElementById("phone");
             const address = document.getElementById("address");
-            const date =document.getElementById("date")
+            const date = document.getElementById("date");
 
             // Tạo các input elements và gán giá trị từ phần text ban đầu
             const phoneInput = document.createElement("input");
@@ -67,20 +76,51 @@
             addressInput.style.padding = "10px";
             addressInput.style.fontSize = "16px";
 
-            addressInput.value=address.textContent.trim();
+            addressInput.value = address.textContent.trim();
             // Thay thế phần text ban đầu bằng input elements
             phone.innerHTML = '';
             phone.appendChild(phoneInput);
 
-            date.innerHTML= '';
+            date.innerHTML = '';
             date.appendChild(dateInput);
 
             address.innerHTML = '';
             address.appendChild(addressInput);
+        }
 
+        function togglePasswordChange() {
+            const navlinkuser = document.querySelector(".nav-link.user");
+            const navlinkpassword = document.querySelector(".nav-link.change-password");
+            const cardBody = document.getElementById("card-body");
+            const customCardBody = document.getElementById("custom-card-body");
+            const buttonuser = document.getElementById("buttonuser");
+            const buttonforgotpassword = document.getElementById("buttonforgotpassword");
 
+                navlinkpassword.classList.add("active");
+                navlinkuser.classList.remove("active");
+                cardBody.classList.add("hidden");
+                customCardBody.classList.remove("hidden");
+                buttonuser.classList.add("hidden");
+                buttonforgotpassword.classList.remove("hidden");
+        }
+
+        function toggleUser() {
+            const navlinkuser = document.querySelector(".nav-link.user");
+            const navlinkpassword = document.querySelector(".nav-link.change-password");
+            const cardBody = document.getElementById("card-body");
+            const customCardBody = document.getElementById("custom-card-body");
+            const buttonuser = document.getElementById("buttonuser");
+            const buttonforgotpassword = document.getElementById("buttonforgotpassword");
+
+            navlinkpassword.classList.remove("active");
+            navlinkuser.classList.add("active");
+            cardBody.classList.remove("hidden");
+            customCardBody.classList.add("hidden");
+            buttonuser.classList.remove("hidden");
+            buttonforgotpassword.classList.add("hidden");
 
         }
+
         let phoneInputValue;
         let addressInputValue;
         let dateInputvalue;
@@ -92,43 +132,44 @@
                 icon: 'success',
                 confirmButtonText: 'Đóng'
             });
-            window.location.href ="bill.jsp";
+            window.location.href = "bill.jsp";
         }
     </script>
 </head>
 <body>
 <section style="background-color: #93949f;">
-
-
     <%
-
         User user = (User) session.getAttribute("user");
-
-
     %>
     <div class="container py-5">
         <th scope="col"><a class="return" href="index.jsp">
             <i class="fa-solid fa-arrow-left"></i>Trang Chủ</a>
         </th>
         <th>
-            <a class="return" href="shopcart.jsp" style="float: right"> VALI <i class="fa-solid fa-suitcase-rolling" ></i></a>
+            <a class="return" href="shopcart.jsp" style="float: right"> VALI <i class="fa-solid fa-suitcase-rolling"></i></a>
         </th>
 
-        <div class="row">
-            <div id="avt" class="col-lg-4">
-                <div style="height: 495px" class="card mb-4">
+        <div class="row" style="margin-top: 10px">
+            <div id="avt" class="col-lg-4" style="margin-top: 50px">
+                <div style="height: 490px" class="card mb-4">
                     <div style="margin-top: 90px" class="card-body text-center">
                         <img src="assets/images/client/5.png" alt="avatar"
                              class="rounded-circle img-fluid" style="width: 150px;">
                         <h5 class="my-3"><%=user.getUserName()%></h5>
                         <p class="text-muted mb-4"><%=user.getAddress()%>></p>
-
                     </div>
                 </div>
-
             </div>
             <div class="col-lg-8">
-                <div class="card mb-4">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link user active" aria-current="page" onclick="toggleUser()" style="cursor: pointer">Thông tin người dùng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link change-password" onclick="togglePasswordChange()" style="cursor: pointer" >Thay đổi mật khẩu</a>
+                    </li>
+                </ul>
+                <div class="card mb-4" id="card-body">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-3">
@@ -161,7 +202,7 @@
                             <div class="col-sm-3">
                                 <p class="mb-0">Ngày sinh</p>
                             </div>
-                            <div class="col-sm-9" >
+                            <div class="col-sm-9">
                                 <p class="text-muted mb-0" id="date">30-11-2003</p>
                             </div>
                         </div>
@@ -176,13 +217,45 @@
                         </div>
                     </div>
                 </div>
+                <div class="card mb-4 custom card-body hidden" id="custom-card-body" style="height: 495px">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Nhập mật khẩu cũ</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <input id="oldpassword" type="password" name="oldpassword" placeholder="Nhập lại mật khẩu cũ" required autocomplete="on" autofocus >
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Nhập mật khẩu mới</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <input id="newpass1" name="newpass1" type="password" placeholder="Nhập mật khẩu mới" minlength="6" maxlength="20" >
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Nhập lại mật khẩu mới</p>
+                        </div>
+                        <div class="col-sm-9" >
+                            <input id="newpass2" name="newpass2" type="password" placeholder="Nhập lại mật khẩu mới" minlength="6" maxlength="20" >
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div >
-            <button style="margin-left: 500px;margin-right: 40px" class="btn btn-warning" onclick="enableEdit()">Chỉnh sửa</button>
+        <div class="button forgot-password hidden " id="buttonforgotpassword">
+            <button class="btn btn-danger " style="margin-left: 500px;margin-right: 40px" onclick="">Hủy</button>
+            <button class="btn btn-success" onclick="done()">Hoàn thành</button>
+        </div>
+        <div class="button user" id="buttonuser">
+            <button style="margin-left: 500px; margin-right: 40px" class="btn btn-warning" onclick="enableEdit()">Chỉnh sửa</button>
             <button class="btn btn-info" style="margin-right: 40px" onclick="saveData()">Lưu</button>
-            <button class="btn btn-danger" style="margin-right: 40px">Đổi mật khẩu</button>
-            <button class="btn btn-success" onclick="done()"> Hoàn thành</button>
+            <button class="btn btn-danger" style="margin-right: 40px" >Hủy</button>
+            <button class="btn btn-success" onclick="done()">Hoàn thành</button>
         </div>
     </div>
 </section>
