@@ -10,9 +10,9 @@ import java.util.List;
 
 public class JDBIConnector {
     private static Jdbi jdbi;
-    static   String url = "jdbc:mysql://localhost:3306/db";
+    static   String url = "jdbc:mysql://localhost:3306/DA_WEB";
     static String username = "root";
-    static  String password = "";
+    static  String password = "thinh3011";
     private static void makeConnect() {
         MysqlDataSource dataSource = new MysqlDataSource();
         dataSource.setURL(url);

@@ -31,7 +31,7 @@
                                 <li class="smooth-menu"><a href="#blog">Tin Tức</a></li>
                                 <li class="smooth-menu"><a href="#feedback">Đánh Giá</a></li>
                                 <li class="smooth-menu"><a href="#service">Liên Hệ</a></li>
-                                <li class="smooth-menu" id="myTour"><a href="shopcart.jsp" ><i class="fa fa-suitcase-rolling fa-2x"
+                                <li class="navbar-toggle"><a href="shopcart.jsp"  id="myTour"><i class="fa fa-suitcase-rolling fa-2x"
                                                                        style="margin-top: -10px;color: #00d8fe"></i></a>
 
 
@@ -41,14 +41,16 @@
                                 %>
                                 <% if (Objects.nonNull(user)) { %>
                                 <!-- Hiển thị icon và tên người dùng -->
-                                <li id="icon-user" class="smooth-menu">
-                                    <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
-                                    <ul id="service_account">
-                                        <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
-                                        <li><a id="bill" href="bill.jsp">Bill</a></li>
-                                        <li><a id="log_out" href="logout">Đăng xuất</a></li>
-                                    </ul>
-                                    <span class="username"><%= user.getUserName() %></span>
+                                <li class="dropdown" id="icon-user" >
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
+                                        <span class="username"><%= user.getUserName() %></span>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" id="myInfor" href="infor.jsp">Thông tin tài khoản</a>
+                                        <a class="dropdown-item" id="bill" href="bill.jsp">Bill</a>
+                                        <a class="dropdown-item" id="log_out" href="logout">Đăng xuất</a>
+                                    </div>
                                 </li>
                                 <% } else { %>
                                 <!-- Hiển thị nút đăng nhập -->

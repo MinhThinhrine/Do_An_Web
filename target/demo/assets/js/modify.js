@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
     document.getElementById("myTour").addEventListener("click", function () {
-        window.location.href = "shopcart.jsp";
+        window.location.href = "../../shopcart.jsp";
     });
 
     document.getElementById("bill").addEventListener("click", function () {
@@ -49,12 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     });
 
-$('li.smooth-menu a').bind("click", function(event) {
-    event.preventDefault();
-    $('html, body').stop().animate({
-        scrollTop: 0
-    }, 1200, 'easeInOutExpo');
-});
+
 
 
 

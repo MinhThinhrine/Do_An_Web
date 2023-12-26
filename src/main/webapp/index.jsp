@@ -7880,8 +7880,8 @@
 <script src="assets/js/datepicker.js"></script>
 
 <!--Custom JS-->
-<script src="assets/js/custom.js"></script>
 <script src="assets/js/modify.js"></script>
+<script src="assets/js/custom.js"></script>
 
 </body>
 

@@ -104,7 +104,7 @@
                                 <li class="smooth-menu"><a href="index.jsp#blog">Tin Tức</a></li>
                                 <li class="smooth-menu"><a href="index.jsp#feedback">Đánh Giá</a></li>
                                 <li class="smooth-menu"><a href="index.jsp#service">Liên Hệ</a></li>
-                                <li class="smooth-menu">
+                                <li class="navbar">
                                         <a href="shopcart.jsp">
                                             <i class="fa fa-suitcase-rolling fa-2x" style="margin-top: -10px;color: #00d8fe">
                                             </i>
@@ -788,7 +788,7 @@
 <script src="assets/js/datepicker.js"></script>
 
 <!--Custom JS-->
-<%--<script src="assets/js/custom.js"></script>--%>
+<script src="assets/js/custom.js"></script>
 <script src="assets/js/modify.js"></script>
 
 <script defer type="text/javascript">

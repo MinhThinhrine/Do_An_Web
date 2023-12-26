@@ -24,15 +24,15 @@
                 String emailErr= (String) request.getAttribute("emailErr");
                 String err= (String) request.getAttribute("err");
             %>
-            <% if(emailErr!=null){ %>
-            <p class="text-danger"><%= emailErr %> </p>
-            <% }%>
-            <% if(err!=null){ %>
-            <p class="text-danger"><%= err %> </p>
-            <% }%>
+
             <div class="user">
                 <input id="email" name="email" type="email" placeholder="Email" required autocomplete="on" autofocus>
-                <p id="result"></p>
+                <% if(emailErr!=null){ %>
+                <p id="result"><%= emailErr %> </p>
+                <% }%>
+                <% if(err!=null){ %>
+                <p id="result"><%= err %> </p>
+                <% }%>
             </div>
             <div class="pass">
                 <input id="pass" name="password" type="password" placeholder="Mật khẩu từ 6 - 20 kí tự" minlength="6" maxlength="20">
@@ -51,9 +51,6 @@
         </div>
     </div>
 </div>
-
-
-
 
 </body>
 
