@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <head>
     <meta charset="UTF-8">
@@ -34,14 +35,8 @@
     </style>
 </head>
 <%
-    String erroldpass = request.getAttribute("erroldpass") + "";
-    erroldpass = (erroldpass == null || erroldpass.equals("null")) ? "" : erroldpass;
-
-    String errnewpass2 = request.getAttribute("errnewpass2") + "";
-    errnewpass2 = (errnewpass2 == null || errnewpass2.equals("null")) ? "" : errnewpass2;
-
-    String errnewpass1 = request.getAttribute("errnewpass1") + "";
-    errnewpass1 = (errnewpass1 == null || errnewpass1.equals("null")) ? "" : errnewpass1;
+    String error = request.getAttribute("error") + "";
+    error = (error == null || error.equals("null")) ? "" : error;
 %>
 <body>
 <section style="background-color: #93949f;">
@@ -145,13 +140,6 @@
                         <div class="col-sm-9">
                             <input class="form-control" id="oldpassword" type="password" name="oldpassword" placeholder="" required autocomplete="on" autofocus >
                         </div>
-                        <div>
-                            <% if(erroldpass!="null" || erroldpass.equals("oldpassnull")) { %>
-                            <div class="ques" style="width: 250px;margin: 15px auto -15px auto; color: red;text-align: center">
-                                <span class="text-primary text-medium"></span><%=erroldpass%>
-                            </div>
-                            <% } %>
-                        </div>
                     </div>
                     <hr>
                     <div class="row">
@@ -160,13 +148,6 @@
                         </div>
                         <div class="col-sm-9">
                             <input class="form-control" id="newpass1" name="newpass1" type="password" placeholder="Độ dài từ 6 đến 20 kí tự" minlength="6" maxlength="20" >
-                        </div>
-                        <div>
-                            <% if(errnewpass1!=null || !errnewpass1.equals("")) { %>
-                            <div class="ques" style="width: 250px;margin: 15px auto -15px auto; color: red;text-align: center">
-                                <span class="text-primary text-medium"></span><%=errnewpass1%>
-                            </div>
-                            <% } %>
                         </div>
                     </div>
                     <hr>
@@ -178,9 +159,9 @@
                             <input class="form-control" id="newpass2" name="newpass2" type="password" placeholder="" minlength="6" maxlength="20" >
                         </div>
                         <div>
-                            <% if(errnewpass2!=null || !errnewpass2.equals("")) { %>
+                            <% if(error!=null || !error.equals("")) { %>
                             <div class="ques" style="width: 250px;margin: 15px auto -15px auto; color: red;text-align: center">
-                                <span class="text-primary text-medium"></span><%=errnewpass2%>
+                                <span class="text-primary text-medium"></span><%=error%>
                             </div>
                             <% } %>
                         </div>
@@ -199,4 +180,15 @@
 </section>
 </body>
 <script src="assets/js/infor.js"></script>
+<script type="text/javascript">
+    // Lấy giá trị của attribute "stqmk"
+    var stqmk = "<%=request.getAttribute("stqmk")%>";
+    console.log("Giá trị của stqmk: " + stqmk);
+    // Kiểm tra nếu giá trị là "show", thực hiện hàm togglePasswordChange()
+    if (stqmk === "show") {
+        togglePasswordChange();
+    }
+</script>
+
+
 </html>
