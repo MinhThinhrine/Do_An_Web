@@ -30,7 +30,7 @@
                 <input id="newpass2" name="newpass2" type="password" placeholder="Nhập lại mật khẩu mới" minlength="6" maxlength="20" >
             </div>
             <div>
-            <% if(error!=null && !error.equals("")) { %>
+            <% if(error!=null || !error.equals("")) { %>
             <div class="ques" style="width: 250px;margin: 15px auto -15px auto; color: red;text-align: center">
                 <span class="text-primary text-medium"></span><%=error%>
             </div>

@@ -46,8 +46,8 @@
                         </h3>
                         <h2 class="text-center">Nhập OTP</h2>
 
-                        <div class="ques" style="width: 250px;margin: 40px auto -15px auto; color: #da1111 !important;text-align: center">
-                            <span class="text-primary text-medium" style="color:red"><%=mess%></span>
+                        <div class="ques" style="width: 250px;margin: 40px auto -15px auto; color: #000000 !important;text-align: center">
+                            <span class="text-primary text-medium" style="color:#000000"><%=mess%></span>
 
                         </div>
                         <div class="panel-body">

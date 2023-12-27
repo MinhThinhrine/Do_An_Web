@@ -33,6 +33,16 @@
 
     </style>
 </head>
+<%
+    String erroldpass = request.getAttribute("erroldpass") + "";
+    erroldpass = (erroldpass == null || erroldpass.equals("null")) ? "" : erroldpass;
+
+    String errnewpass2 = request.getAttribute("errnewpass2") + "";
+    errnewpass2 = (errnewpass2 == null || errnewpass2.equals("null")) ? "" : errnewpass2;
+
+    String errnewpass1 = request.getAttribute("errnewpass1") + "";
+    errnewpass1 = (errnewpass1 == null || errnewpass1.equals("null")) ? "" : errnewpass1;
+%>
 <body>
 <section style="background-color: #93949f;">
 
@@ -65,6 +75,8 @@
                         <a class="nav-item nav-link change-password" id="nav-profile-tab" data-toggle="tab" role="tab" aria-controls="nav-profile" aria-selected="false" onclick="togglePasswordChange()" style="cursor: pointer">Thay đổi mật khẩu</a>
                     </div>
                 </nav>
+<%--                --%>
+                <div class="thongtinnguoidung" id="thongtinnguoidung">
                 <div class="card mb-4" id="card-body">
                     <div class="card-body">
                         <div class="row">
@@ -113,6 +125,18 @@
                         </div>
                     </div>
                 </div>
+                    <div class="button user" id="buttonuser">
+                        <button style="margin-left: 100px; margin-right: 40px" class="btn btn-warning"
+                                onclick="enableEdit()">Chỉnh sửa
+                        </button>
+                        <button class="btn btn-info" style="margin-right: 40px" onclick="saveData()">Lưu</button>
+                        <button class="btn btn-danger" style="margin-right: 40px">Hủy</button>
+                        <button class="btn btn-success" onclick="done()">Hoàn thành</button>
+                    </div>
+                </div>
+<%--                --%>
+                <form action="ChangePassword" method="post">
+                    <div class="quenmk" id="quenmk">
                 <div class="card mb-4 custom card-body hidden" id="custom-card-body" style="height: 495px">
                     <div class="row">
                         <div class="col-sm-3">
@@ -120,6 +144,13 @@
                         </div>
                         <div class="col-sm-9">
                             <input class="form-control" id="oldpassword" type="password" name="oldpassword" placeholder="" required autocomplete="on" autofocus >
+                        </div>
+                        <div>
+                            <% if(erroldpass!="null" || erroldpass.equals("oldpassnull")) { %>
+                            <div class="ques" style="width: 250px;margin: 15px auto -15px auto; color: red;text-align: center">
+                                <span class="text-primary text-medium"></span><%=erroldpass%>
+                            </div>
+                            <% } %>
                         </div>
                     </div>
                     <hr>
@@ -130,6 +161,13 @@
                         <div class="col-sm-9">
                             <input class="form-control" id="newpass1" name="newpass1" type="password" placeholder="Độ dài từ 6 đến 20 kí tự" minlength="6" maxlength="20" >
                         </div>
+                        <div>
+                            <% if(errnewpass1!=null || !errnewpass1.equals("")) { %>
+                            <div class="ques" style="width: 250px;margin: 15px auto -15px auto; color: red;text-align: center">
+                                <span class="text-primary text-medium"></span><%=errnewpass1%>
+                            </div>
+                            <% } %>
+                        </div>
                     </div>
                     <hr>
                     <div class="row">
@@ -139,18 +177,23 @@
                         <div class="col-sm-9" >
                             <input class="form-control" id="newpass2" name="newpass2" type="password" placeholder="" minlength="6" maxlength="20" >
                         </div>
+                        <div>
+                            <% if(errnewpass2!=null || !errnewpass2.equals("")) { %>
+                            <div class="ques" style="width: 250px;margin: 15px auto -15px auto; color: red;text-align: center">
+                                <span class="text-primary text-medium"></span><%=errnewpass2%>
+                            </div>
+                            <% } %>
+                        </div>
                     </div>
                 </div>
+                <div class="button forgot-password hidden " id="buttonforgotpassword">
+                            <button class="btn btn-danger " style="margin-left: 100px;margin-right: 40px" type="reset" onclick="">Hủy
+                            </button>
+                            <button class="btn btn-success" type="submit" >Hoàn thành</button>
+                        </div>
             </div>
+          </form>
         </div>
-        <div class="button forgot-password hidden " id="buttonforgotpassword">
-            <button class="btn btn-danger " style="margin-left: 500px;margin-right: 40px" onclick="">Hủy</button>
-            <button class="btn btn-light" onclick="done()" id="changebtn">Đổi mật khẩu</button>
-        </div>
-        <div class="button user" id="buttonuser">
-            <button style="margin-left: 500px; margin-right: 40px" class="btn btn-warning" onclick="enableEdit()">Chỉnh sửa</button>
-            <button class="btn btn-info" style="margin-right: 40px" onclick="saveData()">Lưu</button>
-            <button class="btn btn-danger" style="margin-right: 40px" >Hủy</button>
         </div>
     </div>
 </section>
