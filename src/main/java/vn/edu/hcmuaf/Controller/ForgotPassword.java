@@ -1,6 +1,8 @@
 package vn.edu.hcmuaf.Controller;
 
 
+
+
 import vn.edu.hcmuaf.DAO.UserDAO;
 import vn.edu.hcmuaf.bean.User;
 
@@ -38,7 +40,8 @@ public class ForgotPassword extends HttpServlet {
         boolean checkError = false;
         String url = "otp.jsp";
         User user = new User();
-        UserDAO userDAO = new UserDAO();
+        UserDAO userDAO  = new UserDAO();
+
 
         Map<String, User> checkmail = userDAO.checkMail();
         Pattern emailPattern = Pattern.compile("\\w+@\\w+(\\.\\w+)+(\\.\\w+)*");
