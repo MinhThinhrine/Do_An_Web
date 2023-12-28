@@ -54,7 +54,7 @@
            userNameInput.style.padding = "10px";
            userNameInput.style.fontSize = "16px";
            userNameInput.style.marginBottom = "10px";
-
+            userNameInput.value = username.textContent.trim();
 
             // Tạo các input elements và gán giá trị từ phần text ban đầu
             const phoneInput = document.createElement("input");
@@ -99,6 +99,8 @@
 
             address.innerHTML = '';
             address.appendChild(addressInput);
+            username.innerHTML= '';
+            username.appendChild(userNameInput);
         }
 
         function togglePasswordChange() {
