@@ -1,5 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" isELIgnored= "false"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
+<%@ page import="vn.edu.hcmuaf.bean.tour" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<% List<tour> tours = (List<tour>) request.getAttribute("tours");
+    if(tours == null) tours = new ArrayList<>();
+%>
+<html class="no-js" lang="vi">
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <head>
@@ -48,16 +58,22 @@
                             <thead>
                             <tr>
 
-                                <th scope="col"><a class="return" href="index.jsp">
-                                    <i class="fa-solid fa-arrow-left"></i>Trang chủ</a></th>
+                                <th scope="col"><a class="return" href="catelogy.jsp">
+                                    <i class="fa-solid fa-arrow-left"></i>Quay về</a></th>
                                 <th scope="col">Trạng thái</th>
                                 <th scope="col" style="width:170px;padding-left: 40px">Người lớn</th>
                                 <th scope="col">Trẻ em ( Giảm 40% )</th>
                                 <th scope="col">Giá</th>
+                                <th scope="col"><a href="index.jsp">
+                                    tour<span>Nest</span>
+                                </a>
+                                </th>
+
                             </tr>
                             </thead>
                             <tbody>
-                            <tr id="1">
+                            <% for(tour t : tours) { %>
+                            <tr id="<%=t.getId()%>">
                                 <th scope="row">
                                     <div class="d-flex align-items-center">
                                         <div class="d-flex align-items-center pe-2">
@@ -65,11 +81,13 @@
                                                    id="radioItem1" value=""
                                                    aria-label="..."/>
                                         </div>
-                                        <img src="assets/images/item/1.jpg" class="img-fluid rounded-3"
+                                        <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">
+                                        <img src="assets/images/item/<%=t.getImage()%>" class="img-fluid rounded-3"
                                              style="width: 120px;" title = "Chi tiết" alt="Book" >
+                                        </a>
                                         <div class="flex-column ms-4">
-                                            <p class="mb-2">Cần Thơ - Châu Đốc</p>
-                                            <p class="mb-0">3 ngày 2 đêm</p>
+                                            <p class="mb-2"><%=t.getSchedule()%></p>
+                                            <p class="mb-0"><%=t.getDuration()%></p>
                                         </div>
                                     </div>
                                 </th>
@@ -105,7 +123,7 @@
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <p class="mb-0" id="donGia1" style="font-weight: 500;">3,299,000đ</p>
+                                    <p class="mb-0" id="donGia1" style="font-weight: 500;"><%=t.getPrice()%></p>
                                 </td>
                                 <td class="align-middle">
                                     <div class="col-md-1 col-lg-1 col-xl-1">
@@ -114,120 +132,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr id="2">
-                                <th scope="row">
-                                    <div class="d-flex align-items-center">
-                                        <div class="d-flex align-items-center pe-2">
-                                            <input class="form-check-input" type="radio" name="radioNoLabel"
-                                                   id="radioItem2" value=""
-                                                   aria-label="..."/>
-                                        </div>
-                                        <img src="assets/images/item/2.jpg" class="img-fluid rounded-3"
-                                             style="width: 120px;" title = "Chi tiết" alt="Book" >
-                                        <div class="flex-column ms-4">
-                                            <p class="mb-2">Phú Quốc</p>
-                                            <p class="mb-0">4 ngày 3 đêm</p>
-                                        </div>
-                                    </div>
-                                </th>
-                                <td class="align-middle">
-                                    <p class="mb-0" style="font-weight: 500;">Chưa thanh toán</p>
-                                </td>
-                                <td class="align-middle">
-                                    <div class="d-flex flex-row">
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, -1,2)">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-
-                                        <input id="form2" min="0" name="quantity" value="1" type="number"
-                                               class="form-control form-control-sm" style="width: 55px;"/>
-
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, 1,2)">
-                                            <i class="fas fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="align-middle">
-                                    <div class="d-flex flex-row">
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, -1,2)">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-
-                                        <input id="form2-cop" min="0" name="quantity" value="1" type="number"
-                                               class="form-control form-control-sm" style="width: 55px;"/>
-
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, 1,2)">
-                                            <i class="fas fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="align-middle">
-                                    <p class="mb-0" id="donGia2" style="font-weight: 500;">4,999,000đ</p>
-                                </td>
-                                <td class="align-middle">
-                                    <div class="col-md-1 col-lg-1 col-xl-1">
-                                        <a href="#!" class="text-danger" onclick="dele(2)"><i
-                                                class="fas fa-trash fa-lg"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr id="3">
-                                <th scope="row">
-                                    <div class="d-flex align-items-center">
-                                        <div class="d-flex align-items-center pe-2">
-                                            <input class="form-check-input" type="radio" name="radioNoLabel"
-                                                   id="radioItem3" value=""
-                                                   aria-label="..."/>
-                                        </div>
-                                        <img src="assets/images/item/6.webp" class="img-fluid rounded-3"
-                                             style="width: 120px;" title = "Chi tiết" alt="Book" >
-                                        <div class="flex-column ms-4">
-                                            <p class="mb-2">Tây Ninh - Núi Bà Đen</p>
-                                            <p class="mb-0">4 Ngày 3 Đêm</p>
-                                        </div>
-                                    </div>
-                                </th>
-                                <td class="align-middle">
-                                    <p class="mb-0" style="font-weight: 500;">Chưa thanh toán</p>
-                                </td>
-                                <td class="align-middle">
-                                    <div class="d-flex flex-row">
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, -1,3)">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-
-                                        <input id="form3" min="0" name="quantity" value="1" type="number"
-                                               class="form-control form-control-sm" style="width: 55px;"/>
-
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, 1,3)">
-                                            <i class="fas fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="align-middle">
-                                    <div class="d-flex flex-row">
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, -1,3)">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-
-                                        <input id="form3-cop" min="0" name="quantity" value="1" type="number"
-                                               class="form-control form-control-sm" style="width: 55px;"/>
-
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, 1,3)">
-                                            <i class="fas fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="align-middle">
-                                    <p class="mb-0" id="donGia3" style="font-weight: 500;">2,490,000đ</p>
-                                </td>
-                                <td class="align-middle">
-                                    <div class="col-md-1 col-lg-1 col-xl-1">
-                                        <a href="#!" class="text-danger" onclick="dele(3)"><i
-                                                class="fas fa-trash fa-lg"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
+                            <% } %>
                             </tbody>
                         </table>
                     </div>

@@ -1,8 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" isELIgnored= "false"%>
 <%@ page contentType="text/html; charset=UTF-8" %>
+
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.bean.tour" %>
+<%@ page import="java.util.ArrayList" %>
 <%@include file="common/tablib.jsp" %>
+<% List<tour> tours = (List<tour>) request.getAttribute("tours");
+    if(tours == null) tours = new ArrayList<>();
+%>
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="vi">
 <head>
     <meta charset="UTF-8">
 
@@ -248,22 +257,26 @@
         </div>
         <div id="products">
             <div class="row mx-0">
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="1">
+                <% for(tour t : tours) { %>
+                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="<%=t.getId() %>">
                     <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/1.jpg"
-                             alt="package-place">
+                        <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">
+                            <img style="cursor: pointer" class="packageImage" src="assets/images/item/<%=t.getImage()%>"
+                                 alt="package-place">
+                        </a>
+
                         <div class="single-package-item-txt">
-                            <h3>Cần Thơ - Châu Đốc<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
+                            <h3><%=t.getName()%><span class="pull-right" style="margin-top: 30px;font-size: 15px;"><%=t.getPrice()%></span>
                             </h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-clock-o"></i> 3 ngày 2 đêm
+												<i class="fa fa-clock-o"></i> <%=t.getDuration()%>
 											</span>
                                 </p>
                                 <p>
 											<span>
-												<i class="fa fa-location-arrow"></i> Cần Thơ - Châu Đốc - Miếu Bà Chúa Xứ
+												<i class="fa fa-location-arrow"></i> <%=t.getSchedule()%>
 											</span>
                                 </p>
                                 <p>
@@ -272,375 +285,27 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn" style="float: left">
+                            <div class="about-btn" style="float: left;width: 120px">
                                 <button class="about-view packages-btn" id="btn">
                                     book now
                                 </button>
                             </div>
-                            <div class="about-btn">
+                            <div class="about-btn"style="width: 0px">
+                                <a href="${pageContext.request}/ValiServlet?id=<%=t.getId()%>">
                                 <button class="about-view packages-btn addvali">
                                     <i class="fa fa-plus"></i><i class="fa fa-suitcase-rolling" style="padding-left: 6px;" ></i>
                                 </button>
+                                </a>
                             </div>
                             <!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
+
                     </div><!--/.single-package-item-->
 
                 </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="2">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/2.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Phú Quốc<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">4,000,000 - 6,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Thành phố Hồ Chí Minh - Phú Quốc
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn" style="float: left">
-                                <button class="about-view packages-btn" id="btn">
-                                    book now
-                                </button>
-                            </div>
-                            <div class="about-btn">
-                                <button class="about-view packages-btn addvali">
-                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="3">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/3.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Cần Thơ - Cồn Sơn-Cồn Ấu<span class="pull-right"
-                                                              style="margin-top: 8px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 3 ngày 2 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Cần Thơ - KDL Cồn Sơn - Cồn Ấu
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn" style="float: left">
-                                <button class="about-view packages-btn" id="btn">
-                                    book now
-                                </button>
-                            </div>
-                            <div class="about-btn">
-                                <button class="about-view packages-btn addvali">
-                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="4">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/4.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Mỹ Tho - Bến Tre<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Mỹ Tho - Bến Tre
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn" style="float: left">
-                                <button class="about-view packages-btn" id="btn">
-                                    book now
-                                </button>
-                            </div>
-                            <div class="about-btn">
-                                <button class="about-view packages-btn addvali">
-                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="5">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/5.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Củ Chi - Địa đạo<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">1,000,000 - 2,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Củ Chi - Địa đạo Củ Chi
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn" style="float: left">
-                                <button class="about-view packages-btn" id="btn">
-                                    book now
-                                </button>
-                            </div>
-                            <div class="about-btn">
-                                <button class="about-view packages-btn addvali">
-                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="6">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/6.webp"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Tây Ninh - Núi Bà Đen<span class="pull-right"
-                                                           style="margin-top: 30px;;font-size: 15px;">1,500,000 - 2,500,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Tây Ninh - Núi Bà Đen
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn" style="float: left">
-                                <button class="about-view packages-btn" id="btn">
-                                    book now
-                                </button>
-                            </div>
-                            <div class="about-btn">
-                                <button class="about-view packages-btn addvali">
-                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="7">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/7.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Đồng Tháp - Mộc Hóa<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 5,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Đồng Tháp - Mộc Hóa
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn" style="float: left">
-                                <button class="about-view packages-btn" id="btn">
-                                    book now
-                                </button>
-                            </div>
-                            <div class="about-btn">
-                                <button class="about-view packages-btn addvali">
-                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="8">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/8.png"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Long An - Bến Lức<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Long An - Bến Lức
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn" style="float: left">
-                                <button class="about-view packages-btn" id="btn">
-                                    book now
-                                </button>
-                            </div>
-                            <div class="about-btn">
-                                <button class="about-view packages-btn addvali">
-                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="9">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/9.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Tiền Giang - Cai Lậy<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,500,000 - 4,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Tiền Giang - Cai Lậy
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn" style="float: left">
-                                <button class="about-view packages-btn" id="btn">
-                                    book now
-                                </button>
-                            </div>
-                            <div class="about-btn">
-                                <button class="about-view packages-btn addvali">
-                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="10">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/10.webp"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Bình Dương - Suối Tiên<span class="pull-right"
-                                                            style="margin-top: 30px;;font-size: 15px;">1,500,000 - 2,500,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Bình Dương - Suối Tiên
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn" style="float: left">
-                                <button class="about-view packages-btn" id="btn">
-                                    book now
-                                </button>
-                            </div>
-                            <div class="about-btn">
-                                <button class="about-view packages-btn addvali">
-                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase" style="padding-left: 6px;" ></i>
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
+                <% } %>
+            </div>
+            </div>
 
                 <div class="pagination">
                     <nav class="pagination-container">

@@ -1,8 +1,9 @@
     <!doctype html>
+    <%@ page language="java" contentType="text/html; charset=UTF-8"
+             pageEncoding="UTF-8" isELIgnored= "false"%>
     <%@ page contentType="text/html; charset=UTF-8" %>
     <%@include file="common/tablib.jsp" %>
     <html class="no-js" lang="vi">
-
 
 <%--head--%>
 <%@include file="common/head.jsp" %>
@@ -295,7 +296,7 @@
                                             <div class="about-btn travel-mrt-0 pull-right">
 
                                                 <button id="searchButton" class="about-view travel-btn">
-                                                    <a href="catelogy.jsp"
+                                                    <a href="${pageContext.request.contextPath}/CategorieServlet"
                                                        style="text-decoration: none; text-transform: uppercase;width: 180px; padding: 20px;height: 60px;">tìm
                                                         kiếm
                                                     <i class="fa-solid fa-magnifying-glass"></i>

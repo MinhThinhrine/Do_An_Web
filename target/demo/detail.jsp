@@ -1,9 +1,11 @@
+<%@ page import="vn.edu.hcmuaf.bean.User" %>
 <!doctype html>
 <html lang="vi">
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="common/tablib.jsp" %>
-<%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page import="java.util.Objects" %>
+<%@ page import="vn.edu.hcmuaf.bean.tour" %>
+<% tour t = (vn.edu.hcmuaf.bean.tour) request.getAttribute("tour");%>
 <head>
     <!-- META DATA -->
     <meta charset="utf-8">
@@ -158,10 +160,10 @@
                                      aria-hidden="false"
                                      style="width: 774px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;">
                                     <div>
-                                        <div class="item" style="width: 100%; display: inline-block;">
+                                        <div class="item" style="width: 700px;height: 515px; display: inline-block;">
                                             <div class="img"><img
-                                                    src="assets/images/item/1.jpg"
-                                                    alt="Du lịch Cần Thơ - Châu Đốc - Miếu Bà Chúa Xứ Sài Gòn 2023">
+                                                    src="assets/images/item/<%=t.getImage()%>"
+                                                    alt="Du lịch <%=t.getSchedule()%>" style="width: 700px;height: 515px;">
                                             </div>
                                         </div>
                                     </div>
@@ -173,7 +175,7 @@
                         <div class="boxPrice">
                             <div class="price">
                                 <div class="txt">Giá từ:</div>
-                                <div class="red" id="gia_mb">3,499,000 đ</div>
+                                <div class="red" id="gia_mb"><%=t.getPrice()%></div>
                             </div>
                             <div class="bot">
                                 <div class="btn-booking dt">
@@ -193,12 +195,12 @@
                                     <td style="width: 15%;"><span
                                             style="color:#555555;"><strong>Hành trình</strong></span></td>
                                     <td>
-                                        <span style="color:#555555;"><strong>Cần Thơ - Châu Đốc - Miếu Bà Chúa Xứ</strong></span>
+                                        <span style="color:#555555;"><strong><%=t.getSchedule()%></strong></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><span style="color:#555555;"><strong>Lịch trình</strong></span></td>
-                                    <td><span style="color:#555555;"><strong>3 ngày 2 đêm</strong></span></td>
+                                    <td><span style="color:#555555;"><strong><%=t.getDuration()%></strong></span></td>
                                 </tr>
                                 <tr>
                                     <td><span style="color:#555555;"><strong>Khởi hành</strong></span></td>
@@ -208,7 +210,7 @@
                                 <tr>
                                     <td><span style="color:#555555;"><strong>Vận chuyển</strong></span></td>
                                     <td><span style="color:#555555;">
-                <strong>Xe du lịch đời mới &amp; Máy bay khứ hồi</strong></span></td>
+                                <strong>Xe du lịch đời mới &amp; Máy bay khứ hồi</strong></span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -467,16 +469,16 @@
 
                 <div id="vnt-sidebar" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs">
                     <div class="boxDesign1">
-                        <div class="name">Du lịch Cần Thơ - Châu Đốc - Miếu Bà Chúa Xứ từ Sài Gòn 2023</div>
+                        <div class="name">Du lịch <%=t.getSchedule() %></div>
                         <div class="attr">
                             <ul>
                                 <li>
                                     <div class="at">Mã tour</div>
-                                    <div class="as">1 &nbsp;</div>
+                                    <div class="as"><%=t.getId() %> &nbsp;</div>
                                 </li>
                                 <li>
                                     <div class="at">Thời gian:</div>
-                                    <div class="as">3 ngày 2 đêm</div>
+                                    <div class="as"><%=t.getDuration() %></div>
                                 </li>
                                 <li>
                                     <div class="at">Khởi hành:</div>
@@ -492,10 +494,6 @@
                                     <div class="at">Xuất phát:</div>
                                     <div class="as">Từ Hồ Chí Minh</div>
                                 </li>
-                                <li>
-                                    <div class="at">Ngày khởi hành:</div>
-                                    <div class="as"><input type="date" placeholder="13/11/2023"></div>
-                                </li>
 
                             </ul>
                         </div>
@@ -506,7 +504,7 @@
                                 <div class="boxPrice">
                                     <div class="price">
                                         <div class="txt">Giá từ:</div>
-                                        <div class="red" id="giactt">3,499,000 đ</div>
+                                        <div class="red" id="giactt"><%=t.getPrice() %></div>
                                     </div>
                                     <div class="bot">
                                         <div class="btn-booking dt">
