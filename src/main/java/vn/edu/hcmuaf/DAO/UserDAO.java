@@ -9,7 +9,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class UserDAO implements objectDAO {
@@ -132,7 +134,28 @@ public class UserDAO implements objectDAO {
 
         return null;
     }
-
+    public List<User> getAllUser() {
+        List<User> list = new ArrayList<>();
+        String query = "select * from Account";
+        try {
+            conn = ConnectToDatabase.getConnect();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                int userId = resultSet.getInt(1);
+                String userName = resultSet.getString(2);
+                String userEmail = resultSet.getString(3);
+                String userPassword = resultSet.getString(4);
+                String phoneNumber = resultSet.getString(5);
+                String address = resultSet.getString(6);
+                int roleId = resultSet.getInt(7);
+                User user = new User(userId, userName, userEmail, userPassword, phoneNumber, address, roleId);
+                list.add(user);
+            }
+        } catch (Exception e) {
+        }
+        return list;
+    }
     @Override
     public boolean add(Object obj) {
         return false;
