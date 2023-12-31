@@ -1,3 +1,6 @@
+<%@ page import="vn.edu.hcmuaf.bean.User" %>
+<%@ page import="java.util.List" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -157,66 +160,66 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--sidebar end-->
     <!--main content start-->
     <section id="main-content">
-        <section class="wrapper">
-            <!-- //market-->
-            <div class="market-updates">
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-2">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-eye"> </i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Người xem </h4>
-                            <h3>13,500</h3>
-                            <p>Hãy đến với chúng tôi !</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-1">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-users" ></i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Khách hàng</h4>
-                            <h3>1,250</h3>
-                            <p>Thật tuyệt vời !</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-3">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-usd"></i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Tour đã giảm giá</h4>
-                            <h3>199</h3>
-                            <p>Giá cả hợp lí !</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-4">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Tour đã bán</h4>
-                            <h3>1,500</h3>
-                            <p>Tuyệt vời Việt Nam !</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
+<%--        <section class="wrapper">--%>
+<%--            <!-- //market-->--%>
+<%--            <div class="market-updates">--%>
+<%--                <div class="col-md-3 market-update-gd">--%>
+<%--                    <div class="market-update-block clr-block-2">--%>
+<%--                        <div class="col-md-4 market-update-right">--%>
+<%--                            <i class="fa fa-eye"> </i>--%>
+<%--                        </div>--%>
+<%--                        <div class="col-md-8 market-update-left">--%>
+<%--                            <h4>Người xem </h4>--%>
+<%--                            <h3>13,500</h3>--%>
+<%--                            <p>Hãy đến với chúng tôi !</p>--%>
+<%--                        </div>--%>
+<%--                        <div class="clearfix"> </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="col-md-3 market-update-gd">--%>
+<%--                    <div class="market-update-block clr-block-1">--%>
+<%--                        <div class="col-md-4 market-update-right">--%>
+<%--                            <i class="fa fa-users" ></i>--%>
+<%--                        </div>--%>
+<%--                        <div class="col-md-8 market-update-left">--%>
+<%--                            <h4>Khách hàng</h4>--%>
+<%--                            <h3>1,250</h3>--%>
+<%--                            <p>Thật tuyệt vời !</p>--%>
+<%--                        </div>--%>
+<%--                        <div class="clearfix"> </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="col-md-3 market-update-gd">--%>
+<%--                    <div class="market-update-block clr-block-3">--%>
+<%--                        <div class="col-md-4 market-update-right">--%>
+<%--                            <i class="fa fa-usd"></i>--%>
+<%--                        </div>--%>
+<%--                        <div class="col-md-8 market-update-left">--%>
+<%--                            <h4>Tour đã giảm giá</h4>--%>
+<%--                            <h3>199</h3>--%>
+<%--                            <p>Giá cả hợp lí !</p>--%>
+<%--                        </div>--%>
+<%--                        <div class="clearfix"> </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="col-md-3 market-update-gd">--%>
+<%--                    <div class="market-update-block clr-block-4">--%>
+<%--                        <div class="col-md-4 market-update-right">--%>
+<%--                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>--%>
+<%--                        </div>--%>
+<%--                        <div class="col-md-8 market-update-left">--%>
+<%--                            <h4>Tour đã bán</h4>--%>
+<%--                            <h3>1,500</h3>--%>
+<%--                            <p>Tuyệt vời Việt Nam !</p>--%>
+<%--                        </div>--%>
+<%--                        <div class="clearfix"> </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="clearfix"> </div>--%>
+<%--            </div>--%>
 
 
-        </section>
+<%--        </section>--%>
 
         <div  id="container11" style="height: 100%;">
             <section class="h-100 h-custom">
@@ -234,395 +237,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <th scope="col">Email</th>
                                         <th scope="col" style="width:170px;padding-left: 40px">Số điện thoại</th>
                                         <th scope="col">Địa chỉ</th>
-                                        <th scope="col">Ngày sinh</th>
+                                        <th scope="col">Là admin</th>
+                                        <th scope="col">Là người bán</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr id="1">
+                                    <% List<User> userList = (List<User>)request.getAttribute("listA"); %>
+                                    <% for (User user : userList) { %>
+                                    <tr id="<%= user.getId() %>">
                                         <th scope="row">
-                                            <div>Mai Xuân Thức</div>
+                                            <div></div>
                                         </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
+                                            <p class="mb-0" style="font-weight: 500;"><%= user.getEmail() %></p>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100001</div>
+                                            <div style="margin-left: 5px"><%= user.getPhoneNumber() %></div>
                                         </td>
                                         <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
+                                            <div><%= user.getAddress() %></div>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">22/02/2002</p>
+                                            <p class="mb-0" style="font-weight: 500;"><%=user.getUserName() %></p>
                                         </td>
                                         <td class="align-middle">
                                             <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                       </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="2">
-                                        <th scope="row">
-                                            <div>Trần Quang Vũ</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">tqv@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100002</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Tân Phú, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">25/02/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
+                                                <a href="#!" class="text-danger" onclick="deleteUser(<%= user.getId() %>)">
                                                     <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
                                                 </a>
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr id="3">
-                                        <th scope="row">
-                                            <div>Võ Minh Thịnh</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">vmt@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100003</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Quận 2, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">25/03/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="4">
-                                        <th scope="row">
-                                            <div>Lê Chí Trường</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">lct@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100004</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Quận 1, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">26/03/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="5">
-                                        <th scope="row">
-                                            <div>Trần Thanh Trí</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">ttt@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100005</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Bình Thạnh, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">31/03/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="6">
-                                        <th scope="row">
-                                            <div>Lê Đình Văn</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">ndv@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100006</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Tân Bình, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">30/03/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="7">
-                                        <th scope="row">
-                                            <div>Trần Thái Linh</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">ttl@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100007</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Quận 3, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">12/10/1999</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="8">
-                                        <th scope="row">
-                                            <div>Phan Tân Trung</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">ptt@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100008</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Hóc Môn, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">15/08/2000</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="9">
-                                        <th scope="row">
-                                            <div>Nguyễn Duy Vụ</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">ndv@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100009</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Quận 10, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">20/1/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="10">
-                                        <th scope="row">
-                                            <div>Nguyễn Hoàng Bảo Trâm</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">nhbt@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100010</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Gò Vấp, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">29/11/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="11">
-                                        <th scope="row">
-                                            <div>Nguyễn Thị Kiều My</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">ntkm@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100011</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">03/03/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="12">
-                                        <th scope="row">
-                                            <div>Trần Quốc Toàn</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">tqt@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100012</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Quận 9, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">11/06/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="13">
-                                        <th scope="row">
-                                            <div>Nguyễn Trường Thịnh</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">ntt@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100013</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Quận 7, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">13/12/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="14">
-                                        <th scope="row">
-                                            <div>Trần Duy Tân</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">mxt@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100014</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Quận 11, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">15/03/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="15">
-                                        <th scope="row">
-                                            <div>Huỳnh Tấn Bin</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">htb@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100015</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Bình Thạnh, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">08/03/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="16">
-                                        <th scope="row">
-                                            <div>Phạm Nam Thuận</div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">pnt@gmail.com</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">0912100015</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div >Thủ Đức, Hồ Chí Minh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">12/12/2003</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser()">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-
+                                    <% } %>
                                     </tbody>
                                 </table>
                             </div>
