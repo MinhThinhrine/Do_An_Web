@@ -12,11 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
         avtUser.style.display = "none";     // Ẩn avatar người dùng
     }
 });
-
-    document.getElementById("log_out").addEventListener("click", function () {
-    window.location.href = "login.jsp";
-});
-
     document.getElementById("myInfor").addEventListener("click", function () {
     window.location.href = "infor.jsp";
 });
@@ -28,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("bill").addEventListener("click", function () {
     window.location.href = "bill.jsp";
 });
-
 
 
 

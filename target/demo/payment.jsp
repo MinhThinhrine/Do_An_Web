@@ -48,390 +48,167 @@
 <body>
 
 <main role="main">
-    <div class="main-loader d-none">
-        <div class="loader loader3">
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="row head" style="background-color: #4d4e53">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-2">
+            <div class="logo">
+                <a href="index.html">
+                    tour<span>Nest</span>
+                </a>
+            </div><!-- /.logo-->
+        </div><!-- /.col-->
+        <div class="col-sm-9">
+            <div class="main-menu">
+                <ul class="nav" style="text-align: right;color: black!important;">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="index.html#spo">Ưu Đãi</a></li>
+                    <li><a href="index.html#gallery">Tour Hot</a></li>
+                    <li><a href="index.html#pack">Gói Du Lịch</a></li>
+                    <li><a href="index.html#blog">Tin Tức</a></li>
+                    <li><a href="index.html#feedback">Đánh Giá</a></li>
+                    <li><a href="index.html#service">Liên Hệ</a></li>
+                    <li class="smooth-menu"><a href="#"><i class="fa fa-suitcase-rolling fa-2x"
+                                                           style="margin-top: -10px;color: #00d8fe"></i></a>
+                    </li>
+                    <li>
+                        <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
+                                href="login.html">Đăng Nhập</a>
+                        </button>
+                    </li><!--/.project-btn-->
+                    <li id="icon-user" style="display: block;padding-top: 24px">
+                        <i class="fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
+                        <ul id="service_account" style="margin-top: -5px">
+                            <li><a id="myInfor" href="infor.html">Thông tin tài khoản</a></li>
+                            <li><a id="myTour" href="shopcart.html">VALI</a></li>
+                            <li><a id="log_out" href="register.html">Đăng xuất</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.main-menu-->
+    </div><!-- /.col-->
 
     <div class="container">
         <div class="row">
-            <ul class="breadcrumbs__wrapper d-flex align-items-center" itemscope=""
-                itemtype="http://schema.org/BreadcrumbList">
-            </ul>
         </div>
+
     </div>
     <div class="checkout">
 
-        <!-- <section class="checkout-head">
+        <section class="checkout-head">
             <div class="container">
                 <div class="row">
                     <ul class="head col-12">
-                        <li class="checked">1. Nhập thông tin</li>
-                        <li class="checked"><i class="icon icon--arrow-right"></i></li>
-                        <li class="checked">2. Thanh toán</li>
+                        <li class="checked"><a href="" style="color: #00d8fe!important;">1. Chọn dịch vụ</a></li>
+                        <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
+                        <li class="checked"><a href="" style="color: #00d8fe!important;">2. Nhập thông tin</a></li>
+                        <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
+                        <li class="checked"><a href="" style="color: #00d8fe!important;">3. Hình thức thanh toán</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
-        </section> -->
+        </section>
 
 
         <section class="checkout-main">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-12 left">
-                        <h2>Thanh toán</h2>
+                    <h2>Thanh toán</h2>
+                    <div class="col-md-8 col-12 left" style="border: 1px solid #d5d5d5;border-radius: 5px">
                         <div class="payments-warp">
                             <h3>Các hình thức thanh toán</h3>
                             <div class="payments">
-                                <!-- tienmat -->
+                                <!-- ck -->
                                 <div class="payment-item active">
                                     <div class="pm-head">
-                                        <div class="pm-head-icon">
-                                            <i class="fa-solid fa-money-bill"></i>
-                                            <h4>Tiền mặt</h4>
+                                        <span class="check" id="chuyenkhoan"></span>
+                                        <div class="pm-head-icon" style="margin-left: 20px">
+                                            <h4>Chuyển khoản qua ngân hàng</h4>
+                                            <i class="fa-solid fa-building-columns" style="margin-left: 20px"></i>
                                         </div>
-                                        <span class="check" id="tienmat" value="tienmat"></span>
+
                                     </div>
                                     <div class="pm-des">
-                                        <p>
-
-                                            <title></title>
-
-
-                                        </p>
-                                        <p style="text-align:justify">Quý khách vui lòng thanh toán tại bất kỳ văn
-                                            phòng TourNest trên toàn quốc và các chi nhánh tại nước ngoài. Xem <a style="color: #fc3200;"
-                                                                                                                  href="https://www.google.com/maps/place/TourNest/@10.87019,106.787794,17z/data=!3m1!4b1!4m6!3m5!1s0x317527fe80e4040f:0x3219b5b8719573b1!8m2!3d10.87019!4d106.787794!16s%2Fg%2F11vj2n7j70?hl=vi&entry=tts">chi tiết</a>.</p>
-                                        <p>&nbsp;</p>
-
-
-                                        <p></p>
+                                        <div class="pm-txt">
+                                            <h4>Sau khi thực hiện việc chuyển khoản thành công TourNest sẽ gửi hóa đơn
+                                                điện tử cho quý khách qua email.</h4>
+                                            <br>
+                                            <div style="text-align:justify">Tên Tài Khoản : Võ Minh Thịnh</div>
+                                            <div style="text-align:justify">Số Tài khoản :
+                                                <strong>30110300003770</strong></div>
+                                            <div style="text-align:justify">Ngân hàng : MB Bank - Ngân hàng Quân Đội
+                                            </div>
+                                            <br>
+                                            <div style="text-align:justify">Nội dung chuyển khoản: <br> MaTour-Email-(50% or 100%)</div>
+                                            <div style="text-align:justify">Ví dụ: <br> MT13646-21130549@st.hcmuaf.edu.vn-50</div>
+                                        </div>
+                                        <div class="qrcode">
+                                            <img src="assets/images/service/mbbank.jpg" alt="qrcode" srcset="">
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- end tienmat -->
-                                <!-- ck -->
                                 <div class="payment-item">
                                     <div class="pm-head">
-                                        <div class="pm-head-icon">
-                                            <i class="fa-solid fa-building-columns"></i>
-                                            <h4>Chuyển khoản</h4>
-                                        </div>
-                                        <span class="check" id="chuyenkhoan"></span>
-                                    </div>
-                                    <div class="pm-des">
-                                        <p>
-
-
-                                            <title></title>
-
-
-                                        </p>
-                                        <p style="text-align:justify">Quý khách sau khi thực hiện việc chuyển khoản
-                                            vui lòng gửi email đến 21130549@TourNest.com&nbsp;hoặc gọi tổng
-                                            đài (+84)913415015 để được xác nhận từ công ty chúng tôi.</p>
-                                        <div style="text-align:justify">Tên Tài Khoản : Võ Minh Thịnh - TourNest
-                                        </div>
-                                        <div style="text-align:justify">Tên tài khoản viết tắt : TourNest</div>
-                                        <div style="text-align:justify">Số Tài khoản : <strong>039184811</strong></div>
-                                        <div style="text-align:justify">Ngân hàng : BIDV - chi nhánh đông Sài Gòn</div>
-
-
-                                        <div>
-                                            &nbsp;
-                                        </div>
-
-                                        <div class="qrcode">
-                                            <img src="assets/images/detail/qrcode_payment.png" alt="qrcode" srcset="" style="max-width: 60%;margin-left: 55px;">
-                                        </div>
-                                        <p></p>
-                                    </div>
-                                </div>
-                                <!-- end ck -->
-                                <!-- zalopay -->
-                                <div class="payment-item" style="max-height:500px; overflow:auto ;display: none;">
-                                    <div class="pm-head">
-                                        <div class="pm-head-icon">
-                                            <i class="icon-ZaloPay"><span class="path1"></span><span
-                                                    class="path2"></span><span class="path3"></span><span
-                                                    class="path4"></span><span class="path5"></span><span
-                                                    class="path6"></span><span class="path7"></span><span
-                                                    class="path8"></span><span class="path9"></span></i>
-                                            <h4>Thanh toán bằng ZaloPay</h4>
-                                        </div>
-                                        <span class="check" id="thanhtoanatm"></span>
-                                    </div>
-                                    <div class="pm-des">
-                                        <div class="text">
-                                            Chọn hình thức thanh toán:
-                                        </div>
-                                        <div class="row d-flex justify-content-between mb-3">
-                                            <div class="col-6">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                           name="flexRadioDefault1" id="flexRadioDefault1" checked="">
-                                                    <input type="hidden" value="qr_zalo" id="Option">
-                                                    <label class="form-check-label" for="flexRadioDefault1">
-                                                        <i class="icon icon--qr-code"></i> &nbsp;QRcode
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                           name="flexRadioDefault1" id="flexRadioDefault2">
-                                                    <input type="hidden" value="visa_zalo" id="Option">
-                                                    <label class="form-check-label" for="flexRadioDefault2">
-                                                        <i class="icon icon--credit-card"></i>&nbsp; Thẻ nội địa
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>
-
-
-                                            <title></title>
-
-
-                                        </p>
-                                        <p><strong><span style="color:#fc3400">HÌNH THỨC THANH TOÁN BẰNG THẺ ATM/
-                                                        INTERNET BANKING</span></strong></p>
-                                        <p style="text-align:justify">TourNest chấp nhận thanh toán bằng thẻ ATM
-                                            qua cổng thanh toán ZaloPay.</p>
-                                        <p style="text-align:justify">Hãy đảm bảo Quý khách đang sử dụng thẻ ATM do
-                                            ngân hàng trong nước phát hành và đã được kích hoạt chức năng thanh toán
-                                            trực tuyến.</p>
-                                        <p style="text-align:justify">Hướng dẫn thanh toán thẻ qua cồng
-                                            ZaloPay&nbsp;<a href="https://zalopay.vn/">Tại đây</a></p>
-
-
-                                        <p></p>
-                                    </div>
-                                </div>
-                                <!-- end zalo pay -->
-                                <!-- momo -->
-                                <div class="payment-item" style="max-height:500px; overflow:auto ;display: none;">
-                                    <div class="pm-head">
-                                        <div class="pm-head-icon">
-                                            <i class="icon-momo"><span class="path1"></span><span
-                                                    class="path2"></span><span class="path3"></span><span
-                                                    class="path4"></span><span class="path5"></span></i>
-                                            <h4>Thanh toán bằng Momo</h4>
-                                        </div>
-                                        <span class="check" id="momo"></span>
-                                    </div>
-                                    <div class="pm-des">
-                                        <p>
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- end momo -->
-                                <div class="payment-item d-none" style="max-height:500px; overflow:auto ;display: none;">
-                                    <div class="pm-head">
-                                        <div class="pm-head-icon">
-                                            <i class="icon-MSB"><span class="path1"></span><span
-                                                    class="path2"></span><span class="path3"></span><span
-                                                    class="path4"></span></i>
-                                            <h4 id="thanh-toan-qua-msb"> Thanh toán qua Cổng MSB</h4>
-                                        </div>
-                                        <span class="check" id="thanhtoanmsb"></span>
-                                    </div>
-                                    <div class="pm-des">
-                                        <p>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end tienmat -->
-                            <div class="payments">
-                                <!-- thetindung -->
-                                <div class="payment-item"style="max-height:500px; overflow:auto ;display: none;">
-                                    <div class="pm-head">
-                                        <div class="pm-head-icon">
-                                            <i class="icon icon--credit-card"></i>
-                                            <h4>Thẻ tín dụng</h4>
-                                        </div>
-                                        <span class="check" id="thetindung"></span>
-                                    </div>
-                                    <div class="pm-des">
-                                        <div class="text">
-                                            Thẻ tín dụng:
-                                        </div>
-                                        <div class="row d-flex justify-content-between mb-3">
-                                            <div class="col-3">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                           name="flexRadioDefault1" id="flexRadioDefault1">
-                                                    <input type="hidden" value="visa" id="Option">
-                                                    <label class="form-check-label" for="flexRadioDefault1">
-                                                        <img src="/Content/Theme/images/thevisa.png" alt="amex">
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-3">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                           name="flexRadioDefault1" id="flexRadioDefault2">
-                                                    <input type="hidden" value="mastercard" id="Option">
-                                                    <label class="form-check-label" for="flexRadioDefault2">
-                                                        <img src="/Content/Theme/images/master.png" alt="amex">
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-3">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                           name="flexRadioDefault1" id="flexRadioDefault2">
-                                                    <input type="hidden" value="jcb" id="Option">
-                                                    <label class="form-check-label" for="flexRadioDefault2">
-                                                        <img src="/Content/Theme/images/jcb.png" alt="amex">
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-3">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                           name="flexRadioDefault1" id="flexRadioDefault2">
-                                                    <input type="hidden" value="amex" id="Option">
-                                                    <label class="form-check-label" for="flexRadioDefault2">
-                                                        <img src="/Content/Theme/images/amex.png" alt="amex">
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>
-
-
-                                            <title></title>
-
-
-                                        </p>
-                                        <p><strong><span style="color:#fc3400">THANH TOÁN BẰNG THẺ TÍN DỤNG
-                                                    </span></strong></p>
-                                        <p style="text-align:justify">Tất cả giao dịch của Quý khách được xử lý bảo
-                                            mật theo giao thức SSL tại hệ thống của <em>
-                                                <strong>MasterCard</strong></em>. TourNest không lưu giữ bất kì
-                                            thông tin nào về thẻ của quý khách tại hệ thống của TourNest. Do đó,
-                                            quý khách có thể hoàn toàn an tâm rằng thông tin thẻ của Quý khách sẽ
-                                            được bảo đảm an toàn tuyệt đối tại hệ thống của <em>
-                                                <strong>MasterCard</strong></em> và Ngân hàng Ngoại Thương Việt Nam
-                                            (<strong>Vietcombank</strong>).</p>
-                                        <p style="text-align:justify">Hiện tại hệ thống www.travel.com.vn chấp nhận
-                                            cho Quý khách thanh toán bằng một trong các loại thẻ sau:
-                                            <strong>VISA</strong> (Credit hoặc Debit), <em>
-                                                <strong>MasterCard</strong></em> (Credit), <strong>Diners Clup
-                                                International</strong> (Credit), <strong>JCB</strong> (Credit) và
-                                            <strong>American Express</strong> (Credit) của bất kỳ ngân hàng nào.</p>
-
-
-                                        <p></p>
-                                    </div>
-                                </div>
-                                <!--end thetindung -->
-                                <!-- VNPAY -->
-                                <div class="payment-item" >
-                                    <div class="pm-head">
-                                        <div class="pm-head-icon">
-                                            <i class="icon icon--qr-code"></i>
-                                            <h4>Chuyển khoản qua MOMO</h4>
-                                        </div>
                                         <span class="check" id="vnpay"></span>
+                                        <div class="pm-head-icon" style="margin-left: 20px">
+                                            <h4>Chuyển khoản qua MoMo</h4>
+                                            <i class="fa-solid fa-wallet" style="margin-left: 50px"></i>
+                                        </div>
                                     </div>
                                     <p class="text-danger mt-2"></p>
                                     <div class="pm-des">
-                                        <p>
+                                        <div class="pm-txt">
+                                            <h4>Sau khi thực hiện việc chuyển khoản thành công TourNest sẽ gửi hóa đơn
+                                                điện tử cho quý khách qua email.</h4>
+                                            <br>
+                                            <div style="text-align:justify">Tên Tài Khoản : Võ Minh Thịnh</div>
+                                            <div style="text-align:justify">Số Tài khoản : <strong>0783833770</strong>
+                                            </div>
+                                            <div style="text-align:justify">Qua App: Ví điện tử MoMo</div>
+                                            <br>
+                                            <div style="text-align:justify">Nội dung chuyển khoản: <br> MaTour-Email-(50% or 100%)</div>
+                                            <div style="text-align:justify">Ví dụ: <br> MT13646-21130549@st.hcmuaf.edu.vn-50</div>
 
-
-                                            <title></title>
-
-
-                                        </p>
-                                        <div>
-                                            Quý khách sau khi thực hiện việc chuyển khoản vui lòng gửi email đến  21130549@st.hcmuaf.edu.vn hoặc liên hệ chúng tôi qua số điện thoại (+84)913415015 để được xác nhận từ công ty chúng tôi.
-                                        </div>
-                                        <div>
-                                            &nbsp;
-                                        </div>
-                                        <div>
-                                            Tên tài khoản : Võ Minh Thịnh<br>
-                                            Số tài khoản 0913415015.&nbsp;
-
-                                        </div>
-                                        <div>
-                                            &nbsp;
                                         </div>
 
                                         <div class="qrcode">
-                                            <img src="assets/images/detail/qrcode_payment.png" alt="qrcode" srcset="" style="max-width: 60%;margin-left: 55px;">
+                                            <img src="assets/images/service/momo.jpg" alt="qrcode" srcset=""
+                                                 style="max-width: 100%;">
                                         </div>
 
-                                        <p></p>
                                     </div>
                                 </div>
-                                <!-- end VNPAY -->
-                                <!-- SP pay -->
-                                <div class="payment-item" style="max-height:500px; overflow:auto ;display: none;">
+
+                            </div>
+                            <!-- end tienmat -->
+                            <div class="payments" style="width: 48%">
+                                <!-- momo -->
+                                <div class="payment-item">
                                     <div class="pm-head">
-                                        <div class="pm-head-icon">
-                                            <i class="icon icon-ShopeePay"><span class="path1"></span><span
-                                                    class="path2"></span></i>
-                                            <h4>Thanh toán bằng ShopeePay</h4>
+                                        <input name="pay" type="radio" class="check">
+                                        <div class="pm-head-icon" style="margin-left: 20px">
+                                            <h4>Thanh toán 50% hóa đơn</h4>
+                                            <i class="fa-solid fa-circle-half-stroke" style="margin-left: 20px"></i>
                                         </div>
-                                        <span class="check" id="shoppepay"></span>
-                                    </div>
-                                    <div class="pm-des">
-                                        <p>
-                                        </p>
                                     </div>
                                 </div>
-                                <!-- end SP pay -->
-                                <!-- mb bank -->
-                                <div class="payment-item" style="max-height:500px; overflow:auto ;display: none;">
+                                <!-- end momo -->
+                            </div>
+                            <div class="payments" style="width: 48%">
+                                <!-- momo -->
+                                <div class="payment-item">
                                     <div class="pm-head">
-                                        <div class="pm-head-icon">
-                                            <i class="icon-MB_icon"><span class="path1"></span><span
-                                                    class="path2"></span><span class="path3"></span><span
-                                                    class="path4"></span><span class="path5"></span><span
-                                                    class="path6"></span><span class="path7"></span><span
-                                                    class="path8"></span><span class="path9"></span><span
-                                                    class="path10"></span></i>
-                                            <h4>Thanh toán bằng MBBank</h4>
+                                        <input name="pay" type="radio" class="check">
+                                        <div class="pm-head-icon" style="margin-left: 20px">
+                                            <h4>Thanh toán 100% hóa đơn</h4>
+                                            <i class="fa-solid fa-circle" style="margin-left: 20px"></i>
                                         </div>
-                                        <span class="check" id="thetindung"></span>
-                                    </div>
-                                    <div class="pm-des">
-                                        <div class="text">
-                                            Chọn hình thức thanh toán:
-                                        </div>
-                                        <div class="row d-flex justify-content-between mb-3">
-                                            <div class="col-6">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                           name="flexRadioDefault1" id="flexRadioDefault1" checked="">
-                                                    <input type="hidden" value="MBbankQR" id="Option">
-                                                    <label class="form-check-label" for="flexRadioDefault1">
-                                                        <i class="icon icon--qr-code"></i> QRcode
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                            </div>
-                                        </div>
-                                        <p>
-                                        </p>
                                     </div>
                                 </div>
-                                <!-- end MBBANk -->
+                                <!-- end momo -->
                             </div>
                         </div>
                         <div class="terms">
@@ -442,8 +219,8 @@
                                 <title></title>
 
 
-                                <p style="text-align:center"><span style="color:#444444"><strong>NỘI DUNG ĐỌC, HIỂU
-                                                VÀ ĐỒNG Ý TRƯỚC KHI ĐĂNG KÝ ONLINE&nbsp;CHƯƠNG TRÌNH DU LỊCH TRONG
+                                <p style="text-align:center"><span style="color:#444444"><strong>ĐỌC
+                                                VÀ ĐỒNG Ý NỘI DUNG TRƯỚC KHI ĐĂNG KÝ ONLINE DU LỊCH TRONG
                                                 NƯỚC</strong></span></p>
                                 <p style="text-align:justify"><span style="color:#444444"><strong>Tôi đã hiểu rõ và
                                                 đồng ý với các nội dung như sau:</strong></span></p>
@@ -463,34 +240,27 @@
                                             tuổi:&nbsp; không thu phí dịch vụ, bố mẹ tự lo cho bé và thanh toán các chi
                                             phí phát sinh (đối với các dịch vụ tính phí theo chiều cao…). Hai người lớn
                                             chỉ được kèm 1 trẻ em dưới 5 tuổi, trẻ em thứ 2 sẽ đóng phí theo qui định
-                                            dành cho độ tuổi từ 5 đến dưới 12 tuổi và phụ thu phòng đơn. Vé máy bay, tàu
-                                            hỏa, phương tiện vận chuyển công cộng mua vé theo qui định của các đơn vị
-                                            vận chuyển (nếu có)</span></p>
+                                            dành cho độ tuổi từ 5 đến dưới 12 tuổi và phụ thu phòng đơn.</span></p>
                                 <p style="text-align:justify"><span style="color:#444444">- Trẻ em từ 5 tuổi đến
-                                            dưới 12 tuổi:&nbsp; 50% giá tour người lớn đối với tuyến xe, 75% giá tour
-                                            người lớn đối với tuyến có vé máy bay (không có chế độ giường riêng). Hai
+                                            dưới 12 tuổi:&nbsp; 40% giá tour người lớn đối với tuyến xe. Hai
                                             người lớn chỉ được kèm 1 trẻ em từ 5 - dưới 12 tuổi, em thứ hai trở lên phải
                                             mua 1 suất giường đơn.</span></p>
                                 <p style="text-align:justify"><span style="color:#444444">- Trẻ em từ 12 tuổi trở
                                             lên: mua một vé như người lớn.</span></p>
                                 <p style="text-align:justify"><span style="color:#444444"><strong>III. THANH
                                                 TOÁN</strong></span></p>
-                                <p style="text-align:justify"><span style="color:#444444">Khi thanh toán, Quý khách
+                                <p style="text-align:justify"><span style="color:#444444">Quý khách
                                             vui lòng cung cấp đầy đủ thông tin và đặt cọc ít nhất 50% tổng số tiền tour
-                                            để giữ chỗ</span></p>
-                                <p style="text-align:justify"><span style="color:#444444">Thanh toán bằng tiền mặt
-                                            hoặc chuyển khoản tới tài khoản ngân hàng của TourNest.</span></p>
+                                            để giữ chỗ.</span></p>
+                                <p style="text-align:justify"><span style="color:#444444">Thanh toán chuyển khoản tới tài khoản ngân hàng của TourNest.</span></p>
                                 <div style="text-align:justify">
                                     <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">Tên
-                                        Tài Khoản : Võ Minh Thịnh – TourNest
-                                    </div>
-                                    <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">Tên
-                                        tài khoản viết tắt : TourNest
+                                        Tài Khoản : Võ Minh Thịnh
                                     </div>
                                     <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">Số
-                                        Tài khoản : <strong>0314000811</strong></div>
+                                        Tài khoản : <strong>30110300003770</strong></div>
                                     <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">Ngân
-                                        hàng : BIDV - Chi nhánh Đông Sài Gòn
+                                        hàng : MB Bank - Ngân Hàng Quân Đội
                                     </div>
                                 </div>
                                 <p style="text-align:justify"><span style="color:#444444">Việc thanh toán được xem
@@ -511,7 +281,7 @@
                                             để nhận được Vé du lịch chính thức từ Công ty TourNest.</span></p>
                                 <p style="text-align:justify"><span style="color:#444444">*<u>Lưu ý</u>: Quý khách
                                             vui lòng điền đầy đủ thông tin theo yêu cầu khi đăng ký tour qua mạng bán
-                                            travel.com.vn và chịu trách nhiệm về tính chính xác của những thông tin đã
+                                            tour của TourNest và chịu trách nhiệm về tính chính xác của những thông tin đã
                                             cung cấp. TourNest sẽ sử dụng những thông tin này để cung cấp cho các đối
                                             tác dịch vụ và tiến hành các thủ tục cần thiết cho chuyến đi. Nếu có sự khác
                                             biệt giữa thông tin mà Quý khách cung cấp so với thực tế dẫn đến việc phải
@@ -613,11 +383,7 @@
                                             xe: xe máy lạnh (4, 7, 15, 25, 35, 45 chỗ) sẽ được TourNest sắp xếp tùy
                                             theo số lượng khách từng đoàn, phục vụ suốt chương trình tham quan.</span>
                                 </p>
-                                <p style="text-align:justify"><span style="color:#444444">Với chương trình đi bằng
-                                            xe lửa - máy bay - tàu cánh ngầm (phương tiện vận chuyển công cộng), trong
-                                            một số chương trình các nhà cung cấp dịch vụ có thể thay đổi giờ khởi hành
-                                            mà không báo trước, việc thay đổi này sẽ được TourNest thông báo cho khách
-                                            hàng nếu thời gian cho phép.</span></p>
+
                                 <p style="text-align:justify"><span style="color:#444444">TourNest không chịu trách
                                             nhiệm bồi hoàn và trách nhiệm pháp lý với những thiệt hại về vật chất lẫn
                                             tinh thần do việc chậm trễ, thay đổi giờ giấc khởi hành của các phương tiện
@@ -659,9 +425,6 @@
                                             lượng. Hết thời hạn này nếu tranh chấp không được giải quyết hoặc một trong
                                             hai bên không đồng ý với kết quả thương lượng thì có quyền đưa tranh chấp ra
                                             giải quyết tại Tòa án thẩm quyền.</span></div>
-
-
-                                ;
                             </div>
                             <label class="checker">
                                 Tôi đồng ý với các điều kiện trên
@@ -672,8 +435,8 @@
                     </div>
                     <div class="col-md-4 col-12 right">
                         <div class="group-checkout">
-                            <h3>Tóm tắt chuyến đi</h3>
-                            <p class="package-title">Tour trọn gói<span>(9 khách)</span></p>
+                            <h3>Tóm tắt</h3>
+                            <p class="package-title"><span>Mã Tour</span> #MT13646</p>
                             <div class="product">
                                 <div class="product-image">
                                     <img src="https://media.travel.com.vn/tour/tfd_230302103257_223532.jpg"
@@ -686,18 +449,20 @@
                             </div>
                             <div class="go-tour">
                                 <div class="start">
-                                    <i class="fa-regular fa-calendar"></i>                                    <div class="start-content">
-                                    <h4>Bắt đầu chuyến đi</h4>
-                                    <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
-                                    <p class="from"></p>
-                                </div>
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <div class="start-content">
+                                        <h4>Bắt đầu chuyến đi</h4>
+                                        <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                        <p class="from"></p>
+                                    </div>
                                 </div>
                                 <div class="end">
-                                    <i class="fa-solid fa-calendar-days"></i>                                    <div class="start-content">
-                                    <h4>Kết thúc chuyến đi</h4>
-                                    <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
-                                    <p class="from"></p>
-                                </div>
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <div class="start-content">
+                                        <h4>Kết thúc chuyến đi</h4>
+                                        <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                        <p class="from"></p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="detail">
@@ -761,7 +526,12 @@
                                 <div>
                                     <button class="btn btn-primary btn-order" style="width:100% "
                                             onclick="kiemTraDieuKien()">
-                                        <a href="../TourNest-master/bill.jsp"></a> Đặt ngay
+                                        <a href="../TourNest-master/bill.html"></a> Thanh Toán
+                                    </button>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary btn-order" style="width:100%;background-color: #f9f9f9!important;color: black ">
+                                        <a href="../TourNest-master/bill.html"></a> Liên Hệ
                                     </button>
                                 </div>
                             </div>
@@ -781,7 +551,7 @@
         var dieuKienCheckbox = document.getElementById("DieuKien");
         if (dieuKienCheckbox.checked) {
             // Nếu đã chọn, chuyển hướng đến trang "bill.html"
-            window.location.href = "bill.jsp";
+            window.location.href = "bill.html";
         } else {
             // Nếu chưa chọn, hiển thị thông báo
             alert('Bạn cần đồng ý với điều khoản đăng ký online.');

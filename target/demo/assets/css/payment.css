@@ -730,7 +730,7 @@
 }
 
 .link-primary {
-    color: #fd5056
+    color: #00d8fe
 }
 
 .link-primary:hover, .link-primary:focus {
@@ -1153,7 +1153,7 @@
 }
 
 .border-primary {
-    border-color: #fd5056 !important
+    border-color: #00d8fe !important
 }
 
 .border-secondary {
@@ -2046,7 +2046,7 @@
 }
 
 .text-primary {
-    color: #fd5056 !important
+    color: #00d8fe !important
 }
 
 .text-secondary {
@@ -2102,7 +2102,7 @@
 }
 
 .bg-primary {
-    background-color: #fd5056 !important
+    background-color: #00d8fe !important
 }
 
 .bg-secondary {
@@ -5879,7 +5879,7 @@
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #fd5056;
+    --bs-primary: #00d8fe;
     --bs-secondary: #2d4271;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
@@ -9908,8 +9908,8 @@ textarea.form-control-lg {
 
 .btn-primary {
     color: #000;
-    background-color: #fd5056;
-    border-color: #fd5056
+    background-color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .btn-primary:hover {
@@ -9939,8 +9939,8 @@ textarea.form-control-lg {
 
 .btn-primary:disabled, .btn-primary.disabled {
     color: #000;
-    background-color: #fd5056;
-    border-color: #fd5056
+    background-color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .btn-secondary {
@@ -10203,14 +10203,14 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary {
-    color: #fd5056;
-    border-color: #fd5056
+    color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .btn-outline-primary:hover {
     color: #000;
-    background-color: #fd5056;
-    border-color: #fd5056
+    background-color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
@@ -10220,8 +10220,8 @@ textarea.form-control-lg {
 
 .btn-check:checked + .btn-outline-primary, .btn-check:active + .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show {
     color: #000;
-    background-color: #fd5056;
-    border-color: #fd5056
+    background-color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .btn-check:checked + .btn-outline-primary:focus, .btn-check:active + .btn-outline-primary:focus, .btn-outline-primary:active:focus, .btn-outline-primary.active:focus, .btn-outline-primary.dropdown-toggle.show:focus {
@@ -10230,7 +10230,7 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary:disabled, .btn-outline-primary.disabled {
-    color: #fd5056;
+    color: #00d8fe;
     background-color: transparent
 }
 
@@ -12406,7 +12406,7 @@ a {
 }
 
 a:hover {
-    color: #4d4aef
+    color: #00d8fe
 }
 
 *:focus {
@@ -13704,7 +13704,7 @@ body .ui-tooltip {
     transform: translate(-50%, -50%);
     width: 16px;
     height: 16px;
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 50%;
     opacity: 0
 }
@@ -13739,7 +13739,7 @@ body .ui-tooltip {
 }
 
 .loadmore-wrap .loadmore-bar span {
-    background: #fd5056;
+    background: #00d8fe;
     border-radius: 2px;
     height: 3px;
     position: absolute;
@@ -13749,7 +13749,7 @@ body .ui-tooltip {
 }
 
 .loadmore-wrap .btn-loadmore {
-    background: linear-gradient(92.44deg, #fd5056 1.58%, #fe2214 105.9%);
+    background: linear-gradient(92.44deg, #00d8fe 1.58%, #fe2214 105.9%);
     border-radius: 10px;
     height: 40px;
     width: 150px;
@@ -13782,7 +13782,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .location-select .select2-container--default .select2-selection--single {
@@ -13872,7 +13872,7 @@ body .ui-tooltip {
 }
 
 .checker input[type=submit] {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     width: 80px;
     height: 30px;
@@ -13903,16 +13903,16 @@ body .ui-tooltip {
 }
 
 .checker:hover input ~ .checkmark {
-    background-color: #4d4aef
+    background-color: #00d8fe
 }
 
 .checker input:checked ~ .checkmark {
-    background-color: #4d4aef
+    background-color: #00d8fe
 }
 
 .checker .checkmark:after {
-    content: "\f00c";
-    font-family: "font awesome 5 pro";
+    content: "\2713"; /* Mã Unicode cho dấu tích */
+    font-family: "font awesome 5 pro", sans-serif;
     position: absolute;
     color: #fff;
     font-size: 18px;
@@ -13931,7 +13931,7 @@ body .ui-tooltip {
 }
 
 .required-star {
-    color: #fd5056
+    color: #00d8fe
 }
 
 .mb-total {
@@ -13973,7 +13973,7 @@ body .ui-tooltip {
     font-size: 18px;
     line-height: 23px;
     text-align: center;
-    color: #fd5056;
+    color: #00d8fe;
     margin: 0 5px
 }
 
@@ -14009,7 +14009,7 @@ body .ui-tooltip {
 
 .mb-total .group-btn .btn-continue {
     width: 48%;
-    border: 1px solid #fd5056;
+    border: 1px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -14024,7 +14024,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
-    color: #fd5056;
+    color: #00d8fe;
     background: #fff;
     height: 40px
 }
@@ -14042,7 +14042,7 @@ body .ui-tooltip {
     font-size: 18px;
     line-height: 23px;
     text-align: center;
-    color: #fd5056;
+    color: #00d8fe;
     margin: 0 5px
 }
 
@@ -14060,7 +14060,7 @@ body .ui-tooltip {
 
 .mb-total .group-btn .btn-order {
     width: 35%;
-    background: linear-gradient(92.44deg, #fd5056 1.58%, #fe2214 105.9%);
+    background: linear-gradient(90deg, #00bafe 0, #f600a9 100%);
     border-radius: 10px;
     padding: 5px 18px;
     font-weight: 700;
@@ -14374,7 +14374,7 @@ html, body {
 }
 
 .header .menu-tab-items li.active {
-    color: #fd5056;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -14748,7 +14748,7 @@ footer .block .call-action a {
     font-weight: 700;
     font-size: 22px;
     line-height: 30px;
-    background: linear-gradient(92.44deg, #fd5056 1.58%, #fe2214 105.9%);
+    background: linear-gradient(92.44deg, #00d8fe 1.58%, #fe2214 105.9%);
     border-radius: 10px;
     color: #fff;
     text-decoration: none
@@ -14883,7 +14883,7 @@ footer .f-socials {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background: linear-gradient(38.63deg, #fd5056 27.35%, #fe2214 71.81%);
+    background: linear-gradient(38.63deg, #00d8fe 27.35%, #fe2214 71.81%);
     border-radius: 10px 0 0 10px;
     width: 60px;
     padding: 10px 0;
@@ -14981,8 +14981,8 @@ footer .f-socials li a {
 
 .btn-primary {
     color: #000;
-    background-color: #fd5056;
-    border-color: #fd5056
+    background-color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .btn-primary:hover {
@@ -15012,8 +15012,8 @@ footer .f-socials li a {
 
 .btn-primary:disabled, .btn-primary.disabled {
     color: #000;
-    background-color: #fd5056;
-    border-color: #fd5056
+    background-color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .btn-secondary {
@@ -15277,8 +15277,8 @@ footer .f-socials li a {
 
 .btn-primary {
     color: #fff;
-    background-color: #fd5056;
-    border-color: #fd5056
+    background-color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .btn-primary:hover {
@@ -15308,8 +15308,8 @@ footer .f-socials li a {
 
 .btn-primary:disabled, .btn-primary.disabled {
     color: #000;
-    background-color: #fd5056;
-    border-color: #fd5056
+    background-color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .searchbox {
@@ -15340,13 +15340,13 @@ footer .f-socials li a {
 }
 
 .searchbox__nav-tabs .nav-link:hover {
-    color: #4d4aef;
+    color: #00d8fe;
     background-color: #fff;
     border: none
 }
 
 .searchbox__nav-tabs .active {
-    color: #4d4aef !important
+    color: #00d8fe !important
 }
 
 .searchbox__nav-tabs i {
@@ -15369,7 +15369,7 @@ footer .f-socials li a {
 }
 
 .searchbox__mobile i {
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .searchbox__mobile .full {
@@ -15461,7 +15461,7 @@ footer .f-socials li a {
 }
 
 .searchbox-tour__selector .nav-pills .active {
-    background-color: #4d4aef;
+    background-color: #00d8fe;
     color: #fff
 }
 
@@ -15474,9 +15474,9 @@ footer .f-socials li a {
 }
 
 .searchbox-tour__inbound__nav .active {
-    border-color: #fff #fff #4d4aef !important;
-    border-bottom: 2px solid #4d4aef;
-    color: #4d4aef !important;
+    border-color: #fff #fff #00d8fe !important;
+    border-bottom: 2px solid #00d8fe;
+    color: #00d8fe !important;
     font-weight: 700
 }
 
@@ -15499,14 +15499,14 @@ footer .f-socials li a {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        background: #4d4aef;
+        background: #00d8fe;
         width: 100%;
         border-radius: 100px
     }
 
     .searchbox-tour-mobile .wrapper .nav-item {
-        background: #4d4aef;
-        border: 3px solid #4d4aef;
+        background: #00d8fe;
+        border: 3px solid #00d8fe;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         border-radius: 100px;
@@ -15523,7 +15523,7 @@ footer .f-socials li a {
 
     .searchbox-tour-mobile .wrapper .nav-item .active {
         background: #fff;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .searchbox-tour-mobile .input-block {
@@ -15561,9 +15561,9 @@ footer .f-socials li a {
     }
 
     .searchbox-tour-mobile .inbound-nav .active {
-        border-color: #fff #fff #4d4aef !important;
-        border-bottom: 2px solid #4d4aef;
-        color: #4d4aef !important;
+        border-color: #fff #fff #00d8fe !important;
+        border-bottom: 2px solid #00d8fe;
+        color: #00d8fe !important;
         font-weight: 700
     }
 }
@@ -15797,7 +15797,7 @@ footer .f-socials li a {
 }
 
 .title-with-divider__combo {
-    background-color: #4d4aef;
+    background-color: #00d8fe;
     color: #fff;
     padding: 3px 3rem;
     border-radius: 10px 10px 0 0
@@ -15823,12 +15823,12 @@ footer .f-socials li a {
 }
 
 .checkbox-input-search .form-check-input:checked {
-    background-color: #4d4aef;
-    border-color: #4d4aef
+    background-color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .checkbox-input-search .form-check-input:focus {
-    border-color: #4d4aef
+    border-color: #00d8fe
 }
 
 .checkbox-input-search label {
@@ -15976,7 +15976,7 @@ footer .f-socials li a {
 }
 
 .explore-tour__list__nav-tabs .nav-link:hover::after {
-    background-color: #fd5056;
+    background-color: #00d8fe;
     -webkit-transition: ease-in .25s;
     transition: ease-in .25s
 }
@@ -15994,7 +15994,7 @@ footer .f-socials li a {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #fd5056;
+    background-color: #00d8fe;
     -webkit-transition: ease-in .25s;
     transition: ease-in .25s
 }
@@ -16107,7 +16107,7 @@ footer .f-socials li a {
     background: #fff;
     border-radius: 2px 2px 0 0;
     padding: 5px 10px;
-    color: #4d4aef;
+    color: #00d8fe;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -16261,12 +16261,12 @@ footer .f-socials li a {
 
 .tour-item__price--current__number {
     font-weight: 700;
-    color: #fd5056;
+    color: #00d8fe;
     font-size: 18px
 }
 
 .tour-item__price--current__discount {
-    background-color: #fd5056;
+    background-color: #00d8fe;
     color: #fff;
     font-weight: 700;
     border-radius: 5px;
@@ -16274,8 +16274,8 @@ footer .f-socials li a {
 }
 
 .tour-item__price__timer {
-    border: 1px solid #4d4aef;
-    color: #4d4aef;
+    border: 1px solid #00d8fe;
+    color: #00d8fe;
     font-weight: 700;
     border-radius: 5px;
     font-size: 11px;
@@ -16301,12 +16301,12 @@ footer .f-socials li a {
 .tour-item__footer__add-to-compare {
     font-size: 13px;
     font-weight: 700;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .tour-item__footer__add-to-compare a {
     text-decoration: none;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .tour-item__footer__available-seat {
@@ -16320,7 +16320,7 @@ footer .f-socials li a {
 
 .tour-item__footer__available-seat--number {
     font-size: 22px;
-    color: #fd5056
+    color: #00d8fe
 }
 
 @media screen and (max-width: 768px) {
@@ -16409,7 +16409,7 @@ footer .f-socials li a {
 }
 
 .product-item__detail__location {
-    color: #4d4aef;
+    color: #00d8fe;
     font-size: 12px
 }
 
@@ -16419,7 +16419,7 @@ footer .f-socials li a {
 
 .product-item__detail__location a {
     text-decoration: underline !important;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .product-item__detail__review {
@@ -16519,7 +16519,7 @@ footer .f-socials li a {
 }
 
 .product-item__summary__price--current {
-    color: #fd5056
+    color: #00d8fe
 }
 
 .product-item__summary__price--current__number {
@@ -16528,7 +16528,7 @@ footer .f-socials li a {
 }
 
 .product-item__summary__hotel__price--discount {
-    background-color: #fd5056;
+    background-color: #00d8fe;
     color: #fff;
     border-radius: 2px
 }
@@ -16545,19 +16545,19 @@ footer .f-socials li a {
 }
 
 .product-item__summary__btn-login {
-    border: 1px solid #4d4aef;
-    color: #4d4aef;
+    border: 1px solid #00d8fe;
+    color: #00d8fe;
     font-size: 12px
 }
 
 .product-item__summary__btn-login:hover {
-    background-color: #4d4aef;
+    background-color: #00d8fe;
     color: #fff
 }
 
 .product-item .btn-promotion {
     background: 0 0;
-    color: #4d4aef;
+    color: #00d8fe;
     -webkit-box-shadow: none;
     box-shadow: none
 }
@@ -16855,8 +16855,8 @@ footer .f-socials li a {
 .why-item i {
     font-size: 80px;
     background-color: #f3ec78;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#4d4aef), to(#adabff));
-    background-image: linear-gradient(180deg, #4d4aef, #adabff);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#00d8fe), to(#adabff));
+    background-image: linear-gradient(180deg, #00d8fe, #adabff);
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -19143,8 +19143,8 @@ body .ui-tooltip {
 
 @media screen and (max-width: 768px) {
     .bottom-fixed .compare {
-        background-color: #4d4aef;
-        border: .5px solid #4d4aef;
+        background-color: #00d8fe;
+        border: .5px solid #00d8fe;
         border-radius: 10px 10px 0 0;
         padding: 5px 10px
     }
@@ -19331,7 +19331,7 @@ body .ui-tooltip {
 }
 
 .compare-bar .compare-items .compare-order .btn-order {
-    background: #fd5056;
+    background: #00d8fe;
     border-radius: 10px;
     width: 100%;
     height: 50px;
@@ -19350,8 +19350,8 @@ body .ui-tooltip {
 
 @media screen and (max-width: 768px) {
     .compare-bar {
-        background-color: #4d4aef;
-        border: .5px solid #4d4aef;
+        background-color: #00d8fe;
+        border: .5px solid #00d8fe;
         border-radius: 10px 10px 0 0
     }
 
@@ -19715,7 +19715,7 @@ body .ui-tooltip {
 
     .home-page__title a {
         font-size: 14px;
-        color: #4d4aef;
+        color: #00d8fe;
         font-weight: 700
     }
 
@@ -19835,7 +19835,7 @@ body .ui-tooltip {
 
 @media screen and (max-width: 768px) {
     .popular-tour__heading {
-        color: #fd5056;
+        color: #00d8fe;
         text-align: left
     }
 
@@ -19875,11 +19875,11 @@ body .ui-tooltip {
 
 .tour-search-result__filter__brand a {
     font-weight: 700;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .tour-search-result__filter__heading {
-    background-color: #4d4aef;
+    background-color: #00d8fe;
     color: #fff
 }
 
@@ -19899,7 +19899,7 @@ body .ui-tooltip {
     outline: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    border-bottom: 2px solid #4d4aef
+    border-bottom: 2px solid #00d8fe
 }
 
 .tour-search-result__filter__region input {
@@ -19908,12 +19908,12 @@ body .ui-tooltip {
 }
 
 .tour-search-result__filter__region .form-check-input:checked {
-    background-color: #4d4aef;
-    border-color: #4d4aef
+    background-color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .tour-search-result__filter__region .form-check-input:focus {
-    border-color: #4d4aef
+    border-color: #00d8fe
 }
 
 .tour-search-result__filter__passenger {
@@ -19938,7 +19938,7 @@ body .ui-tooltip {
 }
 
 .tour-search-result__filter__room .btn:hover, .tour-search-result__filter__room .btn:focus {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -19952,8 +19952,8 @@ body .ui-tooltip {
 }
 
 .tour-search-result__filter__available-tour .form-check-input:checked {
-    background-color: #4d4aef;
-    border-color: #4d4aef
+    background-color: #00d8fe;
+    border-color: #00d8fe
 }
 
 .tour-search-result__filter__rating .star-rating i {
@@ -19970,7 +19970,7 @@ body .ui-tooltip {
 
 .tour-search-result__load-more__bar span {
     height: 8px;
-    background: #fd5056;
+    background: #00d8fe;
     border-radius: 10px
 }
 
@@ -19981,7 +19981,7 @@ body .ui-tooltip {
 .tour-search-result__load-more a {
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .promotion__heading .btn-group .btn {
@@ -19994,7 +19994,7 @@ body .ui-tooltip {
 }
 
 .promotion__heading .btn-group .btn:hover {
-    background-color: #4d4aef;
+    background-color: #00d8fe;
     color: #fff
 }
 
@@ -20003,7 +20003,7 @@ body .ui-tooltip {
 }
 
 .promotion__call-to-login__signup a {
-    color: #fd5056;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -20021,7 +20021,7 @@ body .ui-tooltip {
     .promotion__list .popular-tour__information__item__text .btn {
         position: initial;
         width: 100%;
-        background-color: #4d4aef;
+        background-color: #00d8fe;
         color: #fff;
         border-radius: 0 0 10px 10px
     }
@@ -20056,7 +20056,7 @@ body .ui-tooltip {
 }
 
 .news__heading h1, .news__heading .h1 {
-    color: #fd5056
+    color: #00d8fe
 }
 
 .news__heading .mobile {
@@ -20065,7 +20065,7 @@ body .ui-tooltip {
 }
 
 .news__new-thread__category {
-    color: #fd5056;
+    color: #00d8fe;
     margin-bottom: 1rem
 }
 
@@ -20215,11 +20215,11 @@ body .ui-tooltip {
 
 .news__list__pagination .pagination li.current a {
     font-weight: 700;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .news__travel-tips__heading a {
-    color: #4d4aef;
+    color: #00d8fe;
     cursor: pointer
 }
 
@@ -20252,7 +20252,7 @@ body .ui-tooltip {
 
 .news__travel-tips__item__information__category {
     background-color: #fff;
-    color: #fd5056;
+    color: #00d8fe;
     border-radius: 100px
 }
 
@@ -20283,7 +20283,7 @@ body .ui-tooltip {
 }
 
 .news__travel-experience__item .card-text {
-    color: #fd5056
+    color: #00d8fe
 }
 
 .news__travel-experience__item .card-body {
@@ -20392,7 +20392,7 @@ body .ui-tooltip {
 }
 
 .news-detail__meta__category {
-    color: #fd5056
+    color: #00d8fe
 }
 
 .news-detail__title {
@@ -20487,7 +20487,7 @@ body .ui-tooltip {
     text-align: right;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056;
+    color: #00d8fe;
     margin-right: 10px
 }
 
@@ -20684,7 +20684,7 @@ body .ui-tooltip {
 }
 
 .compare-tour .compare .compare-products .product .product-content .level {
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     padding: 8px 10px;
     border-radius: 5px;
     display: -webkit-box;
@@ -20698,7 +20698,7 @@ body .ui-tooltip {
     justify-content: center;
     font-size: 14px;
     line-height: 16px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .compare-tour .compare .compare-products .product .product-content .level i {
@@ -20731,7 +20731,7 @@ body .ui-tooltip {
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    background: #fd5056;
+    background: #00d8fe;
     padding: 2px 5px;
     border-radius: 2px;
     margin-right: 7px;
@@ -20743,7 +20743,7 @@ body .ui-tooltip {
     margin: 0;
     font-size: 22px;
     font-weight: 700;
-    color: #fd5056;
+    color: #00d8fe;
     line-height: 28px
 }
 
@@ -20771,7 +20771,7 @@ body .ui-tooltip {
     font-weight: 700;
     font-size: 13px;
     line-height: 16px;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .compare-tour .compare .compare-products .product .product-content .view-more {
@@ -21022,7 +21022,7 @@ body .ui-tooltip {
     height: 40px;
     width: 105px;
     border-radius: 10px;
-    background: #fd5056;
+    background: #00d8fe;
     font-weight: 700;
     font-size: 13px;
     color: #fff;
@@ -21062,7 +21062,7 @@ body .ui-tooltip {
     text-align: right;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .compare-tour .compare .compare-products .product.add-more .add {
@@ -21095,7 +21095,7 @@ body .ui-tooltip {
 }
 
 .compare-tour .compare .compare-products .product-sub .product-sub-content .basic-info h3, .compare-tour .compare .compare-products .product-sub .product-sub-content .basic-info .h3 {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     height: 36px;
     display: -webkit-box;
@@ -21172,7 +21172,7 @@ body .ui-tooltip {
 }
 
 .compare-tour .compare .compare-products .product-sub .product-sub-content .detail-info h3, .compare-tour .compare .compare-products .product-sub .product-sub-content .detail-info .h3 {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     height: 36px;
     display: -webkit-box;
@@ -21241,7 +21241,7 @@ body .ui-tooltip {
         font-weight: 700;
         font-size: 22px;
         line-height: 28px;
-        color: #fd5056
+        color: #00d8fe
     }
 
     .compare-tour .compare .compare-products {
@@ -21418,7 +21418,7 @@ body .ui-tooltip {
     font-size: 30px;
     line-height: 38px;
     text-align: center;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .order-success .order-wrap {
@@ -21451,7 +21451,7 @@ body .ui-tooltip {
     font-size: 30px;
     line-height: 38px;
     text-align: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .checkout-head {
@@ -21483,7 +21483,7 @@ body .ui-tooltip {
 }
 
 .checkout-head .head .checked {
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .checkout-main {
@@ -21681,7 +21681,7 @@ body .ui-tooltip {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .checkout-main.order-tour .top .product .product-content .entry .map i {
@@ -21754,7 +21754,7 @@ body .ui-tooltip {
 
 .checkout-main.order-tour .pos-big .content .head-title .change-hotel {
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -21772,7 +21772,7 @@ body .ui-tooltip {
     font-weight: 500;
     font-size: 13px;
     line-height: 25px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .checkout-main.order-tour .pos-big .content p {
@@ -21785,7 +21785,7 @@ body .ui-tooltip {
     line-height: 25px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-left: 3px
 }
 
@@ -21985,7 +21985,7 @@ body .ui-tooltip {
 }
 
 .checkout-main.order-tour .detail-customer .block .group-info > * > div.active {
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .checkout-main.order-tour .detail-customer .block .group-info .group-info-name {
@@ -22139,17 +22139,14 @@ body .ui-tooltip {
     line-height: 28px;
     color: #2d4271;
     width: 100%;
-    margin-bottom: 20px
-}
-
-.checkout-main .payments-warp .payments {
-    width: 48%
+    margin: 20px 0px;
 }
 
 .checkout-main .payments-warp .payments .payment-item {
     padding: 24px;
     background: #f9f9f9;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .checkout-main .payments-warp .payments .payment-item .pm-head {
@@ -22228,13 +22225,13 @@ body .ui-tooltip {
     transform: translate(-50%, -50%);
     width: 16px;
     height: 16px;
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 50%;
     opacity: 0
 }
 
 .checkout-main .payments-warp .payments .payment-item .pm-head .check:hover {
-    border: 1px solid #4d4aef
+    border: 1px solid #00d8fe
 }
 
 .checkout-main .payments-warp .payments .payment-item .pm-head .check:hover:after {
@@ -22247,16 +22244,23 @@ body .ui-tooltip {
 }
 
 .checkout-main .payments-warp .payments .payment-item.active {
-    border: 2px solid #4d4aef;
+    border: 2px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 10px
 }
 
 .checkout-main .payments-warp .payments .payment-item.active .pm-des {
-    display: block
+    display: block;
 }
-
+.checkout-main .payments-warp .payments .payment-item.active .pm-des .qrcode {
+    width: 48%;
+}
+.checkout-main .payments-warp .payments .payment-item.active .pm-des .pm-txt {
+    width: 48%;
+    float: right;
+    font-size: 17px;
+}
 .checkout-main .payments-warp .payments .payment-item.active .pm-head .check:after {
     opacity: 1
 }
@@ -22312,13 +22316,13 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 14px;
     max-width: 350px
 }
 
 .checkout-main .box-support .group-contact .phone {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 183px;
@@ -22357,7 +22361,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .checkout-main .box-support .group-contact .mail i {
@@ -22373,10 +22377,10 @@ body .ui-tooltip {
 .checkout-main .group-checkout {
     background: #fff;
     border: 1px solid #d5d5d5;
+    border-radius: 5px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 20px;
-    margin-top: 60px;
 }
 
 .checkout-main .group-checkout > h3, .checkout-main .group-checkout > .h3 {
@@ -22450,7 +22454,7 @@ body .ui-tooltip {
 
 .checkout-main .group-checkout .go-tour .end i, .checkout-main .group-checkout .go-tour .start i {
     font-size: 20px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-right: 15px;
     position: relative;
     z-index: 2
@@ -22536,7 +22540,7 @@ body .ui-tooltip {
 }
 
 .checkout-main .detail table .l2 i {
-    color: #4d4aef;
+    color: #00d8fe;
     font-size: 25px
 }
 
@@ -22575,7 +22579,7 @@ body .ui-tooltip {
 }
 
 .checkout-main .detail table .cuppon td form input[type=submit] {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     color: #fff;
     margin-left: 10px
@@ -22595,7 +22599,7 @@ body .ui-tooltip {
     font-size: 22px;
     line-height: 28px;
     text-align: right;
-    color: #fd5056;
+    color: #ff0492;
     text-transform: lowercase
 }
 
@@ -22606,7 +22610,7 @@ body .ui-tooltip {
 }
 
 .checkout-main .detail .btn-order {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 100%;
@@ -22628,12 +22632,15 @@ body .ui-tooltip {
     margin-bottom: 10px;
     cursor: pointer
 }
+.checkout-main .detail .btn-order:hover{
+    background: linear-gradient(90deg, #00bafe 0, #f600a9 100%);
 
+}
 .checkout-main .detail .btn-continue {
     height: 50px;
     width: 100%;
     background: #fff;
-    border: 1px solid #fd5056;
+    border: 1px solid #00d8fe;
     border-radius: 10px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -22653,7 +22660,7 @@ body .ui-tooltip {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    color: #fd5056
+    color: #00d8fe;
 }
 
 .checkout-main .service-block {
@@ -22815,7 +22822,7 @@ body .ui-tooltip {
 }
 
 .checkout-main .service-block a {
-    color: #4d4aef;
+    color: #00d8fe;
     text-decoration: underline
 }
 
@@ -22876,14 +22883,14 @@ body .ui-tooltip {
     .checkout-head-mobile .head li.active {
         padding: 0 30px;
         position: relative;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .checkout-head-mobile .head li.active:after {
         content: "";
         width: 100%;
         height: 5px;
-        background: #4d4aef;
+        background: #00d8fe;
         border-radius: 20px;
         display: block;
         position: absolute;
@@ -23411,7 +23418,7 @@ body .ui-tooltip {
         font-weight: 900;
         font-size: 22px;
         line-height: 26px;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .checkout-head-mobile.one .head li span {
@@ -23421,14 +23428,14 @@ body .ui-tooltip {
     .checkout-head-mobile.one .head li.active {
         padding: 0;
         position: relative;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .checkout-head-mobile.one .head li.active:after {
         content: "";
         width: 100%;
         height: 5px;
-        background: #4d4aef;
+        background: #00d8fe;
         border-radius: 20px;
         display: block;
         position: absolute;
@@ -23463,7 +23470,7 @@ body .ui-tooltip {
     }
 
     .order-success .order-wrap .back-to-home {
-        background: linear-gradient(92.44deg, #fd5056 1.58%, #fe2214 105.9%);
+        background: linear-gradient(92.44deg, #00d8fe 1.58%, #fe2214 105.9%);
         border-radius: 15px;
         height: 60px;
         font-weight: 700;
@@ -23517,7 +23524,7 @@ body .ui-tooltip {
         font-size: 30px;
         line-height: 38px;
         text-align: center;
-        color: #fd5056
+        color: #00d8fe
     }
 
     .checkout-head-mobile.one {
@@ -23555,7 +23562,7 @@ body .ui-tooltip {
         font-weight: 900;
         font-size: 22px;
         line-height: 26px;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .checkout-head-mobile.one .head li span {
@@ -23565,14 +23572,14 @@ body .ui-tooltip {
     .checkout-head-mobile.one .head li.active {
         padding: 0;
         position: relative;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .checkout-head-mobile.one .head li.active:after {
         content: "";
         width: 100%;
         height: 5px;
-        background: #4d4aef;
+        background: #00d8fe;
         border-radius: 20px;
         display: block;
         position: absolute;
@@ -23607,7 +23614,7 @@ body .ui-tooltip {
     }
 
     .order-mb-fail .order-wrap .back-to-home {
-        background: linear-gradient(92.44deg, #fd5056 1.58%, #fe2214 105.9%);
+        background: linear-gradient(92.44deg, #00d8fe 1.58%, #fe2214 105.9%);
         border-radius: 15px;
         height: 60px;
         font-weight: 700;
@@ -23651,7 +23658,7 @@ body .ui-tooltip {
     }
 
     .order-mb-success .order-wrap .back-to-home {
-        background: linear-gradient(92.44deg, #fd5056 1.58%, #fe2214 105.9%);
+        background: linear-gradient(92.44deg, #00d8fe 1.58%, #fe2214 105.9%);
         border-radius: 15px;
         height: 60px;
         font-weight: 700;
@@ -23712,7 +23719,7 @@ body .ui-tooltip {
     text-align: right;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056;
+    color: #00d8fe;
     cursor: pointer
 }
 
@@ -23726,7 +23733,7 @@ body .ui-tooltip {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background: #4d4aef;
+    background: #00d8fe;
     height: 45px;
     margin: 0 0 0 -20px;
     padding: 0 20px;
@@ -23798,7 +23805,7 @@ body .ui-tooltip {
 }
 
 .tour-search .sidebar .direction button[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -23906,7 +23913,7 @@ body .ui-tooltip {
     line-height: 16px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 25px;
     display: inline-block
 }
@@ -23976,7 +23983,7 @@ body .ui-tooltip {
 }
 
 .tour-search .sidebar .seat-level button[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -24115,7 +24122,7 @@ body .ui-tooltip {
 }
 
 .tour-search .sidebar .choose-room button[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -24135,7 +24142,7 @@ body .ui-tooltip {
 }
 
 .tour-search .sidebar .choose-room select[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -24148,14 +24155,14 @@ body .ui-tooltip {
 }
 
 .tour-search .sidebar .ranger-price #slider-range.ui-widget.ui-widget-content .ui-slider-range {
-    background: #4d4aef
+    background: #00d8fe
 }
 
 .tour-search .sidebar .ranger-price #slider-range.ui-widget.ui-widget-content .ui-slider-handle {
     width: 17px;
     height: 17px;
     border-radius: 50%;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     background: #fff;
     top: -7px;
     cursor: pointer
@@ -24257,12 +24264,12 @@ body .ui-tooltip {
 }
 
 .tour-search .sidebar .filter-sale input:checked + .slider {
-    background-color: #4d4aef
+    background-color: #00d8fe
 }
 
 .tour-search .sidebar .filter-sale input:focus + .slider {
-    -webkit-box-shadow: 0 0 1px #4d4aef;
-    box-shadow: 0 0 1px #4d4aef
+    -webkit-box-shadow: 0 0 1px #00d8fe;
+    box-shadow: 0 0 1px #00d8fe
 }
 
 .tour-search .sidebar .filter-sale input:checked + .slider:before {
@@ -24421,7 +24428,7 @@ body .ui-tooltip {
 
 .tour-search .main-content .s-heading i {
     font-size: 20px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-right: 6px
 }
 
@@ -24439,8 +24446,8 @@ body .ui-tooltip {
 }
 
 .tour-search .main-content .wrap-ticket-offer .ticket-offer .ticket-title {
-    background: #4d4aef;
-    border: 1px solid #4d4aef;
+    background: #00d8fe;
+    border: 1px solid #00d8fe;
     border-radius: 10px 10px 0 0;
     height: 36px;
     display: -webkit-box;
@@ -24514,7 +24521,7 @@ body .ui-tooltip {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 0
 }
 
@@ -24613,7 +24620,7 @@ body .ui-tooltip {
 }
 
 .tour-search .main-content .wrap-ticket-offer .ticket-for-change button {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 45px;
     max-width: 245px;
@@ -24905,11 +24912,11 @@ body .ui-tooltip {
     line-height: 16px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .tour-search .main-content .wrap-results .result .result-content .map i {
-    color: #4d4aef;
+    color: #00d8fe;
     font-size: 20px;
     margin-right: 5px
 }
@@ -24936,7 +24943,7 @@ body .ui-tooltip {
     font-weight: 700;
     font-size: 13px;
     line-height: 16px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .tour-search .main-content .wrap-results .result .result-order .compare-button i {
@@ -24969,7 +24976,7 @@ body .ui-tooltip {
     font-size: 22px;
     line-height: 28px;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .tour-search .main-content .wrap-results .result .result-order .group-order-price .sale-price i {
@@ -24978,7 +24985,7 @@ body .ui-tooltip {
     font-size: 13px;
     line-height: 16px;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .tour-search .main-content .wrap-results .result .result-order .group-order-price .description {
@@ -24991,7 +24998,7 @@ body .ui-tooltip {
 
 .tour-search .main-content .wrap-results .result .result-order .group-order-price .btn-login {
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -25006,7 +25013,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 15px
 }
 
@@ -25036,7 +25043,7 @@ body .ui-tooltip {
 }
 
 .tour-search .main-content .loadmore .btn-loadmore {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     font-weight: 700;
     line-height: 19px;
@@ -25066,7 +25073,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056
+    color: #00d8fe
 }
 
 @media screen and (max-width: 768px) {
@@ -25103,7 +25110,7 @@ body .ui-tooltip {
     .tour-search .group-filter-mobile .complete {
         width: 100%;
         height: 60px;
-        background: linear-gradient(92.44deg, #fd5056 1.58%, #fe2214 105.9%);
+        background: linear-gradient(92.44deg, #00d8fe 1.58%, #fe2214 105.9%);
         border-radius: 15px;
         font-weight: 700;
         font-size: 18px;
@@ -25189,7 +25196,7 @@ body .ui-tooltip {
         -ms-flex-align: center;
         align-items: center;
         text-align: right;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .tour-search .main-content .wrap-ticket-offer .ticket-offer .ticket-title {
@@ -25411,11 +25418,11 @@ body .ui-tooltip {
 }
 
 .login .wrapper .form-wrap .right .form-signin .card .add-on .google {
-    background-color: #fd5056
+    background-color: #00d8fe
 }
 
 .login .wrapper .form-wrap .right .form-signin .card .tab {
-    background-color: #4d4aef;
+    background-color: #00d8fe;
     border-radius: 10px 10px 0 0;
     color: #fff;
     margin-bottom: 2rem
@@ -25568,11 +25575,11 @@ body .ui-tooltip {
 }
 
 .signup .wrapper .form-wrap .right .form-signin .card .add-on .google {
-    background-color: #fd5056
+    background-color: #00d8fe
 }
 
 .signup .wrapper .form-wrap .right .form-signin .card .tab {
-    background-color: #4d4aef;
+    background-color: #00d8fe;
     border-radius: 10px 10px 0 0;
     color: #fff;
     margin-bottom: 2rem
@@ -25711,12 +25718,12 @@ body .ui-tooltip {
 }
 
 .profile .left .wrapper .profile-links .active {
-    color: #fd5056 !important;
+    color: #00d8fe !important;
     text-decoration: underline !important
 }
 
 .profile .left .wrapper .profile-links li a:hover {
-    color: #fd5056;
+    color: #00d8fe;
     text-decoration: underline
 }
 
@@ -25747,7 +25754,7 @@ body .ui-tooltip {
 }
 
 .profile .right .setting-item .display-form a {
-    color: #4d4aef;
+    color: #00d8fe;
     text-decoration: underline;
     cursor: pointer
 }
@@ -26082,7 +26089,7 @@ body .ui-tooltip {
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    background: #fd5056;
+    background: #00d8fe;
     padding: 2px 5px;
     border-radius: 2px;
     margin-right: 7px;
@@ -26099,7 +26106,7 @@ body .ui-tooltip {
     margin: 0;
     font-size: 22px;
     font-weight: 700;
-    color: #fd5056;
+    color: #00d8fe;
     line-height: 28px
 }
 
@@ -26165,12 +26172,12 @@ body .ui-tooltip {
 }
 
 .profile .right .wrapper .table .action a {
-    color: #4d4aef;
+    color: #00d8fe;
     text-decoration: underline
 }
 
 .profile .right .wrapper .change-password a {
-    color: #4d4aef;
+    color: #00d8fe;
     text-decoration: underline
 }
 
@@ -26397,7 +26404,7 @@ body .ui-tooltip {
     text-align: right;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056;
+    color: #00d8fe;
     cursor: pointer
 }
 
@@ -26411,7 +26418,7 @@ body .ui-tooltip {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background: #4d4aef;
+    background: #00d8fe;
     height: 45px;
     margin: 0 0 0 -20px;
     padding: 0 20px;
@@ -26483,7 +26490,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-search .sidebar .direction button[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -26591,7 +26598,7 @@ body .ui-tooltip {
     line-height: 16px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 25px;
     display: inline-block
 }
@@ -26661,7 +26668,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-search .sidebar .seat-level button[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -26799,7 +26806,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-search .sidebar .choose-room button[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -26819,7 +26826,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-search .sidebar .choose-room select[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -26832,14 +26839,14 @@ body .ui-tooltip {
 }
 
 .flight-hotel-search .sidebar .ranger-price #slider-range.ui-widget.ui-widget-content .ui-slider-range {
-    background: #4d4aef
+    background: #00d8fe
 }
 
 .flight-hotel-search .sidebar .ranger-price #slider-range.ui-widget.ui-widget-content .ui-slider-handle {
     width: 17px;
     height: 17px;
     border-radius: 50%;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     background: #fff;
     top: -7px;
     cursor: pointer
@@ -26941,12 +26948,12 @@ body .ui-tooltip {
 }
 
 .flight-hotel-search .sidebar .filter-sale input:checked + .slider {
-    background-color: #4d4aef
+    background-color: #00d8fe
 }
 
 .flight-hotel-search .sidebar .filter-sale input:focus + .slider {
-    -webkit-box-shadow: 0 0 1px #4d4aef;
-    box-shadow: 0 0 1px #4d4aef
+    -webkit-box-shadow: 0 0 1px #00d8fe;
+    box-shadow: 0 0 1px #00d8fe
 }
 
 .flight-hotel-search .sidebar .filter-sale input:checked + .slider:before {
@@ -27057,7 +27064,7 @@ body .ui-tooltip {
 
 .flight-hotel-search .main-content .s-heading i {
     font-size: 20px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-right: 6px
 }
 
@@ -27075,8 +27082,8 @@ body .ui-tooltip {
 }
 
 .flight-hotel-search .main-content .wrap-ticket-offer .ticket-offer .ticket-title {
-    background: #4d4aef;
-    border: 1px solid #4d4aef;
+    background: #00d8fe;
+    border: 1px solid #00d8fe;
     border-radius: 10px 10px 0 0;
     height: 36px;
     display: -webkit-box;
@@ -27150,7 +27157,7 @@ body .ui-tooltip {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 0
 }
 
@@ -27249,7 +27256,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-search .main-content .wrap-ticket-offer .ticket-for-change .change {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 45px;
     max-width: 245px;
@@ -27540,11 +27547,11 @@ body .ui-tooltip {
     line-height: 16px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .flight-hotel-search .main-content .wrap-results .result .result-content .map i {
-    color: #4d4aef;
+    color: #00d8fe;
     font-size: 20px;
     margin-right: 5px
 }
@@ -27571,7 +27578,7 @@ body .ui-tooltip {
     font-weight: 700;
     font-size: 13px;
     line-height: 16px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .flight-hotel-search .main-content .wrap-results .result .result-order .compare-button i {
@@ -27604,7 +27611,7 @@ body .ui-tooltip {
     font-size: 22px;
     line-height: 28px;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .flight-hotel-search .main-content .wrap-results .result .result-order .group-order-price .sale-price i {
@@ -27613,7 +27620,7 @@ body .ui-tooltip {
     font-size: 13px;
     line-height: 16px;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .flight-hotel-search .main-content .wrap-results .result .result-order .group-order-price .description {
@@ -27626,7 +27633,7 @@ body .ui-tooltip {
 
 .flight-hotel-search .main-content .wrap-results .result .result-order .group-order-price .btn-login {
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -27641,7 +27648,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 15px
 }
 
@@ -27671,7 +27678,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-search .main-content .loadmore .btn-loadmore {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     font-weight: 700;
     line-height: 19px;
@@ -27701,7 +27708,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056
+    color: #00d8fe
 }
 
 @media screen and (max-width: 768px) {
@@ -27742,7 +27749,7 @@ body .ui-tooltip {
     .group-filter-mobile .complete {
         width: 100%;
         height: 60px;
-        background: linear-gradient(92.44deg, #fd5056 1.58%, #fe2214 105.9%);
+        background: linear-gradient(92.44deg, #00d8fe 1.58%, #fe2214 105.9%);
         border-radius: 15px;
         font-weight: 700;
         font-size: 18px;
@@ -27822,7 +27829,7 @@ body .ui-tooltip {
         -ms-flex-align: center;
         align-items: center;
         text-align: right;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .flight-hotel-search .main-content .wrap-ticket-offer .ticket-offer .ticket-title {
@@ -27951,7 +27958,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-detail .section-01 .left .warp-mark {
-    color: #4d4aef;
+    color: #00d8fe;
     font-size: 13px;
     margin-bottom: 5px
 }
@@ -28121,7 +28128,7 @@ body .ui-tooltip {
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    background: #fd5056;
+    background: #00d8fe;
     padding: 2px 5px;
     border-radius: 2px;
     margin-right: 7px;
@@ -28138,7 +28145,7 @@ body .ui-tooltip {
     margin: 0;
     font-size: 22px;
     font-weight: 700;
-    color: #fd5056;
+    color: #00d8fe;
     line-height: 28px
 }
 
@@ -28148,7 +28155,7 @@ body .ui-tooltip {
     font-size: 13px;
     line-height: 16px;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .flight-hotel-detail .section-01 .right .group-price .saving {
@@ -28181,7 +28188,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-detail .section-01 .right .group-price .offer p label {
-    color: #fd5056;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -28202,7 +28209,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-detail .section-01 .right .group-add-cart .add-to-cart {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 50px;
     display: -webkit-box;
@@ -28359,7 +28366,7 @@ body .ui-tooltip {
     line-height: 35px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .flight-hotel-detail .section-03 .right {
@@ -28405,7 +28412,7 @@ body .ui-tooltip {
 
 .flight-hotel-detail .section-03 .right .group-featured li i {
     font-size: 25px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-right: 9px
 }
 
@@ -28473,13 +28480,13 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 14px;
     max-width: 350px
 }
 
 .flight-hotel-detail .section-03 .right .box-support .group-contact .phone {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 183px;
@@ -28518,7 +28525,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .flight-hotel-detail .section-03 .right .box-support .group-contact .mail i {
@@ -28677,7 +28684,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-detail .section-04 .left .goup-btn a[checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     font-weight: 700;
     color: #fff;
     border: none
@@ -28740,7 +28747,7 @@ body .ui-tooltip {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 15px
 }
 
@@ -28887,7 +28894,7 @@ body .ui-tooltip {
     line-height: 16px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .flight-hotel-detail .section-05 .hotels .hotel .hotel-detail .image-content .content {
@@ -28964,7 +28971,7 @@ body .ui-tooltip {
     align-items: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .flight-hotel-detail .section-05 .hotels .hotel .hotel-detail .offer {
@@ -29023,7 +29030,7 @@ body .ui-tooltip {
     justify-content: center;
     text-transform: uppercase;
     color: #fff;
-    background: #4d4aef;
+    background: #00d8fe;
     height: 42px;
     width: 106px;
     border: none
@@ -29087,7 +29094,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .flight-hotel-detail .section-05 .hotels .hotel .hotel-detail .offer .option-01 .order .add, .flight-hotel-detail .section-05 .hotels .hotel .hotel-detail .offer .option-02 .order .add {
@@ -29096,7 +29103,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-detail .section-05 .hotels .hotel .hotel-detail .offer .option-01 .order .add .btn-add, .flight-hotel-detail .section-05 .hotels .hotel .hotel-detail .offer .option-02 .order .add .btn-add {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 40px;
     width: 120px;
@@ -29130,7 +29137,7 @@ body .ui-tooltip {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 0
 }
 
@@ -29237,7 +29244,7 @@ body .ui-tooltip {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .flight-hotel-detail .section-05 .transports .transport .transport-content .block .title span i {
@@ -29310,7 +29317,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-detail .section-05 .transports .transport .transport-content .block .btn-add button {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 40px;
     width: 120px;
@@ -29532,7 +29539,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 5px
 }
 
@@ -29808,7 +29815,7 @@ body .ui-tooltip {
 .flight-hotel-detail .section-06 .rely-comment .main-form-comment .group-services-rate .write-comment .bar-info span {
     font-size: 13px;
     line-height: 16px;
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -29881,7 +29888,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-detail .section-06 .rely-comment .main-form-comment form .check input[type=submit] {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     width: 80px;
     height: 30px;
@@ -29907,7 +29914,7 @@ body .ui-tooltip {
     height: 25px;
     width: 25px;
     border-radius: 5px;
-    background: #4d4aef
+    background: #00d8fe
 }
 
 .flight-hotel-detail .section-06 .rely-comment .main-form-comment form .check:hover input ~ .checkmark {
@@ -29915,7 +29922,7 @@ body .ui-tooltip {
 }
 
 .flight-hotel-detail .section-06 .rely-comment .main-form-comment form .check input:checked ~ .checkmark {
-    background-color: #4d4aef
+    background-color: #00d8fe
 }
 
 .flight-hotel-detail .section-06 .rely-comment .main-form-comment form .check .checkmark:after {
@@ -29951,7 +29958,7 @@ body .ui-tooltip {
     color: #fff;
     border: none;
     border-radius: 5px;
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     width: 80px;
     height: 30px;
@@ -30033,7 +30040,7 @@ body .ui-tooltip {
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background: #fd5056;
+    background: #00d8fe;
     margin-right: 6px;
     display: block;
     position: absolute;
@@ -30215,7 +30222,7 @@ body .ui-tooltip {
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    background: #fd5056;
+    background: #00d8fe;
     padding: 2px 5px;
     border-radius: 2px;
     margin-right: 7px;
@@ -30232,7 +30239,7 @@ body .ui-tooltip {
     margin: 0;
     font-size: 22px;
     font-weight: 700;
-    color: #fd5056;
+    color: #00d8fe;
     line-height: 28px
 }
 
@@ -30255,7 +30262,7 @@ body .ui-tooltip {
 }
 
 .hotel-service .nav-tabs .nav-link:hover {
-    background-color: #4d4aef;
+    background-color: #00d8fe;
     color: #fff;
     font-weight: 700
 }
@@ -30265,7 +30272,7 @@ body .ui-tooltip {
 }
 
 .hotel-service .nav-tabs .active {
-    background-color: #4d4aef;
+    background-color: #00d8fe;
     color: #fff;
     font-weight: 700
 }
@@ -30381,7 +30388,7 @@ body .ui-tooltip {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .hotel-service .transports-hotel .transport-hotel .wrapper .transport-hotel-content .block .title span i {
@@ -30468,7 +30475,7 @@ body .ui-tooltip {
 }
 
 .hotel-service .transports-hotel .transport-hotel .wrapper .transport-hotel-content .block .quantity .btn-add button {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 40px;
     width: 120px;
@@ -31456,7 +31463,7 @@ body .ui-tooltip {
     }
 
     .flight-hotel-detail .section-04 .right .detail-tour .detail-tour-inner .cb p {
-        background: #4d4aef;
+        background: #00d8fe;
         border-radius: 5px;
         height: 40px;
         display: -webkit-box;
@@ -31908,7 +31915,7 @@ body .ui-tooltip {
     }
 
     .flight-hotel-detail .section-07 .right .block h2 label, .flight-hotel-detail .section-07 .right .block .h2 label {
-        background: #4d4aef;
+        background: #00d8fe;
         border-radius: 15px;
         width: 24px;
         height: 24px;
@@ -32242,7 +32249,7 @@ body .ui-tooltip {
 }
 
 .hotel-service .transports-hotel .transport-hotel .wrapper .transport-hotel-content .block .footer-collapse a {
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -32318,7 +32325,7 @@ body .ui-tooltip {
 }
 
 .hotel-service .transports-hotel .transport-hotel .transport-hotel-expand .footer-expand a {
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -32382,7 +32389,7 @@ body .ui-tooltip {
 }
 
 .hotel-service .restaurants .restaurant .summary .footer-collapse a {
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -32474,7 +32481,7 @@ body .ui-tooltip {
     text-align: right;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056;
+    color: #00d8fe;
     margin-right: 10px
 }
 
@@ -32652,7 +32659,7 @@ body .ui-tooltip {
 }
 
 .compare-combo .compare .compare-products .product .product-content .level {
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     padding: 8px 10px;
     border-radius: 5px;
     display: -webkit-box;
@@ -32666,7 +32673,7 @@ body .ui-tooltip {
     justify-content: center;
     font-size: 14px;
     line-height: 16px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .compare-combo .compare .compare-products .product .product-content .level i {
@@ -32699,7 +32706,7 @@ body .ui-tooltip {
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    background: #fd5056;
+    background: #00d8fe;
     padding: 2px 5px;
     border-radius: 2px;
     margin-right: 7px;
@@ -32711,7 +32718,7 @@ body .ui-tooltip {
     margin: 0;
     font-size: 22px;
     font-weight: 700;
-    color: #fd5056;
+    color: #00d8fe;
     line-height: 28px
 }
 
@@ -32739,7 +32746,7 @@ body .ui-tooltip {
     font-weight: 700;
     font-size: 13px;
     line-height: 16px;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .compare-combo .compare .compare-products .product .product-content .view-more {
@@ -32757,7 +32764,7 @@ body .ui-tooltip {
 }
 
 .compare-combo .compare .compare-products .product .product-content .view-more a {
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .compare-combo .compare .compare-products .product .product-content .list-info {
@@ -32980,7 +32987,7 @@ body .ui-tooltip {
     height: 40px;
     width: 105px;
     border-radius: 10px;
-    background: #fd5056;
+    background: #00d8fe;
     font-weight: 700;
     font-size: 13px;
     color: #fff;
@@ -33021,7 +33028,7 @@ body .ui-tooltip {
     text-align: right;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .compare-combo .compare .compare-products .product.add-more .add {
@@ -33055,7 +33062,7 @@ body .ui-tooltip {
 }
 
 .compare-combo .compare .compare-products .product-sub .product-sub-content .basic-info h3, .compare-combo .compare .compare-products .product-sub .product-sub-content .basic-info .h3 {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     height: 36px;
     display: -webkit-box;
@@ -33132,7 +33139,7 @@ body .ui-tooltip {
 }
 
 .compare-combo .compare .compare-products .product-sub .product-sub-content .detail-info h3, .compare-combo .compare .compare-products .product-sub .product-sub-content .detail-info .h3 {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     height: 36px;
     display: -webkit-box;
@@ -33201,7 +33208,7 @@ body .ui-tooltip {
         font-weight: 700;
         font-size: 22px;
         line-height: 28px;
-        color: #fd5056
+        color: #00d8fe
     }
 
     .compare-combo .compare .compare-products {
@@ -33368,7 +33375,7 @@ body .ui-tooltip {
 .vmb-ks-book-01-content .left .hotel-head .page-title i {
     font-size: 22px;
     margin-right: 7px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vmb-ks-book-01-content .left .box-support {
@@ -33389,13 +33396,13 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 14px;
     max-width: 350px
 }
 
 .vmb-ks-book-01-content .left .box-support .group-contact .phone {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 183px;
@@ -33434,7 +33441,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vmb-ks-book-01-content .left .box-support .group-contact .mail i {
@@ -33512,7 +33519,7 @@ body .ui-tooltip {
 
 .vmb-ks-book-01-content .left .pos-big .content .head-title .change-hotel {
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -33530,7 +33537,7 @@ body .ui-tooltip {
     font-weight: 500;
     font-size: 13px;
     line-height: 25px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vmb-ks-book-01-content .left .pos-big .content p {
@@ -33543,7 +33550,7 @@ body .ui-tooltip {
     line-height: 25px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-left: 3px
 }
 
@@ -33554,8 +33561,8 @@ body .ui-tooltip {
 }
 
 .vmb-ks-book-01-content .left .ticket-offer .ticket-title {
-    background: #4d4aef;
-    border: 1px solid #4d4aef;
+    background: #00d8fe;
+    border: 1px solid #00d8fe;
     border-radius: 10px 10px 0 0;
     height: 36px;
     display: -webkit-box;
@@ -33629,7 +33636,7 @@ body .ui-tooltip {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 15px
 }
 
@@ -33706,7 +33713,7 @@ body .ui-tooltip {
 }
 
 .vmb-ks-book-01-content .left .change-plaint a {
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -33891,7 +33898,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vmb-ks-book-01-content .left .vmb-items .vmb-item .ticket p {
@@ -33924,7 +33931,7 @@ body .ui-tooltip {
 .vmb-ks-book-01-content .left .vmb-items .vmb-item .ticket .add .btn-add {
     height: 40px;
     width: 150px;
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -34017,13 +34024,13 @@ body .ui-tooltip {
     transform: translate(-50%, -50%);
     width: 16px;
     height: 16px;
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 50%;
     opacity: 0
 }
 
 .vmb-ks-book-01-content .right .payments-warp .payments .payment-item .pm-head .check:hover {
-    border: 1px solid #4d4aef
+    border: 1px solid #00d8fe
 }
 
 .vmb-ks-book-01-content .right .payments-warp .payments .payment-item .pm-head .check:hover:after {
@@ -34036,7 +34043,7 @@ body .ui-tooltip {
 }
 
 .vmb-ks-book-01-content .right .payments-warp .payments .payment-item.active {
-    border: 2px solid #4d4aef;
+    border: 2px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 10px
@@ -34105,7 +34112,7 @@ body .ui-tooltip {
 }
 
 .vmb-ks-book-01-content .right .terms .check input[type=submit] {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     width: 80px;
     height: 30px;
@@ -34131,7 +34138,7 @@ body .ui-tooltip {
     height: 25px;
     width: 25px;
     border-radius: 5px;
-    background: #4d4aef
+    background: #00d8fe
 }
 
 .vmb-ks-book-01-content .right .terms .check:hover input ~ .checkmark {
@@ -34139,7 +34146,7 @@ body .ui-tooltip {
 }
 
 .vmb-ks-book-01-content .right .terms .check input:checked ~ .checkmark {
-    background-color: #4d4aef
+    background-color: #00d8fe
 }
 
 .vmb-ks-book-01-content .right .terms .check .checkmark:after {
@@ -34180,13 +34187,13 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 14px;
     max-width: 350px
 }
 
 .vmb-ks-book-01-content .right .box-support .group-contact .phone {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 183px;
@@ -34225,7 +34232,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vmb-ks-book-01-content .right .box-support .group-contact .mail i {
@@ -34353,7 +34360,7 @@ body .ui-tooltip {
 
 .vmb-ks-book-01-content .right .group-checkout .go-tour .end i, .vmb-ks-book-01-content .right .group-checkout .go-tour .start i {
     font-size: 20px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-right: 15px;
     position: relative;
     z-index: 2
@@ -34488,7 +34495,7 @@ body .ui-tooltip {
 }
 
 .vmb-ks-book-01-content .right .group-checkout .detail table .l2 i {
-    color: #4d4aef;
+    color: #00d8fe;
     font-size: 25px
 }
 
@@ -34527,7 +34534,7 @@ body .ui-tooltip {
 }
 
 .vmb-ks-book-01-content .right .group-checkout .detail table .cuppon td form input[type=submit] {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     color: #fff;
     margin-left: 10px
@@ -34547,7 +34554,7 @@ body .ui-tooltip {
     font-size: 22px;
     line-height: 28px;
     text-align: right;
-    color: #fd5056;
+    color: #00d8fe;
     text-transform: lowercase
 }
 
@@ -34563,7 +34570,7 @@ body .ui-tooltip {
 }
 
 .vmb-ks-book-01-content .right .group-checkout .detail .btn-order {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(90deg, #00bafe 0, #f600a9 100%);
     border-radius: 10px;
     height: 50px;
     width: 100%;
@@ -34590,7 +34597,7 @@ body .ui-tooltip {
     height: 50px;
     width: 100%;
     background: #fff;
-    border: 1px solid #fd5056;
+    border: 1px solid #00d8fe;
     border-radius: 10px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -34610,7 +34617,7 @@ body .ui-tooltip {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vmb-ks-book-01-content .right .send-mail {
@@ -34638,7 +34645,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vmb-ks-book-01-content .right .advice h3, .vmb-ks-book-01-content .right .advice .h3 {
@@ -34671,7 +34678,7 @@ body .ui-tooltip {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: #fd5056;
+    background: #00d8fe;
     margin-right: 13px
 }
 
@@ -34733,7 +34740,7 @@ body .ui-tooltip {
 .book-04 .left .brand div {
     background: #e9eff9;
     border-radius: 5px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .book-04 .left .vmb-items .vmb-item .two-line .line {
@@ -34758,7 +34765,7 @@ body .ui-tooltip {
 .book-04 .right .group-checkout .detail .ticket-item .from .brand div {
     background: #e9eff9;
     border-radius: 5px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 @media screen and (max-width: 768px) {
@@ -34873,8 +34880,8 @@ body .ui-tooltip {
     }
 
     .flight-hotel-book .vmb-ks-book-01-content .left .s-title {
-        background: #4d4aef;
-        border: .5px solid #4d4aef;
+        background: #00d8fe;
+        border: .5px solid #00d8fe;
         border-radius: 10px 10px 0 0;
         padding: 9px 10px;
         font-weight: 700;
@@ -35045,7 +35052,7 @@ body .ui-tooltip {
     text-align: right;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056;
+    color: #00d8fe;
     cursor: pointer
 }
 
@@ -35101,7 +35108,7 @@ body .ui-tooltip {
 }
 
 .vmb-ks-tdcb-content .sidebar .direction button[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -35179,7 +35186,7 @@ body .ui-tooltip {
     line-height: 16px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef;
+    color: #00d8fe;
     display: inline-block
 }
 
@@ -35424,7 +35431,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vmb-ks-tdcb-content .left .vmb-items .vmb-item .vmb-item-l1 .ticket-price p {
@@ -35470,7 +35477,7 @@ body .ui-tooltip {
 .vmb-ks-tdcb-content .left .vmb-items .vmb-item .vmb-item-l1 .ticket .add .btn-add {
     height: 40px;
     width: 150px;
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -35500,7 +35507,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vmb-ks-tdcb-content .left .vmb-items .vmb-item .vmb-item-l2 {
@@ -35697,7 +35704,7 @@ body .ui-tooltip {
 .vmb-ks-tdcb-content .left .vmb-items .vmb-item .vmb-item-l2 .ticket .add .btn-add {
     height: 40px;
     width: 150px;
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -35727,7 +35734,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vmb-ks-tdcb-content .left .vmb-items .vmb-item.active {
@@ -35815,13 +35822,13 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 14px;
     max-width: 350px
 }
 
 .vmb-ks-tdcb-content .right .box-support .group-contact .phone {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 183px;
@@ -35860,7 +35867,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vmb-ks-tdcb-content .right .box-support .group-contact .mail i {
@@ -35916,7 +35923,7 @@ body .ui-tooltip {
 
 .vmb-ks-tdcb-content .right .detail .ticket-item .detail-ticket .ticket i {
     font-size: 20px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-right: 5px
 }
 
@@ -36005,7 +36012,7 @@ body .ui-tooltip {
     line-height: 16px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vmb-ks-tdcb-content .right .detail .ticket-item .mid-line {
@@ -36129,7 +36136,7 @@ body .ui-tooltip {
     font-weight: 700;
     font-size: 22px;
     line-height: 28px;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vmb-ks-tdcb-content .right .detail table .t-price i {
@@ -36141,7 +36148,7 @@ body .ui-tooltip {
 }
 
 .vmb-ks-tdcb-content .right .detail .btn-order {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(90deg, #00bafe 0, #f600a9 100%);
     border-radius: 10px;
     height: 50px;
     width: 100%;
@@ -36168,7 +36175,7 @@ body .ui-tooltip {
     height: 50px;
     width: 100%;
     background: #fff;
-    border: 1px solid #fd5056;
+    border: 1px solid #00d8fe;
     border-radius: 10px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -36188,7 +36195,7 @@ body .ui-tooltip {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .flight-hotel-tdcb.n04 .vmb-ks-tdcb-content .left .vmb-items .vmb-item .vmb-item-l1 .brand div, .flight-hotel-tdcb.n05 .vmb-ks-tdcb-content .left .vmb-items .vmb-item .vmb-item-l1 .brand div {
@@ -36205,7 +36212,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700;
     border: none
 }
@@ -36224,7 +36231,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700;
     border: none
 }
@@ -36243,7 +36250,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700;
     border: none
 }
@@ -36313,8 +36320,8 @@ body .ui-tooltip {
     }
 
     .flight-hotel-tdcb .vmb-ks-tdcb-content .left .s-title {
-        background: #4d4aef;
-        border: .5px solid #4d4aef;
+        background: #00d8fe;
+        border: .5px solid #00d8fe;
         border-radius: 10px 10px 0 0;
         padding: 9px 10px;
         font-weight: 700;
@@ -36348,13 +36355,13 @@ body .ui-tooltip {
         -ms-flex-align: center;
         align-items: center;
         background: #fff;
-        border: 1px solid #4d4aef;
+        border: 1px solid #00d8fe;
         border-radius: 14px;
         max-width: 100%
     }
 
     .flight-hotel-tdcb .vmb-ks-tdcb-content .left .box-support .group-contact .phone {
-        background: #4d4aef;
+        background: #00d8fe;
         border-radius: 10px;
         height: 50px;
         width: 183px;
@@ -36393,7 +36400,7 @@ body .ui-tooltip {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .flight-hotel-tdcb .vmb-ks-tdcb-content .left .box-support .group-contact .mail i {
@@ -36716,7 +36723,7 @@ body .ui-tooltip {
 }
 
 .booking-hotel .left .service-block .item-horizontal .right a {
-    color: #4d4aef;
+    color: #00d8fe;
     text-decoration: underline;
     font-weight: 700
 }
@@ -36797,13 +36804,13 @@ body .ui-tooltip {
     transform: translate(-50%, -50%);
     width: 16px;
     height: 16px;
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 50%;
     opacity: 0
 }
 
 .booking-hotel .right .payments-warp .payments .payment-item .pm-head .check:hover {
-    border: 1px solid #4d4aef
+    border: 1px solid #00d8fe
 }
 
 .booking-hotel .right .payments-warp .payments .payment-item .pm-head .check:hover:after {
@@ -36816,7 +36823,7 @@ body .ui-tooltip {
 }
 
 .booking-hotel .right .payments-warp .payments .payment-item.active {
-    border: 2px solid #4d4aef;
+    border: 2px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 10px
@@ -36885,7 +36892,7 @@ body .ui-tooltip {
 }
 
 .booking-hotel .right .terms .check input[type=submit] {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     width: 80px;
     height: 30px;
@@ -36911,7 +36918,7 @@ body .ui-tooltip {
     height: 25px;
     width: 25px;
     border-radius: 5px;
-    background: #4d4aef
+    background: #00d8fe
 }
 
 .booking-hotel .right .terms .check:hover input ~ .checkmark {
@@ -36919,7 +36926,7 @@ body .ui-tooltip {
 }
 
 .booking-hotel .right .terms .check input:checked ~ .checkmark {
-    background-color: #4d4aef
+    background-color: #00d8fe
 }
 
 .booking-hotel .right .terms .check .checkmark:after {
@@ -36960,13 +36967,13 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 14px;
     max-width: 350px
 }
 
 .booking-hotel .right .box-support .group-contact .phone {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 183px;
@@ -37005,7 +37012,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .booking-hotel .right .box-support .group-contact .mail i {
@@ -37121,7 +37128,7 @@ body .ui-tooltip {
 
 .booking-hotel .right .group-checkout .go-tour .end i, .booking-hotel .right .group-checkout .go-tour .start i {
     font-size: 20px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-right: 15px;
     position: relative;
     z-index: 2
@@ -37256,7 +37263,7 @@ body .ui-tooltip {
 }
 
 .booking-hotel .right .group-checkout .detail table .l2 i {
-    color: #4d4aef;
+    color: #00d8fe;
     font-size: 25px
 }
 
@@ -37295,7 +37302,7 @@ body .ui-tooltip {
 }
 
 .booking-hotel .right .group-checkout .detail table .cuppon td form input[type=submit] {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     color: #fff;
     margin-left: 10px
@@ -37315,7 +37322,7 @@ body .ui-tooltip {
     font-size: 22px;
     line-height: 28px;
     text-align: right;
-    color: #fd5056;
+    color: #00d8fe;
     text-transform: lowercase
 }
 
@@ -37331,7 +37338,7 @@ body .ui-tooltip {
 }
 
 .booking-hotel .right .group-checkout .detail .btn-order {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(90deg, #00bafe 0, #f600a9 100%);
     border-radius: 10px;
     height: 50px;
     width: 100%;
@@ -37358,7 +37365,7 @@ body .ui-tooltip {
     height: 50px;
     width: 100%;
     background: #fff;
-    border: 1px solid #fd5056;
+    border: 1px solid #00d8fe;
     border-radius: 10px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -37378,7 +37385,7 @@ body .ui-tooltip {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .booking-hotel .right .send-mail {
@@ -37406,7 +37413,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .booking-hotel .right .advice h3, .booking-hotel .right .advice .h3 {
@@ -37439,7 +37446,7 @@ body .ui-tooltip {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: #fd5056;
+    background: #00d8fe;
     margin-right: 13px
 }
 
@@ -37525,7 +37532,7 @@ body .ui-tooltip {
 }
 
 .vmb-khuhoi-1 .vmb-khuhoi-1-content .left .order-by .order-by-right .num-left {
-    background: #4d4aef;
+    background: #00d8fe;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     font-weight: 400;
@@ -37550,7 +37557,7 @@ body .ui-tooltip {
     width: 0;
     height: 0;
     border-top: 25px solid transparent;
-    border-right: 25px solid #4d4aef;
+    border-right: 25px solid #00d8fe;
     border-bottom: 25px solid transparent;
     position: absolute;
     top: 0;
@@ -37559,7 +37566,7 @@ body .ui-tooltip {
 }
 
 .vmb-khuhoi-1 .vmb-khuhoi-1-content .left .order-by .order-by-right .num-right {
-    background: #4d4aef;
+    background: #00d8fe;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     font-weight: 400;
@@ -37584,7 +37591,7 @@ body .ui-tooltip {
     width: 0;
     height: 0;
     border-top: 25px solid transparent;
-    border-left: 25px solid #4d4aef;
+    border-left: 25px solid #00d8fe;
     border-bottom: 25px solid transparent;
     position: absolute;
     top: 0;
@@ -37594,7 +37601,7 @@ body .ui-tooltip {
 
 .vmb-khuhoi-1 .vmb-khuhoi-1-content .left .order-by .order-by-right .date {
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -37610,7 +37617,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef;
+    color: #00d8fe;
     height: 50px;
     margin: 0 10px;
     padding: 0 15px
@@ -37759,7 +37766,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vmb-khuhoi-1 .vmb-khuhoi-1-content .left .vmb-items .vmb-item .ticket .add {
@@ -37778,7 +37785,7 @@ body .ui-tooltip {
 .vmb-khuhoi-1 .vmb-khuhoi-1-content .left .vmb-items .vmb-item .ticket .add .btn-add {
     height: 40px;
     width: 150px;
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -37808,7 +37815,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vmb-khuhoi-1 .vmb-khuhoi-1-content .right .box-support {
@@ -37829,13 +37836,13 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 14px;
     max-width: 350px
 }
 
 .vmb-khuhoi-1 .vmb-khuhoi-1-content .right .box-support .group-contact .phone {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 183px;
@@ -37874,7 +37881,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vmb-khuhoi-1 .vmb-khuhoi-1-content .right .box-support .group-contact .mail i {
@@ -37933,12 +37940,12 @@ body .ui-tooltip {
     line-height: 16px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vmb-khuhoi-1 .vmb-khuhoi-1-content .right .detail .ticket-item .detail-ticket .ticket i {
     font-size: 20px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-right: 5px
 }
 
@@ -38111,11 +38118,11 @@ body .ui-tooltip {
     font-weight: 700;
     font-size: 17px;
     line-height: 21px;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vmb-khuhoi-1 .vmb-khuhoi-1-content .right .detail .btn-order {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(90deg, #00bafe 0, #f600a9 100%);
     border-radius: 10px;
     height: 50px;
     width: 100%;
@@ -38142,7 +38149,7 @@ body .ui-tooltip {
     height: 50px;
     width: 100%;
     background: #fff;
-    border: 1px solid #fd5056;
+    border: 1px solid #00d8fe;
     border-radius: 10px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -38162,7 +38169,7 @@ body .ui-tooltip {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vehicle-hotel-search .sidebar {
@@ -38196,7 +38203,7 @@ body .ui-tooltip {
     text-align: right;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056;
+    color: #00d8fe;
     cursor: pointer
 }
 
@@ -38210,7 +38217,7 @@ body .ui-tooltip {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background: #4d4aef;
+    background: #00d8fe;
     height: 45px;
     margin: 0 0 0 -20px;
     padding: 0 20px;
@@ -38282,7 +38289,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-search .sidebar .direction button[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -38390,7 +38397,7 @@ body .ui-tooltip {
     line-height: 16px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 25px;
     display: inline-block
 }
@@ -38460,7 +38467,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-search .sidebar .seat-level button[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -38598,7 +38605,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-search .sidebar .choose-room button[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -38618,7 +38625,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-search .sidebar .choose-room select[checked=checked] {
-    background: #4d4aef;
+    background: #00d8fe;
     color: #fff
 }
 
@@ -38631,14 +38638,14 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-search .sidebar .ranger-price #slider-range.ui-widget.ui-widget-content .ui-slider-range {
-    background: #4d4aef
+    background: #00d8fe
 }
 
 .vehicle-hotel-search .sidebar .ranger-price #slider-range.ui-widget.ui-widget-content .ui-slider-handle {
     width: 17px;
     height: 17px;
     border-radius: 50%;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     background: #fff;
     top: -7px;
     cursor: pointer
@@ -38740,12 +38747,12 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-search .sidebar .filter-sale input:checked + .slider {
-    background-color: #4d4aef
+    background-color: #00d8fe
 }
 
 .vehicle-hotel-search .sidebar .filter-sale input:focus + .slider {
-    -webkit-box-shadow: 0 0 1px #4d4aef;
-    box-shadow: 0 0 1px #4d4aef
+    -webkit-box-shadow: 0 0 1px #00d8fe;
+    box-shadow: 0 0 1px #00d8fe
 }
 
 .vehicle-hotel-search .sidebar .filter-sale input:checked + .slider:before {
@@ -38856,7 +38863,7 @@ body .ui-tooltip {
 
 .vehicle-hotel-search .main-content .s-heading i {
     font-size: 20px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-right: 6px
 }
 
@@ -38874,8 +38881,8 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-search .main-content .wrap-ticket-offer .ticket-offer .ticket-title {
-    background: #4d4aef;
-    border: 1px solid #4d4aef;
+    background: #00d8fe;
+    border: 1px solid #00d8fe;
     border-radius: 10px 10px 0 0;
     height: 36px;
     display: -webkit-box;
@@ -39075,7 +39082,7 @@ body .ui-tooltip {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 0
 }
 
@@ -39174,7 +39181,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-search .main-content .wrap-ticket-offer .ticket-for-change button {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 45px;
     max-width: 245px;
@@ -39464,11 +39471,11 @@ body .ui-tooltip {
     line-height: 16px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vehicle-hotel-search .main-content .wrap-results .result .result-content .map i {
-    color: #4d4aef;
+    color: #00d8fe;
     font-size: 20px;
     margin-right: 5px
 }
@@ -39495,7 +39502,7 @@ body .ui-tooltip {
     font-weight: 700;
     font-size: 13px;
     line-height: 16px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vehicle-hotel-search .main-content .wrap-results .result .result-order .compare-button i {
@@ -39528,7 +39535,7 @@ body .ui-tooltip {
     font-size: 22px;
     line-height: 28px;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vehicle-hotel-search .main-content .wrap-results .result .result-order .group-order-price .sale-price i {
@@ -39537,7 +39544,7 @@ body .ui-tooltip {
     font-size: 13px;
     line-height: 16px;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vehicle-hotel-search .main-content .wrap-results .result .result-order .group-order-price .description {
@@ -39550,7 +39557,7 @@ body .ui-tooltip {
 
 .vehicle-hotel-search .main-content .wrap-results .result .result-order .group-order-price .btn-login {
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -39565,7 +39572,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 15px
 }
 
@@ -39595,7 +39602,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-search .main-content .loadmore .btn-loadmore {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     font-weight: 700;
     line-height: 19px;
@@ -39625,7 +39632,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056
+    color: #00d8fe
 }
 
 @media screen and (max-width: 768px) {
@@ -39636,7 +39643,7 @@ body .ui-tooltip {
     .vehicle-hotel-search .sidebar .complete {
         width: 100%;
         height: 60px;
-        background: linear-gradient(92.44deg, #fd5056 1.58%, #fe2214 105.9%);
+        background: linear-gradient(92.44deg, #00d8fe 1.58%, #fe2214 105.9%);
         border-radius: 15px;
         font-weight: 700;
         font-size: 18px;
@@ -39714,7 +39721,7 @@ body .ui-tooltip {
         -ms-flex-align: center;
         align-items: center;
         text-align: right;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .vehicle-hotel-search .main-content .search-for-hotel {
@@ -39922,7 +39929,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-detail .section-01 .left .warp-mark {
-    color: #4d4aef;
+    color: #00d8fe;
     font-size: 13px;
     margin-bottom: 5px
 }
@@ -40092,7 +40099,7 @@ body .ui-tooltip {
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    background: #fd5056;
+    background: #00d8fe;
     padding: 2px 5px;
     border-radius: 2px;
     margin-right: 7px;
@@ -40109,7 +40116,7 @@ body .ui-tooltip {
     margin: 0;
     font-size: 22px;
     font-weight: 700;
-    color: #fd5056;
+    color: #00d8fe;
     line-height: 28px
 }
 
@@ -40119,7 +40126,7 @@ body .ui-tooltip {
     font-size: 13px;
     line-height: 16px;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vehicle-hotel-detail .section-01 .right .group-price .saving {
@@ -40152,7 +40159,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-detail .section-01 .right .group-price .offer p label {
-    color: #fd5056;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -40173,7 +40180,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-detail .section-01 .right .group-add-cart .add-to-cart {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 50px;
     display: -webkit-box;
@@ -40330,7 +40337,7 @@ body .ui-tooltip {
     line-height: 35px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vehicle-hotel-detail .section-03 .right {
@@ -40376,7 +40383,7 @@ body .ui-tooltip {
 
 .vehicle-hotel-detail .section-03 .right .group-featured li i {
     font-size: 25px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-right: 9px
 }
 
@@ -40444,13 +40451,13 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 14px;
     max-width: 350px
 }
 
 .vehicle-hotel-detail .section-03 .right .box-support .group-contact .phone {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 183px;
@@ -40489,7 +40496,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vehicle-hotel-detail .section-03 .right .box-support .group-contact .mail i {
@@ -40618,7 +40625,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: right;
-    color: #fd5056;
+    color: #00d8fe;
     margin-bottom: 5px
 }
 
@@ -40638,7 +40645,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-detail .section-04 .car-info .car-info-content .car-info-content-price button {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 40px;
     width: 150px;
@@ -40685,7 +40692,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-detail .section-04 .car-info-private .content-info .title a {
-    color: #4d4aef;
+    color: #00d8fe;
     text-decoration: underline
 }
 
@@ -40697,7 +40704,7 @@ body .ui-tooltip {
 .vehicle-hotel-detail .section-04 .car-info-private .content-info .excerpt .right i {
     font-size: 25px;
     padding-right: 1rem;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vehicle-hotel-detail .section-04 .car-info-private .content-info .excerpt .right span {
@@ -40857,7 +40864,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-detail .section-04 .left .goup-btn a.checked {
-    background: #4d4aef;
+    background: #00d8fe;
     font-weight: 700;
     color: #fff;
     border: none
@@ -40920,7 +40927,7 @@ body .ui-tooltip {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 15px
 }
 
@@ -41066,7 +41073,7 @@ body .ui-tooltip {
     line-height: 16px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vehicle-hotel-detail .section-05 .hotels .hotel .image-content .content {
@@ -41131,14 +41138,14 @@ body .ui-tooltip {
 .vehicle-hotel-detail .section-05 .hotels .hotel .image-content .content .room-size li.more b {
     font-weight: 700;
     line-height: 20px;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vehicle-hotel-detail .section-05 .hotels .hotel .image-content .content .room-size li.more b i {
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vehicle-hotel-detail .section-05 .hotels .hotel .image-content .content .room-size li.more span {
@@ -41181,7 +41188,7 @@ body .ui-tooltip {
     align-items: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vehicle-hotel-detail .section-05 .hotels .hotel .offer {
@@ -41230,7 +41237,7 @@ body .ui-tooltip {
     justify-content: center;
     text-transform: uppercase;
     color: #fff;
-    background: #4d4aef;
+    background: #00d8fe;
     height: 42px;
     width: 106px;
     border: none
@@ -41292,7 +41299,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vehicle-hotel-detail .section-05 .hotels .hotel .offer .option-01 .order .add, .vehicle-hotel-detail .section-05 .hotels .hotel .offer .option-02 .order .add {
@@ -41300,7 +41307,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-detail .section-05 .hotels .hotel .offer .option-01 .order .add .btn-add, .vehicle-hotel-detail .section-05 .hotels .hotel .offer .option-02 .order .add .btn-add {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 40px;
     width: 120px;
@@ -41332,7 +41339,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: right;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 0
 }
 
@@ -41437,7 +41444,7 @@ body .ui-tooltip {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vehicle-hotel-detail .section-05 .transports .transport .transport-content .block .title span i {
@@ -41507,7 +41514,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-detail .section-05 .transports .transport .transport-content .block .btn-add button {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 40px;
     width: 120px;
@@ -41721,7 +41728,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 5px
 }
 
@@ -41997,7 +42004,7 @@ body .ui-tooltip {
 .vehicle-hotel-detail .section-06 .rely-comment .main-form-comment .group-services-rate .write-comment .bar-info span {
     font-size: 13px;
     line-height: 16px;
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -42070,7 +42077,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-detail .section-06 .rely-comment .main-form-comment form .check input[type=submit] {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     width: 80px;
     height: 30px;
@@ -42096,7 +42103,7 @@ body .ui-tooltip {
     height: 25px;
     width: 25px;
     border-radius: 5px;
-    background: #4d4aef
+    background: #00d8fe
 }
 
 .vehicle-hotel-detail .section-06 .rely-comment .main-form-comment form .check:hover input ~ .checkmark {
@@ -42104,7 +42111,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-detail .section-06 .rely-comment .main-form-comment form .check input:checked ~ .checkmark {
-    background-color: #4d4aef
+    background-color: #00d8fe
 }
 
 .vehicle-hotel-detail .section-06 .rely-comment .main-form-comment form .check .checkmark:after {
@@ -42140,7 +42147,7 @@ body .ui-tooltip {
     color: #fff;
     border: none;
     border-radius: 5px;
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     width: 80px;
     height: 30px;
@@ -42223,7 +42230,7 @@ body .ui-tooltip {
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background: #fd5056;
+    background: #00d8fe;
     margin-right: 6px;
     display: block;
     position: absolute;
@@ -42410,7 +42417,7 @@ body .ui-tooltip {
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    background: #fd5056;
+    background: #00d8fe;
     padding: 2px 5px;
     border-radius: 2px;
     margin-right: 7px;
@@ -42427,7 +42434,7 @@ body .ui-tooltip {
     margin: 0;
     font-size: 22px;
     font-weight: 700;
-    color: #fd5056;
+    color: #00d8fe;
     line-height: 28px
 }
 
@@ -42515,7 +42522,7 @@ body .ui-tooltip {
         line-height: 18px;
         text-align: right;
         text-decoration: underline;
-        color: #fd5056
+        color: #00d8fe
     }
 
     .vehicle-hotel-detail .entry-head .section-01 .right .group-add-cart span b {
@@ -42523,7 +42530,7 @@ body .ui-tooltip {
         font-size: 22px;
         line-height: 28px;
         text-align: right;
-        color: #fd5056;
+        color: #00d8fe;
         text-decoration: unset;
         padding-left: 5px
     }
@@ -42995,7 +43002,7 @@ body .ui-tooltip {
     }
 
     .vehicle-hotel-detail .section-04 .car-info-private .content-info .title a {
-        color: #4d4aef;
+        color: #00d8fe;
         text-decoration: underline
     }
 
@@ -43007,7 +43014,7 @@ body .ui-tooltip {
     .vehicle-hotel-detail .section-04 .car-info-private .content-info .excerpt .right i {
         font-size: 25px;
         padding-right: 1rem;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .vehicle-hotel-detail .section-04 .car-info-private .content-info .excerpt .right span {
@@ -43169,7 +43176,7 @@ body .ui-tooltip {
     }
 
     .vehicle-hotel-detail .section-04 .right .detail-tour .detail-tour-inner .cb p {
-        background: #4d4aef;
+        background: #00d8fe;
         border-radius: 5px;
         height: 40px;
         display: -webkit-box;
@@ -43617,7 +43624,7 @@ body .ui-tooltip {
     }
 
     .vehicle-hotel-detail .section-07 .right .block h2 label, .vehicle-hotel-detail .section-07 .right .block .h2 label {
-        background: #4d4aef;
+        background: #00d8fe;
         border-radius: 15px;
         width: 24px;
         height: 24px;
@@ -43800,7 +43807,7 @@ body .ui-tooltip {
 .vehicle-hotel-book-01-content .left .hotel-head .page-title i {
     font-size: 22px;
     margin-right: 7px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vehicle-hotel-book-01-content .left .box-support {
@@ -43821,13 +43828,13 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 14px;
     max-width: 350px
 }
 
 .vehicle-hotel-book-01-content .left .box-support .group-contact .phone {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 183px;
@@ -43866,7 +43873,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vehicle-hotel-book-01-content .left .box-support .group-contact .mail i {
@@ -43940,7 +43947,7 @@ body .ui-tooltip {
 
 .vehicle-hotel-book-01-content .left .pos-big .content .head-title .change-hotel {
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -43958,7 +43965,7 @@ body .ui-tooltip {
     font-weight: 500;
     font-size: 13px;
     line-height: 25px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vehicle-hotel-book-01-content .left .pos-big .content p {
@@ -43971,7 +43978,7 @@ body .ui-tooltip {
     line-height: 25px;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-left: 3px
 }
 
@@ -43982,8 +43989,8 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-book-01-content .left .car-offer .ticket-title {
-    background: #4d4aef;
-    border: 1px solid #4d4aef;
+    background: #00d8fe;
+    border: 1px solid #00d8fe;
     border-radius: 10px 10px 0 0;
     height: 36px;
     display: -webkit-box;
@@ -44160,8 +44167,8 @@ body .ui-tooltip {
 
 .vehicle-hotel-book-01-content .left .change-car .continue {
     width: 190px;
-    border: 1px solid #fd5056;
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    border: 1px solid #00d8fe;
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -44342,7 +44349,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: right;
-    color: #fd5056;
+    color: #00d8fe;
     margin-bottom: 5px
 }
 
@@ -44378,7 +44385,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-book-01-content .left .products-car .product .product-content .product-content-price button {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 40px;
     width: 150px;
@@ -44403,8 +44410,8 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-book-01-content .left .ticket-offer .ticket-title {
-    background: #4d4aef;
-    border: 1px solid #4d4aef;
+    background: #00d8fe;
+    border: 1px solid #00d8fe;
     border-radius: 10px 10px 0 0;
     height: 36px;
     display: -webkit-box;
@@ -44479,7 +44486,7 @@ body .ui-tooltip {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 15px
 }
 
@@ -44556,7 +44563,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-book-01-content .left .ticket-offer .change-plaint a {
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -44741,7 +44748,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vehicle-hotel-book-01-content .left .vmb-items .vmb-item .ticket p {
@@ -44774,7 +44781,7 @@ body .ui-tooltip {
 .vehicle-hotel-book-01-content .left .vmb-items .vmb-item .ticket .add .btn-add {
     height: 40px;
     width: 150px;
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -44809,13 +44816,13 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 14px;
     max-width: 350px
 }
 
 .vehicle-hotel-book-01-content .right .box-support .group-contact .phone {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 183px;
@@ -44854,7 +44861,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .vehicle-hotel-book-01-content .right .box-support .group-contact .mail i {
@@ -45011,7 +45018,7 @@ body .ui-tooltip {
 
 .vehicle-hotel-book-01-content .right .group-checkout .go-tour .end i, .vehicle-hotel-book-01-content .right .group-checkout .go-tour .start i {
     font-size: 20px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-right: 15px;
     position: relative;
     z-index: 2
@@ -45140,7 +45147,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-book-01-content .right .detail table .l2 i {
-    color: #4d4aef;
+    color: #00d8fe;
     font-size: 25px
 }
 
@@ -45182,7 +45189,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-book-01-content .right .detail table .cuppon td form input[type=submit] {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     color: #fff;
     margin-left: 10px
@@ -45202,7 +45209,7 @@ body .ui-tooltip {
     font-size: 22px;
     line-height: 28px;
     text-align: right;
-    color: #fd5056;
+    color: #00d8fe;
     text-transform: lowercase
 }
 
@@ -45218,7 +45225,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-book-01-content .right .detail .btn-order {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(90deg, #00bafe 0, #f600a9 100%);
     border-radius: 10px;
     height: 50px;
     width: 100%;
@@ -45245,7 +45252,7 @@ body .ui-tooltip {
     height: 50px;
     width: 100%;
     background: #fff;
-    border: 1px solid #fd5056;
+    border: 1px solid #00d8fe;
     border-radius: 10px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -45265,7 +45272,7 @@ body .ui-tooltip {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vehicle-hotel-book-01-content .right .send-mail {
@@ -45293,7 +45300,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .vehicle-hotel-book-01-content .right .advice h3, .vehicle-hotel-book-01-content .right .advice .h3 {
@@ -45326,7 +45333,7 @@ body .ui-tooltip {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: #fd5056;
+    background: #00d8fe;
     margin-right: 13px
 }
 
@@ -45337,8 +45344,8 @@ body .ui-tooltip {
 }
 
 .xe-ks-book.x04 .car-offer-x04 .ticket-title {
-    background: #4d4aef;
-    border: 1px solid #4d4aef;
+    background: #00d8fe;
+    border: 1px solid #00d8fe;
     border-radius: 10px 10px 0 0;
     height: 36px;
     display: -webkit-box;
@@ -45413,7 +45420,7 @@ body .ui-tooltip {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 15px
 }
 
@@ -45502,7 +45509,7 @@ body .ui-tooltip {
 }
 
 .xe-ks-book.x04 .change-car-x04 a.change {
-    border: 1px solid #fd5056;
+    border: 1px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -45520,12 +45527,12 @@ body .ui-tooltip {
     -ms-flex-pack: center;
     justify-content: center;
     text-transform: uppercase;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .xe-ks-book.x04 .change-car-x04 a.continue {
-    border: 1px solid #fd5056;
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    border: 1px solid #00d8fe;
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -45585,7 +45592,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700;
     border: none
 }
@@ -45712,7 +45719,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: right;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .xe-ks-book.x04 .vmb-items .vmb-item .vmb-item-l1 .ticket-price p {
@@ -45758,7 +45765,7 @@ body .ui-tooltip {
 .xe-ks-book.x04 .vmb-items .vmb-item .vmb-item-l1 .ticket .add .btn-add {
     height: 40px;
     width: 150px;
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -45788,7 +45795,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .xe-ks-book.x04 .vmb-items .vmb-item .vmb-item-l2 {
@@ -45820,7 +45827,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700;
     border: none
 }
@@ -46004,7 +46011,7 @@ body .ui-tooltip {
 .xe-ks-book.x04 .vmb-items .vmb-item .vmb-item-l2 .ticket .add .btn-add {
     height: 40px;
     width: 150px;
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -46034,7 +46041,7 @@ body .ui-tooltip {
     text-align: center;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .xe-ks-book.x04 .vmb-items .vmb-item.active {
@@ -46108,7 +46115,7 @@ body .ui-tooltip {
 .book-04 .left .brand div {
     background: #e9eff9;
     border-radius: 5px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .book-04 .left .vmb-items .vmb-item .two-line .line {
@@ -46132,7 +46139,7 @@ body .ui-tooltip {
 .book-04 .right .group-checkout .detail .ticket-item .from .brand div {
     background: #e9eff9;
     border-radius: 5px;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 @media screen and (max-width: 768px) {
@@ -46568,7 +46575,7 @@ body .ui-tooltip {
         -ms-flex-align: center;
         align-items: center;
         text-align: right;
-        color: #fd5056;
+        color: #00d8fe;
         margin-bottom: 5px
     }
 
@@ -46588,7 +46595,7 @@ body .ui-tooltip {
     }
 
     .vehicle-hotel-book .vehicle-hotel-book-01-content .left .products-car .product .product-content .product-content-price button {
-        background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+        background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
         border-radius: 5px;
         height: 40px;
         width: 150px;
@@ -46786,7 +46793,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: right;
-    color: #fd5056;
+    color: #00d8fe;
     margin-bottom: 5px
 }
 
@@ -46806,7 +46813,7 @@ body .ui-tooltip {
 }
 
 .vehicle-hotel-tdcb .products-car .product .product-content .product-content-price button {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 40px;
     width: 150px;
@@ -46887,8 +46894,8 @@ body .ui-tooltip {
     }
 
     .vehicle-hotel-tdcb .vehicle-hotel-tdcb-07-content .s-title {
-        background: #4d4aef;
-        border: .5px solid #4d4aef;
+        background: #00d8fe;
+        border: .5px solid #00d8fe;
         border-radius: 10px 10px 0 0;
         padding: 9px 10px;
         font-weight: 700;
@@ -46922,13 +46929,13 @@ body .ui-tooltip {
         -ms-flex-align: center;
         align-items: center;
         background: #fff;
-        border: 1px solid #4d4aef;
+        border: 1px solid #00d8fe;
         border-radius: 14px;
         max-width: 100%
     }
 
     .vehicle-hotel-tdcb .vehicle-hotel-tdcb-07-content .box-support .group-contact .phone {
-        background: #4d4aef;
+        background: #00d8fe;
         border-radius: 10px;
         height: 50px;
         width: 183px;
@@ -46967,7 +46974,7 @@ body .ui-tooltip {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        color: #4d4aef
+        color: #00d8fe
     }
 
     .vehicle-hotel-tdcb .vehicle-hotel-tdcb-07-content .box-support .group-contact .mail i {
@@ -47104,7 +47111,7 @@ body .ui-tooltip {
         -ms-flex-align: center;
         align-items: center;
         text-align: right;
-        color: #fd5056;
+        color: #00d8fe;
         margin-bottom: 5px
     }
 
@@ -47140,7 +47147,7 @@ body .ui-tooltip {
     }
 
     .vehicle-hotel-tdcb .vehicle-hotel-tdcb-content-07-02 .products-car .product .product-content .product-content-price button {
-        background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+        background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
         border-radius: 5px;
         height: 40px;
         width: 150px;
@@ -47206,7 +47213,7 @@ body .ui-tooltip {
 }
 
 .search-mobile .wrapper .body .search-tour-content .main-tab {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 100px;
     width: 100%;
     border-bottom: none;
@@ -47214,8 +47221,8 @@ body .ui-tooltip {
 }
 
 .search-mobile .wrapper .body .search-tour-content .main-tab .nav-link {
-    background: #4d4aef;
-    border: 3px solid #4d4aef;
+    background: #00d8fe;
+    border: 3px solid #00d8fe;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 100px;
@@ -47227,7 +47234,7 @@ body .ui-tooltip {
 
 .search-mobile .wrapper .body .search-tour-content .main-tab .active {
     background: #fff;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .search-mobile .wrapper .body .search-tour-content .sub-tab {
@@ -47254,9 +47261,9 @@ body .ui-tooltip {
 }
 
 .search-mobile .wrapper .body .search-tour-content .sub-tab .active {
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700;
-    border-bottom: 2px solid #4d4aef
+    border-bottom: 2px solid #00d8fe
 }
 
 .search-mobile .wrapper .body .search-tour-content .sub-tab::-webkit-scrollbar {
@@ -47294,7 +47301,7 @@ body .ui-tooltip {
 }
 
 .search-mobile .wrapper .body .search-tour-content .title-divider .right .combo {
-    background-color: #4d4aef;
+    background-color: #00d8fe;
     color: #fff;
     font-size: 10px;
     text-align: center;
@@ -47724,7 +47731,7 @@ body .ui-tooltip {
 }
 
 .forgot-password .wrapper .form-wrap .right .form-signin .card .tab {
-    background-color: #4d4aef;
+    background-color: #00d8fe;
     border-radius: 10px 10px 0 0;
     color: #fff;
     margin-bottom: 2rem
@@ -47764,7 +47771,7 @@ body .ui-tooltip {
 }
 
 .tour-detail .section-01 .left .warp-mark {
-    color: #4d4aef;
+    color: #00d8fe;
     font-size: 13px;
     margin-bottom: 5px
 }
@@ -47868,7 +47875,7 @@ body .ui-tooltip {
 
 .tour-detail .section-01 .left .short-rating .s-wishlist i {
     font-size: 22px;
-    color: #fd5056;
+    color: #00d8fe;
     padding-right: 5px
 }
 
@@ -47926,7 +47933,7 @@ body .ui-tooltip {
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    background: #fd5056;
+    background: #00d8fe;
     padding: 2px 5px;
     border-radius: 2px;
     margin-right: 7px;
@@ -47943,7 +47950,7 @@ body .ui-tooltip {
     margin: 0;
     font-size: 22px;
     font-weight: 700;
-    color: #fd5056;
+    color: #00d8fe;
     line-height: 28px
 }
 
@@ -47971,7 +47978,7 @@ body .ui-tooltip {
 }
 
 .tour-detail .section-01 .right .group-price .offer p label {
-    color: #fd5056;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -47991,7 +47998,7 @@ body .ui-tooltip {
 }
 
 .tour-detail .section-01 .right .group-add-cart .add-to-cart {
-    background: linear-gradient(64.4deg, #fd5056 21.33%, #fe2214 67.61%);
+    background: linear-gradient(64.4deg, #00d8fe 21.33%, #fe2214 67.61%);
     border-radius: 5px;
     height: 50px;
     display: -webkit-box;
@@ -48102,7 +48109,7 @@ body .ui-tooltip {
 }
 
 .tour-detail .section-03 .left .box-order .calendar .calendar-box {
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 5px;
     width: 110px;
     height: 30px;
@@ -48115,7 +48122,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .tour-detail .section-03 .left .box-order .calendar .calendar-box i {
@@ -48135,13 +48142,13 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
-    border: 1px solid #4d4aef;
+    border: 1px solid #00d8fe;
     border-radius: 14px;
     max-width: 350px
 }
 
 .tour-detail .section-03 .left .box-support .group-contact .phone {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 10px;
     height: 50px;
     width: 183px;
@@ -48180,7 +48187,7 @@ body .ui-tooltip {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #4d4aef
+    color: #00d8fe
 }
 
 .tour-detail .section-03 .left .box-support .group-contact .mail i {
@@ -48219,7 +48226,7 @@ body .ui-tooltip {
 
 .tour-detail .section-03 .right .group-services .item i {
     font-size: 25px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 5px
 }
 
@@ -48272,7 +48279,7 @@ body .ui-tooltip {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    color: #fd5056
+    color: #00d8fe
 }
 
 .tour-detail .section-03 .right .box-map .map i {
@@ -48452,7 +48459,7 @@ body .ui-tooltip {
 }
 
 .tour-detail .section-04 .left .position .pos-small .pos-small-right .price label {
-    color: #fd5056;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -48513,7 +48520,7 @@ body .ui-tooltip {
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background: #fd5056;
+    background: #00d8fe;
     position: absolute;
     top: 5px;
     left: 0;
@@ -48651,8 +48658,8 @@ body .ui-tooltip {
 }
 
 .tour-detail .section-07 .left .go-tour .day .wrapper .date-center.active {
-    background: #fd5056;
-    border: 1px solid #fd5056;
+    background: #00d8fe;
+    border: 1px solid #00d8fe;
     color: #fff
 }
 
@@ -48721,7 +48728,7 @@ body .ui-tooltip {
 
 .tour-detail .section-07 .right .excerpt .line {
     height: calc(100% - 16px);
-    border-left: .5px dashed #4d4aef;
+    border-left: .5px dashed #00d8fe;
     position: absolute;
     top: 6px;
     left: 0;
@@ -48732,7 +48739,7 @@ body .ui-tooltip {
     content: "";
     width: 5px;
     height: 5px;
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -48744,7 +48751,7 @@ body .ui-tooltip {
     content: "";
     width: 5px;
     height: 5px;
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 50%;
     position: absolute;
     top: 100%;
@@ -48775,7 +48782,7 @@ body .ui-tooltip {
 
 .tour-detail .section-07 .right .group-services .item i {
     font-size: 25px;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 5px
 }
 
@@ -48857,7 +48864,7 @@ body .ui-tooltip {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 15px
 }
 
@@ -49033,7 +49040,7 @@ body .ui-tooltip {
     font-size: 11px;
     line-height: 23px;
     text-align: center;
-    color: #4d4aef;
+    color: #00d8fe;
     font-style: normal
 }
 
@@ -49093,7 +49100,7 @@ body .ui-tooltip {
 }
 
 .tour-detail .section-08 .right .table-price tr .t-price {
-    color: #fd5056
+    color: #00d8fe
 }
 
 .tour-detail .section-08 .right .table-price tr.total td {
@@ -49283,7 +49290,7 @@ body .ui-tooltip {
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
-    color: #4d4aef;
+    color: #00d8fe;
     margin-bottom: 5px
 }
 
@@ -49550,7 +49557,7 @@ body .ui-tooltip {
 .tour-detail .section-10 .rely-comment .main-form-comment .write-comment .bar-info span {
     font-size: 13px;
     line-height: 16px;
-    color: #4d4aef;
+    color: #00d8fe;
     font-weight: 700
 }
 
@@ -49623,7 +49630,7 @@ body .ui-tooltip {
 }
 
 .tour-detail .section-10 .rely-comment .main-form-comment form .check input[type=submit] {
-    background: #4d4aef;
+    background: #00d8fe;
     border-radius: 5px;
     width: 80px;
     height: 30px;
@@ -49649,7 +49656,7 @@ body .ui-tooltip {
     height: 25px;
     width: 25px;
     border-radius: 5px;
-    background: #4d4aef
+    background: #00d8fe
 }
 
 .tour-detail .section-10 .rely-comment .main-form-comment form .check:hover input ~ .checkmark {
@@ -49657,7 +49664,7 @@ body .ui-tooltip {
 }
 
 .tour-detail .section-10 .rely-comment .main-form-comment form .check input:checked ~ .checkmark {
-    background-color: #4d4aef
+    background-color: #00d8fe
 }
 
 .tour-detail .section-10 .rely-comment .main-form-comment form .check .checkmark:after {
@@ -49846,7 +49853,7 @@ body .ui-tooltip {
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    background: #fd5056;
+    background: #00d8fe;
     padding: 2px 5px;
     border-radius: 2px;
     margin-right: 7px;
@@ -49863,7 +49870,7 @@ body .ui-tooltip {
     margin: 0;
     font-size: 22px;
     font-weight: 700;
-    color: #fd5056;
+    color: #00d8fe;
     line-height: 28px
 }
 
@@ -50196,7 +50203,7 @@ body .ui-tooltip {
 
     .tour-detail .section-03 .left .box-order .calendar .calendar-box {
         border: none;
-        background: linear-gradient(92.44deg, #fd5056 1.58%, #fe2214 105.9%);
+        background: linear-gradient(92.44deg, #00d8fe 1.58%, #fe2214 105.9%);
         border-radius: 10px;
         height: 40px;
         font-weight: 700;
@@ -50491,7 +50498,7 @@ body .ui-tooltip {
     }
 
     .tour-detail .section-07 .right .block h2 label, .tour-detail .section-07 .right .block .h2 label {
-        background: #4d4aef;
+        background: #00d8fe;
         border-radius: 15px;
         width: 24px;
         height: 24px;
@@ -50576,7 +50583,7 @@ body .ui-tooltip {
     }
 
     .tour-detail .section-08 .left .tour .detail-tour .detail-tour-inner .cb p {
-        background: #4d4aef;
+        background: #00d8fe;
         border-radius: 5px;
         height: 40px;
         display: -webkit-box;

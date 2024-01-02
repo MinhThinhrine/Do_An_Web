@@ -16,8 +16,25 @@ import java.io.IOException;
 public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=utf-8");
+
+        String action = request.getParameter("action");
+        System.out.println("doget: " + action);
+        if (action == null) {
+
+            System.out.println("Khong thuc hien duoc gi het");
+
+        } else if (action.equals("logout")) {
+            HttpSession session = request.getSession();
+            session.invalidate();
+//                response.sendRedirect("signin");
+            response.sendRedirect("./login.jsp");
+
+        }
     }
+
 
     /**
      * @param request  an {@link HttpServletRequest} object that

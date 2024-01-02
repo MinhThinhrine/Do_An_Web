@@ -8,7 +8,7 @@ public class ConnectToDatabase {
     public static Connection getConnect() {
         String url = "jdbc:mysql://localhost:3306/DA_WEB";
         String user = "root";
-        String pass = "thinh3011";
+        String pass = "";
         Connection connection = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

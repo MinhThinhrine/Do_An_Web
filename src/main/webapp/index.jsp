@@ -16,9 +16,7 @@
 <![endif]-->
 
 <!-- main-menu Start -->
-<header class="top-area">
 <%@include file="common/header.jsp" %>
-</header>
 <!-- main-menu End -->
 
 
