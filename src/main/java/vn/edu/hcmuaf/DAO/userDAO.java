@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class UserDAO implements objectDAO {
+public class userDAO implements objectDAO {
 
     public static Map<Integer, User> mapuser = loaduserbyID();
     Connection conn = null;
@@ -22,12 +22,12 @@ public class UserDAO implements objectDAO {
     ResultSet rs = null;
 
 
-    public UserDAO() {
+    public userDAO() {
     }
     private static Connection connection;
 
     // Constructor để nhận kết nối từ bên ngoài
-    public UserDAO(Connection connection) {
+    public userDAO(Connection connection) {
         this.connection = connection;
     }
 
@@ -135,12 +135,20 @@ public class UserDAO implements objectDAO {
         return null;
     }
     public List<User> getAllUser() {
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
         List<User> list = new ArrayList<>();
-        String query = "select * from Account";
+        String query = "select * from User";
         try {
-            conn = ConnectToDatabase.getConnect();//mo ket noi voi sql
-            ps = conn.prepareStatement(query);
-            ResultSet resultSet = ps.executeQuery();
+            Connection connection;
+            connection = ConnectToDatabase.getConnect();
+            String sql = "SELECT * FROM users";
+            preparedStatement = connection.prepareStatement(sql);
+
+
+            // Thực hiện truy vấn
+            resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int userId = resultSet.getInt(1);
                 String userName = resultSet.getString(2);
@@ -190,13 +198,16 @@ public class UserDAO implements objectDAO {
 
 
         // Sử dụng hàm getUserByEmail để lấy thông tin người dùng
-        UserDAO userDao = new UserDAO();
-        User user = userDao.checkLogin("thuc9g@gmail.com","123123");
-
-        if (user != null) {
-            System.out.println("User found: " + user.toString());
-        } else {
-            System.out.println("User not found");
-        }
+        userDAO userDao = new userDAO();
+//        User user = userDao.checkLogin("thuc9g@gmail.com","123123");
+            List<User> u = userDao.getAllUser();
+            for(User us : u) {
+                System.out.println(us.toString());
+            }
+//        if (user != null) {
+//            System.out.println("User found: " + user.toString());
+//        } else {
+//            System.out.println("User not found");
+//        }
     }
 }
