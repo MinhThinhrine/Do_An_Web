@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.Controller;
 
 
-import vn.edu.hcmuaf.DAO.UserDAO;
+import vn.edu.hcmuaf.DAO.userDAO;
 import vn.edu.hcmuaf.bean.User;
 
 import javax.servlet.ServletException;
@@ -16,8 +16,25 @@ import java.io.IOException;
 public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=utf-8");
+
+        String action = request.getParameter("action");
+        System.out.println("doget: " + action);
+        if (action == null) {
+
+            System.out.println("Khong thuc hien duoc gi het");
+
+        } else if (action.equals("logout")) {
+            HttpSession session = request.getSession();
+            session.invalidate();
+//                response.sendRedirect("signin");
+            response.sendRedirect("./login.jsp");
+
+        }
     }
+
 
     /**
      * @param request  an {@link HttpServletRequest} object that
@@ -39,8 +56,8 @@ public class LoginController extends HttpServlet {
 
 
             // Sử dụng hàm getUserByEmail để lấy thông tin người dùng
-            UserDAO userDao = new UserDAO();
-            User u = UserDAO.checkLogin(email,pass);
+            userDAO userDao = new userDAO();
+            User u = userDAO.checkLogin(email,pass);
             if(u != null){
                 HttpSession session = request.getSession();
                 session.setAttribute("user", u); // session này dùng để

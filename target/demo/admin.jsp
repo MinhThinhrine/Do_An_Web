@@ -105,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 </li>
                 <li>
-                    <a href="user.jsp">
+                    <a href="managerUser">
                         <i class="fa fa-user"></i>
                         <span>Quản lí khách hàng</span>
                     </a>
