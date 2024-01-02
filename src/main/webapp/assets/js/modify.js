@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-    document.getElementById("log_out").addEventListener("click", function () {
+    document.getElementById("logout").addEventListener("click", function () {
     window.location.href = "login.jsp";
 });
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
     document.getElementById("myTour").addEventListener("click", function () {
-        window.location.href = "../../shopcart.jsp";
+        window.location.href = "shopcart.jsp";
     });
 
     document.getElementById("bill").addEventListener("click", function () {

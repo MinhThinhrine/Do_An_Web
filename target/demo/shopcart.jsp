@@ -6,8 +6,16 @@
 <%@ page import="vn.edu.hcmuaf.bean.tour" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<% List<tour> tours = (List<tour>) request.getAttribute("tours");
-    if(tours == null) tours = new ArrayList<>();
+<%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
+<%@ page import="vn.edu.hcmuaf.bean.valies" %>
+<%
+    ArrayList<valies> vali_list = (ArrayList<valies>) session.getAttribute("vali-list ");
+    List<valies> toursVali = null;
+    if(vali_list == null) {
+        TourDao tDao = new TourDao();
+        toursVali = tDao.getValiTour(vali_list);
+        request.setAttribute("vali_list",vali_list);
+    };
 %>
 <html class="no-js" lang="vi">
 <%@ page contentType="text/html; charset=UTF-8" %>
@@ -72,7 +80,10 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <% for(tour t : tours) { %>
+                            <%
+                                if(vali_list!=null){
+                                for(valies t : toursVali ) {
+                            %>
                             <tr id="<%=t.getId()%>">
                                 <th scope="row">
                                     <div class="d-flex align-items-center">
@@ -82,12 +93,12 @@
                                                    aria-label="..."/>
                                         </div>
                                         <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">
-                                        <img src="assets/images/item/<%=t.getImage()%>" class="img-fluid rounded-3"
+                                        <img src="assets/images/item/" class="img-fluid rounded-3"
                                              style="width: 120px;" title = "Chi tiết" alt="Book" >
                                         </a>
                                         <div class="flex-column ms-4">
-                                            <p class="mb-2"><%=t.getSchedule()%></p>
-                                            <p class="mb-0"><%=t.getDuration()%></p>
+                                            <p class="mb-2"></p>
+                                            <p class="mb-0"></p>
                                         </div>
                                     </div>
                                 </th>
@@ -123,7 +134,7 @@
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <p class="mb-0" id="donGia1" style="font-weight: 500;"><%=t.getPrice()%></p>
+                                    <p class="mb-0" id="donGia1" style="font-weight: 500;"></p>
                                 </td>
                                 <td class="align-middle">
                                     <div class="col-md-1 col-lg-1 col-xl-1">
@@ -132,7 +143,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <% } %>
+                            <% }} %>
                             </tbody>
                         </table>
                     </div>

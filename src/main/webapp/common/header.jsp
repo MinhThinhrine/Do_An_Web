@@ -45,9 +45,9 @@
                                     <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
                                     <span class="username"><%= user.getUserName() %></span>
                                     <ul id="service_account">
-                                        <li><a id="myInfor" href="infor.html">Thông tin tài khoản</a></li>
-                                        <li><a id="bill" href="bill.html">Bill </a></li>
-                                        <li><a id="log_out" href="register.html">Đăng xuất</a></li>
+                                        <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
+                                        <li><a id="bill" href="bill.jsp">Bill </a></li>
+                                        <li><a id="log_out" href="register.jsp">Đăng xuất</a></li>
                                     </ul>
                                 </li>
                                 <% } else { %>

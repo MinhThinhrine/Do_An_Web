@@ -291,10 +291,11 @@
                                 </button>
                             </div>
                             <div class="about-btn"style="width: 0px">
-                                <a href="${pageContext.request}/ValiServlet?id=<%=t.getId()%>">
-                                <button class="about-view packages-btn addvali">
-                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase-rolling" style="padding-left: 6px;" ></i>
-                                </button>
+                                <a href="${pageContext.request.contextPath}/ValiServlet?id=<%=t.getId()%>">
+                                    <button class="about-view packages-btn addvali">
+                                        <i class="fa fa-plus"></i>
+                                        <i class="fa fa-suitcase-rolling" style="padding-left: 6px;" ></i>
+                                    </button>
                                 </a>
                             </div>
                             <!--/.about-btn-->

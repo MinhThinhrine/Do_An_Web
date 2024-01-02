@@ -1,25 +1,49 @@
 package vn.edu.hcmuaf.Controller;
 
-import vn.edu.hcmuaf.DAO.TourDao;
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.valies;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.List;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 
 @WebServlet( "/ValiServlet")
 public class ValiServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
-        TourDao tourDao = new TourDao();
-        List<tour> tours = tourDao.findbyid(id);
-        request.setAttribute("tours", tours);
-        request.getRequestDispatcher("./shopcart.jsp").forward(request, response);
-    }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            ArrayList<valies> valiList = new ArrayList<>();
+            int id = Integer.parseInt(request.getParameter("id"));
+            valies vl = new valies();
+            vl.setId(id);
+            vl.setNumAdult(1);
+            vl.setNumChildren(1);
+            vl.setTourId(id);
 
+            HttpSession ses = request.getSession();
+            ArrayList<valies> vali_List = (ArrayList<valies>) ses.getAttribute("vali-List");
+
+            if (vali_List == null) {
+                valiList.add(vl);
+                ses.setAttribute("vali-List",valiList);
+            }else{
+                valiList=vali_List;
+                boolean exit = false;
+                for (valies v:vali_List) {
+                    if(v.getId()==id){
+                        exit=true;
+                    }
+                }
+                    if(!exit){
+                        valiList.add(vl);
+                    }
+            }
+
+        }
+    }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
