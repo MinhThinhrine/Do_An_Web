@@ -9,32 +9,6 @@
 <head>
     <%@include file="head.jsp" %>
 </head>
-
-<<<<<<< HEAD
-                                </li>
-                                <%
-                                    User user = (User) session.getAttribute("user");
-                                %>
-                                <% if (Objects.nonNull(user)) { %>
-                                <!-- Hiển thị icon và tên người dùng -->
-                                <li id="icon-user" class="smooth-menu">
-                                    <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
-                                    <span class="username"><%= user.getUserName() %></span>
-                                    <ul id="service_account">
-                                        <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
-                                        <li><a id="bill" href="bill.jsp">Bill </a></li>
-                                        <li><a id="log_out" href="register.jsp">Đăng xuất</a></li>
-                                    </ul>
-                                </li>
-                                <% } else { %>
-                                <!-- Hiển thị nút đăng nhập -->
-                                <li>
-                                    <button class="book-btn" id="buttonTour" style="margin-top: -2px;">
-                                        <a href="login.jsp">Đăng Nhập</a>
-                                    </button>
-                                </li>
-                                <% } %>
-=======
 <body>
 <header class="top-area">
 <div class="header-area">
@@ -107,6 +81,6 @@
 </div>
 </header>
 </body>
->>>>>>> 9a05d1dca548cfee997126914a466d2074952377
+
 
 </html>

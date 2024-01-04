@@ -27,7 +27,8 @@ public class SearchController extends HttpServlet {
         String startInput = request.getParameter("dxp");
         String endInput = request.getParameter("diemden");
         System.out.println("dxp " + startInput);
-        System.out.println("diemdem " + endInput);
+        System.out.println("diemden " + endInput);
+        System.out.println("--------------------------------------");
 
         List<tour> searchResults = new TourDao().findAll();
         int size = searchResults.size();
@@ -65,7 +66,10 @@ public class SearchController extends HttpServlet {
                     }
                 } else {
                     // Nếu không có dấu "-" trong chuỗi, so sánh nguyên chuỗi với điểm đầu nhập vào
-                    if (startInput != null && startInput.equals(input)) {
+                    if ((endInput == null || endInput.isEmpty()) && startInput != null && startInput.equals(input)) {
+                        kqtimkiem.add(t);
+                    }
+                    if ((startInput == null || startInput.isEmpty()) && endInput != null && endInput.equals(input)) {
                         kqtimkiem.add(t);
                     }
                 }
