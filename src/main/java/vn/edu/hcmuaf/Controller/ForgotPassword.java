@@ -73,7 +73,7 @@ public class ForgotPassword extends HttpServlet {
 
             if (email != null || !email.equals("")) {
                 Random rand = new Random();
-                otpvalue = rand.nextInt(1255650);
+                otpvalue = rand.nextInt(900000)+100000;
 
                 String to = email;
 

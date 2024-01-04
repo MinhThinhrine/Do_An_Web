@@ -14,23 +14,25 @@
 <div id="container">
     <div id="content">
         <div class="signin"><b>ĐĂNG KÝ</b></div>
+        <form action="Register" method="post"></form>
         <div class="user">
-            <input id="username" type="text" placeholder="Tên người dùng"></input>
+            <input id="username" name="userName" type="text" placeholder="Tên người dùng"></input>
         </div>
         <div class="emailx">
-            <input id="email" type="email" placeholder="Email" required autocomplete="on" autofocus >
+            <input id="email" name="email" type="email" placeholder="Email" required autocomplete="on" autofocus >
         </div>
         <div class="pass">
-                <input id="pass" type="password" placeholder="Mật khẩu từ 6 - 20 kí tự" minlength="6" maxlength="20" >
+                <input id="pass" name="pass1" type="password" placeholder="Mật khẩu từ 6 - 20 kí tự" minlength="6" maxlength="20" >
         </div>
         <div class="pass" style="margin-bottom: 50px">
-                <input id="confirm" type="password" placeholder="Nhập lại mật khẩu" minlength="6" maxlength="20" >
+                <input id="confirm" name="pass2" type="password" placeholder="Nhập lại mật khẩu" minlength="6" maxlength="20" >
             <p id="result"></p>
         </div>
 
         <div class="button">
             <button type="submit" name="btn" id="btn"><a>ĐĂNG KÝ</a></button>
         </div>
+        </form>
         <div class="ques">Bạn đã có tài khoản?</div>
         <div class="signup">
             <a href="login.jsp">ĐĂNG NHẬP</a>

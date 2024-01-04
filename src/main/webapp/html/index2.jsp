@@ -598,7 +598,7 @@
 
                             <div class="col-md-8">
                                 <div class="filtr-item" style="height: 310px;width: 750px;">
-                                    <img src="../assets/images/item/14.jpeg" alt="portfolio image"/>
+                                    <img src="../assets/images/item/14.jpg" alt="portfolio image"/>
                                     <div class="item-title">
                                         <a href="detail.html">
                                             Vũng Tàu
@@ -813,7 +813,7 @@
                 <div class="col-md-3 col-sm-6" id="6">
                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
 
-                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/6.webp"
+                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/6.jpg"
                              alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tây Ninh - Núi Bà Đen<span class="pull-right"
@@ -881,7 +881,7 @@
 
                 <div class="col-md-3 col-sm-6" id="8">
                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
-                        <img class="packageImage" src="../assets/images/item/8.png" alt="package-place">
+                        <img class="packageImage" src="../assets/images/item/8.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Long An - Bến Lức<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
                             </h3>
@@ -947,7 +947,7 @@
 
                 <div class="col-md-3 col-sm-6" id="10">
                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
-                        <img class="packageImage" src="../assets/images/item/10.webp" alt="package-place">
+                        <img class="packageImage" src="../assets/images/item/10.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bình Dương - Suối Tiên<span class="pull-right"
                                                             style="margin-top: 30px;;font-size: 15px;">1,500,000 - 2,500,000đ</span>
@@ -1014,7 +1014,7 @@
 
                 <div class="col-md-3 col-sm-6" id="12">
                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
-                        <img class="packageImage" src="../assets/images/item/12.webp" alt="package-place">
+                        <img class="packageImage" src="../assets/images/item/12.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đồng Nai - Khu du lịch Bửu Long<span class="pull-right"
                                                                      style="margin-top: 8px;;font-size: 15px;">2,500,000 - 4,500,000đ</span>
@@ -1081,7 +1081,7 @@
 
                 <div class="col-md-3 col-sm-6" id="14">
                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
-                        <img class="packageImage" src="../assets/images/item/14.jpeg" alt="package-place">
+                        <img class="packageImage" src="../assets/images/item/14.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tp Hồ Chí Minh - Vũng Tàu<span class="pull-right"
                                                                style="margin-top: 8px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -7561,7 +7561,7 @@
                         <div class="thumbnail">
                             <h2>tin mới <span> tháng 11 - 2023</span></h2>
                             <div class="thumbnail-img">
-                                <img src="../assets/images/item/14.jpeg" alt="blog-img" style="height:220px; width: 110%;">
+                                <img src="../assets/images/item/14.jpg" alt="blog-img" style="height:220px; width: 110%;">
                                 <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
 
                             </div><!--/.thumbnail-img-->

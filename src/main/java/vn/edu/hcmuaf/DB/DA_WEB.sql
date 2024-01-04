@@ -229,8 +229,20 @@ VALUES
 -- Tạo dữ liệu cho bảng tours
 INSERT INTO `tours` (`cateId`, `discountId`, `name`, `image`, `price`, `startTime`, `duration`, `schedule`, `description`)
 VALUES
-    (1, 1, 'Tour 1', 'tour1.jpg', 100, '2023-03-01', '3 days', 'Tour schedule 1', 'Description of Tour 1'),
-    (2, 2, 'Tour 2', 'tour2.jpg', 150, '2023-04-01', '5 days', 'Tour schedule 2', 'Description of Tour 2');
+    (1, 1, 'Tour 1', '1.jpg', 100, '2023-03-01', '3 days', 'Tour schedule 1', 'Description of Tour 1'),
+    (2, 1, 'Tour 2', '2.jpg', 150, '2023-04-01', '5 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (1, 2, 'Cần Thơ - Châu Đốc', '3.jpg', 150, '2023-04-01', '5 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (2, 2, 'Phú Quốc', '4.jpg', 150, '2023-04-01', '5 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (1, 2, 'Cần Thơ - Cồn Sơn-Cồn Ấu', '5.jpg', 150, '2023-04-01', '5 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (2, 2, 'Mỹ Tho - Bến Tre', '6.jpg', 150, '2023-04-01', '5 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (1, 2, 'Củ Chi - Địa Đạo', '7.jpg', 150, '2023-04-01', '5 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (2, 1, 'Cần Thơ  - Núi Bà Đen','8.jpg', 150, '2023-04-01', '6 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (2, 1, 'Cần Thơ  - Núi Bà Đen','9.jpg', 150, '2023-04-01', '7 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (2, 1, 'Cần Thơ  - Núi Bà Đen','10.jpg', 150, '2023-04-01', '8 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (2, 1, 'Cần Thơ  - Núi Bà Đen','11.jpg', 150, '2023-04-01', '9 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (2, 1, 'Cần Thơ  - Núi Bà Đen','12.jpg', 150, '2023-04-01', '10 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (2, 1, 'Cần Thơ  - Núi Bà Đen','13.jpg', 150, '2023-04-01', '11 days', 'Tour schedule 2', 'Description of Tour 2'),
+    (2, 1, 'Cần Thơ  - Núi Bà Đen','14.jpg', 150, '2023-04-01', '12 days', 'Tour schedule 2', 'Description of Tour 2');
 
 -- Tạo dữ liệu cho bảng service_tours
 INSERT INTO `service_tours` (`name`, `price`, `description`)
@@ -252,8 +264,6 @@ VALUES
     ('2023-03-01', 1, 1),
     ('2023-04-01', 2, 2);
 
-
-SELECT * FROM `options`;
 
 -- Tạo dữ liệu cho bảng
 INSERT INTO `bills` (`valiId`, `paymentMethod`, `totalPrice`, `status`)
