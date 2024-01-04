@@ -1,6 +1,6 @@
 package vn.edu.hcmuaf.bean;
 
-public class valies {
+    public class valies extends tour {
     private int id;
     private int userId;
     private int tourId;

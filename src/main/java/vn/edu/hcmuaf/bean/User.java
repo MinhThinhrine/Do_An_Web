@@ -1,6 +1,6 @@
 package vn.edu.hcmuaf.bean;
 
-public class User {
+public class User extends valies{
     private int id;
     private String userName;
     private String email;

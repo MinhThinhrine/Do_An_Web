@@ -48,8 +48,8 @@
                             %>
                             <% if (Objects.nonNull(user)) { %>
                             <li id="icon-user" class="smooth-menu">
-                                <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
-                                <span class="username"><%= user.getUserName() %></span>
+                                <i class="fa-regular fa-circle-user" style="color: #ffffff;margin-top: 8px"></i>
+                                <span><%= user.getUserName() %></span>
                                 <ul id="service_account">
                                     <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
                                     <li><a id="bill" href="bill.jsp">Bill </a></li>
@@ -59,8 +59,9 @@
                                                 background-color: transparent;
                                                 border: none;
                                                 color: #fff;
-                                                font-size: 14px;
-                                                font-weight: bold" >Đăng xuất</button>
+                                                font-size: 13px;
+                                                text-transform: capitalize;
+                                                font-weight: 600" >Đăng xuất</button>
                                     </form></li>
                                 </ul>
                             </li>
@@ -81,6 +82,16 @@
 </div>
 </header>
 </body>
-
+<script>
+    document.getElementById("logout").addEventListener("click", function () {
+        window.location.href = "login.jsp";
+    });
+    document.getElementById("myInfor").addEventListener("click", function () {
+        window.location.href = "infor.jsp";
+    });
+    document.getElementById("bill").addEventListener("click", function () {
+        window.location.href = "bill.jsp";
+    });
+</script>
 
 </html>

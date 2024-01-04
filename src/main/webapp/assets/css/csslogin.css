@@ -48,7 +48,7 @@ body {
 
 }
 #content .user input {
-    width: 90%;
+    width: 100%;
     height: 100%;
     border-radius: 10px;
     border: 1px solid lightgray;
@@ -57,7 +57,7 @@ body {
 }
 
 #content .pass input {
-    width: 90%;
+    width: 100%;
     height: 100%;
     border-radius: 10px;
     border: 1px solid lightgray;

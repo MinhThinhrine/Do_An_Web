@@ -6,9 +6,13 @@
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.bean.tour" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
+<%@ page import="vn.edu.hcmuaf.bean.User" %>
+<%@ page import="java.util.Objects" %>
 <%@include file="common/tablib.jsp" %>
-<% List<tour> tours = (List<tour>) request.getAttribute("tours");
-    if(tours == null) tours = new ArrayList<>();
+<%
+TourDao td = new TourDao();
+    List<tour> tourss = td.findAll();
 %>
 <!DOCTYPE html>
 <html class="no-js" lang="vi">
@@ -73,21 +77,39 @@
                             <li><a href="index.jsp#blog">Tin Tức</a></li>
                             <li><a href="index.jsp#feedback">Đánh Giá</a></li>
                             <li><a href="index.jsp#service">Liên Hệ</a></li>
-                            <li class="smooth-menu"><a href="shopcart.jsp" id="myTour"><i class="fa fa-suitcase-rolling fa-2x"
-                                                                   style="margin-top: -10px;color: #00d8fe"></i></a>
+                            <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
+                                    class="fa fa-suitcase-rolling fa-2x"
+                                    style="margin-top: -10px;color: #00d8fe"></i></a>
                             </li>
-                            <li>
-                                <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
-                                        href="login.jsp">Đăng Nhập</a>
-                                </button>
-                            </li><!--/.project-btn-->
-                            <li id="icon-user" style="display: block;padding-top: 24px">
-                                <i class="fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
-                                <ul id="service_account" style="margin-top: -5px">
+                            <%
+                                User user = (User) session.getAttribute("user");
+                                String url = request.getContextPath().trim();
+                            %>
+                            <% if (Objects.nonNull(user)) { %>
+                            <li id="icon-user" class="smooth-menu">
+                                <i class="fa fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
+                                <span class="username"><%= user.getUserName() %></span>
+                                <ul id="service_account">
                                     <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
-                                    <li><a id="log_out" href="register.jsp">Đăng xuất</a></li>
+                                    <li><a id="bill" href="bill.jsp">Bill </a></li>
+                                    <li>
+                                        <form action="login" method="get">
+                                            <button type="submit" name="action" id="logout" value="logout" style="
+                                                background-color: transparent;
+                                                border: none;
+                                                color: #fff;
+                                                font-size: 14px;
+                                                font-weight: bold" >Đăng xuất</button>
+                                        </form></li>
                                 </ul>
                             </li>
+                            <% } else { %>
+                            <li>
+                                <button class="book-btn" id="buttonTour" style="margin-top: -2px;">
+                                    <a href="login.jsp">Đăng Nhập</a>
+                                </button>
+                            </li>
+                            <% } %>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.main-menu-->
@@ -96,7 +118,7 @@
         <div class="home-border"></div><!-- /.home-border-->
     </div><!-- /.container -->
     </div><!-- /.header-area -->
-</header><!-- /.top-area -->
+</header><!-- /.top-area --><!-- /.top-area -->
 
 <div class="con">
     <div class="bg-white rounded d-flex align-items-center justify-content-between" id="header">
@@ -257,7 +279,7 @@
         </div>
         <div id="products">
             <div class="row mx-0">
-                <% for(tour t : tours) { %>
+                <% for(tour t : tourss) { %>
                 <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="<%=t.getId() %>">
                     <div class="single-package-item">
                         <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">
@@ -290,8 +312,8 @@
                                     book now
                                 </button>
                             </div>
-                            <div class="about-btn"style="width: 0px">
-                                <a href="${pageContext.request.contextPath}/ValiServlet?id=<%=t.getId()%>">
+                            <div class="about-btn" style="width: 0px">
+                                <a href="ValiServlet?id=<%=t.getId()%>">
                                     <button class="about-view packages-btn addvali">
                                         <i class="fa fa-plus"></i>
                                         <i class="fa fa-suitcase-rolling" style="padding-left: 6px;" ></i>

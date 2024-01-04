@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.DAO;
 
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
+import vn.edu.hcmuaf.bean.User;
 import vn.edu.hcmuaf.bean.tour;
 import vn.edu.hcmuaf.bean.valies;
 
@@ -87,17 +88,20 @@ public class TourDao {
             if(valiList.size()>0){
                 for(valies vl :valiList){
                     connection = ConnectToDatabase.getConnect();
-                    String sql = "SELECT * FROM da_web.tours INNER JOIN da_web.valies on tours.id = valies.tourId where id =?";
+                    String sql = "SELECT * FROM tours where id =?";
                     preparedStatement = connection.prepareStatement(sql);
                     preparedStatement.setInt(1, vl.getId());
                     rs = preparedStatement.executeQuery();
                     while (rs.next()){
                         valies  row = new valies();
                         row.setId(rs.getInt("id"));
-                        row.setNumAdult(vl.getNumChildren());
-                        row.setNumAdult(vl.getNumAdult());
-                        row.setTourId(rs.getInt("tourId"));
-                        row.setUserId(rs.getInt("userId"));
+                        row.setNumAdult(1);
+                        row.setNumChildren(1);
+                        row.setImage(rs.getString("image"));
+                        row.setDuration(rs.getString("duration"));
+                        row.setSchedule(rs.getString("schedule"));
+                        row.setPrice(rs.getInt("price"));
+
                         product.add(row);
                     }
                 }

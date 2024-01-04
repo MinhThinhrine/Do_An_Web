@@ -12,14 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
         avtUser.style.display = "none";     // Ẩn avatar người dùng
     }
 });
-<<<<<<< HEAD
 
     document.getElementById("logout").addEventListener("click", function () {
     window.location.href = "login.jsp";
 });
-
-=======
->>>>>>> 9a05d1dca548cfee997126914a466d2074952377
     document.getElementById("myInfor").addEventListener("click", function () {
     window.location.href = "infor.jsp";
 });

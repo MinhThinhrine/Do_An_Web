@@ -914,7 +914,7 @@ body {
     font-size: 30px!important;
 }
 .row.head{
-    height: 72px!important;
+    height: 95px!important;
 }
 .packages-btn{
     cursor: pointer;
@@ -940,4 +940,8 @@ body {
     width: 400px; /* Đổi kích thước theo ý muốn */
     height: 300px;
 }
-
+@media (min-width: 1200px){
+    .container {
+        max-width: 1200px!important;
+    }
+}

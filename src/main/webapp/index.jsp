@@ -283,9 +283,11 @@
                                         <!--/.col-->
                                         <div class="clo-sm-7">
                                             <div class="about-btn travel-mrt-0 pull-right">
-
                                                 <button id="searchButton" type="submit" class="about-view travel-btn">
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <a href="catelogy.jsp"
+                                                       style="text-decoration: none; text-transform: uppercase;width: 180px; padding: 20px;height: 60px;">tìm
+                                                        kiếm
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
                                                     </a>
                                                 </button>
                                                 <!--/.travel-btn-->

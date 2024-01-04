@@ -9,12 +9,12 @@
 <%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
 <%@ page import="vn.edu.hcmuaf.bean.valies" %>
 <%
-    ArrayList<valies> vali_list = (ArrayList<valies>) session.getAttribute("vali-list ");
+    ArrayList<valies> vali_List = (ArrayList<valies>) session.getAttribute("vali-List");
     List<valies> toursVali = null;
-    if(vali_list == null) {
+    if(vali_List != null) {
         TourDao tDao = new TourDao();
-        toursVali = tDao.getValiTour(vali_list);
-        request.setAttribute("vali_list",vali_list);
+        toursVali = tDao.getValiTour(vali_List);
+        request.setAttribute("vali_List",vali_List);
     };
 %>
 <html class="no-js" lang="vi">
@@ -81,7 +81,7 @@
                             </thead>
                             <tbody>
                             <%
-                                if(vali_list!=null){
+                                if(vali_List!=null){
                                 for(valies t : toursVali ) {
                             %>
                             <tr id="<%=t.getId()%>">
@@ -93,12 +93,12 @@
                                                    aria-label="..."/>
                                         </div>
                                         <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">
-                                        <img src="assets/images/item/" class="img-fluid rounded-3"
+                                        <img src="assets/images/item/<%=t.getImage()%>" class="img-fluid rounded-3"
                                              style="width: 120px;" title = "Chi tiết" alt="Book" >
                                         </a>
                                         <div class="flex-column ms-4">
-                                            <p class="mb-2"></p>
-                                            <p class="mb-0"></p>
+                                            <p class="mb-0"><%=t.getSchedule()%></p>
+                                            <p class="mb-2"><%=t.getDuration()%></p>
                                         </div>
                                     </div>
                                 </th>
@@ -134,11 +134,11 @@
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <p class="mb-0" id="donGia1" style="font-weight: 500;"></p>
+                                    <p class="mb-0" id="donGia1" style="font-weight: 500;"><%=t.getPrice()%></p>
                                 </td>
                                 <td class="align-middle">
                                     <div class="col-md-1 col-lg-1 col-xl-1">
-                                        <a href="#!" class="text-danger" onclick="dele(1)"><i
+                                        <a href="RemoveFromValiServlet?id=<%=t.getId()%>" class="text-danger" onclick="dele(1)"><i
                                                 class="fas fa-trash fa-lg"></i></a>
                                     </div>
                                 </td>
@@ -152,77 +152,9 @@
                         <div class="card-body p-4">
 
                             <div class="row">
-                                <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
-                                    <form>
-                                        <div class="d-flex flex-row pb-3">
-                                            <div class="d-flex align-items-center pe-2">
-                                                <input class="form-check-input" type="radio" name="radioNoLabel"
-                                                       id="radioNoLabel1v"
-                                                       value="" aria-label="..." checked/>
-                                            </div>
-                                            <div class="rounded border w-100 p-3">
-                                                <p class="d-flex align-items-center mb-0">
-                                                    <i class="fab fa-cc-mastercard fa-2x text-dark pe-2"></i>Credit
-                                                    Card
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex flex-row pb-3">
-                                            <div class="d-flex align-items-center pe-2">
-                                                <input class="form-check-input" type="radio" name="radioNoLabel"
-                                                       id="radioNoLabel2v"
-                                                       value="" aria-label="..."/>
-                                            </div>
-                                            <div class="rounded border w-100 p-3">
-                                                <p class="d-flex align-items-center mb-0">
-                                                    <i class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"></i>Debit Card
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex flex-row">
-                                            <div class="d-flex align-items-center pe-2">
-                                                <input class="form-check-input" type="radio" name="radioNoLabel"
-                                                       id="radioNoLabel3v"
-                                                       value="" aria-label="..."/>
-                                            </div>
-                                            <div class="rounded border w-100 p-3">
-                                                <p class="d-flex align-items-center mb-0">
-                                                    <i class="fab fa-cc-paypal fa-2x fa-lg text-dark pe-2"></i>PayPal
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-6" id="num">
-                                    <div class="row">
-                                        <div class="col-12 col-xl-6">
-                                            <div class="form-outline mb-4 mb-xl-5">
-                                                <input type="text" id="typeName" class="form-control-lg" siez="17"
-                                                       placeholder="Name on card"/>
-                                            </div>
-
-                                            <div class="form-outline mb-4 mb-xl-5">
-                                                <input type="text" id="typeExp" class="form-control-lg"
-                                                       placeholder="MM/YY"
-                                                       size="7" id="exp" minlength="7" maxlength="7"
-                                                       style="width: 217.6px"/>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-xl-6">
-                                            <div class="form-outline mb-4 mb-xl-5">
-                                                <input type="text" id="typeText" class="form-control-lg" siez="17"
-                                                       placeholder="Card Number" minlength="19" maxlength="19"/>
-                                            </div>
-
-                                            <div class="form-outline mb-4 mb-xl-5">
-                                                <input type="password" id="typeText text" class="form-control-lg"
-                                                       placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3"
-                                                       maxlength="3" style="width: 217.6px"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-xl-3">
+                                <div class="col-lg-4 col-xl-4"></div>
+                                <div class="col-lg-4 col-xl-4"></div>
+                                <div class="col-lg-4 col-xl-4">
                                     <div class="d-flex justify-content-between" style="font-weight: 500;">
                                         <p class="mb-2">Tạm tính</p>
                                         <p class="mb-2" id="tamTinh">0đ</p>
@@ -230,7 +162,7 @@
 
                                     <div class="d-flex justify-content-between" style="font-weight: 500;">
                                         <p class="mb-0">Dịch vụ khác</p>
-                                        <p class="mb-0">50,000đ</p>
+                                        <p class="mb-0">0đ</p>
                                     </div>
 
                                     <hr class="my-4">

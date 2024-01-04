@@ -29,16 +29,19 @@ public class ValiServlet extends HttpServlet {
             if (vali_List == null) {
                 valiList.add(vl);
                 ses.setAttribute("vali-List",valiList);
+                response.sendRedirect("catelogy.jsp");
+
             }else{
                 valiList=vali_List;
                 boolean exit = false;
-                for (valies v:vali_List) {
+                for (valies v: vali_List) {
                     if(v.getId()==id){
                         exit=true;
                     }
                 }
                     if(!exit){
                         valiList.add(vl);
+                        response.sendRedirect("catelogy.jsp");
                     }
             }
 
