@@ -1,5 +1,5 @@
 //pagination
-var activePage  = document.querySelector('.pagination-active');
+// var activePage  = document.querySelector('.pagination-active');
 var currentPage = parseInt(activePage.textContent);
 changePage(currentPage);
 

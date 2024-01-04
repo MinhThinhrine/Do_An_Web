@@ -108,4 +108,55 @@ public class TourDao {
         }
         return product;
     }
+    public static LinkedList<tour> getListTourbySearch(String search) {
+        LinkedList<tour> listSearch = new LinkedList<>();
+        String sql = "select * from tours WHERE name like ? order by id desc ";
+        Connection connect = ConnectToDatabase.getConnect();
+        try {
+            PreparedStatement pst = connect.prepareStatement(sql);
+            pst.setString(1,"%"+ search +"%");
+
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                int id1 = rs.getInt("id");
+                int idCate = rs.getInt("cateId");
+                int idDis = rs.getInt("discountId");
+                String name = rs.getString("name");
+                String image = rs.getString("image");
+                int price = rs.getInt("price");
+                Date startTime = rs.getDate("startTime");
+                String duration = rs.getString("duration");
+                String schedule = rs.getString("schedule");
+                String description = rs.getString("description");
+                tour tour1 = new tour(id1, idCate, idDis, name, image, price, startTime, duration, schedule, description);
+                listSearch.add(tour1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return listSearch;
+
+    }
+
+        public static void main(String[] args) {
+            // Gọi phương thức getListTourbySearch
+            String searchKeyword = "Cần Thơ";
+            List<tour> searchResults = TourDao.getListTourbySearch(searchKeyword);
+
+            // Hiển thị kết quả
+            if (searchResults.isEmpty()) {
+                System.out.println("Không tìm thấy kết quả cho từ khóa: " + searchKeyword);
+            } else {
+                System.out.println("Kết quả tìm kiếm cho từ khóa: " + searchKeyword);
+                for (tour tour : searchResults) {
+                    System.out.println("Tour ID: " + tour.getId());
+                    System.out.println("Tên tour: " + tour.getName());
+                    // Hiển thị thêm các thông tin khác nếu cần
+                    System.out.println("----------------------------------");
+                }
+            }
+        }
+
+
+
 }

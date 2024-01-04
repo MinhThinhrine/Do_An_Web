@@ -71,6 +71,7 @@
                         </ul>
 
                         <!-- Tab panes -->
+                        <form action="SearchController" method="post" accept-charset="UTF-8" > <!-- form search-->
                         <div class="tab-content">
 
                             <div role="tabpanel" class="tab-pane active fade in" id="tours">
@@ -83,123 +84,112 @@
                                                 <h2>Điểm đi</h2>
 
                                                 <div class="travel-select-icon">
-                                                    <select class="form-control ">
-                                                        <option disabled selected value="default">Chọn địa điểm xuất
-                                                            phát
-                                                        </option>
+                                                    <select class="form-control" name="dxp">
+                                                        <option value="">Chọn địa điểm xuất phát</option>
                                                         <!-- Nam -->
-                                                        <option value="tp-ho-chi-minh">Tp Hồ Chí Minh</option>
-                                                        <option value="hanoi">Hà Nội</option>
+                                                        <option name="dxp" value="Tp Hồ Chí Minh">Tp Hồ Chí Minh</option>
+                                                        <option name="dxp" value="Hà Nội">Hà Nội</option>
                                                         <option disabled value="nam"><-- Nam --></option>
 
-                                                        <option value="an-giang">An Giang</option>
-                                                        <option value="bac-lieu">Bạc Liêu</option>
-                                                        <option value="ben-tre">Bến Tre</option>
-                                                        <option value="binh-dinh">Bình Định</option>
-                                                        <option value="binh-phuoc">Bình Phước</option>
-                                                        <option value="binh-thuan">Bình Thuận</option>
-                                                        <option value="ca-mau">Cà Mau</option>
-                                                        <option value="can-tho">Cần Thơ</option>
-                                                        <option value="dong-nai">Đồng Nai</option>
-                                                        <option value="dong-thap">Đồng Tháp</option>
-                                                        <option value="hau-giang">Hậu Giang</option>
-                                                        <option value="kien-giang">Kiên Giang</option>
-                                                        <option value="long-an">Long An</option>
-                                                        <option value="soc-trang">Sóc Trăng</option>
-                                                        <option value="tay-ninh">Tây Ninh</option>
-                                                        <option value="tra-vinh">Trà Vinh</option>
-                                                        <option value="vinh-long">Vĩnh Long</option>
-                                                        <option value="vinh-phuc">Vĩnh Phúc</option>
-                                                        <option value="vung-tau">Vũng Tàu</option>
+                                                        <option name="dxp" value="An Giang">An Giang</option>
+                                                        <option name="dxp" value="Bạc Liêu">Bạc Liêu</option>
+                                                        <option name="dxp" value="Bến Tre">Bến Tre</option>
+                                                        <option name="dxp" value="Bình Định">Bình Định</option>
+                                                        <option name="dxp" value="Bình Phước">Bình Phước</option>
+                                                        <option name="dxp" value="Bình Thuận">Bình Thuận</option>
+                                                        <option name="dxp" value="Cà Mau">Cà Mau</option>
+                                                        <option name="dxp" value="Cần Thơ">Cần Thơ</option>
+                                                        <!-- Các tỉnh khác ở Nam -->
+
                                                         <!-- Trung -->
                                                         <option disabled value="trung"><-- Trung --></option>
 
-                                                        <option value="da-nang">Đà Nẵng</option>
-                                                        <option value="ha-tinh">Hà Tĩnh</option>
-                                                        <option value="nghe-an">Nghệ An</option>
-                                                        <option value="quang-binh">Quảng Bình</option>
-                                                        <option value="quang-nam">Quảng Nam</option>
-                                                        <option value="quang-ngai">Quảng Ngãi</option>
-                                                        <option value="quang-tri">Quảng Trị</option>
-                                                        <option value="thanh-hoa">Thanh Hóa</option>
+                                                        <option name="dxp" value="Đà Nẵng">Đà Nẵng</option>
+                                                        <option name="dxp" value="Hà Tĩnh">Hà Tĩnh</option>
+                                                        <option name="dxp" value="Nghệ An">Nghệ An</option>
+                                                        <option name="dxp" value="Quảng Bình">Quảng Bình</option>
+                                                        <option name="dxp" value="Quảng Nam">Quảng Nam</option>
+                                                        <option name="dxp" value="Quảng Ngãi">Quảng Ngãi</option>
+                                                        <option name="dxp" value="Quảng Trị">Quảng Trị</option>
+                                                        <option name="dxp" value="Thanh Hóa">Thanh Hóa</option>
+                                                        <!-- Các tỉnh khác ở Trung -->
+
                                                         <!-- Bắc -->
                                                         <option disabled value="bac"><-- Bắc --></option>
 
-                                                        <option value="bac-giang">Bắc Giang</option>
-                                                        <option value="bac-kan">Bắc Kạn</option>
-                                                        <option value="cao-bang">Cao Bằng</option>
-                                                        <option value="ha-giang">Hà Giang</option>
-                                                        <option value="lai-chau">Lai Châu</option>
-                                                        <option value="lang-son">Lạng Sơn</option>
-                                                        <option value="nam-dinh">Nam Định</option>
-                                                        <option value="phu-tho">Phú Thọ</option>
-                                                        <option value="quang-ninh">Quảng Ninh</option>
-                                                        <option value="thai-binh">Thái Bình</option>
-                                                        <option value="thai-nguyen">Thái Nguyên</option>
-                                                        <option value="tuyen-quang">Tuyên Quang</option>
-                                                        <option value="yen-bai">Yên Bái</option>
-
+                                                        <option name="dxp" value="Bắc Giang">Bắc Giang</option>
+                                                        <option name="dxp" value="Bắc Kạn">Bắc Kạn</option>
+                                                        <option name="dxp" value="Cao Bằng">Cao Bằng</option>
+                                                        <option name="dxp" value="Hà Giang">Hà Giang</option>
+                                                        <option name="dxp" value="Lai Châu">Lai Châu</option>
+                                                        <option name="dxp" value="Lạng Sơn">Lạng Sơn</option>
+                                                        <option name="dxp" value="Nam Định">Nam Định</option>
+                                                        <option name="dxp" value="Phú Thọ">Phú Thọ</option>
+                                                        <option name="dxp" value="Quảng Ninh">Quảng Ninh</option>
+                                                        <option name="dxp" value="Thái Bình">Thái Bình</option>
+                                                        <option name="dxp" value="Thái Nguyên">Thái Nguyên</option>
+                                                        <option name="dxp" value="Tuyên Quang">Tuyên Quang</option>
+                                                        <option name="dxp" value="Yên Bái">Yên Bái</option>
                                                     </select><!-- /.select-->
+
                                                 </div><!-- /.travel-select-icon -->
                                                 <h2>Điểm đến</h2>
                                                 <div class="travel-select-icon">
-                                                    <select class="form-control ">
-                                                        <option disabled selected value="default">Chọn địa điểm xuất
-                                                            phát
-                                                        </option>
+                                                    <select class="form-control" name="diemden">
+                                                        <option value="">Chọn điểm đến</option>
                                                         <!-- Nam -->
-                                                        <option value="tp-ho-chi-minh">Tp Hồ Chí Minh</option>
-                                                        <option value="hanoi">Hà Nội</option>
+                                                        <option name="diemden" value="Tp Hồ Chí Minh">Tp Hồ Chí Minh</option>
+                                                        <option name="diemden" value="Hà Nội">Hà Nội</option>
                                                         <option disabled value="nam"><-- Nam --></option>
 
-                                                        <option value="an-giang">An Giang</option>
-                                                        <option value="bac-lieu">Bạc Liêu</option>
-                                                        <option value="ben-tre">Bến Tre</option>
-                                                        <option value="binh-dinh">Bình Định</option>
-                                                        <option value="binh-phuoc">Bình Phước</option>
-                                                        <option value="binh-thuan">Bình Thuận</option>
-                                                        <option value="ca-mau">Cà Mau</option>
-                                                        <option value="can-tho">Cần Thơ</option>
-                                                        <option value="dong-nai">Đồng Nai</option>
-                                                        <option value="dong-thap">Đồng Tháp</option>
-                                                        <option value="hau-giang">Hậu Giang</option>
-                                                        <option value="kien-giang">Kiên Giang</option>
-                                                        <option value="long-an">Long An</option>
-                                                        <option value="soc-trang">Sóc Trăng</option>
-                                                        <option value="tay-ninh">Tây Ninh</option>
-                                                        <option value="tra-vinh">Trà Vinh</option>
-                                                        <option value="vinh-long">Vĩnh Long</option>
-                                                        <option value="vinh-phuc">Vĩnh Phúc</option>
-                                                        <option value="vung-tau">Vũng Tàu</option>
+                                                        <option name="diemden" value="An Giang">An Giang</option>
+                                                        <option name="diemden" value="Bạc Liêu">Bạc Liêu</option>
+                                                        <option name="diemden" value="Bến Tre">Bến Tre</option>
+                                                        <option name="diemden" value="Bình Định">Bình Định</option>
+                                                        <option name="diemden" value="Bình Phước">Bình Phước</option>
+                                                        <option name="diemden" value="Bình Thuận">Bình Thuận</option>
+                                                        <option name="diemden" value="Cà Mau">Cà Mau</option>
+                                                        <option name="diemden" value="Cần Thơ">Cần Thơ</option>
+                                                        <option name="diemden" value="Đồng Nai">Đồng Nai</option>
+                                                        <option name="diemden" value="Đồng Tháp">Đồng Tháp</option>
+                                                        <option name="diemden" value="Hậu Giang">Hậu Giang</option>
+                                                        <option name="diemden" value="Kiên Giang">Kiên Giang</option>
+                                                        <option name="diemden" value="Long An">Long An</option>
+                                                        <option name="diemden" value="Sóc Trăng">Sóc Trăng</option>
+                                                        <option name="diemden" value="Tây Ninh">Tây Ninh</option>
+                                                        <option name="diemden" value="Trà Vinh">Trà Vinh</option>
+                                                        <option name="diemden" value="Vĩnh Long">Vĩnh Long</option>
+                                                        <option name="diemden" value="Vĩnh Phúc">Vĩnh Phúc</option>
+                                                        <option name="diemden" value="Vũng Tàu">Vũng Tàu</option>
                                                         <!-- Trung -->
-                                                        <option disabled value="trung"><-- Trung --></option>
+                                                        <option disabled name="diemden" value="trung"><-- Trung --></option>
 
-                                                        <option value="da-nang">Đà Nẵng</option>
-                                                        <option value="ha-tinh">Hà Tĩnh</option>
-                                                        <option value="nghe-an">Nghệ An</option>
-                                                        <option value="quang-binh">Quảng Bình</option>
-                                                        <option value="quang-nam">Quảng Nam</option>
-                                                        <option value="quang-ngai">Quảng Ngãi</option>
-                                                        <option value="quang-tri">Quảng Trị</option>
-                                                        <option value="thanh-hoa">Thanh Hóa</option>
+                                                        <option name="diemden" value="Đà Nẵng">Đà Nẵng</option>
+                                                        <option name="diemden" value="Hà Tĩnh">Hà Tĩnh</option>
+                                                        <option name="diemden" value="Nghệ An">Nghệ An</option>
+                                                        <option name="diemden" value="Quảng Bình">Quảng Bình</option>
+                                                        <option name="diemden" value="Quảng Nam">Quảng Nam</option>
+                                                        <option name="diemden" value="Quảng Ngãi">Quảng Ngãi</option>
+                                                        <option name="diemden" value="Quảng Trị">Quảng Trị</option>
+                                                        <option name="diemden" value="Thanh Hóa">Thanh Hóa</option>
                                                         <!-- Bắc -->
                                                         <option disabled value="bac"><-- Bắc --></option>
 
-                                                        <option value="bac-giang">Bắc Giang</option>
-                                                        <option value="bac-kan">Bắc Kạn</option>
-                                                        <option value="cao-bang">Cao Bằng</option>
-                                                        <option value="ha-giang">Hà Giang</option>
-                                                        <option value="lai-chau">Lai Châu</option>
-                                                        <option value="lang-son">Lạng Sơn</option>
-                                                        <option value="nam-dinh">Nam Định</option>
-                                                        <option value="phu-tho">Phú Thọ</option>
-                                                        <option value="quang-ninh">Quảng Ninh</option>
-                                                        <option value="thai-binh">Thái Bình</option>
-                                                        <option value="thai-nguyen">Thái Nguyên</option>
-                                                        <option value="tuyen-quang">Tuyên Quang</option>
-                                                        <option value="yen-bai">Yên Bái</option>
+                                                        <option name="diemden" value="Bắc Giang">Bắc Giang</option>
+                                                        <option name="diemden" value="Bắc Kạn">Bắc Kạn</option>
+                                                        <option name="diemden" value="Cao Bằng">Cao Bằng</option>
+                                                        <option name="diemden" value="Hà Giang">Hà Giang</option>
+                                                        <option name="diemden" value="Lai Châu">Lai Châu</option>
+                                                        <option name="diemden" value="Lạng Sơn">Lạng Sơn</option>
+                                                        <option name="diemden" value="Nam Định">Nam Định</option>
+                                                        <option name="diemden" value="Phú Thọ">Phú Thọ</option>
+                                                        <option name="diemden" value="Quảng Ninh">Quảng Ninh</option>
+                                                        <option name="diemden" value="Thái Bình">Thái Bình</option>
+                                                        <option name="diemden" value="Thái Nguyên">Thái Nguyên</option>
+                                                        <option name="diemden" value="Tuyên Quang">Tuyên Quang</option>
+                                                        <option name="diemden" value="Yên Bái">Yên Bái</option>
+                                                    </select><!-- /.select -->
 
-                                                    </select><!-- /.select-->
                                                 </div><!-- /.travel-select-icon -->
 
                                             </div><!--/.single-tab-select-box-->
@@ -227,16 +217,17 @@
                                         <!--													</div>&lt;!&ndash;/.single-tab-select-box&ndash;&gt;-->
                                         <!--												</div>&lt;!&ndash;/.col&ndash;&gt;-->
 
-                                        <div class="col-lg-6 col-md-1 col-sm-4">
+                                        <div class="col-lg-6 col-md-1 col-sm-4" style="display: none">
                                             <div class="single-tab-select-box">
                                                 <h2>Số Ngày Đi</h2>
                                                 <div class="travel-select-icon">
                                                     <select class="form-control ">
-                                                        <option value="default">2 ngày 1 đêm</option><!-- /.option-->
-                                                        <option value="3">3 ngày 2 đêm</option><!-- /.option-->
-                                                        <option value="4">4 ngày 3 đêm</option><!-- /.option-->
-                                                        <option value="5">5 ngày 4 đêm</option><!-- /.option-->
-                                                        <option value="6">6 ngày trở lên</option><!-- /.option-->
+                                                        <option  value="null">2 ngày 1 đêm</option >
+                                                        <option  value="2">2 ngày 1 đêm</option><!-- /.option-->
+                                                        <option  value="3">3 ngày 2 đêm</option><!-- /.option-->
+                                                        <option  value="4">4 ngày 3 đêm</option><!-- /.option-->
+                                                        <option  value="5">5 ngày 4 đêm</option><!-- /.option-->
+                                                        <option  value="6">6 ngày trở lên</option><!-- /.option-->
 
                                                     </select><!-- /.select-->
                                                 </div><!-- /.travel-select-icon -->
@@ -293,10 +284,7 @@
                                         <div class="clo-sm-7">
                                             <div class="about-btn travel-mrt-0 pull-right">
 
-                                                <button id="searchButton" class="about-view travel-btn">
-                                                    <a href="${pageContext.request.contextPath}/CategorieServlet"
-                                                       style="text-decoration: none; text-transform: uppercase;width: 180px; padding: 20px;height: 60px;">tìm
-                                                        kiếm
+                                                <button id="searchButton" type="submit" class="about-view travel-btn">
                                                     <i class="fa-solid fa-magnifying-glass"></i>
                                                     </a>
                                                 </button>
@@ -309,7 +297,9 @@
                                 </div><!--/.tab-para-->
 
                             </div><!--/.tabpannel-->
+
                         </div><!--/.tab content-->
+                        </form><!--/.form search-->
                     </div><!--/.desc-tabs-->
                 </div><!--/.single-travel-box-->
             </div><!--/.col-->
@@ -481,7 +471,7 @@
 
                             <div class="col-md-8">
                                 <div class="filtr-item" style="height: 310px;width: 750px;">
-                                    <img src="assets/images/item/14.jpeg" alt="portfolio image"/>
+                                    <img src="assets/images/item/14.jpg" alt="portfolio image"/>
                                     <div class="item-title">
                                         <a href="detail.jsp">
                                             Vũng Tàu
@@ -701,7 +691,7 @@
                 <div class="col-md-3 col-sm-6" id="6">
                     <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
 
-                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/6.webp"
+                        <img style="cursor: pointer" class="packageImage" src="assets/images/item/6.jpg"
                              alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tây Ninh - Núi Bà Đen<span class="pull-right"
@@ -769,7 +759,7 @@
 
                 <div class="col-md-3 col-sm-6" id="8">
                      <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
-                        <img class="packageImage" src="assets/images/item/8.png" alt="package-place">
+                        <img class="packageImage" src="assets/images/item/8.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Long An - Bến Lức<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
                             </h3>
@@ -835,7 +825,7 @@
 
                 <div class="col-md-3 col-sm-6" id="10">
                      <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
-                        <img class="packageImage" src="assets/images/item/10.webp" alt="package-place">
+                        <img class="packageImage" src="assets/images/item/10.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Bình Dương - Suối Tiên<span class="pull-right"
                                                             style="margin-top: 30px;;font-size: 15px;">1,500,000 - 2,500,000đ</span>
@@ -902,7 +892,7 @@
 
                 <div class="col-md-3 col-sm-6" id="12">
                      <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
-                        <img class="packageImage" src="assets/images/item/12.webp" alt="package-place">
+                        <img class="packageImage" src="assets/images/item/12.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Đồng Nai - Khu du lịch Bửu Long<span class="pull-right"
                                                                      style="margin-top: 8px;;font-size: 15px;">2,500,000 - 4,500,000đ</span>
@@ -969,7 +959,7 @@
 
                 <div class="col-md-3 col-sm-6" id="14">
                      <div class="single-package-item">                         <p style="font-size: 30px;color: #00d8ff;font-family: Arial" class="overlay-text">chi tiết</p>
-                        <img class="packageImage" src="assets/images/item/14.jpeg" alt="package-place">
+                        <img class="packageImage" src="assets/images/item/14.jpg" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Tp Hồ Chí Minh - Vũng Tàu<span class="pull-right"
                                                                style="margin-top: 8px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
@@ -7449,7 +7439,7 @@
                         <div class="thumbnail">
                             <h2>tin mới <span> tháng 11 - 2023</span></h2>
                             <div class="thumbnail-img">
-                                <img src="assets/images/item/14.jpeg" alt="blog-img" style="height:220px; width: 110%;">
+                                <img src="assets/images/item/14.jpg" alt="blog-img" style="height:220px; width: 110%;">
                                 <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
 
                             </div><!--/.thumbnail-img-->

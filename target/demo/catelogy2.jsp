@@ -1,12 +1,21 @@
+<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" isELIgnored= "false"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.bean.tour" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.LinkedList" %>
+<%@include file="common/tablib.jsp" %>
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="vi">
 <head>
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -21,19 +30,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.js" defer></script>
     <!-- favicon img -->
-    <link rel="shortcut icon" type="image/icon" href="../assets/logo/favicon.png"/>
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
 
     <!--font-awesome.min.css-->
-    <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
     <!--animate.css-->
-    <link rel="stylesheet" href="../assets/css/animate.css"/>
+    <link rel="stylesheet" href="assets/css/animate.css"/>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <link rel="stylesheet" href="../assets/css/catelogy.css">
+    <link rel="stylesheet" href="assets/css/catelogy.css">
     <!--hover.css-->
-    <link rel="stylesheet" href="../assets/css/hover-min.css">
+    <link rel="stylesheet" href="assets/css/hover-min.css">
 
     <title>Sản Phẩm</title>
 </head>
@@ -45,33 +55,35 @@
             <div class="row head">
                 <div class="col-sm-2">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="index.jsp">
                             tour<span>Nest</span>
                         </a>
                     </div><!-- /.logo-->
                 </div><!-- /.col-->
-                <div class="col-sm-2"></div>
-                <div class="col-sm-8">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-9">
                     <div class="main-menu">
                         <ul class="nav" style="text-align: right">
-                            <li><a href="index.html">Trang Chủ</a></li>
-                            <li><a href="index.html#spo">Ưu Đãi</a></li>
-                            <li><a href="index.html#gallery">Tour Hot</a></li>
-                            <li><a href="index.html#pack">Gói Du Lịch</a></li>
-                            <li><a href="index.html#blog">Tin Tức</a></li>
-                            <li><a href="index.html#feedback">Đánh Giá</a></li>
-                            <li><a href="index.html#service">Liên Hệ</a></li>
+                            <li><a href="index.jsp">Trang Chủ</a></li>
+                            <li><a href="index.jsp#spo">Ưu Đãi</a></li>
+                            <li><a href="index.jsp#gallery">Tour Hot</a></li>
+                            <li><a href="index.jsp#pack">Gói Du Lịch</a></li>
+                            <li><a href="index.jsp#blog">Tin Tức</a></li>
+                            <li><a href="index.jsp#feedback">Đánh Giá</a></li>
+                            <li><a href="index.jsp#service">Liên Hệ</a></li>
+                            <li class="smooth-menu"><a href="shopcart.jsp" id="myTour"><i class="fa fa-suitcase-rolling fa-2x"
+                                                                   style="margin-top: -10px;color: #00d8fe"></i></a>
+                            </li>
                             <li>
                                 <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
-                                        href="login.html">Đặt Tour</a>
+                                        href="login.jsp">Đăng Nhập</a>
                                 </button>
                             </li><!--/.project-btn-->
                             <li id="icon-user" style="display: block;padding-top: 24px">
                                 <i class="fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
                                 <ul id="service_account" style="margin-top: -5px">
-                                    <li><a id="myInfor" href="infor.html">Thông tin tài khoản</a></li>
-                                    <li><a id="myTour" href="shopcart.html">VALI</a></li>
-                                    <li><a id="log_out" href="register.html">Đăng xuất</a></li>
+                                    <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
+                                    <li><a id="log_out" href="register.jsp">Đăng xuất</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -83,6 +95,7 @@
     </div><!-- /.container -->
     </div><!-- /.header-area -->
 </header><!-- /.top-area -->
+
 <div class="con">
     <div class="bg-white rounded d-flex align-items-center justify-content-between" id="header">
         <button class="btn btn-hide text-uppercase" type="button" data-toggle="collapse" data-target="#filterbar"
@@ -102,12 +115,12 @@
                     </select></li>
                     <li class="nav-item d-inline-flex align-items-center justify-content-between mb-lg-0 mb-3">
                         <div class="d-inline-flex align-items-center mx-lg-2" id="select2">
-                            <!--                            <div class="pl-2">Products:</div>-->
-                            <!--                            <select name="pro" id="pro">-->
-                            <!--                                <option value="18">18</option>-->
-                            <!--                                <option value="19">19</option>-->
-                            <!--                                <option value="20">20</option>-->
-                            <!--                            </select>-->
+                            <div class="pl-2">Products:</div>
+                            <select name="pro" id="pro">
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                            </select>
                         </div>
                         <div class="font-weight-bold mx-2 result"><span class="nums">9 </span>from 210</div>
                     </li>
@@ -121,20 +134,20 @@
             <div class="box border-bottom">
                 <div class="form-group text-center">
                     <div class="btn-group" data-toggle="buttons"><label class="btn btn-success form-check-label"> <input
-                            class="form-check-input" type="radio"> Ban Đầu </label> <label
+                            class="form-check-input" type="radio"> Reset </label> <label
                             class="btn btn-success form-check-label active"> <input class="form-check-input"
                                                                                     type="radio" checked> Áp Dụng
                     </label>
                     </div>
                 </div>
-                <div><label class="tick">Mới<input type="checkbox" checked="checked"> <span class="check"></span>
+                <div><label class="tick">Hot<input type="checkbox" checked="checked"> <span class="check"></span>
                 </label></div>
                 <div><label class="tick">Giảm giá<input type="checkbox"> <span class="check"></span> </label></div>
             </div>
             <div class="box border-bottom">
                 <div class="box-label text-uppercase d-flex align-items-center">Khu vực
                     <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box"
-                            aria-expanded="false" aria-controls="inner-box" id="out" onclick="outerFilter()"><span
+                            aria-expanded="false" aria-controls="inner-box" id="out" ><span
                             class="fas fa-plus"></span></button>
                 </div>
                 <div id="inner-box" class="collapse mt-2 mr-1">
@@ -147,9 +160,10 @@
                 </div>
             </div>
             <div class="box border-bottom">
-                <div class="box-label text-uppercase d-flex align-items-center">Tỉnh thành
+                <div class="box-label text-uppercase d-flex align-items-center">Tỉnh Thành
                     <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box2"
-                            aria-expanded="false" aria-controls="inner-box2"><span class="fas fa-plus"></span></button>
+                            aria-expanded="false" aria-controls="inner-box2"><span
+                            class="fas fa-plus"></span></button>
                 </div>
                 <div id="inner-box2" class="collapse mt-2 mr-1">
                     <div class="my-1"><label class="tick">Tp Hồ Chí Minh <input type="checkbox"> <span
@@ -162,6 +176,23 @@
                     </label></div>
                     <div class="my-1"><label class="tick">Phú Quốc <input type="checkbox"> <span class="check"></span>
                     </label></div>
+                </div>
+            </div>
+            <div class="box border-bottom">
+                <div class="box-label text-uppercase d-flex align-items-center">Theo Mùa
+                    <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box3"
+                            aria-expanded="false" aria-controls="inner-box3"><span class="fas fa-plus"></span></button>
+                </div>
+                <div id="inner-box3" class="collapse mt-2 mr-1">
+                    <div class="my-1"><label class="tick">Xuân <input type="checkbox"> <span
+                            class="check"></span> </label></div>
+                    <div class="my-1"><label class="tick">Hạ <input type="checkbox"> <span class="check"></span>
+                    </label></div>
+                    <div class="my-1"><label class="tick">Thu <input type="checkbox"> <span
+                            class="check"></span> </label></div>
+                    <div class="my-1"><label class="tick">Đông <input type="checkbox"> <span class="check"></span>
+                    </label></div>
+
                 </div>
             </div>
             <div class="box border-bottom">
@@ -224,22 +255,34 @@
         </div>
         <div id="products">
             <div class="row mx-0">
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="1">
+                <%List<tour> listTourBySearch = (List<tour>) request.getAttribute("tours");%>
+                <%
+                    int s = listTourBySearch.size();
+                    if (listTourBySearch.isEmpty()) {
+                %>
+                <div>Không tìm thấy sản phẩm!</div>
+                <%
+                } else { %>
+                <% for (tour t : listTourBySearch) { %>
+                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="<%=t.getId() %>">
                     <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/1.jpg"
-                             alt="package-place">
+                        <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">
+                            <img style="cursor: pointer" class="packageImage" src="assets/images/item/<%=t.getImage()%>"
+                                 alt="package-place">
+                        </a>
+
                         <div class="single-package-item-txt">
-                            <h3>Cần Thơ - Châu Đốc<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
+                            <h3><%=t.getName()%><span class="pull-right" style="margin-top: 30px;font-size: 15px;"><%=t.getPrice()%></span>
                             </h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-clock-o"></i> 3 ngày 2 đêm
+												<i class="fa fa-clock-o"></i> <%=t.getDuration()%>
 											</span>
                                 </p>
                                 <p>
 											<span>
-												<i class="fa fa-location-arrow"></i> Cần Thơ - Châu Đốc - Miếu Bà Chúa Xứ
+												<i class="fa fa-location-arrow"></i> <%=t.getSchedule()%>
 											</span>
                                 </p>
                                 <p>
@@ -248,324 +291,28 @@
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="about-btn">
+                            <div class="about-btn" style="float: left;width: 120px">
                                 <button class="about-view packages-btn" id="btn">
                                     book now
                                 </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="2">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/2.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Phú Quốc<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">4,000,000 - 6,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Thành phố Hồ Chí Minh - Phú Quốc
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    book now
+                            </div>
+                            <div class="about-btn"style="width: 0px">
+                                <a href="${pageContext.request}/ValiServlet?id=<%=t.getId()%>">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i><i class="fa fa-suitcase-rolling" style="padding-left: 6px;" ></i>
                                 </button>
-                            </div><!--/.about-btn-->
+                                </a>
+                            </div>
+                            <!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
+
                     </div><!--/.single-package-item-->
 
                 </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="3">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/3.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Cần Thơ - Cồn Sơn-Cồn Ấu<span class="pull-right"
-                                                              style="margin-top: 8px;;font-size: 15px;">3,000,000 - 4,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 3 ngày 2 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Cần Thơ - KDL Cồn Sơn - Cồn Ấu
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    book now
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="4">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/4.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Mỹ Tho - Bến Tre<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Mỹ Tho - Bến Tre
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    book now
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="5">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/5.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Củ Chi - Địa đạo<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">1,000,000 - 2,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Củ Chi - Địa đạo Củ Chi
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    book now
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="6">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/6.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Tây Ninh - Núi Bà Đen<span class="pull-right"
-                                                           style="margin-top: 30px;;font-size: 15px;">1,500,000 - 2,500,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Tây Ninh - Núi Bà Đen
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    book now
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="7">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/7.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Đồng Tháp - Mộc Hóa<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">3,000,000 - 5,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Đồng Tháp - Mộc Hóa
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    book now
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="8">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/8.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Long An - Bến Lức<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,000,000 - 3,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Long An - Bến Lức
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    book now
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="9">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/9.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Tiền Giang - Cai Lậy<span class="pull-right" style="margin-top: 30px;;font-size: 15px;">2,500,000 - 4,000,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Tiền Giang - Cai Lậy
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    book now
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="10">
-                    <div class="single-package-item">
-                        <img style="cursor: pointer" class="packageImage" src="../assets/images/item/10.jpg"
-                             alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Bình Dương - Suối Tiên<span class="pull-right"
-                                                            style="margin-top: 30px;;font-size: 15px;">1,500,000 - 2,500,000đ</span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-clock-o"></i> 4 ngày 3 đêm
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-location-arrow"></i> Tp Hồ Chí Minh - Bình Dương - Suối Tiên
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
-											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    book now
-                                </button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
+                <% } %>
+                <% } %>
+            </div>
+            </div>
 
                 <div class="pagination">
                     <nav class="pagination-container">
@@ -693,9 +440,9 @@
 </footer><!-- /.footer-copyright-->
 <!-- footer-copyright end -->
 
-<script src="../assets/js/modify.js"></script>
-<script src="../assets/js/custom.js"></script>
-<script src="../assets/js/catelogy.js"></script>
+<script src="assets/js/modify.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/catelogy.js"></script>
 
 
 </body>

@@ -272,7 +272,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <th scope="row">
                                             <div class="d-flex align-items-center">
 
-                                                <img src="assets/images/item/6.webp" class="img-fluid rounded-3"
+                                                <img src="assets/images/item/6.jpg" class="img-fluid rounded-3"
                                                      style="width: 120px;" alt="Book">
                                                 <div class="flex-column ms-4">
                                                     <p class="mb-2">Tây Ninh - Núi Bà Đen</p>
