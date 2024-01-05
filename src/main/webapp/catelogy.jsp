@@ -12,7 +12,7 @@
 <%@include file="common/tablib.jsp" %>
 <%
 TourDao td = new TourDao();
-    List<tour> tourss = td.findAll();
+List<tour> tourss = (List<tour>) request.getAttribute("tours");
 %>
 <!DOCTYPE html>
 <html class="no-js" lang="vi">

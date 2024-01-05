@@ -39,8 +39,6 @@ public class SearchController extends HttpServlet {
         for (tour t : searchResults) {
             String input = t.getName();
 
-//...
-
 // Nếu cả hai điểm đều không được nhập
             if ((startInput == null || startInput.isEmpty()) && (endInput == null || endInput.isEmpty())) {
                 kqtimkiem.add(t);

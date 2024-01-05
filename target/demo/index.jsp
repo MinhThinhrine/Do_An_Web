@@ -71,7 +71,7 @@
                         </ul>
 
                         <!-- Tab panes -->
-                        <form action="SearchController" method="post" accept-charset="UTF-8" > <!-- form search-->
+                        <form action="SearchController" method="post" > <!-- form search-->
                         <div class="tab-content">
 
                             <div role="tabpanel" class="tab-pane active fade in" id="tours">
@@ -284,7 +284,7 @@
                                         <div class="clo-sm-7">
                                             <div class="about-btn travel-mrt-0 pull-right">
                                                 <button id="searchButton" type="submit" class="about-view travel-btn">
-                                                    <a href="catelogy.jsp"
+                                                    <a
                                                        style="text-decoration: none; text-transform: uppercase;width: 180px; padding: 20px;height: 60px;">tìm
                                                         kiếm
                                                         <i class="fa-solid fa-magnifying-glass"></i>
