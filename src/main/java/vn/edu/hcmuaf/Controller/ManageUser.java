@@ -1,6 +1,6 @@
 package vn.edu.hcmuaf.Controller;
 
-import vn.edu.hcmuaf.DAO.userDAO;
+import vn.edu.hcmuaf.DAO.UserDAO;
 import vn.edu.hcmuaf.bean.User;
 
 import javax.servlet.ServletException;
@@ -17,38 +17,33 @@ public class ManageUser extends HttpServlet {
 
 
 
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        HttpSession session = request.getSession();
+        User a = (User) session.getAttribute("user");
+
+        UserDAO dao = new UserDAO();
+
+        List<User> listA = dao.getAllUser();
+
+
+        request.setAttribute("listA", listA);
+
+        request.getRequestDispatcher("user.jsp").forward(request, response);
+
+    }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        HttpSession session = request.getSession();
-        User a = (User) session.getAttribute("user");
-        int id = a.getId();
-        userDAO dao = new userDAO();
-
-        List<User> list = dao.getAllUser();
-
-
-        request.setAttribute("listA", list);
-
-        request.getRequestDispatcher("user.jsp").forward(request, response);
+       processRequest(request,response);
     }
 
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        response.setContentType("text/html;charset=UTF-8");
-//        HttpSession session = request.getSession();
-//        User a = (User) session.getAttribute("user");
-//        int id = a.getId();
-//        userDAO dao = new userDAO();
-//
-//        List<User> list = dao.getAllUser();
-//
-//
-//        request.setAttribute("listA", list);
-//
-//        request.getRequestDispatcher("user.jsp").forward(request, response);
+        processRequest(request,response);
     }
 }

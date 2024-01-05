@@ -1,6 +1,7 @@
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page import="java.util.List" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -58,6 +59,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
+<h1>Contents of listA:</h1>
+<c:out value="${listA}" />
+<c:forEach items="${listA}" var="user">
+    <p>User ID: ${user.id}</p>
+    <p>Username: ${user.userName}</p>
+    <!-- Các thuộc tính khác của User -->
+    <hr/>
+</c:forEach>
 <section id="container">
     <!--header start-->
     <header class="header fixed-top clearfix">
@@ -242,33 +251,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <% List<User> userList = (List<User>)request.getAttribute("listA"); %>
-                                    <% for (User user : userList) { %>
-                                    <tr id="<%= user.getId() %>">
-                                        <th scope="row">
-                                            <div></div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;"><%= user.getEmail() %></p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px"><%= user.getPhoneNumber() %></div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div><%= user.getAddress() %></div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;"><%=user.getUserName() %></p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <a href="#!" class="text-danger" onclick="deleteUser(<%= user.getId() %>)">
-                                                    <i class="fa-solid fa-user-minus" style="color: #27511f;"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <% } %>
+
+
                                     </tbody>
                                 </table>
                             </div>

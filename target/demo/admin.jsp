@@ -91,14 +91,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href="admin.jsp">
+                    <a  href="ManagerProduct">
                         <i class="fa fa-list-alt"></i>
                         <span>Quản lí sản phẩm</span>
                     </a>
                 </li>
 
-                <li class="sub-menu">
-                    <a href="order.jsp">
+                <li>
+                    <a href="ManagerOrder">
                         <i class="fa fa-book"></i>
                         <span>Quản lí đơn hàng</span>
                     </a>
