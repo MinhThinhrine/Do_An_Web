@@ -12,7 +12,7 @@ public class JDBIConnector {
     private static Jdbi jdbi;
     static   String url = "jdbc:mysql://localhost:3306/DA_WEB";
     static String username = "root";
-    static  String password = "thinh3011";
+    static  String password = "";
     private static void makeConnect() {
         MysqlDataSource dataSource = new MysqlDataSource();
         dataSource.setURL(url);
