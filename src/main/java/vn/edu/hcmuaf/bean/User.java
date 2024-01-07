@@ -1,5 +1,8 @@
 package vn.edu.hcmuaf.bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User extends valies{
     private int id;
     private String userName;
@@ -8,7 +11,7 @@ public class User extends valies{
     private String phoneNumber;
     private String address;
     private int roleId;
-
+    private static List<User> users = new ArrayList<>();
     public User() {
     }
 
@@ -23,6 +26,11 @@ public class User extends valies{
         this.password = password;
     }
 
+    public User(String userName, String email, String password) {
+    this.userName = userName;
+        this.email = email;
+        this.password = password;
+    }
     public User(int id, String userName, String email, String password, String phoneNumber, String address, int roleId) {
         this.id = id;
         this.userName = userName;
@@ -89,7 +97,9 @@ public class User extends valies{
     public void setRoleId(int roleId) {
         this.roleId = roleId;
     }
-
+    public static void addUser(User user) {
+        users.add(user);
+    }
     @Override
     public String toString() {
         return "user{" +
@@ -101,5 +111,13 @@ public class User extends valies{
                 ", address='" + address + '\'' +
                 ", roleId=" + roleId +
                 '}';
+    }
+    public static boolean isEmailExists(String email) {
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

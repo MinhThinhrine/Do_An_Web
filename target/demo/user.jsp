@@ -1,6 +1,6 @@
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page import="java.util.List" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!--A Design by W3layouts
 Author: W3layout
@@ -59,176 +59,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
-<h1>Contents of listA:</h1>
-<c:out value="${listA}" />
-<c:forEach items="${listA}" var="user">
-    <p>User ID: ${user.id}</p>
-    <p>Username: ${user.userName}</p>
-    <!-- Các thuộc tính khác của User -->
-    <hr/>
-</c:forEach>
+
+
 <section id="container">
-    <!--header start-->
-    <header class="header fixed-top clearfix">
-        <!--logo start-->
-        <div class="brand">
-            <a href="admin.jsp" class="logo">
-                ADMIN
-            </a>
-            <div class="sidebar-toggle-box">
-                <div class="fa fa-bars"></div>
-            </div>
-        </div>
-        <!--logo end-->
+    <!-- main-menu Start -->
+    <%@include file="admin/header.jsp" %>
+    <!-- main-menu End -->
 
-        <div class="top-nav clearfix">
-            <!--search & user info start-->
-            <ul class="nav pull-right top-menu">
-
-                <!-- user login dropdown start-->
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <img alt="" src="admin/images/3.png">
-                        <span class="username">admin</span>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu extended logout">
-
-                        <li><a href="login.jsp"><i class="fa fa-key"></i> Log Out</a></li>
-                    </ul>
-                </li>
-                <!-- user login dropdown end -->
-
-            </ul>
-            <!--search & user info end-->
-        </div>
-    </header>
-    <!--header end-->
-    <!--sidebar start-->
-    <aside>
-        <div id="sidebar" class="nav-collapse">
-            <!-- sidebar menu start-->
-            <div class="leftside-navigation">
-                <ul class="sidebar-menu" id="nav-accordion">
-                    <li>
-                        <a  href="admin.jsp">
-                            <i class="fa fa-list-alt"></i>
-                            <span>Quản lí sản phẩm</span>
-                        </a>
-                    </li>
-
-                    <li class="sub-menu">
-                        <a href="order.jsp">
-                            <i class="fa fa-book"></i>
-                            <span>Quản lí đơn hàng</span>
-                        </a>
-
-                    </li>
-                    <li>
-                        <a class="active" href="user.jsp">
-                            <i class="fa fa-user"></i>
-                            <span>Quản lí khách hàng</span>
-                        </a>
-                    </li>
-
-                    <li class="sub-menu">
-                        <a href="bank.jsp">
-                            <i class="fa fa-tasks"></i>
-                            <span>Quản lý hệ thống thanh toán</span>
-                        </a>
-
-                    </li>
-
-
-                    </li>
-                    <li class="sub-menu">
-                        <a href="statistical.jsp">
-                            <i class=" fa fa-bar-chart-o"></i>
-                            <span>Thống kê và báo cáo</span>
-                        </a>
-
-                    </li>
-                    <li class="sub-menu">
-                        <a href="customerContact.jsp">
-                            <i class="fa fa-comment"></i>
-                            <span>Quản lý đánh giá và hỗ trợ</span>
-                        </a>
-
-                    </li>
-
-                    <li>
-                        <a href="index.jsp">
-                            <i class="fa fa-home"></i>
-                            <span>Trang chủ</span>
-                        </a>
-                    </li>
-                </ul>            </div>
-            <!-- sidebar menu end-->
-        </div>
-    </aside>
-    <!--sidebar end-->
     <!--main content start-->
     <section id="main-content">
-<%--        <section class="wrapper">--%>
-<%--            <!-- //market-->--%>
-<%--            <div class="market-updates">--%>
-<%--                <div class="col-md-3 market-update-gd">--%>
-<%--                    <div class="market-update-block clr-block-2">--%>
-<%--                        <div class="col-md-4 market-update-right">--%>
-<%--                            <i class="fa fa-eye"> </i>--%>
-<%--                        </div>--%>
-<%--                        <div class="col-md-8 market-update-left">--%>
-<%--                            <h4>Người xem </h4>--%>
-<%--                            <h3>13,500</h3>--%>
-<%--                            <p>Hãy đến với chúng tôi !</p>--%>
-<%--                        </div>--%>
-<%--                        <div class="clearfix"> </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--                <div class="col-md-3 market-update-gd">--%>
-<%--                    <div class="market-update-block clr-block-1">--%>
-<%--                        <div class="col-md-4 market-update-right">--%>
-<%--                            <i class="fa fa-users" ></i>--%>
-<%--                        </div>--%>
-<%--                        <div class="col-md-8 market-update-left">--%>
-<%--                            <h4>Khách hàng</h4>--%>
-<%--                            <h3>1,250</h3>--%>
-<%--                            <p>Thật tuyệt vời !</p>--%>
-<%--                        </div>--%>
-<%--                        <div class="clearfix"> </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--                <div class="col-md-3 market-update-gd">--%>
-<%--                    <div class="market-update-block clr-block-3">--%>
-<%--                        <div class="col-md-4 market-update-right">--%>
-<%--                            <i class="fa fa-usd"></i>--%>
-<%--                        </div>--%>
-<%--                        <div class="col-md-8 market-update-left">--%>
-<%--                            <h4>Tour đã giảm giá</h4>--%>
-<%--                            <h3>199</h3>--%>
-<%--                            <p>Giá cả hợp lí !</p>--%>
-<%--                        </div>--%>
-<%--                        <div class="clearfix"> </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--                <div class="col-md-3 market-update-gd">--%>
-<%--                    <div class="market-update-block clr-block-4">--%>
-<%--                        <div class="col-md-4 market-update-right">--%>
-<%--                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>--%>
-<%--                        </div>--%>
-<%--                        <div class="col-md-8 market-update-left">--%>
-<%--                            <h4>Tour đã bán</h4>--%>
-<%--                            <h3>1,500</h3>--%>
-<%--                            <p>Tuyệt vời Việt Nam !</p>--%>
-<%--                        </div>--%>
-<%--                        <div class="clearfix"> </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--                <div class="clearfix"> </div>--%>
-<%--            </div>--%>
 
-
-<%--        </section>--%>
 
         <div  id="container11" style="height: 100%;">
             <section class="h-100 h-custom">
@@ -240,18 +80,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <table class="table">
                                     <thead>
                                     <tr>
-
-                                        <th scope="col">Họ và tên</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Username</th>
 
                                         <th scope="col">Email</th>
                                         <th scope="col" style="width:170px;padding-left: 40px">Số điện thoại</th>
                                         <th scope="col">Địa chỉ</th>
                                         <th scope="col">Là admin</th>
-                                        <th scope="col">Là người bán</th>
+                                        <th scope="col">Thao tác</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-
+                        <tr>
+                                <%
+                List<User> listA = (List<User>) request.getAttribute("listA");
+                if (listA != null && !listA.isEmpty()) {
+                    for (User user : listA) {
+            %>
+                        <tr>
+                            <td><%= user.getId() %></td>
+                            <td><%= user.getUserName() %></td>
+                            <td><%= user.getEmail() %></td>
+                            <td><%= user.getPhoneNumber() %></td>
+                            <td><%= user.getAddress() %></td>
+                            <td><%= user.getRoleId() %></td>
+                            <td><a href="userDetails.jsp?userId=<%= user.getId() %>">Delete</a></td>
+                        </tr>
+                        <%
+                            }
+                        } else {
+                        %>
+                        <tr>
+                            <td colspan="4">No users available.</td>
+                        </tr>
+                        <%
+                            }
+                        %>
+                        </tr>
 
                                     </tbody>
                                 </table>

@@ -30,7 +30,7 @@
         </div>
 
         <div class="button">
-            <button type="submit" name="btn" id="btn"><a>ĐĂNG KÝ</a></button>
+            <button value="registerUser" type="submit" name="btn" id="btn"><a>ĐĂNG KÝ</a></button>
         </div>
         </form>
         <div class="ques">Bạn đã có tài khoản?</div>

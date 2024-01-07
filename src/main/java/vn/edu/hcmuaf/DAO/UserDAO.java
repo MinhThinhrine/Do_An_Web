@@ -139,7 +139,7 @@ public class UserDAO implements objectDAO {
         ResultSet resultSet = null;
 
         List<User> list = new ArrayList<>();
-        String query = "select * from User";
+
         try {
             Connection connection;
             connection = ConnectToDatabase.getConnect();
@@ -163,6 +163,30 @@ public class UserDAO implements objectDAO {
         } catch (Exception e) {
         }
         return list;
+    }
+    public void addUser(User user) {
+        PreparedStatement preparedStatement = null;
+
+
+
+
+        try {
+            Connection connection;
+            connection = ConnectToDatabase.getConnect();
+            String sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+            preparedStatement = connection.prepareStatement(sql);
+
+
+            // Thực hiện truy vấn
+
+            preparedStatement.setString(1, user.getUserName());
+            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getPassword());
+
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+        }
+
     }
     @Override
     public boolean add(Object obj) {
@@ -197,13 +221,22 @@ public class UserDAO implements objectDAO {
 
 
 
+ /// check all user
+//        UserDAO userDao = new UserDAO();
+//
+//            List<User> u = userDao.getAllUser();
+//            for(User us : u) {
+//                System.out.println(us.getUserName());
+//            }
 
-        UserDAO userDao = new UserDAO();
 
-            List<User> u = userDao.getAllUser();
-            for(User us : u) {
-                System.out.println(us.toString());
-            }
+            /// add User
+        String name = "maithuc1";
+        String pass = "1223112";
+        String email="maithuc1@gmail.com";
+                UserDAO userDao = new UserDAO();
+                userDao.addUser(new User(name,email,pass));
+
 
 
     }
