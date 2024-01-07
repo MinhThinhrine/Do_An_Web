@@ -221,7 +221,7 @@ public class UserDAO implements objectDAO {
 
 
 
- /// check all user
+ // check all user
 //        UserDAO userDao = new UserDAO();
 //
 //            List<User> u = userDao.getAllUser();
@@ -230,7 +230,7 @@ public class UserDAO implements objectDAO {
 //            }
 
 
-            /// add User
+            // add User
         String name = "maithuc1";
         String pass = "1223112";
         String email="maithuc1@gmail.com";
