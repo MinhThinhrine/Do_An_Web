@@ -106,23 +106,24 @@
                                 <li class="smooth-menu"><a href="index.jsp#blog">Tin Tức</a></li>
                                 <li class="smooth-menu"><a href="index.jsp#feedback">Đánh Giá</a></li>
                                 <li class="smooth-menu"><a href="index.jsp#service">Liên Hệ</a></li>
-                                <li class="navbar">
-                                        <a href="shopcart.jsp">
-                                            <i class="fa fa-suitcase-rolling fa-2x" style="margin-top: -10px;color: #00d8fe">
-                                            </i>
-                                        </a>
-                                </li>
                                 <%
                                     User user = (User) session.getAttribute("user");
                                 %>
                                 <% if (Objects.nonNull(user)) { %>
+                                <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
+                                        class="fa fa-suitcase-rolling fa-2x"
+                                        style="margin-top: -10px;color: #00d8fe"></i></a>
+                                </li>
                                 <!-- Hiển thị icon và tên người dùng -->
                                 <li id="icon-user" class="smooth-menu">
                                     <i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
                                     <ul id="service_account">
-                                        <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
-                                        <li><a id="bill" href="bill.jsp">Bill</a></li>
-                                        <li><a id="log_out" href="login.jsp">Đăng xuất</a></li>
+                                        <li><a id="myInfor" href="infor.jsp">Tài Khoản</a></li>
+                                        <li><a id="bill" href="bill.jsp">Hóa Đơn </a></li>
+                                        <li>
+                                            <form action="login" method="get">
+                                                <button type="submit" name="action" id="logout" value="logout">Đăng Xuất</button>
+                                            </form></li>
                                     </ul>
                                     <span class="username"><%= user.getUserName() %></span>
                                 </li>
@@ -134,7 +135,6 @@
                                     </button>
                                 </li>
                                 <% } %>
-
 
                             </ul>
                         </div><!-- /.navbar-collapse -->
@@ -786,7 +786,7 @@
 <script src="assets/js/datepicker.js"></script>
 
 <!--Custom JS-->
-<script src="assets/js/custom.js"></script>
+<%--<script src="assets/js/custom.js"></script>--%>
 <script src="assets/js/modify.js"></script>
 
 <script defer type="text/javascript">
@@ -845,7 +845,6 @@
 <script>
     // Lấy danh sách các nút trong ul
     var navItems = document.querySelectorAll('ul li');
-
     // Lặp qua từng nút và gán sự kiện click
     navItems.forEach(function (item) {
         item.addEventListener('click', function () {
@@ -857,6 +856,29 @@
             // Thêm lớp "active" vào nút được nhấp
             item.classList.add('active');
         });
+    });
+</script>
+<script>
+    document.getElementById("home").addEventListener("click", function () {
+        window.location.href = "index.jsp";
+    });
+    document.getElementById("spo").addEventListener("click", function () {
+        window.location.href = "index.jsp#spo";
+    });
+    document.getElementById("gallery").addEventListener("click", function () {
+        window.location.href = "index.jsp#gallery";
+    });
+    document.getElementById("pack").addEventListener("click", function () {
+        window.location.href = "index.jsp#pack";
+    });
+    document.getElementById("blog").addEventListener("click", function () {
+        window.location.href = "index.jsp#blog";
+    });
+    document.getElementById("feedback").addEventListener("click", function () {
+        window.location.href = "index.jsp#feedback";
+    });
+    document.getElementById("service").addEventListener("click", function () {
+        window.location.href = "index.jsp#service";
     });
 </script>
 </html>

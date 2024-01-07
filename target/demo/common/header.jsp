@@ -6,9 +6,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <%@include file="head.jsp" %>
-</head>
 <body>
 <header class="top-area">
 <div class="header-area">
@@ -55,13 +52,7 @@
                                     <li><a id="bill" href="bill.jsp">Hóa Đơn </a></li>
                                     <li>
                                     <form action="login" method="get">
-                                        <button type="submit" name="action" id="logout" value="logout" style="
-                                                background-color: transparent;
-                                                border: none;
-                                                color: #fff;
-                                                font-size: 13px;
-                                                text-transform: capitalize;
-                                                font-weight: 600" >Đăng Xuất</button>
+                                        <button type="submit" name="action" id="logout" value="logout">Đăng Xuất</button>
                                     </form></li>
                                 </ul>
                             </li>

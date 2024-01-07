@@ -77,29 +77,24 @@ List<tour> tourss = (List<tour>) request.getAttribute("tours");
                             <li><a href="index.jsp#blog">Tin Tức</a></li>
                             <li><a href="index.jsp#feedback">Đánh Giá</a></li>
                             <li><a href="index.jsp#service">Liên Hệ</a></li>
-                            <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
-                                    class="fa fa-suitcase-rolling fa-2x"
-                                    style="margin-top: -10px;color: #00d8fe"></i></a>
-                            </li>
                             <%
                                 User user = (User) session.getAttribute("user");
                                 String url = request.getContextPath().trim();
                             %>
                             <% if (Objects.nonNull(user)) { %>
+                            <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
+                                    class="fa fa-suitcase-rolling fa-2x"
+                                    style="margin-top: -10px;color: #00d8fe"></i></a>
+                            </li>
                             <li id="icon-user" class="smooth-menu">
                                 <i class="fa fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
                                 <span class="username"><%= user.getUserName() %></span>
                                 <ul id="service_account">
-                                    <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
-                                    <li><a id="bill" href="bill.jsp">Bill </a></li>
+                                    <li><a id="myInfor" href="infor.jsp">Tài Khoản</a></li>
+                                    <li><a id="bill" href="bill.jsp">Hóa Đơn </a></li>
                                     <li>
                                         <form action="login" method="get">
-                                            <button type="submit" name="action" id="logout" value="logout" style="
-                                                background-color: transparent;
-                                                border: none;
-                                                color: #fff;
-                                                font-size: 14px;
-                                                font-weight: bold" >Đăng xuất</button>
+                                            <button type="submit" name="action" id="logout" value="logout">Đăng Xuất</button>
                                         </form></li>
                                 </ul>
                             </li>
@@ -111,11 +106,9 @@ List<tour> tourss = (List<tour>) request.getAttribute("tours");
                             </li>
                             <% } %>
                         </ul>
-                    </div><!-- /.navbar-collapse -->
                 </div><!-- /.main-menu-->
             </div><!-- /.col-->
         </div><!-- /.row -->
-        <div class="home-border"></div><!-- /.home-border-->
     </div><!-- /.container -->
     </div><!-- /.header-area -->
 </header><!-- /.top-area --><!-- /.top-area -->
