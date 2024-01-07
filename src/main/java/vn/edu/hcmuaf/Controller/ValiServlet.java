@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.Controller;
 
+import vn.edu.hcmuaf.bean.User;
 import vn.edu.hcmuaf.bean.valies;
 
 import javax.servlet.*;
@@ -17,7 +18,11 @@ public class ValiServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             ArrayList<valies> valiList = new ArrayList<>();
             int id = Integer.parseInt(request.getParameter("id"));
+            HttpSession session = request.getSession();
+            User user = (User) session.getAttribute("user");
+            String userId = String.valueOf(user.getId());
             valies vl = new valies();
+            vl.setUserId(Integer.parseInt(userId));
             vl.setId(id);
             vl.setNumAdult(1);
             vl.setNumChildren(1);
@@ -29,7 +34,7 @@ public class ValiServlet extends HttpServlet {
             if (vali_List == null) {
                 valiList.add(vl);
                 ses.setAttribute("vali-List",valiList);
-                response.sendRedirect("catelogy.jsp");
+                response.sendRedirect("CategorieServlet");
 
             }else{
                 valiList=vali_List;
@@ -37,11 +42,13 @@ public class ValiServlet extends HttpServlet {
                 for (valies v: vali_List) {
                     if(v.getId()==id){
                         exit=true;
+                        response.sendRedirect("CategorieServlet");
+
                     }
                 }
                     if(!exit){
                         valiList.add(vl);
-                        response.sendRedirect("catelogy.jsp");
+                        response.sendRedirect("CategorieServlet");
                     }
             }
 

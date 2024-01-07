@@ -15,19 +15,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.js"></script>
     <style>
+        #custom-card-body{
+            height: 408px;
+            border-radius:  0.5rem 0px 0.5rem 0.5rem;
+        }
+        #nav-home-tab{
+            cursor: pointer;margin-bottom: -5px;border-radius: 10px 10px 0px 0px;
+            padding: 25px;
+            width: 50%;
+            text-align: center;
+            font-size: 1.12rem;
+            color: #0dcaf0;
+        }#nav-profile-tab{
+            cursor: pointer;margin-bottom: -5px;border-radius: 10px 10px 0px 0px;
+            width: 50%;
+            text-align: center;
+            padding: 25px;
+                     font-size: 1.12rem;
+                     color: #0dcaf0;
+        }
+        .btn{
+            width: 150px;
+            text-align: center;
+        }
         .return {
-            font-size: 28px;
+            font-size: 26px;
             color: #00d8fe;
         }
 
         section {
             height: 820px;
         }
-
-        .row {
-            margin-top: 50px;
+        .row{
+            padding: 20px 0px 20px 20px;
         }
-
         .hidden {
             display: none;
         }
@@ -43,38 +64,30 @@
 
     <div class="container py-5">
         <th scope="col"><a class="return" href="index.jsp">
-            <i class="fa-solid fa-arrow-left"></i>Trang Chủ</a>
-        </th>
-        <th>
-            <a class="return" href="shopcart.jsp" style="float: right"> VALI <i class="fa-solid fa-suitcase-rolling"></i></a>
+            <i class="fa-solid fa-arrow-left"></i> Trang Chủ</a>
         </th>
 
-        <div class="row" style="margin-top: 10px">
-            <div id="avt" class="col-lg-4" style="margin-top: 50px">
-                <div style="height: 490px" class="card mb-4">
-                    <div style="margin-top: 90px" class="card-body text-center">
-                        <img src="assets/images/client/5.png" alt="avatar"
-                             class="rounded-circle img-fluid" style="width: 150px;">
-                        <%
-                            User user = (User) session.getAttribute("user");
-                        %>
-                        <h5 class="my-3"><%= user.getUserName() %></h5>
-                        <p class="text-muted mb-4"><%=user.getAddress()%>></p>
-                    </div>
-                </div>
-            </div>
+        <div class="row" style="margin-top: 40px">
+            <div class="col-lg-2"></div>
             <div class="col-lg-8">
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link user active" id="nav-home-tab" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true" onclick="toggleUser()" style="cursor: pointer">Thông tin người dùng</a>
-                        <a class="nav-item nav-link change-password" id="nav-profile-tab" data-toggle="tab" role="tab" aria-controls="nav-profile" aria-selected="false" onclick="togglePasswordChange()" style="cursor: pointer">Thay đổi mật khẩu</a>
+                        <a class="nav-item nav-link user active" id="nav-home-tab" data-toggle="tab" role="tab" aria-controls="nav-home"
+                           aria-selected="true" onclick="toggleUser()"
+                           >Thông tin người dùng</a>
+                        <a class="nav-item nav-link change-password" id="nav-profile-tab"
+                           data-toggle="tab" role="tab" aria-controls="nav-profile" aria-selected="false" onclick="togglePasswordChange()"
+                           >Thay đổi mật khẩu</a>
                     </div>
                 </nav>
 <%--                --%>
-                <div class="thongtinnguoidung" id="thongtinnguoidung">
-                <div class="card mb-4" id="card-body">
+                <div>
+                <div class="card mb-4" id="card-body" style="border-radius: 0px 0.5rem 0.5rem 0.5rem ">
                     <div class="card-body">
                         <div class="row">
+                            <%
+                                User user = (User) session.getAttribute("user");
+                            %>
                             <div class="col-sm-3">
                                 <p class="mb-0">Tên người dùng</p>
                             </div>
@@ -110,29 +123,20 @@
                                 <p class="text-muted mb-0"><%=user.getAddress()%></p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <p class="mb-0"></p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="text-muted mb-0"></p>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                     <div class="button user" id="buttonuser">
-                        <button style="margin-left: 100px; margin-right: 40px" class="btn btn-warning"
-                                onclick="enableEdit()">Chỉnh sửa
+                        <button id="edit" style="margin-right: 40px" class="btn btn-danger "
+                                >Chỉnh sửa
                         </button>
-                        <button class="btn btn-info" style="margin-right: 40px" onclick="saveData()">Lưu</button>
-                        <button class="btn btn-danger" style="margin-right: 40px">Hủy</button>
-                        <button class="btn btn-success" onclick="done()">Hoàn thành</button>
+                        <button id="save" class="btn btn-success" style="display: none">Lưu thay đổi</button>
                     </div>
                 </div>
 <%--                --%>
                 <form action="ChangePassword" method="post">
                     <div class="quenmk" id="quenmk">
-                <div class="card mb-4 custom card-body hidden" id="custom-card-body" style="height: 495px">
+                <div class="card mb-4 custom card-body hidden" id="custom-card-body">
                     <div class="row">
                         <div class="col-sm-3">
                             <p class="mb-0">Nhập mật khẩu cũ</p>
@@ -168,19 +172,21 @@
                     </div>
                 </div>
                 <div class="button forgot-password hidden " id="buttonforgotpassword">
-                            <button class="btn btn-danger " style="margin-left: 100px;margin-right: 40px" type="reset" onclick="">Hủy
-                            </button>
-                            <button class="btn btn-success" type="submit" >Hoàn thành</button>
+                    <button class="btn btn-danger " style="margin-right: 40px" type="reset" onclick="toggleUser() ">Hủy
+                    </button>
+                            <button class="btn btn-success" type="submit" >Lưu thay đổi</button>
                         </div>
             </div>
           </form>
         </div>
+            <div class="col-lg-2"></div>
+
         </div>
     </div>
 </section>
 </body>
 <script src="assets/js/infor.js"></script>
-<script type="text/javascript">
+<script>
     // Lấy giá trị của attribute "stqmk"
     var stqmk = "<%=request.getAttribute("stqmk")%>";
     console.log("Giá trị của stqmk: " + stqmk);
@@ -188,6 +194,67 @@
     if (stqmk === "show") {
         togglePasswordChange();
     }
+    // Lấy các phần tử cần thao tác
+    var phoneElement = document.getElementById('phone');
+    var addressElement = document.getElementById('address');
+    var saveButton = document.getElementById('save');
+    var editButton = document.getElementById('edit');
+
+    // Xử lý sự kiện khi nút "Chỉnh sửa" được bấm
+    editButton.addEventListener('click', function() {
+        // Lấy giá trị hiện tại của phone và address
+        var currentPhone = phoneElement.innerText.trim();
+        var currentAddress = addressElement.innerText.trim();
+
+        // Tạo các ô input để nhập dữ liệu
+        var phoneInput = document.createElement('input');
+        phoneInput.setAttribute('type', 'text');
+        phoneInput.setAttribute('class', 'form-control');
+        phoneInput.setAttribute('value', currentPhone);
+
+        var addressInput = document.createElement('input');
+        addressInput.setAttribute('type', 'text');
+        addressInput.setAttribute('class', 'form-control');
+        addressInput.setAttribute('value', currentAddress);
+
+        // Thay thế các phần tử hiện tại bằng các ô input
+        phoneElement.innerHTML = '';
+        phoneElement.appendChild(phoneInput);
+
+        addressElement.innerHTML = '';
+        addressElement.appendChild(addressInput);
+
+        // Ẩn nút "Chỉnh sửa" và hiển thị nút "Lưu thay đổi"
+        editButton.style.display = 'none';
+        saveButton.style.display = 'inline';
+    });
+
+    // Xử lý sự kiện khi nút "Lưu thay đổi" được bấm
+    saveButton.addEventListener('click', function() {
+        // Lấy giá trị mới từ các ô input
+        var newPhone = phoneElement.querySelector('input').value;
+        var newAddress = addressElement.querySelector('input').value;
+
+        // Tạo các phần tử paragraph để hiển thị giá trị mới
+        var phoneParagraph = document.createElement('p');
+        phoneParagraph.setAttribute('class', 'text-muted mb-0');
+        phoneParagraph.innerText = newPhone;
+
+        var addressParagraph = document.createElement('p');
+        addressParagraph.setAttribute('class', 'text-muted mb-0');
+        addressParagraph.innerText = newAddress;
+
+        // Thay thế các ô input bằng các phần tử paragraph
+        phoneElement.innerHTML = '';
+        phoneElement.appendChild(phoneParagraph);
+
+        addressElement.innerHTML = '';
+        addressElement.appendChild(addressParagraph);
+
+        // Ẩn nút "Lưu thay đổi" và hiển thị nút "Chỉnh sửa"
+        saveButton.style.display = 'none';
+        editButton.style.display = 'inline';
+    });
 </script>
 
 

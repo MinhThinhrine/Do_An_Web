@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var filterBtn = document.getElementById('filter-btn');
     var btnTxt = document.getElementById('btn-txt');
     var filterAngle = document.getElementById('filter-angle');
+    var fit = document.getElementById("fitImg");
 
     $('#filterbar').collapse(false);
     var count = 0, count2 = 0;
@@ -60,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
             filterAngle.classList.remove("fa-angle-right")
             btnTxt.innerText = "hide filters"
             filterBtn.style.backgroundColor = "#ff935d";
+            fit.style.width="413px";
         }
 
     }

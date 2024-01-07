@@ -313,7 +313,7 @@ List<tour> tourss = (List<tour>) request.getAttribute("tours");
                                 </button>
                             </div>
                             <div class="about-btn" style="width: 0px">
-                                <a href="ValiServlet?id=<%=t.getId()%>">
+                                <a id="fitImg" href="ValiServlet?id=<%=t.getId()%>">
                                     <button class="about-view packages-btn addvali">
                                         <i class="fa fa-plus"></i>
                                         <i class="fa fa-suitcase-rolling" style="padding-left: 6px;" ></i>

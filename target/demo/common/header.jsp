@@ -38,21 +38,21 @@
                             <li class="smooth-menu"><a href="#blog">Tin Tức</a></li>
                             <li class="smooth-menu"><a href="#feedback">Đánh Giá</a></li>
                             <li class="smooth-menu"><a href="#service">Liên Hệ</a></li>
-                            <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
-                                    class="fa fa-suitcase-rolling fa-2x"
-                                    style="margin-top: -10px;color: #00d8fe"></i></a>
-                            </li>
                             <%
                                 User user = (User) session.getAttribute("user");
                                String url = request.getContextPath().trim();
                             %>
                             <% if (Objects.nonNull(user)) { %>
+                            <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
+                                    class="fa fa-suitcase-rolling fa-2x"
+                                    style="margin-top: -10px;color: #00d8fe"></i></a>
+                            </li>
                             <li id="icon-user" class="smooth-menu">
                                 <i class="fa-regular fa-circle-user" style="color: #ffffff;margin-top: 8px"></i>
                                 <span><%= user.getUserName() %></span>
                                 <ul id="service_account">
-                                    <li><a id="myInfor" href="infor.jsp">Thông tin tài khoản</a></li>
-                                    <li><a id="bill" href="bill.jsp">Bill </a></li>
+                                    <li><a id="myInfor" href="infor.jsp">Tài Khoản</a></li>
+                                    <li><a id="bill" href="bill.jsp">Hóa Đơn </a></li>
                                     <li>
                                     <form action="login" method="get">
                                         <button type="submit" name="action" id="logout" value="logout" style="
@@ -61,7 +61,7 @@
                                                 color: #fff;
                                                 font-size: 13px;
                                                 text-transform: capitalize;
-                                                font-weight: 600" >Đăng xuất</button>
+                                                font-weight: 600" >Đăng Xuất</button>
                                     </form></li>
                                 </ul>
                             </li>
