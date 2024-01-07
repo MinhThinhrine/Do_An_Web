@@ -165,29 +165,29 @@ public class UserDAO implements objectDAO {
         return list;
     }
     public void addUser(User user) {
-        PreparedStatement preparedStatement = null;
-
-
-
-
-        try {
-            Connection connection;
-            connection = ConnectToDatabase.getConnect();
-            String sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
-            preparedStatement = connection.prepareStatement(sql);
-
-
-            // Thực hiện truy vấn
+        try (Connection connection = ConnectToDatabase.getConnect();
+             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO users (username, email, password) VALUES (?, ?, ?)")) {
 
             preparedStatement.setString(1, user.getUserName());
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getPassword());
 
             preparedStatement.executeUpdate();
-        } catch (Exception e) {
-        }
+            connection.commit();
 
+        } catch (SQLException e) {
+            e.printStackTrace(); // In lỗi để bạn có thể xác định vấn đề
+            try {
+                // Nếu có lỗi, thực hiện rollback
+                if (connection != null) {
+                    connection.rollback();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
+
     @Override
     public boolean add(Object obj) {
         return false;
@@ -231,11 +231,10 @@ public class UserDAO implements objectDAO {
 
 
             // add User
-        String name = "maithuc1";
-        String pass = "1223112";
-        String email="maithuc1@gmail.com";
+        User u = new User("asa","122131@gmail.com","123321");
                 UserDAO userDao = new UserDAO();
-                userDao.addUser(new User(name,email,pass));
+                userDao.addUser(u);
+
 
 
 

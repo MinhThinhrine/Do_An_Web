@@ -3,6 +3,8 @@
              pageEncoding="UTF-8" isELIgnored= "false"%>
     <%@ page contentType="text/html; charset=UTF-8" %>
     <%@include file="common/tablib.jsp" %>
+
+
     <html class="no-js" lang="vi">
 
 <%--head--%>
