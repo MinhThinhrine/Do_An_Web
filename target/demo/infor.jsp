@@ -56,8 +56,16 @@
     </style>
 </head>
 <%
+    // lỗi nhận được từ changePasswors thay đổi mật khẩu
     String error = request.getAttribute("error") + "";
     error = (error == null || error.equals("null")) ? "" : error;
+
+    // lỗi nhận được từ inforuser thay đổi mật khẩu
+    String err = request.getAttribute("err") + "";
+    err = (err == null || err.equals("null")) ? "" : err;
+
+    String status = request.getAttribute("status") + "";
+    status = (status == null || status.equals("null")) ? "" : status;
 %>
 <body>
 <section style="background-color: #93949f;">
@@ -81,6 +89,7 @@
                     </div>
                 </nav>
 <%--                --%>
+                <form action="InforUser" method="post">
                 <div>
                 <div class="card mb-4" id="card-body" style="border-radius: 0px 0.5rem 0.5rem 0.5rem ">
                     <div class="card-body">
@@ -92,7 +101,8 @@
                                 <p class="mb-0">Tên người dùng</p>
                             </div>
                             <div class="col-sm-9" id="username">
-                                <p class="text-muted mb-0"><%=user.getUserName()%></p>
+                                <p class="text-muted mb-0" id="pusername"><%=user.getUserName()%></p>
+                                <input type="text" type="tel" name="username" class="text-muted mb-0 hidden" id="change_userName" value="<%=user.getUserName()%>">
                             </div>
                         </div>
                         <hr>
@@ -111,10 +121,9 @@
                             </div>
                             <div class="col-sm-9" id="phone">
                                 <p class="text-muted mb-0" id="pphone"><%=user.getPhoneNumber()%></p>
-                                <input type="text" type="text" class="text-muted mb-0 hidden" name="change_phoneNumber" id="change_phoneNumber" name="change_phoneNumber" value="<%=user.getPhoneNumber()%>">
+                                <input type="number" name="phone" class="text-muted mb-0 hidden" id="change_phoneNumber" value="<%=user.getPhoneNumber()%>">
                             </div>
                         </div>
-
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
@@ -122,21 +131,33 @@
                             </div>
                             <div class="col-sm-9" id="address">
                                 <p class="text-muted mb-0" id="paddress"><%=user.getAddress()%></p>
-                                <input type="text" class="text-muted mb-0 hidden" name="change_address" id="changeaddrress" name="changeaddrress" value="<%=user.getAddress()%>">
+                                <input type="text" class="text-muted mb-0 hidden" name="address" id="changeaddrress" name="changeaddrress" value="<%=user.getAddress()%>">
                             </div>
-                        </div>
+                            <div>
+                                <% if(err != null && !err.equals("")) { %>
+                                <div class="ques" style="width: 250px; margin: 15px auto -15px auto; color: red; text-align: center">
+                                    <span class="text-primary text-medium"></span><%=err%>
+                                </div>
+                                <% } else if (status != null && !status.equals("")) { %>
+                                <div class="ques" style="width: 250px; margin: 15px auto -15px auto; color: red; text-align: center">
+                                    <span class="text-primary text-medium"></span><%=status%>
+                                </div>
+                                <% } %>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
                     <div class="button user" id="buttonuser">
-                        <button id="edit" style="margin-right: 40px" class="btn btn-danger "
+                        <button id="edit" style="margin-right: 40px" type="reset" class="btn btn-danger "
                                 >Chỉnh sửa
                         </button>
                         <button class="btn btn-danger hidden" style="margin-right: 40px" type="reset" onclick="toggleUser() ">Hủy
                         </button>
-                        <button id="save" class="btn btn-success" style="display: none">Lưu thay đổi</button>
+                        <button id="save" class="btn btn-success" type="submit" style="display: none">Lưu thay đổi</button>
                     </div>
                 </div>
+                </form>
 <%--                --%>
                 <form action="ChangePassword" method="post">
                     <div class="quenmk" id="quenmk">
@@ -201,10 +222,12 @@
     // Lấy các phần tử cần thao tác
     var phoneElement = document.getElementById('pphone');
     var addressElement = document.getElementById('paddress');
+    var usernameElement = document.getElementById('pusername');
 
     var resetbuton = document.querySelector(".btn.btn-danger.hidden");
     var changephoneElement = document.getElementById('change_phoneNumber');
     var changeaddressElement = document.getElementById('changeaddrress');
+    var changeusernameElement = document.getElementById('change_userName');
 
     var saveButton = document.getElementById('save');
     var editButton = document.getElementById('edit');
@@ -214,11 +237,14 @@
 
         phoneElement.classList.add('hidden');
         addressElement.classList.add('hidden');
+        usernameElement.classList.add('hidden');
 
 
         resetbuton.classList.remove('hidden');
         changeaddressElement.classList.remove('hidden');
         changephoneElement.classList.remove('hidden');
+        changeusernameElement.classList.remove('hidden');
+
 
         editButton.style.display = 'none';
         saveButton.style.display = 'inline';
@@ -229,13 +255,16 @@
 
             phoneElement.classList.remove('hidden');
             addressElement.classList.remove('hidden');
+            usernameElement.classList.remove('hidden');
 
 
             resetbuton.classList.add('hidden');
             changeaddressElement.classList.add('hidden');
             changephoneElement.classList.add('hidden');
+            changeusernameElement.classList.add('hidden');
 
-            editButton.style.display = 'inline';
+
+        editButton.style.display = 'inline';
             saveButton.style.display = 'none';
     });
 </script>

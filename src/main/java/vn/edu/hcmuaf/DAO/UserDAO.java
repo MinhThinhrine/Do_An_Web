@@ -31,7 +31,7 @@ public class UserDAO implements objectDAO {
         this.connection = connection;
     }
 
-    //Dung lam gi ko biet @@
+
     public static Map<Integer, User> loaduserbyID() {
         Map<Integer, User> mapTemp = new HashMap<>();
         try {
@@ -188,6 +188,27 @@ public class UserDAO implements objectDAO {
         }
     }
 
+    public static boolean editInforUser(String name, String phone, String address, String email){
+        String sql = "update users set userName = ?,phoneNumber= ?, address=? where email = ?";
+        boolean kq = false;
+        Connection con = ConnectToDatabase.getConnect();
+        try {
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1,name);
+            pst.setString(2,phone);
+            pst.setString(3,address);
+            pst.setString(4,email);
+
+            pst.executeUpdate();
+            kq = true;
+        } catch (Exception e) {
+            System.out.println("Lỗi khi update thông tin user" + e.getMessage());
+        }
+        System.out.println("kq"+kq);
+        return kq;
+
+    }
+
     @Override
     public boolean add(Object obj) {
         return false;
@@ -209,32 +230,21 @@ public class UserDAO implements objectDAO {
     }
 
 
-//    public static void main(String[] args) {
-//        userDAO user = new userDAO();
-//        Map<String, User> maptest = user.checkMail();
-//
-//        for (User u : maptest.values()) {
-//            System.out.println(u.toString());
-//        }
-//    }
     public static void main(String[] args) {
 
-
-
- // check all user
-//        UserDAO userDao = new UserDAO();
-//
-//            List<User> u = userDao.getAllUser();
-//            for(User us : u) {
-//                System.out.println(us.getUserName());
-//            }
-
-
             // add User
-        User u = new User("asa","122131@gmail.com","123321");
-                UserDAO userDao = new UserDAO();
-                userDao.addUser(u);
+//        User u = new User("asa","122131@gmail.com","123321");
+//                UserDAO userDao = new UserDAO();
+//                userDao.addUser(u);
 
+            // Giả sử bạn có các giá trị tham số như sau:
+            String name = "Vu 123";
+            String phone = "0913415077";
+            String address = "Hẻm 482 Nơ Trang Long, Phường 13, Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam";
+            String email = "21130615@st.hcmuaf.edu.vn";
+
+            // Gọi phương thức editInforUser để kiểm tra
+             editInforUser(name, phone, address, email);
 
 
 

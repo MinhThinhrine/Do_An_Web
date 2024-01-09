@@ -41,6 +41,12 @@ public class User extends valies{
         this.roleId = roleId;
     }
 
+    public User(String userName, String email, String phoneNumber, String address) {
+        this.userName = userName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+    }
 
     public int getId() {
         return id;

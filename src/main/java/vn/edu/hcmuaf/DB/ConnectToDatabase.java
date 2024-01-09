@@ -20,7 +20,7 @@ public class ConnectToDatabase {
         return connection;
     }
 
-    public static void executeUpdate(String sql) throws Exception {
+    public static void executeSql(String sql) throws Exception {
 //        Connection connect = getConnect();
 //        Statement stmt = connect.createStatement();
 //        stmt.executeUpdate(sql);
