@@ -858,27 +858,4 @@
         });
     });
 </script>
-<script>
-    document.getElementById("home").addEventListener("click", function () {
-        window.location.href = "index.jsp";
-    });
-    document.getElementById("spo").addEventListener("click", function () {
-        window.location.href = "index.jsp#spo";
-    });
-    document.getElementById("gallery").addEventListener("click", function () {
-        window.location.href = "index.jsp#gallery";
-    });
-    document.getElementById("pack").addEventListener("click", function () {
-        window.location.href = "index.jsp#pack";
-    });
-    document.getElementById("blog").addEventListener("click", function () {
-        window.location.href = "index.jsp#blog";
-    });
-    document.getElementById("feedback").addEventListener("click", function () {
-        window.location.href = "index.jsp#feedback";
-    });
-    document.getElementById("service").addEventListener("click", function () {
-        window.location.href = "index.jsp#service";
-    });
-</script>
 </html>

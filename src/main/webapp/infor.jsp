@@ -110,7 +110,8 @@
                                 <p class="mb-0">Số điện thoại</p>
                             </div>
                             <div class="col-sm-9" id="phone">
-                                <p class="text-muted mb-0"><%=user.getPhoneNumber()%></p>
+                                <p class="text-muted mb-0" id="pphone"><%=user.getPhoneNumber()%></p>
+                                <input type="text" type="text" class="text-muted mb-0 hidden" name="change_phoneNumber" id="change_phoneNumber" name="change_phoneNumber" value="<%=user.getPhoneNumber()%>">
                             </div>
                         </div>
 
@@ -120,7 +121,8 @@
                                 <p class="mb-0">Địa chỉ</p>
                             </div>
                             <div class="col-sm-9" id="address">
-                                <p class="text-muted mb-0"><%=user.getAddress()%></p>
+                                <p class="text-muted mb-0" id="paddress"><%=user.getAddress()%></p>
+                                <input type="text" class="text-muted mb-0 hidden" name="change_address" id="changeaddrress" name="changeaddrress" value="<%=user.getAddress()%>">
                             </div>
                         </div>
 
@@ -129,6 +131,8 @@
                     <div class="button user" id="buttonuser">
                         <button id="edit" style="margin-right: 40px" class="btn btn-danger "
                                 >Chỉnh sửa
+                        </button>
+                        <button class="btn btn-danger hidden" style="margin-right: 40px" type="reset" onclick="toggleUser() ">Hủy
                         </button>
                         <button id="save" class="btn btn-success" style="display: none">Lưu thay đổi</button>
                     </div>
@@ -151,7 +155,7 @@
                             <p class="mb-0">Nhập mật khẩu mới</p>
                         </div>
                         <div class="col-sm-9">
-                            <input class="form-control" id="newpass1" name="newpass1" type="password" placeholder="Độ dài từ 6 đến 20 kí tự" minlength="6" maxlength="20" >
+                            <input class="form-control" id="newpass1" name="newpass1" type="password" placeholder="Độ dài từ 6 kí tự" minlength="6" maxlength="20" required autocomplete="on" autofocus>
                         </div>
                     </div>
                     <hr>
@@ -160,7 +164,7 @@
                             <p class="mb-0">Nhập lại mật khẩu mới</p>
                         </div>
                         <div class="col-sm-9" >
-                            <input class="form-control" id="newpass2" name="newpass2" type="password" placeholder="" minlength="6" maxlength="20" >
+                            <input class="form-control" id="newpass2" name="newpass2" type="password" placeholder="Độ dài từ 6 kí tự" minlength="6" maxlength="20" required autocomplete="on" autofocus>
                         </div>
                         <div>
                             <% if(error!=null || !error.equals("")) { %>
@@ -195,65 +199,44 @@
         togglePasswordChange();
     }
     // Lấy các phần tử cần thao tác
-    var phoneElement = document.getElementById('phone');
-    var addressElement = document.getElementById('address');
+    var phoneElement = document.getElementById('pphone');
+    var addressElement = document.getElementById('paddress');
+
+    var resetbuton = document.querySelector(".btn.btn-danger.hidden");
+    var changephoneElement = document.getElementById('change_phoneNumber');
+    var changeaddressElement = document.getElementById('changeaddrress');
+
     var saveButton = document.getElementById('save');
     var editButton = document.getElementById('edit');
 
     // Xử lý sự kiện khi nút "Chỉnh sửa" được bấm
     editButton.addEventListener('click', function() {
-        // Lấy giá trị hiện tại của phone và address
-        var currentPhone = phoneElement.innerText.trim();
-        var currentAddress = addressElement.innerText.trim();
 
-        // Tạo các ô input để nhập dữ liệu
-        var phoneInput = document.createElement('input');
-        phoneInput.setAttribute('type', 'text');
-        phoneInput.setAttribute('class', 'form-control');
-        phoneInput.setAttribute('value', currentPhone);
+        phoneElement.classList.add('hidden');
+        addressElement.classList.add('hidden');
 
-        var addressInput = document.createElement('input');
-        addressInput.setAttribute('type', 'text');
-        addressInput.setAttribute('class', 'form-control');
-        addressInput.setAttribute('value', currentAddress);
 
-        // Thay thế các phần tử hiện tại bằng các ô input
-        phoneElement.innerHTML = '';
-        phoneElement.appendChild(phoneInput);
+        resetbuton.classList.remove('hidden');
+        changeaddressElement.classList.remove('hidden');
+        changephoneElement.classList.remove('hidden');
 
-        addressElement.innerHTML = '';
-        addressElement.appendChild(addressInput);
-
-        // Ẩn nút "Chỉnh sửa" và hiển thị nút "Lưu thay đổi"
         editButton.style.display = 'none';
         saveButton.style.display = 'inline';
     });
 
-    // Xử lý sự kiện khi nút "Lưu thay đổi" được bấm
-    saveButton.addEventListener('click', function() {
-        // Lấy giá trị mới từ các ô input
-        var newPhone = phoneElement.querySelector('input').value;
-        var newAddress = addressElement.querySelector('input').value;
+    // Xử lý sự kiện khi nút "hủy" được bấm
+    resetbuton.addEventListener('click', function() {
 
-        // Tạo các phần tử paragraph để hiển thị giá trị mới
-        var phoneParagraph = document.createElement('p');
-        phoneParagraph.setAttribute('class', 'text-muted mb-0');
-        phoneParagraph.innerText = newPhone;
+            phoneElement.classList.remove('hidden');
+            addressElement.classList.remove('hidden');
 
-        var addressParagraph = document.createElement('p');
-        addressParagraph.setAttribute('class', 'text-muted mb-0');
-        addressParagraph.innerText = newAddress;
 
-        // Thay thế các ô input bằng các phần tử paragraph
-        phoneElement.innerHTML = '';
-        phoneElement.appendChild(phoneParagraph);
+            resetbuton.classList.add('hidden');
+            changeaddressElement.classList.add('hidden');
+            changephoneElement.classList.add('hidden');
 
-        addressElement.innerHTML = '';
-        addressElement.appendChild(addressParagraph);
-
-        // Ẩn nút "Lưu thay đổi" và hiển thị nút "Chỉnh sửa"
-        saveButton.style.display = 'none';
-        editButton.style.display = 'inline';
+            editButton.style.display = 'inline';
+            saveButton.style.display = 'none';
     });
 </script>
 

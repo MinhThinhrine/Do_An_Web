@@ -56,7 +56,7 @@ public class LoginController extends HttpServlet {
 
 
             // Sử dụng hàm getUserByEmail để lấy thông tin người dùng
-            UserDAO userDao = new UserDAO();
+//            UserDAO userDao = new UserDAO();
             User u = UserDAO.checkLogin(email,pass);
             if(u != null){
                 HttpSession session = request.getSession();
