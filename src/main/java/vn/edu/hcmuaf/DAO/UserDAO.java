@@ -165,26 +165,23 @@ public class UserDAO implements objectDAO {
         return list;
     }
     public void addUser(User user) {
-        try (Connection connection = ConnectToDatabase.getConnect();
-             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO users (username, email, password) VALUES (?, ?, ?)")) {
+        try (Connection connection = ConnectToDatabase.getConnect()) {
+            // Kiểm tra xem email đã tồn tại hay chưa
+            if (isEmailExists(user.getEmail())) {
+                // Email đã tồn tại, có thể hiển thị thông báo lỗi hoặc xử lý khác
+                System.out.println("Email already exists");
+            } else {
+                // Email không tồn tại, thêm người dùng vào cơ sở dữ liệu
+                try (PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO users (username, email, password) VALUES (?, ?, ?)")) {
+                    preparedStatement.setString(1, user.getUserName());
+                    preparedStatement.setString(2, user.getEmail());
+                    preparedStatement.setString(3, user.getPassword());
 
-            preparedStatement.setString(1, user.getUserName());
-            preparedStatement.setString(2, user.getEmail());
-            preparedStatement.setString(3, user.getPassword());
-
-            preparedStatement.executeUpdate();
-            connection.commit();
-
+                    preparedStatement.executeUpdate();
+                }
+            }
         } catch (SQLException e) {
             e.printStackTrace(); // In lỗi để bạn có thể xác định vấn đề
-            try {
-                // Nếu có lỗi, thực hiện rollback
-                if (connection != null) {
-                    connection.rollback();
-                }
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
         }
     }
 
@@ -209,6 +206,28 @@ public class UserDAO implements objectDAO {
 
     }
 
+    public boolean isEmailExists(String email) {
+        Connection conn = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet rs = null;
+
+        try {
+            // Lấy kết nối đến cơ sở dữ liệu
+            conn = ConnectToDatabase.getConnect();
+
+                    // Truy vấn kiểm tra xem tên người dùng đã tồn tại hay chưa
+                    String sql = "SELECT * FROM users WHERE email=?";
+            preparedStatement = conn.prepareStatement(sql);
+            preparedStatement.setString(1, email);
+            rs = preparedStatement.executeQuery();
+
+            // Trả về true nếu có kết quả, ngược lại trả về false
+            return rs.next();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
     @Override
     public boolean add(Object obj) {
         return false;
@@ -233,18 +252,19 @@ public class UserDAO implements objectDAO {
     public static void main(String[] args) {
 
             // add User
-//        User u = new User("asa","122131@gmail.com","123321");
-//                UserDAO userDao = new UserDAO();
-//                userDao.addUser(u);
+        User u = new User("asa","1221311@gmail.com","123321");
+                UserDAO userDao = new UserDAO();
+                userDao.addUser(u);
 
             // Giả sử bạn có các giá trị tham số như sau:
-            String name = "Vu 123";
-            String phone = "0913415077";
-            String address = "Hẻm 482 Nơ Trang Long, Phường 13, Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam";
-            String email = "21130615@st.hcmuaf.edu.vn";
-
-            // Gọi phương thức editInforUser để kiểm tra
-             editInforUser(name, phone, address, email);
+//            String name = "Vu 123";
+//            String phone = "0913415077";
+//            String address = "Hẻm 482 Nơ Trang Long, Phường 13, Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam";
+//            String email = "21130615@st.hcmuaf.edu.vn";
+//
+//            // Gọi phương thức editInforUser để kiểm tra
+//             editInforUser(name, phone, address, email);
+            /// check trung UserName
 
 
 

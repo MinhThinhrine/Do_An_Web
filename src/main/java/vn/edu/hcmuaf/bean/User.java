@@ -118,12 +118,5 @@ public class User extends valies{
                 ", roleId=" + roleId +
                 '}';
     }
-    public static boolean isEmailExists(String email) {
-        for (User user : users) {
-            if (user.getEmail().equals(email)) {
-                return true;
-            }
-        }
-        return false;
-    }
+
 }

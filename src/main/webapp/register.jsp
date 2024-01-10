@@ -14,7 +14,7 @@
 <div id="container">
     <div id="content">
         <div class="signin"><b>ĐĂNG KÝ</b></div>
-        <form action="Register" method="post"></form>
+        <form action="./register" method="post"></form>
         <div class="user">
             <input id="username" name="userName" type="text" placeholder="Tên người dùng"></input>
         </div>
