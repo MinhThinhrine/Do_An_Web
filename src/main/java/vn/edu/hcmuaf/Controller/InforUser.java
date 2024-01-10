@@ -19,10 +19,14 @@ public class InforUser extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=utf-8");
+
         HttpSession session = request.getSession();
-        String name = request.getParameter("username");
+        String name = request.getParameter("username").trim();
         String phone = request.getParameter("phone");
-        String address = request.getParameter("address");
+        String address = request.getParameter("address").trim();
 
         String err = "";
 
@@ -56,10 +60,11 @@ public class InforUser extends HttpServlet {
             UserDAO userDAO = new UserDAO();
             boolean kq = userDAO.editInforUser(name, phone, address, user.getEmail());
             if (kq) {
-                request.setAttribute("status", "Thay đổi mật khẩu thành công");
-                response.sendRedirect("infor.jsp");
+                System.out.println("kq" + kq);
+                request.setAttribute("status", "Thay đổi thông tin thành công");
+                request.getRequestDispatcher("infor.jsp").forward(request,response);
             } else {
-                request.setAttribute("error", "Thay đổi mật khẩu thành công");
+                request.setAttribute("err", "Thay đổi thông tin không thành công");
                 request.getRequestDispatcher("infor.jsp").forward(request,response);
             }
         }
@@ -74,7 +79,7 @@ public class InforUser extends HttpServlet {
     }
 
     private boolean isValidUsername(String username) {
-        String usernameRegex = "^[a-zA-Z0-9]+$";
+        String usernameRegex = "^[\\p{L}0-9\\s]+$";
         Pattern pattern = Pattern.compile(usernameRegex);
         Matcher matcher = pattern.matcher(username);
 

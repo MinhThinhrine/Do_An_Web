@@ -66,6 +66,7 @@
 
     String status = request.getAttribute("status") + "";
     status = (status == null || status.equals("null")) ? "" : status;
+    System.out.println("status"+status);
 %>
 <body>
 <section style="background-color: #93949f;">
@@ -139,7 +140,7 @@
                                     <span class="text-primary text-medium"></span><%=err%>
                                 </div>
                                 <% } else if (status != null && !status.equals("")) { %>
-                                <div class="ques" style="width: 250px; margin: 15px auto -15px auto; color: red; text-align: center">
+                                <div class="ques" style="width: 250px; margin: 15px auto -15px auto; color: #31b0f5; text-align: center">
                                     <span class="text-primary text-medium"></span><%=status%>
                                 </div>
                                 <% } %>
