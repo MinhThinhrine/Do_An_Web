@@ -63,7 +63,7 @@ public class LoginController extends HttpServlet {
                 session.setAttribute("user", u); // session này dùng để
                 request.getRequestDispatcher("./index.jsp").forward(request, response); // sử dụng forward() để chuyển tiếp người dùng này cho các tác vụ khác
             } else {
-                request.setAttribute("err", "Email or Password is incorrect");
+                request.setAttribute("err", "Email or Password is incorrect!");
                 request.getRequestDispatcher("./login.jsp").forward(request, response);
             }
         } catch (Exception e) {

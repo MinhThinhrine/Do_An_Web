@@ -35,7 +35,7 @@
                 <% }%>
             </div>
             <div class="pass">
-                <input id="pass" name="password" type="password" placeholder="Mật khẩu từ 6 - 20 kí tự" minlength="6" maxlength="20">
+                <input id="pass" name="password" type="password" placeholder="Mật khẩu từ 6 - 20 kí tự" minlength="6" maxlength="20" >
             </div>
             <div class="button">
                 <button type="submit" name="btn" id="btn">ĐĂNG NHẬP</button>

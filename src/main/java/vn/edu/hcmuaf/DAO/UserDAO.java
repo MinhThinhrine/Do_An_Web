@@ -167,10 +167,7 @@ public class UserDAO implements objectDAO {
     public void addUser(User user) {
         try (Connection connection = ConnectToDatabase.getConnect()) {
             // Kiểm tra xem email đã tồn tại hay chưa
-            if (isEmailExists(user.getEmail())) {
-                // Email đã tồn tại, có thể hiển thị thông báo lỗi hoặc xử lý khác
-                System.out.println("Email already exists");
-            } else {
+
                 // Email không tồn tại, thêm người dùng vào cơ sở dữ liệu
                 try (PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO users (username, email, password) VALUES (?, ?, ?)")) {
                     preparedStatement.setString(1, user.getUserName());
@@ -179,7 +176,7 @@ public class UserDAO implements objectDAO {
 
                     preparedStatement.executeUpdate();
                 }
-            }
+
         } catch (SQLException e) {
             e.printStackTrace(); // In lỗi để bạn có thể xác định vấn đề
         }
@@ -252,8 +249,9 @@ public class UserDAO implements objectDAO {
     public static void main(String[] args) {
 
             // add User
-        User u = new User("asa","1221311@gmail.com","123321");
+        User u = new User("asa","122131122212@gmail.com","123321");
                 UserDAO userDao = new UserDAO();
+                System.out.println(userDao.isEmailExists("12213112221@gmail.com"));
                 userDao.addUser(u);
 
             // Giả sử bạn có các giá trị tham số như sau:

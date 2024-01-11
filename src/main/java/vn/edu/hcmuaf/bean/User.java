@@ -31,6 +31,7 @@ public class User extends valies{
         this.email = email;
         this.password = password;
     }
+
     public User(int id, String userName, String email, String password, String phoneNumber, String address, int roleId) {
         this.id = id;
         this.userName = userName;
