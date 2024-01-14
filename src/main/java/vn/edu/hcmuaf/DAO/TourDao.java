@@ -1,8 +1,7 @@
 package vn.edu.hcmuaf.DAO;
 
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
-import vn.edu.hcmuaf.bean.User;
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.Tour;
 import vn.edu.hcmuaf.bean.valies;
 
 import java.sql.*;
@@ -18,8 +17,8 @@ public class TourDao {
     ResultSet rs = null;
     PreparedStatement preparedStatement = null;
 
-    public List<tour> findAll() {
-        List<tour> tours = new ArrayList<>();
+    public List<Tour> findAll() {
+        List<Tour> tours = new ArrayList<>();
         try {
             String sql = "Select * from tours";
             ResultSet rs = ConnectToDatabase.executeQuery(sql);
@@ -34,7 +33,7 @@ public class TourDao {
                 String duration = rs.getString("duration");
                 String schedule = rs.getString("schedule");
                 String description = rs.getString("description");
-                tour tour = new tour(id, idCate, idDis, name, image, price, startTime, duration, schedule, description);
+                Tour tour = new Tour(id, idCate, idDis, name, image, price, startTime, duration, schedule, description);
                 tours.add(tour);
             }
         } catch (Exception e) {
@@ -43,9 +42,32 @@ public class TourDao {
         }
         return tours;
     }
+    public List<Tour> getAllTourForIndex() {
+        List<Tour> tours = new ArrayList<>();
+        try {
+            String sql = "Select id,name,image,price,duration from tours";
+            ResultSet rs = ConnectToDatabase.executeQuery(sql);
+            while (rs.next()) {
+                int id = rs.getInt("id");
 
-    public tour findtourbyid(int id) {
-        tour tour = null;
+                String name = rs.getString("name");
+                String image = rs.getString("image");
+                int price = rs.getInt("price");
+
+                String duration = rs.getString("duration");
+
+
+                Tour tour = new Tour(id,  name, image, price,  duration);
+                tours.add(tour);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        return tours;
+    }
+    public Tour findtourbyid(int id) {
+        Tour tour = null;
         try {
             connection = ConnectToDatabase.getConnect();
             String sql = "SELECT * FROM tours where id =?";
@@ -53,7 +75,7 @@ public class TourDao {
             preparedStatement.setInt(1, id);
             rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                tour = new tour();
+                tour = new Tour();
                 int id1 = rs.getInt("id");
                 int idCate = rs.getInt("cateId");
                 int idDis = rs.getInt("discountId");
@@ -113,8 +135,8 @@ public class TourDao {
         }
         return product;
     }
-    public static LinkedList<tour> getListTourbySearch(String search) {
-        LinkedList<tour> listSearch = new LinkedList<>();
+    public static LinkedList<Tour> getListTourbySearch(String search) {
+        LinkedList<Tour> listSearch = new LinkedList<>();
         String sql = "select * from tours WHERE name like ? order by id desc ";
         Connection connect = ConnectToDatabase.getConnect();
         try {
@@ -133,7 +155,7 @@ public class TourDao {
                 String duration = rs.getString("duration");
                 String schedule = rs.getString("schedule");
                 String description = rs.getString("description");
-                tour tour1 = new tour(id1, idCate, idDis, name, image, price, startTime, duration, schedule, description);
+                Tour tour1 = new Tour(id1, idCate, idDis, name, image, price, startTime, duration, schedule, description);
                 listSearch.add(tour1);
             }
         } catch (Exception e) {
@@ -144,22 +166,32 @@ public class TourDao {
     }
 
         public static void main(String[] args) {
-            // Gọi phương thức getListTourbySearch
-            String searchKeyword = "Cần Thơ";
-            List<tour> searchResults = TourDao.getListTourbySearch(searchKeyword);
+//            // Gọi phương thức getListTourbySearch
+//            String searchKeyword = "Cần Thơ";
+//            List<tour> searchResults = TourDao.getListTourbySearch(searchKeyword);
+//
+//            // Hiển thị kết quả
+//            if (searchResults.isEmpty()) {
+//                System.out.println("Không tìm thấy kết quả cho từ khóa: " + searchKeyword);
+//            } else {
+//                System.out.println("Kết quả tìm kiếm cho từ khóa: " + searchKeyword);
+//                for (tour tour : searchResults) {
+//                    System.out.println("Tour ID: " + tour.getId());
+//                    System.out.println("Tên tour: " + tour.getName());
+//                    // Hiển thị thêm các thông tin khác nếu cần
+//                    System.out.println("----------------------------------");
+//                }
+//            }
 
-            // Hiển thị kết quả
-            if (searchResults.isEmpty()) {
-                System.out.println("Không tìm thấy kết quả cho từ khóa: " + searchKeyword);
-            } else {
-                System.out.println("Kết quả tìm kiếm cho từ khóa: " + searchKeyword);
-                for (tour tour : searchResults) {
-                    System.out.println("Tour ID: " + tour.getId());
-                    System.out.println("Tên tour: " + tour.getName());
-                    // Hiển thị thêm các thông tin khác nếu cần
-                    System.out.println("----------------------------------");
-                }
+                TourDao tourDao = new TourDao();
+               ArrayList<Tour> tours = (ArrayList<Tour>) tourDao.getAllTourForIndex();
+            for (Tour tour : tours) {
+                // Thực hiện các thao tác với mỗi đối tượng tour ở đây
+                System.out.println(tour.toStringforIndex()); // Ví dụ in thông tin của mỗi tour
             }
+
+
+
         }
 
 

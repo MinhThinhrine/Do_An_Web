@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.Controller;
 
 import vn.edu.hcmuaf.DAO.TourDao;
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.Tour;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -9,7 +9,6 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
 @WebServlet(name = "SearchController", value = "/SearchController")
 public class SearchController extends HttpServlet {
@@ -30,13 +29,13 @@ public class SearchController extends HttpServlet {
         System.out.println("diemden " + endInput);
         System.out.println("--------------------------------------");
 
-        List<tour> searchResults = new TourDao().findAll();
+        List<Tour> searchResults = new TourDao().findAll();
         int size = searchResults.size();
         System.out.println(size);
 
-        List<tour> kqtimkiem = new LinkedList<>();
+        List<Tour> kqtimkiem = new LinkedList<>();
 
-        for (tour t : searchResults) {
+        for (Tour t : searchResults) {
             String input = t.getName();
 
 // Nếu cả hai điểm đều không được nhập

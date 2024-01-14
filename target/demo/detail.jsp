@@ -4,8 +4,8 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="common/tablib.jsp" %>
 <%@ page import="java.util.Objects" %>
-<%@ page import="vn.edu.hcmuaf.bean.tour" %>
-<% tour t = (vn.edu.hcmuaf.bean.tour) request.getAttribute("tour");%>
+<%@ page import="vn.edu.hcmuaf.bean.Tour" %>
+<% Tour t = (Tour) request.getAttribute("tour");%>
 <head>
     <!-- META DATA -->
     <meta charset="utf-8">

@@ -243,8 +243,11 @@ VALUES
     (2, 1, 'Cần Thơ  - Núi Bà Đen','12.jpg', 150, '2023-04-01', '10 days', 'Tour schedule 2', 'Description of Tour 2'),
     (2, 1, 'Cần Thơ  - Núi Bà Đen','13.jpg', 150, '2023-04-01', '11 days', 'Tour schedule 2', 'Description of Tour 2'),
     (2, 1, 'Cần Thơ  - Núi Bà Đen','14.jpg', 150, '2023-04-01', '12 days', 'Tour schedule 2', 'Description of Tour 2');
+-- 71-140
 
--- 140 -->210----------------------------------->
+
+
+-- 141 -->210----------------------------------->
 
 
 

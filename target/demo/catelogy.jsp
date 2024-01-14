@@ -4,7 +4,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <%@ page import="java.util.List" %>
-<%@ page import="vn.edu.hcmuaf.bean.tour" %>
+<%@ page import="vn.edu.hcmuaf.bean.Tour" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
@@ -12,7 +12,7 @@
 <%@include file="common/tablib.jsp" %>
 <%
 TourDao td = new TourDao();
-List<tour> tourss = (List<tour>) request.getAttribute("tours");
+List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
 %>
 <!DOCTYPE html>
 <html class="no-js" lang="vi">
@@ -272,7 +272,7 @@ List<tour> tourss = (List<tour>) request.getAttribute("tours");
         </div>
         <div id="products">
             <div class="row mx-0">
-                <% for(tour t : tourss) { %>
+                <% for(Tour t : tourss) { %>
                 <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="<%=t.getId() %>">
                     <div class="single-package-item">
                         <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">

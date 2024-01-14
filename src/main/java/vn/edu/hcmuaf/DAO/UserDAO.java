@@ -182,6 +182,7 @@ public class UserDAO implements objectDAO {
         }
     }
 
+
     public static boolean editInforUser(String name, String phone, String address, String email){
         String sql = "update users set userName = ?,phoneNumber= ?, address=? where email = ?";
         boolean kq = false;
