@@ -28,13 +28,13 @@
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="smooth-menu"><a href="#home">Trang Chủ</a></li>
-                                <li class="smooth-menu"><a href="#spo">Ưu Đãi</a></li>
-                                <li class="smooth-menu"><a href="#gallery">Tour Hot</a></li>
-                                <li class="smooth-menu"><a href="#pack">Gói Du Lịch</a></li>
-                                <li class="smooth-menu"><a href="#blog">Tin Tức</a></li>
-                                <li class="smooth-menu"><a href="#feedback">Đánh Giá</a></li>
-                                <li class="smooth-menu"><a href="#service">Liên Hệ</a></li>
+                                <li><a href="index.jsp">Trang Chủ</a></li>
+                                <li><a href="index.jsp#spo">Ưu Đãi</a></li>
+                                <li><a href="index.jsp#gallery">Tour Hot</a></li>
+                                <li><a href="CategorieServlet">Sản Phẩm</a></li>
+                                <li><a href="index.jsp#blog">Tin Tức</a></li>
+                                <li><a href="index.jsp#feedback">Đánh Giá</a></li>
+                                <li><a href="index.jsp#service">Liên Hệ</a></li>
                                 <%
                                     User user = (User) session.getAttribute("user");
                                     String url = request.getContextPath().trim();
@@ -44,7 +44,7 @@
                                         class="fa fa-suitcase-rolling fa-2x"
                                         style="margin-top: -10px;color: #00d8fe"></i></a>
                                 </li>
-                                <li id="icon-user" class="smooth-menu">
+                                <li id="icon-user"  >
                                     <i class="fa-regular fa-circle-user" style="color: #ffffff;margin-top: 8px"></i>
                                     <span><%= user.getUserName() %></span>
                                     <ul id="service_account">

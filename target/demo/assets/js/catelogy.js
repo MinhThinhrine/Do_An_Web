@@ -41,11 +41,10 @@ function nextPage() {
 }
 
 // For Filters
-document.addEventListener("DOMContentLoaded", function () {
     var filterBtn = document.getElementById('filter-btn');
     var btnTxt = document.getElementById('btn-txt');
     var filterAngle = document.getElementById('filter-angle');
-    var fit = document.getElementById("fitImg");
+    var element = document.querySelector(".element");
 
     $('#filterbar').collapse(false);
     var count = 0, count2 = 0;
@@ -55,13 +54,14 @@ document.addEventListener("DOMContentLoaded", function () {
         count++;
         if (count % 2 != 0) {
             filterAngle.classList.add("fa-angle-right");
-            btnTxt.innerText = "show filters"
-            filterBtn.style.backgroundColor = "#36a31b";
+            btnTxt.innerText = "show filters";
+            element.classList.add("col-lg-3");
+            element.classList.remove("col-lg-4");
         } else {
-            filterAngle.classList.remove("fa-angle-right")
-            btnTxt.innerText = "hide filters"
-            filterBtn.style.backgroundColor = "#ff935d";
-            fit.style.width="413px";
+            filterAngle.classList.remove("fa-angle-right");
+            btnTxt.innerText = "hide filters";
+            element.classList.remove("col-lg-3");
+            element.classList.add("col-lg-4");
         }
 
     }
@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $(function () {
         $('[data-tooltip="tooltip"]').tooltip()
     })
+document.addEventListener("DOMContentLoaded", function () {
 
 // For Range Sliders
     var inputLeft = document.getElementById("input-left");
@@ -169,5 +170,18 @@ document.addEventListener("DOMContentLoaded", function () {
         thumbRight.classList.remove("active");
     });
 });
+var element = document.querySelector(".element");
+var clickCount = 0;
 
+document.getElementById("filter-btn").addEventListener("click", function() {
+    if (clickCount === 0) {
+        element.classList.remove("col-lg-3");
+        element.classList.add("col-lg-4");
+        clickCount = 1;
+    } else {
+        element.classList.remove("col-lg-4");
+        element.classList.add("col-lg-3");
+        clickCount = 0;
+    }
+});
 

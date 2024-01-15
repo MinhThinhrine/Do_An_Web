@@ -52,7 +52,19 @@
         .hidden {
             display: none;
         }
-
+        .logo a, .logo a:hover, .logo a:focus {
+            color: #fff;
+            font-size: 24px;
+            font-family: 'Poppins', sans-serif;
+            text-transform: capitalize;
+            font-weight: 600;
+            margin: 14px 0px 0;
+            padding: 10px 0 0 0;
+        }
+        .logo a span {
+            color: #00d8ff;
+            text-transform: capitalize;
+        }
     </style>
 </head>
 <%
@@ -69,11 +81,15 @@
     System.out.println("status"+status);
 %>
 <body>
-<section style="background-color: #93949f;">
+<section style="background: url(assets/images/home/1920.jpg)no-repeat;
+">
 
     <div class="container py-5">
-        <th scope="col"><a class="return" href="index.jsp">
-            <i class="fa-solid fa-arrow-left"></i> Trang Chủ</a>
+        <th scope="col"><div class="logo">
+            <a href="index.jsp">
+                tour<span>Nest</span>
+            </a>
+        </div>
         </th>
 
         <div class="row" style="margin-top: 40px">

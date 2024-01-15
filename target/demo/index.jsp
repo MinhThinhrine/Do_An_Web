@@ -41,7 +41,7 @@
                             </h2>
                             <div class="about-btn">
                                 <button class="about-view">
-                                    <a href="#pack" style="width: 200px; padding: 20px;height: 60px;">Khám phá ngay</a>
+                                    <a href="CategorieServlet" style="width: 200px; padding: 20px;height: 60px;">Khám phá ngay</a>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.about-us-txt-->
@@ -215,44 +215,21 @@
                                                 </div><!--/.single-tab-select-box-->
                                             </div><!--/.col-->
 
-                                            <!--												<div class="col-lg-2 col-md-3 col-sm-4">-->
-                                            <!--													<div class="single-tab-select-box">-->
-                                            <!--														<h2>Ngày Đi</h2>-->
-                                            <!--														<div class="travel-check-icon">-->
-                                            <!--															<form action="#">-->
-                                            <!--																<input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="19/10/2023">-->
-                                            <!--															</form>-->
-                                            <!--														</div>&lt;!&ndash; /.travel-check-icon &ndash;&gt;-->
-                                            <!--													</div>&lt;!&ndash;/.single-tab-select-box&ndash;&gt;-->
-                                            <!--												</div>&lt;!&ndash;/.col&ndash;&gt;-->
+                                            <div class="col-lg-6 col-md-1 col-sm-6" style="height: 130px">
+                                            </div>
 
-                                            <!--												<div class="col-lg-2 col-md-3 col-sm-4">-->
-                                            <!--													<div class="single-tab-select-box">-->
-                                            <!--														<h2>Ngày Về</h2>-->
-                                            <!--														<div class="travel-check-icon">-->
-                                            <!--															<form action="#">-->
-                                            <!--																<input type="text" name="check_out" class="form-control"  data-toggle="datepicker" placeholder="20/10/2023">-->
-                                            <!--															</form>-->
-                                            <!--														</div>&lt;!&ndash; /.travel-check-icon &ndash;&gt;-->
-                                            <!--													</div>&lt;!&ndash;/.single-tab-select-box&ndash;&gt;-->
-                                            <!--												</div>&lt;!&ndash;/.col&ndash;&gt;-->
-
-                                            <div class="col-lg-6 col-md-1 col-sm-4" style="display: none">
-                                                <div class="single-tab-select-box">
-                                                    <h2>Số Ngày Đi</h2>
-                                                    <div class="travel-select-icon">
-                                                        <select class="form-control ">
-                                                            <option value="null">2 ngày 1 đêm</option>
-                                                            <option value="2">2 ngày 1 đêm</option><!-- /.option-->
-                                                            <option value="3">3 ngày 2 đêm</option><!-- /.option-->
-                                                            <option value="4">4 ngày 3 đêm</option><!-- /.option-->
-                                                            <option value="5">5 ngày 4 đêm</option><!-- /.option-->
-                                                            <option value="6">6 ngày trở lên</option><!-- /.option-->
-
-                                                        </select><!-- /.select-->
-                                                    </div><!-- /.travel-select-icon -->
-                                                </div><!--/.single-tab-select-box-->
-                                            </div><!--/.col-->
+                                            <div class="col-lg-6 col-md-1 col-sm-6" >
+                                                <div class="about-btn travel-mrt-0 pull-right">
+                                                    <button id="searchButton" type="submit"
+                                                            class="about-view travel-btn">
+                                                        <a
+                                                                style="text-decoration: none; text-transform: uppercase;width: 180px; padding: 20px;height: 60px;">tìm
+                                                            kiếm
+                                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                                        </a>
+                                                    </button>
+                                                    <!--/.travel-btn-->
+                                                </div>                                            </div><!--/.col-->
 
                                             <!--												<div class="col-lg-2 col-md-1 col-sm-4">-->
                                             <!--													<div class="single-tab-select-box">-->
@@ -273,47 +250,6 @@
                                             <!--														</div>&lt;!&ndash; /.travel-select-icon &ndash;&gt;-->
                                             <!--													</div>&lt;!&ndash;/.single-tab-select-box&ndash;&gt;-->
                                             <!--												</div>&lt;!&ndash;/.col&ndash;&gt;-->
-
-                                        </div><!--/.row-->
-
-                                        <div class="row">
-                                            <div class="col-sm-5">
-                                                <!--													<div class="travel-budget">-->
-                                                <!--														<div class="row">-->
-                                                <!--															<div class="col-md-3 col-sm-4">-->
-                                                <!--																<h3>Ngân Sách: </h3>-->
-                                                <!--															</div>&lt;!&ndash;/.col&ndash;&gt;-->
-                                                <!--															<div class="co-md-9 col-sm-8">-->
-                                                <!--																<div class="travel-filter">-->
-                                                <!--																	<div class="info_widget">-->
-                                                <!--																		<div class="price_filter">-->
-
-                                                <!--																			<div id="slider-range"></div>&lt;!&ndash;/.slider-range&ndash;&gt;-->
-
-                                                <!--																			<div class="price_slider_amount">-->
-                                                <!--																				<input type="text" id="amount" name="price"  placeholder="Add Your Price" />-->
-                                                <!--																			</div>&lt;!&ndash;/.price_slider_amount&ndash;&gt;-->
-                                                <!--																		</div>&lt;!&ndash;/.price-filter&ndash;&gt;-->
-                                                <!--																	</div>&lt;!&ndash;/.info_widget&ndash;&gt;-->
-                                                <!--																</div>&lt;!&ndash;/.travel-filter&ndash;&gt;-->
-                                                <!--															</div>&lt;!&ndash;/.col&ndash;&gt;-->
-                                                <!--														</div>&lt;!&ndash;/.row&ndash;&gt;-->
-                                                <!--													</div>&lt;!&ndash;/.travel-budget&ndash;&gt;-->
-                                            </div>
-                                            <!--/.col-->
-                                            <div class="clo-sm-7">
-                                                <div class="about-btn travel-mrt-0 pull-right">
-                                                    <button id="searchButton" type="submit"
-                                                            class="about-view travel-btn">
-                                                        <a
-                                                                style="text-decoration: none; text-transform: uppercase;width: 180px; padding: 20px;height: 60px;">tìm
-                                                            kiếm
-                                                            <i class="fa-solid fa-magnifying-glass"></i>
-                                                        </a>
-                                                    </button>
-                                                    <!--/.travel-btn-->
-                                                </div><!--/.about-btn-->
-                                            </div><!--/.col-->
 
                                         </div><!--/.row-->
 
@@ -529,7 +465,7 @@
         </div><!--/.gallery-header-->
         <div class="packages-content" id="item-container">
             <div class="row">
-            
+
 <%--                        <%--%>
 <%--                            List<Tour> t = (List<Tour>) request.getAttribute("data");--%>
 <%--                            for (Tour tour : t) {--%>

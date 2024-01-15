@@ -102,7 +102,7 @@
                                 <li class="smooth-menu"><a href="index.jsp#home">Trang Chủ</a></li>
                                 <li class="smooth-menu"><a href="index.jsp#spo">Ưu Đãi</a></li>
                                 <li class="smooth-menu"><a href="index.jsp#gallery">Tour Hot</a></li>
-                                <li class="smooth-menu"><a href="index.jsp#pack">Gói Du Lịch</a></li>
+                                <li><a href="CategorieServlet">Sản Phẩm</a></li>
                                 <li class="smooth-menu"><a href="index.jsp#blog">Tin Tức</a></li>
                                 <li class="smooth-menu"><a href="index.jsp#feedback">Đánh Giá</a></li>
                                 <li class="smooth-menu"><a href="index.jsp#service">Liên Hệ</a></li>

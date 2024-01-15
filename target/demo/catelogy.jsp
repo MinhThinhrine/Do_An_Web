@@ -73,7 +73,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                             <li><a href="index.jsp">Trang Chủ</a></li>
                             <li><a href="index.jsp#spo">Ưu Đãi</a></li>
                             <li><a href="index.jsp#gallery">Tour Hot</a></li>
-                            <li><a href="index.jsp#pack">Gói Du Lịch</a></li>
+                            <li><a href="CategorieServlet">Sản Phẩm</a></li>
                             <li><a href="index.jsp#blog">Tin Tức</a></li>
                             <li><a href="index.jsp#feedback">Đánh Giá</a></li>
                             <li><a href="index.jsp#service">Liên Hệ</a></li>
@@ -273,7 +273,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
         <div id="products">
             <div class="row mx-0">
                 <% for(Tour t : tourss) { %>
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3" id="<%=t.getId() %>">
+                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3 element"  id="<%=t.getId() %>">
                     <div class="single-package-item">
                         <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">
                             <img style="cursor: pointer" class="packageImage" src="assets/images/item/<%=t.getImage()%>"
@@ -306,7 +306,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                                 </button>
                             </div>
                             <div class="about-btn" style="width: 0px">
-                                <a id="fitImg" href="ValiServlet?id=<%=t.getId()%>">
+                                <a href="ValiServlet?id=<%=t.getId()%>">
                                     <button class="about-view packages-btn addvali">
                                         <i class="fa fa-plus"></i>
                                         <i class="fa fa-suitcase-rolling" style="padding-left: 6px;" ></i>
@@ -452,7 +452,20 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
 <script src="assets/js/modify.js"></script>
 <script src="assets/js/custom.js"></script>
 <script src="assets/js/catelogy.js"></script>
+<script !src="">var element = document.querySelector(".element");
+var clickCount = 0;
 
+document.getElementById("filter-btn").addEventListener("click", function() {
+    if (clickCount === 0) {
+        element.classList.remove("col-lg-3");
+        element.classList.add("col-lg-4");
+        clickCount = 1;
+    } else {
+        element.classList.remove("col-lg-4");
+        element.classList.add("col-lg-3");
+        clickCount = 0;
+    }
+});</script>
 
 </body>
 </html>

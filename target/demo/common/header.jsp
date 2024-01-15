@@ -31,7 +31,7 @@
                             <li class="smooth-menu"><a href="#home">Trang Chủ</a></li>
                             <li class="smooth-menu"><a href="#spo">Ưu Đãi</a></li>
                             <li class="smooth-menu"><a href="#gallery">Tour Hot</a></li>
-                            <li class="smooth-menu"><a href="#pack">Gói Du Lịch</a></li>
+                            <li><a href="CategorieServlet">Sản Phẩm</a></li>
                             <li class="smooth-menu"><a href="#blog">Tin Tức</a></li>
                             <li class="smooth-menu"><a href="#feedback">Đánh Giá</a></li>
                             <li class="smooth-menu"><a href="#service">Liên Hệ</a></li>
