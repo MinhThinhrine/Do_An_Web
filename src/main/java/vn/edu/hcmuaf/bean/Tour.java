@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class Tour {
     private int id;
-    private int cateId;
+    private String region;
     private Integer discountId;  // Integer để cho phép giá trị null
     private String name;
     private String image;
     private int price;
-    private Date startTime;
+    private String startTime;
     private String duration;
     private String schedule;
     private String description;
@@ -17,10 +17,10 @@ public class Tour {
     public Tour() {
     }
 
-    public Tour(int id, int cateId, Integer discountId, String name, String image, int price,
-                Date startTime, String duration, String schedule, String description) {
+    public Tour(int id, String region, Integer discountId, String name, String image, int price,
+                String startTime, String duration, String schedule, String description) {
         this.id = id;
-        this.cateId = cateId;
+        this.region = region;
         this.discountId = discountId;
         this.name = name;
         this.image = image;
@@ -48,12 +48,12 @@ public class Tour {
         this.id = id;
     }
 
-    public int getCateId() {
-        return cateId;
+    public String getRegion() {
+        return region;
     }
 
-    public void setCateId(int cateId) {
-        this.cateId = cateId;
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     public Integer getDiscountId() {
@@ -88,11 +88,11 @@ public class Tour {
         this.price = price;
     }
 
-    public Date getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
@@ -120,7 +120,7 @@ public class Tour {
     public String toString() {
         return "tour{" +
                 "id=" + id +
-                ", cateId=" + cateId +
+                ", region=" + region +
                 ", discountId=" + discountId +
                 ", name='" + name + '\'' +
                 ", image='" + image + '\'' +

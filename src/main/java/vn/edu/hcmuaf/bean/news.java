@@ -11,9 +11,6 @@ public class news {
     private String image;
     private String newsLink;
 
-    public news() {
-    }
-
     public news(String title, Date date, String content, String image, String newsLink) {
         this.title = title;
         this.date = date;

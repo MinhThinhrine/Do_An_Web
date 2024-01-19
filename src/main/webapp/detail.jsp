@@ -5,6 +5,7 @@
 <%@include file="common/tablib.jsp" %>
 <%@ page import="java.util.Objects" %>
 <%@ page import="vn.edu.hcmuaf.bean.Tour" %>
+<%@ page import="java.text.DecimalFormat" %>
 <% Tour t = (Tour) request.getAttribute("tour");%>
 <head>
     <!-- META DATA -->
@@ -163,7 +164,7 @@
                                         <div class="item" style="width: 700px;height: 515px; display: inline-block;">
                                             <div class="img"><img
                                                     src="assets/images/item/<%=t.getImage()%>"
-                                                    alt="Du lịch <%=t.getSchedule()%>" style="width: 700px;height: 515px;">
+                                                    alt="Du lịch <%=t.getName()%>" style="width: 700px;height: 515px;">
                                             </div>
                                         </div>
                                     </div>
@@ -195,7 +196,7 @@
                                     <td style="width: 15%;"><span
                                             style="color:#555555;"><strong>Hành trình</strong></span></td>
                                     <td>
-                                        <span style="color:#555555;"><strong><%=t.getSchedule()%></strong></span>
+                                        <span style="color:#555555;"><strong><%=t.getName()%></strong></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -210,36 +211,11 @@
                                 <tr>
                                     <td><span style="color:#555555;"><strong>Vận chuyển</strong></span></td>
                                     <td><span style="color:#555555;">
-                                <strong>Xe du lịch đời mới &amp; Máy bay khứ hồi</strong></span></td>
+                                <strong>Xe du lịch đời mới</strong></span></td>
                                 </tr>
                                 </tbody>
                             </table>
-                            <p style="text-align: justify;"><em><strong>Du lịch Cần Thơ - Châu Đốc - Miếu Bà Chúa Xứ từ
-                                Sài Gòn 2023</strong>
-                                . Hòa mình vào vẻ đẹp thiên nhiên và văn hóa dân tộc, hành trình khám phá Cần Thơ, Châu
-                                Đốc và Miếu Bà Chúa Xứ là một trải nghiệm tuyệt vời.
-
-                                Cần Thơ, với sông nước êm đềm và hệ thống kênh rạch labyrinthe, mang đến một cảm giác
-                                thanh bình và yên tĩnh. Tham quan chợ nổi Cái Răng, bạn sẽ được chứng kiến cuộc sống sôi
-                                động của người dân địa phương và thưởng thức những món ăn đặc sản đậm đà hương vị miền
-                                Tây.
-
-                                Tiếp theo, hãy đặt chân đến Châu Đốc, một thị trấn nằm gần biên giới Campuchia. Nơi đây,
-                                bạn có thể ngắm nhìn vẻ đẹp hùng vĩ của núi Sam, tìm hiểu văn hóa và tín ngưỡng của
-                                người dân Khmer, và thưởng thức những món ăn đặc trưng như cá linh chả tôm hay cá bớp
-                                lóc nướng mỡ hành.
-
-                                Cuối cùng, hãy ghé thăm Miếu Bà Chúa Xứ, một ngôi đền linh thiêng được dâng trọn tình
-                                cảm của người dân Nam Bộ. Đền thờ Bà Chúa Xứ là nơi để cầu mong sự bình an và may mắn.
-                                Cảnh quan xung quanh đền rừng xanh và hòn non bộ tạo nên không gian tĩnh lặng và thiêng
-                                liêng.
-
-                                Tổng cộng, hành trình kết hợp Cần Thơ, Châu Đốc và Miếu Bà Chúa Xứ mang đến cho bạn cảnh
-                                quan thiên nhiên tuyệt đẹp, trải nghiệm văn hóa đa dạng và những trạm dừng thú vị trên
-                                con đường khám phá miền Tây Nam Bộ Việt Nam. </em></p>
-                            <p><span style="color:#2980b9;">
-              <em id="flag2">Tag: Du lịch Mùa thu trong nước, du lich mua thu trong nuoc, tour mua thu trong nuoc, tour mùa thu trong nước, tour du lich mua thu trong nuoc, tour du lịch mùa thu trong nước.</em>
-            </span></p>
+                            <p style="text-align: justify;"><em><strong>Tour <%=t.getName()%> - </strong><%=t.getDescription()%></em></p>
                             <div class="linkMore text-right"><a href="javascript:void(0)" id="xemthem" data-id="16764"
                                                                 data-table="tour"><span>Xem thêm »</span></a></div>
                         </div>
@@ -248,39 +224,23 @@
                         <div class="title"><span><i class="fa fa-map-o"></i> Lịch trình</span></div>
                         <div class="content">
                             <div class="listDay">
+                                <% String schedule =t.getSchedule();
+                                    String[] parts = schedule.split("-");
+                                    int index = 0;%>
+
+                                   <% while (index < parts.length) {
+                                        String part = parts[index];%>
+
                                 <div class="day active">
-                                    <div class="titDay"><span>NGÀY 1 |</span> KHỞI HÀNH TỪ CẦN THƠ ĐI CHÂU ĐỐC</div>
+                                    <div class="titDay"><span><%=part%></span></div>
                                     <div class="arrow-up"></div>
                                     <div class="contDay" style="display: block;">
-                                        <div class="the-content desc">Khởi hành từ Cần Thơ đi Châu Đốc. Tham quan Miếu
-                                            Bà Chúa Xứ, một ngôi miếu linh thiêng của người Khmer.
-                                            Tham quan núi Sam, một ngọn núi cao với nhiều cảnh đẹp và điểm du lịch tâm
-                                            linh.
+                                        <div class="the-content desc">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="day active">
-                                    <div class="titDay"><span>NGÀY 2 |</span> THAM QUAN LÀNG NGHỀ
-                                    </div>
-                                    <div class="arrow-up"></div>
-                                    <div class="contDay" style="display: block;">
-                                        <div class="the-content desc">Tham quan các điểm du lịch nổi tiếng khác ở Châu
-                                            Đốc như: làng nghề truyền thống làm bánh tráng, làng nghề truyền thống làm
-                                            gốm,...
-                                            Thưởng thức các món ăn ngon đặc sản của người Khmer.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="day active" id="flag3">
-                                    <div class="titDay"><span>NGÀY 3 |</span> ĐIỂM DU LỊCH ĐỊA PHƯƠNG
-                                    </div>
-                                    <div class="arrow-up"></div>
-                                    <div class="contDay" style="display: block;">
-                                        <div class="the-content desc">Tham quan các địa điểm trên đường về .Khởi hành từ
-                                            Châu Đốc về Cần Thơ.
-                                        </div>
-                                    </div>
-                                </div>
+                                <% index++;  }%>
+                                <div id="flag3"></div>
                             </div>
                         </div>
                     </div>
@@ -469,7 +429,7 @@
 
                 <div id="vnt-sidebar" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs">
                     <div class="boxDesign1">
-                        <div class="name">Du lịch <%=t.getSchedule() %></div>
+                        <div class="name">Du lịch <%=t.getName() %></div>
                         <div class="attr">
                             <ul>
                                 <li>
@@ -482,12 +442,12 @@
                                 </li>
                                 <li>
                                     <div class="at">Khởi hành:</div>
-                                    <div class="as">Hằng ngày</div>
+                                    <div class="as"><%=t.getStartTime()%></div>
                                 </li>
                                 <li>
                                     <div class="at">Vận Chuyển:</div>
                                     <div class="as">
-                                        Xe du lịch, Máy bay &nbsp;
+                                        Xe du lịch đời mới
                                     </div>
                                 </li>
                                 <li>
@@ -504,7 +464,11 @@
                                 <div class="boxPrice">
                                     <div class="price">
                                         <div class="txt">Giá từ:</div>
-                                        <div class="red" id="giactt"><%=t.getPrice() %></div>
+                                        <div class="red" id="giactt"><%=t.getName()%><span class="pull-right" style="margin-top: 25px;">
+                                                <%int number = t.getPrice();
+                                DecimalFormat decimalFormat = new DecimalFormat("#,###");
+                                String formattedString = decimalFormat.format(number);%>
+                                        </span> <%=formattedString%></div>
                                     </div>
                                     <div class="bot">
                                         <div class="btn-booking dt">

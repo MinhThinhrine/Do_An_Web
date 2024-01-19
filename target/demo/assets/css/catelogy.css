@@ -686,7 +686,7 @@ body {
     position: relative;
 }
 .pagination a {
-    width: 63px;
+    width: 55px;
     position: relative;
     display: inline-block;
     color: #2c3e50!important;
@@ -942,6 +942,6 @@ body {
 }
 @media (min-width: 1200px){
     .container {
-        max-width: 1200px!important;
+        max-width: 1300px!important;
     }
 }

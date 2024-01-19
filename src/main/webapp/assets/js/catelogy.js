@@ -24,7 +24,7 @@ function changePage(pageNumber) {
             }
         }
     }
-
+    window.location.href="CategorieServlet";
 }
 function previousPage() {
     if (currentPage > 1) {

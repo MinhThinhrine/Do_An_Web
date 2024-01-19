@@ -35,7 +35,6 @@ public class ValiServlet extends HttpServlet {
                 valiList.add(vl);
                 ses.setAttribute("vali-List",valiList);
                 response.sendRedirect("CategorieServlet");
-
             }else{
                 valiList=vali_List;
                 boolean exit = false;
@@ -43,7 +42,6 @@ public class ValiServlet extends HttpServlet {
                     if(v.getId()==id){
                         exit=true;
                         response.sendRedirect("CategorieServlet");
-
                     }
                 }
                     if(!exit){
@@ -51,7 +49,6 @@ public class ValiServlet extends HttpServlet {
                         response.sendRedirect("CategorieServlet");
                     }
             }
-
         }
     }
     @Override

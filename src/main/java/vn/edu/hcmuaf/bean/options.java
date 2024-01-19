@@ -2,7 +2,7 @@ package vn.edu.hcmuaf.bean;
 
 import java.util.Date;
 
-public class options {
+public class options extends service_tours{
     private int id;
     private Date departDate;
     private int erviceId;

@@ -8,12 +8,16 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
 <%@ page import="vn.edu.hcmuaf.bean.valies" %>
+<%@ page import="vn.edu.hcmuaf.bean.User" %>
+<%@ page import="java.text.DecimalFormat" %>
 <%
+    User user = (User) session.getAttribute("user");
     ArrayList<valies> vali_List = (ArrayList<valies>) session.getAttribute("vali-List");
     List<valies> toursVali = null;
-    if(vali_List != null) {
         TourDao tDao = new TourDao();
+    if(vali_List != null) {
         toursVali = tDao.getValiTour(vali_List);
+
         request.setAttribute("vali_List",vali_List);
     };
 %>
@@ -83,6 +87,7 @@
                             <%
                                 if(vali_List!=null){
                                 for(valies t : toursVali ) {
+
                             %>
                             <tr id="<%=t.getId()%>">
                                 <th scope="row">
@@ -97,7 +102,7 @@
                                              style="width: 120px;" title = "Chi tiết" alt="Book" >
                                         </a>
                                         <div class="flex-column ms-4">
-                                            <p class="mb-0"><%=t.getSchedule()%></p>
+                                            <p class="mb-0"><%=t.getName()%></p>
                                             <p class="mb-2"><%=t.getDuration()%></p>
                                         </div>
                                     </div>
@@ -134,7 +139,13 @@
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <p class="mb-0" id="donGia1" style="font-weight: 500;"><%=t.getPrice()%></p>
+                                    <p class="mb-0" id="donGia1" style="font-weight: 500;">
+                                        <span class="pull-right" style="margin-top: 25px;">
+                                <% int number = t.getPrice();
+                                DecimalFormat decimalFormat = new DecimalFormat("#,###");
+                                String formattedString = decimalFormat.format(number);%>
+                                <%=formattedString%>
+                                        </p>
                                 </td>
                                 <td class="align-middle">
                                     <div class="col-md-1 col-lg-1 col-xl-1">
@@ -143,7 +154,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <% }} %>
+                            <% } } %>
                             </tbody>
                         </table>
                     </div>

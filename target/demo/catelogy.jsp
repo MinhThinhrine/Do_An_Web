@@ -9,6 +9,7 @@
 <%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page import="java.util.Objects" %>
+<%@ page import="java.text.DecimalFormat" %>
 <%@include file="common/tablib.jsp" %>
 <%
 TourDao td = new TourDao();
@@ -59,14 +60,14 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
     <div class="header-area">
         <div class="container">
             <div class="row head">
-                <div class="col-sm-2">
+                <div class="col-sm-1">
                     <div class="logo">
                         <a href="index.jsp">
                             tour<span>Nest</span>
                         </a>
                     </div><!-- /.logo-->
                 </div><!-- /.col-->
-                <div class="col-sm-1"></div>
+                <div class="col-sm-2"></div>
                 <div class="col-sm-9">
                     <div class="main-menu">
                         <ul class="nav" style="text-align: right">
@@ -281,7 +282,12 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                         </a>
 
                         <div class="single-package-item-txt">
-                            <h3><%=t.getName()%><span class="pull-right" style="margin-top: 30px;font-size: 15px;"><%=t.getPrice()%></span>
+                            <h3><%=t.getName()%><span class="pull-right" style="margin-top: 25px;">
+                                <%int number = t.getPrice();
+                                DecimalFormat decimalFormat = new DecimalFormat("#,###");
+                                String formattedString = decimalFormat.format(number);%>
+                                <%=formattedString%>
+                            </span>
                             </h3>
                             <div class="packages-para">
                                 <p>
@@ -291,12 +297,12 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                                 </p>
                                 <p>
 											<span>
-												<i class="fa fa-location-arrow"></i> <%=t.getSchedule()%>
+												<i class="fa fa-location-arrow"></i> <%=t.getName()%>
 											</span>
                                 </p>
                                 <p>
 											<span>
-												<i class="fa fa-calendar"></i> Hàng Ngày
+												<i class="fa fa-calendar"></i> <%=t.getStartTime()%>
 											</span>
                                 </p>
                             </div><!--/.packages-para-->
@@ -320,10 +326,8 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
 
                 </div><!--/.col-->
                 <% } %>
-            </div>
-            </div>
-
                 <div class="pagination">
+
                     <nav class="pagination-container">
                         <div class="pagination">
                             <a class="pagination-newer" href="#pack" onclick="previousPage()">
@@ -348,6 +352,11 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                                 <a href="#pack" onclick="changePage(17)">17</a>
                                 <a href="#pack" onclick="changePage(18)">18</a>
                                 <a href="#pack" onclick="changePage(19)">19</a>
+                                <a href="#pack" onclick="changePage(20)">20</a>
+                                <a href="#pack" onclick="changePage(21)">21</a>
+                                <a href="#pack" onclick="changePage(22)">22</a>
+                                <a href="#pack" onclick="changePage(23)">23</a>
+                                <a href="#pack" onclick="changePage(24)">24</a>
 							</span>
                             <a class="pagination-older" href="#pack" onclick="nextPage()">
                                 <i class="fa fa-chevron-right"></i>
@@ -355,6 +364,8 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                         </div>
                     </nav>
                 </div>
+            </div>
+            </div>
 
             </div>
         </div>
@@ -362,91 +373,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
 </div>
 
 <!-- footer-copyright start -->
-<footer class="footer-copyright">
-    <div class="container">
-        <div class="footer-content">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <div class="footer-logo">
-                            <a href="index.html">
-                                tour<span>Nest</span>
-                            </a>
-                            <p>
-                                best travel tour guide
-                            </p>
-                        </div>
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <h2>Đối tác hợp tác</h2>
-                        <div class="single-footer-txt">
-                            <p><a href="https://www.traveloka.com/vi-vn/" target=”_blank”>traveloka</a></p>
-                            <p><a href="https://www.ivivu.com/" target=”_blank”>ivivu</a></p>
-                            <p><a href="https://www.saigontourist.net/" target=”_blank”>saigon tourist</a></p>
-                            <p><a href="https://travel.com.vn/" target=”_blank”>travel</a></p>
-                            <p><a href="https://www.vietnambooking.com/" target=”_blank”>vietnam booking</a></p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <h2>Điểm du lịch nổi tiếng</h2>
-                        <div class="single-footer-txt">
-                            <p><a href="#">hà nội</a></p>
-                            <p><a href="#">tp hồ chí minh</a></p>
-                            <p><a href="#">vũng tàu</a></p>
-                            <p><a href="#">đà lạt</a></p>
-                            <p><a href="#">nha trang</a></p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item text-center">
-                        <h2 class="text-left">contacts</h2>
-                        <div class="single-footer-txt text-left">
-                            <p>+84 249999 16</p>
-                            <p>Võ Minh Thịnh</p>
-                            <p class="foot-email" style="text-transform:none;">
-                                <a href="#">21130549@st.hcmuaf.edu.vn</a></p>
-                            <p>Mai Xuân Thức</p>
-                            <p class="foot-email" style="text-transform:none;">
-                                <a href="#">21130558@st.hcmuaf.edu.vn</a></p>
-                            <p>Trần Quang Vũ</p>
-                            <p class="foot-email" style="text-transform:none;">
-                                <a href="#">21130615@st.hcmuaf.edu.vn</a></p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-            </div><!--/.row-->
-
-            <hr>
-            <div class="foot-icons ">
-                <ul class="footer-social-links list-inline">
-                    <li class="d-inline-block"><a href="#" target="_blank" class="foot-icon-bg-1"><i
-                            class="fa fa-facebook fa-xl"></i></a></li>
-                    <li class="d-inline-block"><a href="#" target="_blank" class="foot-icon-bg-2"><i
-                            class="fa fa-twitter fa-xl"></i></a></li>
-                    <li class="d-inline-block"><a href="#" target="_blank" class="foot-icon-bg-3"><i
-                            class="fa fa-instagram fa-xl"></i></a></li>
-                </ul>
-                <p>&copy; 2023-2024 <a href="https://github.com/MinhThinhrine/Do_An_Web">Nhóm 18</a>. All Right Reserved.</p>
-
-            </div><!--/.foot-icons-->
-            <div id="scroll-Top">
-                <i class="fa fa-angle-double-up return-to-top" id="scroll-top top" data-toggle="tooltip"
-                   data-placement="top"
-                   title="" data-original-title="Back to Top" aria-hidden="true"></i>
-            </div><!--/.scroll-Top-->
-        </div><!-- /.container-->
-    </div>
-</footer><!-- /.footer-copyright-->
+<%@include file="common/footer.jsp"%><!-- /.footer-copyright-->
 <!-- footer-copyright end -->
 
 <script src="assets/js/modify.js"></script>

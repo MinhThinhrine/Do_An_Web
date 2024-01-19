@@ -2,15 +2,16 @@ package vn.edu.hcmuaf.DAO;
 
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
 import vn.edu.hcmuaf.bean.Tour;
+import vn.edu.hcmuaf.bean.User;
 import vn.edu.hcmuaf.bean.valies;
 
+import javax.servlet.http.HttpSession;
 import java.sql.*;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Date;
 
 public class TourDao {
     Connection connection;
@@ -24,16 +25,16 @@ public class TourDao {
             ResultSet rs = ConnectToDatabase.executeQuery(sql);
             while (rs.next()) {
                 int id = rs.getInt("id");
-                int idCate = rs.getInt("cateId");
+                String region = rs.getString("region");
                 int idDis = rs.getInt("discountId");
                 String name = rs.getString("name");
                 String image = rs.getString("image");
                 int price = rs.getInt("price");
-                Date startTime = rs.getDate("startTime");
+                String startTime = rs.getString("startTime");
                 String duration = rs.getString("duration");
                 String schedule = rs.getString("schedule");
                 String description = rs.getString("description");
-                Tour tour = new Tour(id, idCate, idDis, name, image, price, startTime, duration, schedule, description);
+                Tour tour = new Tour(id, region, idDis, name, image, price, startTime, duration, schedule, description);
                 tours.add(tour);
             }
         } catch (Exception e) {
@@ -77,17 +78,17 @@ public class TourDao {
             while (rs.next()) {
                 tour = new Tour();
                 int id1 = rs.getInt("id");
-                int idCate = rs.getInt("cateId");
+                String region = rs.getString("region");
                 int idDis = rs.getInt("discountId");
                 String name = rs.getString("name");
                 String image = rs.getString("image");
                 int price = rs.getInt("price");
-                Date startTime = rs.getDate("startTime");
+                String startTime = rs.getString("startTime");
                 String duration = rs.getString("duration");
                 String schedule = rs.getString("schedule");
                 String description = rs.getString("description");
                 tour.setId(id1);
-                tour.setCateId(idCate);
+                tour.setRegion(region);
                 tour.setDiscountId(idDis);
                 tour.setName(name);
                 tour.setImage(image);
@@ -116,15 +117,16 @@ public class TourDao {
                     rs = preparedStatement.executeQuery();
                     while (rs.next()){
                         valies  row = new valies();
-                        row.setId(rs.getInt("id"));
+                        row.setTourId(rs.getInt("id"));
                         row.setNumAdult(1);
                         row.setNumChildren(1);
                         row.setImage(rs.getString("image"));
                         row.setDuration(rs.getString("duration"));
                         row.setSchedule(rs.getString("schedule"));
                         row.setPrice(rs.getInt("price"));
-
+                        row.setName(rs.getString("name"));
                         product.add(row);
+//                        insertVali(valiList);
                     }
                 }
             }
@@ -135,7 +137,25 @@ public class TourDao {
         }
         return product;
     }
-    public static LinkedList<Tour> getListTourbySearch(String search) {
+    public void insertVali(ArrayList<valies> valiList) {
+        try {
+            connection = ConnectToDatabase.getConnect();
+            for (valies vl : valiList) {
+                connection = ConnectToDatabase.getConnect();
+                String sql = "INSERT INTO vali (userId, tourId, numChildren, numAdult) VALUES (?, ?, ?, ?)";
+                preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setInt(1, vl.getUserId());
+                preparedStatement.setInt(2, vl.getTourId());
+                preparedStatement.setInt(3, vl.getNumAdult());
+                preparedStatement.setInt(4, vl.getNumChildren());
+                preparedStatement.executeUpdate();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
+        public static LinkedList<Tour> getListTourbySearch(String search) {
         LinkedList<Tour> listSearch = new LinkedList<>();
         String sql = "select * from tours WHERE name like ? order by id desc ";
         Connection connect = ConnectToDatabase.getConnect();
@@ -146,16 +166,16 @@ public class TourDao {
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 int id1 = rs.getInt("id");
-                int idCate = rs.getInt("cateId");
+                String region = rs.getString("region");
                 int idDis = rs.getInt("discountId");
                 String name = rs.getString("name");
                 String image = rs.getString("image");
                 int price = rs.getInt("price");
-                Date startTime = rs.getDate("startTime");
+                String startTime = rs.getString("startTime");
                 String duration = rs.getString("duration");
                 String schedule = rs.getString("schedule");
                 String description = rs.getString("description");
-                Tour tour1 = new Tour(id1, idCate, idDis, name, image, price, startTime, duration, schedule, description);
+                Tour tour1 = new Tour(id1, region, idDis, name, image, price, startTime, duration, schedule, description);
                 listSearch.add(tour1);
             }
         } catch (Exception e) {
@@ -189,11 +209,6 @@ public class TourDao {
                 // Thực hiện các thao tác với mỗi đối tượng tour ở đây
                 System.out.println(tour.getName()); // Ví dụ in thông tin của mỗi tour
             }
-
-
-
         }
-
-
 
 }
