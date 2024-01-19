@@ -187,7 +187,7 @@ public class TourDao {
                ArrayList<Tour> tours = (ArrayList<Tour>) tourDao.getAllTourForIndex();
             for (Tour tour : tours) {
                 // Thực hiện các thao tác với mỗi đối tượng tour ở đây
-                System.out.println(tour.toStringforIndex()); // Ví dụ in thông tin của mỗi tour
+                System.out.println(tour.getName()); // Ví dụ in thông tin của mỗi tour
             }
 
 
