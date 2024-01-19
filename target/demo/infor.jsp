@@ -81,7 +81,7 @@
     System.out.println("status"+status);
 %>
 <body>
-<section style="background: url(assets/images/home/1920.jpg)no-repeat;
+<section style="background: url(assets/images/home/1920.jpg)no-repeat;height: auto;
 ">
 
     <div class="container py-5">

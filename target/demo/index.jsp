@@ -1,4 +1,3 @@
-
 <%@ page import="vn.edu.hcmuaf.bean.Tour" %>
 
 <%@ page import="java.util.List" %>
@@ -8,7 +7,7 @@
          pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="common/tablib.jsp" %>
-<%--<% List<Tour> data = (List<Tour>) request.getAttribute("data");%>--%>
+
 
 <html class="no-js" lang="vi">
 
@@ -41,7 +40,8 @@
                             </h2>
                             <div class="about-btn">
                                 <button class="about-view">
-                                    <a href="CategorieServlet" style="width: 200px; padding: 20px;height: 60px;">Khám phá ngay</a>
+                                    <a href="CategorieServlet" style="width: 200px; padding: 20px;height: 60px;">Khám
+                                        phá ngay</a>
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.about-us-txt-->
@@ -218,7 +218,7 @@
                                             <div class="col-lg-6 col-md-1 col-sm-6" style="height: 130px">
                                             </div>
 
-                                            <div class="col-lg-6 col-md-1 col-sm-6" >
+                                            <div class="col-lg-6 col-md-1 col-sm-6">
                                                 <div class="about-btn travel-mrt-0 pull-right">
                                                     <button id="searchButton" type="submit"
                                                             class="about-view travel-btn">
@@ -229,7 +229,8 @@
                                                         </a>
                                                     </button>
                                                     <!--/.travel-btn-->
-                                                </div>                                            </div><!--/.col-->
+                                                </div>
+                                            </div><!--/.col-->
 
                                             <!--												<div class="col-lg-2 col-md-1 col-sm-4">-->
                                             <!--													<div class="single-tab-select-box">-->
@@ -466,14 +467,6 @@
         <div class="packages-content" id="item-container">
             <div class="row">
 
-<%--                        <%--%>
-<%--                            List<Tour> t = (List<Tour>) request.getAttribute("data");--%>
-<%--                            for (Tour tour : t) {--%>
-<%--                        %>--%>
-<%--                <p><%=tour.getName()%></p>--%>
-<%--    <%--%>
-<%--    }--%>
-<%--                            %>--%>
 
             </div><!--/.row-->
             <div class="pagination">

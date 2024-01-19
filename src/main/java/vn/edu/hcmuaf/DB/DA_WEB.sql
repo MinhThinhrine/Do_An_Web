@@ -247,6 +247,8 @@ VALUES
 
 
 
+
+
 -- 141 -->210----------------------------------->
 
 
@@ -277,3 +279,47 @@ INSERT INTO `bills` (`valiId`, `paymentMethod`, `totalPrice`, `status`)
 VALUES
     (1, 'Credit Card', 150, 'Paid'),
     (2, 'PayPal', 200, 'Pending');
+CREATE TABLE `tours` (
+                         `id` int(11) NOT NULL AUTO_INCREMENT,
+                         `cateId` int(11) NOT NULL,
+                         `discountId` int(11) DEFAULT NULL,
+                         `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                         `price` int(11) NOT NULL,
+                         `startTime` date NOT NULL,
+                         `duration` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                         `schedule` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                         KEY `fk_cate_id` (`cateId`),
+                         KEY `fk_discount_id` (`discountId`),
+                         PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+#  --`id` int(11) NOT NULL AUTO_INCREMENT,
+#     `region` varchar(255) NOT NULL,
+#     `discountId` int(11) DEFAULT NULL,
+#     `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+#     `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+#     `price` int(11) NOT NULL,
+#     `startTime` varchar(255) NOT NULL,
+#     `duration` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+#     `schedule` text COLLATE utf8mb4_unicode_ci NOT NULL,
+#     `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+
+#     KEY `fk_discount_id` (`discountId`),
+#     PRIMARY KEY (`id`)
+# ('Miền Nam', 1, 'Cần Thơ - Châu Đốc', '1.jpg', 3990000, 'hằng ngày', '3 ngày 2 đêm', 'Ngày 1: Cần Thơ
+# 	Đón bạn tại sân bay hoặc điểm hẹn. Khởi hành từ Cần Thơ. Thăm vườn cây trái Cái Răng, nơi bạn có thể khám phá các loại cây trái phong phú và thưởng thức trái cây tươi ngon. Thăm Bảo tàng Mỹ thuật Cần Thơ, nơi trưng bày bộ sưu tập nghệ thuật đa dạng và tác phẩm của các nghệ sĩ địa phương.
+# 	Tham quan Cầu Cần Thơ, một biểu tượng nổi tiếng của thành phố. Tắm nắng và thưởng thức cảnh quan tại Bến Ninh Kiều, một điểm giao thoa giữa sông Cần Thơ và sông Hậu.
+# 	Ngày 2: Châu Đốc
+# 	Di chuyển từ Cần Thơ đến Châu Đốc. Thăm chùa Sam, một ngôi chùa nổi trên sông nổi tiếng với kiến trúc độc đáo và phong cảnh tuyệt đẹp. Khám phá đền Bà Chúa Xứ Núi Sam, nơi người dân địa phương thờ cúng và tôn vinh nữ thần miền Tây Nam Bộ. Tham quan và tắm biển tại Khu du lịch biển Tây Đô, nơi bạn có thể thư giãn và tận hưởng không gian biển xanh mát. Dạo chơi trên dòng suối An Giang, tận hưởng cảnh quan thiên nhiên tươi đẹp và tham gia các hoạt động vui chơi trên nước.
+# 	Ngày 3: Châu Đốc và về lại Cần Thơ
+# 	Tham quan Chợ nổi Châu Đốc, nơi bạn có thể khám phá và mua sắm các loại hàng hóa địa phương, đặc biệt là các mặt hàng thủ công mỹ nghệ. Khám phá rừng tràm Trà Sư, một khu rừng tràm rừng ngập nổi tiếng với động vật hoang dã và cảnh quan thiên nhiên đẹp mắt. Trở về Cần Thơ và kết thúc chuyến đi. Tiễn bạn tại sân bay hoặc điểm hẹn.'
+#     ,'Chuyến đi từ Cần Thơ đến Châu Đốc là một hành trình tuyệt vời để khám phá vẻ đẹp và văn hóa của miền Tây Nam Bộ. Bạn sẽ bắt đầu hành trình từ Cần Thơ, nơi bạn sẽ thăm vườn cây trái Cái Răng và trải nghiệm hương vị tươi ngon của trái cây địa phương. Bạn cũng sẽ có cơ hội thăm Bảo tàng Mỹ thuật Cần Thơ và chiêm ngưỡng các tác phẩm nghệ thuật độc đáo.
+# 	Sau đó, bạn sẽ di chuyển đến Châu Đốc, nơi bạn sẽ khám phá chùa Sam và đền Bà Chúa Xứ Núi Sam. Hai địa điểm này mang đến không chỉ kiến trúc độc đáo mà còn phong cảnh tuyệt đẹp. Bạn cũng sẽcó cơ hội tắm biển và thư giãn tại Khu du lịch biển Tây Đô, nơi có không gian biển xanh mát.
+# Trên đường trở về Cần Thơ, bạn sẽ ghé thăm Chợ nổi Châu Đốc để khám phá và mua sắm các loại hàng hóa địa phương, đặc biệt là những món thủ công mỹ nghệ độc đáo. Bên cạnh đó, bạn cũng sẽ tham quan rừng tràm Trà Sư, một khu rừng tràm rừng ngập nổi tiếng với động vật hoang dã và cảnh quan thiên nhiên đẹp mắt.
+# 	Chuyến đi ' ||
+# 	            '' ||
+# 	               'kết thúc khi bạn trở về Cần Thơ. Chuyến đi từ Cần Thơ đến Châu Đốc sẽ mang đến cho bạn những trải nghiệm tuyệt vời về văn hóa, thiên nhiên và cảnh quan của miền Tây Nam Bộ Việt Nam.'),
+('Miền Trung', 1,'Đà Nẵng - Phong Nha','1.jpg', 3990000, 'hằng ngày', '3 ngày 2 đêm','Đà Nẵng - Động Thiên Đường - Phong Nha', 'Tour Phong Nha Kẻ Bàng từ Đà Nẵng với dịch vụ hàng đầu, tham quan nhiều điểm du lịch Quảng Bình đặc sắc, phòng nghỉ sạch sẽ thoáng mát, bữa ăn chất lượng. Lịch trình tour Phong Nha 2 ngày 1 đêm di chuyển bằng phương tiện tàu hỏa đảm bảo an toàn. Ngồi trên tàu, quý khách có dịp ngắm cảnh đèo Hải Vân cực kì hùng vĩ nên thơ.
+
+Phong Nha Explorer sẽ đưa quý khách chinh phục Động Thiên Đường là hang động khô nằm ẩn sâu trong lòng một quần thể núi đá vôi ở độ cao 191m, bao quanh là khu rừng nguyên sinh phía Tây Trường Sơn. Hệ thống thạch nhũ trong động vô cùng đa dạng với những hình ảnh tiêu biểu đặc biệt như Tiên Ông, Phật bà, thác nước, tháp nghiêng, thỏ ngọc ….')
