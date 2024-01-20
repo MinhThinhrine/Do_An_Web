@@ -43,30 +43,6 @@ public class TourDao {
         }
         return tours;
     }
-    public List<Tour> getAllTourForIndex() {
-        List<Tour> tours = new ArrayList<>();
-        try {
-            String sql = "Select id,name,image,price,duration from tours";
-            ResultSet rs = ConnectToDatabase.executeQuery(sql);
-            while (rs.next()) {
-                int id = rs.getInt("id");
-
-                String name = rs.getString("name");
-                String image = rs.getString("image");
-                int price = rs.getInt("price");
-
-                String duration = rs.getString("duration");
-
-
-                Tour tour = new Tour(id,  name, image, price,  duration);
-                tours.add(tour);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
-        return tours;
-    }
     public Tour findtourbyid(int id) {
         Tour tour = null;
         try {
@@ -139,7 +115,6 @@ public class TourDao {
     }
     public void insertVali(ArrayList<valies> valiList) {
         try {
-            connection = ConnectToDatabase.getConnect();
             for (valies vl : valiList) {
                 connection = ConnectToDatabase.getConnect();
                 String sql = "INSERT INTO vali (userId, tourId, numChildren, numAdult) VALUES (?, ?, ?, ?)";
@@ -182,33 +157,6 @@ public class TourDao {
             e.printStackTrace();
         }
         return listSearch;
-
     }
-
-        public static void main(String[] args) {
-//            // Gọi phương thức getListTourbySearch
-//            String searchKeyword = "Cần Thơ";
-//            List<tour> searchResults = TourDao.getListTourbySearch(searchKeyword);
-//
-//            // Hiển thị kết quả
-//            if (searchResults.isEmpty()) {
-//                System.out.println("Không tìm thấy kết quả cho từ khóa: " + searchKeyword);
-//            } else {
-//                System.out.println("Kết quả tìm kiếm cho từ khóa: " + searchKeyword);
-//                for (tour tour : searchResults) {
-//                    System.out.println("Tour ID: " + tour.getId());
-//                    System.out.println("Tên tour: " + tour.getName());
-//                    // Hiển thị thêm các thông tin khác nếu cần
-//                    System.out.println("----------------------------------");
-//                }
-//            }
-
-                TourDao tourDao = new TourDao();
-               ArrayList<Tour> tours = (ArrayList<Tour>) tourDao.getAllTourForIndex();
-            for (Tour tour : tours) {
-                // Thực hiện các thao tác với mỗi đối tượng tour ở đây
-                System.out.println(tour.getName()); // Ví dụ in thông tin của mỗi tour
-            }
-        }
 
 }

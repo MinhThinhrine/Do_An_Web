@@ -140,8 +140,8 @@
                                 </td>
                                 <td class="align-middle">
                                     <p class="mb-0" id="donGia1" style="font-weight: 500;">
-                                        <%=t.getName()%><span class="pull-right" style="margin-top: 25px;">
-                                <%int number = t.getPrice();
+                                        <span class="pull-right" style="margin-top: 25px;">
+                                <% int number = t.getPrice();
                                 DecimalFormat decimalFormat = new DecimalFormat("#,###");
                                 String formattedString = decimalFormat.format(number);%>
                                 <%=formattedString%>

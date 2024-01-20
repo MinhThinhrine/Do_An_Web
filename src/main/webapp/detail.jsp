@@ -205,7 +205,7 @@
                                 </tr>
                                 <tr>
                                     <td><span style="color:#555555;"><strong>Khởi hành</strong></span></td>
-                                    <td><strong><span style="color:#555555;">Hàng Ngày</span></strong>
+                                    <td><strong><span style="color:#555555;"><%=t.getStartTime()%>></span></strong>
                                     </td>
                                 </tr>
                                 <tr>
@@ -224,22 +224,44 @@
                         <div class="title"><span><i class="fa fa-map-o"></i> Lịch trình</span></div>
                         <div class="content">
                             <div class="listDay">
-                                <% String schedule =t.getSchedule();
+                                <% String schedule =t.getSchedule().trim();
                                     String[] parts = schedule.split("-");
-                                    int index = 0;%>
 
-                                   <% while (index < parts.length) {
-                                        String part = parts[index];%>
+                                %>
+
+                                   <% for (int i = 0; i < parts.length; i++) {
+                                       String part = parts[i];
+                                       String dk = part.trim().toLowerCase();
+                                       String[] ctent = part.split("/");
+                                       String ctPart = "";
+                                       if(part.contains("/")){
+                                           part = ctent[0];
+                                           ctPart = ctent[1];
+                                       }
+                                        if(!dk.startsWith("ngày " + i)) {
+                                   %>
 
                                 <div class="day active">
                                     <div class="titDay"><span><%=part%></span></div>
                                     <div class="arrow-up"></div>
                                     <div class="contDay" style="display: block;">
                                         <div class="the-content desc">
+                                            <%=ctPart%>
                                         </div>
                                     </div>
                                 </div>
-                                <% index++;  }%>
+                                <% } else {
+                                    int d = i+1; %>
+                                <div class="day active">
+                                    <div class="titDay"><span>NGÀY <%=d%> : <%=part%></span></div>
+                                    <div class="arrow-up"></div>
+                                    <div class="contDay" style="display: block;">
+                                        <div class="the-content desc">
+                                            <%=ctPart%>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } } %>
                                 <div id="flag3"></div>
                             </div>
                         </div>
@@ -434,7 +456,7 @@
                             <ul>
                                 <li>
                                     <div class="at">Mã tour</div>
-                                    <div class="as"><%=t.getId() %> &nbsp;</div>
+                                    <div class="as"># <%=t.getId() %> &nbsp;</div>
                                 </li>
                                 <li>
                                     <div class="at">Thời gian:</div>
@@ -464,7 +486,7 @@
                                 <div class="boxPrice">
                                     <div class="price">
                                         <div class="txt">Giá từ:</div>
-                                        <div class="red" id="giactt"><%=t.getName()%><span class="pull-right" style="margin-top: 25px;">
+                                        <div class="red" id="giactt"><span class="pull-right" style="margin-top: 25px;">
                                                 <%int number = t.getPrice();
                                 DecimalFormat decimalFormat = new DecimalFormat("#,###");
                                 String formattedString = decimalFormat.format(number);%>
@@ -475,10 +497,12 @@
                                             <input type="hidden" name="tourid" id="tourid" value="16764">
                                             <input type="hidden" name="con" id="con" value="10">
                                             <input type="hidden" name="hasvisa" id="hasvisa" value="">
-                                            <button type="button" class="render-form btn-contact-tour"><a
-                                                    href="shopcart.jsp"
-                                                    style="text-decoration: none; text-transform: uppercase">Thêm Vào
-                                                Vali</a></button>
+                                            <button type="button" class="render-form btn-contact-tour">
+                                                <a href="shopcart.jsp" style="text-decoration: none; text-transform: uppercase">Book Now</a>
+                                            </button>
+                                            <button type="button" class="render-form btn-contact-tour" style="background-color: #bbbbbb">
+                                                <a href="shopcart.jsp" style="text-decoration: none; text-transform: uppercase;color: #00d8fe!important;">Thêm Vào Vali</a>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

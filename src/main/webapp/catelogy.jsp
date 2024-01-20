@@ -116,13 +116,17 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
 
 <div class="con">
     <div class="bg-white rounded d-flex align-items-center justify-content-between" id="header">
-        <button class="btn btn-hide text-uppercase" type="button" data-toggle="collapse" data-target="#filterbar"
-                aria-expanded="false" aria-controls="filterbar" id="filter-btn" onclick="changeBtnTxt()"><span
-                class="fas fa-angle-left" id="filter-angle"></span> <span id="btn-txt">Bộ lọc</span></button>
+        <button class="btn btn-hide text-uppercase" type="button"
+                data-toggle="collapse" data-target="#filterbar"
+                aria-expanded="true" aria-controls="filterbar"
+                id="filter-btn" onclick="changeBtnTxt()"
+        ><span class="fas fa-angle-left" id="filter-angle"></span> <span id="btn-txt">Bộ lọc</span></button>
         <nav class="navbar navbar-expand-lg navbar-light pl-lg-0 pl-auto">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav"
+            <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#mynav"
                     aria-controls="mynav" aria-expanded="false" aria-label="Toggle navigation" onclick="chnageIcon()"
-                    id="icon"><span class="navbar-toggler-icon"></span></button>
+                    id="icon"
+            ><span class="fa fa-toggle-left"></span></button>
             <div class="collapse navbar-collapse" id="mynav">
                 <ul class="navbar-nav d-lg-flex align-items-lg-center">
                     <li class="nav-item active"><select name="sort" id="sort">
@@ -276,8 +280,8 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                 <% for(Tour t : tourss) { %>
                 <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3 element"  id="<%=t.getId() %>">
                     <div class="single-package-item">
-                        <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">
-                            <img style="cursor: pointer" class="packageImage" src="assets/images/item/<%=t.getImage()%>"
+                        <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>" style="width: 100%">
+                            <img style="cursor: pointer;width: 100%" class="packageImage" src="assets/images/item/<%=t.getImage()%>"
                                  alt="package-place">
                         </a>
 
@@ -378,21 +382,135 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
 
 <script src="assets/js/modify.js"></script>
 <script src="assets/js/custom.js"></script>
-<script src="assets/js/catelogy.js"></script>
-<script !src="">var element = document.querySelector(".element");
-var clickCount = 0;
+<%--<script src="assets/js/catelogy.js"></script>--%>
+<script !src="">
+    $('#inner-box').collapse(false);
+    $('#inner-box2').collapse(false);
+    $('#filterbar').collapse(false);
+    var currentPage = parseInt(activePage.textContent);
+    changePage(currentPage);
 
-document.getElementById("filter-btn").addEventListener("click", function() {
-    if (clickCount === 0) {
-        element.classList.remove("col-lg-3");
-        element.classList.add("col-lg-4");
-        clickCount = 1;
-    } else {
-        element.classList.remove("col-lg-4");
-        element.classList.add("col-lg-3");
-        clickCount = 0;
+    function changePage(pageNumber) {
+        currentPage = parseInt(pageNumber);
+        var paginationLinks = document.getElementsByClassName('pagination-inner')[0].getElementsByTagName('a');
+        for (var i = 0; i < paginationLinks.length; i++) {
+            paginationLinks[i].classList.remove('pagination-active');
+        }
+        paginationLinks[pageNumber - 1].classList.add('pagination-active');
+
+        var startId = (pageNumber - 1) * 9 + 1;
+        var endId = pageNumber * 9;
+
+        for (var j = 1; j <= 210; j++) {
+            var itemId = document.getElementById(String(j));
+            if (itemId) {
+                if (j >= startId && j <= endId) {
+                    itemId.style.display = 'block';
+                } else {
+                    itemId.style.display = 'none';
+                }
+            }
+        }
     }
-});</script>
+    function previousPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            changePage(currentPage);
+        }
+    }
+
+    function nextPage() {
+        if (currentPage<14){
+            currentPage++;
+            changePage(currentPage);
+        }
+    }
+// For Range Sliders
+        var inputLeft = document.getElementById("input-left");
+        var inputRight = document.getElementById("input-right");
+
+        var thumbLeft = document.querySelector(".slider > .thumb.left");
+        var thumbRight = document.querySelector(".slider > .thumb.right");
+        var range = document.querySelector(".slider > .range");
+
+        var amountLeft = document.getElementById('amount-left')
+        var amountRight = document.getElementById('amount-right')
+
+        function setLeftValue() {
+            var _this = inputLeft,
+                min = parseInt(_this.min),
+                max = parseInt(_this.max);
+
+            _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+
+            var percent = ((_this.value - min) / (max - min)) * 100;
+
+            thumbLeft.style.left = percent + "%";
+            range.style.left = percent + "%";
+            amountLeft.innerText = (percent * 0.2).toFixed(1);
+        }
+
+        setLeftValue();
+
+        function setRightValue() {
+            var _this = inputRight,
+                min = parseInt(_this.min),
+                max = parseInt(_this.max);
+
+            _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+
+            var percent = ((_this.value - min) / (max - min)) * 100;
+
+            amountRight.innerText = (percent * 0.2).toFixed(1);
+            thumbRight.style.right = (100 - percent) + "%";
+            range.style.right = (100 - percent) + "%";
+        }
+
+        setRightValue();
+
+        inputLeft.addEventListener("input", setLeftValue);
+        inputRight.addEventListener("input", setRightValue);
+
+        inputLeft.addEventListener("mouseover", function () {
+            thumbLeft.classList.add("hover");
+        });
+        inputLeft.addEventListener("mouseout", function () {
+            thumbLeft.classList.remove("hover");
+        });
+        inputLeft.addEventListener("mousedown", function () {
+            thumbLeft.classList.add("active");
+        });
+        inputLeft.addEventListener("mouseup", function () {
+            thumbLeft.classList.remove("active");
+        });
+
+        inputRight.addEventListener("mouseover", function () {
+            thumbRight.classList.add("hover");
+        });
+        inputRight.addEventListener("mouseout", function () {
+            thumbRight.classList.remove("hover");
+        });
+        inputRight.addEventListener("mousedown", function () {
+            thumbRight.classList.add("active");
+        });
+        inputRight.addEventListener("mouseup", function () {
+            thumbRight.classList.remove("active");
+        });
+
+        var element = document.getElementsByClassName('element');
+        var clickCount = 0;
+        document.getElementById("filter-btn").addEventListener("click", function() {
+        if (clickCount === 0) {
+            element.classList.remove("col-lg-3");
+            element.classList.add("col-lg-4");
+            clickCount = 1;
+        } else {
+            element.classList.remove("col-lg-4");
+            element.classList.add("col-lg-3");
+            clickCount = 0;
+        }
+    });
+</script>
 
 </body>
 </html>

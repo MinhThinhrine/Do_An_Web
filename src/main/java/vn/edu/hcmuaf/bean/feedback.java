@@ -2,18 +2,18 @@ package vn.edu.hcmuaf.bean;
 
 import java.util.Date;
 
-public class feedback {
+public class feedback{
     private int id;
-    private int userEmail;
+    private int userId;
     private String text;
     private Date date;
 
     public feedback() {
     }
 
-    public feedback(int id, int userEmail, String text, Date date) {
+    public feedback(int id, int userId, String text, Date date) {
         this.id = id;
-        this.userEmail = userEmail;
+        this.userId = userId;
         this.text = text;
         this.date = date;
     }
@@ -26,12 +26,12 @@ public class feedback {
         this.id = id;
     }
 
-    public int getUserEmail() {
-        return userEmail;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUserEmail(int userEmail) {
-        this.userEmail = userEmail;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getText() {
@@ -54,7 +54,7 @@ public class feedback {
     public String toString() {
         return "feedback{" +
                 "id=" + id +
-                ", userEmail=" + userEmail +
+                ", userId=" + userId +
                 ", text='" + text + '\'' +
                 ", date=" + date +
                 '}';
