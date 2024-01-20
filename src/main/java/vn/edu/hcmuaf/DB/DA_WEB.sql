@@ -28,121 +28,121 @@ SET time_zone = "+00:00";
 -- Tạo bảng`News`
 DROP TABLE IF EXISTS `news`;
 CREATE TABLE `news` (
-                        `id` int(11) NOT NULL AUTO_INCREMENT,
-                        `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-                        `date` date NOT NULL,
-                        `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
-                        `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-                        `newsLink` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-                        PRIMARY KEY (`id`)
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `date` date NOT NULL,
+    `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+    `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `newsLink` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*--------------------------------------------------------*/
 -- Tạo bảng`roles`
 DROP TABLE IF EXISTS `roles`;
 CREATE TABLE `roles` (
-                         `id` int(11) NOT NULL AUTO_INCREMENT,
-                         `right` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-                         `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-                         PRIMARY KEY (`id`)
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `right` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*--------------------------------------------------------*/
 -- Tạo bảng`Feedbacks`
 DROP TABLE IF EXISTS `feedbacks`;
 CREATE TABLE `feedbacks` (
-                             `id` int(11) NOT NULL AUTO_INCREMENT,
-                             `userId` int(11) NOT NULL,
-                             `text` text COLLATE utf8mb4_unicode_ci NOT NULL,
-                             `date` date NOT NULL,
-                             PRIMARY KEY (`id`)
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `userId` int(11) NOT NULL,
+    `text` text COLLATE utf8mb4_unicode_ci NOT NULL,
+    `date` date NOT NULL,
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*--------------------------------------------------------*/
 -- Tạo bảng`Discounts`
 DROP TABLE IF EXISTS `discounts`;
 CREATE TABLE `discounts` (
-                             `id` int(11) NOT NULL AUTO_INCREMENT,
-                             `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-                             `value` int(11) NOT NULL,
-                             `endDate` date NOT NULL,
-                             `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-                             PRIMARY KEY (`id`)
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `value` int(11) NOT NULL,
+    `endDate` date NOT NULL,
+    `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*--------------------------------------------------------*/
 -- Tạo bảng`Tours`
 DROP TABLE IF EXISTS `tours`;
 CREATE TABLE `tours` (
-                         `id` int(11) NOT NULL AUTO_INCREMENT,
-                         `region` varchar(255) NOT NULL,
-                         `discountId` int(11) DEFAULT NULL,
-                         `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-                         `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-                         `price` int(11) NOT NULL,
-                         `startTime` varchar(255) NOT NULL,
-                         `duration` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-                         `schedule` text COLLATE utf8mb4_unicode_ci NOT NULL,
-                         `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-                         KEY `fk_discount_id` (`discountId`),
-                         PRIMARY KEY (`id`)
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `region` varchar(255) NOT NULL,
+    `discountId` int(11) DEFAULT NULL,
+    `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `price` int(11) NOT NULL,
+    `startTime` varchar(255) NOT NULL,
+    `duration` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `schedule` text COLLATE utf8mb4_unicode_ci NOT NULL,
+    `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+    KEY `fk_discount_id` (`discountId`),
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*-------------------------------------------------------------------*/
 -- Tạo bảng`Users`
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
-                         `id` int(11) NOT NULL AUTO_INCREMENT,
-                         `userName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-                         `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-                         `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-                         `phoneNumber` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-                         `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-                         `roleId` int(11) NOT NULL,
-                         PRIMARY KEY (`id`),
-                         KEY `fk_role_id` (`roleId`)
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `userName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `phoneNumber` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `roleId` int(11) NOT NULL,
+    PRIMARY KEY (`id`),
+    KEY `fk_role_id` (`roleId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*------------------------------------------------------------------*/
 -- Tạo bảng`service_tours`
 DROP TABLE IF EXISTS `service_tours`;
 CREATE TABLE `service_tours` (
-                                 `id` INT NOT NULL AUTO_INCREMENT,
-                                 `name` VARCHAR(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-                                 `price` FLOAT NOT NULL,
-                                 `description` TEXT COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-                                 PRIMARY KEY (`id`)
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `price` FLOAT NOT NULL,
+    `description` TEXT COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*------------------------------------------------------------------*/
 -- Tạo bảng`Valies`
 DROP TABLE IF EXISTS `valies`;
 CREATE TABLE `valies` (
-                          `id` int(11) NOT NULL AUTO_INCREMENT,
-                          `userId` int(11) NOT NULL,
-                          `tourId` int(11) NOT NULL,
-                          `numChildren` int(11) NOT NULL,
-                          `numAdult` int(11) NOT NULL,
-                          PRIMARY KEY (`id`),
-                          KEY `fk_user_id` (`userId`),
-                          KEY `fk_tour_id` (`tourId`)
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `userId` int(11) NOT NULL,
+    `tourId` int(11) NOT NULL,
+    `numChildren` int(11) NOT NULL,
+    `numAdult` int(11) NOT NULL,
+    PRIMARY KEY (`id`),
+    KEY `fk_user_id` (`userId`),
+    KEY `fk_tour_id` (`tourId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*------------------------------------------------------------------*/
 -- Tạo bảng`Options`
 DROP TABLE IF EXISTS `options`;
 CREATE TABLE `options` (
-                           `id` int(11) NOT NULL AUTO_INCREMENT,
-                           `departDate` date NOT NULL,
-                           `serviceId` int(11) NOT NULL,
-                           `valiId` int(11) NOT NULL,
-                           PRIMARY KEY (`id`),
-                           KEY `fk_serviceId` (`serviceId`),
-                           KEY `fk_valiId` (`valiId`)
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `departDate` date NOT NULL,
+    `serviceId` int(11) NOT NULL,
+    `valiId` int(11) NOT NULL,
+    PRIMARY KEY (`id`),
+    KEY `fk_serviceId` (`serviceId`),
+    KEY `fk_valiId` (`valiId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*------------------------------------------------------------------*/
 -- Tạo bảng`Bills`
 DROP TABLE IF EXISTS `bills`;
 CREATE TABLE `bills` (
-                         `id` int(11) NOT NULL AUTO_INCREMENT,
-                         `valiId` int(11) NOT NULL,
-                         `paymentMethod` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-                         `totalPrice` int(11) NOT NULL,
-                         `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-                         PRIMARY KEY (`id`),
-                         KEY `fk_valiId` (`valiId`)
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `valiId` int(11) NOT NULL,
+    `paymentMethod` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `totalPrice` int(11) NOT NULL,
+    `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    PRIMARY KEY (`id`),
+    KEY `fk_valiId` (`valiId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*------------------------------------------------------------------*/
 
@@ -320,12 +320,99 @@ VALUES
     ('Miền Nam', 1, 'Bến Tre - Cần Thơ', '69.jpg', 6790000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: . . . - Ngày 2: . . .  - Ngày 3: . . . - Ngày 4: . . .', 'Cần Thơ là một thành phố lớn và là trung tâm kinh tế, văn hóa của miền Tây Nam Bộ Việt Nam. Thành phố Cần Thơ cũng được biết đến với cảnh quan thiên nhiên tuyệt đẹp, nhưng đặc biệt là Làng Sen, nơi du khách có thể ngắm nhìn vườn sen tràn đầy nước và tham quan các nhà máy chế biến sen. Cần Thơ có một văn hóa ẩm thực phong phú, với các món ăn đặc sản địa phương. Tóm lại, Cần Thơ là một thành phố đáng để khám phá, với sự kết hợp giữa cảnh quan thiên nhiên, di sản văn hóa, và cuộc sống sôi động của người dân miền Tây Nam Bộ.'),
     ('Miền Nam', 1, 'Cần Thơ - Chợ nổi Cái Răng', '70.jpg', 2076000, 'hằng ngày', '2 ngày 1 đêm', 'Ngày 1: . . . - Ngày 2: . . . ', 'Chợ Nổi Cái Răng là một chợ nổi nổi tiếng tại thành phố Cần Thơ, miền Tây Nam Bộ Việt Nam. Nằm trên sông Hậu, chợ Nổi Cái Răng là một điểm đến du lịch hấp dẫn với không gian sôi động và chất local.
 Tại chợ Nổi Cái Răng, bạn sẽ được thấy các thuyền buôn đầy hàng hoá và sản phẩm đa dạng như rau củ quả, hải sản tươi ngon, hàng dệt may, và nhiều loại đặc sản địa phương khác. Du khách có thể mua sắm, thưởng thức những món ăn đường phố truyền thống, hoặc tham gia vào các hoạt động như đi thuyền ngắm cảnh và thăm quan khu vực xung quanh chợ.
-Chợ Nổi Cái Răng là một điểm đến thu hút du khách bởi không chỉ là nơi mua sắm và trao đổi hàng hóa, mà còn là một cái nhìn sâu sắc vào cuộc sống và văn hóa dân gian của người dân miền Tây Nam Bộ.');
+Chợ Nổi Cái Răng là một điểm đến thu hút du khách bởi không chỉ là nơi mua sắm và trao đổi hàng hóa, mà còn là một cái nhìn sâu sắc vào cuộc sống và văn hóa dân gian của người dân miền Tây Nam Bộ.'),
 -- 71-140
 
 
 
 -- 141 -->210----------------------------------->
+    ('Miền Bắc', 1, 'Hà Nội - Ninh Binh ','141.png', 9399000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Hạ Long - Ninh Bình - Yên Tử ', ' Tham quan vườn hoa Bãi Đá Sông Hồng (hoặc Thung Lũng Hoa Hồ Tây)- Du ngoạn vịnh Hạ Long - một trong 7 kỳ quan thiên nhiên mới của thế giới. Chiêm ngưỡng động Thiên Cung, các hòn Đỉnh Hương - Trống Mái (Gà Chọi)- Chó Đá- Tham quan Động Am Tiên (Tuyệt Tình Cốc Ninh Bình)'),
+
+    ('Miền Bắc', 1, 'Hà Nội - Yên Tử - Hạ Long ','142.png', 1599000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Yên Tử - Hạ Long - Bắc Ninh ', 'Thăm quan quần thể di tích Yên Tử nơi đất phật linh thiêng .Thăm quan ngắm cảnh vịnh Hạ Long một trong 7 kỳ quan. Thỏa sức tắm biển bãi Cháy một trong những bãi biển nhân tạo đẹp nhất của vịnh Hạ Long. Thỏa sức ngắm nhìn vịnh Hạ Long từ trên cao. Khám phá công viên rồng địa điểm nhiều khu vui chơi đẳng cấp Tuần Châu. Ngắm nhìn cảng tàu quốc tế độc đáo. Trải nghiệm công trình cáp treo vượt biển đẳng cấp'),
+
+    ('Miền Bắc', 1, 'Hà Nội - Hà Giang - Cao Bằng ','143.png', 8499000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Hành trình đầy ấn tượng bắt đầu từ Hà Nội',' thành phố lịch sử với những con phố nhộn nhịp và di tích lịch sử hùng vĩ. Du khách sẽ đắm chìm trong vẻ đẹp huyền bí của Hà Giang, khám phá những cung đường ngoằn nghèo giữa đồng bát ngát. Tới Cao Bằng, vùng đất trù phú với những thác Bản Giốc hùng vĩ và đỉnh núi Cốc Bó, tour du lịch này hứa hẹn mang lại trải nghiệm độc đáo, kết hợp giữa văn hóa đậm đà và khám phá thiên nhiên tuyệt vời.'),
+
+    ('Miền Bắc', 1, 'Hà Nội - Hà Giang - Cao Bằng ','144.png', 5799000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Hà Nội - Hà Giang - Đồng Văn ', 'Hành trình du lịch từ Hà Nội đến Hà Giang và Cao Bằng là một chuyến phiêu lưu hấp dẫn, đưa bạn đến khám phá vẻ đẹp huyền bí của núi rừng Tây Bắc Việt Nam. Từ thủ đô lịch sử Hà Nội, bạn sẽ bắt đầu hành trình đến vùng núi cao Hà Giang, nơi có cảnh đồng cỏ bát ngát và đỉnh núi hùng vĩ. Sau đó, hành trình tiếp tục đến Cao Bằng, với cảnh đẹp tự nhiên hùng vĩ của thác Bản Giốc và hồ Ba Bể. Mỗi dấu chân của bạn là một câu chuyện mới trong cuộc phiêu lưu này.'),
+
+    ('Miền Bắc', 1, 'Du lịch Hạ Long - Yên Tử - Sapa ','145.png', 4199000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Sài Gòn - Hà Nội - Sapa - Yên Tử ', 'Tour du lịch Hạ Long - Yên Tử - Sapa là hành trình kỳ thú đưa du khách khám phá những vẻ đẹp hùng vĩ và thiên nhiên tuyệt vời của Việt Nam. Bắt đầu từ Hạ Long, quý khách sẽ đắm chìm trong vịnh biển tuyệt vời và tham gia các hoạt động thú vị. Tiếp theo, hành trình dẫn đến Yên Tử, nơi linh thiêng và huyền bí, thu hút những tâm hồn tìm kiếm bình yên. Cuối cùng, Sapa mang đến trải nghiệm với những cánh đồng bậc thang hùng vĩ và vùng núi tuyết phủ, tạo nên kí ức đẹp khó quên.'),
+
+    ('Miền Bắc', 1, 'Hạ Long - Yên Tử - Sapa ','146.png', 8499000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Vịnh Hạ Long - Yên Tử - Sapa - Fansipan ', 'Hành trình du lịch đưa bạn đến những địa danh nổi tiếng và tuyệt vời của Việt Nam. Bắt đầu từ Hạ Long, bạn sẽ ngỡ ngàng trước vẻ đẹp huyền bí của vịnh và những tảng đá độc đáo. Tiếp theo, hành trình dẫn bạn lên đỉnh Yên Tử, nơi linh thiêng với những ngôi chùa cổ kính và không khí tĩnh lặng. Cuối cùng, Sapa là điểm dừng cuối cùng, nơi bạn sẽ bị quyến rũ bởi những thửa ruộng bậc thang tuyệt vời và vùng núi hùng vĩ. Đây sẽ là chuyến phiêu lưu đầy ấn tượng và trải nghiệm sâu sắc với văn hóa và thiên nhiên Việt Nam.'),
+
+    ('Miền Bắc', 1, 'Hạ Long - Yên Tử - Sapa ','147.png', 8999000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Sài Gòn - Hà Nội - Lào Cai - Hạ Long ', 'Tour du lịch bắt đầu từ thành phố Hạ Long, nơi bạn sẽ đắm chìm trong vẻ đẹp huyền bí của vịnh Hạ Long, được UNESCO công nhận. Tiếp theo, hành trình hướng về Yên Tử, nơi linh thiêng và tâm linh hòa quyện, với chân đèo Phố Cô và chùa Trân Quốc. Cuối cùng, tour dẫn bạn đến Sapa, thiên đường nằm trong mảnh đất tuyệt vời của dãy núi Hoàng Liên, với cảnh sắc hùng vĩ và văn hóa độc đáo của các dân tộc thiểu số. Đây sẽ là chuyến hành trình tuyệt vời, đầy ấn tượng và trải nghiệm đa dạng.'),
+
+    ('Miền Bắc', 1, 'Hà Nội - Yên Tử - Hạ Long - Sapa ','148.png', 9299000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Thành phố Hồ Chí Minh - Hà Nội - Yên Tử ', 'Tour du lịch kết hợp giữa Thành phố Hồ Chí Minh năng động và Hà Nội lịch lãm cùng với đỉnh núi thiêng Yên Tử tạo nên một hành trình đa dạng và phong cách. Trải nghiệm sự hối hả của cuộc sống đô thị tại TP.Hồ Chí Minh, khám phá văn hóa lâu dài của Hà Nội qua các di tích lịch sử và ẩm thực độc đáo. Kết thúc hành trình là cuộc phiêu lưu tâm linh tại Yên Tử, với khung cảnh thiên nhiên hùng vĩ và không khí trấn an.'),
+
+    ('Miền Bắc', 1, 'Hà Nội - Hạ Long - Ninh Bình - Tràng An ','149.png', 9499000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Hạ Long - Ninh Bình - Tràng An ', 'Tour du lịch từ Hà Nội đến Hạ Long, Ninh Bình và Tràng An là một hành trình đầy phấn khích, mang đến trải nghiệm đa dạng văn hóa và thiên nhiên. Từ thủ đô lịch sử Hà Nội, bạn sẽ bắt đầu hành trình đến vịnh Hạ Long, nơi những hòn đảo đá vôi nổi tiếng nổi bật giữa biển xanh bát ngát. Tiếp theo, Ninh Bình là điểm đến tuyệt vời với những cánh đồng lúa mênh mông và các di tích lịch sử. Tour kết thúc tại Tràng An, thước phim tuyệt vời với hệ thống hang động, sông rừng tạo nên bức tranh hùng vĩ và huyền bí.'),
+
+    ('Miền Bắc', 1, 'Tour Tết Nguyên Đán 2024 - Hà Nội - Hạ Long ','150.png', 2599000, '13,14,15/2/2024 ', '4 ngày 3 đêm ', 'Hà Nội - Hạ Long - Ninh Bình - Hòn Trống ', 'Hành trình du lịch bắt đầu tại Hà Nội, thủ đô lịch sử đầy năng động, với các điểm tham quan như Hoàn Kiếm và Quảng Bá. Tiếp theo, chúng ta sẽ khám phá vịnh Hạ Long, một kỳ quan thiên nhiên hùng vĩ với những hòn đảo đá ngọc bí ẩn. Từ đó, hành trình dẫn đến Ninh Bình, "vịnh Hạ Long trên cạn," nổi tiếng với những thảo nguyên xanh, dòng sông êm đềm và đỉnh núi kỳ vĩ. Cuối cùng, chúng ta đến Hòn Trống, nơi biển xanh, cát trắng và bãi ngọc tạo nên bức tranh tuyệt vời cho kỳ nghỉ đáng nhớ.'),
+
+    ('Miền Bắc', 1, 'Mù Cang Chải - Yên Bái - Sapa ','151.png', 9999000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Thành phố Hồ Chí Minh - Mù Cang Chải - Yên Bái ', 'Tour du lịch này sẽ đưa bạn đến những điểm đẹp tuyệt vời, bắt đầu từ sự hối hả của Thành phố Hồ Chí Minh, nơi hiện đại và truyền thống giao thoa. Tiếp theo, Mù Cang Chải - vùng đất nổi tiếng với những thửa ruộng bậc thang hùng vĩ. Hành trình kết thúc tại Yên Bái, nơi thiên nhiên hòa quyện, từ cánh đồng lúa xanh mướt đến những dãy núi đầy huyền bí. Mỗi địa điểm mang đến cho bạn những trải nghiệm độc đáo, làm bừng sáng hành trình khám phá Việt Nam.'),
+
+    ('Miền Bắc', 1, 'Hà Nội - Mộc Châu - Sơn La ','152.png', 1199000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Hà Nội - Mộc Châu - Cầu Kính Bạch Long ', 'Hành trình du lịch từ Hà Nội đến Mộc Châu và Cầu Kính Bạch Long là một chuyến phiêu lưu đậm đà với vẻ đẹp tự nhiên hùng vĩ. Tại Mộc Châu, bạn sẽ được chìm đắm trong những thảm cỏ trắng tinh khôi, thăm các trang trại chè độc đáo. Còn tại Cầu Kính Bạch Long, bạn có cơ hội đắm mình trong không gian linh thiêng của đền thờ và thưởng thức cảnh đẹp hữu tình từ đỉnh núi cao vút. Mỗi địa điểm đều làm cho hành trình trở nên không quên.'),
+
+    ('Miền Bắc', 1, 'Hà Nội - Mộc Châu - Điện Biên ','153.png', 8299000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Hà Nội - Mộc Châu - Điện Biên ', 'Tour du lịch từ Hà Nội đến Mộc Châu và Điện Biên là một hành trình tuyệt vời, đưa du khách đắm chìm trong vẻ đẹp tự nhiên hùng vĩ và văn hóa độc đáo. Tại Mộc Châu, những cánh đồng hoa dã quỳ bát ngát sắc màu tạo nên bức tranh thiên nhiên huyền bí. Chuyến đi tiếp theo đến Điện Biên, nơi lưu giữ những kí ức lịch sử đầy cảm xúc về cuộc chiến tranh. Du khách sẽ được thưởng thức không khí yên bình, hòa mình vào văn hóa bản địa và khám phá những địa điểm độc đáo trải dài trên hành trình này.'),
+
+    ('Miền Bắc', 1, 'Hà Nội - Tràng An ','154.png', 4999000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Tràng An - Sapa - Bản Cát Cát ', 'Hành trình du lịch này mang đến cho bạn trải nghiệm tuyệt vời qua những điểm đẹp độc đáo tại Việt Nam. Bắt đầu từ thủ đô lịch sử Hà Nội, bạn sẽ khám phá văn hóa độc đáo tại Tràng An, một di sản thế giới nổi tiếng. Tiếp theo là hành trình đến Sapa, nơi có những thửa ruộng bậc thang hùng vĩ. Cuối cùng, Bản Cát Cát sẽ là điểm dừng cuối cùng, nơi bạn có cơ hội tìm hiểu về đời sống và văn hóa của người dân tộc thiểu số tại vùng núi phía Bắc.'),
+
+    ('Miền Bắc', 1, 'Hà Nội - Ninh Bình ','155.png', 4699000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Hạ Long - Ninh Bình - Sapa ', 'Hành trình du lịch này đưa du khách qua những địa danh tuyệt vời của miền Bắc Việt Nam. Từ thủ đô Hà Nội, bạn sẽ bắt đầu hành trình khám phá văn hóa và lịch sử độc đáo. Hạ Long huyền bí với những danh thắng thiên nhiên kỳ vĩ sẽ là điểm dừng tiếp theo. Ninh Bình, với vẻ đẹp của các thảo nguyên xanh mướt và cảnh quan hùng vĩ, là nơi để trải nghiệm sự bình yên. Cuối cùng, Sapa, với những rẻo núi hùng vĩ và văn hóa dân tộc độc đáo, sẽ kết thúc chuyến phiêu lưu này, mang lại những trải nghiệm không thể quên.'),
+
+    ('Miền Bắc', 1, 'Hà Nội - Mù Cang Chải ','156.png', 5999000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Hà Nội - Mù Cang Chải - Ngọc Chiến ', 'Hành trình du lịch từ Hà Nội đến Mù Cang Chải và Ngọc Chiến là một chuyến phiêu lưu tuyệt vời giữa vùng núi phong phú và hùng vĩ của Việt Nam. Từ thủ đô sôi động, du khách sẽ bắt đầu hành trình đi qua những cung đường ngoằn ngoèo đưa họ đến với bản đẹp như tranh ở Mù Cang Chải, nơi những thửa ruộng bậc thang mênh mông màu xanh non mắt tạo nên bức tranh tuyệt vời của sự hài hòa giữa con người và thiên nhiên. Khám phá Ngọc Chiến, vùng đất nơi văn hóa dân dụ truyền thống và vẻ đẹp tự nhiên hòa quyện, là trải nghiệm không thể quên trong chuyến hành trình này.'),
+    ('Miền Bắc', 1, 'Hà Nội - Ngọc Chiến dịp Lễ 2/9 từ Hà Nội  ','157.png', 2499000, '1/9/2023 ', '3 ngày 2 đêm ', 'Hà Nội - Mù cang Chải - Ngọc Chiến ', 'Hành trình du lịch này đưa du khách từ trung tâm sôi động của Hà Nội đến vùng núi hùng vĩ Mù Cang Chải, nổi tiếng với những thước đồng ruộng bậc thang hình thành bởi bàn tay khéo léo của người dân tộc thiểu số. Trải qua cung đường quanh co, du khách sẽ bắt gặp những cảnh đẹp thiên nhiên tuyệt vời, từ những thửa ruộng lúa mênh mông đến những ngôi làng truyền thống. Tới Ngọc Chiến, điểm kết thúc, du khách sẽ bị cuốn hút bởi không khí trong lành, văn hóa dân dụ bản địa và cảm giác yên bình trước vẻ đẹp hoang sơ của miền núi.'),
+    ('Miền Bắc', 1, 'Hà Nội - Bản Cát Cát ','158.png', 2299000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Sapa - Bản Cát Cát - Check in Moana ', 'Tour du lịch "Hà Nội - Sapa - Bản Cát Cát - Check-in Moana" là hành trình tuyệt vời, đưa du khách đến những địa điểm tinh tế và hấp dẫn. Bắt đầu từ thủ đô lịch sử Hà Nội, du khách sẽ khám phá vẻ đẹp cổ kính và năng động. Tiếp theo, hành trình dẫn đến thị trấn Sapa, nơi tương tác với văn hóa độc đáo và thưởng ngoạn khung cảnh núi non hùng vĩ. Khám phá Bản Cát Cát mang đến trải nghiệm văn hóa dân dụ độc đáo. Kết thúc hành trình tại Check-in Moana, nơi du khách được đắm chìm trong không khí biển xanh mát, tận hưởng những khoảnh khắc trọn vẹn của kỳ nghỉ thư giãn và lưu giữ những kí ức đáng nhớ.'),
+    ('Miền Bắc', 1, 'Hà Nôi - Fansipan ','159.png', 2199000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nôi - Sapa - Fansipan - Chùa Bái Đính ', 'Hành trình đặc sắc này dẫn dắt du khách từ trung tâm văn hóa lịch sử Hà Nội, nơi nổi tiếng với vẻ đẹp cổ kính và ẩm thực phong phú. Sau đó, hành trình tiếp tục đến Sapa, vùng đất hiên ngang với những thửa ruộng bậc thang huyền bí. Tại đỉnh Fansipan, "Nóc nhà Đông Dương", du khách sẽ được chiêm ngưỡng toàn cảnh hùng vĩ. Cuối cùng, Chùa Bái Đính, ngôi chùa lớn nhất Đông Nam Á, là điểm kết thúc hành trình với không khí thiêng liêng và tâm linh.'),
+    ('Miền Bắc', 1, 'Du lịch Hà Nội - Hàm Rồng dịp Lễ ','160.png', 2399000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Du lịch Hà Nội - Sapa - Hàm Rồng dịp Lễ ', 'Tour du lịch Hà Nội - Sapa - Hàm Rồng dịp Lễ là một hành trình tuyệt vời mang đến trải nghiệm đa dạng văn hóa và thiên nhiên. Bắt đầu từ thủ đô lịch sự Hà Nội, du khách sẽ đắm chìm trong không khí tươi mới tại Sapa, với những cánh đồng lúa bậc thang và những ngôi làng dân dụ bản địa. Chuyến thăm Hàm Rồng, nơi hòa mình vào huyền bí, kết thúc chuyến đi với những kỷ niệm đáng nhớ và hứng khởi.'),
+    ('Miền Bắc', 1, 'Mộc Châu Mùa Hoa Mơ - Hoa Mận ','161.png', 3399000, 'Hàng Ngày ', '2 ngày 1 đêm ', 'Mộc Châu Mùa Hoa Mơ - Hoa Mận ', 'Tour du lịch Mộc Châu Mùa Hoa Mơ mang đến cho du khách trải nghiệm tuyệt vời giữa bức tranh thiên nhiên tươi đẹp và huyền bí. Khi bước chân đặt xuống, bạn sẽ bị cuốn hút bởi những thảm hoa mận trắng muốt, tinh khôi, tạo nên không gian huyền bí giữa những thảm cỏ xanh ngắt. Không chỉ có vẻ đẹp tuyệt vời, tour còn mang đến cơ hội để du khách tận hưởng không khí trong lành, thưởng thức ẩm thực độc đáo và trải nghiệm văn hóa độc đáo của vùng cao nguyên tây bắc Việt Nam.'),
+    ('Miền Bắc', 1, 'Du lịch Mộc Châu 2 ngày ','162.png', 4699000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Mộc Châu - Mai Châu ', 'Tour du lịch Hà Nội - Mộc Châu - Mai Châu trong dịp Lễ là hành trình hứa hẹn mang đến trải nghiệm độc đáo với những cảnh đẹp thiên nhiên tuyệt vời. Tại Hà Nội, du khách sẽ đắm chìm trong không khí trầm mặc của lịch sử và văn hóa. Mộc Châu với những thảm cỏ xanh mướt, hoa cải trắng bồng bềnh, tạo nên bức tranh hữu tình. Mai Châu, với những ngôi nhà gỗ truyền thống và đồng ruộng lúa bát ngát, gửi gắm hồn quê Việt sâu đậm. Mỗi dấu tích đều kể một câu chuyện, hòa mình vào thiên nhiên hùng vĩ, tour này là hành trình khám phá sự đẹp tinh khôi và tận hưởng bản sắc văn hóa của miền Bắc Việt Nam.'),
+    ('Miền Bắc', 1, 'Du lịch dương lịch 2024 - Tour Mộc Châu ','163.png', 1899000, '31/12/2023 ', '3 ngày 2 đêm ', 'Hà Nội - Mộc Châu - Cầu Kính Bạch Long ', 'Tour du lịch Hà Nội - Mộc Châu - Cầu Kính Bạch Long trong dịp Lễ là hành trình hòa mình vào vẻ đẹp hùng vĩ của núi rừng và thác nước tại Mộc Châu. Du khách sẽ được trải nghiệm không khí trong lành, hòa mình vào những thảm cỏ xanh mướt và ngắm nhìn những cánh đồng hoa mơ mộng. Điểm đặc biệt là chuyến thăm Cầu Kính Bạch Long, nơi mang đến góc nhìn tuyệt vời, mở ra bức tranh thiên nhiên tuyệt diệu, tạo nên những kỷ niệm đáng nhớ cho du khách.'),
+    ('Miền Bắc', 1, 'HÀ NỘI - CÁT CÁT - HÀM RỒNG ','164.png', 8799000, 'Hàng Ngày ', '5 ngày 4 đêm ', 'Hà Nội - Cát Cát - Hàm Rồng - Fansipan - Hà Nội ', 'Hành trình du lịch kỳ nghỉ ngắn tại miền Bắc Việt Nam mang đến cho bạn trải nghiệm không ngừng kỳ quan thiên nhiên và văn hóa. Tour bắt đầu từ thủ đô trăm năm tuổi, Hà Nội, nơi bạn sẽ hòa mình trong không khí trầm lắng của phố cổ. Tiếp theo, hành trình đưa bạn đến với những cung đường đáng kỳ vị như Cát Cát, Hàm Rồng, và đỉnh Fansipan - nói lên vẻ đẹp huyền bí của vùng núi Sapa. Mỗi dấu tích, mỗi cảm xúc, đều tạo nên chuyến đi đáng nhớ, kết thúc bằng sự trở về Hà Nội, nơi tâm hồn của bạn được thăng hoa trong bản nhạc văn hóa tinh tế.'),
+    ('Miền Bắc', 1, 'Hà Nội - Sapa - Bản Cát Cát ','165.png', 8299000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Sapa - Bản Cát Cát - Hàm Rồng - Fansipan ', 'Hành trình du lịch từ Sapa đến Fansipan là một chuyến phiêu lưu tuyệt vời giữa vùng núi đầy nét đẹp hoang sơ của Bắc Việt Nam. Du khách sẽ bắt đầu từ thị trấn Sapa, nơi hòa mình vào văn hóa dân tộc độc đáo. Tiếp theo, họ sẽ đến Bản Cát Cát, nơi lưu giữ nền văn hóa truyền thống của người HMông. Hành trình tiếp tục đến Hàm Rồng, một điểm đến kỳ bí với các hòn đá khổng lồ. Cuối cùng, đỉnh Fansipan, nơi du khách có cơ hội chinh phục đỉnh cao nhất Đông Dương, hòa mình vào hùng vĩ thiên nhiên và tận hưởng không khí tinh khôi của núi rừng.'),
+    ('Miền Bắc', 1, 'Du lịch Fansipan dịp Lễ 20/ ','166.png', 1399000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Tour Lễ Hà Nội - Sapa - Bản Cát Cát ', 'Tour Lễ Hà Nội - Sapa - Bản Cát Cát là hành trình đắm chìm trong vẻ đẹp hùng vĩ của núi rừng Tây Bắc Việt Nam. Khám phá thủ đô lịch sử Hà Nội, với kiến trúc cổ kính và đời sống văn hóa độc đáo. Tiếp đó, du khách sẽ bước vào thế giới thơ mộng của Sapa, nơi những rừng thông xanh mướt hòa quyện với những thửa ruộng bậc thang tuyệt vời. Tour còn mang đến cơ hội khám phá Bản Cát Cát, với làng dân dụ bản địa, nơi lưu giữ và truyền thống nền văn hóa sặc sỡ.'),
+    ('Miền Bắc', 1, 'Tết Nguyên Đán Sin Suối Hồ  ','167.png', 3899000, '10/2/2024 ', '4 ngày 3 đêm ', 'Hà Nội - Sapa - Lai Châu - Sin Suối Hồ ', 'Hành trình du lịch từ Hà Nội đến Sapa, tiếp theo là Lai Châu và kết thúc tại Sin Suối Hồ là một cuộc phiêu lưu tuyệt vời giữa vẻ đẹp hùng vĩ của núi rừng và vùng cao Bắc Bộ. Du khách sẽ bắt đầu từ thủ đô tráng lệ, trải nghiệm không khí trong lành của núi Sapa, khám phá văn hóa dân tộc thiểu số, và rồi lạc vào vùng đồng bằng sâu thẳm của Lai Châu. Cuộc hành trình kết thúc bằng sự huyền bí tại Sin Suối Hồ, nơi hòa mình vào khung cảnh hòn ngọc tự nhiên giữa núi rừng hùng vĩ.'),
+    ('Miền Bắc', 1, 'Fansipan - Hà Nội ','168.png', 4399000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Sapa - Fansipan - Hàm Rồng ', 'Tour du lịch Hà Nội - Sapa - Fansipan - Hàm Rồng là hành trình tuyệt vời đưa du khách khám phá vẻ đẹp đa dạng của miền Bắc Việt Nam. Khởi hành từ thủ đô Hà Nội, hành trình mang đến trải nghiệm tại thị trấn Sapa, nơi hòa mình vào khung cảnh nên thơ của những thửa ruộng bậc thang và dãy núi hùng vĩ. Đỉnh Fansipan, mái trời Việt Nam, là điểm đến đắm chìm trong sự hùng vĩ của dãy núi Hoàng Liên. Cuối cùng, Hàm Rồng với vườn hoa rực rỡ tạo nên kết thúc hoàn hảo cho hành trình đầy ấn tượng này'),
+    ('Miền Bắc', 1, 'Tour Sapa 3 ngày 2 đêm giá tốt ','169.png', 2899000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Sapa - Cát Bát - Hàm Rồng - Fanxipang ', 'Tour du lịch đưa bạn đến những vùng đất tuyệt vời và hùng vĩ của miền Bắc Việt Nam. Từ vẻ đẹp huyền bí của Sapa, nơi có những thửa ruộng bậc thang trải dài đến Cát Bà, hòn đảo xinh đẹp nằm giữa vịnh Lan Hạ. Tiếp theo, bạn sẽ khám phá Hàm Rồng, khu du lịch tự nhiên với những cảnh đẹp độc đáo. Cuối cùng, hành trình kết thúc tại đỉnh Fanxipang, điểm cao nhất Đông Nam Á, nơi mang đến trải nghiệm hấp dẫn và những kỷ niệm khó quên.'),
+    ('Miền Bắc', 1, 'Du lịch Sapa Tết Dương Lịch ','170.png', 4299000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Sapa - Cát Cát - Hàm Rồng - Fanxipan ', 'Hành trình du lịch khám phá vùng núi Tây Bắc tại Sapa sẽ đưa du khách đến những địa điểm tuyệt vời như thác Cát Cát hùng vĩ, làng Hàm Rồng truyền thống của dân tộc HMông, và đỉnh núi Fanxipan - "Rồng của Đông Dương". Trải nghiệm độc đáo này mang đến không khí trong lành, khám phá văn hóa độc đáo và cảm nhận vẻ đẹp huyền bí của núi rừng nơi đỉnh cao nhất Việt Nam.'),
+    ('Miền Bắc', 1, 'Du lịch Tây Bắc Tết Dương lịch  ','171.png', 6599000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Tây Bắc - Hà Nội - Mộc Châu - Cầu Kính Bạch Long ', 'Hành trình du lịch Tây Bắc - Hà Nội - Mộc Châu - Cầu Kính Bạch Long là một chuyến phiêu lưu độc đáo, nơi bạn sẽ khám phá vẻ đẹp thiên nhiên hùng vĩ và đa dạng văn hóa của miền Bắc Việt Nam. Từ thành phố năng động Hà Nội, hành trình dẫn bạn đến vùng núi Tây Bắc, nơi có những cảnh đẹp huyền bí của đỉnh núi, thác nước và đồng cỏ xanh mát tại Mộc Châu. Cuối cùng, thưởng thức sự yên bình tại Cầu Kính Bạch Long, một điểm đến lý tưởng cho những ai muốn tận hưởng không khí trong lành và cảm nhận hòa mình vào bản hòa nhạc thiên nhiên tuyệt vời.'),
+    ('Miền Bắc', 1, 'Du lịch Phú Thọ - Đền Hùng ','172.png', 8199000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Hà Nội - Đền Hùng - Phú Thọ', 'Tour du lịch Hà Nội - Đền Hùng - Phú Thọ là hành trình huyền bí đưa du khách khám phá vùng đất lịch sử và văn hóa tại miền Bắc Việt Nam. Tại Hà Nội, du khách sẽ đắm chìm trong không khí trầm lắng của Hoàn Kiếm, thăm Quảng trường Ba Đình và thưởng thức ẩm thực đặc sắc. Hành trình tiếp tục đến Đền Hùng, nơi tưởng nhớ tổ tiên và học hỏi về lịch sử dòng họ Việt Nam. Cuối cùng, tại Phú Thọ, du khách sẽ khám phá những di tích lịch sử và thưởng thức vẻ đẹp êm đềm của quê hương.'),
+    ('Miền Bắc', 1, 'Du lịch Tây Thiên ','173.png', 9999000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Vĩnh Phúc - Tam Đảo - Tây Thiên ', 'Tour du lịch Vĩnh Phúc - Tam Đảo - Tây Thiên là hành trình tuyệt vời khám phá vùng Bắc Trung Bộ Việt Nam. Tại Vĩnh Phúc, du khách sẽ đắm chìm trong vẻ đẹp hòa mình vào cuộc sống đồng quê, trải nghiệm văn hóa và thưởng thức ẩm thực độc đáo. Tam Đảo, với khí hậu mát mẻ quanh năm, là điểm đến lý tưởng cho những chuyến trekking và khám phá thiên nhiên hùng vĩ. Cuối cùng, Tây Thiên mang đến không khí linh thiêng với các đền chùa tuyệt vời, là nơi hòa mình vào tâm linh và tận hưởng bình yên.'),
+    ('Miền Bắc', 1, 'Du lịch Tết Âm lịch Tour Hà Nội ','174.png', 6499000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Bắc Ninh - Đền Đô - Hạ Long ', 'Tour du lịch này sẽ đưa du khách đến những điểm đẹp độc đáo của miền Bắc Việt Nam. Hành trình bắt đầu tại Hà Nội, thủ đô nghìn năm văn hiến với những di tích lịch sử và kiến trúc độc đáo. Tiếp theo là Bắc Ninh, nơi lưu giữ nét truyền thống văn hóa và nghệ thuật dân gian. Đến Đền Đô, du khách sẽ khám phá văn hóa tâm linh tại các đền đài lịch sử. Hành trình kết thúc tại Hạ Long, một trong những di sản thiên nhiên kỳ diệu của thế giới với vịnh biển hùng vĩ và hang động kỳ quái.'),
+    ('Miền Bắc', 1, 'Du lịch Miền Bắc Tết Âm lịch - Hà Nội ','175.png', 8599000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Yên Tử - Hạ Long - Đền Đô ', 'Hành trình du lịch đặc sắc từ Hà Nội đến Yên Tử, Hạ Long và Đền Đô là một cuộc phiêu lưu độc đáo, hòa mình vào vẻ đẹp lịch sử và thiên nhiên hùng vĩ. Từ thủ đô lịch sử Hà Nội, bạn sẽ bắt đầu hành trình tôn vinh tại Yên Tử, nơi linh thiêng và tâm linh hòa quyện. Tiếp theo, hòa mình trong hạnh phúc của Vịnh Hạ Long, thảo nguyên đá karst hùng vĩ. Cuối cùng, trở về Đền Đô để khám phá vẻ đẹp kiến trúc và lịch sử độc đáo. Đây chắc chắn là một hành trình đầy ấn tượng và trải nghiệm độc đáo.'),
+    ('Miền Bắc', 1, 'Du lịch Miền Bắc Tết Dương lịch ','176.png', 4299000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Ninh Bình - Chùa Bái Đính - Tràng An ', 'Tour du lịch Ninh Bình - Chùa Bái Đính - Tràng An là một hành trình đầy ấn tượng, mang đến trải nghiệm hòa mình vào vẻ đẹp tự nhiên tuyệt vời và tâm linh. Bắt đầu từ Ninh Bình, du khách sẽ khám phá vùng đất tươi đẹp với những cánh đồng lúa xanh bát ngát. Chùa Bái Đính, nằm giữa khung cảnh núi non hùng vĩ, là điểm đến tôn giáo và văn hóa quan trọng. Kết thúc hành trình là Tràng An, hệ thống hang động và hồ nước lạ mắt, nơi du khách có cơ hội thư giãn và tận hưởng sự hòa mình giữa thiên nhiên hùng vĩ.'),
+    ('Miền Bắc', 1, 'Chùa Bái Đính - Tràng An ','177.png', 7299000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Bái Đính - Tràng An - Tam Cốc ', 'Tour du lịch Hà Nội - Bái Đính - Tràng An - Tam Cốc là một hành trình tuyệt vời, kết hợp giữa sự truyền thống và thiên nhiên tươi đẹp. Khám phá thủ đô lịch sử Hà Nội với những địa danh nổi tiếng, sau đó hướng về Bái Đính, nơi nằm lớn nhất thế giới về kiến trúc Phật giáo. Tiếp theo, du khách sẽ bị cuốn hút bởi vẻ đẹp hùng vĩ của Tràng An, di tích thiên nhiên và di sản thế giới Tam Cốc, nơi có những cánh đồng lúa bát ngát và hệ thống hang động độc đáo. Đây là hành trình độc đáo, mang lại trải nghiệm đầy ấn tượng cho những người yêu thích văn hóa và thiên nhiên.'),
+    ('Miền Bắc', 1, 'Chùa Tam Chúc - Tuyệt Tình Cốc ','178.png', 4999000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Chùa Tam Chúc - Ninh Bình - Tuyệt Tình Cốc ', 'Tour du lịch đưa bạn đến những điểm đẹp tuyệt vời của miền Bắc Việt Nam. Hành trình bắt đầu tại Hà Nội, nơi lưu giữ vẻ đẹp lịch sử và văn hóa. Tiếp theo, bạn sẽ ghé thăm Chùa Tam Chúc, ngôi chùa lớn nhất Đông Nam Á, nằm giữa hồ nước xanh biếc. Sau đó, hành trình hướng về Ninh Bình, với cảnh đẹp ngoạn ngục của các vách đá và đèo non. Tour kết thúc tại Tuyệt Tình Cốc, một điểm đón chào bình minh huyền bí, tạo nên kỷ niệm đáng nhớ trong lòng du khách.'),
+    ('Miền Bắc', 1, 'Hà Nội - Tam Cốc ','179.png', 5199000, 'Hàng Ngày ', '5 ngày 4 đêm ', 'Hà Nội - Hoa Lư - Sapa - Đền Hùng ', 'Hành trình du lịch đắm chìm trong vẻ đẹp lịch sử và thiên nhiên tuyệt vời, tour từ Hà Nội - Hoa Lư - Sapa - Đền Hùng Cốc là một chuyến phiêu lưu đầy ấn tượng. Bắt đầu từ thủ đô năng động Hà Nội, bạn sẽ khám phá di tích lịch sử Hoa Lư, ngắm nhìn vùng núi hùng vĩ tại Sapa, và trải nghiệm sự linh thiêng tại Đền Hùng Cốc. Đây là cuộc hành trình kỳ diệu đưa du khách đến với vẻ đẹp đa dạng của Việt Nam, từ thành phố sôi động đến cảnh đẹp tự nhiên hùng vĩ.'),
+    ('Miền Bắc', 1, 'Hà Nội - Hoa Lư ','180.png', 9599000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Bái Đính - Tràng An - Hoa Lư ', 'Hành trình du lịch này đưa du khách đến những điểm đẹp nổi tiếng và lịch sử tại Việt Nam. Bắt đầu từ thủ đô lịch sử Hà Nội, bạn sẽ ngắm nhìn vẻ đẹp tinh tế của Bái Đính, điểm hành hương lớn nhất Đông Nam Á. Tiếp theo, Tràng An hiền hòa và quyến rũ bởi hệ thống hang động và cảnh đồng quê hữu tình. Hành trình kết thúc tại Hoa Lư Cốc, nơi hòa mình trong không gian lịch sử cổ kính và tận hưởng tĩnh lặng của quê hương.'),
+    ('Miền Bắc', 1, 'Hoa Lư - Hang Múa ','181.png', 6999000, 'Hàng Ngày ', '2 ngày 1 đêm ', 'Hà Nội - Hang Múa ', 'Tour du lịch Hà Nội - Hang Múa là một hành trình đầy hứng khởi, mang đến trải nghiệm tuyệt vời giữa văn hóa đậm đà của thủ đô Hà Nội và vẻ đẹp hùng vĩ của Hang Múa. Du khách sẽ khám phá những di tích lịch sử lâu dài, thưởng thức ẩm thực phong phú và thư giãn trong không khí yên bình. Đặc biệt, đến Hang Múa, du khách sẽ được hòa mình vào không gian thiên nhiên tuyệt vời, với cảnh đèn hoàng hôn tô điểm cho một trải nghiệm khó quên.'),
+    ('Miền Bắc', 1, 'Bắc Hà Nội - Chùa Hương ','182.png', 1599000, 'Hàng Ngày ', '2 ngày 1 đêm ', 'Bắc Hà Nội - Chùa Hương ', 'Tour du lịch "Bắc Hà Nội - Chùa Hương" là hành trình tuyệt vời đưa du khách qua những vùng đất hùng vĩ và linh thiêng. Tại Bắc Hà Nội, bạn sẽ bắt gặp vẻ đẹp hoang sơ của núi rừng và hòa mình vào văn hóa độc đáo của các dân tộc thiểu số. Đến Chùa Hương, một điểm hành hương tâm linh nằm giữa cảnh đẹp hữu tình, du khách sẽ trải qua không gian thanh tịnh và cảm nhận sức sống tâm linh từ những nét kiến trúc độc đáo và lịch sử lâu dài.'),
+    ('Miền Bắc', 1, 'Hà Nội - Yên Tử 1 ngày từ Hà Nội ','183.png', 5299000, 'Hàng Ngày ', '2 ngày 1 đêm ', 'Hà Nội - Yên Tử ', 'Tour du lịch Hà Nội - Yên Tử là hành trình huyền bí đưa du khách từ trung tâm lịch sử và văn hóa Hà Nội đến ngôi chùa linh thiêng Yên Tử, nằm trên đỉnh núi Yên Tử hùng vĩ. Đây không chỉ là kỳ nghỉ thư giãn giữa không gian thiên nhiên tươi đẹp mà còn là cơ hội để du khách khám phá những di tích lịch sử, nền văn hóa độc đáo và tận hưởng không khí tĩnh lặng của miền núi Bắc Bộ.'),
+    ('Miền Bắc', 1, 'Miền Bắc Hà Nội - City Tour Hà Nội 1 ngày ','184.png', 6599000, 'Hàng Ngày ', '1 ngày 0 đêm ', 'Hà Nội - Ba Vì', 'Tour du lịch "Hà Nội - Ba Vì" mang đến trải nghiệm độc đáo giữa bức tranh thiên nhiên tươi đẹp và văn hóa đậm đà. Khởi hành từ trái tim thủ đô Hà Nội, chúng ta sẽ bắt đầu hành trình khám phá Ba Vì, nơi núi non hùng vĩ và rừng xanh mát hòa quyện. Dạo bước trong không gian yên bình, du khách sẽ được thư giãn, thưởng thức ẩm thực độc đáo và trải nghiệm những hoạt động ngoại ô thú vị, tạo nên kỷ niệm đáng nhớ trong hành trình khám phá miền Bắc Việt Nam.'),
+    ('Miền Bắc', 1, 'Chùa Tam Chúc - Chùa Bà Đanh ','185.png', 2399000, 'Hàng Ngày ', '2 ngày 1 đêm ', 'Chùa Tam Chúc - Chùa Bà Đanh ', 'Chuyến du lịch đến Chùa Tam Chúc và Chùa Bà Đanh mang đến trải nghiệm tâm linh và hòa mình vào vẻ đẹp tâm hồn của Việt Nam. Tại Chùa Tam Chúc, du khách sẽ bị cuốn hút bởi hình ảnh hòa mình giữa hồ nước lớn và những ngôi chùa linh thiêng. Chùa Bà Đanh, với kiến trúc cổ kính, tạo nên không khí yên bình và trang nghiêm. Cả hai địa điểm đều là nơi lý tưởng để tìm kiếm bình an và tận hưởng vẻ đẹp văn hóa truyền thống.'),
+    ('Miền Bắc', 1, 'Miền Bắc Hà Nội - City Tour Hà Nội 1 ngày ','186.png', 1999000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Hà Nội - City Hà Nội - Hồ Gươm ', 'Tour du lịch Hà Nội - City Hà Nội - Hồ Gươm là hành trình tuyệt vời đưa du khách khám phá vẻ đẹp lịch sử và văn hóa của thủ đô Việt Nam. Trải qua những con đường cổ kính của Hà Nội, du khách sẽ bắt gặp những di tích lịch sử nổi tiếng và thưởng thức những món ăn ngon đặc trưng. Đặc biệt, chuyến tham quan Hồ Gươm sẽ mang lại trải nghiệm tuyệt vời với không khí yên bình và hòa mình vào vẻ đẹp thơ mộng của hồ thành phố.'),
+    ('Miền Bắc', 1, 'Du lịch Thanh Hóa ','187.png', 1999000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Đền Sòng Sơn - Đền Cô Chín - Suối Cá ', 'Hành trình du lịch qua "Đền Sòng Sơn - Đền Cô Chín - Suối Cá" là một hành trình tuyệt vời khám phá vẻ đẹp tâm linh và thiên nhiên tại vùng miền. Bắt đầu từ sự trang nghiêm của Đền Sòng Sơn, nơi lưu giữ hồn quê hương, đưa du khách đến Đền Cô Chín, nơi linh thiêng với những câu chuyện lịch sử. Cuối cùng, Suối Cá mang lại trải nghiệm tận hưởng bản địa với cảnh đẹp thiên nhiên tươi mới và không khí trong lành, là điểm kết thúc hành trình đáng nhớ.'),
+    ('Miền Bắc', 1, 'Tour Du lịch Thanh Hóa ','188.png', 4399000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Thanh Hóa - Yên Tử - Tràng An ', 'Tour du lịch từ Thanh Hóa đến Yên Tử và Tràng An là một hành trình tuyệt vời, mang đến trải nghiệm đa dạng về văn hóa và thiên nhiên. Từ vẻ đẹp lịch sử của Thanh Hóa, du khách sẽ hòa mình vào không khí tâm linh tại Yên Tử, nơi có đỉnh Phật tự linh thiêng. Sau đó, họ sẽ đắm chìm trong vẻ đẹp hùng vĩ của Tràng An, với những hệ thống hang động và cảnh quan thiên nhiên kỳ diệu. Mỗi điểm dừng đều là một trải nghiệm độc đáo, hấp dẫn du khách bằng sự phong phú và tinh tế của văn hóa Việt Nam.'),
+    ('Miền Bắc', 1, 'Du lịch Thanh Hóa - Pù Luông ','189.png', 1799000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Pù Luông - Vịnh Hạ Long - Yên Tử ', 'Tour du lịch kết hợp Pù Luông, Vịnh Hạ Long và Yên Tử là một hành trình tuyệt vời khám phá vẻ đẹp đa dạng của Việt Nam. Khởi hành từ thôn quê bình yên ở Pù Luông, du khách sẽ được trải nghiệm cuộc sống nông thôn truyền thống. Hành trình tiếp tục với Vịnh Hạ Long, với những danh thắng ngoạn mục, đảo đá hình thù độc đáo. Kết thúc chuyến đi ở Yên Tử, nơi tâm linh hòa mình giữa thiên nhiên hùng vĩ và không gian linh thiêng. Tour này là một hành trình đầy ấn tượng và trải nghiệm đa chiều.'),
+    ('Miền Bắc', 1, 'Du lịch Hà Nội - Thung Nai ','190.png', 6399000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Thung Nai - Suối khoáng Kim Bồi - Hòa Bình ', 'Tour du lịch Hà Nội - Thung Nai - Suối khoáng Kim Bồi - Hòa Bình là hành trình tuyệt vời, đưa du khách khám phá vẻ đẹp hài hòa giữa nét cổ kính của Hà Nội, vùng quê thơ mộng Thung Nai, đến những nguồn nước khoáng tinh khiết tại Suối khoáng Kim Bồi. Du khách sẽ được trải nghiệm không khí trong lành, cảm nhận vị ngon của đặc sản địa phương và thư giãn trong khung cảnh tươi đẹp của Hòa Bình, tạo nên một chuyến đi đáng nhớ.'),
+    ('Miền Bắc', 1, 'Tour Du lịch Sapa ','191.png', 9299000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Sa Pa - Bản Cát Cát - Hàm Rồng ', 'Tour du lịch Sa Pa - Bản Cát Cát - Hàm Rồng là một hành trình tuyệt vời khám phá vẻ đẹp huyền bí của vùng núi phía Bắc Việt Nam. Hành trình bắt đầu tại Sa Pa, nơi bạn sẽ được ngắm nhìn những thửa ruộng bậc thang lộng lẫy. Tiếp theo, tour dẫn bạn đến Bản Cát Cát, nơi văn hóa của các dân tộc thiểu số rực rỡ. Cuối cùng, Hàm Rồng, với cảnh đẹp hùng vĩ và sự tĩnh lặng của thiên nhiên, đưa du khách vào một trải nghiệm du lịch đậm chất thơ mộng và truyền thống.'),
+    ('Miền Bắc', 1, 'Tour Du lịch Sapa ','192.png', 9899000, 'Hàng Ngày ', '2 ngày 1 đêm ', 'Tour Du lịch Sapa - Bản Cát Cát ', 'Tour du lịch Sapa - Bản Cát Cát là một hành trình tuyệt vời đưa du khách đến khám phá vùng núi phong cảnh hùng vĩ của Sapa, Việt Nam. Từ thị trấn Sapa, hành trình bắt đầu với những con đường mòn xanh ngắt, dẫn dắt khách qua thung lũng mộng mơ. Tại Bản Cát Cát, du khách sẽ trải nghiệm không khí bình dị của ngôi làng dân dụ HMông, ngắm nhìn những thửa ruộng bậc thang tuyệt vời và hiểu rõ văn hóa độc đáo của cộng đồng dân tộc thiểu số.'),
+    ('Miền Bắc', 1, 'Du lịch Miền Bắc Tour Du lịch Sapa ','193.png', 5799000, 'Hàng Ngày ', '2 ngày 1 đêm ', 'Sapa - Chinh Phục Đỉnh Fansipan ', 'Tour du lịch "Sapa - Chinh Phục Đỉnh Fansipan" là chuyến hành trình kỳ thú đưa du khách đến với vùng núi hùng vĩ của Sapa, Việt Nam. Hành trình không chỉ khám phá văn hóa dân dụ độc đáo và thưởng thức ẩm thực tinh tế mà còn đưa du khách đến thách thức tuyệt vời nhất - leo lên Đỉnh Fansipan, đỉnh núi cao nhất Đông Nam Á. Trải nghiệm không chỉ là hành trình vượt đèo, mà còn là cuộc phiêu lưu tới những đỉnh cao, ngắm cảnh thiên nhiên tuyệt vời và gặp gỡ những bản làng truyền thống.'),
+    ('Miền Bắc', 1, 'Tour mùa Thu  ','194.png', 2799000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Hà Nội - Hàm Rồng - Chinh Phục Đỉnh Fansipan ', 'Tour du lịch "Hà Nội - Hàm Rồng - Chinh Phục Đỉnh Fansipan" là hành trình kỳ thú khám phá vùng Bắc Việt Nam. Đặt chân đến thủ đô lịch sử Hà Nội, du khách sẽ trải nghiệm không khí hồn hương của thành phố cổ, khám phá Hàm Rồng - khu vườn thiên nhiên tuyệt vời với cảnh đẹp hùng vĩ. Hành trình đưa du khách đến thách thức bản thân khi chinh phục đỉnh Fansipan - đỉnh núi cao nhất Đông Nam Á. Một hành trình không chỉ là khám phá vẻ đẹp tự nhiên mà còn là thử thách tinh thần và trải nghiệm văn hóa độc đáo của dân tộc vùng núi.'),
+    ('Miền Bắc', 1, 'Du lịch Miền Bắc - lào Cai ','195.png', 4199000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Lào Cai - Hà Khẩu - Sapa ', 'Hành trình du lịch từ Lào Cai đến Hà Khẩu và Sapa là một chuyến phiêu lưu hấp dẫn, đưa du khách khám phá vùng núi Tây Bắc Việt Nam nổi tiếng với địa hình hùng vĩ và văn hóa dân dụ độc đáo. Từ thành phố biên giới Lào Cai, du khách sẽ trải nghiệm hương vị văn hóa dân dụ đặc trưng, tiếp theo là hành trình đến thị trấn Hà Khẩu, nơi kết nối với Sapa qua những con đường ngoằn nghèo, nhưng đồng thời ẩn chứa vẻ đẹp hoang sơ và tinh tế của miền núi Tây Bắc.'),
+    ('Miền Bắc', 1, 'Đông Bắc mùa Hoa Tam Giác Mạch ','196.png', 1699000, '25/12/2023 ', '3 ngày 2 đêm ', 'Hà Giang - Quản Bạ - Đồng Văn ', 'Tour du lịch Hà Giang - Quản Bạ - Đồng Văn là hành trình hấp dẫn đưa du khách đến với vùng núi đồng bằng karst hùng vĩ. Từ Hà Giang, chúng ta sẽ bắt đầu cuộc phiêu lưu đến Quản Bạ, nơi có đèo Mã Pí Lèng ngoạn mục và cánh đồng bậc thang tuyệt vời. Đến Đồng Văn, khám phá Vườn địa đạo Đồng Văn và thưởng ngoạn cảnh đá mặt trời, tạo nên chuyến đi không gì so sánh. Tour mang lại trải nghiệm văn hóa độc đáo và hòa mình vào vẻ đẹp huyền bí của cao nguyên đá Đồng Văn.'),
+    ('Miền Bắc', 1, 'Du lịch Đông Bắc - Hà Nội - Hà Giang ','197.png', 6599000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Hà Giang - Quản Bạ - Sơn La ', 'Hành trình du lịch từ Hà Nội đến Sơn La sẽ đưa bạn qua những địa điểm tuyệt vời nhất của Bắc Việt Nam. Từ sự trấn an và lịch sự của Hà Nội, bạn sẽ khám phá vẻ đẹp hùng vĩ của núi non ở Hà Giang và thăm thú cảnh đẹp thiên nhiên tại Quản Bạ. Hành trình sẽ kết thúc tại Sơn La, nơi bạn có cơ hội tận hưởng không khí trong lành, thưởng thức ẩm thực độc đáo và hiểu rõ hơn về văn hóa động bộ của người dân địa phương.'),
+    ('Miền Bắc', 1, 'Tour du lịch Mộc Châu Tết Dương Lịch ','198.png', 4399000, '30/12/2023 ', '3 ngày 2 đêm ', 'Mộc Châu - Mai Châu - Hà Nội ', 'Tour du lịch từ Mộc Châu đến Mai Châu và cuối cùng là Hà Nội là một hành trình tuyệt vời, mang đến trải nghiệm đa dạng về văn hóa và thiên nhiên. Tại Mộc Châu, bạn sẽ bị cuốn hút bởi vùng núi rừng tươi tốt, đồng cỏ xanh mướt. Tiếp theo, Mai Châu mang đến không khí yên bình của làng quê, với những ngôi nhà gỗ truyền thống và văn hóa dân dụ độc đáo. Cuối cùng, Hà Nội với lịch sử lâu dài và văn hóa phồn thịnh sẽ là điểm kết thúc hoàn hảo cho hành trình khám phá này.'),
+    ('Miền Bắc', 1, 'Du lịch Tết Nguyên Đán Hà Giang ','199.png', 6799000, 'Mùng 2 Tết ', '3 ngày 2 đêm ', 'Hà Giang - Đồng Văn - Cao Bằng ', 'Tour du lịch từ Hà Giang đến Đồng Văn và Cao Bằng là một hành trình kỳ diệu khám phá vùng đất núi phong phú và hùng vĩ của miền Bắc Việt Nam. Du khách sẽ được đắm chìm trong khung cảnh thiên nhiên tuyệt vời, từ những thửa ruộng bậc thang xanh mướt của Hà Giang đến vùng Đồng Văn đá ngầm nổi tiếng. Tour còn mang đến trải nghiệm văn hóa độc đáo khi khám phá các bản làng dân dụ tự nhiên và thưởng thức ẩm thực đặc sắc của vùng cao nguyên Cao Bằng.'),
+    ('Miền Bắc', 1, 'Du lịch Hà Giang ','200.png', 2799000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Hà Nội - Đồng Văn - Cột cờ Lũng Cú ', 'Tour du lịch Hà Nội - Đồng Văn - Cột cờ Lũng Cú là hành trình huyền bí đưa du khách khám phá vẻ đẹp lịch sử và thiên nhiên tại Bắc Việt Nam. Từ Hà Nội, hành trình đưa bạn đến Đồng Văn, nơi giữa vùng cao nguyên đá độc đáo. Đây không chỉ là cơ hội để tận hưởng khung cảnh ngoạn ngục của đỉnh núi, mà còn là cơ hội để hiểu rõ về văn hóa và đời sống dân tộc thiểu số. Khám phá Cột cờ Lũng Cú, biểu tượng lịch sử, là hành trình đậm chất khám phá, kết nối với bản sắc văn hóa độc đáo của vùng đất núi.'),
+    ('Miền Bắc', 1, 'Land Tour Vịnh Hạ Long ','201.png', 5199000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Vịnh Hạ Long - Yên Tử - Sapa ', 'Tour du lịch hấp dẫn khám phá vùng Bắc Bộ Việt Nam bao gồm Vịnh Hạ Long, Yên Tử và Sapa. Khởi hành từ Hà Nội, bạn sẽ được đắm chìm trong vẻ đẹp huyền bí của Vịnh Hạ Long với những hòn đảo đá karst nổi tiếng. Tại Yên Tử, nơi có chùa dã ngoại thiêng liêng, bạn sẽ trải nghiệm không khí tâm linh và ngắm cảnh núi non hùng vĩ. Cuối cùng, Sapa đưa bạn đến với những thửa ruộng bậc thang đẹp như tranh, nơi gặp gỡ với văn hóa dân tộc sôi động.'),
+    ('Miền Bắc', 1, 'Du lịch Yên Tử - Ba Vàng ','202.png', 1499000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Yên Tử - Ba Vàng - Mai Châu ', 'Hành trình du lịch qua Hà Nội, Yên Tử, Ba Vàng và Mai Châu mang đến trải nghiệm độc đáo của văn hóa Việt Nam. Bắt đầu tại Hà Nội, khám phá đô thị lịch sử với các di tích và món ăn đặc sắc. Tiếp theo, Yên Tử và Ba Vàng là những địa điểm linh thiêng, với chân đèo dẫn lên chùa trên đỉnh núi và tượng Chúa Buddha lấp lánh giữa không gian thiên nhiên hùng vĩ. Cuối cùng, tại Mai Châu, bạn sẽ ngắm nhìn vẻ đẹp hòa quyện của thác nước, rừng xanh và làng trại trải dài trên thung lũng.'),
+    ('Miền Bắc', 1, 'Du lịch Miền Bắc Hà Nội - Hạ Long ','203.png', 6799000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Hạ Long - Hang Múa - Bái Đính ', 'Tour du lịch từ Hà Nội đến Hạ Long, Hang Múa, và Bái Đính là một hành trình tuyệt vời khám phá vẻ đẹp đa dạng của miền Bắc Việt Nam. Bắt đầu từ Hà Nội, thủ đô lịch sử, bạn sẽ hồi hương qua các con phố cổ và thưởng thức ẩm thực độc đáo. Tiếp theo, Hạ Long hấp dẫn với vịnh nước kỳ vĩ và đảo quốc huyền bí. Tại Hang Múa, bạn sẽ ngỡ ngàng trước vẻ đẹp thiên nhiên và tận hưởng tầm nhìn toàn cảnh. Cuối cùng, thăm Bái Đính với kiến trúc độc đáo của chùa lớn và không khí tâm linh tuyệt vời.'),
+    ('Miền Bắc', 1, 'Du lịch Miền Bắc Hà Nội - Hạ Long ','204.png', 4499000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Hà Nội - Hạ Long - Đảo Bạch Long Vĩ ', 'Tour du lịch "Hà Nội - Hạ Long - Đảo Bạch Long Vĩ" là hành trình tuyệt vời, kết hợp giữa sự huyền bí của thủ đô nghìn năm tuổi Hà Nội, với những di tích lịch sử và văn hóa, và vẻ đẹp tuyệt vời của vịnh Hạ Long với hàng nghìn đảo đá kỳ quặc. Hành trình tiếp tục đưa du khách đến Đảo Bạch Long Vĩ, một thiên đường hoang sơ, nơi họ có cơ hội khám phá bãi biển dịu dàng, thưởng thức ẩm thực độc đáo và tận hưởng không gian yên bình giữa biển cả.'),
+    ('Miền Bắc', 1, 'Du lịch Hồ Ba Bể - Thác Bản Giốc 3 ngày ','205.png', 3399000, '20/11/2023 ', '3 ngày 2 đêm ', 'Hà Nội - Hồ Ba Bể - Thác Bản Gốc ', 'Tour du lịch này mang đến cho du khách một hành trình tuyệt vời qua những điểm đẹp tinh khôi của miền Bắc Việt Nam. Bắt đầu từ Hà Nội, thủ đô lịch sử với văn hóa độc đáo, du khách sẽ hòa mình trong không khí trấn an của Hồ Ba Bể, nơi hồ nước xanh bát ngát giữa những ngọn núi hùng vĩ. Chặng cuối cùng dẫn đến Thác Bản Gốc, nơi cảm nhận sức mạnh hùng vĩ của thiên nhiên và đắm chìm trong khung cảnh huyền bí, tạo nên một trải nghiệm du lịch đậm chất khám phá.'),
+    ('Miền Bắc', 1, 'Hà Nội chùa Thầy - chùa Tây Phương ','206.png', 3999000, 'Hàng Ngày ', '1 ngày 0 đêm ', 'Hà Nội – chùa Thầy – Chùa Tây Phương', 'Hành trình du lịch này đưa du khách khám phá những địa điểm tâm linh tại miền Bắc Việt Nam. Từ Hà Nội, thành phố với vẻ đẹp hài hòa giữa nét cổ kính và hiện đại, du khách sẽ bắt đầu hành trình đến Chùa Thầy - nơi linh thiêng, trùng Hiếu khí tựa như thiên đàng hình trần. Tiếp theo là Chùa Tây Phương, điểm đến với kiến trúc độc đáo và tượng Phật đồ sộ. Tour du lịch này hứa hẹn mang đến trải nghiệm tâm linh và khám phá văn hóa độc đáo của miền Bắc.'),
+    ('Miền Bắc', 1, 'Du lịch Bắc Ninh 1 ngày ','207.png', 2199000, 'Hàng Ngày ', '1 ngày 0 đêm ', 'Hà nội – Bắc Ninh – Đền Đô ', 'Tour du lịch từ Hà Nội đến Bắc Ninh và Đền Đô là một hành trình hấp dẫn, mang đến trải nghiệm độc đáo của vùng miền Bắc Việt Nam. Khám phá sự hòa quyện giữa hiện đại và truyền thống tại thủ đô Hà Nội, nơi có lịch sử lâu dài và văn hóa đa dạng. Tại Bắc Ninh, du khách sẽ đắm chìm trong không khí bình yên của làng nghề truyền thống. Đến Đền Đô, một di tích lịch sử quan trọng, du khách sẽ khám phá kiến trúc độc đáo và tìm hiểu về câu chuyện lịch sử phong phú của vùng đất này.'),
+    ('Miền Bắc', 1, 'Du lịch Tam Đảo - Đền Chúa Thượng ','208.png', 7299000, 'Hàng Ngày ', '3 ngày 2 đêm ', 'Tam Đảo - Thác Bạc - Đền Chúa Thượng Ngàn ', 'Hành trình du lịch Tam Đảo - Thác Bạc - Đền Chúa Thượng Ngàn là một chuyến phiêu lưu đầy ắp với vẻ đẹp thiên nhiên hùng vĩ. Bắt đầu tại Tam Đảo, du khách sẽ khám phá thành phố nghỉ dưỡng với khí hậu mát mẻ và những con đường ngoằn nghèo quanh co. Tiếp theo là Thác Bạc, nơi dòng nước trong veo rơi từ độ cao, tạo ra cảnh quan huyền bí. Chuyến đi kết thúc tại Đền Chúa Thượng Ngàn, một ngôi đền linh thiêng với kiến trúc truyền thống, mang lại trải nghiệm tâm linh và tận hưởng vẻ đẹp tự nhiên tuyệt vời.'),
+    ('Miền Bắc', 1, 'Hà Nội - Aquamarine Du Thuyền Ngủ ','209.png', 2799000, 'Hàng Ngày ', '4 ngày 3 đêm ', 'Hà Nội - Hạ Long - Đảo Tuần Châu - Hòn Đinh Hương ', 'Tour du lịch từ Hà Nội đến Hạ Long, Đảo Tuần Châu, và Hòn Đinh Hương là hành trình đầy ấn tượng giữa vẻ đẹp tự nhiên và di sản văn hóa. Khám phá thủ đô lịch sử Hà Nội với kiến trúc cổ kính, sau đó hướng ra Hạ Long, một trong Những Kỳ Quan Thiên Nhiên Thế Giới, nơi bạn sẽ ngạc nhiên trước vịnh biển hùng vĩ. Du khách tiếp tục đến Đảo Tuần Châu, nơi tận hưởng cảnh đẹp tuyệt vời và trải nghiệm hoạt động giải trí thú vị. Hành trình kết thúc ở Hòn Đinh Hương, nơi du khách thư giãn trong không khí yên bình và hòa mình vào huyền bí của vịnh Hạ Long.'),
+    ('Miền Bắc', 1, 'Du lịch Tết Nguyên Đán Hà Giang ','210.png', 7899000, 'Mùng 4 Tết ', '3 ngày 2 đêm ', 'Hà Nội - Hà Giang - Sông Nho Quế ', 'Tour du lịch Hà Nội - Hà Giang - Sông Nho Quế là hành trình kỳ vĩ, mang đến trải nghiệm độc đáo giữa vùng thủ đô lịch sự và vùng miền núi hùng vĩ. Tại Hà Nội, du khách sẽ bắt đầu hành trình với những di tích lịch sử, văn hóa đặc sắc. Hành trình tiếp tục đến Hà Giang, nơi mênh mông những cánh đồng hào hùng, đỉnh núi cao vút và đường mòn ngoằn nghèo. Cuối cùng, Sông Nho Quế nối liền tâm hồn du khách với hình ảnh hữu tình của vùng quê tĩnh lặng.');
+
+
 
 
 
