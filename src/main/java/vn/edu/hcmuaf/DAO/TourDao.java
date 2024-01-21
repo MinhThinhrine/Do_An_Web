@@ -2,7 +2,6 @@ package vn.edu.hcmuaf.DAO;
 
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
 import vn.edu.hcmuaf.bean.Tour;
-import vn.edu.hcmuaf.bean.User;
 import vn.edu.hcmuaf.bean.valies;
 
 import javax.servlet.http.HttpSession;
@@ -130,13 +129,14 @@ public class TourDao {
             throw new RuntimeException(e);
         }
     }
-        public static LinkedList<Tour> getListTourbySearch(String search) {
+    public static LinkedList<Tour> getListTourbySearch(String search) {
         LinkedList<Tour> listSearch = new LinkedList<>();
-        String sql = "select * from tours WHERE name like ? order by id desc ";
+        String sql = "SELECT * FROM tours WHERE schedule LIKE ? ORDER BY id DESC";
         Connection connect = ConnectToDatabase.getConnect();
+
         try {
             PreparedStatement pst = connect.prepareStatement(sql);
-            pst.setString(1,"%"+ search +"%");
+            pst.setString(1, "%" + search + "%");
 
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
@@ -158,5 +158,25 @@ public class TourDao {
         }
         return listSearch;
     }
+
+
+        public static void main(String[] args) {
+            // Gọi phương thức getListTourbySearch
+            String searchKeyword = "Sa pa";
+            List<Tour> searchResults = TourDao.getListTourbySearch(searchKeyword);
+
+            // Hiển thị kết quả
+            if (searchResults.isEmpty()) {
+                System.out.println("Không tìm thấy kết quả cho từ khóa: " + searchKeyword);
+            } else {
+                System.out.println("Kết quả tìm kiếm cho từ khóa: " + searchKeyword);
+                for (Tour tour : searchResults) {
+                    System.out.println("Tour ID: " + tour.getId());
+                    System.out.println("Tên tour: " + tour.getName());
+                    // Hiển thị thêm các thông tin khác nếu cần
+                    System.out.println("----------------------------------");
+                }
+            }
+        }
 
 }

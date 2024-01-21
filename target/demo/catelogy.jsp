@@ -496,7 +496,10 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
         inputRight.addEventListener("mouseup", function () {
             thumbRight.classList.remove("active");
         });
-    document.getElementById("filter-btn").addEventListener("click", function() {
+
+        var element = document.getElementsByClassName('element');
+        var clickCount = 0;
+        document.getElementById("filter-btn").addEventListener("click", function() {
         if (clickCount === 0) {
             element.classList.remove("col-lg-3");
             element.classList.add("col-lg-4");

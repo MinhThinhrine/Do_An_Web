@@ -238,7 +238,7 @@
                                            part = ctent[0];
                                            ctPart = ctent[1];
                                        }
-                                        if(!dk.startsWith("ngày " + i)) {
+                                        if(dk.startsWith("ngày " + i)) {
                                    %>
 
                                 <div class="day active">
