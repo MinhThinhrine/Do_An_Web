@@ -1,18 +1,18 @@
 <%@ page import="vn.edu.hcmuaf.bean.Tour" %>
-
 <%@ page import="java.util.List" %>
+<%@ page import="java.text.DecimalFormat" %>
 <!doctype html>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" isELIgnored="false" %>
+         pageEncoding="UTF-8" isELIgnored= "false"%>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@include file="common/tablib.jsp" %>
 
+<%@include file="common/tablib.jsp" %>
 
 <html class="no-js" lang="vi">
 
 <%--head--%>
 <%@include file="common/head.jsp" %>
+<%--<%     List<Tour> toursli = (List<Tour>) request.getAttribute("tours"); %>--%>
 <title>TourNest</title>
 <%--End head--%>
 <body>
@@ -92,10 +92,9 @@
 
                                                     <div class="travel-select-icon">
                                                         <select class="form-control" name="dxp">
-                                                            <option value="">Chọn địa điểm xuất phát</option>
+                                                            <option value="">Tất cả điểm xuất phát </option>
                                                             <!-- Nam -->
-                                                            <option name="dxp" value="Tp Hồ Chí Minh">Tp Hồ Chí Minh
-                                                            </option>
+                                                            <option name="dxp" value="Tp Hồ Chí Minh">Tp Hồ Chí Minh</option>
                                                             <option name="dxp" value="Hà Nội">Hà Nội</option>
                                                             <option disabled value="nam"><-- Nam --></option>
 
@@ -108,6 +107,11 @@
                                                             <option name="dxp" value="Cà Mau">Cà Mau</option>
                                                             <option name="dxp" value="Cần Thơ">Cần Thơ</option>
                                                             <!-- Các tỉnh khác ở Nam -->
+                                                            <option name="dxp" value="Bình Dương">Bình Dương</option>
+                                                            <option name="dxp" value="Tây Ninh">Tây Ninh</option>
+                                                            <option name="dxp" value="Vũng Tàu">Vũng Tàu</option>
+                                                            <option name="dxp" value="Tiền Giang">Tiền Giang</option>
+                                                            <option name="dxp" value="Đồng Tháp">Đồng Tháp</option>
 
                                                             <!-- Trung -->
                                                             <option disabled value="trung"><-- Trung --></option>
@@ -121,9 +125,15 @@
                                                             <option name="dxp" value="Quảng Trị">Quảng Trị</option>
                                                             <option name="dxp" value="Thanh Hóa">Thanh Hóa</option>
                                                             <!-- Các tỉnh khác ở Trung -->
+                                                            <option name="dxp" value="Phú Yên">Phú Yên</option>
+                                                            <option name="dxp" value="Lâm Đồng">Lâm Đồng</option>
+                                                            <option name="dxp" value="Hà Tĩnh">Hà Tĩnh</option>
+                                                            <option name="dxp" value="Quảng Bình">Quảng Bình</option>
+
 
                                                             <!-- Bắc -->
                                                             <option disabled value="bac"><-- Bắc --></option>
+                                                            <option name="dxp" value="Bắc Ninh">Bắc Ninh</option>
 
                                                             <option name="dxp" value="Bắc Giang">Bắc Giang</option>
                                                             <option name="dxp" value="Bắc Kạn">Bắc Kạn</option>
@@ -138,19 +148,29 @@
                                                             <option name="dxp" value="Thái Nguyên">Thái Nguyên</option>
                                                             <option name="dxp" value="Tuyên Quang">Tuyên Quang</option>
                                                             <option name="dxp" value="Yên Bái">Yên Bái</option>
+
+
+
                                                         </select><!-- /.select-->
 
                                                     </div><!-- /.travel-select-icon -->
                                                     <h2>Điểm đến</h2>
                                                     <div class="travel-select-icon">
                                                         <select class="form-control" name="diemden">
-                                                            <option value="">Chọn điểm đến</option>
+                                                            <option value="">Tất cả đểm đến</option>
                                                             <!-- Nam -->
                                                             <option name="diemden" value="Tp Hồ Chí Minh">Tp Hồ Chí
                                                                 Minh
                                                             </option>
                                                             <option name="diemden" value="Hà Nội">Hà Nội</option>
                                                             <option disabled value="nam"><-- Nam --></option>
+
+                                                            <option name="diemden" value="Bình Phước">Bình Phước</option>
+                                                            <option name="diemden" value="Bình Dương">Bình Dương</option>
+                                                            <option name="diemden" value="Đồng Nai">Đồng Nai</option>
+                                                            <option name="diemden" value="Tây Ninh">Tây Ninh</option>
+                                                            <option name="diemden" value="Tiền Giang">Tiền Giang</option>
+                                                            <option name="diemden" value="Đồng Tháp">Đồng Tháp</option>
 
                                                             <option name="diemden" value="An Giang">An Giang</option>
                                                             <option name="diemden" value="Bạc Liêu">Bạc Liêu</option>
@@ -167,11 +187,8 @@
                                                             <option name="diemden" value="Hậu Giang">Hậu Giang</option>
                                                             <option name="diemden" value="Kiên Giang">Kiên Giang
                                                             </option>
-                                                            <option name="diemden" value="Long An">Long An</option>
                                                             <option name="diemden" value="Sóc Trăng">Sóc Trăng</option>
                                                             <option name="diemden" value="Tây Ninh">Tây Ninh</option>
-                                                            <option name="diemden" value="Trà Vinh">Trà Vinh</option>
-                                                            <option name="diemden" value="Vĩnh Long">Vĩnh Long</option>
                                                             <option name="diemden" value="Vĩnh Phúc">Vĩnh Phúc</option>
                                                             <option name="diemden" value="Vũng Tàu">Vũng Tàu</option>
                                                             <!-- Trung -->
@@ -189,6 +206,13 @@
                                                             </option>
                                                             <option name="diemden" value="Quảng Trị">Quảng Trị</option>
                                                             <option name="diemden" value="Thanh Hóa">Thanh Hóa</option>
+                                                            <option name="diemden" value="Phú Yên">Phú Yên</option>
+                                                            <option name="diemden" value="Lâm Đồng">Lâm Đồng</option>
+                                                            <option name="diemden" value="Hà Tĩnh">Hà Tĩnh</option>
+                                                            <option name="diemden" value="Quảng Bình">Quảng Bình</option>
+                                                            <option name="diemden" value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                                            <option name="diemden" value="Gia Lai">Gia Lai</option>
+                                                            <option name="diemden" value="Bình Định">Bình Định</option>
                                                             <!-- Bắc -->
                                                             <option disabled value="bac"><-- Bắc --></option>
 
@@ -208,6 +232,9 @@
                                                             <option name="diemden" value="Tuyên Quang">Tuyên Quang
                                                             </option>
                                                             <option name="diemden" value="Yên Bái">Yên Bái</option>
+                                                            <option name="diemden" value="Hải Phòng">Hải Phòng</option>
+                                                            <option name="diemden" value="Hải Dương">Hải Dương</option>
+
                                                         </select><!-- /.select -->
 
                                                     </div><!-- /.travel-select-icon -->
@@ -463,12 +490,65 @@
             <p>
                 Các tour được chắt chiu chọn lọc kĩ lưỡng đem cho khách hàng sự hài lòng và tin tưởng.
             </p>
-        </div><!--/.gallery-header-->
+        </div>
+        <!--/.gallery-header-->
         <div class="packages-content" id="item-container">
-            <div class="row">
 
+<%--            <div class="row">--%>
+<%--                <% for (int i = 0; i < 11; i++) {--%>
+<%--                    Tour t = toursli.get(i);--%>
+<%--                %>--%>
+<%--                <div class="col-md-3 col-sm-6" id="<%=t.getId() %>">--%>
+<%--                    <div class="single-package-item">--%>
+<%--                        <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">--%>
+<%--                            <img style="cursor: pointer" class="packageImage" src="assets/images/item/<%=t.getImage()%>"--%>
+<%--                                 alt="package-place">--%>
+<%--                        </a>--%>
+<%--                        <div class="single-package-item-txt">--%>
+<%--                            <h3><%=t.getName()%><span class="pull-right" style="margin-top: 25px;">--%>
+<%--                                <%--%>
+<%--                                    int number = t.getPrice();--%>
+<%--                                    DecimalFormat decimalFormat = new DecimalFormat("#,###");--%>
+<%--                                    String formattedString = decimalFormat.format(number);--%>
+<%--                                %>--%>
+<%--                                <%=formattedString%>--%>
+<%--                            </span>--%>
+<%--                            </h3>--%>
+<%--                            <div class="packages-para">--%>
+<%--                                <p>--%>
+<%--											<span>--%>
+<%--												<i class="fa fa-clock-o"></i> <%=t.getDuration()%>--%>
+<%--											</span>--%>
+<%--                                </p>--%>
+<%--                                <p>--%>
+<%--											<span>--%>
+<%--												<i class="fa fa-location-arrow"></i> <%=t.getName()%>--%>
+<%--											</span>--%>
+<%--                                </p>--%>
+<%--                                <p>--%>
+<%--											<span>--%>
+<%--												<i class="fa fa-calendar"></i> <%=t.getStartTime()%>--%>
+<%--											</span>--%>
+<%--                                </p>--%>
+<%--                            </div><!--/.packages-para-->--%>
+<%--                            <div class="about-btn" style="width: 0px">--%>
+<%--                                <a href="ValiServlet?id=<%=t.getId()%>">--%>
+<%--                                    <button class="about-view packages-btn addvali">--%>
+<%--                                        <i class="fa fa-plus"></i>--%>
+<%--                                        <i class="fa fa-suitcase-rolling" style="padding-left: 6px;"></i>--%>
+<%--                                    </button>--%>
+<%--                                </a>--%>
+<%--                            </div><!--/.about-btn-->--%>
+<%--                        </div><!--/.single-package-item-txt-->--%>
 
-            </div><!--/.row-->
+<%--                    </div><!--/.single-package-item-->--%>
+
+<%--                </div><!--/.col-->--%>
+
+<%--                <% } %>--%>
+
+<%--            </div><!--/.row-->--%>
+
             <div class="pagination">
                 <nav class="pagination-container">
                     <div class="pagination">
@@ -505,360 +585,17 @@
 
 
 <!--blog start-->
-<section id="blog" class="blog">
-    <div class="container">
-        <div class="blog-details">
-            <div class="gallary-header text-center">
-                <h2>
-                    Tin tức gần đây
-                </h2>
-                <p>
-                    Các dữ liệu mới nhất được thu thập về tình hình du lịch.
-                </p>
-            </div>
-            <!--/.gallery-header-->
-            <div class="blog-content">
-                <div class="row">
 
-                    <div class="col-sm-4 col-md-4">
-                        <div class="thumbnail">
-                            <h2>tin mới <span> tháng 11 - 2023</span></h2>
-                            <div class="thumbnail-img">
-                                <img src="assets/images/blog/b1.jpg" alt="blog-img" style="height:220px">
-                                <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
+<%--<%@include file="common/new.jsp" %>--%>
 
-                            </div><!--/.thumbnail-img-->
-
-                            <div class="caption">
-                                <div class="blog-txt">
-                                    <h3>
-                                        <a href="https://www.gso.gov.vn/du-lieu-va-so-lieu-thong-ke/2023/08/doanh-thu-dich-vu-tang-manh-trong-mua-cao-diem-du-lich-he-2023/"
-                                           style="color: #00d8fe!important;" target="_blank">
-                                            Lượng khách du lịch trong nước tăng mạnh.
-                                        </a>
-                                    </h3>
-                                    <p>
-                                        Theo số liệu thống kê của Tổng cục Du lịch, lượng khách du lịch nội địa trong
-                                        tháng 11 năm 2023 đạt 7,5 triệu lượt, tăng 20% so với cùng kỳ năm trước.
-                                        <br>
-                                        Trong đó, khách nội địa đến các điểm du lịch biển, đảo tăng mạnh, đặc biệt là
-                                        Nha Trang, Phú Quốc, Đà Nẵng,...
-                                    </p>
-                                    <a href="#">Read More</a>
-                                </div><!--/.blog-txt-->
-                            </div><!--/.caption-->
-                        </div><!--/.thumbnail-->
-
-                    </div><!--/.col-->
-
-                    <div class="col-sm-4 col-md-4">
-                        <div class="thumbnail">
-                            <h2>tin mới <span> tháng 11 - 2023</span></h2>
-                            <div class="thumbnail-img">
-                                <img src="assets/images/item/70.jpg" alt="blog-img" style="height:220px; width: 110%;">
-                                <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-
-                            </div><!--/.thumbnail-img-->
-                            <div class="caption">
-                                <div class="blog-txt">
-                                    <h3>
-                                        <a href="https://vinpearl.com/vi/tron-bo-kinh-nghiem-du-lich-mien-tay-nam-bo-day-du-nhat"
-                                           style="color: #00d8fe!important;" target="_blank">
-                                            Các tour du lịch miền Tây Nam Bộ được nhiều du khách lựa chọn.
-                                        </a>
-                                    </h3>
-                                    <p>
-                                        Là một trong những điểm đến du lịch nổi tiếng của Việt Nam,
-                                        với những cảnh đẹp sông nước, những món ăn ngon đặc sản và con người thân thiện.
-                                        <br>
-                                        Du lịch miền Tây được nhiều du khách lựa chọn, đặc biệt là các tour khám phá
-                                        rừng tràm Trà Sư, Chợ nổi Cái Răng,...
-                                    </p>
-                                    <a href="#">Read More</a>
-                                </div><!--/.blog-txt-->
-                            </div><!--/.caption-->
-                        </div><!--/.thumbnail-->
-
-                    </div><!--/.col-->
-
-                    <div class="col-sm-4 col-md-4">
-                        <div class="thumbnail">
-                            <h2>tin mới <span> tháng 11 - 2023</span></h2>
-                            <div class="thumbnail-img">
-                                <img src="assets/images/item/14.jpg" alt="blog-img" style="height:220px; width: 110%;">
-                                <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-
-                            </div><!--/.thumbnail-img-->
-                            <div class="caption">
-                                <div class="blog-txt">
-                                    <h3>
-                                        <a href="https://vinpearl.com/vi/du-lich-bien-diem-danh-10-bai-bien-dep-bac-nhat-viet-nam"
-                                           style="color: #00d8fe!important;" target="_blank">
-                                            Các tour du lịch nghỉ dưỡng biển được ưu tiên.
-                                        </a></h3>
-                                    <p>
-                                        Với thời tiết mát mẻ, dễ chịu, các tour du lịch nghỉ dưỡng biển được nhiều du
-                                        khách ưu tiên lựa chọn trong tháng 11 năm 2023.
-                                        <br>
-                                        Các điểm du lịch biển nổi tiếng như Nha Trang, Vũng Tàu, Phú Quốc, Đà Nẵng,...
-                                        <br>đều có lượng khách tăng cao trong tháng này.
-                                    </p>
-                                    <a href="#">Read More</a>
-                                </div><!--/.blog-txt-->
-                            </div><!--/.caption-->
-                        </div><!--/.thumbnail-->
-
-                    </div><!--/.col-->
-
-                </div><!--/.row-->
-            </div><!--/.blog-content-->
-        </div><!--/.blog-details-->
-    </div><!--/.container-->
-
-</section><!--/.blog-->
 <!--blog end-->
 
 
-<!-- testemonial Start -->
-<section id="feedback" class="testemonial">
-    <div class="container">
+<!-- feedback -->
 
-        <div class="gallary-header text-center">
-            <h2>Đánh giá khách hàng</h2>
-            <p>
-                Đánh giá của khách hàng là tiêu chí quan trọng nhất để cải thiện dịch vụ.
-            </p>
+<%--<%@include file="common/feedback.jsp" %>--%>
 
-        </div><!--/.gallery-header-->
-
-        <div class="owl-carousel owl-theme" id="testemonial-carousel">
-
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="assets/images/client/testimonial1.jpg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-                        <p>
-                            Tôi rất hài lòng với chuyến tour này và sẽ khuyên bạn bè và người thân tham gia.
-                            Tôi muốn cảm ơn đội ngũ tổ chức tour đã tạo ra một kỷ niệm đáng nhớ.
-                        </p>
-                        <h3>
-                            <a href="#" style="color: #00d8fe!important;">
-                                Chị Kiều
-                            </a>
-                        </h3>
-                        <h4>Mỹ Tho, Tiền Giang</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
-
-            </div><!--/.item-->
-
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="assets/images/client/testimonial2.jpg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-                        <p>
-                            Tôi không thể hài lòng hơn với chuyến tour này. Từ đầu đến cuối, mọi thứ đều vượt quá mong
-                            đợi của tôi.
-                            Tôi đã có một trải nghiệm tuyệt vời và không thể quên.
-                        </p>
-                        <h3>
-                            <a href="#" style="color: #00d8fe!important;">
-                                Nguyễn Thanh Hằng
-                            </a>
-                        </h3>
-                        <h4>Hà Nội, Việt Nam</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
-
-            </div><!--/.item-->
-
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="assets/images/client/7.jpg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-                        <p>
-                            Hướng dẫn viên của chúng tôi là người tuyệt vời. Anh ấy không chỉ am hiểu về địa điểm mà còn
-                            rất nhiệt tình và cởi mở.
-                            Tôi rất thích chuyến đi.
-                        </p>
-                        <h3>
-                            <a href="#" style="color: #00d8fe!important;">
-                                Trần Minh Tuấn
-                            </a>
-                        </h3>
-                        <h4>Đà Lạt, Việt Nam</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
-
-            </div><!--/.item-->
-
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="assets/images/client/8.png" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-                        <p>
-                            Các địa điểm du lịch mà chúng tôi đã thăm đều rất độc đáo và đẹp mắt.
-                            Tôi đã có cơ hội khám phá những di sản văn hóa và thiên nhiên tuyệt vời.
-                        </p>
-                        <h3>
-                            <a href="#" style="color: #00d8fe!important;">
-                                Lê Thị Mai Anh
-                            </a>
-                        </h3>
-                        <h4>Phú Quốc, Việt Nam</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
-
-            </div><!--/.item-->
-
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="assets/images/client/5.png" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-                        <p>
-                            Chất lượng dịch vụ trong chuyến tour này rất ấn tượng. Từ các nhà hàng đến chỗ ở và phương
-                            tiện di chuyển,
-                            mọi thứ đều rất chuyên nghiệp và đáng tin cậy.
-                        </p>
-                        <h3>
-                            <a href="#" style="color: #00d8fe!important;">
-                                Hoàng Văn Trường
-                            </a>
-                        </h3>
-                        <h4>Nha Trang, Việt Nam</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
-
-            </div><!--/.item-->
-
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="assets/images/client/3.png" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-                        <p>
-                            Mặc dù chuyến tour tổ chức tốt. Tuy nhiên,
-                            việc cung cấp thêm thông tin chi tiết về các hoạt động tùy chọn sẽ giúp khách hàng lựa chọn
-                            tốt hơn.
-                        </p>
-                        <h3>
-                            <a href="#" style="color: #00d8fe!important;">
-                                Ngô Thị Hương Lan
-                            </a>
-                        </h3>
-                        <h4>Huế, Việt Nam</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
-
-            </div><!--/.item-->
-
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="assets/images/client/testimonial1.jpg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-                        <p>
-                            Tôi rất hài lòng với cách mà công ty tổ chức tour du lịch này đã liên lạc và giao tiếp với
-                            khách hàng.
-                            Điều này tạo ra sự tin tưởng cho chúng tôi trong suốt chuyến đi.
-                        </p>
-                        <h3>
-                            <a href="#" style="color: #00d8fe!important;">
-                                Trần Đức Minh
-                            </a>
-                        </h3>
-                        <h4>Sapa, Việt Nam</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
-
-            </div><!--/.item-->
-
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="assets/images/client/3.png" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-                        <p>
-                            Chuyến tour này mang lại cho tôi một giá trị tuyệt vời. Với mức giá mà tôi trả, tôi thực sự
-                            cảm thấy hài lòng về những gì chúng tôi nhận được.
-                        </p>
-                        <h3>
-                            <a href="#" style="color: #00d8fe!important;">
-                                Phạm Thị Linh
-                            </a>
-                        </h3>
-                        <h4> Hội An, Việt Nam</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
-
-            </div><!--/.item-->
-
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="assets/images/client/4.png" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-                        <p>
-                            Mọi thứ đã được sắp xếp một cách rõ ràng và thông minh.
-                            Tôi không phải lo lắng về bất kỳ chi tiết nào và có thể tận hưởng một chuyến đi trọn vẹn.
-                        </p>
-                        <h3>
-                            <a href="#" style="color: #00d8fe!important;">
-                                Võ Minh Hải
-                            </a>
-                        </h3>
-                        <h4> Đà Nẵng, Việt Nam</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
-
-            </div><!--/.item-->
-
-        </div><!--/.testemonial-carousel-->
-    </div><!--/.container-->
-
-</section><!--/.testimonial-->
-<!-- testemonial End -->
+<!-- feedback -->
 
 <!--service start-->
 <section id="service" class="service">

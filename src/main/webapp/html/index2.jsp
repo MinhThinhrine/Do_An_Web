@@ -7609,7 +7609,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="../assets/images/client/testimonial1.jpg" alt="img"/>
+                        <img src="../assets/images/client/1.jpg" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -7633,7 +7633,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="../assets/images/client/testimonial2.jpg" alt="img"/>
+                        <img src="../assets/images/client/2.jpg" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -7658,7 +7658,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="../assets/images/client/7.jpg" alt="img"/>
+                        <img src="../assets/images/client/3.jpg" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -7683,7 +7683,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="../assets/images/client/8.png" alt="img"/>
+                        <img src="../assets/images/client/4.png" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -7757,7 +7757,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="../assets/images/client/testimonial1.jpg" alt="img"/>
+                        <img src="../assets/images/client/1.jpg" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
 								<span class="icon section-icon">

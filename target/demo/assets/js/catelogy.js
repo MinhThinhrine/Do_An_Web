@@ -24,7 +24,6 @@ function changePage(pageNumber) {
             }
         }
     }
-    window.location.href="CategorieServlet";
 }
 function previousPage() {
     if (currentPage > 1) {
@@ -96,8 +95,8 @@ function nextPage() {
     $(function () {
         $('[data-tooltip="tooltip"]').tooltip()
     })
-document.addEventListener("DOMContentLoaded", function () {
 
+document.addEventListener("DOMContentLoaded", function () {
 // For Range Sliders
     var inputLeft = document.getElementById("input-left");
     var inputRight = document.getElementById("input-right");
@@ -170,18 +169,5 @@ document.addEventListener("DOMContentLoaded", function () {
         thumbRight.classList.remove("active");
     });
 });
-var element = document.querySelector(".element");
-var clickCount = 0;
 
-document.getElementById("filter-btn").addEventListener("click", function() {
-    if (clickCount === 0) {
-        element.classList.remove("col-lg-3");
-        element.classList.add("col-lg-4");
-        clickCount = 1;
-    } else {
-        element.classList.remove("col-lg-4");
-        element.classList.add("col-lg-3");
-        clickCount = 0;
-    }
-});
 
