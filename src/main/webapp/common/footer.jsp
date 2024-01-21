@@ -85,7 +85,8 @@
                     <li><a href="https://twitter.com/tournest_io" target="_blank" class="foot-icon-bg-2"><i
                             class="fa-brands fa-twitter fa-xl"></i></a>
                     </li>
-                    <li><a href="https://www.instagram.com/tournest.io/" target="_blank" class="foot-icon-bg-3"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    <li><a href="https://www.instagram.com/tournest.io/" target="_blank" class="foot-icon-bg-3"><i
+                            class="fa-brands fa-instagram fa-xl"></i></a>
                     </li>
                 </ul>
                 <p>&copy; 2023-2024 <a href="https://github.com/MinhThinhrine/Do_An_Web" target="_blank">Nhóm 18</a>. All Right Reserved.</p>

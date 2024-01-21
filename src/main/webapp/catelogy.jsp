@@ -377,7 +377,93 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
 </div>
 
 <!-- footer-copyright start -->
-<%@include file="common/footer.jsp"%><!-- /.footer-copyright-->
+<footer class="footer-copyright">
+    <div class="container">
+        <div class="footer-content">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                tour<span>Nest</span>
+                            </a>
+                            <p>
+                                best travel tour guide
+                            </p>
+                        </div>
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+                        <h2>Đối tác hợp tác</h2>
+                        <div class="single-footer-txt">
+                            <p><a href="https://www.traveloka.com/vi-vn/" target=”_blank”>traveloka</a></p>
+                            <p><a href="https://www.ivivu.com/" target=”_blank”>ivivu</a></p>
+                            <p><a href="https://www.saigontourist.net/" target=”_blank”>saigon tourist</a></p>
+                            <p><a href="https://travel.com.vn/" target=”_blank”>travel</a></p>
+                            <p><a href="https://www.vietnambooking.com/" target=”_blank”>vietnam booking</a></p>
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+
+                </div><!--/.col-->
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item">
+                        <h2>Điểm du lịch nổi tiếng</h2>
+                        <div class="single-footer-txt">
+                            <p><a href="#">hà nội</a></p>
+                            <p><a href="#">tp hồ chí minh</a></p>
+                            <p><a href="#">vũng tàu</a></p>
+                            <p><a href="#">đà lạt</a></p>
+                            <p><a href="#">nha trang</a></p>
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+                <div class="col-sm-3">
+                    <div class="single-footer-item text-center">
+                        <h2 class="text-left">contacts</h2>
+                        <div class="single-footer-txt text-left">
+                            <p><i class="fa-solid fa-phone"></i> (+84) 249 999 16</p>
+                            <p class="foot-email" style="text-transform:none;">
+                                <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i class="fa-solid fa-map-location-dot"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a></p>
+                            <p>Võ Minh Thịnh</p>
+                            <p class="foot-email" style="text-transform:none;">
+                                <a href="mailto:21130549@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130549@st.hcmuaf.edu.vn</a></p>
+                            <p>Mai Xuân Thức</p>
+                            <p class="foot-email" style="text-transform:none;">
+                                <a href="mailto:21130558@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130558@st.hcmuaf.edu.vn</a></p>
+                            <p>Trần Quang Vũ</p>
+                            <p class="foot-email" style="text-transform:none;">
+                                <a href="mailto:21130615@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130615@st.hcmuaf.edu.vn</a></p>
+                        </div><!--/.single-footer-txt-->
+                    </div><!--/.single-footer-item-->
+                </div><!--/.col-->
+
+            </div><!--/.row-->
+
+            <hr>
+            <div class="foot-icons ">
+                <ul class="footer-social-links list-inline">
+                    <li><a href="https://www.facebook.com/TourNest.org" target="_blank" class="foot-icon-bg-1"><i
+                            class="fa fa-facebook fa-xl"></i></a></li>
+                    <li><a href="https://twitter.com/tournest_io" target="_blank" class="foot-icon-bg-2"><i
+                            class="fa fa-twitter fa-xl"></i></a></li>
+                    <li><a href="https://www.instagram.com/tournest.io/" target="_blank" class="foot-icon-bg-3"><i
+                            class="fa fa-instagram fa-xl"></i></a></li>
+                </ul>
+                <p>&copy; 2023-2024 <a href="https://github.com/MinhThinhrine/Do_An_Web">Nhóm 18</a>. All Right Reserved.</p>
+
+            </div><!--/.foot-icons-->
+            <div id="scroll-Top">
+                <i class="fa fa-angle-double-up return-to-top" id="scroll-top top" data-toggle="tooltip"
+                   data-placement="top"
+                   title="" data-original-title="Back to Top" aria-hidden="true"></i>
+            </div><!--/.scroll-Top-->
+        </div><!-- /.container-->
+    </div>
+</footer><!-- /.footer-copyright-->
 <!-- footer-copyright end -->
 
 <script src="assets/js/modify.js"></script>
@@ -387,44 +473,97 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
     $('#inner-box').collapse(false);
     $('#inner-box2').collapse(false);
     $('#filterbar').collapse(false);
-    var currentPage = parseInt(activePage.textContent);
-    changePage(currentPage);
+    // Lấy danh sách các item trong tourss
+    var items = document.getElementsByClassName('element');
 
-    function changePage(pageNumber) {
-        currentPage = parseInt(pageNumber);
-        var paginationLinks = document.getElementsByClassName('pagination-inner')[0].getElementsByTagName('a');
-        for (var i = 0; i < paginationLinks.length; i++) {
-            paginationLinks[i].classList.remove('pagination-active');
+    // Số lượng item trên mỗi trang
+    var itemsPerPage = 12;
+
+    // Tổng số trang
+    var totalPages = Math.ceil(items.length / itemsPerPage);
+
+    // Trang hiện tại
+    var currentPage = 1;
+
+    elements =items;
+    var clickCount = 0;
+
+    document.getElementById("filter-btn").addEventListener("click", function() {
+        for (var i = 0; i < elements.length; i++) {
+            var element = elements[i];
+            if (clickCount === 0) {
+                element.classList.remove("col-lg-4");
+                element.classList.add("col-lg-3");
+                itemsPerPage = 20;
+                showItems();
+            } else {
+                element.classList.remove("col-lg-3");
+                element.classList.add("col-lg-4");
+                itemsPerPage = 12;
+                showItems();
+            }
         }
-        paginationLinks[pageNumber - 1].classList.add('pagination-active');
 
-        var startId = (pageNumber - 1) * 9 + 1;
-        var endId = pageNumber * 9;
+        // Đảo giá trị của clickCount
+        clickCount = 1 - clickCount;
+    });
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 
-        for (var j = 1; j <= 210; j++) {
-            var itemId = document.getElementById(String(j));
-            if (itemId) {
-                if (j >= startId && j <= endId) {
-                    itemId.style.display = 'block';
-                } else {
-                    itemId.style.display = 'none';
-                }
+    // Hiển thị các item ứng với trang hiện tại
+    function showItems() {
+        // Ẩn tất cả các item
+        for (var i = 0; i < items.length; i++) {
+            items[i].style.display = 'none';
+        }
+
+        // Tính chỉ số bắt đầu và kết thúc của item trên trang hiện tại
+        var startIndex = (currentPage - 1) * itemsPerPage;
+        var endIndex = startIndex + itemsPerPage;
+
+        // Hiển thị các item ứng với trang hiện tại
+        for (var j = startIndex; j < endIndex; j++) {
+            if (items[j]) {
+                items[j].style.display = 'block';
             }
         }
     }
-    function previousPage() {
-        if (currentPage > 1) {
-            currentPage--;
-            changePage(currentPage);
+
+    // Chuyển đến trang tiếp theo
+    function nextPage() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            showItems();
+            scrollToTop();
         }
     }
 
-    function nextPage() {
-        if (currentPage<14){
-            currentPage++;
-            changePage(currentPage);
+    // Chuyển đến trang trước đó
+    function previousPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            showItems();
+            scrollToTop();
         }
     }
+
+    // Chuyển đến trang cụ thể
+    function changePage(page) {
+        if (page >= 1 && page <= totalPages) {
+            currentPage = page;
+            showItems();
+            scrollToTop();
+        }
+    }
+
+    // Hiển thị trang đầu tiên khi tải trang
+    showItems();
+
+
 // For Range Sliders
         var inputLeft = document.getElementById("input-left");
         var inputRight = document.getElementById("input-right");
@@ -496,20 +635,6 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
         inputRight.addEventListener("mouseup", function () {
             thumbRight.classList.remove("active");
         });
-
-        var element = document.getElementsByClassName('element');
-        var clickCount = 0;
-        document.getElementById("filter-btn").addEventListener("click", function() {
-        if (clickCount === 0) {
-            element.classList.remove("col-lg-3");
-            element.classList.add("col-lg-4");
-            clickCount = 1;
-        } else {
-            element.classList.remove("col-lg-4");
-            element.classList.add("col-lg-3");
-            clickCount = 0;
-        }
-    });
 </script>
 
 </body>
