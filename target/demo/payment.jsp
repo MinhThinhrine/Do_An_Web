@@ -1,4 +1,5 @@
-<%--
+<%@ page import="vn.edu.hcmuaf.bean.User" %>
+<%@ page import="java.util.Objects" %><%--
   Created by IntelliJ IDEA.
   User: HP
   Date: 12/4/2023
@@ -68,22 +69,34 @@
                     <li><a href="index.html#blog">Tin Tức</a></li>
                     <li><a href="index.html#feedback">Đánh Giá</a></li>
                     <li><a href="index.html#service">Liên Hệ</a></li>
-                    <li class="smooth-menu"><a href="#"><i class="fa fa-suitcase-rolling fa-2x"
-                                                           style="margin-top: -10px;color: #00d8fe"></i></a>
+                    <%
+                        User user = (User) session.getAttribute("user");
+                        String url = request.getContextPath().trim();
+                    %>
+                    <% if (Objects.nonNull(user)) { %>
+                    <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
+                            class="fa fa-suitcase-rolling fa-2x"
+                            style="margin-top: -10px;color: #00d8fe"></i></a>
                     </li>
-                    <li>
-                        <button class="book-btn" id="buttonTour" style="margin-top: -2px;"><a
-                                href="login.html">Đăng Nhập</a>
-                        </button>
-                    </li><!--/.project-btn-->
-                    <li id="icon-user" style="display: block;padding-top: 24px">
-                        <i class="fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
-                        <ul id="service_account" style="margin-top: -5px">
-                            <li><a id="myInfor" href="infor.html">Thông tin tài khoản</a></li>
-                            <li><a id="myTour" href="shopcart.html">VALI</a></li>
-                            <li><a id="log_out" href="register.html">Đăng xuất</a></li>
+                    <li id="icon-user" class="smooth-menu">
+                        <i class="fa fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
+                        <span class="username"><%= user.getUserName() %></span>
+                        <ul id="service_account">
+                            <li style="text-align: left"><a id="myInfor" href="infor.jsp">Tài Khoản</a></li>
+                            <li style="text-align: left"><a id="bill" href="bill.jsp">Hóa Đơn </a></li>
+                            <li style="text-align: left">
+                                <form action="login" method="get">
+                                    <button type="submit" name="action" id="logout" value="logout">Đăng Xuất</button>
+                                </form></li>
                         </ul>
                     </li>
+                    <% } else { %>
+                    <li>
+                        <button class="book-btn" id="buttonTour" style="margin-top: -2px;">
+                            <a href="login.jsp">Đăng Nhập</a>
+                        </button>
+                    </li>
+                    <% } %>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.main-menu-->

@@ -1,41 +1,12 @@
-<!doctype html>
-<html class="no-js" lang="vi">
-
+<html lang="en">
 <head>
-    <!-- META DATA -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!--font-family-->
-    <link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet"/>
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>
-
-    <!-- TITLE OF SITE -->
-    <title>Phiếu thanh toán</title>
-
-    <!-- favicon img -->
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css?display=swap" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Thông tin và dịch vụ</title>
     <link rel="shortcut icon" type="image/icon" href="../assets/logo/favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!--font-awesome.min.css-->
-<!--    <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>-->
-
-    <!--animate.css-->
-    <link rel="stylesheet" href="../assets/css/animate.css"/>
-
-    <!--hover.css-->
-    <link rel="stylesheet" href="../assets/css/hover-min.css">
-
-<!--    &lt;!&ndash;datepicker.css&ndash;&gt;-->
-<!--    <link rel="stylesheet" href="assets/css/datepicker.css">-->
-
-    <!--owl.carousel.css-->
-    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="../assets/css/payment.css">
 
     <!-- range css-->
     <link rel="stylesheet" href="../assets/css/jquery-ui.min.css"/>
@@ -51,788 +22,604 @@
 
     <!--responsive.css-->
     <link rel="stylesheet" href="../assets/css/responsive.css"/>
-<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">-->
-    <link rel="stylesheet" href="../assets/css/bill.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <link rel="stylesheet" href="../assets/css/service.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* CSS */
+        .customer-notice-right .btn-primary {
+            background-color: #00d8fe;
+            color: #fff;
+            margin-left: 30px;
+            padding: 10px 120px;
+            border: none;
+        }
+        .customer-notice-right .btn-primary:hover{
+            background: linear-gradient(90deg, #0077fe 0, #f600a8 100%);
+        }
+        .customer-notice-right .dropdown-toggle::after {
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: .255em;
+            vertical-align: .255em;
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+        }
+        .customer-notice-right .dropdown-menu {
+            background-color: #f8f9fa;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            /*padding: 10px;*/
+            width: 300px;
+        }
+        .customer-notice-right .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 4px 10px;
+            cursor: pointer;
+        }
+        .customer-notice-right .dropdown-item input{
+            font-size: 30px;
+            height: 20px;
+            width: 20px;
+        }
+        .customer-notice-right .dropdown-item p{
+            padding-left: 10px;
+            font-size: 15px;
+        }
+        .customer-notice-right .dropdown-item:hover {
+            background-color: #e9ecef;
+        }
+    </style>
+    <script>
+        var dropdownButton = document.getElementById("dropdownButton");
+    var dropdownMenu = document.querySelector(".dropdown-menu");
+    var checkboxes = dropdownMenu.getElementsByTagName("input");
 
-<!--    &lt;!&ndash;[if lt IE 9]>-->
-<!--    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
-<!--    <script src="https://oss.maxcdn.com/respo   nd/1.4.2/respond.min.js"></script>-->
-<!--    <![endif]&ndash;&gt;-->
+    dropdownButton.addEventListener("click", function() {
+        dropdownMenu.classList.toggle("show");
+    });
 
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].addEventListener("click", function(event) {
+            event.stopPropagation();
+        });
+    }</script>
 </head>
+
 <body>
+<div id="root">
+    <div class="row head" style="background-color: #4d4e53">
+        <div class="col-sm-1"></div>
 
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3D5RK"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-
-<script src="/Assets/HotelFlight/libs/query/jquery-3.6.0.min.js"></script>
-<script src="/Assets/HotelFlight/libs/query/jquery-ui.js"></script>
-<script src="/Assets/HotelFlight/libs/daterangepickerBootstrap/daterangepicker.js"></script>
-<script src="../assets/js/service.js" ></script>
-<div id="fb-root">
-</div>
-<header class="header">
-
-</header>
-
-<main role="main">
-    <div class="main-loader d-none">
-        <div class="loader loader3">
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <div class="col-sm-2">
+            <div class="logo">
+                <a href="index.jsp">
+                    tour<span>Nest</span>
+                </a>
+            </div><!-- /.logo-->
+        </div><!-- /.col-->
+        <div class="col-sm-9">
+            <div class="main-menu">
+                <ul class="nav" style="text-align: right;color: black!important;">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="index.html#spo">Ưu Đãi</a></li>
+                    <li><a href="index.html#gallery">Tour Hot</a></li>
+                    <li><a href="CategorieServlet">Sản Phẩm</a></li>
+                    <li><a href="index.html#blog">Tin Tức</a></li>
+                    <li><a href="index.html#feedback">Đánh Giá</a></li>
+                    <li><a href="index.html#service">Liên Hệ</a></li>
+                    <%
+                    User user = (User) session.getAttribute("user");
+                    String url = request.getContextPath().trim();
+                    %>
+                    <% if (Objects.nonNull(user)) { %>
+                    <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
+                            class="fa fa-suitcase-rolling fa-2x"
+                            style="margin-top: -10px;color: #00d8fe"></i></a>
+                    </li>
+                    <li id="icon-user" class="smooth-menu">
+                        <i class="fa fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
+                        <span class="username"><%= user.getUserName() %></span>
+                        <ul id="service_account">
+                            <li style="text-align: left"><a id="myInfor" href="infor.jsp">Tài Khoản</a></li>
+                            <li style="text-align: left"><a id="bill" href="bill.jsp">Hóa Đơn </a></li>
+                            <li style="text-align: left">
+                                <form action="login" method="get">
+                                    <button type="submit" name="action" id="logout" value="logout">Đăng Xuất</button>
+                                </form></li>
+                        </ul>
+                    </li>
+                    <% } else { %>
+                    <li>
+                        <button class="book-btn" id="buttonTour" style="margin-top: -2px;">
+                            <a href="login.jsp">Đăng Nhập</a>
+                        </button>
+                    </li>
+                    <% } %>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.main-menu-->
+    </div><!-- /.col-->
 
     <div class="container">
         <div class="row">
-            <ul class="breadcrumbs__wrapper d-flex align-items-center" itemscope itemtype="http://schema.org/BreadcrumbList">
-                <a href="index.html">Quay về Trang Chủ</a>
-            </ul>
         </div>
+
     </div>
-    <main class="find-booking" role="main">
-        <section>
+    <div class="booking-tour">
+        <section class="checkout-head d-block d-lg-block">
             <div class="container">
-                <div class="row py-4 flex-md-row flex-column-reverse">
-                    <div class="col-md-8 col-12 left">
-                        <section>
-                            <div class="contact-info p-4 mb-4">
-                                <div class="heading">
-                                    <h5 class="fw-bold tieude">SỐ LƯỢNG HÀNH KHÁCH</h5>
+                <div class="row">
+                    <ul class="head col-12">
+                        <li class="checked"><a href="" style="color: #00d8fe!important;">1. Dịch vụ và thông tin</a></li>
+                        <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
+                        <li class="checked"><a href="" style="color: #bbbbbb!important;">3. Hình thức thanh toán</a>
+                        <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
+                        <li class="checked"><a href="" style="color: #bbbbbb!important;">3. Hóa đơn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="checkout-main order-tour animate__fadeIn animate__animated">
+            <div class="container">
+                <div class="row">
+                    <h2 class="d-none d-lg-block">Tổng quan về chuyến đi</h2>
+                    <div class="col-md-8 col-12 left" style="border: 1px solid #d5d5d5;border-radius: 5px">
+                        <h3 style="padding: 20px">Dịch vụ</h3>
+                        <div class="customer-notice">
+                            <div class="customer-notice-left">
+                                <h4>Chọn các dịch vụ đi kèm ( nếu muốn )</h4>
+                                * Có chi phí phát sinh
+                            </div>
+                            <div class="customer-notice-right">
+                                <button type="button" class="btn btn-primary dropdown-toggle"
+                                        id="dropdownButton" data-bs-toggle="dropdown" aria-expanded="false">Dịch vụ </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownButton">
+                                    <li><label class="dropdown-item"><input type="checkbox" value="muc1"><p>Mục 1</p></label></li>
+                                    <li><label class="dropdown-item"><input type="checkbox" value="muc2"><p>Mục 2</p></label></li>
+                                    <li><label class="dropdown-item"><input type="checkbox" value="muc3"><p>Mục 3</p></label></li>
+                                    <!-- Thêm các mục khác -->
+                                </ul>
+                            </div>
+                        </div>
+                        <h3 style="padding: 0px 20px 20px">Thông tin liên lạc</h3>
+                        <div class="customer-contact mb-3">
+                            <form class="customer-contact-inner" action="#" method="get" id="form">
+                                <div class="name">
+                                    <label>Họ và Tên <b>*</b></label><input autocomplete="off" type="text" class="form-control" name="fullName" value="" />
                                 </div>
-                                <div>
-
-                                    <label for="adults">Người lớn:</label>
-
-
-                                    <input type="number" id="adults" value="1" min="0">
-
-
-
-                                    <br>
-
-                                    <label for="children">Trẻ em:</label>
-                                    <div style="display: flex"><input type="number" id="children" value="" min="0">
-                                    <p style="margin-top: 10px;margin-left: 150px" >(*) áp dụng cho trẻ từ 6 đến 11 tuổi</p>
-                                    </div>
-
-
-                                    <br>
-
-                                    <label for="infants">Em bé:</label>
-                                    <div style="display: flex">
-                                        <input type="number" id="infants" value="" min="0">
-                                        <p style="margin-top: 10px;margin-left: 150px">(*) áp dụng cho trẻ từ 2 đến 5 tuổi</p>
-
-                                    </div>
-
+                                <div class="mail">
+                                    <label>Email <b>*</b></label><input type="email" class="form-control" name="email" value="" />
+                                </div>
+                                <div class="phone">
+                                    <label>Số điện thoại <b>*</b></label><input type="number" class="form-control" name="phone" value="" />
+                                </div>
+                                <div class="addess"><label>Địa chỉ</label><input type="text" class="form-control" name="address" value="" /></div>
+                            </form>
+                        </div>
+                        <div class="customer">
+                            <h3 style="padding: 20px">Hành khách</h3>
+                            <div class="change">
+                                <div class="change-title">
+                                    <h4>Người lớn</h4>
+                                    <p>Từ 12 tuổi</p>
+                                </div>
+                                <div class="change-number">
+                                    <span class="minus btn-click"><i class="fal fa-minus-circle" id="adultMinus"></i></span><span class="number" id="adult">1</span>
+                                    <span class="plus btn-click"><i class="fal fa-plus-circle" id="adultPlus"></i></span>
                                 </div>
                             </div>
-                            <div class="booking-detail p-4 mb-4">
-                                <div class="heading">
-                                    <h5 class="fw-bold tieude">CHI TIẾT BOOKING</h5>
+                            <div class="change">
+                                <div class="change-title">
+                                    <h4>Trẻ em</h4>
+                                    <p>Từ 5 - 11 tuổi</p>
                                 </div>
-                                <div class="row item">
-                                    <div class="col-md-3 col-12 label">Số booking</div>
-                                    <div class="col-md-9 col-12 text">
-                                        <span class="text-primary fw-bold">231112815769</span> (Quý khách vui lòng nhớ số booking để thuận tiện cho các giao dịch sau này)
+                                <div class="change-number">
+                                    <span class="minus btn-click"><i class="fal fa-minus-circle" id="childrenMinus"></i></span><span class="number" id="children">0</span>
+                                    <span class="plus btn-click"><i class="fal fa-plus-circle" id="childrenPlus"></i></span>
+                                </div>
+                            </div>
+                            <div class="change">
+                                <div class="change-title">
+                                    <h4>Trẻ nhỏ</h4>
+                                    <p>Từ 2 - 4 tuổi</p>
+                                </div>
+                                <div class="change-number">
+                                    <span class="minus btn-click"><i class="fal fa-minus-circle" id="smallchildrenMinus"></i></span><span class="number" id="smallchildren">0</span>
+                                    <span class="plus btn-click"><i class="fal fa-plus-circle" id="smallchildrenPlus"></i></span>
+                                </div>
+                            </div>
+                            <div class="change">
+                                <div class="change-title">
+                                    <h4>Em bé</h4>
+                                    <p>Từ 0 - 2 tuổi</p>
+                                </div>
+                                <div class="change-number">
+                                    <span class="minus btn-click"><i class="fal fa-minus-circle" id="babyMinus"></i></span><span class="number" id="baby">0</span>
+                                    <span class="plus btn-click"><i class="fal fa-plus-circle" id="babyPlus"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer-notice">
+                            <div class="customer-notice-left">
+                                * Người lớn từ 12 tuổi trở lên
+                            </div>
+                            <div class="customer-notice-right">
+                                * Trẻ em dưới 12 tuổi ( trẻ dưới 4 tuổi được miễn phí )
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="form-check checkbox-input-search d-inline-flex align-items-center">
+                                <input class="form-check-input me-3" type="radio" name="input-list-customer" value="yes" checked="" /><label class="form-check-label mt-1 small">Nhập danh sách khách hàng</label>
+                            </div>
+                            <div class="form-check checkbox-input-search d-inline-flex align-items-center">
+                                <input class="form-check-input me-3" type="radio" id="radSupport" name="input-list-customer" value="no" />
+                                <div class="col-11"><label class="form-check-label mt-1 small">Tôi cần được nhân viên tư vấn Vietravel trợ giúp nhập thông tin đăng ký dịch vụ</label></div>
+                            </div>
+                        </div>
+                        <section class="wrap-info-customer-number-person-details mt-4 wrapper-new-input">
+                            <div class="title-section mb-3 title-hotel-flight-infor" style="font-weight: 700;font-size: 22px;line-height: 28px;color: #2d4271;padding: 20px">
+                                Thông tin hành khách</div>
+                            <div class="group-fields-input-contact-adult group-fields-input-contact-wrapper mb-3">
+                                <div class="title-persona"><i class="fa-solid fa-user-tie"></i> Người lớn</div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-12">
+                                        <div class="form-group">
+                                            <label class="pb-1 font-700">Họ và tên <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control fullName hotel-flight-input" placeholder="Nhập họ tên" name="fullName" />
+                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row item">
-                                    <div class="col-md-3 col-12 label">Trị giá booking</div>
-                                    <div class="col-md-9 col-12 text">6,490,000₫</div>
-                                </div>
-                                <div class="row item">
-                                    <div class="col-md-3 col-12 label">Số tiền đã thanh toán</div>
-                                    <div class="col-md-9 col-12 text">6,490,000₫</div>
-                                </div>
-                                <div class="row item">
-                                    <div class="col-md-3 col-12 label">Số tiền còn lại</div>
-                                    <div class="col-md-9 col-12 text">3,000,000₫</div>
-                                </div>
-                                <div class="row item">
-                                    <div class="col-md-3 col-12 label">Ngày đăng ký</div>
-                                    <div class="col-md-9 col-12 text">
-                                        12/11/2023 23:29:59
+                                    <div class="col-lg-2 col-12">
+                                        <div class="form-group select-custom-icon">
+                                            <label class="pb-1 white-space-nowrap">Giới tính <span class="text-danger">*</span></label>
+                                            <select class="form-control title title-gender hotel-flight-input" name="gender">
+                                                <option value="1">Nam</option>
+                                                <option value="0">Nữ</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row item">
-                                    <div class="col-md-3 col-12 label">
-                                        Hình thức thanh toán
+                                    <div class="col-lg-5 col-12">
+                                        <div class="row">
+                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
+                                                <div class="form-group select-custom-icon">
+                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span class="text-danger">*</span></label>
+                                                    <select class="form-control birth-date hotel-flight-input" name="dayOfMonth">
+                                                        <option value="-1">Ngày</option>
+                                                        <option value="01">01</option>
+                                                        <option value="02">02</option>
+                                                        <option value="03">03</option>
+                                                        <option value="04">04</option>
+                                                        <option value="05">05</option>
+                                                        <option value="06">06</option>
+                                                        <option value="07">07</option>
+                                                        <option value="08">08</option>
+                                                        <option value="09">09</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                        <option value="16">16</option>
+                                                        <option value="17">17</option>
+                                                        <option value="18">18</option>
+                                                        <option value="19">19</option>
+                                                        <option value="20">20</option>
+                                                        <option value="21">21</option>
+                                                        <option value="22">22</option>
+                                                        <option value="23">23</option>
+                                                        <option value="24">24</option>
+                                                        <option value="25">25</option>
+                                                        <option value="26">26</option>
+                                                        <option value="27">27</option>
+                                                        <option value="28">28</option>
+                                                        <option value="29">29</option>
+                                                        <option value="30">30</option>
+                                                        <option value="31">31</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
+                                                <div class="form-group select-custom-icon">
+                                                    <label class="pb-1">&nbsp;</label>
+                                                    <select class="form-control birth-month hotel-flight-input" name="monthOfYear">
+                                                        <option value="-1">Tháng</option>
+                                                        <option value="01">01</option>
+                                                        <option value="02">02</option>
+                                                        <option value="03">03</option>
+                                                        <option value="04">04</option>
+                                                        <option value="05">05</option>
+                                                        <option value="06">06</option>
+                                                        <option value="07">07</option>
+                                                        <option value="08">08</option>
+                                                        <option value="09">09</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
+                                                <div class="form-group select-custom-icon">
+                                                    <label class="pb-1">&nbsp;</label>
+                                                    <select class="form-control birth-year birth-year-adult hotel-flight-input" name="yearOfYear">
+                                                        <option value="-1">Năm</option>
+                                                        <option value="1961">1961</option>
+                                                        <option value="1962">1962</option>
+                                                        <option value="1963">1963</option>
+                                                        <option value="1964">1964</option>
+                                                        <option value="1965">1965</option>
+                                                        <option value="1966">1966</option>
+                                                        <option value="1967">1967</option>
+                                                        <option value="1968">1968</option>
+                                                        <option value="1969">1969</option>
+                                                        <option value="1970">1970</option>
+                                                        <option value="1971">1971</option>
+                                                        <option value="1972">1972</option>
+                                                        <option value="1973">1973</option>
+                                                        <option value="1974">1974</option>
+                                                        <option value="1975">1975</option>
+                                                        <option value="1976">1976</option>
+                                                        <option value="1977">1977</option>
+                                                        <option value="1978">1978</option>
+                                                        <option value="1979">1979</option>
+                                                        <option value="1980">1980</option>
+                                                        <option value="1981">1981</option>
+                                                        <option value="1982">1982</option>
+                                                        <option value="1983">1983</option>
+                                                        <option value="1984">1984</option>
+                                                        <option value="1985">1985</option>
+                                                        <option value="1986">1986</option>
+                                                        <option value="1987">1987</option>
+                                                        <option value="1988">1988</option>
+                                                        <option value="1989">1989</option>
+                                                        <option value="1990">1990</option>
+                                                        <option value="1991">1991</option>
+                                                        <option value="1992">1992</option>
+                                                        <option value="1993">1993</option>
+                                                        <option value="1994">1994</option>
+                                                        <option value="1995">1995</option>
+                                                        <option value="1996">1996</option>
+                                                        <option value="1997">1997</option>
+                                                        <option value="1998">1998</option>
+                                                        <option value="1999">1999</option>
+                                                        <option value="2000">2000</option>
+                                                        <option value="2001">2001</option>
+                                                        <option value="2002">2002</option>
+                                                        <option value="2003">2003</option>
+                                                        <option value="2004">2004</option>
+                                                        <option value="2005">2005</option>
+                                                        <option value="2006">2006</option>
+                                                        <option value="2007">2007</option>
+                                                        <option value="2008">2008</option>
+                                                        <option value="2009">2009</option>
+                                                        <option value="2010">2010</option>
+                                                        <option value="2011">2011</option>
+                                                        <option value="2012">2012</option>
+                                                        <option value="2013">2013</option>
+                                                        <option value="2014">2014</option>
+                                                        <option value="2015">2015</option>
+                                                        <option value="2016">2016</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2018">2018</option>
+                                                        <option value="2019">2019</option>
+                                                        <option value="2020">2020</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-9 col-12 text">
-                                        Thẻ t&#237;n dụng - Thanh to&#225;n đảm bảo qua cổng TourNest-VietinBank (VISA/MASTER/JCB)<br/>
-                                        <a href="#" class="btn btn-primary" id="btnChangePayment" onclick="ChoosePayment();" data-toggle="modal" data-target="#ReChoosePayment">Thay đổi</a>
-                                    </div>
-                                </div>
-                                <div class="row item">
-                                    <div class="col-md-3 col-12 label">Tình trạng</div>
-                                    <div class="col-md-9 col-12 text">
-                                        Booking của quý khách đã được chúng tôi xác nhận thành công
-                                    </div>
-                                </div>
-                                <div class="row item">
-                                    <div class="col-md-3 col-12 label">Thời gian thanh toán</div>
-                                    <div class="col-md-9 col-12 text">
-                                        <span class="text-primary fw-bold">13/11/23 23:29:59</span> (Theo giờ Việt Nam)
-                                    </div>
+                                    <div class="col-lg-1 col-12"></div>
+
+                                    <!--                                    <div class="col-sm-2 col-2 mt-sm-0 mt-4">-->
+<!--                                        <div class="form-group select-custom-icon">-->
+<!--                                            <label class="pb-1">Phòng đơn</label>-->
+<!--                                            <div class="form-check form-switch">-->
+<!--                                                <input class="form-check-input" type="checkbox" name="surchargeRoom" checked="" style="pointer-events: none;" /><label class="form-check-label">1.400.000&nbsp;₫</label>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                 </div>
                             </div>
                         </section>
+                        <div class="customer-save">
+                            <h3>Quý khách có ghi chú lưu ý gì, hãy nói với chúng tôi !</h3>
+                            <div class="customer-save-inner">
+                                <p>Ghi chú thêm</p>
+                                <textarea class="form-control" cols="20" name="note" placeholder="Vui lòng nhập nội dung lời nhắn bằng tiếng Anh hoặc tiếng Việt" rows="5"></textarea>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 col-12 right">
                         <div class="group-checkout">
-                            <div class="heading">
-                                <h5 class="fw-bold tieude">PHIẾU XÁC NHẬN BOOKING</h5>
-                            </div>
+                            <h3>Tóm tắt</h3>
+                            <p class="package-title"><span>Mã Tour</span> #MT13646</p>
                             <div class="product">
                                 <div class="product-image">
-                                    <a href="#">
-                                        <img src="../assets/images/item/1.jpg" class="img-fluid" alt="image" />
-                                    </a>
+                                    <img src="https://media.travel.com.vn/tour/tfd_230302103257_223532.jpg"
+                                         class="img-fluid" alt="image">
                                 </div>
                                 <div class="product-content">
-                                    <p class="title">
-                                        Ph&#250; Quốc: H&#242;n Thơm Nature Park (Bao Gồm V&#233; C&#225;p Treo 3 D&#226;y Vượt Biển D&#224;i Nhất Thế Giới) - 26 Tết
-                                    </p>
-                                    <span>
-Số booking:
-<span class="text-primary fw-bold">231112815769</span>
-                                        </span>
+                                    <p class="title">Tây Ninh - Hành trình chinh phục nóc nhà Nam Bộ - Tặng vé tham
+                                        quan 3 tuyến cáp treo Chùa Hang - Tâm An - Vân Sơn</p>
+                                </div>
+                            </div>
+                            <div class="go-tour">
+                                <div class="start">
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <div class="start-content">
+                                        <h4>Bắt đầu chuyến đi</h4>
+                                        <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                        <p class="from"></p>
+                                    </div>
+                                </div>
+                                <div class="end">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <div class="start-content">
+                                        <h4>Kết thúc chuyến đi</h4>
+                                        <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                        <p class="from"></p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="detail">
-                                <div class="row item">
-                                    <div class="col-4 fw-bold">Mã tour</div>
-                                    <div class="col-8 text-end">NDSGN858-003-050224VU-V</div>
-                                </div>
-                                <div class="row item">
-                                    <div class="col-4 fw-bold">Hành trình</div>
-                                    <div class="col-8 text-end">HCM - PQC - HCM</div>
-                                </div>
-                                <div class="row item">
-                                    <div class="col-4 fw-bold">Ngày đi</div>
-                                    <div class="col-8 text-end">05/02/2024</div>
-                                </div>
-                                <div class="row item">
-                                    <div class="col-4 fw-bold">Ngày về</div>
-                                    <div class="col-8 text-end">07/02/2024</div>
-                                </div>
-                                <div class="row item">
-                                    <div class="col-4 fw-bold">Nơi khởi hành</div>
-                                    <div class="col-8 text-end">TP. Hồ Ch&#237; Minh</div>
-                                </div>
-                            </div>
-                            <div class="qr-code">
-                                <div class="image">
-                                    <div class="wrapper">
-                                        <img src="https://chart.googleapis.com/chart?chs=300x300&amp;cht=qr&amp;chl=https://travel.com.vn/du-lich/track-booking-no-231112815769/tra-cuu-booking.aspx?utm_source=BookingSearch%26utm_medium=referral%26utm_campaign=qrcode&amp;choe=UTF-8">
-                                    </div>
+                                <table style="width: 100%">
+                                    <tbody>
+                                    <tr>
+                                        <th class="l1">Hành khách</th>
+                                        <th class="l2 text-right">
+                                            <i class="fa-solid fa-people-group"></i></i> <span>1 người</span>
+                                            <p class="add-more">1 người lớn </p>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td> Người lớn</td>
+                                        <td class="t-price text-right">1 x 1,190,000₫</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Trẻ em</td>
+                                        <td class="t-price text-right">0₫</td>
+                                    </tr>
+                                    <tr class="cuppon d-none">
+                                        <td>Mã giảm giá</td>
+                                        <td class="cp-form text-right">
+                                            <form action="#" method="get">
+                                                <input class="form-control" id="DiscountCode"
+                                                       name="DiscountCode" placeholder="Thêm mã"
+                                                       required="required" type="text" value="">
+                                                <input type="hidden" id="hidBooking_id"
+                                                       value="ac7ab715-cd61-4053-b3e3-5e0fa5c1f838">
+                                                <input type="submit" name="submit" id="btnDiscountCode"
+                                                       value="Áp dụng">
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <tr class="cuppon">
+                                        <td></td>
+                                        <td class="cp-form text-right">
+                                            giảm 100,000đ
+                                        </td>
+                                    </tr>
+                                    <tr class="total">
+                                        <td>Tổng cộng</td>
+                                        <td class="t-price text-right" id="TotalPrice">1,090,000₫</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    <button class="btn btn-primary btn-order" style="width:100% "
+                                            onclick="kiemTraDieuKien()">
+                                        <a href="../TourNest-master/bill.html"></a> Thanh Toán
+                                    </button>
                                 </div>
                                 <div>
-
-                                    <p>
-                                       Nếu có thay đổi xin vui lòng liên hệ chúng tôi
-                                    </p>
+                                    <button class="btn btn-primary btn-order" style="width:100%;background-color: #f9f9f9!important;color: black ">
+                                        <a href="../TourNest-master/bill.html"></a> Liên Hệ
+                                    </button>
                                 </div>
                             </div>
-                            <button class="btn btn-primary btn-order" id="btnPayment" style="width:100%" data-toggle="modal" data-target="#ConfirmPayment">
-                                Liên Hệ
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-none d-lg-block">
-                    <div class="passenger-list p-4 mb-4">
-                        <div class="heading">
-                            <h5 class="fw-bold tieude">DANH SÁCH HÀNH KHÁCH</h5>
-                        </div>
-                        <table class="table booking-table">
-                            <thead>
-                            <tr class="fw-bold">
-                                <td>Họ tên</td>
-                                <td class="d-none">Giảm giá?</td>
-                                <td>Ngày sinh</td>
-                                <td>Giới tính</td>
-                                <td>Địa chỉ</td>
-                                <td>Độ tuổi</td>
-                                <td>Phòng đơn</td>
-                            </tr>
-                            </thead>
-                            <t>
-                            <tr>
-                                <td>Minh Thinh</td>
-                                <td class="d-none">Giảm giá?</td>
-                                <td>17/02/2003</td>
-                                <td>Nam</td>
-                                <td></td>
-                                <td>Người lớn</td>
-                                <td>Có</td>
-                            </tr>
-                            </t>
-                            <tfoot>
-                            <tr>
-                                <td colspan="11" class="text-end">
-                                    <span>Tổng cộng:</span>
-                                    <span class="price text-primary fw-bold">6,490,000₫</span>
-                                </td>
-                            </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                </div>
-                <div class="d-none d-lg-block2">
-                    <div class="passenger-list p-4 mb-4">
-                        <div class="heading">
-                            <h5 class="fw-bold">DANH S&#193;CH PHIẾU THU</h5>
-                        </div>
-                        <div id="divLoadShowBookingReceipt">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-<!--        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>-->
-<!--        <script type="text/javascript">-->
-<!--            $(document).ready(function() {-->
-<!--                CheckAccountInfo();-->
-<!--            });-->
+    </div>
+    <!-- footer-copyright start -->
+    <footer class="footer-copyright">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
 
-<!--            $("#btnkichhoat").click(function() {-->
-<!--                event.preventDefault();-->
-<!--                var btnchodangnhap = $('#btnchodangnhap');-->
-<!--                btnchodangnhap.prop('disabled', true);-->
-<!--                btnchodangnhap.removeClass("hardCode");-->
-<!--                $("#btnkichhoat").addClass("hardCode");-->
-<!--                $.ajax({-->
-<!--                    type: 'GET',-->
-<!--                    url: '/Booking/PostActiveAcountByTelephone',-->
-<!--                    data: {-->
-<!--                        bookingId: "5098aa74-c5d7-4ebb-a669-536afc5a9488"-->
-<!--                    },-->
-<!--                    success: function(data, textStatus, XMLHttpRequest) {-->
-<!--                        if (data.status == 1) {-->
-<!--                            $("#titlekichhoat").addClass('hardCode');-->
-<!--                            btnchodangnhap.addClass("hardCode");-->
-<!--                            alert("Kích hoạt thành công");-->
-<!--                        } else {-->
-<!--                            alert(data.message);-->
-<!--                            btnchodangnhap.addClass("hardCode");-->
-<!--                            $("#btnkichhoat").removeClass("hardCode");-->
-<!--                        }-->
-<!--                    },-->
-<!--                    dataType: "json"-->
-
-<!--                });-->
-
-<!--            });-->
-
-<!--            function switchVisible() {-->
-<!--                $.ajax({-->
-<!--                    type: 'POST',-->
-<!--                    url: '/Coupon/GetPromotionCodeByReceiptNo',-->
-<!--                    data: {-->
-<!--                        AmountReceiptView: "1",-->
-<!--                        ReceiptNo: ""-->
-<!--                    },-->
-<!--                    success: function(data, textStatus, XMLHttpRequest) {-->
-<!--                        let voucherCode = data.VoucherCode;-->
-<!--                        let ReceiptNo = data.ReceiptNo-->
-
-<!--                        $("#textPromotionCode").text(voucherCode);-->
-<!--                        document.getElementById('booking-text').style.display = 'none';-->
-<!--                        document.getElementById('booking-code').style.display = 'block';-->
-
-<!--                    },-->
-<!--                    dataType: "json"-->
-<!--                });-->
-
-<!--            }-->
-
-
-<!--            function CopyVoucher() {-->
-<!--                var copyText = document.getElementById("myVoucher");-->
-<!--                copyText.select();-->
-<!--                copyText.setSelectionRange(0, 99999);-->
-<!--                document.execCommand("copy");-->
-<!--                alert("Đã sao chép mã giảm giá: " + copyText.value);-->
-<!--            }-->
-
-<!--            function CheckAccountInfo() {-->
-<!--                $.ajax({-->
-<!--                    type: 'GET',-->
-<!--                    url: '/Booking/GetCheckActiveAcountByTelephone',-->
-<!--                    data: {-->
-<!--                        Telephone: "32323232"-->
-<!--                    },-->
-<!--                    success: function(data, textStatus, XMLHttpRequest) {-->
-<!--                        if (data == 0) {-->
-<!--                            $("#titlekichhoat").removeClass('hardCode');-->
-<!--                        } else {-->
-<!--                            $("#titlekichhoat").addClass('hardCode');-->
-
-<!--                        }-->
-<!--                    },-->
-<!--                    dataType: "json"-->
-
-<!--                });-->
-<!--            }-->
-<!--        </script>-->
-        <div class="thanks">
-            <h1>Cảm ơn quý khách đã lựa chọn dịch vụ của chúng tôi</h1>
-        </div>
-        <div>
-            <div id="ConfirmPayment" class="modal fade" role="dialog">
-                <div class="modal-dialog" style="height:500px">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title font500">X&#193;C NHẬN THANH TO&#193;N ONLINE</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
-                        </div>
-                        <div class="modal-">
-                            <div class="radio">
-                                <label><input type="checkbox" id="cbAgree" onclick="CheckPayment();" /><label class="lb_r">T&#244;i đ&#227; đọc v&#224; hiểu r&#245; c&#225;c nội dung sau</label></label>
+                    <div class="col-sm-3">
+                        <div class="single-footer-item">
+                            <div class="footer-logo">
+                                <a href="index.html">
+                                    tour<span>Nest</span>
+                                </a>
+                                <p>
+                                    best travel tour guide
+                                </p>
                             </div>
-                            <div id="divPayment" style="display: none;">
-                                <div class="text-center" style="padding-bottom:15px;">
-                                    <a class="btn btn-default" style="background-color:red" href="/Payment/Payment?tourtypeID=1&amp;booking_id=5098aa74-c5d7-4ebb-a669-536afc5a9488&amp;paymentID=15">Thanh to&#225;n</a>
-                                </div>
-                            </div>
-                            <div style="height:500px;overflow:auto;">
-                                <html>
+                        </div><!--/.single-footer-item-->
+                    </div><!--/.col-->
 
-                                <head>
-                                    <title></title>
-                                </head>
+                    <div class="col-sm-3">
+                        <div class="single-footer-item">
+                            <h2>Đối tác hợp tác</h2>
+                            <div class="single-footer-txt">
+                                <p><a href="https://www.traveloka.com/vi-vn/">traveloka</a></p>
+                                <p><a href="https://www.ivivu.com/">ivivu</a></p>
+                                <p><a href="https://www.saigontourist.net/">saigon tourist</a></p>
+                                <p><a href="https://travel.com.vn/">travel</a></p>
+                                <p><a href="https://www.vietnambooking.com/">vietnam booking</a></p>
+                                <p><a href="https://dulichviet.com.vn/" target=”_blank”>dulichviet</a></p>
+                            </div><!--/.single-footer-txt-->
+                        </div><!--/.single-footer-item-->
 
-                                <>
-                                <p align="center">
-                                    Vietravel sẽ xuất h&oacute;a đơn GTGT theo đ&uacute;ng quy định hiện h&agrave;nh trong v&ograve;ng 7 ng&agrave;y l&agrave;m việc sau khi tour kết th&uacute;c. Sau thời gian tr&ecirc;n Vietravel sẽ từ chối xuất h&oacute;a đơn cho kh&aacute;ch h&agrave;ng
-                                    v&agrave; tiến h&agrave;nh xuất h&oacute;a đơn kh&aacute;ch lẻ kh&ocirc;ng lấy h&oacute;a đơn.</p>
-                                <p>
-                                    <strong>Cam kết đ&atilde; biết v&agrave; hiểu r&otilde; tour giảm gi&aacute; khi đặt v&agrave; thanh to&aacute;n trực tuyến : kh&ocirc;ng ho&agrave;n, kh&ocirc;ng hủy, kh&ocirc;ng đổi h&agrave;nh tr&igrave;nh.</strong></p>
-                                <p>
-                                    &nbsp;Cam kết đ&atilde; hiểu r&otilde; v&agrave; đồng &yacute; với c&aacute;c nội dung li&ecirc;n quan đến chương tr&igrave;nh tour v&agrave; điều kiện b&aacute;n tour như sau :</p>
-                                <p>
-                                    1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Đồng &yacute; với to&agrave;n bộ Nội dung quy định trong Điều kiện b&aacute;n v&eacute; c&aacute;c chương tr&igrave;nh du lịch trong nước (V&eacute; du lịch) k&egrave;m theo.</p>
-                                <p>
-                                    2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Đồng &yacute; gi&aacute; tour ngay thời điểm đăng k&yacute; v&agrave; biết c&oacute; nhiều mức gi&aacute; tr&ecirc;n một chương tr&igrave;nh tour. Những chi ph&iacute; bao gồm v&agrave; kh&ocirc;ng bao
-                                    gồm trong chương tr&igrave;nh.</p>
-                                <p>
-                                    3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dịch vụ ph&ograve;ng kh&aacute;ch sạn c&oacute; thể xảy ra trường hợp ph&ograve;ng kh&ocirc;ng cạnh nhau, ph&ograve;ng kh&ocirc;ng c&ugrave;ng tầng cho cả gia đ&igrave;nh, loại ph&ograve;ng một giường
-                                    đ&ocirc;i/ hai giường đơn kh&ocirc;ng theo y&ecirc;u cầu,... t&ugrave;y theo điều kiện thực tế của từng đối t&aacute;c kh&aacute;ch sạn. Vietravel sẽ cố gắng hỗ trợ thương lượng với đối t&aacute;c để sắp xếp
-                                    ph&ograve;ng ph&ugrave; hợp nhất.</p>
-                                <p>
-                                    4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Giờ bay v&agrave; chương tr&igrave;nh c&oacute; thể linh hoạt thay đổi theo điều kiện thực tế của h&atilde;ng H&agrave;ng Kh&ocirc;ng. Trường hợp chuyến bay bị hủy, ho&atilde;n, thay đổi chuyến kh&ocirc;ng
-                                    thuộc tr&aacute;ch nhiệm của Vietravel. T&ugrave;y v&agrave;o t&igrave;nh h&igrave;nh thực tế, chương tr&igrave;nh v&agrave; điểm tham quan c&oacute; thể linh động thay đổi thứ tự c&aacute;c điểm ph&ugrave;
-                                    hợp điều kiện giờ bay v&agrave; thời tiết thực tế. Vietravel c&oacute; tr&aacute;ch nhiệm li&ecirc;n lạc với h&atilde;ng H&agrave;ng Kh&ocirc;ng v&agrave; th&ocirc;ng tin sớm nhất cho kh&aacute;ch h&agrave;ng.</p>
-                                <p>
-                                    5. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Đ&atilde; cung cấp t&ecirc;n ch&iacute;nh x&aacute;c đầy đủ tr&ecirc;n CMND/ Hộ chiếu/Giấy khai sinh (trẻ em dưới 14 tuổi). Kh&aacute;ch h&agrave;ng chịu tr&aacute;ch nhiệm ho&agrave;n to&agrave;n đối với
-                                    c&aacute;c vấn đề xảy ra do việc cung cấp sai th&ocirc;ng tin. Qu&yacute; kh&aacute;ch khi đăng k&yacute; cung cấp t&ecirc;n theo giấy tờ t&ugrave;y th&acirc;n n&agrave;o, khi đi tour phải mang theo giấy tờ
-                                    t&ugrave;y th&acirc;n đ&oacute;.</p>
-                                <p>
-                                    6. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quy định giấy tờ tuỳ th&acirc;n khi đi tour: Đối với Kh&aacute;ch Quốc tịch Việt Nam: Khi đi tour Trẻ em từ 14 tuổi trở l&ecirc;n v&agrave; người lớn cần đem theo CMND/Hộ chiếu bản ch&iacute;nh c&ograve;n
-                                    hạn sử dụng, h&igrave;nh ảnh r&otilde; (CMND c&oacute; thời hạn sử dụng kh&ocirc;ng qu&aacute; 15 năm, t&iacute;nh từ ng&agrave;y cấp)/ Giấy khai sinh bản ch&iacute;nh (trẻ em dưới 14 tuổi). Trường hợp trẻ em
-                                    đủ 14 tuổi chưa c&oacute; CMND hoặc Hộ Chiếu th&igrave; Qu&yacute; kh&aacute;ch phải l&agrave;m giấy x&aacute;c nhận nh&acirc;n th&acirc;n tại ch&iacute;nh quyền địa phương nơi lưu tr&uacute; theo mẫu quy định.
-                                    Kh&aacute;ch Nước ngo&agrave;i/Việt Kiều: Khi đi tour phải mang theo đầy đủ Hộ Chiếu bản ch&iacute;nh c&ograve;n hạn sử dụng hoặc thẻ xanh k&egrave;m theo Visa v&agrave; giấy t&aacute;i xuất nhập Việt Nam.</p>
-                                <p>
-                                    7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Qu&yacute; kh&aacute;ch dưới 18 tuổi phải c&oacute; Bố/Mẹ hoặc người nh&agrave; tr&ecirc;n 18 tuổi đi c&ugrave;ng. Trường hợp qu&yacute; kh&aacute;ch dưới 18 tuổi đi c&ugrave;ng người th&acirc;n th&igrave;
-                                    Bố v&agrave; Mẹ phải ủy quyền (c&oacute; x&aacute;c nhận của ch&iacute;nh quyền địa phương) cho người th&acirc;n.</p>
-                                <p>
-                                    8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hướng dẫn vi&ecirc;n trong tour chỉ thuyết minh bằng tiếng Việt, đặt ăn theo thực đơn kh&aacute;ch Việt,&hellip;</p>
-                                <p>
-                                    9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vietravel sẽ kh&ocirc;ng chịu tr&aacute;ch nhiệm bảo đảm c&aacute;c điểm tham quan trong trường hợp: C&aacute;c điểm tham quan đ&oacute;ng cửa/ sửa chữa/ bảo tr&igrave; hoặc xảy ra thi&ecirc;n tai: b&atilde;o
-                                    lụt, hạn h&aacute;n, động đất, dịch bệnh&hellip;Sự cố về an ninh: khủng bố, biểu t&igrave;nh. Sự cố về h&agrave;ng kh&ocirc;ng: trục trặc kỹ thuật, an ninh, dời, hủy, ho&atilde;n chuyến bay v&agrave; c&aacute;c
-                                    sự kiện bất khả kh&aacute;ng kh&aacute;ng theo quy định ph&aacute;p luật. Trường hợp tr&ecirc;n xảy ra, Vietravel sẽ xem x&eacute;t để ho&agrave;n trả chi ph&iacute; kh&ocirc;ng tham quan cho kh&aacute;ch trong
-                                    điều kiện c&oacute; thể (sau khi đ&atilde; trừ lại c&aacute;c dịch vụ đ&atilde; thực hiện&hellip;.v&agrave; kh&ocirc;ng chịu tr&aacute;ch nhiệm bồi thường th&ecirc;m bất kỳ chi ph&iacute; n&agrave;o kh&aacute;c).Trường
-                                    hợp hủy to&agrave;n bộ chuyến đi với c&aacute;c l&yacute; do bất khả kh&aacute;ng tr&ecirc;n, thời gian ho&agrave;n tiền dịch vụ sẽ được ho&agrave;n tất trong v&ograve;ng 60 &ndash; 90 ng&agrave;y phụ thuộc
-                                    điều kiện c&aacute;c đối t&aacute;c cung ứng dịch vụ.</p>
-                                <p>
-                                    10.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cam kết kh&ocirc;ng t&aacute;ch đo&agrave;n trong suốt qu&aacute; tr&igrave;nh tham quan c&ugrave;ng Vietravel.</p>
-                                <p>
-                                    11.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cam kết chỉ tham gia du lịch thuần t&uacute;y, kh&ocirc;ng truyền b&aacute; những vấn đề li&ecirc;n quan đến t&ocirc;n gi&aacute;o, ch&iacute;nh trị trong thời gian tham gia tour;</p>
-                                <p>
-                                    12.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trường hợp kh&aacute;ch c&oacute; dấu hiệu vi phạm tại Mục 11 hoặc c&oacute; khả năng kh&ocirc;ng về c&ugrave;ng đo&agrave;n th&igrave; C&ocirc;ng ty c&oacute; quyền ngưng phục vụ kh&aacute;ch tr&ecirc;n c&aacute;c
-                                    chương tr&igrave;nh v&agrave; dịch vụ đ&atilde; v&agrave; đang thực hiện đồng thời th&ocirc;ng b&aacute;o cho cơ quan c&oacute; thẩm quyền hoặc thực hiện c&aacute;c biện ph&aacute;p ngăn chặn cần thiết theo
-                                    quy định m&agrave; kh&ocirc;ng phải g&aacute;nh chịu bất kỳ tr&aacute;ch nhiệm ph&aacute;p l&yacute; n&agrave;o. C&aacute;c chi ph&iacute; sẽ được C&ocirc;ng ty xem x&eacute;t ho&agrave;n trả kh&aacute;ch sau
-                                    khi khấu trừ c&aacute;c chi ph&iacute; đ&atilde; sử dụng;</p>
-                                <p>
-                                    13.&nbsp;&nbsp; Cam kết chịu tr&aacute;ch nhiệm trước cơ quan nh&agrave; nước c&oacute; thẩm quyền tại nơi đến tham quan đối với mọi h&agrave;nh vi vi phạm ph&aacute;p luật của ch&iacute;nh h&agrave;nh kh&aacute;ch g&acirc;y ra.</p>
-                                <p>
-                                    14.&nbsp;&nbsp; Chương tr&igrave;nh đo&agrave;n l&agrave; du lịch trọn g&oacute;i, Vietravel kh&ocirc;ng chịu tr&aacute;ch nhiệm ho&agrave;n trả chi ph&iacute; ch&ecirc;nh lệch cho c&aacute;c kh&aacute;ch h&agrave;ng thuộc diện miễn giảm hoặc đối tượng
-                                    ưu ti&ecirc;n kh&aacute;c&hellip; hoặc c&aacute;c chi ph&iacute; kh&ocirc;ng sử dụng trong tour.</p>
-                                <p>
-                                    15.&nbsp;&nbsp; Cam kết hiểu v&agrave; đồng &yacute; miễn trừ mọi tr&aacute;ch nhiệm ph&aacute;p l&yacute;; kh&ocirc;ng khiếu nại v&agrave; y&ecirc;u cầu bồi thường mọi thiệt hại, mất m&aacute;t, hư hỏng, chi ph&iacute; ph&aacute;t sinh, hậu quả xảy ra
-                                    trực tiếp hoặc gi&aacute;n tiếp đối với Vietravel, c&aacute;c nh&acirc;n vi&ecirc;n, đơn vị trực thuộc v&agrave; những đối t&aacute;c của Vietravel về những rủi ro (t&agrave;i sản, sức khỏe, &hellip;) c&oacute;
-                                    thể xảy ra trước, trong hoặc sau khi tham gia tour.</p>
-                                <p>
-                                    II.&nbsp;&nbsp; Cam kết đ&atilde; hiểu r&otilde; v&agrave; đồng &yacute; c&aacute;c quy định li&ecirc;n quan về điều kiện sức khỏe khi tham gia chương tr&igrave;nh du lịch</p>
-                                <p>
-                                    1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kh&aacute;ch nữ từ 55 tuổi trở l&ecirc;n v&agrave; kh&aacute;ch nam từ 60 trở l&ecirc;n: n&ecirc;n c&oacute; người th&acirc;n dưới 55 tuổi (đầy đủ sức khỏe) đi c&ugrave;ng. Ri&ecirc;ng kh&aacute;ch từ
-                                    70 tuổi trở l&ecirc;n: Bắt buộc phải c&oacute; người th&acirc;n dưới 55 tuổi (đầy đủ sức khỏe) đi c&ugrave;ng. Hạn chế kh&ocirc;ng nhận kh&aacute;ch từ 80 tuổi trở l&ecirc;n. Kh&aacute;ch từ 80 tuổi kh&ocirc;ng
-                                    c&oacute; chế độ bảo hiểm.</p>
-                                <p>
-                                    2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Qu&yacute; kh&aacute;ch mang thai vui l&ograve;ng b&aacute;o cho nh&acirc;n vi&ecirc;n b&aacute;n tour ngay tại thời điểm đăng k&yacute;. Phải c&oacute; &yacute; kiến của b&aacute;c sĩ trước khi đi tour,
-                                    tự chịu tr&aacute;ch nhiệm về sức khỏe của m&igrave;nh v&agrave; thai nhi trong suốt thời gian tham gia chương tr&igrave;nh du lịch. Khi đi tour phải mang theo sổ kh&aacute;m thai v&agrave; giấy tờ t&ugrave;y
-                                    th&acirc;n theo quy định h&atilde;ng h&agrave;ng kh&ocirc;ng. Tuần thai từ 28 tuần trở đi phải mang theo giấy kh&aacute;m thai trong v&ograve;ng 7 ng&agrave;y trở lại.&nbsp;</p>
-                                <p>
-                                    3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cam kết bản th&acirc;n v&agrave; người th&acirc;n ho&agrave;n to&agrave;n c&oacute; đủ sức khỏe để đi du lịch theo chương tr&igrave;nh. Đồng &yacute; miễn trừ to&agrave;n bộ tr&aacute;ch nhiệm ph&aacute;p
-                                    l&yacute;; kh&ocirc;ng khiếu nại; kh&ocirc;ng y&ecirc;u cầu bồi thường đối với Vietravel n&oacute;i chung v&agrave; nh&acirc;n vi&ecirc;n Vietravel n&oacute;i ri&ecirc;ng về tất cả c&aacute;c vấn đề xảy ra li&ecirc;n
-                                    quan đến t&igrave;nh trạng sức khỏe của kh&aacute;ch h&agrave;ng khi tham gia tour hoặc sử dụng c&aacute;c dịch vụ do Vietravel cung cấp. Kh&aacute;ch h&agrave;ng cam kết tự chịu mọi chi ph&iacute; ph&aacute;t
-                                    sinh ngo&agrave;i chương tr&igrave;nh tour li&ecirc;n quan đến việc giải quyết c&aacute;c rủi ro về sức khỏe (lưu tr&uacute;, vận chuyển, chi ph&iacute; kh&aacute;m chữa bệnh...) &ndash; ngoại trừ c&aacute;c
-                                    chi ph&iacute; thuộc hạng mục bảo hiểm sẽ do C&ocirc;ng ty Bảo hiểm ho&agrave;n trả theo quy định.</p>
-                                <p>
-                                    III.&nbsp; Cam kết đ&atilde; hiểu r&otilde; v&agrave; đồng &yacute; c&aacute;c quy định về bảo hiểm du lịch  (vui l&ograve;ng đ&aacute;nh dấu chọn):&nbsp;</p>
-                                <p>
-                                    1.&nbsp;&nbsp;&nbsp;&nbsp; Bảo hiểm sức khỏe</p>
-                                <p>
-                                    1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cam kết bản th&acirc;n v&agrave; người th&acirc;n c&ugrave;ng tham gia tour kh&ocirc;ng mắc hoặc bị c&aacute;c vấn đề li&ecirc;n quan đến c&aacute;c bệnh được liệt k&ecirc; tại Mục 2 Phần III Bảng đăng k&yacute;
-                                    n&agrave;y.</p>
-                                <p>
-                                    1.2&nbsp;&nbsp; Trong trường hợp ph&aacute;t sinh c&aacute;c vấn đề li&ecirc;n quan đến c&aacute;c bệnh hoặc gặp tai nạn trong qu&aacute; tr&igrave;nh đi tour v&agrave; ph&aacute;t sinh chi ph&iacute; th&igrave; những hạng mục liệt k&ecirc; dưới đ&acirc;y
-                                    sẽ kh&ocirc;ng được bồi thường theo quy tắc bảo hiểm Bảo Minh:</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chi ph&iacute; sử dụng dịch vụ chăm s&oacute;c theo y&ecirc;u cầu đặc biệt hay chăm s&oacute;c ri&ecirc;ng.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chi ph&iacute; điều trị thẩm mỹ, dụng cụ hỗ trợ th&iacute;nh v&agrave; thị lực, thuốc được k&ecirc; theo đơn cho những trường hợp n&agrave;y trừ khi những việc đ&oacute; l&agrave; cần thiết
-                                    để điều trị một thương tật ph&aacute;t sinh duy nhất từ một thương tật th&acirc;n thể do tai nạn từ b&ecirc;n ngo&agrave;i xảy ra trong thời hạn bảo hiểm.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chi ph&iacute; điều trị bệnh t&acirc;m thần, rối loạn t&acirc;m l&yacute; v&agrave; mất tr&iacute;.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Việc điều trị hay dịch vụ y tế được thực hiện m&agrave; kh&ocirc;ng c&oacute; sự chỉ dẫn của B&aacute;c sĩ; việc kh&aacute;m sức khỏe hay kiểm tra sức khỏe định kỳ m&agrave; kh&ocirc;ng li&ecirc;n
-                                    quan g&igrave; đến việc điều trị hay chẩn đo&aacute;n cho thương tật, bệnh tật được bảo hiểm.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lắp bộ phận giả, thiết bị hiệu chỉnh v&agrave; thiết bị hỗ trợ y tế trừ khi l&agrave; thiết yếu trực tiếp cho một ca phẫu thuật.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cấy gh&eacute;p nội tạng.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bệnh tật hay tổn thương c&oacute; sẵn, bệnh, khuyết tật bẩm sinh, bệnh l&acirc;y qua đường t&igrave;nh dục.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bệnh m&atilde;n t&iacute;nh cho d&ugrave; ph&aacute;t hiện trước hay trong thời gian bảo hiểm bao gồm: bệnh trĩ, chứng tho&aacute;t vị, amidan dẫn đến phẫu thuật, dị tật v&aacute;ch ngăn mũi
-                                    hoặc xương xoắn mũi, cường tuyến gi&aacute;p, đục nh&acirc;n mắt, bệnh xoang phải phẫu thuật, bệnh lạc m&agrave;ng trong tử cung, bệnh lao, d&ograve; hậu m&ocirc;n, vi&ecirc;m t&uacute;i mật, sỏi c&aacute;c
-                                    loại, dị tật hay bệnh về b&agrave;ng quang hoặc niệu đạo, cao huyết &aacute;p hoặc bệnh tim mạch, u dạ d&agrave;y hoặc t&aacute; tr&agrave;ng, tật vẹo ng&oacute;n ch&acirc;n ra ngo&agrave;i, tất cả c&aacute;c
-                                    loại u th&ocirc;ng thường hay u &aacute;c t&iacute;nh, ung thư, rối loạn m&aacute;u hay tủy xương, bệnh đ&aacute;i th&aacute;o đường.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bị tai nạn khi tham gia chương tr&igrave;nh tham quan c&oacute; leo l&ecirc;n tới độ cao tr&ecirc;n 5.000 m&eacute;t so với mực nước biển hoặc sử dụng b&igrave;nh dưỡng kh&iacute; lặn s&acirc;u
-                                    hơn 20 m&eacute;t so với mặt nước biển.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tự s&aacute;t, cố gắng tự s&aacute;t hay cố &yacute; g&acirc;y thương t&iacute;ch tr&ecirc;n th&acirc;n thể, bệnh t&acirc;m thần, rối loạn t&acirc;m l&yacute;, sẩy thai, ph&aacute; thai, sinh
-                                    đẻ, bệnh hoa liễu, sử dụng đồ uống c&oacute; cồn, chất k&iacute;ch th&iacute;ch hay c&aacute;c dung m&ocirc;i m&agrave; kh&ocirc;ng c&oacute; sự chỉ định của B&aacute;c sĩ h&agrave;nh nghề hợp ph&aacute;p, điều
-                                    trị răng trừ khi điều trị những răng tự nhi&ecirc;n c&ograve;n tốt do hậu quả của tai nạn.</p>
-                                <p>
-                                    2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bảo hiểm t&agrave;i sản</p>
-                                <p>
-                                    Những loại t&agrave;i sản sau đ&acirc;y sẽ kh&ocirc;ng thuộc phạm vi bảo hi&ecirc;̉m:</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hoa quả, những đ&ocirc;̀ dễ hư hỏng, những đ&ocirc;̀ c&oacute; th&ecirc;̉ ăn được, đ&ocirc;̀ cổ, t&aacute;c ph&acirc;̉m nghệ thuật, tranh vẽ, sản ph&acirc;̉m mỹ thuật, phần mềm v&agrave;
-                                    c&aacute;c trang thi&ecirc;́t bị đi k&egrave;m (trừ m&aacute;y t&iacute;nh x&aacute;ch tay), m&aacute;y t&iacute;nh x&aacute;ch tay v&agrave; điện thoại di động đ&atilde; sử dụng v&agrave; gửi h&agrave;nh
-                                    lý k&iacute; gửi, bản thảo, đ&ocirc;̀ trang sức, đ&aacute; quý, đ&ocirc;̀ng h&ocirc;̀, k&iacute;nh &aacute;p tr&ograve;ng, chứng kho&aacute;n, đ&ocirc;̀ lưu niệm, nhạc cụ, cầu răng, răng giả. .</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mất m&aacute;t hoặc hư hỏng đ&ocirc;́i với trang thi&ecirc;́t bị đi thu&ecirc; hoặc cho thu&ecirc;,&nbsp; việc thu giữ hay ti&ecirc;u hủy đ&ocirc;̀ vật theo c&aacute;c quy định về ki&ecirc;̉m
-                                    dịch hay hải quan; tịch thu theo lệnh của ch&iacute;nh phủ hay cơ quan c&ocirc;ng quyền, nguy cơ h&agrave;ng giả hay mua b&aacute;n, vận chuy&ecirc;̉n tr&aacute;i phép.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mất m&aacute;t hoặc thiệt hại đ&ocirc;́i với t&agrave;i sản đ&atilde; được bảo hi&ecirc;̉m theo bất kỳ hợp đ&ocirc;̀ng bảo hi&ecirc;̉m n&agrave;o kh&aacute;c hay đ&atilde; được h&atilde;ng
-                                    vận chuy&ecirc;̉n, kh&aacute;ch sạn hay c&aacute;c b&ecirc;n kh&aacute;c b&ocirc;̀i ho&agrave;n.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mất m&aacute;t hoặc thiệt hại đ&ocirc;́i với h&agrave;nh lý của Người đựợc bảo hi&ecirc;̉m đ&ecirc;̉ ở nơi c&ocirc;ng cộng v&agrave; thi&ecirc;́u sự tr&ocirc;ng coi/gi&aacute;m s&aacute;t
-                                    hoặc kh&ocirc;ng giải th&iacute;ch được lý do.</p>
-                                <p>
-                                    -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tổn thất hoặc thiệt hại hoặc x&aacute;o trộn hoặc nứt vỡ đ&ocirc;́i với đ&ocirc;̀ vật dễ vỡ hoặc dễ g&atilde;y</p>
-                                <p>
-                                    3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cam kết đ&atilde; được nh&acirc;n vi&ecirc;n Vietravel tư vấn v&agrave; hiểu r&otilde; c&aacute;c vấn đề li&ecirc;n quan đến bảo hiểm du lịch v&agrave; biết rằng kh&ocirc;ng c&oacute; chế độ bảo hiểm
-                                    đối với kh&aacute;ch từ 80 tuổi trở l&ecirc;n.</p>
-                                <p>
-                                    4.&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Số hotline tư vấn về c&aacute;c điều kiện, điều khoản bảo hiểm 0938 30 1234</p>
-                                <p>
-                                    Lưu &yacute;:&nbsp; Việc x&eacute;t bồi thường sẽ do đơn vị bảo hiểm trực tiếp x&eacute;t hồ sơ theo Quy tắc Bảo hiểm du lịch trong nước.</p>
-                                <p>
-                                    Bằng văn bản n&agrave;y, đề nghị C&ocirc;ng ty Vietravel tiến h&agrave;nh l&agrave;m c&aacute;c thủ tục cần thiết để t&ocirc;i v&agrave; người nh&agrave; (nếu c&oacute;) tham gia chương tr&igrave;nh du lịch do Vietravel tổ chức.&nbsp; &nbsp;</p>
-                                <p>
-                                    <strong>CAM KẾT&nbsp; Sử dụng dịch vụ ph&ograve;ng khu Villa hệ thống Vinpearl Resort</strong></p>
-                                <p>
-                                    1. Vietravel mở b&aacute;n dịch vụ gh&eacute;p ph&ograve;ng khu Villa tại hệ thống Vinpearl Resort (Đ&agrave; Nẵng, Nha Trang, Ph&uacute; Quốc). Khu Villa gồm c&oacute; 2,3,4 ph&ograve;ng ngủ t&ugrave;y theo series Vietravel đặt booking.</p>
-                                <p>
-                                    2. Ph&ograve;ng ngủ tại khu Villa phần lớn l&agrave; ph&ograve;ng giường double, chỉ c&oacute; 01 ph&ograve;ng twin. Việc ph&acirc;n ph&ograve;ng twin hay double, tầng trệt hay tầng 1, hướng ph&ograve;ng&hellip; sẽ do đơn vị tổ chức sắp xếp ngẫu nhi&ecirc;n
-                                    theo tr&igrave;nh tự đăng k&yacute; trước sau. C&aacute;c ph&ograve;ng trong khu Villa kh&ocirc;ng đặt được giường extra bed. Mỗi ph&ograve;ng quy định 02 người lớn chỉ k&egrave;m 01 trẻ em dưới 11 tuổi.&nbsp;</p>
-                                <p>
-                                    3. Trong khu Villa chỉ c&oacute; 01 ph&ograve;ng Master, những ph&ograve;ng c&ograve;n lại l&agrave; ph&ograve;ng standard. Ph&ograve;ng Master sẽ c&oacute; k&eacute;t sắt, nội thất v&agrave; g&oacute;c nh&igrave;n đẹp hơn c&aacute;c ph&ograve;ng standard.</p>
-                                <p>
-                                    4. Do cấu tr&uacute;c x&acirc;y dựng của khu Villa d&agrave;nh cho gia đ&igrave;nh chỉ c&oacute; 01 ch&igrave;a kh&oacute;a chung. V&igrave; vậy những ph&ograve;ng trong khu Villa sẽ kh&ocirc;ng c&oacute; ch&igrave;a kh&oacute;a ri&ecirc;ng cho từng ph&ograve;ng
-                                    b&ecirc;n ngo&agrave;i, chỉ c&oacute; chốt cửa b&ecirc;n trong.V&igrave; vậy để đảm bảo an to&agrave;n khi ra khỏi ph&ograve;ng, Qu&yacute; kh&aacute;ch vui l&ograve;ng tự giữ g&igrave;n tư trang, tiền bạc hoặc
-                                    gửi k&eacute;t sắt tại lễ t&acirc;n. Vietravel kh&ocirc;ng chịu tr&aacute;ch nhiệm giải quyết hay đền b&ugrave; về việc kh&aacute;ch h&agrave;ng bị mất tư trang hoặc vật dụng c&aacute; nh&acirc;n.</p>
-                                <p>
-                                    5. Khu vực sử dụng chung trong khu Villa gồm ph&ograve;ng kh&aacute;ch, bếp, hồ bơi gia đ&igrave;nh, b&igrave;nh đun nước, ly, t&aacute;ch, tủ lạnh... Trong tủ lạnh sẽ kh&ocirc;ng để đồ uống. Trong trường hợp Qu&yacute; kh&aacute;ch muốn sử dụng sẽ li&ecirc;n
-                                    hệ lễ t&acirc;n hoặc nh&agrave; h&agrave;ng b&aacute;o r&otilde; họ t&ecirc;n cụ thể, số điện thoại v&agrave; số ph&ograve;ng Villa. Đề nghị khi trả ph&ograve;ng Qu&yacute; kh&aacute;ch chịu tr&aacute;ch nhiệm
-                                    thanh to&aacute;n đầy đủ c&aacute;c dịch vụ đ&atilde; sử dụng kh&ocirc;ng bao gồm trong chương tr&igrave;nh.</p>
-                                <p>
-                                    6. Kh&aacute;ch h&agrave;ng cam kết c&oacute; tr&aacute;ch nhiệm truyền đạt nội dung cam kết đến từng th&agrave;nh vi&ecirc;n trong gia đ&igrave;nh m&agrave; m&igrave;nh đại diện đăng k&yacute;.</p>
-                                <p>
-                                    Đề nghị Qu&yacute; kh&aacute;ch đọc kỹ c&aacute;c điều kiện trong cam kết khi quyết định mua tour sử dụng c&aacute;c ph&ograve;ng gh&eacute;p trong Villa. Vietravel sẽ kh&ocirc;ng chịu tr&aacute;ch nhiệm giải quyết bất cứ khiếu nại li&ecirc;n quan đến
-                                    những điều đ&atilde; cam kết ph&iacute;a tr&ecirc;n.</p>
-                                <p>
-                                    &nbsp;</p>
-                                </>
+                    </div><!--/.col-->
 
-                                </html>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script type="text/javascript">
-                function CheckPayment() {
-                    if ($('#cbAgree').prop('checked')) {
-                        $('#divPayment').show();
-                    } else {
-                        $('#divPayment').hide();
-                    }
-                }
-            </script>;
-        </div>
+                    <div class="col-sm-3">
+                        <div class="single-footer-item">
+                            <h2>Điểm du lịch nổi tiếng</h2>
+                            <div class="single-footer-txt">
+                                <p><a href="#">hà nội</a></p>
+                                <p><a href="#">tp hồ chí minh</a></p>
+                                <p><a href="#">vũng tàu</a></p>
+                                <p><a href="#">đà lạt</a></p>
+                                <p><a href="#">nha trang</a></p>
+                            </div><!--/.single-footer-txt-->
+                        </div><!--/.single-footer-item-->
+                    </div><!--/.col-->
 
-        <style>
-            .hidden {
-                display: none;
-            }
-        </style>
-        <div id="ReChoosePayment" class="modal fade reChoosePayment" role="dialog">
-            <div class="modal-dialog">
+                    <div class="col-sm-3">
+                        <div class="single-footer-item text-center">
+                            <h2 class="text-left">contacts</h2>
+                            <div class="single-footer-txt text-left">
+                                <p>(+84) 249999 6916</p>
+                                <p class="foot-email" style="text-transform:none;">
+                                    <a href="#">21130549@st.hcmuaf.edu.vn</a></p>
+                                <p>Võ Minh Thịnh</p>
+                                <p class="foot-email" style="text-transform:none;">
+                                    <a href="#">21130558@st.hcmuaf.edu.vn</a></p>
+                                <p>Mai Xuân Thức</p>
+                                <p class="foot-email" style="text-transform:none;">
+                                    <a href="#">21130615@st.hcmuaf.edu.vn</a></p>
+                                <p>Trần Quang Vũ</p>
+                            </div><!--/.single-footer-txt-->
+                        </div><!--/.single-footer-item-->
+                    </div><!--/.col-->
 
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h6 class="modal-title">CHỌN LẠI H&#204;NH THỨC THANH TO&#193;N</h6>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="/Booking/ChoosePayment" id="ChoosePayment" method="post"><input name="__RequestVerificationToken" type="hidden" value="wI3D1O9LQa_oz1fxV-5K7_qDaKoi2kZy5eTY6liBq59Sl3g0PfCIOGWs6tDppjkIe9ubZLOF0jP7wmuk9XzzlLfN26bOf0C5JTklbBQf3Is1" /> <input id="pin_codePayment" name="pin_code" type="hidden"
-                                                                                                                                                                                                                                                                                     value="5098aa74-c5d7-4ebb-a669-536afc5a9488">
-                            <div class="radio">
-                                <label style="display:none;"><input type="radio" class="chkPayment" name="paymentID" value="1" /><label class="lb_r">Tiền mặt</label></label>
-                            </div>
-                            <div class="radio">
-                                <label style="display:none;"><input type="radio" class="chkPayment" name="paymentID" value="2" /><label class="lb_r">Chuyển khoản</label></label>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" class="chkPayment" name="paymentID" value="9" /><label class="lb_r">ATM / Internet Banking</label></label>
-                            </div>
-                            <div id="paymenttypeZalo" name="paymentID" value="0" class="hidden">
-                                <div class="row d-flex justify-content-between mb-3">
-                                    <div class="col-6">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1">
-                                            <input type="hidden" value="qr_zalo" id="Option" />
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                <i class="icon icon--qr-code"></i> &nbsp;QRcode
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
-                                            <input type="hidden" value="visa_zalo" id="Option" />
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                <i class="icon icon--credit-card"></i>&nbsp; Thẻ nội địa
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" class="chkPayment" name="paymentID" value="0" checked="&#39;checked&#39;" /><label class="lb_r">Thẻ t&#237;n dụng</label></label>
-                            </div>
-                            <div id="paymenttype" class="hidden">
-                                <div class="row d-flex justify-content-between mb-3">
-                                    <div class="col-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="choosePaymentType">
-                                            <input type="hidden" value="visa" id="Option" />
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                <img src="/Content/Theme/images/thevisa.png" alt="amex" />
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="choosePaymentType">
-                                            <input type="hidden" value="mastercard" id="Option" />
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                <img src="/Content/Theme/images/master.png" alt="amex" />
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="choosePaymentType">
-                                            <input type="hidden" value="jcb" id="Option" />
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                <img src="/Content/Theme/images/jcb.png" alt="amex" />
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="choosePaymentType">
-                                            <input type="hidden" value="amex" id="Option" />
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                <img src="/Content/Theme/images/amex.png" alt="amex" />
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="radio" id="hellradio">
-                                <label><input type="radio" class="chkPayment" name="paymentID" value="16" /><label class="lb_r">Thanh To&#225;n VNPAY</label></label>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" class="chkPayment" name="paymentID" value="17" /><label class="lb_r">Thanh to&#225;n bằng Momo</label></label>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" class="chkPayment" name="paymentID" value="18" /><label class="lb_r">Thanh to&#225;n qua cổng ShopeePay</label></label>
-                            </div>
-                            <div class="radio Hardcode d-none">
-                                <label><input type="radio" class="chkPayment" name="paymentID" value="-1" /><label class="lb_r">Thanh toán bằng cổng MBBank</label></label>
-                            </div>
-                            <div id="paymenttypeMB" class="hidden">
-                                <div class="row d-flex justify-content-between mb-3">
-                                    <div class="col-6">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="choosePaymentType">
-                                            <input type="hidden" value="MBbankQR" id="Option" />
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                <i class="icon icon--qr-code"></i> QRcode
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="choosePaymentType">
-                                            <input type="hidden" value="MBbankCard" id="Option" />
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                <i class="icon icon--credit-card"></i> Thẻ
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" class="chkPayment" name="paymentID" value="19" /><label class="lb_r">MBbank</label></label>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary text-uppercase">Thay đổi</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-</main>
+                </div><!--/.row-->
+
+            </div><!--/.footer-content-->
+            <hr>
+            <div class="foot-icons ">
+                <ul class="footer-social-links list-inline list-unstyled">
+                    <li><a href="https://www.facebook.com/TourNest.org" target="_blank" class="foot-icon-bg-1"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/tournest_io" target="_blank" class="foot-icon-bg-2"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/tournest.io/" target="_blank" class="foot-icon-bg-3"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    </li>
+                </ul>
+                <p>&copy; 2023-2024 <a href="https://github.com/MinhThinhrine/Do_An_Web">Nhóm 18</a>. All Right Reserved.
+                </p>
+
+            </div><!--/.foot-icons-->
+            <div id="scroll-Top">
+                <i class="fa fa-angle-double-up return-to-top" id="scroll-top 1" data-toggle="tooltip" data-placement="top"
+                   title="" data-original-title="Back to Top" aria-hidden="true"></i>
+            </div><!--/.scroll-Top-->
+        </div><!-- /.container-->
+
+    </footer><!-- /.footer-copyright-->
+    <!-- footer-copyright end -->
+    <div id="fb-customer-chat" class="fb-customerchat" page_id="181053065281290" attribution="biz_inbox"></div>
+</div>
 </body>
-<!-- footer-copyright start -->
-<footer class="footer-copyright">
-    <div class="container">
-        <div class="footer-content">
-            <div class="row">
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <div class="footer-logo">
-                            <a href="index.html">
-                                tour<span>Nest</span>
-                            </a>
-                            <p>
-                                best travel tour guide
-                            </p>
-                        </div>
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <h2>Đối tác hợp tác</h2>
-                        <div class="single-footer-txt">
-                            <p><a href="https://www.traveloka.com/vi-vn/">traveloka</a></p>
-                            <p><a href="https://www.ivivu.com/">ivivu</a></p>
-                            <p><a href="https://www.saigontourist.net/">saigon tourist</a></p>
-                            <p><a href="https://travel.com.vn/">travel</a></p>
-                            <p><a href="https://www.vietnambooking.com/">vietnam booking</a></p>
-                            <p><a href="https://dulichviet.com.vn/" target=”_blank”>dulichviet</a></p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <h2>Điểm du lịch nổi tiếng</h2>
-                        <div class="single-footer-txt">
-                            <p><a href="#">hà nội</a></p>
-                            <p><a href="#">tp hồ chí minh</a></p>
-                            <p><a href="#">vũng tàu</a></p>
-                            <p><a href="#">đà lạt</a></p>
-                            <p><a href="#">nha trang</a></p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item text-center">
-                        <h2 class="text-left">contacts</h2>
-                        <div class="single-footer-txt text-left">
-                            <p>(+84) 249999 6916</p>
-                            <p class="foot-email" style="text-transform:none;">
-                                <a href="#">21130549@st.hcmuaf.edu.vn</a></p>
-                            <p>Võ Minh Thịnh</p>
-                            <p class="foot-email" style="text-transform:none;">
-                                <a href="#">21130558@st.hcmuaf.edu.vn</a></p>
-                            <p>Mai Xuân Thức</p>
-                            <p class="foot-email" style="text-transform:none;">
-                                <a href="#">21130615@st.hcmuaf.edu.vn</a></p>
-                            <p>Trần Quang Vũ</p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-            </div><!--/.row-->
-
-        </div><!--/.footer-content-->
-        <hr>
-        <div class="foot-icons ">
-            <ul class="footer-social-links list-inline list-unstyled">
-                <li><a href="https://www.facebook.com/TourNest.org" target="_blank" class="foot-icon-bg-1"><i class="fa-brands fa-facebook fa-xl"></i></a>
-                </li>
-                <li><a href="https://twitter.com/tournest_io" target="_blank" class="foot-icon-bg-2"><i class="fa-brands fa-twitter fa-xl"></i></a>
-                </li>
-                <li><a href="https://www.instagram.com/tournest.io/" target="_blank" class="foot-icon-bg-3"><i class="fa-brands fa-instagram fa-xl"></i></a>
-                </li>
-            </ul>
-            <p>&copy; 2023-2024 <a href="https://github.com/MinhThinhrine/Do_An_Web">Nhóm 18</a>. All Right Reserved.
-            </p>
-
-        </div><!--/.foot-icons-->
-        <div id="scroll-Top">
-            <i class="fa fa-angle-double-up return-to-top" id="scroll-top 1" data-toggle="tooltip" data-placement="top"
-               title="" data-original-title="Back to Top" aria-hidden="true"></i>
-        </div><!--/.scroll-Top-->
-    </div><!-- /.container-->
-
-</footer><!-- /.footer-copyright-->
-<!-- footer-copyright end -->
-
 </html>

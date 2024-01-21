@@ -91,9 +91,9 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                                 <i class="fa fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
                                 <span class="username"><%= user.getUserName() %></span>
                                 <ul id="service_account">
-                                    <li><a id="myInfor" href="infor.jsp">Tài Khoản</a></li>
-                                    <li><a id="bill" href="bill.jsp">Hóa Đơn </a></li>
-                                    <li>
+                                    <li style="text-align: left"><a id="myInfor" href="infor.jsp">Tài Khoản</a></li>
+                                    <li style="text-align: left"><a id="bill" href="bill.jsp">Hóa Đơn </a></li>
+                                    <li style="text-align: left">
                                         <form action="login" method="get">
                                             <button type="submit" name="action" id="logout" value="logout">Đăng Xuất</button>
                                         </form></li>
@@ -355,12 +355,6 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                                 <a href="#pack" onclick="changePage(16)">16</a>
                                 <a href="#pack" onclick="changePage(17)">17</a>
                                 <a href="#pack" onclick="changePage(18)">18</a>
-                                <a href="#pack" onclick="changePage(19)">19</a>
-                                <a href="#pack" onclick="changePage(20)">20</a>
-                                <a href="#pack" onclick="changePage(21)">21</a>
-                                <a href="#pack" onclick="changePage(22)">22</a>
-                                <a href="#pack" onclick="changePage(23)">23</a>
-                                <a href="#pack" onclick="changePage(24)">24</a>
 							</span>
                             <a class="pagination-older" href="#pack" onclick="nextPage()">
                                 <i class="fa fa-chevron-right"></i>
@@ -377,6 +371,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
 </div>
 
 <!-- footer-copyright start -->
+
 <footer class="footer-copyright">
     <div class="container">
         <div class="footer-content">
@@ -425,18 +420,18 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                     <div class="single-footer-item text-center">
                         <h2 class="text-left">contacts</h2>
                         <div class="single-footer-txt text-left">
-                            <p><i class="fa-solid fa-phone"></i> (+84) 249 999 16</p>
+                            <p><i class="fa fa-phone"></i> (+84) 249 999 16</p>
                             <p class="foot-email" style="text-transform:none;">
-                                <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i class="fa-solid fa-map-location-dot"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a></p>
+                                <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i class="fa fa-map"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a></p>
                             <p>Võ Minh Thịnh</p>
                             <p class="foot-email" style="text-transform:none;">
-                                <a href="mailto:21130549@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130549@st.hcmuaf.edu.vn</a></p>
+                                <a href="mailto:21130549@st.hcmuaf.edu.vn"><i class="fa fa-envelope"></i> 21130549@st.hcmuaf.edu.vn</a></p>
                             <p>Mai Xuân Thức</p>
                             <p class="foot-email" style="text-transform:none;">
-                                <a href="mailto:21130558@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130558@st.hcmuaf.edu.vn</a></p>
+                                <a href="mailto:21130558@st.hcmuaf.edu.vn"><i class="fa fa-envelope"></i> 21130558@st.hcmuaf.edu.vn</a></p>
                             <p>Trần Quang Vũ</p>
                             <p class="foot-email" style="text-transform:none;">
-                                <a href="mailto:21130615@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130615@st.hcmuaf.edu.vn</a></p>
+                                <a href="mailto:21130615@st.hcmuaf.edu.vn"><i class="fa fa-envelope"></i> 21130615@st.hcmuaf.edu.vn</a></p>
                         </div><!--/.single-footer-txt-->
                     </div><!--/.single-footer-item-->
                 </div><!--/.col-->
@@ -446,12 +441,12 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
             <hr>
             <div class="foot-icons ">
                 <ul class="footer-social-links list-inline">
-                    <li><a href="https://www.facebook.com/TourNest.org" target="_blank" class="foot-icon-bg-1"><i
-                            class="fa fa-facebook fa-xl"></i></a></li>
-                    <li><a href="https://twitter.com/tournest_io" target="_blank" class="foot-icon-bg-2"><i
-                            class="fa fa-twitter fa-xl"></i></a></li>
-                    <li><a href="https://www.instagram.com/tournest.io/" target="_blank" class="foot-icon-bg-3"><i
-                            class="fa fa-instagram fa-xl"></i></a></li>
+                    <li class="d-inline-block"><a href="https://www.facebook.com/TourNest.org" target="_blank" class="foot-icon-bg-1"><i
+                            class="fab fa-facebook-f fa-xl"></i></a></li>
+                    <li class="d-inline-block"><a href="https://twitter.com/tournest_io" target="_blank" class="foot-icon-bg-2"><i
+                            class="fab fa-twitter fa-xl"></i></a></li>
+                    <li class="d-inline-block"><a  href="https://www.instagram.com/tournest.io/" target="_blank" class="foot-icon-bg-3"><i
+                            class="fab fa-instagram fa-xl"></i></a></li>
                 </ul>
                 <p>&copy; 2023-2024 <a href="https://github.com/MinhThinhrine/Do_An_Web">Nhóm 18</a>. All Right Reserved.</p>
 
@@ -463,8 +458,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
             </div><!--/.scroll-Top-->
         </div><!-- /.container-->
     </div>
-</footer><!-- /.footer-copyright-->
-<!-- footer-copyright end -->
+</footer><!-- /.footer-copyright--><!-- footer-copyright end -->
 
 <script src="assets/js/modify.js"></script>
 <script src="assets/js/custom.js"></script>
@@ -531,6 +525,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                 items[j].style.display = 'block';
             }
         }
+
     }
 
     // Chuyển đến trang tiếp theo
@@ -539,6 +534,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
             currentPage++;
             showItems();
             scrollToTop();
+            active(currentPage);
         }
     }
 
@@ -548,6 +544,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
             currentPage--;
             showItems();
             scrollToTop();
+            active(currentPage);
         }
     }
 
@@ -557,7 +554,15 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
             currentPage = page;
             showItems();
             scrollToTop();
+            active(page);
         }
+    }
+    function active(pageNumber) {
+        var paginationLinks = document.getElementsByClassName('pagination-inner')[0].getElementsByTagName('a');
+        for (var i = 0; i < paginationLinks.length; i++) {
+            paginationLinks[i].classList.remove('pagination-active');
+        }
+        paginationLinks[pageNumber - 1].classList.add('pagination-active');
     }
 
     // Hiển thị trang đầu tiên khi tải trang
