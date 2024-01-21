@@ -320,9 +320,71 @@ VALUES
     ('Miền Nam', 1, 'Bến Tre - Cần Thơ', '69.jpg', 6790000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: . . . - Ngày 2: . . .  - Ngày 3: . . . - Ngày 4: . . .', 'Cần Thơ là một thành phố lớn và là trung tâm kinh tế, văn hóa của miền Tây Nam Bộ Việt Nam. Thành phố Cần Thơ cũng được biết đến với cảnh quan thiên nhiên tuyệt đẹp, nhưng đặc biệt là Làng Sen, nơi du khách có thể ngắm nhìn vườn sen tràn đầy nước và tham quan các nhà máy chế biến sen. Cần Thơ có một văn hóa ẩm thực phong phú, với các món ăn đặc sản địa phương. Tóm lại, Cần Thơ là một thành phố đáng để khám phá, với sự kết hợp giữa cảnh quan thiên nhiên, di sản văn hóa, và cuộc sống sôi động của người dân miền Tây Nam Bộ.'),
     ('Miền Nam', 1, 'Cần Thơ - Chợ nổi Cái Răng', '70.jpg', 2076000, 'hằng ngày', '2 ngày 1 đêm', 'Ngày 1: . . . - Ngày 2: . . . ', 'Chợ Nổi Cái Răng là một chợ nổi nổi tiếng tại thành phố Cần Thơ, miền Tây Nam Bộ Việt Nam. Nằm trên sông Hậu, chợ Nổi Cái Răng là một điểm đến du lịch hấp dẫn với không gian sôi động và chất local.
 Tại chợ Nổi Cái Răng, bạn sẽ được thấy các thuyền buôn đầy hàng hoá và sản phẩm đa dạng như rau củ quả, hải sản tươi ngon, hàng dệt may, và nhiều loại đặc sản địa phương khác. Du khách có thể mua sắm, thưởng thức những món ăn đường phố truyền thống, hoặc tham gia vào các hoạt động như đi thuyền ngắm cảnh và thăm quan khu vực xung quanh chợ.
-Chợ Nổi Cái Răng là một điểm đến thu hút du khách bởi không chỉ là nơi mua sắm và trao đổi hàng hóa, mà còn là một cái nhìn sâu sắc vào cuộc sống và văn hóa dân gian của người dân miền Tây Nam Bộ.');
+Chợ Nổi Cái Răng là một điểm đến thu hút du khách bởi không chỉ là nơi mua sắm và trao đổi hàng hóa, mà còn là một cái nhìn sâu sắc vào cuộc sống và văn hóa dân gian của người dân miền Tây Nam Bộ.'),
 -- 71-140
+    ('Miền Trung', 1, 'Quảng Bình - Kẻ Gỗ', '71.png', 1990000, 'hằng ngày', '2 ngày 2 đêm', 'Ngày 1: Quảng Bình - Ngày 2: Kẻ Gỗ'
+    ,'Quảng Bình và Kẻ Gỗ là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Đà Nẵng - Hội An', '72.png', 2990000, 'hằng ngày', '3 ngày 2 đêm', 'Ngày 1: Đà Nẵng - Ngày 2: Hội An - Ngày 3: Hội An và về lại Đà Nẵng'
+    ,'Đà Nẵng và Hội An là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Đà Nẵng - Huế - Quảng Bình', '73.png', 2990000, 'hằng ngày', '3 ngày 2 đêm', 'Ngày 1: Đà Nẵng - Ngày 2: Huế - Ngày 3: Quảng Bình'
+    ,'Đà Nẵng, Huế, Quảng Bình là ba điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, ' Huế - Đà Nẵng - Hội An', '74.png', 2990000, 'hằng ngày', '3 ngày 2 đêm', 'Ngày 1: Huế - Ngày 2: Đà Nẵng - Ngày 3: Hội An'
+    ,'Đà Nẵng, Huế, Hội An là ba điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Quy Nhơn - Phú Yên', '75.png', 1990000, 'hằng ngày', '2 ngày 2 đêm', 'Ngày 1: Qui Nhơn- Ngày 2: Phú Yên'
+    ,'Quy Nhơn - Phú Yên là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Quảng Nam - Cù Lao Chàm', '76.png', 1990000, 'hằng ngày', '2 ngày 2 đêm', 'Ngày 1: Quảng Nam - Ngày 2: Cù Lao Chàm'
+    ,'Quảng Nam, Cù Lao Chàm là ba điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Gia Lai - Kon Tum', '77.png', 1990000, 'hằng ngày', '2 ngày 1 đêm', 'Ngày 1: Gia Lai - Ngày 2: Kon Tum'
+    ,'Gia Lai, Kon Tum là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Nha Trang - Đảo Hoa Lan', '78.png', 1990000, 'hằng ngày', '2 ngày 1 đêm', 'Ngày 1: Nha Trang- Ngày 2: Đảo Hoa Lan'
+    ,'Nha Trang, Đảo Hoa Lan là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Quảng Bình - Đèo Ngang', '79.png', 1990000, 'hằng ngày', '2 ngày 1 đêm', 'Ngày 1: Quảng Bình- Ngày 2: Đèo Ngang'
+    ,'Quảng Bình - Đèo Ngang là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Đà Nẵng - Phong Nha', '80.png', 2990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Đà Nẵng- Ngày 2: Huế- Ngày 3: Phong Nha-Ngày 4: Về lại Đà Nẵng'
+    ,'Đà Nẵng - Huế - Phong Nha là ba điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Pleiku - Kon Tum', '81.png', 2990000, 'hằng ngày', '3 ngày 3 đêm', 'Ngày 1: Pleiku- Ngày 2: Gia Lai- Ngày 3: Kon Tum'
+    ,'Pleiku - Gia Lai - Kon Tum là ba điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Tam Kỳ - Quảng Ngãi', '82.png', 1990000, 'hằng ngày', '2 ngày 2 đêm', 'Ngày 1: Tam Kỳ - Ngày 2: Quãng Ngãi'
+    ,'Tam Kỳ - Quảng Ngãi là ba điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Cửa Lò - Nghệ An', '83.png', 2990000, 'hằng ngày', '3 ngày 3 đêm', 'Ngày 1: Cửa Lò- Ngày 2: Nghệ An- Ngày 3: Về lại Nghệ An'
+    ,'Cửa Lò - Nghệ An là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Bình Thuận - Phan Thiết', '84.png', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Bình Thuận- Ngày 2: Phan Thiết- Ngày 3: Du lịch biển Phan Thiết-Ngày 4: Về lại Bình Thuận'
+    ,'Bình Thuận - Phan Thiết là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Tam Đảo - Vĩnh Phúc', '85.png', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Tam Đảo- Ngày 2: Vĩnh Phúc- Ngày 3: Du lịch biển Vĩnh Phúc-Ngày 4: Về lại Tam Đảo'
+    ,'Tam Đảo - Vĩnh Phúc là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Tràng An - Ninh Bình', '86.png', 2990000, 'hằng ngày', '3 ngày 3 đêm', 'Ngày 1: Tràng An- Ngày 2: Ninh Bình- Ngày 3: Về lại Tràng An'
+    ,'Tràng An - Ninh Bình là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Đà Nẵng - Bà Nà Hills', '87.png', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Đà Nẵng- Ngày 2: Bà Nà Hills- Ngày 3: Tiếp tục khám phá Bà Nà Hills -Ngày 4: Về lại Đà Nẵng'
+    ,'Đà Nẵng - Bà Nà Hills là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
 
+    ('Miền Trung', 1, 'Đà Nẵng - Hội An', '88.png', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Đà Nẵng- Ngày 2: Ngũ Hành Sơn- Ngày 3: Hội An -Ngày 4: Về lại Đà Nẵng'
+    ,'Đà Nẵng - Ngũ Hành Sơn - Hội An ba điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Đà Nẵng - Huế', '89.png', 2990000, 'hằng ngày', '3 ngày 3 đêm', 'Ngày 1: Đà Nẵng- Ngày 2: Ngũ Hành Sơn- Ngày 3: Huế'
+    ,'Đà Nẵng - Ngũ Hành Sơn - Huế là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Huế - Đà Nẵng', '90.png', 2990000, 'hằng ngày', '3 ngày 3 đêm', 'Ngày 1: Huế- Ngày 2: Chùa Thiện Mụ- Ngày 3: Đà Nẵng'),
+    ('Miền Trung', 1, 'Nha Trang - Đà Nẵng', '91.png', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Nha Trang- Ngày 2: Vinpearl Land- Ngày 3: Vinpearl Safari -Ngày 4: Đà Nẵng'
+    ,'Nha Trang - Vinpearl Land - Vinpearl Safari - Đà Nẵng là bốn điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Nha Trang - Hội An', '92.png', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Nha Trang- Ngày 2: Vinpearl Land- Ngày 3: Vinpearl Safari -Ngày 4: Hội An'
+    ,'Nha Trang - Vinpearl Land - Vinpearl Safari - Hội An là bốn điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Nha Trang - Hội An', '93.png', 2990000, 'hằng ngày', '3 ngày 3 đêm', 'Ngày 1: Nha Trang- Ngày 2: Vinpearl Land- Ngày 3: Hội An'
+    ,'Nha Trang - Vinpearl Land - Hội An là ba điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Đà Nẵng - Bà Nà Hills', '94.png', 2990000, 'hằng ngày', '3 ngày 3 đêm', 'Ngày 1: Đà Nẵng- Ngày 2: Ngũ Hành Sơn- Ngày 3: Bà Nà Hills'
+    ,' Đà Nẵng - Ngũ Hành Sơn - Bà Nà Hills là ba điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Đà Nẵng - Bà Nà Hills', '95.jpg', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Đà Nẵng- Ngày 2: Huế- Ngày 3: Hội An -Ngày 4: Bà Nà Hills'
+    ,'Đà Nẵng - Huế - Hội An - Bà Nà Hills là bốn điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Đà Nẵng - Cù Lao Chàm', '96.jpg', 4990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Đà Nẵng- Ngày 2: Ngũ Hành Sơn- Ngày 3: Bà Nà Hills -Ngày 4: Chùa Thiên Mụ- Ngày 5: Cù Lao Chàm'
+    ,' Đà Nẵng - Ngũ Hành Sơn - Bà Nà Hills - Chùa Thiên Mụ - Cù Lao Chàm là năm điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+
+    ('Miền Trung', 1, 'Đà Nẵng - Cù Lao Chàm', '97.jpg', 1990000, 'hằng ngày', '2 ngày 3 đêm', 'Ngày 1: Đà Nẵng- Ngày 2: Cù Lao Chàm'
+    ,' Đà Nẵng - Cù Lao Chàm là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+    ('Miền Trung', 1, 'Huế - Cù Lao Chàm', '98.jpg', 2990000, 'hằng ngày', '3 ngày 2 đêm', 'Ngày 1: Huế- Ngày 2: Chùa Thiện Mụ- Ngày 3: Cù Lao Chàm'
+    ,' Huế - Chùa Thiên Mụ - Cù Lao Chàm  là ba điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+
+    ('Miền Trung', 1, 'Huế - Cù Lao Chàm', '99.jpg', 1990000, 'hằng ngày', '2 ngày 1 đêm', 'Ngày 1: Huế- Ngày 2: Cù Lao Chàm'
+    ,' Huế - Cù Lao Chàm là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+
+    ('Miền Trung', 1, 'Nha Trang - Vinpearl Land', '100.jpg', 1990000, 'hằng ngày', '2 ngày 1 đêm', 'Ngày 1: Nha Trang- Ngày 2: Vinpearl Land'
+    ,' Nha Trang - Vinpearl Land là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.');
 
 
 -- 141 -->210----------------------------------->
