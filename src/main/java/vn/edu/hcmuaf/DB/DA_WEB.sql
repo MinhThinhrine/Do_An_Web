@@ -384,7 +384,7 @@ Chợ Nổi Cái Răng là một điểm đến thu hút du khách bởi không 
     ,' Huế - Cù Lao Chàm là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
 
     ('Miền Trung', 1, 'Nha Trang - Vinpearl Land', '100.jpg', 1990000, 'hằng ngày', '2 ngày 1 đêm', 'Ngày 1: Nha Trang- Ngày 2: Vinpearl Land'
-    ,' Nha Trang - Vinpearl Land là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.');
+    ,' Nha Trang - Vinpearl Land là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
 
 
 -- 141 -->210----------------------------------->

@@ -20,15 +20,15 @@ public class TourController  extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Lấy dữ liệu từ cơ sở dữ liệu
-        TourDao tourDao = new TourDao();
-        ArrayList<Tour> tours = (ArrayList<Tour>) tourDao.getAllTourForIndex();
-
-        // Đặt danh sách vào yêu cầu
-        request.setAttribute("data", tours);
-
-
-        // Chuyển hướng đến trang JSP
-        request.getRequestDispatcher("test.jsp").forward(request, response);
+//        // Lấy dữ liệu từ cơ sở dữ liệu
+//        TourDao tourDao = new TourDao();x
+//
+//
+//        // Đặt danh sách vào yêu cầu
+//        request.setAttribute("data", tours);
+//
+//
+//        // Chuyển hướng đến trang JSP
+//        request.getRequestDispatcher("test.jsp").forward(request, response);
     }
 }
