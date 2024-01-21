@@ -1,7 +1,5 @@
 package vn.edu.hcmuaf.bean;
 
-import java.util.Date;
-
 public class Tour {
     private int id;
     private String region;

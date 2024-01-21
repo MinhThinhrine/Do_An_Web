@@ -4,7 +4,6 @@ import vn.edu.hcmuaf.DB.ConnectToDatabase;
 import vn.edu.hcmuaf.bean.Tour;
 import vn.edu.hcmuaf.bean.valies;
 
-import javax.servlet.http.HttpSession;
 import java.sql.*;
 import java.sql.ResultSet;
 import java.util.ArrayList;
