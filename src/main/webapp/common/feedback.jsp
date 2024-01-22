@@ -2,10 +2,15 @@
 <%@ page import="vn.edu.hcmuaf.DAO.indexDao" %>
 <%@ page import="vn.edu.hcmuaf.bean.*" %>
 <%@ page import="java.util.Random" %>
+
 <%
-    indexDao indx = new indexDao();
-    List<feedback> fback = (List<feedback>) request.getAttribute("feeds");
+    indexDao ind = new indexDao();
+    List<feedback> fback = new indexDao().getFeedbacks() ;
+    for (feedback f: fback) {
+        System.out.println(f);
+    }
 %>
+
 <section id="feedback" class="testemonial">
     <div class="container">
 
@@ -33,7 +38,7 @@
                         </p>
                         <h3>
                             <a href="#" style="color: #00d8fe!important;">
-                                <% String uN = indx.getUserNameById(f.getUserId()); %>
+                                <% String uN = ind.getUserNameById(1); %>
                                 <%=uN%>
                             </a>
                         </h3>

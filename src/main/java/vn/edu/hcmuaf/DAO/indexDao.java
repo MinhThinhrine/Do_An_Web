@@ -11,10 +11,10 @@ import java.util.Date;
 import java.util.List;
 
 public class indexDao {
-    Connection connection;
-    ResultSet rs = null;
-    PreparedStatement preparedStatement = null;
-    public List<news> getAllNews() {
+    static Connection connection;
+    static ResultSet rs = null;
+    static PreparedStatement preparedStatement = null;
+    public static List<news> getAllNews() {
         List<news> newsList = new ArrayList<>();
         try {
             connection = ConnectToDatabase.getConnect();
@@ -22,13 +22,14 @@ public class indexDao {
             preparedStatement = connection.prepareStatement(sql);
             rs = preparedStatement.executeQuery(sql);
             while (rs.next()) {
+                int id = rs.getInt("id");
                 String title = rs.getString("title");
                 Date date = rs.getDate("date");
                 String content = rs.getString("content");
                 String image = rs.getString("image");
                 String newsLink = rs.getString("newsLink");
 
-                news news = new news(title, date, content, image, newsLink);
+                news news = new news(id,title, date, content, image, newsLink);
                 newsList.add(news);
             }
         } catch (Exception e) {
@@ -37,13 +38,13 @@ public class indexDao {
         }
         return newsList;
     }
-    public List<feedback> getFeedbacks() {
+    public static List<feedback> getFeedbacks() {
         List<feedback> feedbackList = new ArrayList<>();
         try {
             connection = ConnectToDatabase.getConnect();
             String sql = "SELECT * FROM feedbacks";
             preparedStatement = connection.prepareStatement(sql);
-            rs = preparedStatement.executeQuery();
+            rs = preparedStatement.executeQuery(sql);
             while (rs.next()) {
                 int id = rs.getInt("id");
                 int userId = rs.getInt("userId");
@@ -58,20 +59,30 @@ public class indexDao {
         }
         return feedbackList;
     }
-    public String getUserNameById(int id) {
+    public static String getUserNameById(int id) {
         try {
             connection = ConnectToDatabase.getConnect();
-            String sql = "SELECT name FROM users WHERE id = ?";
+            String sql = "SELECT userName FROM users WHERE id = ?";
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, id);
             rs = preparedStatement.executeQuery();
             if (rs.next()) {
-                return rs.getString("name");
+                return rs.getString("userName");
             }
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
         return "User Null";
+    }
+
+    public static void main(String[] args) {
+        List<feedback> newsList = new ArrayList<>();
+        indexDao ind = new indexDao();
+        String name = ind.getUserNameById(1);
+        System.out.println(name);
+        for (feedback n:newsList) {
+            System.out.println(n);
+        }
     }
 }

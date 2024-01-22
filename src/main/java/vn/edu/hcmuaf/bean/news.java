@@ -19,6 +19,15 @@ public class news {
         this.newsLink = newsLink;
     }
 
+    public news(int id, String title, Date date, String content, String image, String newsLink) {
+        this.id = id;
+        this.title = title;
+        this.date = date;
+        this.content = content;
+        this.image = image;
+        this.newsLink = newsLink;
+    }
+
     // Getters and Setters
     public int getId() {
         return id;

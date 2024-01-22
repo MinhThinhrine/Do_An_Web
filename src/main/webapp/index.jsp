@@ -1,6 +1,9 @@
 <%@ page import="vn.edu.hcmuaf.bean.Tour" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.text.DecimalFormat" %>
+<%@ page import="vn.edu.hcmuaf.DAO.indexDao" %>
+<%@ page import="vn.edu.hcmuaf.bean.feedback" %>
+<%@ page import="java.util.Random" %>
 <!doctype html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" isELIgnored= "false"%>
@@ -593,8 +596,13 @@
 
 
 <!-- feedback -->
+<!-- feedback Start -->
 
 <%--<%@include file="common/feedback.jsp" %>--%>
+
+<!-- feedback End -->
+
+
 
 <!-- feedback -->
 

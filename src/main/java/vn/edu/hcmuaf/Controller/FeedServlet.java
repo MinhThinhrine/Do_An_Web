@@ -13,9 +13,10 @@ import java.util.List;
 public class FeedServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
         indexDao indx = new indexDao();
         List<feedback> feedslist = indx.getFeedbacks();
-        request.setAttribute("feeds", feedslist);
+        session.setAttribute("feeds", feedslist);
         request.getRequestDispatcher("./index.jsp").forward(request, response);
     }
     @Override
