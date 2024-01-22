@@ -26,12 +26,12 @@ public class SortTour {
         return result;
     }
 
-    public static ArrayList<Tour> SortByDuration(LinkedList<Tour> TourOnCart, String param) {
+    public static ArrayList<Tour> SortByDuration(ArrayList<Tour> TourOnCart, String param) {
         ArrayList<Tour> result = new ArrayList<>();
         for (Tour tour : TourOnCart) {
             String sortBy = tour.getDuration().trim().toUpperCase();
-            System.out.println("Tour Duration: " + sortBy + ", Param: " + param);
-            if (sortBy.equalsIgnoreCase(param.trim().toUpperCase())) {
+//            System.out.println("Tour Duration: " + sortBy + ", Param: " + param);
+            if (sortBy.contains(param.trim().toUpperCase())) {
                 result.add(tour);
             }
         }

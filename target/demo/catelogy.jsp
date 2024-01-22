@@ -12,9 +12,18 @@
 <%@ page import="java.text.DecimalFormat" %>
 <%@include file="common/tablib.jsp" %>
 <%
-    TourDao td = new TourDao();
     ArrayList<Tour> tourss = (ArrayList<Tour>) session.getAttribute("ListTour");
+    String sort = (String) request.getAttribute("sortDay");
+    System.out.println(sort);
+    if (sort != null && !sort.isEmpty()) {
+        ArrayList<Tour> ListsortDay = (ArrayList<Tour>) request.getAttribute("ListsortDay");
+        if (ListsortDay != null) {
+            tourss = ListsortDay;
+        }
+    }
 %>
+
+
 <!DOCTYPE html>
 <html class="no-js" lang="vi">
 <head>
@@ -261,15 +270,34 @@
                 </div>
                 <div id="size" class="collapse show">
                     <div class="btn-group d-flex align-items-center flex-wrap" data-toggle="buttons">
-                        <label class="btn btn-success form-check-label"> <input class="form-check-input"
-                                                                                type="checkbox"> 1 </label>
-                        <label class="btn btn-success form-check-label"> <input class="form-check-input" type="checkbox"
-                                                                                checked> 2 </label>
-                        <label class="btn btn-success form-check-label"> <input class="form-check-input" type="checkbox"
-                                                                                checked> 3 </label>
-                        <label class="btn btn-success form-check-label"> <input class="form-check-input" type="checkbox"
-                                                                                checked> 4
-                        </label>
+                        <div class="btn btn-success form-check-label">
+                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=1 ngày'">
+                                1
+                            </button>
+                        </div>
+
+                        <div class="btn btn-success form-check-label">
+                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=2 ngày'">
+                                2
+                            </button>
+                        </div>
+
+                        <div class="btn btn-success form-check-label">
+                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=3 ngày'">
+                                3
+                            </button>
+                        </div>
+
+                        <div class="btn btn-success form-check-label">
+                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=4 ngày'">
+                                4
+                            </button>
+                        </div>
+
                         <label class="btn btn-success form-check-label"> <input class="form-check-input" type="checkbox"
                                                                                 checked> 5
                         </label>

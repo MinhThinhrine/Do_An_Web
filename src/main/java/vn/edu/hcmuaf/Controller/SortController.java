@@ -13,15 +13,35 @@ import java.util.ArrayList;
 public class SortController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=utf-8");
         HttpSession session = request.getSession();
         ArrayList<Tour> ListTour = (ArrayList<Tour>) session.getAttribute("ListTour");
         String action = request.getParameter("action");
         ArrayList<Tour> Listsort = null;
 
-        if(action.equals("sortbypriceAscending")){
+
+        if (action == null) {
+            System.out.println("Khong thuc hien duoc gi het");
+            session.setAttribute("ListTour", null);
+            request.getRequestDispatcher("catelogy.jsp").forward(request, response);
+
+        }else  if(action.equals("sortbypriceAscending")){
              Listsort = SortTour.SortByPriceAscending(ListTour);
         } else if(action.equals("sortbypriceDescending")){
             Listsort = SortTour.SortByPriceDescending(ListTour);
+        } else if(action.equals("sortbyDay")){
+            String day = request.getParameter("day");
+            System.out.println(day);
+            ArrayList<Tour> ListsortDay = SortTour.SortByDuration(ListTour,day);
+            for (Tour t: ListsortDay) {
+                System.out.println(t);
+            }
+            request.setAttribute("ListsortDay",ListsortDay);
+            request.setAttribute("sortDay","sortDay");
+            request.getRequestDispatcher("catelogy.jsp").forward(request, response);
+            return;
         }
 
 
