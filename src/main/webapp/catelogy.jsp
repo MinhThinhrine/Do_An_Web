@@ -1,6 +1,6 @@
 <!doctype html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" isELIgnored= "false"%>
+         pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <%@ page import="java.util.List" %>
@@ -12,8 +12,8 @@
 <%@ page import="java.text.DecimalFormat" %>
 <%@include file="common/tablib.jsp" %>
 <%
-TourDao td = new TourDao();
-List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
+    TourDao td = new TourDao();
+    ArrayList<Tour> tourss = (ArrayList<Tour>) session.getAttribute("ListTour");
 %>
 <!DOCTYPE html>
 <html class="no-js" lang="vi">
@@ -95,8 +95,10 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                                     <li style="text-align: left"><a id="bill" href="bill.jsp">Hóa Đơn </a></li>
                                     <li style="text-align: left">
                                         <form action="login" method="get">
-                                            <button type="submit" name="action" id="logout" value="logout">Đăng Xuất</button>
-                                        </form></li>
+                                            <button type="submit" name="action" id="logout" value="logout">Đăng Xuất
+                                            </button>
+                                        </form>
+                                    </li>
                                 </ul>
                             </li>
                             <% } else { %>
@@ -107,10 +109,10 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                             </li>
                             <% } %>
                         </ul>
-                </div><!-- /.main-menu-->
-            </div><!-- /.col-->
-        </div><!-- /.row -->
-    </div><!-- /.container -->
+                    </div><!-- /.main-menu-->
+                </div><!-- /.col-->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
     </div><!-- /.header-area -->
 </header><!-- /.top-area --><!-- /.top-area -->
 
@@ -129,12 +131,23 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
             ><span class="fa fa-toggle-left"></span></button>
             <div class="collapse navbar-collapse" id="mynav">
                 <ul class="navbar-nav d-lg-flex align-items-lg-center">
-                    <li class="nav-item active"><select name="sort" id="sort">
-                        <option value="" hidden selected>Sort by</option>
-                        <option value="price">Giá tiền</option>
-                        <option value="popularity">Nổi tiếng</option>
-                        <option value="rating">Đánh giá</option>
-                    </select></li>
+                    <li class="nav-item active">
+                        <ul name="sort" id="sort">
+                            <option value="" hidden selected>Sort by</option>
+                            <li data-value="price">
+                                <a href="${pageContext.request.contextPath}/SortController?action=sortbypriceAscending"
+                                   style="width: 100%">
+                                    Giá tiền tăng
+                                </a>
+                            </li>
+                            <li data-value="price">
+                                <a href="${pageContext.request.contextPath}/SortController?action=sortbypriceDescending"
+                                   style="width: 100%">
+                                    Giá tiền giảm
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="nav-item d-inline-flex align-items-center justify-content-between mb-lg-0 mb-3">
                         <div class="d-inline-flex align-items-center mx-lg-2" id="select2">
                             <div class="pl-2">Products:</div>
@@ -169,7 +182,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
             <div class="box border-bottom">
                 <div class="box-label text-uppercase d-flex align-items-center">Khu vực
                     <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box"
-                            aria-expanded="false" aria-controls="inner-box" id="out" ><span
+                            aria-expanded="false" aria-controls="inner-box" id="out"><span
                             class="fas fa-plus"></span></button>
                 </div>
                 <div id="inner-box" class="collapse mt-2 mr-1">
@@ -277,19 +290,23 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
         </div>
         <div id="products">
             <div class="row mx-0">
-                <% for(Tour t : tourss) { %>
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3 element"  id="<%=t.getId() %>">
+                <% for (Tour t : tourss) { %>
+                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3 element" id="<%=t.getId() %>">
                     <div class="single-package-item">
-                        <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>" style="width: 100%">
-                            <img style="cursor: pointer;width: 100%" class="packageImage" src="assets/images/item/<%=t.getImage()%>"
+                        <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>"
+                           style="width: 100%">
+                            <img style="cursor: pointer;width: 100%" class="packageImage"
+                                 src="assets/images/item/<%=t.getImage()%>"
                                  alt="package-place">
                         </a>
 
                         <div class="single-package-item-txt">
                             <h3><%=t.getName()%><span class="pull-right" style="margin-top: 25px;">
-                                <%int number = t.getPrice();
-                                DecimalFormat decimalFormat = new DecimalFormat("#,###");
-                                String formattedString = decimalFormat.format(number);%>
+                                <%
+                                    int number = t.getPrice();
+                                    DecimalFormat decimalFormat = new DecimalFormat("#,###");
+                                    String formattedString = decimalFormat.format(number);
+                                %>
                                 <%=formattedString%>
                             </span>
                             </h3>
@@ -319,7 +336,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                                 <a href="ValiServlet?id=<%=t.getId()%>">
                                     <button class="about-view packages-btn addvali">
                                         <i class="fa fa-plus"></i>
-                                        <i class="fa fa-suitcase-rolling" style="padding-left: 6px;" ></i>
+                                        <i class="fa fa-suitcase-rolling" style="padding-left: 6px;"></i>
                                     </button>
                                 </a>
                             </div>
@@ -363,11 +380,11 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                     </nav>
                 </div>
             </div>
-            </div>
-
-            </div>
         </div>
+
     </div>
+</div>
+</div>
 </div>
 
 <!-- footer-copyright start -->
@@ -422,16 +439,21 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                         <div class="single-footer-txt text-left">
                             <p><i class="fa fa-phone"></i> (+84) 249 999 16</p>
                             <p class="foot-email" style="text-transform:none;">
-                                <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i class="fa fa-map"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a></p>
+                                <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i
+                                        class="fa fa-map"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a>
+                            </p>
                             <p>Võ Minh Thịnh</p>
                             <p class="foot-email" style="text-transform:none;">
-                                <a href="mailto:21130549@st.hcmuaf.edu.vn"><i class="fa fa-envelope"></i> 21130549@st.hcmuaf.edu.vn</a></p>
+                                <a href="mailto:21130549@st.hcmuaf.edu.vn"><i class="fa fa-envelope"></i>
+                                    21130549@st.hcmuaf.edu.vn</a></p>
                             <p>Mai Xuân Thức</p>
                             <p class="foot-email" style="text-transform:none;">
-                                <a href="mailto:21130558@st.hcmuaf.edu.vn"><i class="fa fa-envelope"></i> 21130558@st.hcmuaf.edu.vn</a></p>
+                                <a href="mailto:21130558@st.hcmuaf.edu.vn"><i class="fa fa-envelope"></i>
+                                    21130558@st.hcmuaf.edu.vn</a></p>
                             <p>Trần Quang Vũ</p>
                             <p class="foot-email" style="text-transform:none;">
-                                <a href="mailto:21130615@st.hcmuaf.edu.vn"><i class="fa fa-envelope"></i> 21130615@st.hcmuaf.edu.vn</a></p>
+                                <a href="mailto:21130615@st.hcmuaf.edu.vn"><i class="fa fa-envelope"></i>
+                                    21130615@st.hcmuaf.edu.vn</a></p>
                         </div><!--/.single-footer-txt-->
                     </div><!--/.single-footer-item-->
                 </div><!--/.col-->
@@ -441,14 +463,18 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
             <hr>
             <div class="foot-icons ">
                 <ul class="footer-social-links list-inline">
-                    <li class="d-inline-block"><a href="https://www.facebook.com/TourNest.org" target="_blank" class="foot-icon-bg-1"><i
+                    <li class="d-inline-block"><a href="https://www.facebook.com/TourNest.org" target="_blank"
+                                                  class="foot-icon-bg-1"><i
                             class="fab fa-facebook-f fa-xl"></i></a></li>
-                    <li class="d-inline-block"><a href="https://twitter.com/tournest_io" target="_blank" class="foot-icon-bg-2"><i
+                    <li class="d-inline-block"><a href="https://twitter.com/tournest_io" target="_blank"
+                                                  class="foot-icon-bg-2"><i
                             class="fab fa-twitter fa-xl"></i></a></li>
-                    <li class="d-inline-block"><a  href="https://www.instagram.com/tournest.io/" target="_blank" class="foot-icon-bg-3"><i
+                    <li class="d-inline-block"><a href="https://www.instagram.com/tournest.io/" target="_blank"
+                                                  class="foot-icon-bg-3"><i
                             class="fab fa-instagram fa-xl"></i></a></li>
                 </ul>
-                <p>&copy; 2023-2024 <a href="https://github.com/MinhThinhrine/Do_An_Web">Nhóm 18</a>. All Right Reserved.</p>
+                <p>&copy; 2023-2024 <a href="https://github.com/MinhThinhrine/Do_An_Web">Nhóm 18</a>. All Right
+                    Reserved.</p>
 
             </div><!--/.foot-icons-->
             <div id="scroll-Top">
@@ -458,6 +484,19 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
             </div><!--/.scroll-Top-->
         </div><!-- /.container-->
     </div>
+
+
+
+
+    <form action="SearchController" method="post">
+        <input name="action" value="searchByParam" style="display: none">
+        <input name="param" value="" placeholder="Nhập thông tin">
+        <button type="submit">Tìm</button>
+    </form>
+
+
+
+
 </footer><!-- /.footer-copyright--><!-- footer-copyright end -->
 
 <script src="assets/js/modify.js"></script>
@@ -479,10 +518,10 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
     // Trang hiện tại
     var currentPage = 1;
 
-    elements =items;
+    elements = items;
     var clickCount = 0;
 
-    document.getElementById("filter-btn").addEventListener("click", function() {
+    document.getElementById("filter-btn").addEventListener("click", function () {
         for (var i = 0; i < elements.length; i++) {
             var element = elements[i];
             if (clickCount === 0) {
@@ -501,6 +540,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
         // Đảo giá trị của clickCount
         clickCount = 1 - clickCount;
     });
+
     function scrollToTop() {
         window.scrollTo({
             top: 0,
@@ -557,6 +597,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
             active(page);
         }
     }
+
     function active(pageNumber) {
         var paginationLinks = document.getElementsByClassName('pagination-inner')[0].getElementsByTagName('a');
         for (var i = 0; i < paginationLinks.length; i++) {
@@ -569,77 +610,77 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
     showItems();
 
 
-// For Range Sliders
-        var inputLeft = document.getElementById("input-left");
-        var inputRight = document.getElementById("input-right");
+    // For Range Sliders
+    var inputLeft = document.getElementById("input-left");
+    var inputRight = document.getElementById("input-right");
 
-        var thumbLeft = document.querySelector(".slider > .thumb.left");
-        var thumbRight = document.querySelector(".slider > .thumb.right");
-        var range = document.querySelector(".slider > .range");
+    var thumbLeft = document.querySelector(".slider > .thumb.left");
+    var thumbRight = document.querySelector(".slider > .thumb.right");
+    var range = document.querySelector(".slider > .range");
 
-        var amountLeft = document.getElementById('amount-left')
-        var amountRight = document.getElementById('amount-right')
+    var amountLeft = document.getElementById('amount-left')
+    var amountRight = document.getElementById('amount-right')
 
-        function setLeftValue() {
-            var _this = inputLeft,
-                min = parseInt(_this.min),
-                max = parseInt(_this.max);
+    function setLeftValue() {
+        var _this = inputLeft,
+            min = parseInt(_this.min),
+            max = parseInt(_this.max);
 
-            _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+        _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
 
-            var percent = ((_this.value - min) / (max - min)) * 100;
+        var percent = ((_this.value - min) / (max - min)) * 100;
 
-            thumbLeft.style.left = percent + "%";
-            range.style.left = percent + "%";
-            amountLeft.innerText = (percent * 0.2).toFixed(1);
-        }
+        thumbLeft.style.left = percent + "%";
+        range.style.left = percent + "%";
+        amountLeft.innerText = (percent * 0.2).toFixed(1);
+    }
 
-        setLeftValue();
+    setLeftValue();
 
-        function setRightValue() {
-            var _this = inputRight,
-                min = parseInt(_this.min),
-                max = parseInt(_this.max);
+    function setRightValue() {
+        var _this = inputRight,
+            min = parseInt(_this.min),
+            max = parseInt(_this.max);
 
-            _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+        _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
 
-            var percent = ((_this.value - min) / (max - min)) * 100;
+        var percent = ((_this.value - min) / (max - min)) * 100;
 
-            amountRight.innerText = (percent * 0.2).toFixed(1);
-            thumbRight.style.right = (100 - percent) + "%";
-            range.style.right = (100 - percent) + "%";
-        }
+        amountRight.innerText = (percent * 0.2).toFixed(1);
+        thumbRight.style.right = (100 - percent) + "%";
+        range.style.right = (100 - percent) + "%";
+    }
 
-        setRightValue();
+    setRightValue();
 
-        inputLeft.addEventListener("input", setLeftValue);
-        inputRight.addEventListener("input", setRightValue);
+    inputLeft.addEventListener("input", setLeftValue);
+    inputRight.addEventListener("input", setRightValue);
 
-        inputLeft.addEventListener("mouseover", function () {
-            thumbLeft.classList.add("hover");
-        });
-        inputLeft.addEventListener("mouseout", function () {
-            thumbLeft.classList.remove("hover");
-        });
-        inputLeft.addEventListener("mousedown", function () {
-            thumbLeft.classList.add("active");
-        });
-        inputLeft.addEventListener("mouseup", function () {
-            thumbLeft.classList.remove("active");
-        });
+    inputLeft.addEventListener("mouseover", function () {
+        thumbLeft.classList.add("hover");
+    });
+    inputLeft.addEventListener("mouseout", function () {
+        thumbLeft.classList.remove("hover");
+    });
+    inputLeft.addEventListener("mousedown", function () {
+        thumbLeft.classList.add("active");
+    });
+    inputLeft.addEventListener("mouseup", function () {
+        thumbLeft.classList.remove("active");
+    });
 
-        inputRight.addEventListener("mouseover", function () {
-            thumbRight.classList.add("hover");
-        });
-        inputRight.addEventListener("mouseout", function () {
-            thumbRight.classList.remove("hover");
-        });
-        inputRight.addEventListener("mousedown", function () {
-            thumbRight.classList.add("active");
-        });
-        inputRight.addEventListener("mouseup", function () {
-            thumbRight.classList.remove("active");
-        });
+    inputRight.addEventListener("mouseover", function () {
+        thumbRight.classList.add("hover");
+    });
+    inputRight.addEventListener("mouseout", function () {
+        thumbRight.classList.remove("hover");
+    });
+    inputRight.addEventListener("mousedown", function () {
+        thumbRight.classList.add("active");
+    });
+    inputRight.addEventListener("mouseup", function () {
+        thumbRight.classList.remove("active");
+    });
 </script>
 
 </body>
