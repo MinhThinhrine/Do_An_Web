@@ -173,58 +173,8 @@ $(document).ready(function(){
 
 
 });
-    //pagination
-var activePage  = document.querySelector('.pagination-active');
-var currentPage = parseInt(activePage.textContent);
-changePage(currentPage);
 
-function changePage(pageNumber) {
-    currentPage = parseInt(pageNumber);
-    var paginationLinks = document.getElementsByClassName('pagination-inner')[0].getElementsByTagName('a');
-    for (var i = 0; i < paginationLinks.length; i++) {
-        paginationLinks[i].classList.remove('pagination-active');
-    }
-    paginationLinks[pageNumber - 1].classList.add('pagination-active');
 
-    var startId = (pageNumber - 1) * 16 + 1;
-    var endId = pageNumber * 16;
-
-    for (var j = 1; j <= 210; j++) {
-        var itemId = document.getElementById(String(j));
-        if (itemId) {
-            if (j >= startId && j <= endId) {
-                itemId.style.display = 'block';
-            } else {
-                itemId.style.display = 'none';
-            }
-        }
-    }
-
-}
-function previousPage() {
-    if (currentPage > 1) {
-        currentPage--;
-        changePage(currentPage);
-    }
-}
-
-function nextPage() {
-    if (currentPage<14){
-        currentPage++;
-        changePage(currentPage);
-    }
-}
-
-    // đặt tour
-var packageImages = document.getElementsByClassName('packageImage');
-
-// Lặp qua từng phần tử trong HTMLCollection
-for (var i = 0; i < packageImages.length; i++) {
-    packageImages[i].addEventListener('click', function() {
-        window.location.href = "detail.jsp"; // Thay đổi URL tới liên kết mong muốn
-    });
-
-}
 function sendMail(){
     window.location.href = "mailto:thinh913011@gmail.com?subject=THƯ GÓP Ý ĐÁNH GIÁ NGƯỜI DÙNG";
 }

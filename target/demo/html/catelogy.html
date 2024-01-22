@@ -120,8 +120,8 @@
         <div id="filterbar" class="collapse">
             <div class="box border-bottom">
                 <div class="form-group text-center">
-                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-success form-check-label"> <input
-                            class="form-check-input" type="radio"> Ban Đầu </label> <label
+                    <div class="btn-group" data-toggle="buttons" ><label class="btn btn-success form-check-label" onclick="f()"> <input
+                            class="form-check-input" type="radio"> Ban đàu</label> <label
                             class="btn btn-success form-check-label active"> <input class="form-check-input"
                                                                                     type="radio" checked> Áp Dụng
                     </label>
@@ -138,7 +138,7 @@
                             class="fas fa-plus"></span></button>
                 </div>
                 <div id="inner-box" class="collapse mt-2 mr-1">
-                    <div class="my-1"><label class="tick">Bắc <input type="checkbox"> <span
+                    <div class="my-1"><label class="tick" onclick="f()">Bắc <input type="checkbox"> <span
                             class="check"></span> </label></div>
                     <div class="my-1"><label class="tick">Trung <input type="checkbox"> <span class="check"></span>
                     </label></div>
@@ -692,7 +692,26 @@
     </div>
 </footer><!-- /.footer-copyright-->
 <!-- footer-copyright end -->
+<script>
+    var span = document.getElementsByClassName('span');
+    var label = span.closest('.tick');
+    var namText = String.valueOf(label.innerText.trim());
+    function f() {
+        window.location.href = "ádasdasd";
 
+    }
+    // Lắng nghe sự kiện click trên phần tử có lớp 'check'
+    document.querySelectorAll('.tick').forEach(function(element) {
+        element.addEventListener('click', function() {
+
+            // String n = `${namText}`;
+           // link.href = '${pageContext.request.contextPath}/SortController?action=sortbyregion&region=' + this.closest('.tick').innerText.trim();
+
+            window.location.href = "";
+
+        });
+    });
+</script>
 <script src="../assets/js/modify.js"></script>
 <script src="../assets/js/custom.js"></script>
 <script src="../assets/js/catelogy.js"></script>

@@ -111,7 +111,7 @@
                                     User user = (User) session.getAttribute("user");
                                 %>
                                 <% if (Objects.nonNull(user)) { %>
-                                <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
+                                <li class="navbar-toggle"><a href="vali.jsp" id="myTour"><i
                                         class="fa fa-suitcase-rolling fa-2x"
                                         style="margin-top: -10px;color: #00d8fe"></i></a>
                                 </li>
@@ -205,7 +205,7 @@
                                 </tr>
                                 <tr>
                                     <td><span style="color:#555555;"><strong>Khởi hành</strong></span></td>
-                                    <td><strong><span style="color:#555555;"><%=t.getStartTime()%>></span></strong>
+                                    <td><strong><span style="color:#555555;"><%=t.getStartTime()%></span></strong>
                                     </td>
                                 </tr>
                                 <tr>
@@ -498,10 +498,10 @@
                                             <input type="hidden" name="con" id="con" value="10">
                                             <input type="hidden" name="hasvisa" id="hasvisa" value="">
                                             <button type="button" class="render-form btn-contact-tour">
-                                                <a href="shopcart.jsp" style="text-decoration: none; text-transform: uppercase">Book Now</a>
+                                                <a href="ServiceServlet?id=<%=t.getId()%>" style="text-decoration: none; text-transform: uppercase">Book Now</a>
                                             </button>
-                                            <button type="button" class="render-form btn-contact-tour" style="background-color: #bbbbbb">
-                                                <a href="shopcart.jsp" style="text-decoration: none; text-transform: uppercase;color: #00d8fe!important;">Thêm Vào Vali</a>
+                                            <button type="button" class="render-form btn-contact-tour" style="background-color: #bbbbbb!important;">
+                                                <a href="ValiServlet?id=<%=t.getId()%>&refresh=yes" style="text-decoration: none; text-transform: uppercase;color: #00d8fe!important;">Thêm Vào Vali</a>
                                             </button>
                                         </div>
                                     </div>

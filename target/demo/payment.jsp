@@ -1,5 +1,6 @@
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
-<%@ page import="java.util.Objects" %><%--
+<%@ page import="java.util.Objects" %>
+<%@ page import="vn.edu.hcmuaf.bean.Tour" %><%--
   Created by IntelliJ IDEA.
   User: HP
   Date: 12/4/2023
@@ -10,7 +11,9 @@
 <html class="no-js" lang="vi">
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="common/tablib.jsp" %><html lang="vi">
-
+<%
+    Tour t = (Tour) request.getAttribute("tour");
+%>
 <head>
     <meta charset="utf-8">
     <title>Thanh toán - TourNest</title>
@@ -74,7 +77,7 @@
                         String url = request.getContextPath().trim();
                     %>
                     <% if (Objects.nonNull(user)) { %>
-                    <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
+                    <li class="navbar-toggle"><a href="vali.jsp" id="myTour"><i
                             class="fa fa-suitcase-rolling fa-2x"
                             style="margin-top: -10px;color: #00d8fe"></i></a>
                     </li>
@@ -112,9 +115,9 @@
             <div class="container">
                 <div class="row">
                     <ul class="head col-12">
-                        <li class="checked"><a href="" style="color: #00d8fe!important;">1. Dịch vụ và thông tin</a></li>
+                        <li class="checked"><a href="ServiceServlet?id=1" style="color: #00d8fe!important;">1. Dịch vụ và thông tin</a></li>
                         <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
-                        <li class="checked"><a href="payment.jsp" style="color: #00d8fe!important;">3. Hình thức thanh toán</a>
+                        <li class="checked"><a href="#" style="color: #00d8fe!important;">2. Hình thức thanh toán</a>
                         <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
                         <li class="checked"><a href="" style="color: #bbbbbb!important;">3. Hóa đơn</a>
                         </li>
@@ -448,15 +451,14 @@
                     <div class="col-md-4 col-12 right">
                         <div class="group-checkout">
                             <h3>Tóm tắt</h3>
-                            <p class="package-title"><span>Mã Tour</span> #MT13646</p>
+                            <p class="package-title"><span>Mã Tour</span> # <%=t.getId()%></p>
                             <div class="product">
                                 <div class="product-image">
-                                    <img src="https://media.travel.com.vn/tour/tfd_230302103257_223532.jpg"
+                                    <img src="assets/images/item/<%=t.getImage()%>"
                                          class="img-fluid" alt="image">
                                 </div>
                                 <div class="product-content">
-                                    <p class="title">Tây Ninh - Hành trình chinh phục nóc nhà Nam Bộ - Tặng vé tham
-                                        quan 3 tuyến cáp treo Chùa Hang - Tâm An - Vân Sơn</p>
+                                    <p class="title"><%=t.getName()%></p>
                                 </div>
                             </div>
                             <div class="go-tour">
@@ -464,7 +466,7 @@
                                     <i class="fa-regular fa-calendar"></i>
                                     <div class="start-content">
                                         <h4>Bắt đầu chuyến đi</h4>
-                                        <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                        <p class="time" style="font-size: 15px;"><%=t.getStartTime()%></p>
                                         <p class="from"></p>
                                     </div>
                                 </div>
@@ -472,6 +474,9 @@
                                     <i class="fa-solid fa-calendar-days"></i>
                                     <div class="start-content">
                                         <h4>Kết thúc chuyến đi</h4>
+                                        <%
+
+                                        %>
                                         <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
                                         <p class="from"></p>
                                     </div>
@@ -482,52 +487,15 @@
                                     <tbody>
                                     <tr>
                                         <th class="l1">Hành khách</th>
-                                        <th class="l2 text-right">
-                                            <i class="fa-solid fa-people-group"></i></i> <span>1 người</span>
-                                            <p class="add-more">1 người lớn </p>
-                                        </th>
+
                                     </tr>
                                     <tr>
                                         <td> Người lớn</td>
-                                        <td class="t-price text-right">1 x 1,190,000₫</td>
+                                        <td class="t-price text-right">1</td>
                                     </tr>
                                     <tr>
-                                        <td>Trẻ em</td>
-                                        <td class="t-price text-right">0₫</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trẻ nhỏ</td>
-                                        <td class="t-price text-right">0₫</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Em bé</td>
-                                        <td class="t-price text-right">0₫</td>
-                                    </tr>
-                                    <tr class="pt">
-                                        <td> Phụ thu phòng riêng</td>
-                                        <td class="t-price text-right">
-                                            0₫
-                                        </td>
-                                    </tr>
-                                    <tr class="cuppon d-none">
-                                        <td>Mã giảm giá</td>
-                                        <td class="cp-form text-right">
-                                            <form action="#" method="get">
-                                                <input class="form-control" id="DiscountCode"
-                                                       name="DiscountCode" placeholder="Thêm mã"
-                                                       required="required" type="text" value="">
-                                                <input type="hidden" id="hidBooking_id"
-                                                       value="ac7ab715-cd61-4053-b3e3-5e0fa5c1f838">
-                                                <input type="submit" name="submit" id="btnDiscountCode"
-                                                       value="Áp dụng">
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    <tr class="cuppon">
-                                        <td></td>
-                                        <td class="cp-form text-right">
-                                            giảm 100,000đ
-                                        </td>
+                                        <td>Trẻ em (40%) </td>
+                                        <td class="t-price text-right">0</td>
                                     </tr>
                                     <tr class="total">
                                         <td>Tổng cộng</td>
@@ -538,13 +506,16 @@
                                 <div>
                                     <button class="btn btn-primary btn-order" style="width:100% "
                                             onclick="kiemTraDieuKien()">
-                                        <a href="../TourNest-master/bill.html"></a> Thanh Toán
+                                        <a href="#"></a> Hóa đơn
                                     </button>
                                 </div>
                                 <div>
-                                    <button class="btn btn-primary btn-order" style="width:100%;background-color: #f9f9f9!important;color: black ">
-                                        <a href="../TourNest-master/bill.html"></a> Liên Hệ
-                                    </button>
+                                    <a href="mailto:thinh913011@gmail.com?subject=LIÊN HỆ" style="width: 100%">
+                                        <button class="btn btn-primary btn-order"
+                                                style="width:100%;background-color: #f9f9f9!important;color: black ">
+                                            Liên Hệ
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -563,7 +534,7 @@
         var dieuKienCheckbox = document.getElementById("DieuKien");
         if (dieuKienCheckbox.checked) {
             // Nếu đã chọn, chuyển hướng đến trang "bill.html"
-            window.location.href = "bill.html";
+            window.location.href = "bill.jsp";
         } else {
             // Nếu chưa chọn, hiển thị thông báo
             alert('Bạn cần đồng ý với điều khoản đăng ký online.');

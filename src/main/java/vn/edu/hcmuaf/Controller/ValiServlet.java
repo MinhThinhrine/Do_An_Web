@@ -18,6 +18,8 @@ public class ValiServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             ArrayList<valies> valiList = new ArrayList<>();
             int id = Integer.parseInt(request.getParameter("id"));
+            String dk = "no";
+            dk = request.getParameter("refresh");
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("user");
             String userId = String.valueOf(user.getId());
@@ -34,19 +36,26 @@ public class ValiServlet extends HttpServlet {
             if (vali_List == null) {
                 valiList.add(vl);
                 ses.setAttribute("vali-List",valiList);
-                response.sendRedirect("CategorieServlet");
+                if(dk.contains("yes")) {
+                    response.sendRedirect("DetailsServlet?id="+id);
+                }else response.sendRedirect("CategorieServlet");
             }else{
                 valiList=vali_List;
                 boolean exit = false;
                 for (valies v: vali_List) {
                     if(v.getId()==id){
                         exit=true;
-                        response.sendRedirect("CategorieServlet");
+                        out.println("<script>alert('Sản phẩm đã tồn tại.');</script>");
+                        if(dk.equals("yes")) {
+                            response.sendRedirect("DetailsServlet?id="+id);
+                        }else response.sendRedirect("CategorieServlet");
                     }
                 }
                     if(!exit){
                         valiList.add(vl);
-                        response.sendRedirect("CategorieServlet");
+                        if(dk.equals("yes")) {
+                            response.sendRedirect("DetailsServlet?id="+id);
+                        }else response.sendRedirect("CategorieServlet");
                     }
             }
         }

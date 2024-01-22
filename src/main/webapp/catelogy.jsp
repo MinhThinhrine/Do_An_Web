@@ -74,8 +74,8 @@
                         </a>
                     </div><!-- /.logo-->
                 </div><!-- /.col-->
-                <div class="col-sm-2"></div>
-                <div class="col-sm-9">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8">
                     <div class="main-menu">
                         <ul class="nav" style="text-align: right">
                             <li><a href="index.jsp">Trang Chủ</a></li>
@@ -90,7 +90,7 @@
                                 String url = request.getContextPath().trim();
                             %>
                             <% if (Objects.nonNull(user)) { %>
-                            <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
+                            <li class="navbar-toggle"><a href="vali.jsp" id="myTour"><i
                                     class="fa fa-suitcase-rolling fa-2x"
                                     style="margin-top: -10px;color: #00d8fe"></i></a>
                             </li>
@@ -131,295 +131,279 @@
                 id="filter-btn" onclick="changeBtnTxt()"
         ><span class="fas fa-angle-left" id="filter-angle"></span> <span id="btn-txt">Bộ lọc</span></button>
         <nav class="navbar navbar-expand-lg navbar-light pl-lg-0 pl-auto">
-            <button class="navbar-toggler" type="button"
-                    data-toggle="collapse" data-target="#mynav"
-                    aria-controls="mynav" aria-expanded="false" aria-label="Toggle navigation" onclick="chnageIcon()"
-                    id="icon"
-            ><span class="fa fa-toggle-left"></span></button>
             <div class="collapse navbar-collapse" id="mynav">
                 <ul class="navbar-nav d-lg-flex align-items-lg-center">
-                    <li class="nav-item active">
-                        <ul name="sort" id="sort" style="background-color: red">
-                            <option value="" hidden selected>Sort by</option>
-                            <li data-value="price">
-                                <a href="${pageContext.request.contextPath}/SortController?action=sortbypriceAscending"
-                                   style="width: 100%">
-                                    Giá tiền tăng
-                                </a>
-                            </li>
-                            <li data-value="price" style="background-color: red">
-                                <a href="${pageContext.request.contextPath}/SortController?action=sortbypriceDescending"
-                                   style="width: 100%">
-                                    Giá tiền giảm
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="nav-item d-inline-flex align-items-center justify-content-between mb-lg-0 mb-3">
-                        <div class="d-inline-flex align-items-center mx-lg-2" id="select2">
-                            <div class="pl-2">Products:</div>
-                            <select name="pro" id="pro">
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                            </select>
-                        </div>
-                        <div class="font-weight-bold mx-2 result"><span class="nums">9 </span>from 210</div>
-                    </li>
-                    <li class="nav-item d-lg-none d-inline-flex"></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <div id="content" class="my-5">
-        <div id="filterbar" class="collapse">
-            <div class="box border-bottom">
-                <div class="form-group text-center">
-                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-success form-check-label"> <input
-                            class="form-check-input" type="radio"> Reset </label> <label
-                            class="btn btn-success form-check-label active"> <input class="form-check-input"
-                                                                                    type="radio" checked> Áp Dụng
-                    </label>
-                    </div>
-                </div>
-                <div><label class="tick">Hot<input type="checkbox" checked="checked"> <span class="check"></span>
-                </label></div>
-                <div><label class="tick">Giảm giá<input type="checkbox"> <span class="check"></span> </label></div>
-            </div>
-            <div class="box border-bottom">
-                <div class="box-label text-uppercase d-flex align-items-center">Khu vực
-                    <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box"
-                            aria-expanded="false" aria-controls="inner-box" id="out"><span
-                            class="fas fa-plus"></span></button>
-                </div>
-                <div id="inner-box" class="collapse mt-2 mr-1">
-                    <div class="my-1"><label class="tick">
-                        <a
-                            style="background-color: #dddddd;color: #2C3E50 !important;"
-                            href="${pageContext.request.contextPath}/SortController?action=sortbyregion&region=Miền Bắc">
-                        Bắc
-                    </a>
-                        <input type="checkbox">
-                        <span class="check"></span>
-                    </label></div>
-                    <div class="my-1"><label class="tick">
-                        <a
-                                style="background-color: #dddddd;color: #2C3E50 !important;"
-                                href="${pageContext.request.contextPath}/SortController?action=sortbyregion&region=Miền Trung">
-                            Trung
-                        </a>
-                        <input type="checkbox"> <span class="check"></span>
-                    </label></div>
-                    <div class="my-1"><label class="tick">
-                        <a
-                                style="background-color: #dddddd;color: #2C3E50 !important;"
-                                href="${pageContext.request.contextPath}/SortController?action=sortbyregion&region= Miền Nam">
-                            Nam
-                        </a>
-                        <input type="checkbox"> <span class="check"></span>
-                    </label></div>
-                </div>
-            </div>
-            <div class="box border-bottom">
-                <div class="box-label text-uppercase d-flex align-items-center">Tỉnh Thành
-                    <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box2"
-                            aria-expanded="false" aria-controls="inner-box2"><span
-                            class="fas fa-plus"></span></button>
-                </div>
-                <div id="inner-box2" class="collapse mt-2 mr-1">
-                    <div class="my-1"><label class="tick">Tp Hồ Chí Minh <input type="checkbox"> <span
-                            class="check"></span> </label></div>
-                    <div class="my-1"><label class="tick">Hà Nội <input type="checkbox"> <span class="check"></span>
-                    </label></div>
-                    <div class="my-1"><label class="tick">Đà Lạt <input type="checkbox"> <span
-                            class="check"></span> </label></div>
-                    <div class="my-1"><label class="tick">Vũng Tàu <input type="checkbox"> <span class="check"></span>
-                    </label></div>
-                    <div class="my-1"><label class="tick">Phú Quốc <input type="checkbox"> <span class="check"></span>
-                    </label></div>
-                </div>
-            </div>
-            <div class="box border-bottom">
-                <div class="box-label text-uppercase d-flex align-items-center">Theo Mùa
-                    <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box3"
-                            aria-expanded="false" aria-controls="inner-box3"><span class="fas fa-plus"></span></button>
-                </div>
-                <div id="inner-box3" class="collapse mt-2 mr-1">
-                    <div class="my-1"><label class="tick">Xuân <input type="checkbox"> <span
-                            class="check"></span> </label></div>
-                    <div class="my-1"><label class="tick">Hạ <input type="checkbox"> <span class="check"></span>
-                    </label></div>
-                    <div class="my-1"><label class="tick">Thu <input type="checkbox"> <span
-                            class="check"></span> </label></div>
-                    <div class="my-1"><label class="tick">Đông <input type="checkbox"> <span class="check"></span>
-                    </label></div>
+                        <div class="d-inline-flex align-items-center mx-lg-2" id="select1">
+                            <!-- HTML -->
+                            <div class="dropdown" id="btn-price">
+                                <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        style=" border: 1px solid;
+                                            width: 160px;
+                                            height: 39.5px;
+                                            border-radius: 3px;
+                                            ">
+                                    Giá tiền
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
+                                     style=" text-align: center;
+                                        margin-top: -1px;
+                                        height: 90px;
+                                        font-family: Arial, serif;">
+                                    <a class="dropdown-item"
+                                       style="color: black!important;padding: 10px"
+                                       href="${pageContext.request.contextPath}/SortController?action=sortbypriceAscending">
+                                        Giá tiền tăng
+                                    </a>
+                                    <a class="dropdown-item"
+                                       style="color: black!important;padding: 10px"
+                                       href="${pageContext.request.contextPath}/SortController?action=sortbypriceDescending">
+                                        Giá tiền giảm
+                                    </a>
 
-                </div>
-            </div>
-            <div class="box border-bottom">
-                <div class="box-label text-uppercase d-flex align-items-center">Giá
-                    <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#price"
-                            aria-expanded="false" aria-controls="price"><span class="fas fa-plus"></span></button>
-                </div>
-                <div class="collapse show" id="price">
-                    <div class="middle">
-                        <div class="multi-range-slider">
-                            <input type="range" id="input-left" min="0" max="100" value="10">
-                            <input type="range" id="input-right" min="0" max="100" value="50">
-                            <div class="slider">
-                                <div class="track"></div>
-                                <div class="range"></div>
-                                <div class="thumb left"></div>
-                                <div class="thumb right"></div>
+                                </div>
+                            </div>
+                   </div>
+            </li>
+            <li class="nav-item d-inline-flex align-items-center justify-content-between mb-lg-0 mb-3">
+                <div class="d-inline-flex align-items-center mx-lg-2" id="select2">
+                    <form action="SearchController" method="post">
+                        <div class="input-group"
+                        style="border-radius: 3px">
+                            <input name="action" value="searchByParam" style="display: none">
+                            <input name="param"  type="text" class="form-control"
+                                   placeholder="Tìm kiếm">
+                            <div class="input-group-append" style="border-radius:0px 3px 3px 0px">
+                                <button class="btn btn-outline-secondary" type="submit" style="border-radius:0px 3px 3px 0px">
+                                    <i class="fas fa-search"></i>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between mt-2">
-                        <div class="font-weight-bold"><span id="amount-left"></span>00,000đ</div>
-                        <div class="font-weight-bold"><span id="amount-right"></span>00,000đ</div>
-                    </div>
+                    </form>
+                </div>
+            </li>
+            <li class="nav-item d-lg-none d-inline-flex"></li>
+            </ul>
+    </div>
+    </nav>
+</div>
+<div id="content" class="my-5">
+    <div id="filterbar" class="collapse">
+        <div class="box border-bottom">
+            <div class="form-group text-center">
+                <div class="btn-group" data-toggle="buttons"><label class="btn btn-success form-check-label"  onclick="link(4)"> <input
+                        class="form-check-input" type="radio"> Reset </label> <label
+                        class="btn btn-success form-check-label active"> <input class="form-check-input"
+                                                                                type="radio" checked> Áp Dụng
+                </label>
                 </div>
             </div>
-            <div class="box" style="height: 100px">
-                <div class="box-label text-uppercase d-flex align-items-center"> số ngày
-                    <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#size"
-                            aria-expanded="false" aria-controls="size"><span class="fas fa-plus"></span></button>
-                </div>
-                <div id="size" class="collapse show">
-                    <div class="btn-group d-flex align-items-center flex-wrap" data-toggle="buttons">
-                        <div class="btn btn-success form-check-label">
-                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
-                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=1 ngày'">
-                                1
-                            </button>
-                        </div>
+            <div><label class="tick">Hot<input type="checkbox" checked="checked"> <span class="check"></span>
+            </label></div>
+            <div><label class="tick">Giảm giá<input type="checkbox"> <span class="check"></span> </label></div>
+        </div>
+        <div class="box border-bottom">
+            <div class="box-label text-uppercase d-flex align-items-center">Khu vực
+                <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box"
+                        aria-expanded="false" aria-controls="inner-box" id="out"><span
+                        class="fas fa-plus"></span></button>
+            </div>
+            <div id="inner-box" class="collapse mt-2 mr-1">
 
-                        <div class="btn btn-success form-check-label">
-                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
-                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=2 ngày'">
-                                2
-                            </button>
+                <div class="my-1"><label class="tick" onclick="link(1)">Bắc <input type="checkbox"> <span
+                        class="check"></span> </label></div>
+                <div class="my-1"><label class="tick" onclick="link(2)">Trung <input type="checkbox"> <span class="check"></span>
+                </label></div>
+                <div class="my-1"><label class="tick" onclick="link(3)">Nam <input type="checkbox"> <span class="check"></span>
+                </label></div>
+            </div>
+        </div>
+        <div class="box border-bottom">
+            <div class="box-label text-uppercase d-flex align-items-center">Tỉnh Thành
+                <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box2"
+                        aria-expanded="false" aria-controls="inner-box2"><span
+                        class="fas fa-plus"></span></button>
+            </div>
+            <div id="inner-box2" class="collapse mt-2 mr-1">
+                <div class="my-1"><label class="tick">Tp Hồ Chí Minh <input type="checkbox"> <span
+                        class="check"></span> </label></div>
+                <div class="my-1"><label class="tick">Hà Nội <input type="checkbox"> <span class="check"></span>
+                </label></div>
+                <div class="my-1"><label class="tick">Đà Lạt <input type="checkbox"> <span
+                        class="check"></span> </label></div>
+                <div class="my-1"><label class="tick">Vũng Tàu <input type="checkbox"> <span class="check"></span>
+                </label></div>
+                <div class="my-1"><label class="tick">Phú Quốc <input type="checkbox"> <span class="check"></span>
+                </label></div>
+            </div>
+        </div>
+        <div class="box border-bottom">
+            <div class="box-label text-uppercase d-flex align-items-center">Giá
+                <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#price"
+                        aria-expanded="false" aria-controls="price"><span class="fas fa-plus"></span></button>
+            </div>
+            <div class="collapse show" id="price">
+                <div class="middle">
+                    <div class="multi-range-slider">
+                        <input type="range" id="input-left" min="0" max="100" value="10">
+                        <input type="range" id="input-right" min="0" max="100" value="50">
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left"></div>
+                            <div class="thumb right"></div>
                         </div>
-
-                        <div class="btn btn-success form-check-label">
-                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
-                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=3 ngày'">
-                                3
-                            </button>
-                        </div>
-
-                        <div class="btn btn-success form-check-label">
-                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
-                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=4 ngày'">
-                                4
-                            </button>
-                        </div>
-
-                        <div class="btn btn-success form-check-label">
-                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
-                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=5 ngày'">
-                                5
-                            </button>
-                        </div>
-                        <div class="btn btn-success form-check-label">
-                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
-                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=6 ngày'">
-                                6
-                            </button>
-                        </div>
-
-                        <label class="btn btn-success form-check-label" style="display: none"> <input
-                                class="form-check-input" type="checkbox"
-                                checked> 5
-                        </label>
-                        <label class="btn btn-success form-check-label" style="display: none"> <input
-                                class="form-check-input" type="checkbox"
-                                checked> 6</label>
-                        <label class="btn btn-success form-check-label" style="display: none"> <input
-                                class="form-check-input" type="checkbox"
-                                checked> 7</label>
-                        <label class="btn btn-success form-check-label" style="display: none"> <input
-                                class="form-check-input" type="checkbox"
-                                checked> 8</label>
-                        <label class="btn btn-success form-check-label" style="display: none"> <input
-                                class="form-check-input" type="checkbox"
-                                checked> 9</label>
-                        <label class="btn btn-success form-check-label" style="display: none"> <input
-                                class="form-check-input" type="checkbox"
-                                checked> 10
-                            <i class="fa fa-long-arrow-up"></i>
-                        </label>
-
                     </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mt-2">
+                    <div class="font-weight-bold"><span id="amount-left"></span>00,000đ</div>
+                    <div class="font-weight-bold"><span id="amount-right"></span>00,000đ</div>
                 </div>
             </div>
         </div>
-        <div id="products">
-            <div class="row mx-0">
-                <% for (Tour t : tourss) { %>
-                <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3 element" id="<%=t.getId() %>">
-                    <div class="single-package-item">
-                        <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>"
-                           style="width: 100%">
-                            <img style="cursor: pointer;width: 100%" class="packageImage"
-                                 src="assets/images/item/<%=t.getImage()%>"
-                                 alt="package-place">
-                        </a>
+        <div class="box" style="height: 100px">
+            <div class="box-label text-uppercase d-flex align-items-center"> số ngày
+                <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#size"
+                        aria-expanded="false" aria-controls="size"><span class="fas fa-plus"></span></button>
+            </div>
+            <div id="size" class="collapse show">
+                <div class="btn-group d-flex align-items-center flex-wrap" data-toggle="buttons">
+                    <div class="btn btn-success form-check-label">
+                        <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=1 ngày'">
+                            1
+                        </button>
+                    </div>
 
-                        <div class="single-package-item-txt">
-                            <h3><%=t.getName()%><span class="pull-right" style="margin-top: 25px;">
+                    <div class="btn btn-success form-check-label">
+                        <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=2 ngày'">
+                            2
+                        </button>
+                    </div>
+
+                    <div class="btn btn-success form-check-label">
+                        <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=3 ngày'">
+                            3
+                        </button>
+                    </div>
+
+                    <div class="btn btn-success form-check-label">
+                        <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=4 ngày'">
+                            4
+                        </button>
+                    </div>
+
+                    <div class="btn btn-success form-check-label">
+                        <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=5 ngày'">
+                            5
+                        </button>
+                    </div>
+                    <div class="btn btn-success form-check-label">
+                        <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=6 ngày'">
+                            6
+                        </button>
+                    </div>
+
+                    <label class="btn btn-success form-check-label" style="display: none"> <input
+                            class="form-check-input" type="checkbox"
+                            checked> 5
+                    </label>
+                    <label class="btn btn-success form-check-label" style="display: none"> <input
+                            class="form-check-input" type="checkbox"
+                            checked> 6</label>
+                    <label class="btn btn-success form-check-label" style="display: none"> <input
+                            class="form-check-input" type="checkbox"
+                            checked> 7</label>
+                    <label class="btn btn-success form-check-label" style="display: none"> <input
+                            class="form-check-input" type="checkbox"
+                            checked> 8</label>
+                    <label class="btn btn-success form-check-label" style="display: none"> <input
+                            class="form-check-input" type="checkbox"
+                            checked> 9</label>
+                    <label class="btn btn-success form-check-label" style="display: none"> <input
+                            class="form-check-input" type="checkbox"
+                            checked> 10
+                        <i class="fa fa-long-arrow-up"></i>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="products">
+        <div class="row mx-0">
+            <% for (Tour t : tourss) { %>
+            <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3 element" id="<%=t.getId() %>">
+                <div class="single-package-item">
+                    <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>"
+                       style="width: 100%">
+                        <img style="cursor: pointer;width: 100%" class="packageImage"
+                             src="assets/images/item/<%=t.getImage()%>"
+                             alt="package-place">
+                    </a>
+
+                    <div class="single-package-item-txt">
+                        <h3><%=t.getName()%><span class="pull-right" style="margin-top: 25px;">
                                 <%
                                     int number = t.getPrice();
                                     DecimalFormat decimalFormat = new DecimalFormat("#,###");
                                     String formattedString = decimalFormat.format(number);
                                 %>
-                                <%=formattedString%>
+                                <%=formattedString%> đ
                             </span>
-                            </h3>
-                            <div class="packages-para">
-                                <p>
+                        </h3>
+                        <div class="packages-para">
+                            <p>
 											<span>
 												<i class="fa fa-clock-o"></i> <%=t.getDuration()%>
 											</span>
-                                </p>
-                                <p>
+                            </p>
+                            <p>
 											<span>
 												<i class="fa fa-location-arrow"></i> <%=t.getName()%>
 											</span>
-                                </p>
-                                <p>
+                            </p>
+                            <p>
 											<span>
 												<i class="fa fa-calendar"></i> <%=t.getStartTime()%>
 											</span>
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="about-btn" style="float: left;width: 120px">
-                                <button class="about-view packages-btn" id="btn">
-                                    book now
+                            </p>
+                        </div><!--/.packages-para-->
+                        <div class="about-btn" style="float: left;width: 120px">
+                            <a href="ServiceServlet?id=<%=t.getId()%>">
+                            <button class="about-view packages-btn" id="btn">
+                                book now
+                            </button>
+                            </a>
+                        </div>
+                        <div class="about-btn" style="width: 0px">
+                            <a href="ValiServlet?id=<%=t.getId()%>">
+                                <button class="about-view packages-btn addvali">
+                                    <i class="fa fa-plus"></i>
+                                    <i class="fa fa-suitcase-rolling" style="padding-left: 6px;"></i>
                                 </button>
-                            </div>
-                            <div class="about-btn" style="width: 0px">
-                                <a href="ValiServlet?id=<%=t.getId()%>">
-                                    <button class="about-view packages-btn addvali">
-                                        <i class="fa fa-plus"></i>
-                                        <i class="fa fa-suitcase-rolling" style="padding-left: 6px;"></i>
-                                    </button>
-                                </a>
-                            </div>
-                            <!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
+                            </a>
+                        </div>
+                        <!--/.about-btn-->
+                    </div><!--/.single-package-item-txt-->
 
-                    </div><!--/.single-package-item-->
+                </div><!--/.single-package-item-->
 
-                </div><!--/.col-->
-                <% } %>
-                <div class="pagination">
+            </div><!--/.col-->
+            <% } %>
+            <div class="pagination">
 
-                    <nav class="pagination-container">
-                        <div class="pagination">
-                            <a class="pagination-newer" href="#pack" onclick="previousPage()">
-                                <i class="fa fa-chevron-left"></i></a>
-                            <span class="pagination-inner">
+                <nav class="pagination-container">
+                    <div class="pagination">
+                        <a class="pagination-newer" href="#pack" onclick="previousPage()">
+                            <i class="fa fa-chevron-left"></i></a>
+                        <span class="pagination-inner">
 								<a class="pagination-active" href="#pack" onclick="changePage(1)">1</a>
 								<a href="#pack" onclick="changePage(2)">2</a>
 								<a href="#pack" onclick="changePage(3)">3</a>
@@ -439,16 +423,16 @@
                                 <a href="#pack" onclick="changePage(17)">17</a>
                                 <a href="#pack" onclick="changePage(18)">18</a>
 							</span>
-                            <a class="pagination-older" href="#pack" onclick="nextPage()">
-                                <i class="fa fa-chevron-right"></i>
-                            </a>
-                        </div>
-                    </nav>
-                </div>
+                        <a class="pagination-older" href="#pack" onclick="nextPage()">
+                            <i class="fa fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </nav>
             </div>
         </div>
-
     </div>
+
+</div>
 </div>
 </div>
 </div>
@@ -552,18 +536,32 @@
     </div>
 
 
-    <form action="SearchController" method="post">
-        <input name="action" value="searchByParam" style="display: none">
-        <input name="param" value="" placeholder="Nhập thông tin">
-        <button type="submit">Tìm</button>
-    </form>
+
 
 
 </footer><!-- /.footer-copyright--><!-- footer-copyright end -->
 
 <script src="assets/js/modify.js"></script>
 <script src="assets/js/custom.js"></script>
-<%--<script src="assets/js/catelogy.js"></script>--%>
+<script>
+    // Lắng nghe sự kiện click trên phần tử có lớp 'check' hoặc phần tử 'label'
+    function link(num) {
+        switch (num) {
+            case 3:
+                window.location.href ="${pageContext.request.contextPath}/SortController?action=sortbyregion&region= Miền Nam";
+                break;
+            case 2:
+                window.location.href ="${pageContext.request.contextPath}/SortController?action=sortbyregion&region= Miền Trung";
+                break;
+            case 1:
+                window.location.href ="${pageContext.request.contextPath}/SortController?action=sortbyregion&region= Miền Bắc";
+                break;
+            case 4:
+                window.location.href="CategorieServlet";
+                break;
+        }
+    }
+</script>
 <script !src="">
     $('#inner-box').collapse(false);
     $('#inner-box2').collapse(false);

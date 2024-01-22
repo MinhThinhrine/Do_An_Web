@@ -12,7 +12,7 @@ import java.io.IOException;
 public class DetailsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("id"));
         TourDao tourDao = new TourDao();
         Tour tour = tourDao.findtourbyid(id);
         request.setAttribute("tour", tour);

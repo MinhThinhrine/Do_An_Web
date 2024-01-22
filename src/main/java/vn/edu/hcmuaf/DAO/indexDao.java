@@ -1,8 +1,7 @@
 package vn.edu.hcmuaf.DAO;
 
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
-import vn.edu.hcmuaf.bean.feedback;
-import vn.edu.hcmuaf.bean.news;
+import vn.edu.hcmuaf.bean.*;
 
 import java.sql.*;
 import java.sql.ResultSet;
@@ -11,9 +10,9 @@ import java.util.Date;
 import java.util.List;
 
 public class indexDao {
-    Connection connection;
-    ResultSet rs = null;
-    PreparedStatement preparedStatement = null;
+    static Connection connection;
+    static ResultSet rs = null;
+    static PreparedStatement preparedStatement = null;
     public List<news> getAllNews() {
         List<news> newsList = new ArrayList<>();
         try {
@@ -74,4 +73,46 @@ public class indexDao {
         }
         return "User Null";
     }
+    public List<service_tours> service(){
+        List<service_tours> sv_list = new ArrayList<>();
+        try {
+            connection = ConnectToDatabase.getConnect();
+            String sql = "SELECT * FROM service_tours";
+            preparedStatement = connection.prepareStatement(sql);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                float price = rs.getFloat("price");
+                String description = rs.getString("description");
+                service_tours sevic = new service_tours(id,name,price,description);
+                sv_list.add(sevic);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        return sv_list;
+    }
+    public options option(int svId,int vlId){
+        options op = null;
+        try {
+            connection = ConnectToDatabase.getConnect();
+            String sql = "SELECT * FROM options";
+            preparedStatement = connection.prepareStatement(sql);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                op = new options();
+                op.setId(rs.getInt("id"));
+                op.setDepartDate(rs.getDate("departDate"));
+                op.setValiId(svId);
+                op.setValiId(vlId);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        return op;
+    }
+
 }

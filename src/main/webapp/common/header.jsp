@@ -40,7 +40,7 @@
                                String url = request.getContextPath().trim();
                             %>
                             <% if (Objects.nonNull(user)) { %>
-                            <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
+                            <li class="navbar-toggle"><a href="vali.jsp" id="myTour"><i
                                     class="fa fa-suitcase-rolling fa-2x"
                                     style="margin-top: -10px;color: #00d8fe"></i></a>
                             </li>

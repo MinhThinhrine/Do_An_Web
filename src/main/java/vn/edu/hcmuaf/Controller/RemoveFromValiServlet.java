@@ -27,10 +27,10 @@ public class RemoveFromValiServlet extends HttpServlet {
                             }
                         }
                     }
-                    response.sendRedirect("shopcart.jsp");
+                    response.sendRedirect("vali.jsp");
 
                 } else {
-                    response.sendRedirect("shopcart.jsp");
+                    response.sendRedirect("vali.jsp");
                 }
 
             }

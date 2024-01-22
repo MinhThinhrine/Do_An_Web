@@ -77,6 +77,13 @@
     var dropdownMenu = document.querySelector(".dropdown-menu");
     var checkboxes = dropdownMenu.getElementsByTagName("input");
 
+        var dateInput = document.querySelector("#date input");
+        dateInputvalue = dateInput.value;
+        var [year, month, day] = dateInputvalue.split("-");
+        var newDateValue = `${day}-${month}-${year}`;
+        var date = document.getElementById("date");
+        date.innerHTML = newDateValue;
+
     dropdownButton.addEventListener("click", function() {
         dropdownMenu.classList.toggle("show");
     });
@@ -454,7 +461,8 @@
                                     <i class="fa-regular fa-calendar"></i>
                                     <div class="start-content">
                                         <h4>Bắt đầu chuyến đi</h4>
-                                        <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                        <p class="time" style="font-size: 15px;">
+                                            <input type="date" id="date"></p>
                                         <p class="from"></p>
                                     </div>
                                 </div>
