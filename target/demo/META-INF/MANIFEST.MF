@@ -1,10 +1,5 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
-<<<<<<< HEAD
-Built-By: ASUS
-Build-Jdk: Azul Zulu version 15.0.10
-=======
 Built-By: FPT - ADMIN
 Build-Jdk: 11.0.20
->>>>>>> bf1083f9f0b54d9b80ab9ec3089629a4944f094b
 

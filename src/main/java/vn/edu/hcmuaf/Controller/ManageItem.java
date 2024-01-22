@@ -1,6 +1,8 @@
 package vn.edu.hcmuaf.Controller;
 
+import vn.edu.hcmuaf.DAO.TourDao;
 import vn.edu.hcmuaf.DAO.UserDAO;
+import vn.edu.hcmuaf.bean.Tour;
 import vn.edu.hcmuaf.bean.User;
 
 import javax.servlet.ServletException;
@@ -15,18 +17,10 @@ import java.util.List;
 public class ManageItem extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        HttpSession session = request.getSession();
-        User a = (User) session.getAttribute("user");
-
-        UserDAO dao = new UserDAO();
-
-        List<User> listA = dao.getAllUser();
-
-
-        request.setAttribute("listA", listA);
-
-        request.getRequestDispatcher("manageProduct.jsp").forward(request, response);
+        TourDao tourDao = new TourDao();
+        List<Tour> tours = tourDao.findAll();
+        request.setAttribute("tours", tours);
+        request.getRequestDispatcher("./manageProduct.jsp").forward(request, response);
 
     }
     @Override

@@ -252,7 +252,7 @@ public class UserDAO implements objectDAO {
             // add User
         User u = new User("asa","122131122212@gmail.com","123321");
                 UserDAO userDao = new UserDAO();
-                System.out.println(userDao.isEmailExists("12213112221@gmail.com"));
+                System.out.println(userDao.isEmailExists("thuc9g@gmail.com"));
                 userDao.addUser(u);
 
             // Giả sử bạn có các giá trị tham số như sau:

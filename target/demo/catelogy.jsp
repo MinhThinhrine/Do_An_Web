@@ -422,7 +422,7 @@ List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
                         <div class="single-footer-txt text-left">
                             <p><i class="fa fa-phone"></i> (+84) 249 999 16</p>
                             <p class="foot-email" style="text-transform:none;">
-                                <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i class="fa fa-map-pin"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a></p>
+                                <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i class="fa fa-map"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a></p>
                             <p>Võ Minh Thịnh</p>
                             <p class="foot-email" style="text-transform:none;">
                                 <a href="mailto:21130549@st.hcmuaf.edu.vn"><i class="fa fa-envelope"></i> 21130549@st.hcmuaf.edu.vn</a></p>
