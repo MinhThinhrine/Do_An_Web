@@ -90,7 +90,7 @@ public class SortTour {
 
 
     public static void main(String[] args) {
-        ArrayList<Tour> tour = new TourDao().getListTourbySearch("Hà Nội");
+        ArrayList<Tour> tour = new TourService().getListTourbySearch("Hà Nội");
         ArrayList<Tour> listsearch= SortByPriceDescending(tour);
         System.out.println(listsearch.size());
         for (Tour tour1: listsearch) {

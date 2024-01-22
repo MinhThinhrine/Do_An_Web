@@ -79,6 +79,7 @@
 
                         <!-- Tab panes -->
                         <form action="SearchController" method="post"> <!-- form search-->
+                            <input type="text" name="action" value="searchByLocation" style="display: none">
                             <div class="tab-content">
 
                                 <div role="tabpanel" class="tab-pane active fade in" id="tours">

@@ -12,11 +12,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class TourDao {
-    Connection connection;
-    ResultSet rs = null;
-    PreparedStatement preparedStatement = null;
+    static Connection connection;
+    static ResultSet rs = null;
+    static PreparedStatement preparedStatement = null;
 
-    public List<Tour> findAll() {
+    public static List<Tour> findAll() {
         List<Tour> tours = new ArrayList<>();
         try {
             String sql = "Select * from tours";
@@ -41,7 +41,7 @@ public class TourDao {
         }
         return tours;
     }
-    public Tour findtourbyid(int id) {
+    public static Tour findtourbyid(int id) {
         Tour tour = null;
         try {
             connection = ConnectToDatabase.getConnect();
@@ -79,7 +79,7 @@ public class TourDao {
         return tour;
     }
 
-    public List<valies> getValiTour(ArrayList<valies> valiList) {
+    public static List<valies> getValiTour(ArrayList<valies> valiList) {
         List<valies> product = new ArrayList<>();
         try {
             if(valiList.size()>0){
@@ -111,7 +111,7 @@ public class TourDao {
         }
         return product;
     }
-    public void insertVali(ArrayList<valies> valiList) {
+    public static void insertVali(ArrayList<valies> valiList) {
         try {
             for (valies vl : valiList) {
                 connection = ConnectToDatabase.getConnect();

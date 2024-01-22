@@ -484,6 +484,19 @@
             </div><!--/.scroll-Top-->
         </div><!-- /.container-->
     </div>
+
+
+
+
+    <form action="SearchController" method="post">
+        <input name="action" value="searchByParam" style="display: none">
+        <input name="param" value="" placeholder="Nhập thông tin">
+        <button type="submit">Tìm</button>
+    </form>
+
+
+
+
 </footer><!-- /.footer-copyright--><!-- footer-copyright end -->
 
 <script src="assets/js/modify.js"></script>
