@@ -14,7 +14,7 @@ public class SortTour {
         this.listour = listour;
     }
 
-    public static ArrayList<Tour> SortByRegion(LinkedList<Tour> TourOnCart, String param) {
+    public static ArrayList<Tour> SortByRegion(ArrayList<Tour> TourOnCart, String param) {
         ArrayList<Tour> result = new ArrayList<>();
         for (Tour tour : TourOnCart) {
             String sortBy = tour.getRegion().trim().toUpperCase();

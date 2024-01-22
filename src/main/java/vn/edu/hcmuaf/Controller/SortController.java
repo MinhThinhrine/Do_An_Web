@@ -42,8 +42,18 @@ public class SortController extends HttpServlet {
             request.setAttribute("sortDay","sortDay");
             request.getRequestDispatcher("catelogy.jsp").forward(request, response);
             return;
+        } else if (action.equals("sortbyregion")) {
+            String region = request.getParameter("region");
+            System.out.println(region);
+            ArrayList<Tour> ListsortRegion = SortTour.SortByRegion(ListTour,region);
+            for (Tour t: ListsortRegion) {
+                System.out.println(t);
+            }
+            request.setAttribute("ListsortDay",ListsortRegion);
+            request.setAttribute("sortDay","sortRegion");
+            request.getRequestDispatcher("catelogy.jsp").forward(request, response);
+            return;
         }
-
 
 
         session.setAttribute("ListTour",Listsort);

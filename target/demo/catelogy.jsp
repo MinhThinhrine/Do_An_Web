@@ -3,10 +3,8 @@
          pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
-<%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.bean.Tour" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page import="java.util.Objects" %>
 <%@ page import="java.text.DecimalFormat" %>
@@ -141,7 +139,7 @@
             <div class="collapse navbar-collapse" id="mynav">
                 <ul class="navbar-nav d-lg-flex align-items-lg-center">
                     <li class="nav-item active">
-                        <ul name="sort" id="sort">
+                        <ul name="sort" id="sort" style="background-color: red">
                             <option value="" hidden selected>Sort by</option>
                             <li data-value="price">
                                 <a href="${pageContext.request.contextPath}/SortController?action=sortbypriceAscending"
@@ -149,7 +147,7 @@
                                     Giá tiền tăng
                                 </a>
                             </li>
-                            <li data-value="price">
+                            <li data-value="price" style="background-color: red">
                                 <a href="${pageContext.request.contextPath}/SortController?action=sortbypriceDescending"
                                    style="width: 100%">
                                     Giá tiền giảm
@@ -195,11 +193,30 @@
                             class="fas fa-plus"></span></button>
                 </div>
                 <div id="inner-box" class="collapse mt-2 mr-1">
-                    <div class="my-1"><label class="tick">Bắc <input type="checkbox"> <span
-                            class="check"></span> </label></div>
-                    <div class="my-1"><label class="tick">Trung <input type="checkbox"> <span class="check"></span>
+                    <div class="my-1"><label class="tick">
+                        <a
+                            style="background-color: #dddddd;color: #2C3E50 !important;"
+                            href="${pageContext.request.contextPath}/SortController?action=sortbyregion&region=Miền Bắc">
+                        Bắc
+                    </a>
+                        <input type="checkbox">
+                        <span class="check"></span>
                     </label></div>
-                    <div class="my-1"><label class="tick">Nam <input type="checkbox"> <span class="check"></span>
+                    <div class="my-1"><label class="tick">
+                        <a
+                                style="background-color: #dddddd;color: #2C3E50 !important;"
+                                href="${pageContext.request.contextPath}/SortController?action=sortbyregion&region=Miền Trung">
+                            Trung
+                        </a>
+                        <input type="checkbox"> <span class="check"></span>
+                    </label></div>
+                    <div class="my-1"><label class="tick">
+                        <a
+                                style="background-color: #dddddd;color: #2C3E50 !important;"
+                                href="${pageContext.request.contextPath}/SortController?action=sortbyregion&region= Miền Nam">
+                            Nam
+                        </a>
+                        <input type="checkbox"> <span class="check"></span>
                     </label></div>
                 </div>
             </div>
@@ -263,7 +280,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box">
+            <div class="box" style="height: 100px">
                 <div class="box-label text-uppercase d-flex align-items-center"> số ngày
                     <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#size"
                             aria-expanded="false" aria-controls="size"><span class="fas fa-plus"></span></button>
@@ -298,21 +315,42 @@
                             </button>
                         </div>
 
-                        <label class="btn btn-success form-check-label"> <input class="form-check-input" type="checkbox"
-                                                                                checked> 5
+                        <div class="btn btn-success form-check-label">
+                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=5 ngày'">
+                                5
+                            </button>
+                        </div>
+                        <div class="btn btn-success form-check-label">
+                            <button type="button" class="btn form-check-input" value="1" name="AmountPerson"
+                                    onclick="window.location.href='${pageContext.request.contextPath}/SortController?action=sortbyDay&day=6 ngày'">
+                                6
+                            </button>
+                        </div>
+
+                        <label class="btn btn-success form-check-label" style="display: none"> <input
+                                class="form-check-input" type="checkbox"
+                                checked> 5
                         </label>
-                        <label class="btn btn-success form-check-label"> <input class="form-check-input" type="checkbox"
-                                                                                checked> 6</label>
-                        <label class="btn btn-success form-check-label"> <input class="form-check-input" type="checkbox"
-                                                                                checked> 7</label>
-                        <label class="btn btn-success form-check-label"> <input class="form-check-input" type="checkbox"
-                                                                                checked> 8</label>
-                        <label class="btn btn-success form-check-label"> <input class="form-check-input" type="checkbox"
-                                                                                checked> 9</label>
-                        <label class="btn btn-success form-check-label"> <input class="form-check-input" type="checkbox"
-                                                                                checked> 10
+                        <label class="btn btn-success form-check-label" style="display: none"> <input
+                                class="form-check-input" type="checkbox"
+                                checked> 6</label>
+                        <label class="btn btn-success form-check-label" style="display: none"> <input
+                                class="form-check-input" type="checkbox"
+                                checked> 7</label>
+                        <label class="btn btn-success form-check-label" style="display: none"> <input
+                                class="form-check-input" type="checkbox"
+                                checked> 8</label>
+                        <label class="btn btn-success form-check-label" style="display: none"> <input
+                                class="form-check-input" type="checkbox"
+                                checked> 9</label>
+                        <label class="btn btn-success form-check-label" style="display: none"> <input
+                                class="form-check-input" type="checkbox"
+                                checked> 10
                             <i class="fa fa-long-arrow-up"></i>
-                        </label></div>
+                        </label>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -514,15 +552,11 @@
     </div>
 
 
-
-
     <form action="SearchController" method="post">
         <input name="action" value="searchByParam" style="display: none">
         <input name="param" value="" placeholder="Nhập thông tin">
         <button type="submit">Tìm</button>
     </form>
-
-
 
 
 </footer><!-- /.footer-copyright--><!-- footer-copyright end -->
