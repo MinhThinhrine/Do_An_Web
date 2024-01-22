@@ -7,6 +7,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class SearchController extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=utf-8");
+        HttpSession session = request.getSession();
 
         String startInput = request.getParameter("dxp");
         String endInput = request.getParameter("diemden");
@@ -29,11 +31,11 @@ public class SearchController extends HttpServlet {
         System.out.println("diemden " + endInput);
         System.out.println("--------------------------------------");
 
-        List<Tour> searchResults = new TourDao().findAll();
+        ArrayList<Tour> searchResults = (ArrayList<Tour>) new TourDao().findAll();
         int size = searchResults.size();
         System.out.println(size);
 
-        List<Tour> kqtimkiem = new LinkedList<>();
+        ArrayList<Tour> kqtimkiem = new ArrayList<>();
 
         for (Tour t : searchResults) {
             String input = t.getName();
@@ -73,7 +75,7 @@ public class SearchController extends HttpServlet {
             }
         }
             System.out.println("kqtk: " + kqtimkiem.size());
-            request.setAttribute("tours", kqtimkiem);
+            session.setAttribute("ListTour", kqtimkiem);
             request.getRequestDispatcher("catelogy.jsp").forward(request, response);
         }
     }

@@ -54,7 +54,7 @@
 
         <div class="col-sm-2">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.jsp">
                     tour<span>Nest</span>
                 </a>
             </div><!-- /.logo-->
@@ -65,7 +65,7 @@
                     <li><a href="index.html">Trang Chủ</a></li>
                     <li><a href="index.html#spo">Ưu Đãi</a></li>
                     <li><a href="index.html#gallery">Tour Hot</a></li>
-                    <li><a href="index.html#pack">Gói Du Lịch</a></li>
+                    <li><a href="CategorieServlet">Sản Phẩm</a></li>
                     <li><a href="index.html#blog">Tin Tức</a></li>
                     <li><a href="index.html#feedback">Đánh Giá</a></li>
                     <li><a href="index.html#service">Liên Hệ</a></li>
@@ -108,16 +108,15 @@
 
     </div>
     <div class="checkout">
-
         <section class="checkout-head">
             <div class="container">
                 <div class="row">
                     <ul class="head col-12">
-                        <li class="checked"><a href="" style="color: #00d8fe!important;">1. Chọn dịch vụ</a></li>
+                        <li class="checked"><a href="" style="color: #00d8fe!important;">1. Dịch vụ và thông tin</a></li>
                         <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
-                        <li class="checked"><a href="" style="color: #00d8fe!important;">2. Nhập thông tin</a></li>
+                        <li class="checked"><a href="payment.jsp" style="color: #00d8fe!important;">3. Hình thức thanh toán</a>
                         <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
-                        <li class="checked"><a href="" style="color: #00d8fe!important;">3. Hình thức thanh toán</a>
+                        <li class="checked"><a href="" style="color: #bbbbbb!important;">3. Hóa đơn</a>
                         </li>
 
                     </ul>
@@ -479,7 +478,7 @@
                                 </div>
                             </div>
                             <div class="detail">
-                                <table>
+                                <table style="width: 100%">
                                     <tbody>
                                     <tr>
                                         <th class="l1">Hành khách</th>

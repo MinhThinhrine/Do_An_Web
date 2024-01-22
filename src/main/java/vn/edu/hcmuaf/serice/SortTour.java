@@ -40,7 +40,7 @@ public class SortTour {
     }
 
     // số 1 là tour bình thường @@
-    public static ArrayList<Tour> SortDiscountId(LinkedList<Tour> TourOnCart, int param) {
+    public static ArrayList<Tour> SortDiscountId(ArrayList<Tour> TourOnCart, int param) {
         ArrayList<Tour> result = new ArrayList<>();
         for (Tour tour : TourOnCart) {
             int sortBy = tour.getDiscountId();
@@ -65,7 +65,7 @@ public class SortTour {
         return result;
     }
 
-    public static ArrayList<Tour> SortByPriceAscending(LinkedList<Tour> TourOnCart) {
+    public static ArrayList<Tour> SortByPriceAscending(ArrayList<Tour> TourOnCart) {
         ArrayList<Tour> result = new ArrayList<>(TourOnCart);
         Collections.sort(result, new Comparator<Tour>() {
             @Override
@@ -77,7 +77,7 @@ public class SortTour {
     }
 
     // Sắp xếp theo giá tiền giảm dần
-    public static ArrayList<Tour> SortByPriceDescending(LinkedList<Tour> TourOnCart) {
+    public static ArrayList<Tour> SortByPriceDescending(ArrayList<Tour> TourOnCart) {
         ArrayList<Tour> result = new ArrayList<>(TourOnCart);
         Collections.sort(result, new Comparator<Tour>() {
             @Override
@@ -90,7 +90,7 @@ public class SortTour {
 
 
     public static void main(String[] args) {
-        LinkedList<Tour> tour = new TourDao().getListTourbySearch("Hà Nội");
+        ArrayList<Tour> tour = new TourDao().getListTourbySearch("Hà Nội");
         ArrayList<Tour> listsearch= SortByPriceDescending(tour);
         System.out.println(listsearch.size());
         for (Tour tour1: listsearch) {

@@ -128,8 +128,8 @@ public class TourDao {
             throw new RuntimeException(e);
         }
     }
-    public static LinkedList<Tour> getListTourbySearch(String search) {
-        LinkedList<Tour> listSearch = new LinkedList<>();
+    public static ArrayList<Tour> getListTourbySearch(String search) {
+        ArrayList<Tour> listSearch = new ArrayList<>();
         String sql = "SELECT * FROM tours WHERE schedule LIKE ? ORDER BY id DESC";
         Connection connect = ConnectToDatabase.getConnect();
 
