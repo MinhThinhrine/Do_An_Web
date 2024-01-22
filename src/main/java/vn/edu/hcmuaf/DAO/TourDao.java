@@ -8,7 +8,6 @@ import java.sql.*;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class TourDao {

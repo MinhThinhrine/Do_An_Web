@@ -1,6 +1,5 @@
 package vn.edu.hcmuaf.serice;
 
-import vn.edu.hcmuaf.DAO.TourDao;
 import vn.edu.hcmuaf.bean.Tour;
 
 import java.util.ArrayList;
@@ -53,7 +52,7 @@ public class SortTour {
     }
 
     // sắp xếp theo 1 khoảng tiền
-    public static ArrayList<Tour> SortRangePrice(LinkedList<Tour> TourOnCart, int min,int max) {
+    public static ArrayList<Tour> SortRangePrice(LinkedList<Tour> TourOnCart, int min, int max) {
         ArrayList<Tour> result = new ArrayList<>();
         for (Tour tour : TourOnCart) {
             int sortBy = tour.getPrice();

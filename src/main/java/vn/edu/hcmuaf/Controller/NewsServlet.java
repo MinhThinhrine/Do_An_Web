@@ -1,8 +1,6 @@
 package vn.edu.hcmuaf.Controller;
 
-import vn.edu.hcmuaf.DAO.TourDao;
 import vn.edu.hcmuaf.DAO.indexDao;
-import vn.edu.hcmuaf.bean.Tour;
 import vn.edu.hcmuaf.bean.news;
 
 import javax.servlet.*;

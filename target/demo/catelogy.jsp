@@ -439,13 +439,9 @@
                         <div class="single-footer-txt text-left">
                             <p><i class="fa fa-phone"></i> (+84) 249 999 16</p>
                             <p class="foot-email" style="text-transform:none;">
-<<<<<<< HEAD
-                                <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i class="fa fa-map"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a></p>
-=======
                                 <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i
                                         class="fa fa-map"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a>
                             </p>
->>>>>>> 68663b40292e1ee8ea2914ac72899c5f792bfda5
                             <p>Võ Minh Thịnh</p>
                             <p class="foot-email" style="text-transform:none;">
                                 <a href="mailto:21130549@st.hcmuaf.edu.vn"><i class="fa fa-envelope"></i>

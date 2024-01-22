@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ManagerUser", urlPatterns = {"/managerUser"})
+@WebServlet(name = "ManagerUser", urlPatterns = {"/admin/managerUser"})
 public class ManageUser extends HttpServlet {
 
 

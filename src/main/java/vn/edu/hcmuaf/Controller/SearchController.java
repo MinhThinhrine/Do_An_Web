@@ -1,6 +1,5 @@
 package vn.edu.hcmuaf.Controller;
 
-import vn.edu.hcmuaf.DAO.TourDao;
 import vn.edu.hcmuaf.bean.Tour;
 import vn.edu.hcmuaf.serice.TourService;
 
@@ -9,8 +8,6 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 @WebServlet(name = "SearchController", value = "/SearchController")
 public class SearchController extends HttpServlet {

@@ -162,8 +162,9 @@ if (tourss != null && !tourss.isEmpty()) {
                                         <td><%=t.getName()%>
                                         </td>
                                         <td>
-                                            <img style="width: 200px;height: 100px" src="assets/images/item/<%=t.getImage()%>"
+                                            <img style="width: 200px;height: 100px" src="assets/images/item<%=t.getImage()%>"
                                             >
+                                            <img src="" alt="">
                                         </td>
                                         <td><%=t.getPrice()%>đ </td>
                                         <td><%=t.getDuration()%>

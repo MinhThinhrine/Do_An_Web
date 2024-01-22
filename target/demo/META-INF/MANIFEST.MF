@@ -1,10 +1,5 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
-<<<<<<< HEAD
 Built-By: FPT - ADMIN
 Build-Jdk: 11.0.20
-=======
-Built-By: HP
-Build-Jdk: Azul Zulu version 15.0.10
->>>>>>> 68663b40292e1ee8ea2914ac72899c5f792bfda5
 
