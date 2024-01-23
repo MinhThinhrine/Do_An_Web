@@ -598,7 +598,7 @@
 <!-- feedback -->
 <!-- feedback Start -->
 
-<%@include file="common/feedback.jsp" %>
+<%--<%@include file="common/feedback.jsp" %>--%>
 
 <!-- feedback End -->
 

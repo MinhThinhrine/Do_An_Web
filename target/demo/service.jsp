@@ -10,7 +10,7 @@
 //service_tours sv = (service_tours) request.getAttribute("service");
     Tour t = (Tour) request.getAttribute("tour");
     ArrayList<service_tours> sv_list = (ArrayList<service_tours>) indx.service();
-    options op = indx.option();
+//    options op = indx.option();
 %>
 <html lang="en">
 <head>

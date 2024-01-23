@@ -12,7 +12,6 @@
 <%
     ArrayList<Tour> tourss = (ArrayList<Tour>) session.getAttribute("ListTour");
     String sort = (String) request.getAttribute("sortDay");
-    System.out.println(sort);
     if (sort != null && !sort.isEmpty()) {
         ArrayList<Tour> ListsortDay = (ArrayList<Tour>) request.getAttribute("ListsortDay");
         if (ListsortDay != null) {

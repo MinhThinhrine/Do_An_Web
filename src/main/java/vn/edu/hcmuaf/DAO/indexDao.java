@@ -13,11 +13,8 @@ public class indexDao {
     static Connection connection;
     static ResultSet rs = null;
     static PreparedStatement preparedStatement = null;
-<<<<<<< HEAD
-    public List<news> getAllNews() {
-=======
+
     public static List<news> getAllNews() {
->>>>>>> d266871f3b7e7b8c2952c0adef2028217acd2471
         List<news> newsList = new ArrayList<>();
         try {
             connection = ConnectToDatabase.getConnect();
@@ -78,7 +75,7 @@ public class indexDao {
         }
         return "User Null";
     }
-<<<<<<< HEAD
+
     public List<service_tours> service(){
         List<service_tours> sv_list = new ArrayList<>();
         try {
@@ -121,7 +118,6 @@ public class indexDao {
         return op;
     }
 
-=======
 
     public static void main(String[] args) {
         List<feedback> newsList = new ArrayList<>();
@@ -132,5 +128,4 @@ public class indexDao {
             System.out.println(n);
         }
     }
->>>>>>> d266871f3b7e7b8c2952c0adef2028217acd2471
 }

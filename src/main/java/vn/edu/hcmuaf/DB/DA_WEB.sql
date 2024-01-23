@@ -147,10 +147,10 @@ CREATE TABLE `bills` (
 /*------------------------------------------------------------------*/
 
 -- -
-/*-- Các ràng buộc cho bảng `feedbacks`
+-- Các ràng buộc cho bảng `feedbacks`
 ALTER TABLE `feedbacks`
-ADD CONSTRAINT `fk_user_email` FOREIGN KEY (`userId`) REFERENCES `users` (`id`);
-*/
+ADD CONSTRAINT `fk_userId_feedbacks` FOREIGN KEY (`userId`) REFERENCES `users` (`id`);
+
 -- Các ràng buộc cho bảng `users`
 ALTER TABLE `users`
     ADD CONSTRAINT `fk_role_id` FOREIGN KEY (`roleId`) REFERENCES `roles` (`id`);
@@ -198,14 +198,14 @@ VALUES
 -- Tạo dữ liệu cho bảng feedbacks
 INSERT INTO `feedbacks` (`userId`, `text`, `date`)
 VALUES
-    (4, 'Chuyến tour này mang lại cho tôi một giá trị tuyệt vời. Với mức giá mà tôi trả, tôi thực sự cảm thấy hài lòng về những gì chúng tôi nhận được.', '2023-01-05'),
-    (5, 'Tôi rất hài lòng với chuyến tour này và sẽ khuyên bạn bè và người thân tham gia. Tôi muốn cảm ơn đội ngũ tổ chức tour đã tạo ra một kỷ niệm đáng nhớ.', '2023-01-10'),
-    (6, 'Tôi không thể hài lòng hơn với chuyến tour này. Từ đầu đến cuối, mọi thứ đều vượt quá mong đợi của tôi. Tôi đã có một trải nghiệm tuyệt vời và không thể quên. ', '2023-02-15'),
-    (7, 'Hướng dẫn viên của chúng tôi là người tuyệt vời. Anh ấy không chỉ am hiểu về địa điểm mà còn rất nhiệt tình và cởi mở. Tôi rất thích chuyến đi.', '2023-03-20'),
-    (8, 'Các địa điểm du lịch mà chúng tôi đã thăm đều rất độc đáo và đẹp mắt. Tôi đã có cơ hội khám phá những di sản văn hóa và thiên nhiên tuyệt vời.', '2023-04-25'),
-    (9, 'Chất lượng dịch vụ trong chuyến tour này rất ấn tượng. Từ các nhà hàng đến chỗ ở và phương tiện di chuyển, mọi thứ đều rất chuyên nghiệp và đáng tin cậy.', '2023-05-30'),
-    (10, 'Mặc dù chuyến tour tổ chức tốt. Tuy nhiên, việc cung cấp thêm thông tin chi tiết về các hoạt động tùy chọn sẽ giúp khách hàng lựa chọn tốt hơn.', '2023-06-05'),
-    (11, 'Tôi rất hài lòng với cách mà công ty tổ chức tour du lịch này đã liên lạc và giao tiếp với khách hàng. Điều này tạo ra sự tin tưởng cho chúng tôi trong suốt chuyến đi.', '2023-07-12');
+    (1, 'Chuyến tour này mang lại cho tôi một giá trị tuyệt vời. Với mức giá mà tôi trả, tôi thực sự cảm thấy hài lòng về những gì chúng tôi nhận được.', '2023-01-05'),
+    (2, 'Tôi rất hài lòng với chuyến tour này và sẽ khuyên bạn bè và người thân tham gia. Tôi muốn cảm ơn đội ngũ tổ chức tour đã tạo ra một kỷ niệm đáng nhớ.', '2023-01-10'),
+    (3, 'Tôi không thể hài lòng hơn với chuyến tour này. Từ đầu đến cuối, mọi thứ đều vượt quá mong đợi của tôi. Tôi đã có một trải nghiệm tuyệt vời và không thể quên. ', '2023-02-15'),
+    (1, 'Hướng dẫn viên của chúng tôi là người tuyệt vời. Anh ấy không chỉ am hiểu về địa điểm mà còn rất nhiệt tình và cởi mở. Tôi rất thích chuyến đi.', '2023-03-20'),
+    (2, 'Các địa điểm du lịch mà chúng tôi đã thăm đều rất độc đáo và đẹp mắt. Tôi đã có cơ hội khám phá những di sản văn hóa và thiên nhiên tuyệt vời.', '2023-04-25'),
+    (3, 'Chất lượng dịch vụ trong chuyến tour này rất ấn tượng. Từ các nhà hàng đến chỗ ở và phương tiện di chuyển, mọi thứ đều rất chuyên nghiệp và đáng tin cậy.', '2023-05-30'),
+    (1, 'Mặc dù chuyến tour tổ chức tốt. Tuy nhiên, việc cung cấp thêm thông tin chi tiết về các hoạt động tùy chọn sẽ giúp khách hàng lựa chọn tốt hơn.', '2023-06-05'),
+    (2, 'Tôi rất hài lòng với cách mà công ty tổ chức tour du lịch này đã liên lạc và giao tiếp với khách hàng. Điều này tạo ra sự tin tưởng cho chúng tôi trong suốt chuyến đi.', '2023-07-12');
 
 -- Tạo dữ liệu cho bảng discounts
 INSERT INTO `discounts` (`type`, `value`, `endDate`, `description`)
