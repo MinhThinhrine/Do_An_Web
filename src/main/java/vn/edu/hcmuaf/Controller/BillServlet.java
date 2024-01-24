@@ -1,14 +1,13 @@
 package vn.edu.hcmuaf.Controller;
 
-<<<<<<< HEAD:src/main/java/vn/edu/hcmuaf/Controller/BillServlet.java
 import vn.edu.hcmuaf.DAO.TourDao;
 import vn.edu.hcmuaf.bean.Tour;
-=======
+
 import vn.edu.hcmuaf.DAO.FeebackDAO;
 import vn.edu.hcmuaf.DAO.UserDAO;
 import vn.edu.hcmuaf.DAO.indexDao;
 import vn.edu.hcmuaf.bean.*;
->>>>>>> 8a0f11ecda2e63adb18c17928e31967d4a21e238:src/main/java/vn/edu/hcmuaf/Controller/FeedServlet.java
+
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -19,15 +18,14 @@ import java.io.IOException;
 public class BillServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-<<<<<<< HEAD:src/main/java/vn/edu/hcmuaf/Controller/BillServlet.java
+
         int id = Integer.parseInt(request.getParameter("id"));
         TourDao tourDao = new TourDao();
         Tour tour = tourDao.findtourbyid(id);
         request.setAttribute("tour", tour);
         request.getRequestDispatcher("./bill.jsp").forward(request, response);
-=======
 
->>>>>>> 8a0f11ecda2e63adb18c17928e31967d4a21e238:src/main/java/vn/edu/hcmuaf/Controller/FeedServlet.java
+
     }
 
     @Override
