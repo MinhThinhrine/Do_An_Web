@@ -18,8 +18,6 @@ public class ValiServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             ArrayList<valies> valiList = new ArrayList<>();
             int id = Integer.parseInt(request.getParameter("id"));
-            String dk = "no";
-            dk = request.getParameter("refresh");
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("user");
             String userId = String.valueOf(user.getId());
@@ -27,7 +25,7 @@ public class ValiServlet extends HttpServlet {
             vl.setUserId(Integer.parseInt(userId));
             vl.setId(id);
             vl.setNumAdult(1);
-            vl.setNumChildren(1);
+            vl.setNumChildren(0);
             vl.setTourId(id);
 
             HttpSession ses = request.getSession();
@@ -36,26 +34,22 @@ public class ValiServlet extends HttpServlet {
             if (vali_List == null) {
                 valiList.add(vl);
                 ses.setAttribute("vali-List",valiList);
-                if(dk.contains("yes")) {
-                    response.sendRedirect("DetailsServlet?id="+id);
-                }else response.sendRedirect("CategorieServlet");
+                    response.sendRedirect("CategorieServlet");
+                    out.println("<script>alert('Đã thêm vào giỏ hàng');</script>");
             }else{
                 valiList=vali_List;
                 boolean exit = false;
                 for (valies v: vali_List) {
                     if(v.getId()==id){
                         exit=true;
+                        response.sendRedirect("CategorieServlet");
                         out.println("<script>alert('Sản phẩm đã tồn tại.');</script>");
-                        if(dk.equals("yes")) {
-                            response.sendRedirect("DetailsServlet?id="+id);
-                        }else response.sendRedirect("CategorieServlet");
                     }
                 }
                     if(!exit){
                         valiList.add(vl);
-                        if(dk.equals("yes")) {
-                            response.sendRedirect("DetailsServlet?id="+id);
-                        }else response.sendRedirect("CategorieServlet");
+                        response.sendRedirect("CategorieServlet");
+                        out.println("<script>alert('Đã thêm vào giỏ hàng.');</script>");
                     }
             }
         }

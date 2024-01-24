@@ -4,11 +4,16 @@
 <%@ page import="vn.edu.hcmuaf.DAO.indexDao" %>
 <%@ page import="vn.edu.hcmuaf.bean.feedback" %>
 <%@ page import="java.util.Random" %>
+<%@ page import="vn.edu.hcmuaf.bean.news" %>
 <!doctype html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" isELIgnored= "false"%>
 <%@ page contentType="text/html; charset=UTF-8" %>
-
+<%
+    indexDao ind = new indexDao();
+    List<feedback> fback = ind.getFeedbacks() ;
+    List<news> news = ind.getAllNews();
+%>
 <%@include file="common/tablib.jsp" %>
 
 <html class="no-js" lang="vi">
@@ -484,113 +489,56 @@
 <!--gallery end-->
 
 
-<!--packages start-->
-<section id="pack" class="packages">
-    <div class="container">
-        <div class="gallary-header text-center">
-            <h2>
-                Tour của chúng tôi
-            </h2>
-            <p>
-                Các tour được chắt chiu chọn lọc kĩ lưỡng đem cho khách hàng sự hài lòng và tin tưởng.
-            </p>
-        </div>
-        <!--/.gallery-header-->
-        <div class="packages-content" id="item-container">
-
-<%--            <div class="row">--%>
-<%--                <% for (int i = 0; i < 11; i++) {--%>
-<%--                    Tour t = toursli.get(i);--%>
-<%--                %>--%>
-<%--                <div class="col-md-3 col-sm-6" id="<%=t.getId() %>">--%>
-<%--                    <div class="single-package-item">--%>
-<%--                        <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">--%>
-<%--                            <img style="cursor: pointer" class="packageImage" src="assets/images/item/<%=t.getImage()%>"--%>
-<%--                                 alt="package-place">--%>
-<%--                        </a>--%>
-<%--                        <div class="single-package-item-txt">--%>
-<%--                            <h3><%=t.getName()%><span class="pull-right" style="margin-top: 25px;">--%>
-<%--                                <%--%>
-<%--                                    int number = t.getPrice();--%>
-<%--                                    DecimalFormat decimalFormat = new DecimalFormat("#,###");--%>
-<%--                                    String formattedString = decimalFormat.format(number);--%>
-<%--                                %>--%>
-<%--                                <%=formattedString%>--%>
-<%--                            </span>--%>
-<%--                            </h3>--%>
-<%--                            <div class="packages-para">--%>
-<%--                                <p>--%>
-<%--											<span>--%>
-<%--												<i class="fa fa-clock-o"></i> <%=t.getDuration()%>--%>
-<%--											</span>--%>
-<%--                                </p>--%>
-<%--                                <p>--%>
-<%--											<span>--%>
-<%--												<i class="fa fa-location-arrow"></i> <%=t.getName()%>--%>
-<%--											</span>--%>
-<%--                                </p>--%>
-<%--                                <p>--%>
-<%--											<span>--%>
-<%--												<i class="fa fa-calendar"></i> <%=t.getStartTime()%>--%>
-<%--											</span>--%>
-<%--                                </p>--%>
-<%--                            </div><!--/.packages-para-->--%>
-<%--                            <div class="about-btn" style="width: 0px">--%>
-<%--                                <a href="ValiServlet?id=<%=t.getId()%>">--%>
-<%--                                    <button class="about-view packages-btn addvali">--%>
-<%--                                        <i class="fa fa-plus"></i>--%>
-<%--                                        <i class="fa fa-suitcase-rolling" style="padding-left: 6px;"></i>--%>
-<%--                                    </button>--%>
-<%--                                </a>--%>
-<%--                            </div><!--/.about-btn-->--%>
-<%--                        </div><!--/.single-package-item-txt-->--%>
-
-<%--                    </div><!--/.single-package-item-->--%>
-
-<%--                </div><!--/.col-->--%>
-
-<%--                <% } %>--%>
-
-<%--            </div><!--/.row-->--%>
-
-            <div class="pagination">
-                <nav class="pagination-container">
-                    <div class="pagination">
-                        <a class="pagination-newer" href="#pack" onclick="previousPage()">
-                            <i class="fa-solid fa-chevron-left"></i></a>
-                        <span class="pagination-inner">
-								<a class="pagination-active" href="#pack" onclick="changePage(1)">1</a>
-								<a href="#pack" onclick="changePage(2)">2</a>
-								<a href="#pack" onclick="changePage(3)">3</a>
-								<a href="#pack" onclick="changePage(4)">4</a>
-								<a href="#pack" onclick="changePage(5)">5</a>
-								<a href="#pack" onclick="changePage(6)">6</a>
-								<a href="#pack" onclick="changePage(7)">7</a>
-								<a href="#pack" onclick="changePage(8)">8</a>
-								<a href="#pack" onclick="changePage(9)">9</a>
-								<a href="#pack" onclick="changePage(10)">10</a>
-								<a href="#pack" onclick="changePage(11)">11</a>
-								<a href="#pack" onclick="changePage(12)">12</a>
-								<a href="#pack" onclick="changePage(13)">13</a>
-								<a href="#pack" onclick="changePage(14)">14</a>
-							</span>
-                        <a class="pagination-older" href="#pack" onclick="nextPage()">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </nav>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!--/.packages-->
-<!--packages end-->
 
 
 <!--blog start-->
 
-<%--<%@include file="common/new.jsp" %>--%>
+<section id="blog" class="blog">
+    <div class="container">
+        <div class="blog-details">
+            <div class="gallary-header text-center">
+                <h2>
+                    Tin tức gần đây
+                </h2>
+                <p>
+                    Các dữ liệu mới nhất được thu thập về tình hình du lịch.
+                </p>
+            </div>
+            <!--/.gallery-header-->
+            <div class="blog-content">
+                <div class="row">
+                    <% for (news n : news) { %>
+                    <div class="col-sm-4 col-md-4">
+                        <div class="thumbnail">
+                            <h2>tin mới <span><%= n.getDate() %></span></h2>
+                            <div class="thumbnail-img">
+                                <a href="<%= n.getNewsLink() %>" style="cursor: pointer">
+                                    <img src="assets/images/blog/<%= n.getImage()%>" alt="blog-img" style="height:220px">
+                                </a>
+                                <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
+                            </div><!--/.thumbnail-img-->
+                            <div class="caption">
+                                <div class="blog-txt">
+                                    <h3>
+                                        <a style="color: #00d8fe!important;">
+                                            <%= n.getTitle() %>
+                                        </a>
+                                    </h3>
+                                    <p style="height: 300px;text-align: justify"><%= n.getContent() %>
+                                    </p>
+                                    <a href="<%= n.getNewsLink() %>" style="color: #b20909!important;">Read More</a>
+                                </div><!--/.blog-txt-->
+                            </div><!--/.caption-->
+                        </div><!--/.thumbnail-->
+                    </div><!--/.col-->
+                    <% } %>
+
+                </div><!--/.row-->
+            </div><!--/.blog-content-->
+        </div><!--/.blog-details-->
+    </div><!--/.container-->
+
+</section><!--/.blog-->
 
 <!--blog end-->
 
@@ -598,7 +546,48 @@
 <!-- feedback -->
 <!-- feedback Start -->
 
-<%--<%@include file="common/feedback.jsp" %>--%>
+<section id="feedback" class="testemonial">
+    <div class="container">
+
+        <div class="gallary-header text-center">
+            <h2>Đánh giá khách hàng</h2>
+            <p>
+                Đánh giá của khách hàng là tiêu chí quan trọng nhất để cải thiện dịch vụ.
+            </p>
+
+        </div><!--/.gallery-header-->
+
+        <div class="owl-carousel owl-theme" id="testemonial-carousel">
+            <% for (feedback f : fback) { %>
+            <div class="home1-testm item">
+                <div class="home1-testm-single text-center">
+                    <div class="home1-testm-img"><% Random random = new Random();%>
+                        <img src="assets/images/client/<%=random.nextInt(3)+1%>.png" alt="img"/>
+                    </div><!--/.home1-testm-img-->
+                    <div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+                        <p>
+                            <%=f.getText()%>
+                        </p>
+                        <h3>
+                            <a href="#" style="color: #00d8fe!important;">
+                                <% String uN = ind.getUserNameById(f.getUserId()); %>
+                                <%=uN%>
+                            </a>
+                        </h3>
+                        <h4><%=f.getDate()%></h4>
+                    </div><!--/.home1-testm-txt-->
+                </div><!--/.home1-testm-single-->
+            </div><!--/.item-->
+            <% } %>
+
+        </div><!--/.testemonial-carousel-->
+    </div><!--/.container-->
+
+</section><!--/.testimonial-->
+
 
 <!-- feedback End -->
 

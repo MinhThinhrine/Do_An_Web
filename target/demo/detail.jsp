@@ -501,7 +501,7 @@
                                                 <a href="ServiceServlet?id=<%=t.getId()%>" style="text-decoration: none; text-transform: uppercase">Book Now</a>
                                             </button>
                                             <button type="button" class="render-form btn-contact-tour" style="background-color: #bbbbbb!important;">
-                                                <a href="ValiServlet?id=<%=t.getId()%>&refresh=yes" style="text-decoration: none; text-transform: uppercase;color: #00d8fe!important;">Thêm Vào Vali</a>
+                                                <a href="ValiServlet?id=<%=t.getId()%>" style="text-decoration: none; text-transform: uppercase;color: #00d8fe!important;">Thêm Vào Vali</a>
                                             </button>
                                         </div>
                                     </div>

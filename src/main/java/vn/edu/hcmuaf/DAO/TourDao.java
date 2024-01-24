@@ -90,9 +90,9 @@ public class TourDao {
                     rs = preparedStatement.executeQuery();
                     while (rs.next()){
                         valies  row = new valies();
-                        row.setTourId(rs.getInt("id"));
-                        row.setNumAdult(1);
-                        row.setNumChildren(1);
+                        row.setId(rs.getInt("id"));
+                        row.setNumAdult(vl.getNumAdult());
+                        row.setNumChildren(vl.getNumChildren());
                         row.setImage(rs.getString("image"));
                         row.setDuration(rs.getString("duration"));
                         row.setSchedule(rs.getString("schedule"));
@@ -127,6 +127,32 @@ public class TourDao {
             throw new RuntimeException(e);
         }
     }
+    public int getTotalCartPrice(ArrayList<valies> valiList) {
+        int sum = 0;
+        double cout = 0.6;
+        try {
+            if (valiList.size() > 0) {
+                for (valies vl : valiList) {
+                    connection = ConnectToDatabase.getConnect();
+                    String sql = "SELECT * FROM tours where id =?";
+                    preparedStatement = connection.prepareStatement(sql);
+                    preparedStatement.setInt(1, vl.getId());
+                    rs = preparedStatement.executeQuery();
+
+                    while (rs.next()) {
+                        sum+=rs.getInt("price")*vl.getNumAdult();
+                                sum+=rs.getInt("price")*vl.getNumChildren()*cout ;
+                    }
+
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return sum;
+    }
     public static ArrayList<Tour> getListTourbySearch(String search) {
         ArrayList<Tour> listSearch = new ArrayList<>();
         String sql = "SELECT * FROM tours WHERE schedule LIKE ? ORDER BY id DESC";
@@ -156,6 +182,23 @@ public class TourDao {
         }
         return listSearch;
     }
+        public void savePaymentInfo(int id, String date, String selectedIds ) {
+                connection = ConnectToDatabase.getConnect();
+                String sql = "INSERT INTO options (departDate, serviceId, valiId) VALUES (?, ?, ?)";
+            try {
+                // Kết nối đến cơ sở dữ liệu
+                preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setString(1, date);
+                preparedStatement.setString(2, selectedIds);
+                preparedStatement.setInt(3, id);
+                preparedStatement.executeUpdate();
+
+                } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+
     public void addProduct(String region,int discountID,String name, String image, int price,String startTime, String duration, String schedule, String des) {
         String sql = "INSERT INTO tours (region, discountId, name, image, price, startTime, duration, schedule, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 

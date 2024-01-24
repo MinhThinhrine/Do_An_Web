@@ -122,9 +122,10 @@ public class indexDao {
     public static void main(String[] args) {
         List<feedback> newsList = new ArrayList<>();
         indexDao ind = new indexDao();
+        List<news> news = ind.getAllNews();
         String name = ind.getUserNameById(1);
         System.out.println(name);
-        for (feedback n:newsList) {
+        for (news n:news) {
             System.out.println(n);
         }
     }

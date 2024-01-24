@@ -162,9 +162,9 @@
                     <ul class="head col-12">
                         <li class="checked"><a href="" style="color: #00d8fe!important;">1. Dịch vụ và thông tin</a></li>
                         <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
-                        <li class="checked"><a href="" style="color: #bbbbbb!important;">3. Hình thức thanh toán</a>
+                        <li class="checked"><a href="" style="color: #00d8fe!important;">2. Hình thức thanh toán</a>
                         <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
-                        <li class="checked"><a href="" style="color: #bbbbbb!important;">3. Hóa đơn</a>
+                        <li class="checked"><a href="" style="color: #00d8fe!important;">3. Hóa đơn</a>
                         </li>
                     </ul>
                 </div>
@@ -173,365 +173,216 @@
         <section class="checkout-main order-tour animate__fadeIn animate__animated">
             <div class="container">
                 <div class="row">
-                    <h2 class="d-none d-lg-block">Tổng quan về chuyến đi</h2>
-                    <div class="col-md-8 col-12 left" style="border: 1px solid #d5d5d5;border-radius: 5px">
-                        <h3 style="padding: 20px">Dịch vụ</h3>
-                        <div class="customer-notice">
-                            <div class="customer-notice-left">
-                                <h4>Chọn các dịch vụ đi kèm ( nếu muốn )</h4>
-                                * Có chi phí phát sinh
-                            </div>
-                            <div class="customer-notice-right">
-                                <button type="button" class="btn btn-primary dropdown-toggle"
-                                        id="dropdownButton" data-bs-toggle="dropdown" aria-expanded="false">Dịch vụ </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownButton">
-                                    <li><label class="dropdown-item"><input type="checkbox" value="muc1"><p>Mục 1</p></label></li>
-                                    <li><label class="dropdown-item"><input type="checkbox" value="muc2"><p>Mục 2</p></label></li>
-                                    <li><label class="dropdown-item"><input type="checkbox" value="muc3"><p>Mục 3</p></label></li>
-                                    <!-- Thêm các mục khác -->
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 style="padding: 0px 20px 20px">Thông tin liên lạc</h3>
-                        <div class="customer-contact mb-3">
-                            <form class="customer-contact-inner" action="#" method="get" id="form">
-                                <div class="name">
-                                    <label>Họ và Tên <b>*</b></label><input autocomplete="off" type="text" class="form-control" name="fullName" value="" />
-                                </div>
-                                <div class="mail">
-                                    <label>Email <b>*</b></label><input type="email" class="form-control" name="email" value="" />
-                                </div>
-                                <div class="phone">
-                                    <label>Số điện thoại <b>*</b></label><input type="number" class="form-control" name="phone" value="" />
-                                </div>
-                                <div class="addess"><label>Địa chỉ</label><input type="text" class="form-control" name="address" value="" /></div>
-                            </form>
-                        </div>
-                        <div class="customer">
-                            <h3 style="padding: 20px">Hành khách</h3>
-                            <div class="change">
-                                <div class="change-title">
-                                    <h4>Người lớn</h4>
-                                    <p>Từ 12 tuổi</p>
-                                </div>
-                                <div class="change-number">
-                                    <span class="minus btn-click"><i class="fal fa-minus-circle" id="adultMinus"></i></span><span class="number" id="adult">1</span>
-                                    <span class="plus btn-click"><i class="fal fa-plus-circle" id="adultPlus"></i></span>
-                                </div>
-                            </div>
-                            <div class="change">
-                                <div class="change-title">
-                                    <h4>Trẻ em</h4>
-                                    <p>Từ 5 - 11 tuổi</p>
-                                </div>
-                                <div class="change-number">
-                                    <span class="minus btn-click"><i class="fal fa-minus-circle" id="childrenMinus"></i></span><span class="number" id="children">0</span>
-                                    <span class="plus btn-click"><i class="fal fa-plus-circle" id="childrenPlus"></i></span>
-                                </div>
-                            </div>
-                            <div class="change">
-                                <div class="change-title">
-                                    <h4>Trẻ nhỏ</h4>
-                                    <p>Từ 2 - 4 tuổi</p>
-                                </div>
-                                <div class="change-number">
-                                    <span class="minus btn-click"><i class="fal fa-minus-circle" id="smallchildrenMinus"></i></span><span class="number" id="smallchildren">0</span>
-                                    <span class="plus btn-click"><i class="fal fa-plus-circle" id="smallchildrenPlus"></i></span>
-                                </div>
-                            </div>
-                            <div class="change">
-                                <div class="change-title">
-                                    <h4>Em bé</h4>
-                                    <p>Từ 0 - 2 tuổi</p>
-                                </div>
-                                <div class="change-number">
-                                    <span class="minus btn-click"><i class="fal fa-minus-circle" id="babyMinus"></i></span><span class="number" id="baby">0</span>
-                                    <span class="plus btn-click"><i class="fal fa-plus-circle" id="babyPlus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="customer-notice">
-                            <div class="customer-notice-left">
-                                * Người lớn từ 12 tuổi trở lên
-                            </div>
-                            <div class="customer-notice-right">
-                                * Trẻ em dưới 12 tuổi ( trẻ dưới 4 tuổi được miễn phí )
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <div class="form-check checkbox-input-search d-inline-flex align-items-center">
-                                <input class="form-check-input me-3" type="radio" name="input-list-customer" value="yes" checked="" /><label class="form-check-label mt-1 small">Nhập danh sách khách hàng</label>
-                            </div>
-                            <div class="form-check checkbox-input-search d-inline-flex align-items-center">
-                                <input class="form-check-input me-3" type="radio" id="radSupport" name="input-list-customer" value="no" />
-                                <div class="col-11"><label class="form-check-label mt-1 small">Tôi cần được nhân viên tư vấn Vietravel trợ giúp nhập thông tin đăng ký dịch vụ</label></div>
-                            </div>
-                        </div>
-                        <section class="wrap-info-customer-number-person-details mt-4 wrapper-new-input">
-                            <div class="title-section mb-3 title-hotel-flight-infor" style="font-weight: 700;font-size: 22px;line-height: 28px;color: #2d4271;padding: 20px">
-                                Thông tin hành khách</div>
-                            <div class="group-fields-input-contact-adult group-fields-input-contact-wrapper mb-3">
-                                <div class="title-persona"><i class="fa-solid fa-user-tie"></i> Người lớn</div>
-                                <div class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input" placeholder="Nhập họ tên" name="fullName" />
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input" name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span class="text-danger">*</span></label>
-                                                    <select class="form-control birth-date hotel-flight-input" name="dayOfMonth">
-                                                        <option value="-1">Ngày</option>
-                                                        <option value="01">01</option>
-                                                        <option value="02">02</option>
-                                                        <option value="03">03</option>
-                                                        <option value="04">04</option>
-                                                        <option value="05">05</option>
-                                                        <option value="06">06</option>
-                                                        <option value="07">07</option>
-                                                        <option value="08">08</option>
-                                                        <option value="09">09</option>
-                                                        <option value="10">10</option>
-                                                        <option value="11">11</option>
-                                                        <option value="12">12</option>
-                                                        <option value="13">13</option>
-                                                        <option value="14">14</option>
-                                                        <option value="15">15</option>
-                                                        <option value="16">16</option>
-                                                        <option value="17">17</option>
-                                                        <option value="18">18</option>
-                                                        <option value="19">19</option>
-                                                        <option value="20">20</option>
-                                                        <option value="21">21</option>
-                                                        <option value="22">22</option>
-                                                        <option value="23">23</option>
-                                                        <option value="24">24</option>
-                                                        <option value="25">25</option>
-                                                        <option value="26">26</option>
-                                                        <option value="27">27</option>
-                                                        <option value="28">28</option>
-                                                        <option value="29">29</option>
-                                                        <option value="30">30</option>
-                                                        <option value="31">31</option>
-                                                    </select>
+                    <h2 class="d-none d-lg-block">Hóa đơn</h2>
+                    <section>
+                        <div class="container" style="font-size: 18px">
+                            <div class="row py-4 flex-md-row flex-column-reverse">
+                                <div class="col-md-8 col-12 left" style="border: 1px solid #d5d5d5;border-radius: 5px">
+                                    <section>
+                                        <div class="contact-info p-4 mb-4" style="border: 1px solid #d5d5d5;border-radius: 5px;margin-top: 30px;height: 250px">
+                                            <div class="heading">
+                                                <h4 class="fw-bold tieude" style="padding-bottom: 20px">THÔNG TIN LIÊN LẠC</h4>
+                                            </div>
+                                            <div class="row" style="font-size: 18px!important;">
+                                                <div class="col-12 col-md-6" style="padding-bottom: 20px">
+                                                    <span class="">Họ tên</span>
+                                                    <p class="">Võ Minh Thịnh</p>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <span class="">Email</span>
+                                                    <p class="info">
+                                                            <span style="color: #00D8FE">2113062@st.hcmuaf.edu.vn</span></p>
+                                                </div>
+                                                <div class="col-md-6 col-12"  style="padding-bottom: 20px">
+                                                    <span class="">Địa chỉ</span>
+                                                    <p class="">
+                                                        Đông Hòa, Dĩ An, Bình Dương
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-3 col-6">
+                                                    <span class="">Di động</span>
+                                                    <p class="">091245415454</p>
+                                                </div>
+                                                <div class="col-md-3 col-12 d-none">
+                                                    <span class="">Số khách</span>
+                                                    <p class="info">
+                                                        1 Người lớn
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <span class="">Ghi chú</span>
+                                                    <p class="info">
+                                                        Booking từ TourNest
+                                                    </p>
+                                                </div>
+                                            </div>                                        </div>
+                                        <div class="booking-detail p-4 mb-4" style="border: 1px solid #d5d5d5;border-radius: 5px;margin-top: 15px">
+                                            <div class="heading">
+                                                <h4 class="fw-bold tieude" style="padding-bottom: 20px">CHI TIẾT BOOKING</h4>
+                                            </div>
+                                            <div class="row item">
+                                                <div class="col-md-3 col-12 ">Số booking</div>
+                                                <div class="col-md-9 col-12 ">
+                                                    <span class="text-primary fw-bold">231112815769</span>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                    <select class="form-control birth-month hotel-flight-input" name="monthOfYear">
-                                                        <option value="-1">Tháng</option>
-                                                        <option value="01">01</option>
-                                                        <option value="02">02</option>
-                                                        <option value="03">03</option>
-                                                        <option value="04">04</option>
-                                                        <option value="05">05</option>
-                                                        <option value="06">06</option>
-                                                        <option value="07">07</option>
-                                                        <option value="08">08</option>
-                                                        <option value="09">09</option>
-                                                        <option value="10">10</option>
-                                                        <option value="11">11</option>
-                                                        <option value="12">12</option>
-                                                    </select>
+                                            <div class="row item">
+                                                <div class="col-md-3 col-12 ">Trị giá booking</div>
+                                                <div class="col-md-9 col-12 ">6,490,000₫</div>
+                                            </div>
+                                            <div class="row item">
+                                                <div class="col-md-3 col-12 ">Số tiền đã thanh toán</div>
+                                                <div class="col-md-9 col-12 ">6,490,000₫</div>
+                                            </div>
+                                            <div class="row item">
+                                                <div class="col-md-3 col-12 ">Số tiền còn lại</div>
+                                                <div class="col-md-9 col-12 ">3,000,000₫</div>
+                                            </div>
+                                            <div class="row item">
+                                                <div class="col-md-3 col-12 ">Ngày đăng ký</div>
+                                                <div class="col-md-9 col-12 ">
+                                                    12/11/2023 23:29:59
                                                 </div>
                                             </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                    <select class="form-control birth-year birth-year-adult hotel-flight-input" name="yearOfYear">
-                                                        <option value="-1">Năm</option>
-                                                        <option value="1961">1961</option>
-                                                        <option value="1962">1962</option>
-                                                        <option value="1963">1963</option>
-                                                        <option value="1964">1964</option>
-                                                        <option value="1965">1965</option>
-                                                        <option value="1966">1966</option>
-                                                        <option value="1967">1967</option>
-                                                        <option value="1968">1968</option>
-                                                        <option value="1969">1969</option>
-                                                        <option value="1970">1970</option>
-                                                        <option value="1971">1971</option>
-                                                        <option value="1972">1972</option>
-                                                        <option value="1973">1973</option>
-                                                        <option value="1974">1974</option>
-                                                        <option value="1975">1975</option>
-                                                        <option value="1976">1976</option>
-                                                        <option value="1977">1977</option>
-                                                        <option value="1978">1978</option>
-                                                        <option value="1979">1979</option>
-                                                        <option value="1980">1980</option>
-                                                        <option value="1981">1981</option>
-                                                        <option value="1982">1982</option>
-                                                        <option value="1983">1983</option>
-                                                        <option value="1984">1984</option>
-                                                        <option value="1985">1985</option>
-                                                        <option value="1986">1986</option>
-                                                        <option value="1987">1987</option>
-                                                        <option value="1988">1988</option>
-                                                        <option value="1989">1989</option>
-                                                        <option value="1990">1990</option>
-                                                        <option value="1991">1991</option>
-                                                        <option value="1992">1992</option>
-                                                        <option value="1993">1993</option>
-                                                        <option value="1994">1994</option>
-                                                        <option value="1995">1995</option>
-                                                        <option value="1996">1996</option>
-                                                        <option value="1997">1997</option>
-                                                        <option value="1998">1998</option>
-                                                        <option value="1999">1999</option>
-                                                        <option value="2000">2000</option>
-                                                        <option value="2001">2001</option>
-                                                        <option value="2002">2002</option>
-                                                        <option value="2003">2003</option>
-                                                        <option value="2004">2004</option>
-                                                        <option value="2005">2005</option>
-                                                        <option value="2006">2006</option>
-                                                        <option value="2007">2007</option>
-                                                        <option value="2008">2008</option>
-                                                        <option value="2009">2009</option>
-                                                        <option value="2010">2010</option>
-                                                        <option value="2011">2011</option>
-                                                        <option value="2012">2012</option>
-                                                        <option value="2013">2013</option>
-                                                        <option value="2014">2014</option>
-                                                        <option value="2015">2015</option>
-                                                        <option value="2016">2016</option>
-                                                        <option value="2017">2017</option>
-                                                        <option value="2018">2018</option>
-                                                        <option value="2019">2019</option>
-                                                        <option value="2020">2020</option>
-                                                    </select>
+                                            <div class="row item">
+                                                <div class="col-md-3 col-12 ">
+                                                    Hình thức thanh toán
+                                                </div>
+                                                <div class="col-md-9 col-12 ">Chuyển khoản</div>
+                                            </div>
+                                            <div class="row item">
+                                                <div class="col-md-3 col-12">Tình trạng</div>
+                                                <div class="col-md-9 col-12 ">
+                                                    Booking của quý khách đã được chúng tôi xác nhận thành công
                                                 </div>
                                             </div>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
+                                            <div class="row item">
+                                                <div class="col-md-3 col-12 label">Thời gian thanh toán</div>
+                                                <div class="col-md-9 col-12 text">
+                                                    <span class="text-primary fw-bold">13/11/23 23:29:59</span> (Theo giờ Việt Nam)
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
+                                    </section>
+                                </div>
+                                <div class="col-md-4 col-12 right">
+                                    <div class="group-checkout">
+                                        <h3>Tóm tắt</h3>
+                                        <p class="package-title"><span>Mã Tour</span> # <%=t.getId()%></p>
+                                        <div class="product">
+                                            <div class="product-image">
+                                                <img src="assets/images/item/<%=t.getImage()%>"
+                                                     class="img-fluid" alt="image">
+                                            </div>
+                                            <div class="product-content">
+                                                <p class="title"><%=t.getName()%></p>
+                                            </div>
+                                        </div>
+                                        <div class="go-tour">
+                                            <div class="start">
+                                                <i class="fa-regular fa-calendar"></i>
+                                                <div class="start-content">
+                                                    <h4>Bắt đầu chuyến đi</h4>
+                                                    <p class="time" style="font-size: 15px;"><%=t.getStartTime()%></p>
+                                                    <p class="from"></p>
+                                                </div>
+                                            </div>
+                                            <div class="end">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                                <div class="start-content">
+                                                    <h4>Kết thúc chuyến đi</h4>
+                                                    <%
 
-                                    <!--                                    <div class="col-sm-2 col-2 mt-sm-0 mt-4">-->
-<!--                                        <div class="form-group select-custom-icon">-->
-<!--                                            <label class="pb-1">Phòng đơn</label>-->
-<!--                                            <div class="form-check form-switch">-->
-<!--                                                <input class="form-check-input" type="checkbox" name="surchargeRoom" checked="" style="pointer-events: none;" /><label class="form-check-label">1.400.000&nbsp;₫</label>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-                                </div>
-                            </div>
-                        </section>
-                        <div class="customer-save">
-                            <h3>Quý khách có ghi chú lưu ý gì, hãy nói với chúng tôi !</h3>
-                            <div class="customer-save-inner">
-                                <p>Ghi chú thêm</p>
-                                <textarea class="form-control" cols="20" name="note" placeholder="Vui lòng nhập nội dung lời nhắn bằng tiếng Anh hoặc tiếng Việt" rows="5"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 right">
-                        <div class="group-checkout">
-                            <h3>Tóm tắt</h3>
-                            <p class="package-title"><span>Mã Tour</span> #MT13646</p>
-                            <div class="product">
-                                <div class="product-image">
-                                    <img src="https://media.travel.com.vn/tour/tfd_230302103257_223532.jpg"
-                                         class="img-fluid" alt="image">
-                                </div>
-                                <div class="product-content">
-                                    <p class="title">Tây Ninh - Hành trình chinh phục nóc nhà Nam Bộ - Tặng vé tham
-                                        quan 3 tuyến cáp treo Chùa Hang - Tâm An - Vân Sơn</p>
-                                </div>
-                            </div>
-                            <div class="go-tour">
-                                <div class="start">
-                                    <i class="fa-regular fa-calendar"></i>
-                                    <div class="start-content">
-                                        <h4>Bắt đầu chuyến đi</h4>
-                                        <p class="time" style="font-size: 15px;">
-                                            <input type="date" id="date"></p>
-                                        <p class="from"></p>
-                                    </div>
-                                </div>
-                                <div class="end">
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                    <div class="start-content">
-                                        <h4>Kết thúc chuyến đi</h4>
-                                        <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
-                                        <p class="from"></p>
+                                                    %>
+                                                    <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                                    <p class="from"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="detail">
+                                            <table style="width: 100%">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="l1">Hành khách</th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> Người lớn</td>
+                                                    <td class="t-price text-right">1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trẻ em (40%) </td>
+                                                    <td class="t-price text-right">0</td>
+                                                </tr>
+                                                <tr class="total">
+                                                    <td>Tổng cộng</td>
+                                                    <td class="t-price text-right" id="TotalPrice">1,090,000₫</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <div>
+                                                <button class="btn btn-primary btn-order" style="width:100% "
+                                                        onclick="kiemTraDieuKien()">
+                                                    <a href="#"></a> Hóa đơn
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <a href="mailto:thinh913011@gmail.com?subject=LIÊN HỆ" style="width: 100%">
+                                                    <button class="btn btn-primary btn-order"
+                                                            style="width:100%;background-color: #f9f9f9!important;color: black ">
+                                                        Liên Hệ
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="detail">
-                                <table style="width: 100%">
-                                    <tbody>
-                                    <tr>
-                                        <th class="l1">Hành khách</th>
-                                        <th class="l2 text-right">
-                                            <i class="fa-solid fa-people-group"></i></i> <span>1 người</span>
-                                            <p class="add-more">1 người lớn </p>
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <td> Người lớn</td>
-                                        <td class="t-price text-right">1 x 1,190,000₫</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trẻ em</td>
-                                        <td class="t-price text-right">0₫</td>
-                                    </tr>
-                                    <tr class="cuppon d-none">
-                                        <td>Mã giảm giá</td>
-                                        <td class="cp-form text-right">
-                                            <form action="#" method="get">
-                                                <input class="form-control" id="DiscountCode"
-                                                       name="DiscountCode" placeholder="Thêm mã"
-                                                       required="required" type="text" value="">
-                                                <input type="hidden" id="hidBooking_id"
-                                                       value="ac7ab715-cd61-4053-b3e3-5e0fa5c1f838">
-                                                <input type="submit" name="submit" id="btnDiscountCode"
-                                                       value="Áp dụng">
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    <tr class="cuppon">
-                                        <td></td>
-                                        <td class="cp-form text-right">
-                                            giảm 100,000đ
-                                        </td>
-                                    </tr>
-                                    <tr class="total">
-                                        <td>Tổng cộng</td>
-                                        <td class="t-price text-right" id="TotalPrice">1,090,000₫</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <div>
-                                    <button class="btn btn-primary btn-order" style="width:100% "
-                                            onclick="kiemTraDieuKien()">
-                                        <a href="../TourNest-master/bill.html"></a> Thanh Toán
-                                    </button>
+                            <div class="d-none d-lg-block">
+                                <div class="passenger-list p-4 mb-4">
+                                    <div class="heading">
+                                        <h5 class="fw-bold tieude">DANH SÁCH HÀNH KHÁCH</h5>
+                                    </div>
+                                    <table class="table booking-table">
+                                        <thead>
+                                        <tr class="fw-bold">
+                                            <td>Họ tên</td>
+                                            <td class="d-none">Giảm giá?</td>
+                                            <td>Ngày sinh</td>
+                                            <td>Giới tính</td>
+                                            <td>Địa chỉ</td>
+                                            <td>Độ tuổi</td>
+                                            <td>Phòng đơn</td>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Minh Thinh</td>
+                                            <td class="d-none">Giảm giá?</td>
+                                            <td>17/02/2003</td>
+                                            <td>Nam</td>
+                                            <td></td>
+                                            <td>Người lớn</td>
+                                            <td>Có</td>
+                                        </tr>
+                                        </tbody>
+
+                                    </table>
                                 </div>
-                                <div>
-                                    <button class="btn btn-primary btn-order" style="width:100%;background-color: #f9f9f9!important;color: black ">
-                                        <a href="../TourNest-master/bill.html"></a> Liên Hệ
-                                    </button>
+                            </div>
+                            <div class="d-none d-lg-block2">
+                                <div class="passenger-list p-4 mb-4">
+                                    <div class="heading">
+                                        <h5 class="fw-bold">DANH S&#193;CH PHIẾU THU</h5>
+                                    </div>
+                                    <div id="divLoadShowBookingReceipt">
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </section>
+                    <div class="thanks" style="text-align: center">
+                        <h1>Cảm ơn quý khách đã lựa chọn dịch vụ của chúng tôi</h1>
                     </div>
                 </div>
             </div>

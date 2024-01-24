@@ -158,7 +158,7 @@
                                             </div>
                                             <br>
                                             <div style="text-align:justify">Nội dung chuyển khoản: <br> MaTour-Email-(50% or 100%)</div>
-                                            <div style="text-align:justify">Ví dụ: <br> MT13646-21130549@st.hcmuaf.edu.vn-50</div>
+                                            <div style="text-align:justify">Ví dụ: <br> 1-21130549@st.hcmuaf.edu.vn-50</div>
                                         </div>
                                         <div class="qrcode">
                                             <img src="assets/images/service/mbbank.jpg" alt="qrcode" srcset="">

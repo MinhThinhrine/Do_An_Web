@@ -22,7 +22,7 @@ public class RemoveFromValiServlet extends HttpServlet {
                     if (valiList != null) {
                         for (valies v :valiList ) {
                             if (v.getId() == Integer.parseInt(bookId)) {
-                                valiList.remove(valiList.indexOf(v));
+                                valiList.remove(v);
                                 break;
                             }
                         }

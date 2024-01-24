@@ -37,7 +37,7 @@
                             <li class="smooth-menu"><a href="#service">Liên Hệ</a></li>
                             <%
                                 User user = (User) session.getAttribute("user");
-                               String url = request.getContextPath().trim();
+//                               String url = request.getContextPath().trim();
                             %>
                             <% if (Objects.nonNull(user)) { %>
                             <li class="navbar-toggle"><a href="vali.jsp" id="myTour"><i

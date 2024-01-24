@@ -1,6 +1,6 @@
-<!doctype html>
+        <!doctype html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" isELIgnored= "false"%>
+         pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <%@ page import="vn.edu.hcmuaf.bean.Tour" %>
@@ -14,12 +14,15 @@
     User user = (User) session.getAttribute("user");
     ArrayList<valies> vali_List = (ArrayList<valies>) session.getAttribute("vali-List");
     List<valies> toursVali = null;
-        TourDao tDao = new TourDao();
-    if(vali_List != null) {
+    TourDao tDao = new TourDao();
+    int total = 0;
+    if (vali_List != null) {
         toursVali = tDao.getValiTour(vali_List);
-
-        request.setAttribute("vali_List",vali_List);
-    };
+        request.setAttribute("vali_List", vali_List);
+        total = tDao.getTotalCartPrice((ArrayList<valies>) toursVali);
+        request.setAttribute("total", total);
+    }
+    ;
 %>
 <html class="no-js" lang="vi">
 <%@ page contentType="text/html; charset=UTF-8" %>
@@ -44,9 +47,10 @@
             rel="stylesheet"
     />
     <style>
-        .img-fluid{
+        .img-fluid {
             cursor: pointer;
         }
+
         .return {
             font-size: 20px;
             color: #00d8fe;
@@ -69,92 +73,104 @@
                         <table class="table">
                             <thead>
                             <tr>
-
-                                <th scope="col"><a class="return" href="catelogy.jsp">
-                                    <i class="fa-solid fa-arrow-left"></i>Quay về</a></th>
+                                <th scope="col"><a class="return" href="CategorieServlet">
+                                    Sản phẩm</a></th>
                                 <th scope="col">Trạng thái</th>
                                 <th scope="col" style="width:170px;padding-left: 40px">Người lớn</th>
                                 <th scope="col">Trẻ em ( Giảm 40% )</th>
                                 <th scope="col">Giá</th>
-                                <th scope="col"><a href="index.jsp">
-                                    tour<span>Nest</span>
-                                </a>
-                                </th>
-
                             </tr>
                             </thead>
                             <tbody>
                             <%
-                                if(vali_List!=null){
-                                for(valies t : toursVali ) {
 
+                                if (vali_List != null) {
+                                    for (valies t : toursVali) {
                             %>
                             <tr id="<%=t.getId()%>">
-                                <th scope="row">
+                                <th scope="row" class="element">
                                     <div class="d-flex align-items-center">
                                         <div class="d-flex align-items-center pe-2">
                                             <input class="form-check-input" type="radio" name="radioNoLabel"
-                                                   id="radioItem1" value=""
-                                                   aria-label="..."/>
+                                                   id="radio"
+                                                   aria-label="...">
                                         </div>
                                         <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>">
-                                        <img src="assets/images/item/<%=t.getImage()%>" class="img-fluid rounded-3"
-                                             style="width: 120px;" title = "Chi tiết" alt="Book" >
+                                            <img src="assets/images/item/<%=t.getImage()%>" class="img-fluid rounded-3"
+                                                 style="width: 120px;" title="Chi tiết" alt="Book">
                                         </a>
                                         <div class="flex-column ms-4">
-                                            <p class="mb-0"><%=t.getName()%></p>
-                                            <p class="mb-2"><%=t.getDuration()%></p>
+                                            <p class="mb-0"><%=t.getName()%>
+                                            </p>
+                                            <p class="mb-2"><%=t.getDuration()%>
+                                            </p>
                                         </div>
                                     </div>
                                 </th>
                                 <td class="align-middle">
-                                    <p class="mb-0" style="font-weight: 500;">Chưa thanh toán</p>
+                                    <p class="mb-0" style="font-weight: 500;">
+                                        <a href="ServiceServlet?id=<%=t.getId()%>">
+                                            <button class="btn btn-link px-2">
+                                                Thanh toán
+                                            </button>
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="align-middle">
+                                        <div class="d-flex flex-row">
+                                            <a href="QuantityServlet?action=dec&id=<%=t.getId()%>">
+                                                <button class="btn btn-link px-2">
+                                                    <i class="fas fa-minus"></i>
+                                                </button>
+                                            </a>
+                                            <input min="0" name="quantity" value="<%=t.getNumAdult()%>" type="number"
+                                                   class="form-control form-control-sm" style="width: 55px;" readonly>
+                                            <a href="QuantityServlet?action=inc&id=<%=t.getId()%>">
+                                                <button class="btn btn-link px-2">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </a>
+                                        </div>
                                 </td>
                                 <td class="align-middle">
                                     <div class="d-flex flex-row">
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, -1,1)">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-
-                                        <input id="form1" min="0" name="quantity" value="1" type="number"
-                                               class="form-control form-control-sm" style="width: 55px;"/>
-
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, 1,1)">
-                                            <i class="fas fa-plus"></i>
-                                        </button>
+                                        <a href="QuantityServlet?action=decc&id=<%=t.getId()%>">
+                                            <button class="btn btn-link px-2">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </a>
+                                        <input min="0" name="quantity" value="<%=t.getNumChildren()%>" type="number"
+                                               class="form-control form-control-sm" style="width: 55px;" readonly>
+                                        <a href="QuantityServlet?action=incc&id=<%=t.getId()%>">
+                                            <button class="btn btn-link px-2">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </a>
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <div class="d-flex flex-row">
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, -1,1)">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-
-                                        <input id="form1-cop" min="0" name="quantity" value="1" type="number"
-                                               class="form-control form-control-sm" style="width: 55px;"/>
-
-                                        <button class="btn btn-link px-2" onclick="changeQuantity(this, 1,1)">
-                                            <i class="fas fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="align-middle">
-                                    <p class="mb-0" id="donGia1" style="font-weight: 500;">
+                                    <p class="mb-0" class="dongia" style="font-weight: 500;">
                                         <span class="pull-right" style="margin-top: 25px;">
                                 <% int number = t.getPrice();
-                                DecimalFormat decimalFormat = new DecimalFormat("#,###");
-                                String formattedString = decimalFormat.format(number);%>
-                                <%=formattedString%>đ
-                                        </p>
+                        DecimalFormat decimalFormat = new DecimalFormat("#,###");
+                        String formattedString = decimalFormat.format(number);
+
+                        %>
+                        <%=formattedString%>đ
+                                    </p>
                                 </td>
                                 <td class="align-middle">
                                     <div class="col-md-1 col-lg-1 col-xl-1">
-                                        <a href="RemoveFromValiServlet?id=<%=t.getId()%>" class="text-danger" onclick="dele(1)"><i
-                                                class="fas fa-trash fa-lg"></i></a>
+                                        <a href="RemoveFromValiServlet?id=<%=t.getId()%>"
+                                           class="text-danger">
+                                            <i
+                                                    class="fas fa-trash fa-lg"></i></a>
                                     </div>
                                 </td>
                             </tr>
-                            <% } } %>
+                            <% }
+                            } %>
+
                             </tbody>
                         </table>
                     </div>
@@ -166,44 +182,27 @@
                                 <div class="col-lg-4 col-xl-4"></div>
                                 <div class="col-lg-4 col-xl-4"></div>
                                 <div class="col-lg-4 col-xl-4">
-                                    <div class="d-flex justify-content-between" style="font-weight: 500;">
-                                        <p class="mb-2">Tạm tính</p>
-                                        <p class="mb-2" id="tamTinh">0đ</p>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between" style="font-weight: 500;">
-                                        <p class="mb-0">Dịch vụ khác</p>
-                                        <p class="mb-0">0đ</p>
-                                    </div>
-
-                                    <hr class="my-4">
-
-                                    <div id="tongCong" class="d-flex justify-content-between mb-4"
-                                         style="font-weight: 500;">
-                                        <p class="mb-2">Tổng cộng</p>
-                                        <p class="mb-2" id="ketQua">0đ</p>
-                                    </div>
-
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="link()">
-                                        <div class="d-flex justify-content-between">
-                                            <a href="" style="color: white">Thanh toán</a>
-                                            <span id="thanhToan">0đ</span>
-                                        </div>
-                                    </button>
+                                        <button type="button" class="btn btn-primary btn-block btn-lg">
+                                            <div class="d-flex justify-content-between">
+                                                Tổng cộng
+                                                <%
+                                                    DecimalFormat decimalFormat = new DecimalFormat("#,###");
+                                                    String formattedTotal = decimalFormat.format(total);
+                                                %>
+                                                <span id="thanhToan"><%=formattedTotal%>đ</span>
+                                            </div>
+                                        </button>
                                 </div>
                             </div>
-
                         </div>
-                    </div>
 
+                    </div>
                 </div>
+
             </div>
         </div>
-    </section>
+</section>
 </div>
-
-<script src="assets/js/cart.js"></script>
-
 </body>
 
 </html>

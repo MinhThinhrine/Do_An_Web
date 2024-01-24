@@ -41,7 +41,7 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.js" defer></script>
+<%--    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.js" defer></script>--%>
     <!-- favicon img -->
     <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
 
@@ -433,8 +433,6 @@
 
 </div>
 </div>
-</div>
-</div>
 
 <!-- footer-copyright start -->
 
@@ -560,6 +558,12 @@
                 break;
         }
     }
+    const buttonDatTour = document.querySelectorAll(".addvali");
+    buttonDatTour.forEach(function (button) {
+        button.addEventListener("click",function () {
+            alert('Đã thêm vào giỏ hàng');
+        })
+    });
 </script>
 <script !src="">
     $('#inner-box').collapse(false);

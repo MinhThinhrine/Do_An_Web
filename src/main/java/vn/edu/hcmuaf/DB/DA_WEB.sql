@@ -352,7 +352,7 @@ Chợ Nổi Cái Răng là một điểm đến thu hút du khách bởi không 
     ,'Bình Thuận - Phan Thiết là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
     ('Miền Trung', 1, 'Tam Đảo - Vĩnh Phúc', '85.png', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Tam Đảo- Ngày 2: Vĩnh Phúc- Ngày 3: Du lịch biển Vĩnh Phúc-Ngày 4: Về lại Tam Đảo'
     ,'Tam Đảo - Vĩnh Phúc là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
-    ('Miền Trung', 1, 'Tràng An - Ninh Bình', '86.png', 2990000, 'hằng ngày', '3 ngày 3 đêm', 'Ngày 1: Tràng An- Ngày 2: Ninh Bình- Ngày 3: Về lại Tràng An'
+    ('Miền Trung', 1, 'Tràng An - Ninh Bình', '86.png', 2990000, 'hằng ngày', '3 ngày3 đêm', 'Ngày 1: Tràng An- Ngày 2: Ninh Bình- Ngày 3: Về lại Tràng An'
     ,'Tràng An - Ninh Bình là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
     ('Miền Trung', 1, 'Đà Nẵng - Bà Nà Hills', '87.png', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Đà Nẵng- Ngày 2: Bà Nà Hills- Ngày 3: Tiếp tục khám phá Bà Nà Hills -Ngày 4: Về lại Đà Nẵng'
     ,'Đà Nẵng - Bà Nà Hills là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),

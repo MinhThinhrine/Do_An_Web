@@ -10,6 +10,7 @@
 //service_tours sv = (service_tours) request.getAttribute("service");
     Tour t = (Tour) request.getAttribute("tour");
     ArrayList<service_tours> sv_list = (ArrayList<service_tours>) indx.service();
+    StringBuilder serList = new StringBuilder();
 //    options op = indx.option();
 %>
 <html lang="en">
@@ -184,12 +185,12 @@
             <div class="container">
                 <div class="row">
                     <ul class="head col-12">
-                        <li class="checked"><a href="" style="color: #00d8fe!important;">1. Dịch vụ và thông tin</a>
+                        <li class="checked"><a href="#" style="color: #00d8fe!important;">1. Dịch vụ và thông tin</a>
                         </li>
                         <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
-                        <li class="checked"><a href="" style="color: #bbbbbb!important;">3. Hình thức thanh toán</a>
+                        <li class="checked"><a href="" style="color: #bbbbbb!important;">2. Hình thức thanh toán</a>
                         <li class="checked"><i class="fa-solid fa-arrow-right"></i></li>
-                        <li class="checked"><a href="" style="color: #bbbbbb!important;">3. Hóa đơn</a>
+                        <li class="checked"><a href="#" style="color: #bbbbbb!important;">3. Hóa đơn</a>
                         </li>
                     </ul>
                 </div>
@@ -218,10 +219,21 @@
                                         String formattedString = decimalFormat.format(number) ;
 
                                     %>
-                                    <li><label class="dropdown-item"><input type="checkbox" value="muc<%=s.getId()%>" title="<%=s.getDescription()%>">
+                                    <li><label class="dropdown-item"><input type="checkbox" name="<%=s.getId()%>" value="<%=s.getId()%>" title="<%=s.getDescription()%>">
                                         <p><%=s.getName()%></p><p> (<%=formattedString%>đ)</p></label></li>
                                     <!-- Thêm các mục khác -->
-                                    <% } %>
+
+                                    <%
+                                            String checkboxId = s.getId() +"";
+                                            if (request.getParameter(checkboxId) != null) {
+                                                if (serList.length() > 0) {
+                                                    serList.append(" - ");
+                                                }
+                                                serList.append(checkboxId);
+                                            }
+                                        }
+
+                                    %>
                                 </ul>
                             </div>
                         </div>
@@ -253,11 +265,13 @@
                                     <p>Từ 12 tuổi</p>
                                 </div>
                                 <div class="change-number">
-                                    <span class="minus btn-click"><i class="fal fa-minus-circle"
-                                                                     id="adultMinus"></i></span><span class="number"
-                                                                                                      id="adult">1</span>
-                                    <span class="plus btn-click"><i class="fal fa-plus-circle"
-                                                                    id="adultPlus"></i></span>
+                                    <span class="minus btn-click">
+                                        <button class="btn btn-link px-lg-2 btn-lg" id="adultMinus">
+                                            <i class="fal fa-minus-circle" ></i></button></span>
+                                    <span class="number" id="adult">1</span>
+                                    <span class="plus btn-click">
+                                        <button class="btn btn-link px-lg-2 btn-lg" id="adultPlus">
+                                            <i class="fal fa-plus-circle" ></i></button></span>
                                 </div>
                             </div>
                             <div class="change">
@@ -266,10 +280,15 @@
                                     <p>Từ 4 - 12 tuổi</p>
                                 </div>
                                 <div class="change-number">
-                                    <span class="minus btn-click"><i class="fal fa-minus-circle" id="childrenMinus"></i></span><span
-                                        class="number" id="children">0</span>
-                                    <span class="plus btn-click"><i class="fal fa-plus-circle"
-                                                                    id="childrenPlus"></i></span>
+                                    <span class="minus btn-click">
+                                        <button class="btn btn-link px-lg-2 btn-lg" id="childrenMinus">
+                                        <i class="fal fa-minus-circle"></i>
+                                        </button></span>
+                                    <span class="number" id="children">0</span>
+                                    <span class="plus btn-click">
+                                        <button class="btn btn-link px-lg-2 btn-lg" id="childrenPlus">
+                                        <i class="fal fa-plus-circle" ></i>
+                                        </button></span>
                                 </div>
                             </div>
                         </div>
@@ -294,7 +313,7 @@
                                     vấn Vietravel trợ giúp nhập thông tin đăng ký dịch vụ</label></div>
                             </div>
                         </div>
-                        <section class="wrap-info-customer-number-person-details mt-4 wrapper-new-input">
+                        <section class="wrap-info-customer-number-person-details mt-4 wrapper-new-input" id="sessionContainer">
                             <div class="title-section mb-3 title-hotel-flight-infor"
                                  style="font-weight: 700;font-size: 22px;line-height: 28px;color: #2d4271;padding: 20px">
                                 Thông tin hành khách
@@ -460,26 +479,9 @@
                                     </div>
                                     <div class="col-lg-1 col-12"></div>
 
-                                    <!--                                    <div class="col-sm-2 col-2 mt-sm-0 mt-4">-->
-                                    <!--                                        <div class="form-group select-custom-icon">-->
-                                    <!--                                            <label class="pb-1">Phòng đơn</label>-->
-                                    <!--                                            <div class="form-check form-switch">-->
-                                    <!--                                                <input class="form-check-input" type="checkbox" name="surchargeRoom" checked="" style="pointer-events: none;" /><label class="form-check-label">1.400.000&nbsp;₫</label>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </div>-->
-                                    <!--                                    </div>-->
                                 </div>
                             </div>
                         </section>
-<%--                        <div class="customer-save">--%>
-<%--                            <h3>Quý khách có ghi chú lưu ý gì, hãy nói với chúng tôi !</h3>--%>
-<%--                            <div class="customer-save-inner">--%>
-<%--                                <p>Ghi chú thêm</p>--%>
-<%--                                <textarea class="form-control" cols="20" name="note"--%>
-<%--                                          placeholder="Vui lòng nhập nội dung lời nhắn bằng tiếng Anh hoặc tiếng Việt"--%>
-<%--                                          rows="5"></textarea>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
                     </div>
                     <div class="col-md-4 col-12 right">
                         <div class="group-checkout">
@@ -499,8 +501,9 @@
                                     <i class="fa-regular fa-calendar"></i>
                                     <div class="start-content">
                                         <h4>Bắt đầu chuyến đi</h4>
-                                        <p class="time" style="font-size: 15px;">
-                                            <input type="date" id="date"></p>
+                                            <p class="time" style="font-size: 15px;">
+                                                <input type="date" id="date" name="date">
+                                            </p>
                                         <p class="from"></p>
                                     </div>
                                 </div>
@@ -508,9 +511,6 @@
                                     <i class="fa-solid fa-calendar-days"></i>
                                     <div class="start-content">
                                         <h4>Kết thúc chuyến đi</h4>
-                                        <%
-
-                                        %>
                                         <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
                                         <p class="from"></p>
                                     </div>
@@ -525,11 +525,11 @@
                                     </tr>
                                     <tr>
                                         <td> Người lớn</td>
-                                        <td class="t-price text-right">1</td>
+                                        <td class="t-price text-right lonnum">1</td>
                                     </tr>
                                     <tr>
-                                        <td>Trẻ em (40%) </td>
-                                        <td class="t-price text-right">0</td>
+                                        <td>Trẻ em ( giảm 40%) </td>
+                                        <td class="t-price text-right trenum">0</td>
                                     </tr>
                                     <tr class="total">
                                         <td>Tổng cộng</td>
@@ -538,11 +538,11 @@
                                     </tbody>
                                 </table>
                                 <div>
-                                    <a href="PaymentServlet?id=<%=t.getId()%>" style="width: 100%">
-                                    <button class="btn btn-primary btn-order" style="width:100%" >
-                                        Thanh Toán
-                                    </button>
-                                        </a>
+                                    <%=serList.toString()%>
+
+                                        <button class="btn btn-primary btn-order" style="width:100%" onclick="send()">
+                                            Thanh Toán
+                                        </button>
                                 </div>
                                 <div>
                                     <a href="mailto:thinh913011@gmail.com?subject=LIÊN HỆ" style="width: 100%">
@@ -666,5 +666,103 @@
     <div id="fb-customer-chat" class="fb-customerchat" page_id="181053065281290" attribution="biz_inbox"></div>
 </div>
 </body>
+<script>
+    function send() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        var service = "";
+
+        checkboxes.forEach(function(checkbox) {
+            var checkboxValue = checkbox.value;
+
+            if (service.length > 0) {
+                service += " - ";
+            }
+
+            service += checkboxValue;
+        });
+
+        var inputDate = document.getElementById("date").value;
+        var dateObj = new Date(inputDate);
+
+        var day = dateObj.getDate();
+        var month = dateObj.getMonth() + 1; // Tháng trong JavaScript bắt đầu từ 0
+        var year = dateObj.getFullYear();
+
+        // Định dạng thành "dd-mm-yyyy"
+        var formattedDate = (day < 10 ? '0' + day : day) + '-' + (month < 10 ? '0' + month : month) + '-' + year;
+
+        window.location.href  ="PaymentServlet?id=" + <%=t.getId()%> +"&date=" + formattedDate +"&service=" +service.toString();
+    }
+        // document.querySelector(".time").textContent = formattedDate;
+    </script>
+<script>
+        // Lấy các phần tử cần thao tác
+        var adultMinusBtn = document.getElementById("adultMinus");
+        var adultPlusBtn = document.getElementById("adultPlus");
+        var adultNumber = document.getElementById("adult");
+
+        var childrenMinusBtn = document.getElementById("childrenMinus");
+        var childrenPlusBtn = document.getElementById("childrenPlus");
+        var childrenNumber = document.getElementById("children");
+
+        var adultPriceElement = document.querySelector(".lonnum");
+        var childrenPriceElement = document.querySelector(".trenum");
+
+        var totalPrice = document.getElementById("TotalPrice");
+
+        // Hàm tính giá tổng cộng
+        function calculateTotalPrice() {
+            var adultCount = parseInt(adultNumber.textContent);
+            var childrenCount = parseInt(childrenNumber.textContent);
+
+            var adultPrice = parseInt(<%=t.getPrice()%>); // Giá người lớn
+            var childrenPrice = adultPrice * 0.6; // Giá trẻ em (60% giá người lớn)
+
+            var total = adultCount * adultPrice + childrenCount * childrenPrice;
+            totalPrice.textContent = total.toLocaleString() + "₫";
+        }
+
+        // Thêm trình xử lý sự kiện cho nút giảm người lớn
+        adultMinusBtn.addEventListener("click", function() {
+            var currentValue = parseInt(adultNumber.textContent);
+            if (currentValue > 0) {
+                adultNumber.textContent =(currentValue - 1).toString();
+                adultPriceElement.textContent =(currentValue - 1).toString();
+                calculateTotalPrice();
+            }
+        });
+
+
+        // Thêm trình xử lý sự kiện cho nút giảm trẻ em
+        childrenMinusBtn.addEventListener("click", function() {
+            var currentValue = parseInt(childrenNumber.textContent);
+            if (currentValue > 0) {
+                childrenNumber.textContent =(currentValue - 1).toString();
+                childrenPriceElement.textContent =(currentValue - 1).toString();
+                calculateTotalPrice();
+            }
+        });
+        // Thêm trình xử lý sự kiện cho nút tăng người lớn
+        adultPlusBtn.addEventListener("click", function() {
+            var currentValue = parseInt(adultNumber.textContent);
+            adultNumber.textContent = (currentValue + 1).toString();
+            adultPriceElement.textContent = (currentValue + 1).toString();
+            calculateTotalPrice();
+        });
+
+        // Thêm trình xử lý sự kiện cho nút tăng trẻ em
+        childrenPlusBtn.addEventListener("click", function() {
+            var currentValue = parseInt(childrenNumber.textContent);
+            childrenNumber.textContent = (currentValue + 1).toString();
+            childrenPriceElement.textContent = (currentValue + 1).toString();
+            calculateTotalPrice();
+        });
+        // Tính giá tổng cộng khi trang web được tải lần đầu
+        calculateTotalPrice();
+        //
+</script>
+<script !src="">
+
+</script>
 </html>
 
