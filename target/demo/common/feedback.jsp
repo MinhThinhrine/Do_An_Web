@@ -6,9 +6,6 @@
 <%
     indexDao ind = new indexDao();
     List<feedback> fback = new indexDao().getFeedbacks() ;
-    for (feedback f: fback) {
-        System.out.println(f);
-    }
 %>
 
 <section id="feedback" class="testemonial">

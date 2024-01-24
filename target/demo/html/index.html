@@ -7852,8 +7852,39 @@
   </div><!--/.container-->
 
 </section><!--/.testimonial-->
+<style>
+  /* CSS để tạo hộp thoại và đặt vị trí */
+  #customAlert {
+    display: none;
+    position: fixed;
+    top: 90px; /* Đặt khoảng cách từ trên xuống (ở đây là 10px) */
+    right: 10px; /* Đặt khoảng cách từ phải qua (ở đây là 10px) */
+    padding: 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+    z-index: 9999;
+  }
+</style>
 <!-- feedback End -->
+<button id="showCustomAlertBtn">Hiển thị Thông báo</button>
 
+<!-- Div để hiển thị thông báo -->
+<div id="customAlert"></div>
+
+<script>
+  document.getElementById("showCustomAlertBtn").addEventListener("click", function () {
+    // Hiển thị hộp thoại
+    var customAlertDiv = document.getElementById("customAlert");
+    customAlertDiv.innerHTML = "Xin chào! Đây là thông báo!";
+    customAlertDiv.style.display = "block";
+
+    // Tự động ẩn hộp thoại sau 3 giây
+    setTimeout(function () {
+      customAlertDiv.style.display = "none";
+    }, 3000);
+  });
+</script>
 <!--service start-->
 <section id="service" class="service">
   <div class="container">

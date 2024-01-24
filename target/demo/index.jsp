@@ -598,7 +598,7 @@
 <!-- feedback -->
 <!-- feedback Start -->
 
-<%--<%@include file="common/feedback.jsp" %>--%>
+<%@include file="common/feedback.jsp" %>
 
 <!-- feedback End -->
 
@@ -705,21 +705,86 @@
             </div>
 
         </div><!--/.statistics-counter-->
+<%--feedback--%>
+        <div id="customAlert"></div>
 
-        <form>
+        <style>
+            #customAlert {
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                display: none;
+                padding: 10px;
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                z-index: 9999;
+            }
+        </style>
+
+        <form action="FeedServlet" method="post" onsubmit="return validateForm()">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                     <div class="custom-input-group">
-                        <input class="form-control" placeholder="Gửi mail cho chúng tôi về góp ý đánh giá">
-                        <button class="appsLand-btn subscribe-btn" onclick="sendMail()">Gửi mail</button>
+                        <input class="form-control" id="danhgiaInput" name="danhgia" value="" placeholder="Gửi cho chúng tôi về góp ý đánh giá" minlength="3">
+                        <button class="appsLand-btn subscribe-btn" type="submit">Gửi</button>
                         <div class="clearfix"></div>
                         <i class="fa fa-envelope"></i>
                     </div>
-
                 </div>
             </div>
         </form>
+
+        <script>
+            function validateForm() {
+                var danhgiaInput = document.getElementById('danhgiaInput').value;
+
+                if (danhgiaInput.trim() === '') {
+                    // Nếu giá trị của input là rỗng sau khi loại bỏ khoảng trắng
+                    var customAlertDiv = document.getElementById("customAlert");
+                    customAlertDiv.innerHTML = 'Vui lòng nhập nội dung đánh giá trước khi gửi.';
+                    customAlertDiv.style.display = "block";
+
+                    // Tự động ẩn hộp thoại sau 3 giây
+                    setTimeout(function () {
+                        customAlertDiv.style.display = "none";
+                    }, 3000);
+
+                    return false; // Ngăn chặn form được gửi
+                }
+
+                return true; // Cho phép form được gửi
+            }
+
+        </script>
+
+        <script>
+            <% String ketqua = (String) session.getAttribute("errorfeed");
+                ketqua = (ketqua == null || ketqua.equals("null")) ? "" : ketqua;
+                System.out.println(ketqua+"jsp");
+            %>
+            var danhgiaInput = '<%= ketqua %>';
+            if ( danhgiaInput != ''){
+
+                // Đối với trang mới
+                var customAlertDiv = document.getElementById("customAlert");
+
+
+                customAlertDiv.innerHTML = danhgiaInput;
+                customAlertDiv.style.display = "block";
+                // Tự động ẩn hộp thoại sau 3 giây
+
+                setTimeout(function () {
+                    customAlertDiv.style.display = "none";
+                }, 3000);
+                <%session.removeAttribute("errorfeed");%>
+                // window.location.href = "http://localhost:8080/Do_An_Web/index.jsp";
+            }
+        </script>
+
+
     </div><!--/.container-->
+    <%--feedback--%>
 
 </section>
 <!--subscribe end-->
@@ -745,6 +810,16 @@
 <!-- jquery.filterizr.min.js -->
 <script src="assets/js/jquery.filterizr.min.js"></script>
 
+<%--<script>--%>
+<%--    function validateForm() {--%>
+<%--        var inputField = document.getElementById("danhgiaInput");--%>
+<%--        if (inputField.value.length < 3) {--%>
+<%--            alert("Vui lòng nhập ít nhất 3 ký tự.");--%>
+<%--            return false; // Ngăn chặn submit--%>
+<%--        }--%>
+<%--        return true; // Cho phép submit--%>
+<%--    }--%>
+<%--</script>--%>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
 <!--jquery-ui.min.js-->
