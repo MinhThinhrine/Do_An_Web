@@ -546,52 +546,50 @@
 <!-- feedback -->
 <!-- feedback Start -->
 
-<<<<<<< HEAD
-<section id="feedback" class="testemonial">
-    <div class="container">
+<%--<section id="feedback" class="testemonial">--%>
+<%--    <div class="container">--%>
 
-        <div class="gallary-header text-center">
-            <h2>Đánh giá khách hàng</h2>
-            <p>
-                Đánh giá của khách hàng là tiêu chí quan trọng nhất để cải thiện dịch vụ.
-            </p>
+<%--        <div class="gallary-header text-center">--%>
+<%--            <h2>Đánh giá khách hàng</h2>--%>
+<%--            <p>--%>
+<%--                Đánh giá của khách hàng là tiêu chí quan trọng nhất để cải thiện dịch vụ.--%>
+<%--            </p>--%>
 
-        </div><!--/.gallery-header-->
+<%--        </div><!--/.gallery-header-->--%>
 
-        <div class="owl-carousel owl-theme" id="testemonial-carousel">
-            <% for (feedback f : fback) { %>
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img"><% Random random = new Random();%>
-                        <img src="assets/images/client/<%=random.nextInt(3)+1%>.png" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-                        <p>
-                            <%=f.getText()%>
-                        </p>
-                        <h3>
-                            <a href="#" style="color: #00d8fe!important;">
-                                <% String uN = ind.getUserNameById(f.getUserId()); %>
-                                <%=uN%>
-                            </a>
-                        </h3>
-                        <h4><%=f.getDate()%></h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
-            </div><!--/.item-->
-            <% } %>
+<%--        <div class="owl-carousel owl-theme" id="testemonial-carousel">--%>
+<%--            <% for (feedback f : fback) { %>--%>
+<%--            <div class="home1-testm item">--%>
+<%--                <div class="home1-testm-single text-center">--%>
+<%--                    <div class="home1-testm-img"><% Random random = new Random();%>--%>
+<%--                        <img src="assets/images/client/<%=random.nextInt(3)+1%>.png" alt="img"/>--%>
+<%--                    </div><!--/.home1-testm-img-->--%>
+<%--                    <div class="home1-testm-txt">--%>
+<%--								<span class="icon section-icon">--%>
+<%--									<i class="fa fa-quote-left" aria-hidden="true"></i>--%>
+<%--								</span>--%>
+<%--                        <p>--%>
+<%--                            <%=f.getText()%>--%>
+<%--                        </p>--%>
+<%--                        <h3>--%>
+<%--                            <a href="#" style="color: #00d8fe!important;">--%>
+<%--                                <% String uN = ind.getUserNameById(f.getUserId()); %>--%>
+<%--                                <%=uN%>--%>
+<%--                            </a>--%>
+<%--                        </h3>--%>
+<%--                        <h4><%=f.getDate()%></h4>--%>
+<%--                    </div><!--/.home1-testm-txt-->--%>
+<%--                </div><!--/.home1-testm-single-->--%>
+<%--            </div><!--/.item-->--%>
+<%--            <% } %>--%>
 
-        </div><!--/.testemonial-carousel-->
-    </div><!--/.container-->
+<%--        </div><!--/.testemonial-carousel-->--%>
+<%--    </div><!--/.container-->--%>
 
-</section><!--/.testimonial-->
+<%--</section><!--/.testimonial-->--%>
 
-=======
-<%@include file="common/feedback.jsp" %>
->>>>>>> 8a0f11ecda2e63adb18c17928e31967d4a21e238
+<%--<%@include file="common/feedback.jsp" %>--%>
+
 
 <!-- feedback End -->
 

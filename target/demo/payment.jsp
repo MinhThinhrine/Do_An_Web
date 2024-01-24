@@ -506,7 +506,7 @@
                                 <div>
                                     <button class="btn btn-primary btn-order" style="width:100% "
                                             onclick="kiemTraDieuKien()">
-                                        <a href="#"></a> Hóa đơn
+                                        <a href="BillServlet?id=<%=t.getId()%>"></a> Hóa đơn
                                     </button>
                                 </div>
                                 <div>

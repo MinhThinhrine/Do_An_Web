@@ -506,7 +506,7 @@
                                 <div>
                                     <button class="btn btn-primary btn-order" style="width:100% "
                                             onclick="kiemTraDieuKien()">
-                                        <a href="#"></a> Hóa đơn
+                                        <a href="BillServlet?id=<%=t.getId()%>"></a> Hóa đơn
                                     </button>
                                 </div>
                                 <div>
@@ -534,7 +534,7 @@
         var dieuKienCheckbox = document.getElementById("DieuKien");
         if (dieuKienCheckbox.checked) {
             // Nếu đã chọn, chuyển hướng đến trang "bill.html"
-            window.location.href = "bill.jsp";
+            window.location.href = "BillServlet?id=<%=t.getId()%>";
         } else {
             // Nếu chưa chọn, hiển thị thông báo
             alert('Bạn cần đồng ý với điều khoản đăng ký online.');
