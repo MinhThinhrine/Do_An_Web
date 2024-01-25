@@ -562,7 +562,8 @@
     buttonDatTour.forEach(function (button) {
         button.addEventListener("click",function () {
             alert('Đã thêm vào giỏ hàng');
-        })
+        window.location.href="CategorieServlet";
+        });
     });
 </script>
 <script !src="">

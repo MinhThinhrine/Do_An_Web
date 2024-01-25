@@ -110,6 +110,26 @@ public class TourDao {
         }
         return product;
     }
+    public valies findvalibyid(int id) throws SQLException {
+        valies  row = null;
+        try {
+            connection = ConnectToDatabase.getConnect();
+            String sql = "SELECT * FROM valies where id =?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, id);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                    row = new valies();
+                        row.setId(id);
+                        row.setNumAdult(rs.getInt("numAdult"));
+                        row.setNumChildren(rs.getInt("numChildren"));
+                    }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        return row;
+    }
     public static void insertVali(ArrayList<valies> valiList) {
         try {
             for (valies vl : valiList) {
