@@ -9,11 +9,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" isELIgnored= "false"%>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%
-    indexDao ind = new indexDao();
-    List<feedback> fback = ind.getFeedbacks() ;
-    List<news> news = ind.getAllNews();
-%>
+<%--<%--%>
+<%--    indexDao ind = new indexDao();--%>
+<%--    List<feedback> fback = ind.getFeedbacks() ;--%>
+<%--    List<news> news = ind.getAllNews();--%>
+<%--%>--%>
 <%@include file="common/tablib.jsp" %>
 
 <html class="no-js" lang="vi">
@@ -507,31 +507,31 @@
             <!--/.gallery-header-->
             <div class="blog-content">
                 <div class="row">
-                    <% for (news n : news) { %>
-                    <div class="col-sm-4 col-md-4">
-                        <div class="thumbnail">
-                            <h2>tin mới <span><%= n.getDate() %></span></h2>
-                            <div class="thumbnail-img">
-                                <a href="<%= n.getNewsLink() %>" style="cursor: pointer">
-                                    <img src="assets/images/blog/<%= n.getImage()%>" alt="blog-img" style="height:220px">
-                                </a>
-                                <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-                            </div><!--/.thumbnail-img-->
-                            <div class="caption">
-                                <div class="blog-txt">
-                                    <h3>
-                                        <a style="color: #00d8fe!important;">
-                                            <%= n.getTitle() %>
-                                        </a>
-                                    </h3>
-                                    <p style="height: 300px;text-align: justify"><%= n.getContent() %>
-                                    </p>
-                                    <a href="<%= n.getNewsLink() %>" style="color: #b20909!important;">Read More</a>
-                                </div><!--/.blog-txt-->
-                            </div><!--/.caption-->
-                        </div><!--/.thumbnail-->
-                    </div><!--/.col-->
-                    <% } %>
+<%--                    <% for (news n : news) { %>--%>
+<%--                    <div class="col-sm-4 col-md-4">--%>
+<%--                        <div class="thumbnail">--%>
+<%--                            <h2>tin mới <span><%= n.getDate() %></span></h2>--%>
+<%--                            <div class="thumbnail-img">--%>
+<%--                                <a href="<%= n.getNewsLink() %>" style="cursor: pointer">--%>
+<%--                                    <img src="assets/images/blog/<%= n.getImage()%>" alt="blog-img" style="height:220px">--%>
+<%--                                </a>--%>
+<%--                                <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->--%>
+<%--                            </div><!--/.thumbnail-img-->--%>
+<%--                            <div class="caption">--%>
+<%--                                <div class="blog-txt">--%>
+<%--                                    <h3>--%>
+<%--                                        <a style="color: #00d8fe!important;">--%>
+<%--                                            <%= n.getTitle() %>--%>
+<%--                                        </a>--%>
+<%--                                    </h3>--%>
+<%--                                    <p style="height: 300px;text-align: justify"><%= n.getContent() %>--%>
+<%--                                    </p>--%>
+<%--                                    <a href="<%= n.getNewsLink() %>" style="color: #b20909!important;">Read More</a>--%>
+<%--                                </div><!--/.blog-txt-->--%>
+<%--                            </div><!--/.caption-->--%>
+<%--                        </div><!--/.thumbnail-->--%>
+<%--                    </div><!--/.col-->--%>
+<%--                    <% } %>--%>
 
                 </div><!--/.row-->
             </div><!--/.blog-content-->

@@ -1,7 +1,6 @@
 package vn.edu.hcmuaf.Controller;
 
 import vn.edu.hcmuaf.DAO.FeebackDAO;
-import vn.edu.hcmuaf.DAO.UserDAO;
 import vn.edu.hcmuaf.DAO.indexDao;
 import vn.edu.hcmuaf.bean.*;
 
@@ -9,7 +8,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet("/FeedServlet")
 public class FeedServlet extends HttpServlet {

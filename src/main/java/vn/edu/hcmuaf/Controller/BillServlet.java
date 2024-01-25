@@ -3,11 +3,6 @@ package vn.edu.hcmuaf.Controller;
 import vn.edu.hcmuaf.DAO.TourDao;
 import vn.edu.hcmuaf.bean.Tour;
 
-import vn.edu.hcmuaf.DAO.FeebackDAO;
-import vn.edu.hcmuaf.DAO.UserDAO;
-import vn.edu.hcmuaf.DAO.indexDao;
-import vn.edu.hcmuaf.bean.*;
-
 
 import javax.servlet.*;
 import javax.servlet.http.*;

@@ -1,6 +1,6 @@
 package vn.edu.hcmuaf.Controller;
 
-import vn.edu.hcmuaf.DAO.UserDAO;
+import vn.edu.hcmuaf.DAO.userDAO;
 import vn.edu.hcmuaf.bean.User;
 
 import javax.servlet.*;
@@ -57,7 +57,7 @@ public class InforUser extends HttpServlet {
             System.out.println("address" + address);
             User user = (User) session.getAttribute("user");
 
-            UserDAO userDAO = new UserDAO();
+            userDAO userDAO = new userDAO();
             boolean kq = userDAO.editInforUser(name, phone, address, user.getEmail());
             if (kq) {
                 System.out.println("kq" + kq);
