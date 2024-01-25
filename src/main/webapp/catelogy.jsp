@@ -8,6 +8,7 @@
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page import="java.util.Objects" %>
 <%@ page import="java.text.DecimalFormat" %>
+<%@ page import="vn.edu.hcmuaf.bean.valies" %>
 <%@include file="common/tablib.jsp" %>
 <%
     ArrayList<Tour> tourss = (ArrayList<Tour>) session.getAttribute("ListTour");
@@ -86,12 +87,19 @@
                             <li><a href="index.jsp#service">Liên Hệ</a></li>
                             <%
                                 User user = (User) session.getAttribute("user");
-                                String url = request.getContextPath().trim();
+//                               String url = request.getContextPath().trim();
+                                ArrayList<valies> vali_List = (ArrayList<valies>) session.getAttribute("vali-List");
+                                int touronvali;
+                                if(vali_List==null){
+                                    touronvali = 0;
+                                }else {
+                                    touronvali = vali_List.size();
+                                }
                             %>
                             <% if (Objects.nonNull(user)) { %>
                             <li class="navbar-toggle"><a href="vali.jsp" id="myTour"><i
                                     class="fa fa-suitcase-rolling fa-2x"
-                                    style="margin-top: -10px;color: #00d8fe"></i></a>
+                                    style="margin-top: -10px;color: #00d8fe"><%=touronvali%></i></a>
                             </li>
                             <li id="icon-user" class="smooth-menu">
                                 <i class="fa fa fa-user-circle fa-2x" style="color: #ffffff;"></i>

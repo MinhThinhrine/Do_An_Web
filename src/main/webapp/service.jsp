@@ -29,22 +29,22 @@
     <link rel="shortcut icon" type="image/icon" href="../assets/logo/favicon.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <link rel="stylesheet" href="../assets/css/payment.css">
+    <link rel="stylesheet" href="assets/css/payment.css">
 
     <!-- range css-->
-    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css"/>
 
     <!--bootstrap.min.css-->
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
 
     <!-- bootsnav -->
-    <link rel="stylesheet" href="../assets/css/bootsnav.css"/>
+    <link rel="stylesheet" href="assets/css/bootsnav.css"/>
 
     <!--style.css-->
-    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
 
     <!--responsive.css-->
-    <link rel="stylesheet" href="../assets/css/responsive.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         /* CSS */
@@ -267,9 +267,9 @@
                                             <i class="fal fa-minus-circle" ></i></button>
 <%--                                        </a>--%>
                                     </span>
-                                    <span class="number" id="adult">
+                                    <input class="number" id="adult">
                                          <%=v.getNumAdult()%>
-                                    </span>
+                                    </input>
                                     <span class="plus btn-click">
                                         <button class="btn btn-link px-lg-2 btn-lg" id="adultPlus">
                                             <i class="fal fa-plus-circle" ></i></button></span>
