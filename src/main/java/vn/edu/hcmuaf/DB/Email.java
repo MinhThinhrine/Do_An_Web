@@ -6,9 +6,12 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 public class Email {
-    static final String from = "21130549@st.hcmuaf.edu.vn";
-    static final String pass = "rhxjighqfgfslhqf";
+    static final String from = "servicetournest@gmail.com";
+    static final String pass = "zunmohjrlpafarak";
 
+//    mail
+//    tk servicetournest@gmail.com
+//    mk tournestservice
     public static void main(String[] args) {
 
         Properties props = new Properties();
@@ -16,6 +19,7 @@ public class Email {
         props.put("mail.smtp.port", "587");
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.ssl.protocols", "TLSv1.2");
 
         Authenticator auth = new Authenticator() {
             @Override
@@ -26,7 +30,7 @@ public class Email {
 
         Session session = Session.getInstance(props, auth);
 
-        final String to = "thinh913011@gmail.com";
+        final String to = "21130615@st.hcmuaf.edu.vn";
 //        final String to = "21130604@st.hcmuaf.edu.vn";
 
         MimeMessage message = new MimeMessage(session);

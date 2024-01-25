@@ -7,7 +7,7 @@ public class Mahoa {
     // md5
     // sha-1 => thường được sử dụng
     public static String toSHA1(String str) {
-        String salt = "asjrlkmcoewj@tjle;oxqskjhdjksjf1jurVn"; // Làm cho mật khẩu phức tạp
+        String salt = "Tournest"; // Làm cho mật khẩu phức tạp
         String result = null;
 
         str = str + salt;
@@ -22,6 +22,6 @@ public class Mahoa {
     }
 
     public static void main(String[] args) {
-        System.out.println(toSHA1("minhthink"));
+        System.out.println(toSHA1("123456"));
     }
 }

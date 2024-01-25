@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.Controller;
 
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
 import vn.edu.hcmuaf.bean.User;
+import vn.edu.hcmuaf.serice.Mahoa;
 
 import javax.mail.Session;
 import javax.servlet.RequestDispatcher;
@@ -60,7 +61,7 @@ public class NewPassword extends HttpServlet {
                 try {
                     Connection conn = ConnectToDatabase.getConnect();
                     PreparedStatement pst = conn.prepareStatement("update users set password = ? where email = ? ");
-                    pst.setString(1, newpass1);
+                    pst.setString(1, Mahoa.toSHA1(newpass1));
                     pst.setString(2, email);
                     int rowCount = pst.executeUpdate();
                     if (rowCount > 0) {
