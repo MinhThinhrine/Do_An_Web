@@ -5,6 +5,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.text.DecimalFormat" %>
 <%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
+<%@ page import="vn.edu.hcmuaf.Controller.PaymentServlet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     indexDao indx = new indexDao();
@@ -223,7 +224,7 @@
         <section class="checkout-main order-tour animate__fadeIn animate__animated">
             <% String xx ="PaymentServlet?id="+ String.valueOf (t.getId());
             %>
-            <form method="post" action="<%=xx%>">
+            <form method="post" action="PaymentController">
                 <div class="container">
                     <div class="row">
                         <h2 class="d-none d-lg-block">Tổng quan về chuyến đi</h2>
@@ -300,21 +301,26 @@
                             <h3 style="padding: 0px 20px 20px">Thông tin liên lạc</h3>
                             <div class="customer-contact mb-3">
                                 <%--                            <form class="customer-contact-inner" action="#" method="get" id="form">--%>
-                                <div class="name">
-                                    <label>Họ và Tên <b>*</b></label><input autocomplete="off" type="text"
-                                                                            class="form-control" name="ttllfullName"
-                                                                            value=""/>
-                                </div>
-                                <div class="mail">
-                                    <label>Email <b>*</b></label><input type="email" class="form-control" name="ttllemail"
-                                                                        value=""/>
-                                </div>
-                                <div class="phone">
-                                    <label>Số điện thoại <b>*</b></label><input type="number" class="form-control"
-                                                                                name="ttllphone" value=""/>
-                                </div>
-                                <div class="addess"><label>Địa chỉ</label><input type="text" class="form-control"
-                                                                                 name="ttlladdress" value=""/></div>
+                                    <div class="name">
+                                        <label>Họ và Tên <b>*</b></label><input autocomplete="off" type="text"
+                                                                                class="form-control" name="ttllfullName"
+                                                                                value="" required/>
+                                        <span class="error-msg" id="name-error"></span>
+                                    </div>
+                                    <div class="mail">
+                                        <label>Email <b>*</b></label><input type="email" class="form-control" name="ttllemail"
+                                                                            value="" required/>
+                                        <span class="error-msg" id="email-error"></span>
+                                    </div>
+                                    <div class="phone">
+                                        <label>Số điện thoại <b>*</b></label><input type="number" class="form-control"
+                                                                                    name="ttllphone" value="" required/>
+                                        <span class="error-msg" id="phone-error"></span>
+                                    </div>
+                                    <div class="addess">
+                                        <label>Địa chỉ</label><input type="text" class="form-control"
+                                                                     name="ttlladdress" value=""/>
+                                    </div>
                                 <%--                            </form>--%>
                             </div>
                             <div class="customer-notice">
@@ -335,7 +341,7 @@
                                     <input class="form-check-input me-3" type="radio" id="radSupport"
                                            name="input-list-customer" value="no"/>
                                     <div class="col-11"><label class="form-check-label mt-1 small">Tôi cần được nhân viên tư
-                                        vấn Vietravel trợ giúp nhập thông tin đăng ký dịch vụ</label></div>
+                                        vấn TourNest trợ giúp nhập thông tin đăng ký dịch vụ</label></div>
                                 </div>
                             </div>
                             <section class="wrap-info-customer-number-person-details mt-4 wrapper-new-input" id="sessionContainer">
@@ -347,19 +353,19 @@
                                 <div class="group-fields-input-contact-adult group-fields-input-contact-wrapper mb-3">
                                     <div class="title-persona"><i class="fa-solid fa-user-tie"></i> Người lớn</div>
                                     <% for (int i = 0; i < x; i++) { %>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-12">
-                                            <div class="form-group">
-                                                <label class="pb-1 font-700">Họ và tên <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control fullName hotel-flight-input"
-                                                       placeholder="Nhập họ tên" name="fullName<%=i%>" />
-                                                <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                            </div>
+                                    <div class="row"><div class="col-lg-4 col-12">
+                                        <div class="form-group">
+                                            <label class="pb-1 font-700">Họ và tên <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control fullName hotel-flight-input"
+                                                   placeholder="Nhập họ tên" name="fullName<%=i%>" required/>
+                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
                                         </div>
+                                    </div>
                                         <div class="col-lg-2 col-12">
                                             <div class="form-group select-custom-icon">
                                                 <label class="pb-1 white-space-nowrap">Giới tính <span class="text-danger">*</span></label>
-                                                <select class="form-control title title-gender hotel-flight-input" name="gender<%=i%>">
+                                                <select class="form-control title title-gender hotel-flight-input" name="gender<%=i%>" required>
+                                                    <option value="">Chọn giới tính</option>
                                                     <option value="nam">Nam</option>
                                                     <option value="nu">Nữ</option>
                                                 </select>
@@ -370,25 +376,24 @@
                                                 <div class="col-sm-4 col-4 mt-sm-0 mt-4">
                                                     <div class="form-group select-custom-icon">
                                                         <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span class="text-danger">*</span></label>
-                                                        <input type="number" placeholder="Ngày" name="ngay<%=i%>" class="form-control fullName hotel-flight-input" />
+                                                        <input type="number" placeholder="Ngày" name="ngay<%=i%>" class="form-control fullName hotel-flight-input" required/>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-4 col-4 mt-sm-0 mt-4">
                                                     <div class="form-group select-custom-icon">
                                                         <label class="pb-1">&nbsp;</label>
-                                                        <input type="number" placeholder="Tháng" name="thang<%=i%>" class="form-control fullName hotel-flight-input" />
+                                                        <input type="number" placeholder="Tháng" name="thang<%=i%>" class="form-control fullName hotel-flight-input" required/>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-4 col-4 mt-sm-0 mt-4">
                                                     <div class="form-group select-custom-icon">
                                                         <label class="pb-1">&nbsp;</label>
-                                                        <input type="number" placeholder="Năm" name="nam<%=i%>" class="form-control fullName hotel-flight-input" />
+                                                        <input type="number" placeholder="Năm" name="nam<%=i%>" class="form-control fullName hotel-flight-input" required/>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-1 col-12"></div>
-                                    </div>
+                                        <div class="col-lg-1 col-12"></div></div>
                                     <% } %>
                                 </div>
 
@@ -398,7 +403,8 @@
                         <div class="col-md-4 col-12 right">
                             <div class="group-checkout">
                                 <h3>Tóm tắt</h3>
-                                <p class="package-title"><span>Mã Tour</span> # <%=t.getId()%></p>
+                                <input class="package-title" type="text" name="Matour" value="<%=t.getId()%>">
+<%--                                <input class="package-title"><span>Mã Tour</span> # <%=t.getId()%></input>--%>
                                 <div class="product">
                                     <div class="product-image">
                                         <img src="assets/images/item/<%=t.getImage()%>"
@@ -417,7 +423,7 @@
                                         <div class="start-content">
                                             <h4>Bắt đầu chuyến đi</h4>
                                             <p class="timestart" style="font-size: 15px;">
-                                                <input type="date" id="date" name="date">
+                                                <input type="date" id="date" name="date" value="">
                                             </p>
                                             <p class="from"></p>
                                         </div>
@@ -738,4 +744,83 @@ startDateInput.addEventListener("change", function() {
     var timeEndElement = document.querySelector(".timeend");
     timeEndElement.textContent = formattedEndDate;
 });</script>
+<script>
+    // Lấy tham chiếu đến form
+    var form = document.getElementById("form");
+
+    // Lắng nghe sự kiện submit của form
+    form.addEventListener("submit", function(event) {
+        // Kiểm tra các trường input có giá trị rỗng
+        var nameInput = document.querySelector('input[name="ttllfullName"]');
+        var emailInput = document.querySelector('input[name="ttllemail"]');
+        var phoneInput = document.querySelector('input[name="ttllphone"]');
+        var nameError = document.getElementById("name-error");
+        var emailError = document.getElementById("email-error");
+        var phoneError = document.getElementById("phone-error");
+
+        if (nameInput.value.trim() === "") {
+            nameError.textContent = "Vui lòng nhập họ và tên.";
+            event.preventDefault(); // Ngăn chặn gửi form nếu có lỗi
+        } else {
+            nameError.textContent = "";
+        }
+
+        if (emailInput.value.trim() === "") {
+            emailError.textContent = "Vui lòng nhập email.";
+            event.preventDefault();
+        } else {
+            emailError.textContent = "";
+        }
+
+        if (phoneInput.value.trim() === "") {
+            phoneError.textContent = "Vui lòng nhập số điện thoại.";
+            event.preventDefault();
+        } else {
+            phoneError.textContent = "";
+        }
+    });
+    // Lấy tham chiếu đến form
+    var form = document.getElementById("form");
+
+    // Lắng nghe sự kiện submit của form
+    form.addEventListener("submit", function(event) {
+        // Kiểm tra các trường input có giá trị rỗng
+        var fullNameInput = document.querySelector('input[name^="fullName"]');
+        var genderInput = document.querySelector('select[name^="gender"]');
+        var ngayInput = document.querySelector('input[name^="ngay"]');
+        var thangInput = document.querySelector('input[name^="thang"]');
+        var namInput = document.querySelector('input[name^="nam"]');
+        var fullNameError = document.querySelector('input[name^="fullName"] + .errorform');
+        var genderError = document.querySelector('select[name^="gender"] + .errorform');
+        var ngayError = document.querySelector('input[name^="ngay"] + .errorform');
+        var thangError = document.querySelector('input[name^="thang"] + .errorform');
+        var namError = document.querySelector('input[name^="nam"] + .errorform');
+
+        if (fullNameInput.value.trim() === "") {
+            fullNameError.style.display = "block";
+            event.preventDefault(); // Ngăn chặn gửi form nếu có lỗi
+        } else {
+            fullNameError.style.display = "none";
+        }
+
+        if (genderInput.value === "") {
+            genderError.style.display = "block";
+            event.preventDefault();
+        } else {
+            genderError.style.display = "none";
+        }
+
+        if (ngayInput.value.trim() === "" || thangInput.value.trim() === "" || namInput.value.trim() === "") {
+            ngayError.style.display = "block";
+            thangError.style.display = "block";
+            namError.style.display = "block";
+            event.preventDefault();
+        } else{
+            ngayError.style.display = "none";
+            thangError.style.display = "none";
+            namError.style.display = "none";
+        }
+    });
+
+</script>
 </html>

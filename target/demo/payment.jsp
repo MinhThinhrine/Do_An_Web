@@ -15,6 +15,8 @@
 <%@include file="common/tablib.jsp" %><html lang="vi">
 <%
     tour t = (tour) request.getAttribute("tour");
+    String date = (String) request.getAttribute("date");
+    System.out.println(date);
 %>
 <head>
     <meta charset="utf-8">
@@ -480,7 +482,7 @@
                                     <i class="fa-regular fa-calendar"></i>
                                     <div class="start-content">
                                         <h4>Bắt đầu chuyến đi</h4>
-                                        <p class="time" style="font-size: 15px;"><%=t.getStartTime()%></p>
+                                        <intput class="time" name="date" style="font-size: 15px;" value="<%=date%>">
                                         <p class="from"></p>
                                     </div>
                                 </div>
@@ -505,11 +507,20 @@
                                     </tr>
                                     <tr>
                                         <td> Người lớn</td>
-                                        <td class="t-price text-right">1</td>
+                                        <%
+                                            Integer quantity = (Integer) session.getAttribute("quatity");
+                                            int quatity = (quantity != null) ? quantity.intValue() : 1;
+                                            session.setAttribute("quatity",quatity);
+
+                                            Integer quantitycc = (Integer) session.getAttribute("quatitycc");
+                                            int quatitycc = (quantitycc != null) ? quantitycc.intValue() : 1;
+                                            session.setAttribute("quatitycc",quatitycc);
+                                        %>
+                                        <td class="t-price text-right"><%=quatity%></td>
                                     </tr>
                                     <tr>
                                         <td>Trẻ em (40%) </td>
-                                        <td class="t-price text-right">0</td>
+                                        <td class="t-price text-right"><%=quatitycc%></td>
                                     </tr>
                                     <tr class="total">
                                         <td>Tổng cộng</td>

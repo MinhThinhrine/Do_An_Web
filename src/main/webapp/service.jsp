@@ -5,6 +5,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.text.DecimalFormat" %>
 <%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
+<%@ page import="vn.edu.hcmuaf.Controller.PaymentServlet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     indexDao indx = new indexDao();
@@ -223,7 +224,7 @@
         <section class="checkout-main order-tour animate__fadeIn animate__animated">
             <% String xx ="PaymentServlet?id="+ String.valueOf (t.getId());
             %>
-            <form method="post" action="<%=xx%>">
+            <form method="post" action="PaymentController">
                 <div class="container">
                     <div class="row">
                         <h2 class="d-none d-lg-block">Tổng quan về chuyến đi</h2>
@@ -320,7 +321,6 @@
                                         <label>Địa chỉ</label><input type="text" class="form-control"
                                                                      name="ttlladdress" value=""/>
                                     </div>
-                                    <button type="submit">Submit</button>
                                 <%--                            </form>--%>
                             </div>
                             <div class="customer-notice">
@@ -341,7 +341,7 @@
                                     <input class="form-check-input me-3" type="radio" id="radSupport"
                                            name="input-list-customer" value="no"/>
                                     <div class="col-11"><label class="form-check-label mt-1 small">Tôi cần được nhân viên tư
-                                        vấn Vietravel trợ giúp nhập thông tin đăng ký dịch vụ</label></div>
+                                        vấn TourNest trợ giúp nhập thông tin đăng ký dịch vụ</label></div>
                                 </div>
                             </div>
                             <section class="wrap-info-customer-number-person-details mt-4 wrapper-new-input" id="sessionContainer">
@@ -403,7 +403,8 @@
                         <div class="col-md-4 col-12 right">
                             <div class="group-checkout">
                                 <h3>Tóm tắt</h3>
-                                <p class="package-title"><span>Mã Tour</span> # <%=t.getId()%></p>
+                                <input class="package-title" type="text" name="Matour" value="<%=t.getId()%>">
+<%--                                <input class="package-title"><span>Mã Tour</span> # <%=t.getId()%></input>--%>
                                 <div class="product">
                                     <div class="product-image">
                                         <img src="assets/images/item/<%=t.getImage()%>"
@@ -422,7 +423,7 @@
                                         <div class="start-content">
                                             <h4>Bắt đầu chuyến đi</h4>
                                             <p class="timestart" style="font-size: 15px;">
-                                                <input type="date" id="date" name="date">
+                                                <input type="date" id="date" name="date" value="">
                                             </p>
                                             <p class="from"></p>
                                         </div>
