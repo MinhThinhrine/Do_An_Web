@@ -127,14 +127,14 @@
     <div class="row head" style="background-color: #4d4e53">
         <div class="col-sm-1"></div>
 
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <div class="logo">
                 <a href="index.jsp">
                     tour<span>Nest</span>
                 </a>
             </div><!-- /.logo-->
         </div><!-- /.col-->
-        <div class="col-sm-9">
+        <div class="col-sm-8">
             <div class="main-menu">
                 <ul class="nav" style="text-align: right;color: black!important;">
                     <li><a href="index.jsp">Trang Chủ</a></li>

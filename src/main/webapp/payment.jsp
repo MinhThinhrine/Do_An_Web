@@ -2,7 +2,8 @@
 <%@ page import="java.util.Objects" %>
 <%@ page import="vn.edu.hcmuaf.bean.tour" %>
 <%@ page import="vn.edu.hcmuaf.bean.valies" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.text.DecimalFormat" %><%--
   Created by IntelliJ IDEA.
   User: HP
   Date: 12/4/2023
@@ -58,14 +59,14 @@
     <div class="row head" style="background-color: #4d4e53">
         <div class="col-sm-1"></div>
 
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <div class="logo">
                 <a href="index.jsp">
                     tour<span>Nest</span>
                 </a>
             </div><!-- /.logo-->
         </div><!-- /.col-->
-        <div class="col-sm-9">
+        <div class="col-sm-8">
             <div class="main-menu">
                 <ul class="nav" style="text-align: right;color: black!important;">
                     <li><a href="index.jsp">Trang Chủ</a></li>
@@ -183,7 +184,15 @@
                                 </div>
                                 <div class="payment-item">
                                     <div class="pm-head">
+<<<<<<< Updated upstream
                                         <input class="check" type="radio" id="vnpay" name="pay" value="momo">
+=======
+<<<<<<< HEAD
+                                        <span class="check" id="momo"></span>
+=======
+                                        <input class="check" type="radio" id="vnpay" name="pay" value="momo">
+>>>>>>> 15284e5ec0d8fa2f9e08458fac1420c2aee86bbb
+>>>>>>> Stashed changes
                                         <div class="pm-head-icon" style="margin-left: 20px">
                                             <h4>Chuyển khoản qua MoMo</h4>
                                             <i class="fa-solid fa-wallet" style="margin-left: 50px"></i>
@@ -219,7 +228,15 @@
                                 <!-- momo -->
                                 <div class="payment-item">
                                     <div class="pm-head">
+<<<<<<< Updated upstream
                                         <input name="pay" type="radio" class="check" value="hoadon50">
+=======
+<<<<<<< HEAD
+                                        <input name="pay" type="radio" class="check" id="pay50">
+=======
+                                        <input name="pay" type="radio" class="check" value="hoadon50">
+>>>>>>> 15284e5ec0d8fa2f9e08458fac1420c2aee86bbb
+>>>>>>> Stashed changes
                                         <div class="pm-head-icon" style="margin-left: 20px">
                                             <h4>Thanh toán 50% hóa đơn</h4>
                                             <i class="fa-solid fa-circle-half-stroke" style="margin-left: 20px"></i>
@@ -232,7 +249,15 @@
                                 <!-- momo -->
                                 <div class="payment-item">
                                     <div class="pm-head">
+<<<<<<< Updated upstream
                                         <input name="pay" type="radio" class="check" value="hoadon100">
+=======
+<<<<<<< HEAD
+                                        <input name="pay" type="radio" class="check" id="pay100" checked>
+=======
+                                        <input name="pay" type="radio" class="check" value="hoadon100">
+>>>>>>> 15284e5ec0d8fa2f9e08458fac1420c2aee86bbb
+>>>>>>> Stashed changes
                                         <div class="pm-head-icon" style="margin-left: 20px">
                                             <h4>Thanh toán 100% hóa đơn</h4>
                                             <i class="fa-solid fa-circle" style="margin-left: 20px"></i>
@@ -483,8 +508,19 @@
                                 <div class="start">
                                     <i class="fa-regular fa-calendar"></i>
                                     <div class="start-content">
+                                        <%String rs = t.getDuration().trim();
+                                            String []r =rs.split(" ");%>
+                                        <p id="pr" style="display: none;"><%=r[0].trim()%></p>
                                         <h4>Bắt đầu chuyến đi</h4>
+<<<<<<< Updated upstream
                                         <input class="time" style="font-size: 15px;" value="<%=date%>">
+=======
+<<<<<<< HEAD
+                                        <input class="timestart" name="date" style="font-size: 15px;display: none" value="<%=date%>" >
+=======
+                                        <input class="time" style="font-size: 15px;" value="<%=date%>">
+>>>>>>> 15284e5ec0d8fa2f9e08458fac1420c2aee86bbb
+>>>>>>> Stashed changes
                                         <p class="from"></p>
                                     </div>
                                 </div>
@@ -492,10 +528,7 @@
                                     <i class="fa-solid fa-calendar-days"></i>
                                     <div class="start-content">
                                         <h4>Kết thúc chuyến đi</h4>
-                                        <%
-
-                                        %>
-                                        <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                        <p class="timeend" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
                                         <p class="from"></p>
                                     </div>
                                 </div>
@@ -526,7 +559,15 @@
                                     </tr>
                                     <tr class="total">
                                         <td>Tổng cộng</td>
-                                        <td class="t-price text-right" id="TotalPrice">1,090,000₫</td>
+                                            <%
+                                                int rsx = (int) (t.getPrice()*quantity +t.getPrice()*quantitycc*0.6);
+                                                DecimalFormat decimalFormat = new DecimalFormat("#,###");
+                                                String formattedString = decimalFormat.format(rsx) ;
+                                            %>
+                                        <input type="text" style="display: none" name="total" value="<%=rsx%>" id="total">
+                                        <td class="t-price text-right" id="TotalPrice">
+                                            <%=formattedString%> đ
+                                        </td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -574,5 +615,60 @@
 <!-- footer-copyright start -->
 <%@include file="common/footer.jsp"%><!-- /.footer-copyright-->
 <!-- footer-copyright end -->
+<script>
+    const dateInput = document.querySelector('input[name="date"]');
+    const dateValue = dateInput.value;
 
+    const dateParts = dateValue.split('-');
+    const year = dateParts[0];
+    const month = dateParts[1];
+    const day = dateParts[2];
+
+    const date = new Date(year, month - 1, day);
+    const weekdays = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
+    const weekday = weekdays[date.getDay()];
+
+    const formattedDate =weekday+', ' + day + ' tháng ' + month + ', ' + year;
+
+    const outputElement = document.querySelector('.from');
+    outputElement.textContent = formattedDate;
+    // Lấy tham chiếu đến trường input ngày bắt đầu
+
+    var startDate = new Date(dateValue);
+    var prElement = document.getElementById("pr");
+
+    // Lấy giá trị của phần tử <p>
+    var pr = parseInt(prElement.textContent.trim());
+    // Giá trị biến có sẵn
+    // Cộng thêm giá trị biến vào ngày bắt đầu
+    startDate.setDate(startDate.getDate() + pr);
+
+    // Format ngày kết thúc thành chuỗi "Thứ X, Ngày X Tháng X, Năm XXXX"
+    var formattedEndDate = startDate.toLocaleString("vi-VN", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
+
+    // Gán giá trị ngày kết thúc vào phần tử HTML có class "timeend"
+    var timeEndElement = document.querySelector(".timeend");
+    timeEndElement.textContent = formattedEndDate;
+</script>
+<script>
+    const pay50 = document.getElementById('pay50');
+    const pay100 = document.getElementById('pay100');
+    var totalPrice = document.getElementById('TotalPrice');
+    var totalx = document.getElementById('total');
+    var total = totalx.value();
+    pay50.addEventListener('change', function() {
+        total/=2;
+        totalPrice.textContent = total.toLocaleString()
+    });
+    pay100.addEventListener('change', function() {
+        total*=2;
+        totalPrice.textContent = total.toLocaleString()
+    });
+
+</script>
 </html>

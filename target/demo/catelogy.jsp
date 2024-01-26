@@ -99,7 +99,7 @@
                             <% if (Objects.nonNull(user)) { %>
                             <li class="navbar-toggle"><a href="vali.jsp" id="myTour"><i
                                     class="fa fa-suitcase-rolling fa-2x"
-                                    style="margin-top: -10px;color: #00d8fe"><sub style="padding: 3px 5px;
+                                    style="margin-top: -10px;color: #00d8fe"><sub style="padding: 1px 5px;
                                                         font-size: 12px;
                                                         color: #fff6f6;
                                                         margin: -7px -5px 0px;
