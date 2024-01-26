@@ -130,6 +130,9 @@ public class TourDao {
         }
         return row;
     }
+    public int numAldul (int num){
+        return num;
+    }
     public static void insertVali(ArrayList<valies> valiList) {
         try {
             for (valies vl : valiList) {

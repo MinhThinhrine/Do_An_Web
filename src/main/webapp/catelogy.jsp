@@ -385,7 +385,7 @@
                         <div class="about-btn" style="float: left;width: 120px">
                             <a href="ServiceServlet?id=<%=t.getId()%>">
                             <button class="about-view packages-btn" id="btn">
-                                book now
+                                Đặt ngay
                             </button>
                             </a>
                         </div>

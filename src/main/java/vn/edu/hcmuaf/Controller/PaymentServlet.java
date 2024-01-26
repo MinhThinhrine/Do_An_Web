@@ -23,13 +23,13 @@ public class PaymentServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
-        String selectedDate =request.getParameter("date");
-        String service = request.getParameter("service");
-        String decodedString = URLDecoder.decode(service, StandardCharsets.UTF_8);
-
-        // Lưu thông tin vào cơ sở dữ liệu
-        TourDao tourDao = new TourDao();
-        tourDao.savePaymentInfo(id,selectedDate,decodedString);
+//        int id = Integer.parseInt(request.getParameter("id"));
+//        String selectedDate =request.getParameter("date");
+//        String service = request.getParameter("service");
+//        String decodedString = URLDecoder.decode(service, StandardCharsets.UTF_8);
+//
+//        // Lưu thông tin vào cơ sở dữ liệu
+//        TourDao tourDao = new TourDao();
+//        tourDao.savePaymentInfo(id,selectedDate,decodedString);
     }
 }
