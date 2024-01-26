@@ -240,7 +240,6 @@
                             <div class="listDay">
                                 <% String schedule =t.getSchedule().trim();
                                     String[] parts = schedule.split("-");
-
                                 %>
 
                                    <% for (int i = 0; i < parts.length; i++) {
