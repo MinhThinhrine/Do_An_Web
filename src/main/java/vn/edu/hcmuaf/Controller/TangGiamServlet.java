@@ -36,13 +36,11 @@ public class TangGiamServlet extends HttpServlet {
                 if (action != null && id >= 1) {
                     if (action.equals("inc")) {
 //                        out.println(c.getNumAdult() + " " + c.getNumChildren() + " " + i);
-                       int quantity = (int) sesion.getAttribute("quatity");
-                       if(quantity==0){
-                           quantity=1;
-                       }
-                        quantity++;
-                       int result =  quantity;
-                         sesion.setAttribute("quantity",quantity);
+                        int quatity = (int) sesion.getAttribute("quatity");
+
+                        quatity++;
+                       int result =  quatity;
+                         sesion.setAttribute("quatity",quatity);
                         request.setAttribute("id",id);
 //                        request.getRequestDispatcher( "ServiceServlet?id=" + (id)).forward(request, response);
 //                        out.println(" quali" +quantity);

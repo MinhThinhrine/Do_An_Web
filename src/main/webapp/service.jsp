@@ -22,8 +22,9 @@
          t = (tour) request.getAttribute("tour");
         valies v = tdao.findvalibyid(t.getId());
     }
-    Integer quantity = (Integer) session.getAttribute("quantity");
-    int quatity = (quantity != null) ? quantity.intValue() : 0;
+    Integer quantity = (Integer) session.getAttribute("quatity");
+    int quatity = (quantity != null) ? quantity.intValue() : 1;
+    session.setAttribute("quatity",quatity);
     System.out.print("qtt"+quatity);
     int x=0;
     if(quatity == 0){
