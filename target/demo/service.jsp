@@ -321,6 +321,10 @@
                                         <label>Địa chỉ</label><input type="text" class="form-control"
                                                                      name="ttlladdress" value=""/>
                                     </div>
+<<<<<<< Updated upstream
+=======
+                                    <button type="submit">Submit</button>
+>>>>>>> Stashed changes
                                 <%--                            </form>--%>
                             </div>
                             <div class="customer-notice">

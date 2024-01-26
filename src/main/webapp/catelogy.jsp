@@ -361,13 +361,13 @@
                     </a>
 
                     <div class="single-package-item-txt">
-                        <h3><%=t.getName()%><span class="pull-right" style="margin-top: 25px;">
+                        <h3><%=t.getName()%><span class="pull-right" style="margin-top: 25px;text-transform: lowercase">
                                 <%
                                     int number = t.getPrice();
                                     DecimalFormat decimalFormat = new DecimalFormat("#,###");
                                     String formattedString = decimalFormat.format(number);
                                 %>
-                                <%=formattedString%> <p style="text-transform: lowercase">đ</p>
+                                <%=formattedString%> đ
                             </span>
                         </h3>
                         <div class="packages-para">
