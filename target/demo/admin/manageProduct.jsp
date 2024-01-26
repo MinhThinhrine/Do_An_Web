@@ -1,7 +1,7 @@
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
-<%@ page import="vn.edu.hcmuaf.bean.Tour" %>
+<%@ page import="vn.edu.hcmuaf.bean.tour" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!--A Design by W3layouts
@@ -151,9 +151,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <tr>
                                             <%
 
-List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
+List<tour> tourss = (List<tour>) request.getAttribute("tours");
 if (tourss != null && !tourss.isEmpty()) {
-                    for (Tour t : tourss) {
+                    for (tour t : tourss) {
 %>
 
                                     <tr>

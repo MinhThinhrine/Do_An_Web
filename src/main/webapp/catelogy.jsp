@@ -3,7 +3,7 @@
          pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
-<%@ page import="vn.edu.hcmuaf.bean.Tour" %>
+<%@ page import="vn.edu.hcmuaf.bean.tour" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page import="java.util.Objects" %>
@@ -11,10 +11,10 @@
 <%@ page import="vn.edu.hcmuaf.bean.valies" %>
 <%@include file="common/tablib.jsp" %>
 <%
-    ArrayList<Tour> tourss = (ArrayList<Tour>) session.getAttribute("ListTour");
+    ArrayList<tour> tourss = (ArrayList<tour>) session.getAttribute("ListTour");
     String sort = (String) request.getAttribute("sortDay");
     if (sort != null && !sort.isEmpty()) {
-        ArrayList<Tour> ListsortDay = (ArrayList<Tour>) request.getAttribute("ListsortDay");
+        ArrayList<tour> ListsortDay = (ArrayList<tour>) request.getAttribute("ListsortDay");
         if (ListsortDay != null) {
             tourss = ListsortDay;
         }
@@ -345,7 +345,7 @@
     </div>
     <div id="products">
         <div class="row mx-0">
-            <% for (Tour t : tourss) { %>
+            <% for (tour t : tourss) { %>
             <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3 element" id="<%=t.getId() %>">
                 <div class="single-package-item">
                     <a href="${pageContext.request.contextPath}/DetailsServlet?id=<%=t.getId()%>"

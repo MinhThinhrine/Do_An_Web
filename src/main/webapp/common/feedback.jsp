@@ -4,8 +4,7 @@
 <%@ page import="java.util.Random" %>
 
 <%
-    indexDao ind = new indexDao();
-    List<feedback> fback = new indexDao().getFeedbacks() ;
+
 %>
 
 <section id="feedback" class="testemonial">

@@ -4,16 +4,13 @@
 <%@ page import="vn.edu.hcmuaf.bean.*" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.text.DecimalFormat" %>
-<%@ page import="javax.swing.*" %>
 <%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%!
-    private int numberOfClasses;
-%><%
+<%
     indexDao indx = new indexDao();
     TourDao tdao = new TourDao();
 //service_tours sv = (service_tours) request.getAttribute("service");
-    Tour t = (Tour) request.getAttribute("tour");
+    tour t = (tour) request.getAttribute("tour");
     ArrayList<service_tours> sv_list = (ArrayList<service_tours>) indx.service();
     StringBuilder serList = new StringBuilder();
     valies v = tdao.findvalibyid(t.getId());
@@ -101,29 +98,6 @@
             background-color: #e9ecef;
         }
     </style>
-    <script>
-        var dropdownButton = document.getElementById("dropdownButton");
-        var dropdownMenu = document.querySelector(".dropdown-menu");
-        var checkboxes = dropdownMenu.getElementsByTagName("input");
-
-        var dateInput = document.querySelector("#date input");
-        dateInputvalue = dateInput.value;
-        var [year, month, day] = dateInputvalue.split("-");
-        var newDateValue = `${day}-${month}-${year}`;
-        var date = document.getElementById("date");
-        date.innerHTML = newDateValue;
-
-        dropdownButton.addEventListener("click", function () {
-            dropdownMenu.classList.toggle("show");
-        });
-
-        for (var i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].addEventListener("click", function (event) {
-                event.stopPropagation();
-            });
-        }
-
-    </script>
 </head>
 
 <body>
@@ -262,17 +236,20 @@
                                 </div>
                                 <div class="change-number">
                                     <span class="minus btn-click">
-<%--                                        <a href="TangGiamServlet?action=inc&id=<%=t.getId()%>">--%>
+                                        <a href="TangGiamServlet?action=dec&id=<%=t.getId()%>">
                                             <button class="btn btn-link px-lg-2 btn-lg" id="adultMinus">
                                             <i class="fal fa-minus-circle" ></i></button>
-<%--                                        </a>--%>
+                                        </a>
                                     </span>
                                     <input class="number" id="adult">
                                          <%=v.getNumAdult()%>
                                     </input>
                                     <span class="plus btn-click">
+                                        <a href="TangGiamServlet?action=inc&id=<%=t.getId()%>">
                                         <button class="btn btn-link px-lg-2 btn-lg" id="adultPlus">
-                                            <i class="fal fa-plus-circle" ></i></button></span>
+                                            <i class="fal fa-plus-circle" ></i></button>
+                                            </a>
+                                    </span>
                                 </div>
                             </div>
                             <div class="change">
@@ -282,14 +259,20 @@
                                 </div>
                                 <div class="change-number">
                                     <span class="minus btn-click">
-                                        <button class="btn btn-link px-lg-2 btn-lg" id="childrenMinus">
-                                        <i class="fal fa-minus-circle"></i>
-                                        </button></span>
-                                    <span class="number" id="children">0</span>
+                                        <a href="TangGiamServlet?action=decC&id=<%=t.getId()%>">
+                                            <button class="btn btn-link px-lg-2 btn-lg" id="childrenMinus">
+                                            <i class="fal fa-minus-circle" ></i></button>
+                                        </a>
+                                    </span>
+                                    <input class="number" id="children">
+                                        <%=v.getNumChildren()%>
+                                    </input>
                                     <span class="plus btn-click">
+                                        <a href="TangGiamServlet?action=incC&id=<%=t.getId()%>">
                                         <button class="btn btn-link px-lg-2 btn-lg" id="childrenPlus">
-                                        <i class="fal fa-plus-circle" ></i>
-                                        </button></span>
+                                            <i class="fal fa-plus-circle" ></i></button>
+                                            </a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -314,579 +297,53 @@
                                     vấn Vietravel trợ giúp nhập thông tin đăng ký dịch vụ</label></div>
                             </div>
                         </div>
-                        <section class="wrap-info-customer-number-person-details mt-4 wrapper-new-input" id="sessionContainer">
-<%--                            <form action="" method="post">--%>
-                            <div class="title-section mb-3 title-hotel-flight-infor"
-                                 style="font-weight: 700;font-size: 22px;line-height: 28px;color: #2d4271;padding: 20px">
-                                Thông tin hành khách
+                        <div class="group-fields-input-contact-adult group-fields-input-contact-wrapper mb-3">
+                            <div class="title-persona"><i class="fa-solid fa-user-tie"></i> Người lớn</div>
+                            <% for (int i = 0; i < v.getNumAdult(); i++) { %>
+                            <div class="row">
+                                <div class="col-lg-4 col-12">
+                                    <div class="form-group">
+                                        <label class="pb-1 font-700">Họ và tên <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control fullName hotel-flight-input"
+                                               placeholder="Nhập họ tên" name="fullName<%=i%>" />
+                                        <div class="errorform error-notes">Vui lòng nhập thông tin</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-12">
+                                    <div class="form-group select-custom-icon">
+                                        <label class="pb-1 white-space-nowrap">Giới tính <span class="text-danger">*</span></label>
+                                        <select class="form-control title title-gender hotel-flight-input" name="gender<%=i%>">
+                                            <option value="nam">Nam</option>
+                                            <option value="nu">Nữ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-12">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-4 mt-sm-0 mt-4">
+                                            <div class="form-group select-custom-icon">
+                                                <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span class="text-danger">*</span></label>
+                                                <input type="number" placeholder="Ngày" name="ngay<%=i%>" class="form-control fullName hotel-flight-input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-4 mt-sm-0 mt-4">
+                                            <div class="form-group select-custom-icon">
+                                                <label class="pb-1">&nbsp;</label>
+                                                <input type="number" placeholder="Tháng" name="thang<%=i%>" class="form-control fullName hotel-flight-input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-4 mt-sm-0 mt-4">
+                                            <div class="form-group select-custom-icon">
+                                                <label class="pb-1">&nbsp;</label>
+                                                <input type="number" placeholder="Năm" name="nam<%=i%>" class="form-control fullName hotel-flight-input" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-1 col-12"></div>
                             </div>
-                            <div class="group-fields-input-contact-adult group-fields-input-contact-wrapper mb-3">
-                                <div class="title-persona"><i class="fa-solid fa-user-tie"></i> Người lớn</div>
-                                <div class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input"
-                                                   placeholder="Nhập họ tên" name="fullName"/>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input"
-                                                    name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span
-                                                            class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Ngày">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Tháng">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Năm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
-
-                                </div>
-                                <div id="if1" style="display: none;" class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input"
-                                                   placeholder="Nhập họ tên" name="fullName"/>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input"
-                                                    name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span
-                                                            class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Ngày">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Tháng">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Năm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
-
-                                </div>
-                                <div id="if2" style="display: none;" class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input"
-                                                   placeholder="Nhập họ tên" name="fullName"/>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input"
-                                                    name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span
-                                                            class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Ngày">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Tháng">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Năm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
-
-                                </div>
-                                <div id="if3" style="display: none;" class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input"
-                                                   placeholder="Nhập họ tên" name="fullName"/>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input"
-                                                    name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span
-                                                            class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Ngày">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Tháng">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Năm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
-
-                                </div>
-                                <div id="if4" style="display: none;" class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input"
-                                                   placeholder="Nhập họ tên" name="fullName"/>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input"
-                                                    name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span
-                                                            class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Ngày">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Tháng">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Năm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
-
-                                </div>
-                                <div id="if5" style="display: none;" class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input"
-                                                   placeholder="Nhập họ tên" name="fullName"/>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input"
-                                                    name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span
-                                                            class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Ngày">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Tháng">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Năm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
-
-                                </div >
-                                <div id="if6" style="display: none;" class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input"
-                                                   placeholder="Nhập họ tên" name="fullName"/>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input"
-                                                    name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span
-                                                            class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Ngày">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Tháng">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Năm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
-
-                                </div >
-                                <div  id="if7" style="display: none;" class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input"
-                                                   placeholder="Nhập họ tên" name="fullName"/>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input"
-                                                    name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span
-                                                            class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Ngày">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Tháng">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Năm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
-
-                                </div>
-                                <div id="if8" style="display: none;" class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input"
-                                                   placeholder="Nhập họ tên" name="fullName"/>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input"
-                                                    name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span
-                                                            class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Ngày">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Tháng">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Năm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
-
-                                </div>
-                                <div id="if9" style="display: none;" class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input"
-                                                   placeholder="Nhập họ tên" name="fullName"/>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input"
-                                                    name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span
-                                                            class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Ngày">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Tháng">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Năm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
-
-                                </div>
-                                <div id="if10" style="display: none;" class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-group">
-                                            <label class="pb-1 font-700">Họ và tên <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control fullName hotel-flight-input"
-                                                   placeholder="Nhập họ tên" name="fullName"/>
-                                            <div class="errorform error-notes">Vui lòng nhập thông tin</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-12">
-                                        <div class="form-group select-custom-icon">
-                                            <label class="pb-1 white-space-nowrap">Giới tính <span
-                                                    class="text-danger">*</span></label>
-                                            <select class="form-control title title-gender hotel-flight-input"
-                                                    name="gender">
-                                                <option value="1">Nam</option>
-                                                <option value="0">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1 white-space-nowrap font-700">Ngày sinh <span
-                                                            class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Ngày">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Tháng">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-4 mt-sm-0 mt-4">
-                                                <div class="form-group select-custom-icon">
-                                                    <label class="pb-1">&nbsp;</label>
-                                                        <input type="text" class="form-control fullName hotel-flight-input"
-                                                               placeholder="Năm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-12"></div>
-
-                                </div>
-                            </div>
-
-<%--                        </form>--%>
-                        </section>
+                            <% } %>
+                        </div>
                     </div>
                     <div class="col-md-4 col-12 right">
                         <div class="group-checkout">
@@ -1017,16 +474,18 @@
                         <div class="single-footer-item text-center">
                             <h2 class="text-left">contacts</h2>
                             <div class="single-footer-txt text-left">
-                                <p>(+84) 249999 6916</p>
+                                <p><i class="fa-solid fa-phone"></i> (+84) 249 999 16</p>
                                 <p class="foot-email" style="text-transform:none;">
-                                    <a href="#">21130549@st.hcmuaf.edu.vn</a></p>
+                                    <a href="https://maps.app.goo.gl/FGwPZ4BdY2CuKke98" target="_blank"><i class="fa-solid fa-map-location-dot"></i></i> 31 Đ. Số 6, Đông Hoà, Thủ Đức, Thành phố Hồ Chí Minh</a></p>
                                 <p>Võ Minh Thịnh</p>
                                 <p class="foot-email" style="text-transform:none;">
-                                    <a href="#">21130558@st.hcmuaf.edu.vn</a></p>
+                                    <a href="mailto:21130549@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130549@st.hcmuaf.edu.vn</a></p>
                                 <p>Mai Xuân Thức</p>
                                 <p class="foot-email" style="text-transform:none;">
-                                    <a href="#">21130615@st.hcmuaf.edu.vn</a></p>
+                                    <a href="mailto:21130558@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130558@st.hcmuaf.edu.vn</a></p>
                                 <p>Trần Quang Vũ</p>
+                                <p class="foot-email" style="text-transform:none;">
+                                    <a href="mailto:21130615@st.hcmuaf.edu.vn"><i class="fa-solid fa-envelope"></i> 21130615@st.hcmuaf.edu.vn</a></p>
                             </div><!--/.single-footer-txt-->
                         </div><!--/.single-footer-item-->
                     </div><!--/.col-->

@@ -51,7 +51,12 @@
                             <% if (Objects.nonNull(user)) { %>
                             <li class="navbar-toggle"><a href="vali.jsp" id="myTour"><i
                                     class="fa fa-suitcase-rolling fa-2x"
-                                    style="margin-top: -10px;color: #00d8fe"><%=touronvali%></i></a>
+                                    style="margin-top: -10px;color: #00d8fe"><sub style="padding: 3px 5px;
+                                                        font-size: 12px;
+                                                        color: #fff6f6;
+                                                        margin: -7px -5px 0px;
+                                                        border-radius: 50%;
+                                                        background-color: rgb(21 62 138);"><%=touronvali%></sub></i></a>
                             </li>
                             <li id="icon-user" class="smooth-menu">
                                 <i class="fa-regular fa-circle-user" style="color: #ffffff;margin-top: 8px"></i>

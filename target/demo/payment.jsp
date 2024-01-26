@@ -1,6 +1,6 @@
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page import="java.util.Objects" %>
-<%@ page import="vn.edu.hcmuaf.bean.Tour" %><%--
+<%@ page import="vn.edu.hcmuaf.bean.tour" %><%--
   Created by IntelliJ IDEA.
   User: HP
   Date: 12/4/2023
@@ -12,7 +12,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="common/tablib.jsp" %><html lang="vi">
 <%
-    Tour t = (Tour) request.getAttribute("tour");
+    tour t = (tour) request.getAttribute("tour");
 %>
 <head>
     <meta charset="utf-8">

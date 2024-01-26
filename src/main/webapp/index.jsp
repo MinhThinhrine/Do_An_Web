@@ -1,4 +1,4 @@
-<%@ page import="vn.edu.hcmuaf.bean.Tour" %>
+<%@ page import="vn.edu.hcmuaf.bean.tour" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.text.DecimalFormat" %>
 <%@ page import="vn.edu.hcmuaf.DAO.indexDao" %>
@@ -9,11 +9,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" isELIgnored= "false"%>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%--<%--%>
-<%--    indexDao ind = new indexDao();--%>
-<%--    List<feedback> fback = ind.getFeedbacks() ;--%>
-<%--    List<news> news = ind.getAllNews();--%>
-<%--%>--%>
+<%
+    indexDao ind = new indexDao();
+    List<feedback> fback = ind.getFeedbacks() ;
+    List<news> news = ind.getAllNews();
+%>
 <%@include file="common/tablib.jsp" %>
 
 <html class="no-js" lang="vi">
@@ -408,7 +408,7 @@
                                 <div class="filtr-item" style="height: 310px;width: 555px;">
                                     <img src="assets/images/item/2.jpg" alt="portfolio image"/>
                                     <div class="item-title">
-                                        <a href="detail.jsp">
+                                        <a href="DetailsServlet?id=2">
                                             Phú Quốc
                                         </a>
                                         <p><span>tours hằng ngày</span><br><span>7 địa điểm</span></p>
@@ -420,7 +420,7 @@
                                 <div class="filtr-item" style="height: 310px;width: 555px;">
                                     <img src="assets/images/item/193.png" alt="portfolio image"/>
                                     <div class="item-title">
-                                        <a href="detail.jsp">
+                                        <a href="DetailsServlet?id=193">
                                             Sapa
                                         </a>
                                         <p><span>tours hằng ngày</span><br><span>4 địa điểm</span></p>
@@ -430,10 +430,10 @@
 
                             <div class="col-md-4">
                                 <div class="filtr-item">
-                                    <img src="assets/images/gallary/hoi-an-tren-cao-1%20(1).jpg" alt="portfolio image"/>
+                                    <img src="assets/images/item/63.jpg" alt="portfolio image" style="object-fit: cover;height: 650px"/>
                                     <div class="item-title">
-                                        <a href="detail.jsp">
-                                            Hội An
+                                        <a href="DetailsServlet?id=63">
+                                            Hạ Long
                                         </a>
                                         <p>Tour Hàng Ngày </br>
                                             <span>10 Địa Điểm</span></p>
@@ -445,7 +445,7 @@
                                 <div class="filtr-item" style="height: 310px;width: 360px;">
                                     <img src="assets/images/item/70.jpg" alt="portfolio image"/>
                                     <div class="item-title">
-                                        <a href="detail.jsp" style="width: 215px">
+                                        <a href="DetailsServlet?id=70" style="width: 215px">
                                             Chợ Nổi Cái Răng
                                         </a>
                                         <p><span>tours hằng ngày</span><br><span>7 địa điểm</span></p>
@@ -457,7 +457,7 @@
                                 <div class="filtr-item" style="height: 310px;width: 360px;">
                                     <img src="assets/images/item/204.png" alt="portfolio image"/>
                                     <div class="item-title">
-                                        <a href="detail.jsp">
+                                        <a href="DetailsServlet?id=204">
                                             Hạ Long
                                         </a>
                                         <p><span>tours hằng ngày</span><br><span>12 địa điểm</span></p>
@@ -469,7 +469,7 @@
                                 <div class="filtr-item" style="height: 310px;width: 750px;">
                                     <img src="assets/images/item/14.jpg" alt="portfolio image"/>
                                     <div class="item-title">
-                                        <a href="detail.jsp">
+                                        <a href="DetailsServlet?id=14">
                                             Vũng Tàu
                                         </a>
                                         <p><span>tours hằng ngày</span><br><span>6 địa điểm </span></p>
@@ -507,31 +507,31 @@
             <!--/.gallery-header-->
             <div class="blog-content">
                 <div class="row">
-<%--                    <% for (news n : news) { %>--%>
-<%--                    <div class="col-sm-4 col-md-4">--%>
-<%--                        <div class="thumbnail">--%>
-<%--                            <h2>tin mới <span><%= n.getDate() %></span></h2>--%>
-<%--                            <div class="thumbnail-img">--%>
-<%--                                <a href="<%= n.getNewsLink() %>" style="cursor: pointer">--%>
-<%--                                    <img src="assets/images/blog/<%= n.getImage()%>" alt="blog-img" style="height:220px">--%>
-<%--                                </a>--%>
-<%--                                <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->--%>
-<%--                            </div><!--/.thumbnail-img-->--%>
-<%--                            <div class="caption">--%>
-<%--                                <div class="blog-txt">--%>
-<%--                                    <h3>--%>
-<%--                                        <a style="color: #00d8fe!important;">--%>
-<%--                                            <%= n.getTitle() %>--%>
-<%--                                        </a>--%>
-<%--                                    </h3>--%>
-<%--                                    <p style="height: 300px;text-align: justify"><%= n.getContent() %>--%>
-<%--                                    </p>--%>
-<%--                                    <a href="<%= n.getNewsLink() %>" style="color: #b20909!important;">Read More</a>--%>
-<%--                                </div><!--/.blog-txt-->--%>
-<%--                            </div><!--/.caption-->--%>
-<%--                        </div><!--/.thumbnail-->--%>
-<%--                    </div><!--/.col-->--%>
-<%--                    <% } %>--%>
+                    <% for (news n : news) { %>
+                    <div class="col-sm-4 col-md-4">
+                        <div class="thumbnail">
+                            <h2>tin mới <span><%= n.getDate() %></span></h2>
+                            <div class="thumbnail-img">
+                                <a href="<%= n.getNewsLink() %>" style="cursor: pointer">
+                                    <img src="assets/images/blog/<%= n.getImage()%>" alt="blog-img" style="height:220px">
+                                </a>
+                                <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
+                            </div><!--/.thumbnail-img-->
+                            <div class="caption">
+                                <div class="blog-txt">
+                                    <h3>
+                                        <a style="color: #00d8fe!important;">
+                                            <%= n.getTitle() %>
+                                        </a>
+                                    </h3>
+                                    <p style="height: 300px;text-align: justify"><%= n.getContent() %>
+                                    </p>
+                                    <a href="<%= n.getNewsLink() %>" style="color: #b20909!important;">Read More</a>
+                                </div><!--/.blog-txt-->
+                            </div><!--/.caption-->
+                        </div><!--/.thumbnail-->
+                    </div><!--/.col-->
+                    <% } %>
 
                 </div><!--/.row-->
             </div><!--/.blog-content-->
@@ -546,49 +546,47 @@
 <!-- feedback -->
 <!-- feedback Start -->
 
-<%--<section id="feedback" class="testemonial">--%>
-<%--    <div class="container">--%>
+<section id="feedback" class="testemonial">
+    <div class="container">
 
-<%--        <div class="gallary-header text-center">--%>
-<%--            <h2>Đánh giá khách hàng</h2>--%>
-<%--            <p>--%>
-<%--                Đánh giá của khách hàng là tiêu chí quan trọng nhất để cải thiện dịch vụ.--%>
-<%--            </p>--%>
+        <div class="gallary-header text-center">
+            <h2>Đánh giá khách hàng</h2>
+            <p>
+                Đánh giá của khách hàng là tiêu chí quan trọng nhất để cải thiện dịch vụ.
+            </p>
 
-<%--        </div><!--/.gallery-header-->--%>
+        </div><!--/.gallery-header-->
 
-<%--        <div class="owl-carousel owl-theme" id="testemonial-carousel">--%>
-<%--            <% for (feedback f : fback) { %>--%>
-<%--            <div class="home1-testm item">--%>
-<%--                <div class="home1-testm-single text-center">--%>
-<%--                    <div class="home1-testm-img"><% Random random = new Random();%>--%>
-<%--                        <img src="assets/images/client/<%=random.nextInt(3)+1%>.png" alt="img"/>--%>
-<%--                    </div><!--/.home1-testm-img-->--%>
-<%--                    <div class="home1-testm-txt">--%>
-<%--								<span class="icon section-icon">--%>
-<%--									<i class="fa fa-quote-left" aria-hidden="true"></i>--%>
-<%--								</span>--%>
-<%--                        <p>--%>
-<%--                            <%=f.getText()%>--%>
-<%--                        </p>--%>
-<%--                        <h3>--%>
-<%--                            <a href="#" style="color: #00d8fe!important;">--%>
-<%--                                <% String uN = ind.getUserNameById(f.getUserId()); %>--%>
-<%--                                <%=uN%>--%>
-<%--                            </a>--%>
-<%--                        </h3>--%>
-<%--                        <h4><%=f.getDate()%></h4>--%>
-<%--                    </div><!--/.home1-testm-txt-->--%>
-<%--                </div><!--/.home1-testm-single-->--%>
-<%--            </div><!--/.item-->--%>
-<%--            <% } %>--%>
+        <div class="owl-carousel owl-theme" id="testemonial-carousel">
+            <% for (feedback f : fback) { %>
+            <div class="home1-testm item">
+                <div class="home1-testm-single text-center">
+                    <div class="home1-testm-img"><% Random random = new Random();%>
+                        <img src="assets/images/client/<%=random.nextInt(3)+1%>.png" alt="img"/>
+                    </div><!--/.home1-testm-img-->
+                    <div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+                        <p>
+                            <%=f.getText()%>
+                        </p>
+                        <h3>
+                            <a href="#" style="color: #00d8fe!important;">
+                                <% String uN = ind.getUserNameById(f.getUserId()); %>
+                                <%=uN%>
+                            </a>
+                        </h3>
+                        <h4><%=f.getDate()%>></h4>
+                    </div><!--/.home1-testm-txt-->
+                </div><!--/.home1-testm-single-->
+            </div><!--/.item-->
+            <% } %>
 
-<%--        </div><!--/.testemonial-carousel-->--%>
-<%--    </div><!--/.container-->--%>
+        </div><!--/.testemonial-carousel-->
+    </div><!--/.container-->
 
-<%--</section><!--/.testimonial-->--%>
-
-<%--<%@include file="common/feedback.jsp" %>--%>
+</section><!--/.testimonial-->
 
 
 <!-- feedback End -->

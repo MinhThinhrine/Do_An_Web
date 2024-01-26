@@ -1,8 +1,7 @@
 package vn.edu.hcmuaf.Controller;
 
 import vn.edu.hcmuaf.DAO.TourDao;
-import vn.edu.hcmuaf.bean.Tour;
-
+import vn.edu.hcmuaf.bean.*;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -16,7 +15,7 @@ public class BillServlet extends HttpServlet {
 
         int id = Integer.parseInt(request.getParameter("id"));
         TourDao tourDao = new TourDao();
-        Tour tour = tourDao.findtourbyid(id);
+        tour tour = tourDao.findtourbyid(id);
         request.setAttribute("tour", tour);
         request.getRequestDispatcher("./bill.jsp").forward(request, response);
 

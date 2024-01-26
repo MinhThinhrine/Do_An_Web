@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.DAO;
 
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
-import vn.edu.hcmuaf.bean.Tour;
+import vn.edu.hcmuaf.bean.tour;
 import vn.edu.hcmuaf.bean.valies;
 
 import java.sql.*;
@@ -15,8 +15,8 @@ public class TourDao {
     static ResultSet rs = null;
     static PreparedStatement preparedStatement = null;
 
-    public static List<Tour> findAll() {
-        List<Tour> tours = new ArrayList<>();
+    public static List<tour> findAll() {
+        List<tour> tours = new ArrayList<>();
         try {
             String sql = "Select * from tours";
             ResultSet rs = ConnectToDatabase.executeQuery(sql);
@@ -31,7 +31,7 @@ public class TourDao {
                 String duration = rs.getString("duration");
                 String schedule = rs.getString("schedule");
                 String description = rs.getString("description");
-                Tour tour = new Tour(id, region, idDis, name, image, price, startTime, duration, schedule, description);
+                tour tour = new tour(id, region, idDis, name, image, price, startTime, duration, schedule, description);
                 tours.add(tour);
             }
         } catch (Exception e) {
@@ -40,8 +40,8 @@ public class TourDao {
         }
         return tours;
     }
-    public static Tour findtourbyid(int id) {
-        Tour tour = null;
+    public static tour findtourbyid(int id) {
+        tour tour = null;
         try {
             connection = ConnectToDatabase.getConnect();
             String sql = "SELECT * FROM tours where id =?";
@@ -49,7 +49,7 @@ public class TourDao {
             preparedStatement.setInt(1, id);
             rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                tour = new Tour();
+                tour = new tour();
                 int id1 = rs.getInt("id");
                 String region = rs.getString("region");
                 int idDis = rs.getInt("discountId");
@@ -173,8 +173,26 @@ public class TourDao {
         }
         return sum;
     }
-    public static ArrayList<Tour> getListTourbySearch(String search) {
-        ArrayList<Tour> listSearch = new ArrayList<>();
+    public int getTotal(int id) {
+        int sum = 0;
+        double cout = 0.6;
+        try {
+                    connection = ConnectToDatabase.getConnect();
+                    String sql = "SELECT * FROM valies where id =?";
+                    preparedStatement = connection.prepareStatement(sql);
+                    preparedStatement.setInt(1,id);
+                    rs = preparedStatement.executeQuery();
+                    while (rs.next()) {
+                        sum += rs.getInt("price") * rs.getInt("numAldult");
+                        sum += rs.getInt("price") * rs.getInt("numChildren") * cout;
+                    }
+                } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return sum;
+    }
+    public static ArrayList<tour> getListTourbySearch(String search) {
+        ArrayList<tour> listSearch = new ArrayList<>();
         String sql = "SELECT * FROM tours WHERE schedule LIKE ? ORDER BY id DESC";
         Connection connect = ConnectToDatabase.getConnect();
 
@@ -194,7 +212,7 @@ public class TourDao {
                 String duration = rs.getString("duration");
                 String schedule = rs.getString("schedule");
                 String description = rs.getString("description");
-                Tour tour1 = new Tour(id1, region, idDis, name, image, price, startTime, duration, schedule, description);
+                tour tour1 = new tour(id1, region, idDis, name, image, price, startTime, duration, schedule, description);
                 listSearch.add(tour1);
             }
         } catch (Exception e) {

@@ -8,7 +8,7 @@
 <%
     indexDao indx = new indexDao();
 //service_tours sv = (service_tours) request.getAttribute("service");
-    Tour t = (Tour) request.getAttribute("tour");
+    tour t = (tour) request.getAttribute("tour");
     ArrayList<service_tours> sv_list = (ArrayList<service_tours>) indx.service();
 
 %>

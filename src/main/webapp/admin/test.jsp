@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="vn.edu.hcmuaf.bean.Tour" %>
+<%@ page import="vn.edu.hcmuaf.bean.tour" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
@@ -17,10 +17,10 @@
 <p>111</p>
 <div>
     <%
-        ArrayList<Tour> tours = (ArrayList<Tour>) request.getAttribute("data");
+        ArrayList<tour> tours = (ArrayList<tour>) request.getAttribute("data");
 
         if (tours != null && !tours.isEmpty()) {
-            for (Tour tour : tours) {
+            for (vn.edu.hcmuaf.bean.tour tour : tours) {
     %>
    
 
