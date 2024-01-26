@@ -302,7 +302,7 @@
                                     <div class="change-number">
                                     <span class="minus btn-click">
                                         <a href="TangGiamServlet?action=dec&id=<%=t.getId()%>">
-                                            <i class="fal fa-minus-circle"></i>
+                                             <i class="fas fa-minus" style="color: black;padding: 5px"></i>
                                         </a>
                                     </span>
                                         <input min="0" name="numadult" id="children"  value="<%=x%>" type="number"
@@ -310,7 +310,7 @@
                                         <span class="plus btn-click">
                                             <a href="TangGiamServlet?action=inc&id=<%=t.getId()%>">
 <%--                                        <button class="btn btn-link px-lg-2 btn-lg" id="adultPlus">--%>
-                                            <i class="fal fa-plus-circle" ></i>
+                                             <i class="fas fa-plus" style="color: black;padding: 5px"></i>
                                             </a>
                                         </span>
                                     </div>
