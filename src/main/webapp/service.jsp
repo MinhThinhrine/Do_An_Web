@@ -25,13 +25,25 @@
     Integer quantity = (Integer) session.getAttribute("quatity");
     int quatity = (quantity != null) ? quantity.intValue() : 1;
     session.setAttribute("quatity",quatity);
-    System.out.print("qtt"+quatity);
+
+    Integer quantitycc = (Integer) session.getAttribute("quatitycc");
+    int quatitycc = (quantitycc != null) ? quantitycc.intValue() : 1;
+    session.setAttribute("quatitycc",quatitycc);
+
     int x=0;
     if(quatity == 0){
        x = quatity;
     }else{
         x = Integer.valueOf(quatity);
     }
+
+    int y=0;
+    if(quatitycc == 0){
+        y = quatitycc;
+    }else{
+        y = Integer.valueOf(quatitycc);
+    }
+
 
 
 
@@ -42,7 +54,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css?display=swap"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Thông tin và dịch vụ</title>
-    <link rel="shortcut icon" type="image/icon" href="../assets/logo/favicon.png"/>
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link rel="stylesheet" href="assets/css/payment.css">
@@ -251,26 +263,6 @@
                                     </ul>
                                 </div>
                             </div>
-                            <h3 style="padding: 0px 20px 20px">Thông tin liên lạc</h3>
-                            <div class="customer-contact mb-3">
-                                <%--                            <form class="customer-contact-inner" action="#" method="get" id="form">--%>
-                                <div class="name">
-                                    <label>Họ và Tên <b>*</b></label><input autocomplete="off" type="text"
-                                                                            class="form-control" name="ttllfullName"
-                                                                            value=""/>
-                                </div>
-                                <div class="mail">
-                                    <label>Email <b>*</b></label><input type="email" class="form-control" name="ttllemail"
-                                                                        value=""/>
-                                </div>
-                                <div class="phone">
-                                    <label>Số điện thoại <b>*</b></label><input type="number" class="form-control"
-                                                                                name="ttllphone" value=""/>
-                                </div>
-                                <div class="addess"><label>Địa chỉ</label><input type="text" class="form-control"
-                                                                                 name="ttlladdress" value=""/></div>
-                                <%--                            </form>--%>
-                            </div>
                             <div class="customer">
                                 <h3 style="padding: 20px">Hành khách</h3>
                                 <div class="change">
@@ -301,20 +293,40 @@
                                     </div>
                                     <div class="change-number">
                                     <span class="minus btn-click">
-                                        <a href="TangGiamServlet?action=dec&id=<%=t.getId()%>">
+                                        <a href="TangGiamServlet?action=decc&id=<%=t.getId()%>">
                                              <i class="fas fa-minus" style="color: black;padding: 5px"></i>
                                         </a>
                                     </span>
-                                        <input min="0" name="numadult" id="children"  value="<%=x%>" type="number"
+                                        <input min="0" name="numchildren" id="children"  value="<%=y%>" type="number"
                                                class="form-control form-control-sm" style="width: 55px;" readonly>
                                         <span class="plus btn-click">
-                                            <a href="TangGiamServlet?action=inc&id=<%=t.getId()%>">
+                                            <a href="TangGiamServlet?action=incc&id=<%=t.getId()%>">
 <%--                                        <button class="btn btn-link px-lg-2 btn-lg" id="adultPlus">--%>
                                              <i class="fas fa-plus" style="color: black;padding: 5px"></i>
                                             </a>
                                         </span>
                                     </div>
                                 </div>
+                            </div>
+                            <h3 style="padding: 0px 20px 20px">Thông tin liên lạc</h3>
+                            <div class="customer-contact mb-3">
+                                <%--                            <form class="customer-contact-inner" action="#" method="get" id="form">--%>
+                                <div class="name">
+                                    <label>Họ và Tên <b>*</b></label><input autocomplete="off" type="text"
+                                                                            class="form-control" name="ttllfullName"
+                                                                            value=""/>
+                                </div>
+                                <div class="mail">
+                                    <label>Email <b>*</b></label><input type="email" class="form-control" name="ttllemail"
+                                                                        value=""/>
+                                </div>
+                                <div class="phone">
+                                    <label>Số điện thoại <b>*</b></label><input type="number" class="form-control"
+                                                                                name="ttllphone" value=""/>
+                                </div>
+                                <div class="addess"><label>Địa chỉ</label><input type="text" class="form-control"
+                                                                                 name="ttlladdress" value=""/></div>
+                                <%--                            </form>--%>
                             </div>
                             <div class="customer-notice">
                                 <div class="customer-notice-left">

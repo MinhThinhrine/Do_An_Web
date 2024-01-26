@@ -27,63 +27,58 @@ public class TangGiamServlet extends HttpServlet {
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
-                out.println("đã link");
                 int i = c.getNumChildren() + 1;
-//                out.println(c.getNumAdult() + " " + c.getNumChildren() + " " + i);
                 c.setNumChildren(i);
-//                out.println(c.getNumAdult() + " " + c.getNumChildren() + " " + i);
 
                 if (action != null && id >= 1) {
                     if (action.equals("inc")) {
-//                        out.println(c.getNumAdult() + " " + c.getNumChildren() + " " + i);
                         int quatity = (int) sesion.getAttribute("quatity");
 
                         quatity++;
                        int result =  quatity;
                          sesion.setAttribute("quatity",quatity);
                         request.setAttribute("id",id);
-//                        request.getRequestDispatcher( "ServiceServlet?id=" + (id)).forward(request, response);
-//                        out.println(" quali" +quantity);
                         response.sendRedirect("ServiceServlet?id=" +id);
-//                        out.println(" numx" + td.numAldul(quantity));
 
                     }
-//
-//                    if (action.equals("dec")) {
-//                            if ( c.getNumAdult() > 1) {
-//                                int quantity = c.getNumAdult();
-//                                quantity--;
-//                                c.setNumAdult(quantity);
-//                            }
+
+                    if (action.equals("dec")) {
+                                int quatity = (int) sesion.getAttribute("quatity");
+
+                                quatity--;
+                                int result =  quatity;
+                                sesion.setAttribute("quatity",quatity);
+                                request.setAttribute("id",id);
+                                response.sendRedirect("ServiceServlet?id=" +id);;
+                    }
+                    if (action.equals("incc")) {
+
+                        int quatitycc = (int) sesion.getAttribute("quatitycc");
+                        quatitycc++;
+                        int result =  quatitycc;
+                        sesion.setAttribute("quatitycc",quatitycc);
+                        request.setAttribute("id",id);
+                        response.sendRedirect("ServiceServlet?id=" +id);
+
+                    }
+
+                    if (action.equals("decc")) {
+                        int quatitycc = (int) sesion.getAttribute("quatitycc");
+                        quatitycc--;
+                        int result =  quatitycc;
+                        sesion.setAttribute("quatitycc",quatitycc);
+                        request.setAttribute("id",id);
+                        response.sendRedirect("ServiceServlet?id=" +id);
 //                        response.sendRedirect(x);
-//
-//                    }
-//                    if (action.equals("incc")) {
-//
-//                                int quantity = c.getNumChildren();
-//                                quantity++;
-//                                c.setNumChildren(quantity);
-//                                response.sendRedirect(x);
-//
-//
-//                    }
-//
-//                    if (action.equals("decc")) {
-//                            if (c.getNumChildren() > 1) {
-//                                int quantity = c.getNumChildren();
-//                                quantity--;
-//                                c.setNumChildren(quantity);
-//                            }
-//                        response.sendRedirect(x);
-//
-//                    }
-//                } else {
+
+                    }
+                } else {
 //                    response.sendRedirect(x);
-//                }
+                }
                 }
             }
         }
-    }
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
