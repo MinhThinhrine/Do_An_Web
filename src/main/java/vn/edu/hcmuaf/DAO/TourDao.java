@@ -2,7 +2,7 @@ package vn.edu.hcmuaf.DAO;
 
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
 import vn.edu.hcmuaf.bean.tour;
-import vn.edu.hcmuaf.bean.valies;
+import vn.edu.hcmuaf.bean.*;
 
 import java.sql.*;
 import java.sql.ResultSet;
@@ -173,24 +173,6 @@ public class TourDao {
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
-        }
-        return sum;
-    }
-    public int getTotal(int id) {
-        int sum = 0;
-        double cout = 0.6;
-        try {
-                    connection = ConnectToDatabase.getConnect();
-                    String sql = "SELECT * FROM valies where id =?";
-                    preparedStatement = connection.prepareStatement(sql);
-                    preparedStatement.setInt(1,id);
-                    rs = preparedStatement.executeQuery();
-                    while (rs.next()) {
-                        sum += rs.getInt("price") * rs.getInt("numAldult");
-                        sum += rs.getInt("price") * rs.getInt("numChildren") * cout;
-                    }
-                } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
         return sum;
     }

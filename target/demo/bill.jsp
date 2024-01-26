@@ -124,21 +124,33 @@
         <div class="col-sm-9">
             <div class="main-menu">
                 <ul class="nav" style="text-align: right;color: black!important;">
-                    <li><a href="index.html">Trang Chủ</a></li>
-                    <li><a href="index.html#spo">Ưu Đãi</a></li>
-                    <li><a href="index.html#gallery">Tour Hot</a></li>
+                    <li><a href="index.jsp">Trang Chủ</a></li>
+                    <li><a href="index.jsp#spo">Ưu Đãi</a></li>
+                    <li><a href="index.jsp#gallery">Tour Hot</a></li>
                     <li><a href="CategorieServlet">Sản Phẩm</a></li>
-                    <li><a href="index.html#blog">Tin Tức</a></li>
-                    <li><a href="index.html#feedback">Đánh Giá</a></li>
-                    <li><a href="index.html#service">Liên Hệ</a></li>
+                    <li><a href="index.jsp#blog">Tin Tức</a></li>
+                    <li><a href="index.jsp#feedback">Đánh Giá</a></li>
+                    <li><a href="index.jsp#service">Liên Hệ</a></li>
                     <%
                         User user = (User) session.getAttribute("user");
                         String url = request.getContextPath().trim();
+                        ArrayList<valies> vali_List = (ArrayList<valies>) session.getAttribute("vali-List");
+                        int touronvali;
+                        if(vali_List==null){
+                            touronvali = 0;
+                        }else {
+                            touronvali = vali_List.size();
+                        }
                     %>
                     <% if (Objects.nonNull(user)) { %>
                     <li class="navbar-toggle"><a href="shopcart.jsp" id="myTour"><i
                             class="fa fa-suitcase-rolling fa-2x"
-                            style="margin-top: -10px;color: #00d8fe"></i></a>
+                            style="margin-top: -10px;color: #00d8fe"><sub style="padding: 3px 5px;
+                                                        font-size: 12px;
+                                                        color: #fff6f6;
+                                                        margin: -7px -5px 0px;
+                                                        border-radius: 50%;
+                                                        background-color: rgb(21 62 138);"><%=touronvali%></sub></i></a>
                     </li>
                     <li id="icon-user" class="smooth-menu">
                         <i class="fa fa fa-user-circle fa-2x" style="color: #ffffff;"></i>

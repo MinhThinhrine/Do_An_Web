@@ -6,6 +6,8 @@
 <%@ page import="java.util.Objects" %>
 <%@ page import="vn.edu.hcmuaf.bean.tour" %>
 <%@ page import="java.text.DecimalFormat" %>
+<%@ page import="vn.edu.hcmuaf.bean.valies" %>
+<%@ page import="java.util.ArrayList" %>
 <% tour t = (tour) request.getAttribute("tour");%>
 <head>
     <!-- META DATA -->
@@ -109,11 +111,23 @@
                                 <li class="smooth-menu"><a href="index.jsp#service">Liên Hệ</a></li>
                                 <%
                                     User user = (User) session.getAttribute("user");
+                                    ArrayList<valies> vali_List = (ArrayList<valies>) session.getAttribute("vali-List");
+                                    int touronvali;
+                                    if(vali_List==null){
+                                        touronvali = 0;
+                                    }else {
+                                        touronvali = vali_List.size();
+                                    }
                                 %>
                                 <% if (Objects.nonNull(user)) { %>
                                 <li class="navbar-toggle"><a href="vali.jsp" id="myTour"><i
                                         class="fa fa-suitcase-rolling fa-2x"
-                                        style="margin-top: -10px;color: #00d8fe"></i></a>
+                                        style="margin-top: -10px;color: #00d8fe"><sub style="padding: 3px 5px;
+                                                        font-size: 12px;
+                                                        color: #fff6f6;
+                                                        margin: -7px -5px 0px;
+                                                        border-radius: 50%;
+                                                        background-color: rgb(21 62 138);"><%=touronvali%></sub></i></a>
                                 </li>
                                 <!-- Hiển thị icon và tên người dùng -->
                                 <li id="icon-user" class="smooth-menu">

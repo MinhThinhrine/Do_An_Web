@@ -129,29 +129,6 @@
             background-color: #e9ecef;
         }
     </style>
-    <script>
-        var dropdownButton = document.getElementById("dropdownButton");
-        var dropdownMenu = document.querySelector(".dropdown-menu");
-        var checkboxes = dropdownMenu.getElementsByTagName("input");
-
-        var dateInput = document.querySelector("#date input");
-        dateInputvalue = dateInput.value;
-        var [year, month, day] = dateInputvalue.split("-");
-        var newDateValue = `${day}-${month}-${year}`;
-        var date = document.getElementById("date");
-        date.innerHTML = newDateValue;
-
-        dropdownButton.addEventListener("click", function () {
-            dropdownMenu.classList.toggle("show");
-        });
-
-        for (var i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].addEventListener("click", function (event) {
-                event.stopPropagation();
-            });
-        }
-
-    </script>
 </head>
 
 <body>
@@ -169,21 +146,33 @@
         <div class="col-sm-8">
             <div class="main-menu">
                 <ul class="nav" style="text-align: right;color: black!important;">
-                    <li><a href="index.html">Trang Chủ</a></li>
-                    <li><a href="index.html#spo">Ưu Đãi</a></li>
-                    <li><a href="index.html#gallery">Tour Hot</a></li>
+                    <li><a href="index.jsp">Trang Chủ</a></li>
+                    <li><a href="index.jsp#spo">Ưu Đãi</a></li>
+                    <li><a href="index.jsp#gallery">Tour Hot</a></li>
                     <li><a href="CategorieServlet">Sản Phẩm</a></li>
-                    <li><a href="index.html#blog">Tin Tức</a></li>
-                    <li><a href="index.html#feedback">Đánh Giá</a></li>
-                    <li><a href="index.html#service">Liên Hệ</a></li>
+                    <li><a href="index.jsp#blog">Tin Tức</a></li>
+                    <li><a href="index.jsp#feedback">Đánh Giá</a></li>
+                    <li><a href="index.jsp#service">Liên Hệ</a></li>
                     <%
                         User user = (User) session.getAttribute("user");
                         String url = request.getContextPath().trim();
+                        ArrayList<valies> vali_List = (ArrayList<valies>) session.getAttribute("vali-List");
+                        int touronvali;
+                        if(vali_List==null){
+                            touronvali = 0;
+                        }else {
+                            touronvali = vali_List.size();
+                        }
                     %>
                     <% if (Objects.nonNull(user)) { %>
                     <li class="navbar-toggle"><a href="vali.jsp" id="myTour"><i
                             class="fa fa-suitcase-rolling fa-2x"
-                            style="margin-top: -10px;color: #00d8fe"></i></a>
+                            style="margin-top: -10px;color: #00d8fe"><sub style="padding: 3px 5px;
+                                                        font-size: 12px;
+                                                        color: #fff6f6;
+                                                        margin: -7px -5px 0px;
+                                                        border-radius: 50%;
+                                                        background-color: rgb(21 62 138);"><%=touronvali%></sub></i></a>
                     </li>
                     <li id="icon-user" class="smooth-menu">
                         <i class="fa fa fa-user-circle fa-2x" style="color: #ffffff;"></i>
@@ -421,10 +410,13 @@
                                 </div>
                                 <div class="go-tour">
                                     <div class="start">
+                                        <%String rs = t.getDuration().trim();
+                                        String []r =rs.split(" ");%>
+                                        <p id="pr" style="display: none;"><%=r[0].trim()%></p>
                                         <i class="fa-regular fa-calendar"></i>
                                         <div class="start-content">
                                             <h4>Bắt đầu chuyến đi</h4>
-                                            <p class="time" style="font-size: 15px;">
+                                            <p class="timestart" style="font-size: 15px;">
                                                 <input type="date" id="date" name="date">
                                             </p>
                                             <p class="from"></p>
@@ -434,7 +426,7 @@
                                         <i class="fa-solid fa-calendar-days"></i>
                                         <div class="start-content">
                                             <h4>Kết thúc chuyến đi</h4>
-                                            <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                            <p class="timeend" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
                                             <p class="from"></p>
                                         </div>
                                     </div>
@@ -448,15 +440,19 @@
                                         </tr>
                                         <tr>
                                             <td> Người lớn</td>
-                                            <td class="t-price text-right lonnum">1</td>
+                                            <td class="t-price text-right lonnum"><%=x%></td>
                                         </tr>
                                         <tr>
                                             <td>Trẻ em ( giảm 40%) </td>
-                                            <td class="t-price text-right trenum">0</td>
+                                            <td class="t-price text-right trenum"><%=y%></td>
                                         </tr>
                                         <tr class="total">
                                             <td>Tổng cộng</td>
-                                            <td class="t-price text-right" id="TotalPrice">1,090,000₫</td>
+                                            <td class="t-price text-right" id="TotalPrice"><%
+                                            int rsx = (int) (t.getPrice()*x +t.getPrice()*y*0.6);
+                                                DecimalFormat decimalFormat = new DecimalFormat("#,###");
+                                                String formattedString = decimalFormat.format(rsx) ;
+                                            %><%=formattedString%> đ</td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -715,4 +711,31 @@
         inforElement.style.display = "block";
     });
 </script>
+<script>// Lấy tham chiếu đến trường input ngày bắt đầu
+var startDateInput = document.getElementById("date");
+
+// Lắng nghe sự kiện khi giá trị trường ngày bắt đầu thay đổi
+startDateInput.addEventListener("change", function() {
+    // Lấy giá trị ngày bắt đầu từ trường input
+    var startDate = new Date(startDateInput.value);
+    var prElement = document.getElementById("pr");
+
+// Lấy giá trị của phần tử <p>
+    var pr = parseInt(prElement.textContent.trim());
+    // Giá trị biến có sẵn
+    // Cộng thêm giá trị biến vào ngày bắt đầu
+    startDate.setDate(startDate.getDate() + pr);
+
+    // Format ngày kết thúc thành chuỗi "Thứ X, Ngày X Tháng X, Năm XXXX"
+    var formattedEndDate = startDate.toLocaleString("vi-VN", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
+
+    // Gán giá trị ngày kết thúc vào phần tử HTML có class "timeend"
+    var timeEndElement = document.querySelector(".timeend");
+    timeEndElement.textContent = formattedEndDate;
+});</script>
 </html>
