@@ -23,17 +23,18 @@ public class PaymentController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        System.out.println("------------------------------------------------------------------");
         int numadlut = Integer.parseInt(request.getParameter("numadult"));
         String name = request.getParameter("ttllfullName");
         String email = request.getParameter("ttllemail");
         String phone = request.getParameter("ttllphone");
         String address = request.getParameter("ttlladdress");
         String date = request.getParameter("date");
-        System.out.println(date+"date");
-        System.out.println(name+"|"+email+"|"+phone+"|"+address+"|"+date);
-
-        System.out.println(numadlut);
+//        System.out.println(date+"date");
+//        System.out.println(name+"|"+email+"|"+phone+"|"+address+"|"+date);
+//
+        User userdk = new User(name,email,phone,address);
+        session.setAttribute("userdk",userdk);
+//        System.out.println(numadlut);
         RequestDispatcher res = null;
         List<Customer> lcs = new ArrayList<>();
         for (int i =0;i<numadlut;i++){
@@ -43,11 +44,10 @@ public class PaymentController extends HttpServlet {
             int thang = Integer.parseInt(request.getParameter("thang"+i));
             int nam = Integer.parseInt(request.getParameter("nam"+i));
             Customer cus = new Customer(hoten,gioitinh,ngay,thang,nam);
-            System.out.print(cus);
+//            System.out.print(cus);
             lcs.add(cus);
         }
         int matour = Integer.parseInt(request.getParameter("Matour"));
-        System.out.println("matour"+matour);
 
         TourDao tourDao = new TourDao();
         request.setAttribute("date",date);

@@ -16,7 +16,6 @@
 <%
     tour t = (tour) request.getAttribute("tour");
     String date = (String) request.getAttribute("date");
-    System.out.println(date);
 %>
 <head>
     <meta charset="utf-8">
@@ -124,8 +123,9 @@
     <div class="container">
         <div class="row">
         </div>
-
     </div>
+
+    <form action="BillController" method="post">
     <div class="checkout">
         <section class="checkout-head">
             <div class="container">
@@ -155,7 +155,7 @@
                                 <!-- ck -->
                                 <div class="payment-item active">
                                     <div class="pm-head">
-                                        <span class="check" id="chuyenkhoan"></span>
+                                        <input class="check" type="radio" id="chuyenkhoan" name="pay" value="chuyenkhoan">
                                         <div class="pm-head-icon" style="margin-left: 20px">
                                             <h4>Chuyển khoản qua ngân hàng</h4>
                                             <i class="fa-solid fa-building-columns" style="margin-left: 20px"></i>
@@ -183,7 +183,7 @@
                                 </div>
                                 <div class="payment-item">
                                     <div class="pm-head">
-                                        <span class="check" id="vnpay"></span>
+                                        <input class="check" type="radio" id="vnpay" name="pay" value="momo">
                                         <div class="pm-head-icon" style="margin-left: 20px">
                                             <h4>Chuyển khoản qua MoMo</h4>
                                             <i class="fa-solid fa-wallet" style="margin-left: 50px"></i>
@@ -219,7 +219,7 @@
                                 <!-- momo -->
                                 <div class="payment-item">
                                     <div class="pm-head">
-                                        <input name="pay" type="radio" class="check">
+                                        <input name="pay" type="radio" class="check" value="hoadon50">
                                         <div class="pm-head-icon" style="margin-left: 20px">
                                             <h4>Thanh toán 50% hóa đơn</h4>
                                             <i class="fa-solid fa-circle-half-stroke" style="margin-left: 20px"></i>
@@ -232,7 +232,7 @@
                                 <!-- momo -->
                                 <div class="payment-item">
                                     <div class="pm-head">
-                                        <input name="pay" type="radio" class="check">
+                                        <input name="pay" type="radio" class="check" value="hoadon100">
                                         <div class="pm-head-icon" style="margin-left: 20px">
                                             <h4>Thanh toán 100% hóa đơn</h4>
                                             <i class="fa-solid fa-circle" style="margin-left: 20px"></i>
@@ -245,6 +245,8 @@
                         <div class="terms">
                             <h3>Điều khoản bắt buộc khi đăng ký online</h3>
                             <div class="term-content">
+                                <input type="text" name="tour" value="<%=t.getId()%>" style="display: none">
+                                <input type="text" name="date" value="<%=date%>" style="display: none">
 
 
                                 <title></title>
@@ -482,7 +484,7 @@
                                     <i class="fa-regular fa-calendar"></i>
                                     <div class="start-content">
                                         <h4>Bắt đầu chuyến đi</h4>
-                                        <intput class="time" name="date" style="font-size: 15px;" value="<%=date%>">
+                                        <input class="time" style="font-size: 15px;" value="<%=date%>">
                                         <p class="from"></p>
                                     </div>
                                 </div>
@@ -550,7 +552,7 @@
         </section>
 
     </div>
-
+    </form>
 </main>
 
 <script>

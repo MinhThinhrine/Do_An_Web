@@ -11,6 +11,19 @@
     tour t = (tour) request.getAttribute("tour");
     ArrayList<service_tours> sv_list = (ArrayList<service_tours>) indx.service();
 
+    User userdk = (User) session.getAttribute("userdk");
+    ArrayList<Customer> dscus = (ArrayList<Customer>) session.getAttribute("dskh");
+    String pay = (String) request.getAttribute("pay");
+    String date = (String) request.getAttribute("date");
+    Integer quantity = (Integer) session.getAttribute("quatity");
+    int quatity = (quantity != null) ? quantity.intValue() : 1;
+    session.setAttribute("quatity",quatity);
+
+    Integer quantitycc = (Integer) session.getAttribute("quatitycc");
+    int quatitycc = (quantitycc != null) ? quantitycc.intValue() : 1;
+    session.setAttribute("quatitycc",quatitycc);
+
+    int toltal = quantitycc+quantity;
 %>
 <html lang="en">
 <head>
@@ -212,27 +225,27 @@
                                             <div class="row" style="font-size: 18px!important;">
                                                 <div class="col-12 col-md-6" style="padding-bottom: 20px">
                                                     <span class="">Họ tên</span>
-                                                    <p class="">Võ Minh Thịnh</p>
+                                                    <p class=""><%=userdk.getUserName()%></p>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <span class="">Email</span>
                                                     <p class="info">
-                                                        <span style="color: #00D8FE">2113062@st.hcmuaf.edu.vn</span></p>
+                                                        <span style="color: #00D8FE"><%=userdk.getEmail()%></span></p>
                                                 </div>
                                                 <div class="col-md-6 col-12"  style="padding-bottom: 20px">
                                                     <span class="">Địa chỉ</span>
                                                     <p class="">
-                                                        Đông Hòa, Dĩ An, Bình Dương
+                                                        <%=userdk.getAddress()%>
                                                     </p>
                                                 </div>
                                                 <div class="col-md-3 col-6">
                                                     <span class="">Di động</span>
-                                                    <p class="">091245415454</p>
+                                                    <p class=""><%=userdk.getPhoneNumber()%></p>
                                                 </div>
                                                 <div class="col-md-3 col-12 d-none">
                                                     <span class="">Số khách</span>
                                                     <p class="info">
-                                                        1 Người lớn
+                                                        <%=toltal%>
                                                     </p>
                                                 </div>
                                                 <div class="col-md-6 col-12">
@@ -274,7 +287,7 @@
                                                 <div class="col-md-3 col-12 ">
                                                     Hình thức thanh toán
                                                 </div>
-                                                <div class="col-md-9 col-12 ">Chuyển khoản</div>
+                                                <div class="col-md-9 col-12 "><%=pay%></div>
                                             </div>
                                             <div class="row item">
                                                 <div class="col-md-3 col-12">Tình trạng</div>
@@ -309,7 +322,7 @@
                                                 <i class="fa-regular fa-calendar"></i>
                                                 <div class="start-content">
                                                     <h4>Bắt đầu chuyến đi</h4>
-                                                    <p class="time" style="font-size: 15px;"><%=t.getStartTime()%></p>
+                                                    <p class="time" style="font-size: 15px;"><%=date%></p>
                                                     <p class="from"></p>
                                                 </div>
                                             </div>
@@ -383,13 +396,15 @@
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>Minh Thinh</td>
+                                            <%for (Customer cus: dscus) { %>
+                                            <td><%=cus.getHoten()%></td>
                                             <td class="d-none">Giảm giá?</td>
-                                            <td>17/02/2003</td>
-                                            <td>Nam</td>
+                                            <td><%=cus.getNgay()%></td>
+                                            <td><%=cus.getGoitinh()%></td>
                                             <td></td>
                                             <td>Người lớn</td>
                                             <td>Có</td>
+                                           <% }%>
                                         </tr>
                                         </tbody>
 
@@ -423,7 +438,7 @@
                     <div class="col-sm-3">
                         <div class="single-footer-item">
                             <div class="footer-logo">
-                                <a href="index.html">
+                                <a href="index.jsp">
                                     tour<span>Nest</span>
                                 </a>
                                 <p>
