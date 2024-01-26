@@ -1,23 +1,29 @@
 package vn.edu.hcmuaf.bean;
 
-public class bills {
+public class Bill {
     private int id;
     private int valiId;
     private String paymentMethod;
     private double toltalPrice;
     private String status;
 
-    public bills() {
+    public Bill() {
     }
 
-    public bills(int id, int valiId, String paymentMethod, double toltalPrice, String status) {
+    public Bill(int id, int valiId, String paymentMethod, double toltalPrice, String status) {
         this.id = id;
         this.valiId = valiId;
         this.paymentMethod = paymentMethod;
         this.toltalPrice = toltalPrice;
         this.status = status;
     }
+    public Bill(int id, int valiId, double toltalPrice, String status) {
+        this.id = id;
+        this.valiId = valiId;
 
+        this.toltalPrice = toltalPrice;
+        this.status = status;
+    }
     public int getId() {
         return id;
     }
@@ -54,17 +60,19 @@ public class bills {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     @Override
     public String toString() {
-        return "bills{" +
-                "valiId=" + valiId +
-                ", paymentMethod='" + paymentMethod + '\'' +
+        return "Bill{" +
+                "id=" + id +
+                ", valiId=" + valiId +
                 ", toltalPrice=" + toltalPrice +
                 ", status='" + status + '\'' +
                 '}';
     }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+
 }

@@ -1,6 +1,8 @@
 package vn.edu.hcmuaf.Controller;
 
+import vn.edu.hcmuaf.DAO.DAO;
 import vn.edu.hcmuaf.DAO.userDAO;
+import vn.edu.hcmuaf.bean.Bill;
 import vn.edu.hcmuaf.bean.User;
 
 import javax.servlet.ServletException;
@@ -19,21 +21,31 @@ public class ManageOrder extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
 
+
+        DAO dao = new DAO();
+
+        List<Bill> listb = dao.getBill();
+
+
+        request.setAttribute("BBB", listb);
+
+
         request.getRequestDispatcher("order.jsp").forward(request, response);
 
     }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        processRequest(request,response);
+        processRequest(request, response);
     }
 
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request,response);
+        processRequest(request, response);
     }
 
 }

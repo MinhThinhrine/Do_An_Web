@@ -37,6 +37,9 @@ public class tour {
         this.duration = duration;
     }
 
+    public Tour(String pregion, int i, String pname, String pimage, int price, String pstartTime, String pduration, String pschedule, String pdescription) {
+    }
+
 
     public int getId() {
         return id;

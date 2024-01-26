@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                     <ul class="dropdown-menu extended logout">
 
-                        <li><a href="login.jsp"><i class="fa fa-key"></i> Log Out</a></li>
+                        <li><a href="/demo/login.jsp"><i class="fa fa-key"></i> Log Out</a></li>
                     </ul>
                 </li>
                 <!-- user login dropdown end -->
@@ -112,24 +112,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
 
                     <li class="sub-menu">
-                        <a href="bank.jsp">
+                        <a href="revenue">
                             <i class="fa fa-tasks"></i>
-                            <span>Quản lý hệ thống thanh toán</span>
+                            <span>Thống Kê Số Liệu</span>
                         </a>
 
                     </li>
 
 
                     </li>
-                    <li class="sub-menu">
-                        <a href="statistical.jsp">
-                            <i class=" fa fa-bar-chart-o"></i>
-                            <span>Thống kê và báo cáo</span>
-                        </a>
 
-                    </li>
                     <li class="sub-menu">
-                        <a href="customerContact.jsp">
+                        <a href="manageContact">
                             <i class="fa fa-comment"></i>
                             <span>Quản lý đánh giá và hỗ trợ</span>
                         </a>
@@ -137,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
 
                     <li>
-                        <a href="index.jsp">
+                        <a href="/demo/index.jsp">
                             <i class="fa fa-home"></i>
                             <span>Trang chủ</span>
                         </a>

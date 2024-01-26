@@ -40,8 +40,14 @@ public class TourDao {
         }
         return tours;
     }
+<<<<<<< Updated upstream
     public static tour findtourbyid(int id) {
         tour tour = null;
+=======
+
+    public static Tour findtourbyid(int id) {
+        Tour tour = null;
+>>>>>>> Stashed changes
         try {
             connection = ConnectToDatabase.getConnect();
             String sql = "SELECT * FROM tours where id =?";
@@ -78,18 +84,56 @@ public class TourDao {
         return tour;
     }
 
+    public Tour findtourbyID(int id) {
+        Tour tour = null;
+        try {
+            connection = ConnectToDatabase.getConnect();
+            String sql = "SELECT * FROM tours where id =?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, id);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                tour = new Tour();
+                int id1 = rs.getInt("id");
+                String region = rs.getString("region");
+                int idDis = rs.getInt("discountId");
+                String name = rs.getString("name");
+                String image = rs.getString("image");
+                int price = rs.getInt("price");
+                String startTime = rs.getString("startTime");
+                String duration = rs.getString("duration");
+                String schedule = rs.getString("schedule");
+                String description = rs.getString("description");
+                tour.setId(id1);
+                tour.setRegion(region);
+                tour.setDiscountId(idDis);
+                tour.setName(name);
+                tour.setImage(image);
+                tour.setPrice(price);
+                tour.setDuration(duration);
+                tour.setStartTime(startTime);
+                tour.setSchedule(schedule);
+                tour.setDescription(description);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        return tour;
+    }
+
     public static List<valies> getValiTour(ArrayList<valies> valiList) {
         List<valies> product = new ArrayList<>();
         try {
-            if(valiList.size()>0){
-                for(valies vl :valiList){
+            if (valiList.size() > 0) {
+                for (valies vl : valiList) {
                     connection = ConnectToDatabase.getConnect();
                     String sql = "SELECT * FROM tours where id =?";
                     preparedStatement = connection.prepareStatement(sql);
                     preparedStatement.setInt(1, vl.getId());
                     rs = preparedStatement.executeQuery();
-                    while (rs.next()){
-                        valies  row = new valies();
+                    while (rs.next()) {
+                        valies row = new valies();
                         row.setId(rs.getInt("id"));
                         row.setNumAdult(vl.getNumAdult());
                         row.setNumChildren(vl.getNumChildren());
@@ -110,8 +154,9 @@ public class TourDao {
         }
         return product;
     }
+
     public valies findvalibyid(int id) throws SQLException {
-        valies  row = null;
+        valies row = null;
         try {
             connection = ConnectToDatabase.getConnect();
             String sql = "SELECT * FROM valies where id =?";
@@ -119,20 +164,24 @@ public class TourDao {
             preparedStatement.setInt(1, id);
             rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                    row = new valies();
-                        row.setId(id);
-                        row.setNumAdult(rs.getInt("numAdult"));
-                        row.setNumChildren(rs.getInt("numChildren"));
-                    }
+                row = new valies();
+                row.setId(id);
+                row.setNumAdult(rs.getInt("numAdult"));
+                row.setNumChildren(rs.getInt("numChildren"));
+            }
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
         return row;
     }
+<<<<<<< Updated upstream
     public int numAldul (int num){
         return num;
     }
+=======
+
+>>>>>>> Stashed changes
     public static void insertVali(ArrayList<valies> valiList) {
         try {
             for (valies vl : valiList) {
@@ -150,6 +199,7 @@ public class TourDao {
             throw new RuntimeException(e);
         }
     }
+
     public int getTotalCartPrice(ArrayList<valies> valiList) {
         int sum = 0;
         double cout = 0.6;
@@ -163,8 +213,8 @@ public class TourDao {
                     rs = preparedStatement.executeQuery();
 
                     while (rs.next()) {
-                        sum+=rs.getInt("price")*vl.getNumAdult();
-                                sum+=rs.getInt("price")*vl.getNumChildren()*cout ;
+                        sum += rs.getInt("price") * vl.getNumAdult();
+                        sum += rs.getInt("price") * vl.getNumChildren() * cout;
                     }
 
                 }
@@ -176,8 +226,14 @@ public class TourDao {
         }
         return sum;
     }
+<<<<<<< Updated upstream
     public static ArrayList<tour> getListTourbySearch(String search) {
         ArrayList<tour> listSearch = new ArrayList<>();
+=======
+
+    public static ArrayList<Tour> getListTourbySearch(String search) {
+        ArrayList<Tour> listSearch = new ArrayList<>();
+>>>>>>> Stashed changes
         String sql = "SELECT * FROM tours WHERE schedule LIKE ? ORDER BY id DESC";
         Connection connect = ConnectToDatabase.getConnect();
 
@@ -205,29 +261,30 @@ public class TourDao {
         }
         return listSearch;
     }
-        public void savePaymentInfo(int id, String date, String selectedIds ) {
-                connection = ConnectToDatabase.getConnect();
-                String sql = "INSERT INTO options (departDate, serviceId, valiId) VALUES (?, ?, ?)";
-            try {
-                // Kết nối đến cơ sở dữ liệu
-                preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.setString(1, date);
-                preparedStatement.setString(2, selectedIds);
-                preparedStatement.setInt(3, id);
-                preparedStatement.executeUpdate();
 
-                } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
+    public void savePaymentInfo(int id, String date, String selectedIds) {
+        connection = ConnectToDatabase.getConnect();
+        String sql = "INSERT INTO options (departDate, serviceId, valiId) VALUES (?, ?, ?)";
+        try {
+            // Kết nối đến cơ sở dữ liệu
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, date);
+            preparedStatement.setString(2, selectedIds);
+            preparedStatement.setInt(3, id);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
+    }
 
 
-    public void addProduct(String region,int discountID,String name, String image, int price,String startTime, String duration, String schedule, String des) {
+    public void addTour(String region, int discountID, String name, String image, int price, String startTime, String duration, String schedule, String des) {
         String sql = "INSERT INTO tours (region, discountId, name, image, price, startTime, duration, schedule, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         Connection connect = ConnectToDatabase.getConnect();
         try {
-            preparedStatement  = connect.prepareStatement(sql);
+            preparedStatement = connect.prepareStatement(sql);
             preparedStatement.setString(1, region);
             preparedStatement.setInt(2, discountID);
             preparedStatement.setString(3, name);
@@ -243,8 +300,108 @@ public class TourDao {
         }
     }
 
+    public void deleteTour(int tourId) {
+        String sql = "DELETE FROM tours WHERE id = ?";
 
-        public static void main(String[] args) {
+        Connection connect = ConnectToDatabase.getConnect();
+        try {
+            preparedStatement = connect.prepareStatement(sql);
+            preparedStatement.setInt(1, tourId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void deleteDependentValies(int tourId) {
+        String sql = "DELETE FROM valies WHERE tourId = ?";
+
+        Connection connect = ConnectToDatabase.getConnect();
+        try {
+            preparedStatement = connect.prepareStatement(sql);
+            preparedStatement.setInt(1, tourId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void deleteValies(int valiId) {
+        String sql = "DELETE FROM valies WHERE id = ?";
+
+        Connection connect = ConnectToDatabase.getConnect();
+        try {
+            preparedStatement = connect.prepareStatement(sql);
+            preparedStatement.setInt(1, valiId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void deleteDependentOption(int valiId) {
+        String sql = "DELETE FROM options WHERE valiId = ?";
+
+        Connection connect = ConnectToDatabase.getConnect();
+        try {
+            preparedStatement = connect.prepareStatement(sql);
+            preparedStatement.setInt(1, valiId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void deletetOption(int id) {
+        String sql = "DELETE FROM options WHERE id = ?";
+
+        Connection connect = ConnectToDatabase.getConnect();
+        try {
+            preparedStatement = connect.prepareStatement(sql);
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void deleteDependentbills(int valiId) {
+        String sql = "DELETE FROM bills WHERE valiId = ?";
+
+        Connection connect = ConnectToDatabase.getConnect();
+        try {
+            preparedStatement = connect.prepareStatement(sql);
+            preparedStatement.setInt(1, valiId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void modifyTour(int tourId, String region, int discountID, String name, String image, int price, String startTime, String duration, String schedule, String des) {
+        String sql = "UPDATE tours SET region=?, discountId=?, name=?, image=?, price=?, startTime=?, duration=?, schedule=?, description=? WHERE id=?";
+
+        Connection connect = ConnectToDatabase.getConnect();
+        try {
+            preparedStatement = connect.prepareStatement(sql);
+            preparedStatement.setString(1, region);
+            preparedStatement.setInt(2, discountID);
+            preparedStatement.setString(3, name);
+            preparedStatement.setString(4, image);
+            preparedStatement.setInt(5, price);
+            preparedStatement.setString(6, startTime);
+            preparedStatement.setString(7, duration);
+            preparedStatement.setString(8, schedule);
+            preparedStatement.setString(9, des);
+            preparedStatement.setInt(10, tourId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    public static void main(String[] args) {
 //            // Gọi phương thức getListTourbySearch
 //            String searchKeyword = "Sa pa";
 //            List<Tour> searchResults = TourDao.getListTourbySearch(searchKeyword);
@@ -262,9 +419,11 @@ public class TourDao {
 //                }
 //            }
 
-            //add
-            TourDao dao = new TourDao();
-            dao.addProduct("a",1,"1","1",11,"11","1","1","1");
-        }
+        //add
+                    TourDao dao = new TourDao();
+                 Tour t=    dao.findtourbyID(91);
+                    System.out.println(t);
+    }
+
 
 }

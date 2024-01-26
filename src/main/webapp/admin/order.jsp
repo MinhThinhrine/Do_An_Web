@@ -1,3 +1,5 @@
+<%@ page import="vn.edu.hcmuaf.bean.Bill" %>
+<%@ page import="java.util.List" %>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -57,7 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <header class="header fixed-top clearfix">
         <!--logo start-->
         <div class="brand">
-            <a href="admin.jsp" class="logo">
+            <a href="admin1.jsp" class="logo">
                 ADMIN
             </a>
             <div class="sidebar-toggle-box">
@@ -66,154 +68,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <!--logo end-->
 
-        <div class="top-nav clearfix">
-            <!--search & user info start-->
-            <ul class="nav pull-right top-menu">
 
-                <!-- user login dropdown start-->
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <img alt="" src="images/3.png">
-                        <span class="username">admin</span>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu extended logout">
-
-                        <li><a href="../login.jsp"><i class="fa fa-key"></i> Log Out</a></li>
-                    </ul>
-                </li>
-                <!-- user login dropdown end -->
-
-            </ul>
-            <!--search & user info end-->
-        </div>
     </header>
     <!--header end-->
-    <!--sidebar start-->
-    <aside>
-        <div id="sidebar" class="nav-collapse">
-            <!-- sidebar menu start-->
-            <div class="leftside-navigation">
-                <ul class="sidebar-menu" id="nav-accordion">
-                    <li>
-                        <a  href="admin.jsp">
-                            <i class="fa fa-list-alt"></i>
-                            <span>Quản lí sản phẩm</span>
-                        </a>
-                    </li>
-
-                    <li class="sub-menu">
-                        <a class="active" href="order.jsp">
-                            <i class="fa fa-book"></i>
-                            <span>Quản lí đơn hàng</span>
-                        </a>
-
-                    </li>
-                    <li>
-                        <a href="user.jsp">
-                            <i class="fa fa-user"></i>
-                            <span>Quản lí khách hàng</span>
-                        </a>
-                    </li>
-
-                    <li class="sub-menu">
-                        <a href="bank.jsp">
-                            <i class="fa fa-tasks"></i>
-                            <span>Quản lý hệ thống thanh toán</span>
-                        </a>
-
-                    </li>
-
-
-                    </li>
-                    <li class="sub-menu">
-                        <a href="statistical.jsp">
-                            <i class=" fa fa-bar-chart-o"></i>
-                            <span>Thống kê và báo cáo</span>
-                        </a>
-
-                    </li>
-                    <li class="sub-menu">
-                        <a href="customerContact.jsp">
-                            <i class="fa fa-comment"></i>
-                            <span>Quản lý đánh giá và hỗ trợ</span>
-                        </a>
-
-                    </li>
-
-                    <li>
-                        <a href="../index.jsp">
-                            <i class="fa fa-home"></i>
-                            <span>Trang chủ</span>
-                        </a>
-                    </li>
-                </ul>            </div>
-            <!-- sidebar menu end-->
-        </div>
-    </aside>
-    <!--sidebar end-->
+    <!-- main-menu Start -->
+    <%@include file="header.jsp" %>
+    <!-- main-menu End -->
     <!--main content start-->
     <section id="main-content">
-        <section class="wrapper">
-            <!-- //market-->
-            <div class="market-updates">
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-2">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-eye"> </i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Người xem </h4>
-                            <h3>13,500</h3>
-                            <p>Hãy đến với chúng tôi !</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-1">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-users" ></i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Khách hàng</h4>
-                            <h3>1,250</h3>
-                            <p>Thật tuyệt vời !</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-3">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-usd"></i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Tour đã giảm giá</h4>
-                            <h3>199</h3>
-                            <p>Giá cả hợp lí !</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-4">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Tour đã bán</h4>
-                            <h3>1,500</h3>
-                            <p>Tuyệt vời Việt Nam !</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
 
-
-        </section>
 
         <div  id="container11" style="height: 100%;">
             <section class="h-100 h-custom">
@@ -226,213 +89,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <thead>
                                     <tr style="margin-left: 30px">
 
-                                        <th   scope="col">Tour</th>
-                                        <th   scope="col">Thời gian</th>
-                                        <th scope="col">Trạng thái</th>
-                                        <th scope="col" style="width:170px;padding-left: 40px">Khách hàng</th>
-                                        <th scope="col">Số lượng người</th>
-                                        <th scope="col">Giá</th>
+                                        <th   scope="col">BillID</th>
+                                        <th   scope="col">ValiID</th>
+                                        <th scope="col">Tổng số tiền</th>
+                                        <th scope="col" style="width:170px;padding-left: 40px">Trạng thái</th>
+
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr id="1">
-                                        <th scope="row">
-                                            <div class="d-flex align-items-center">
+                                    <%
+                                        List<Bill> listA = (List<Bill>) request.getAttribute("BBB");
+                                        if (listA != null && !listA.isEmpty()) {
+                                            for (Bill bill : listA) {
+                                    %>
+                                    <tr >
 
-                                                <img src="../assets/images/item/1.jpg" class="img-fluid rounded-3"
-                                                     style="width: 120px;" alt="Book">
-                                                <div class="flex-column ms-4">
-                                                    <p class="mb-2">Cần Thơ - Châu Đốc</p>
 
-                                                </div>
-                                            </div>
-                                        </th>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">3 ngày 2 đêm</p>
+                                            <p class="mb-0" style="font-weight: 500;"><%=bill.getId()%></p>
                                         </td>
                                         <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">Đã thanh toán</p>
+                                            <p class="mb-0" style="font-weight: 500;"><%=bill.getValiId()%></p>
                                         </td>
                                         <td class="align-middle">
-                                           <div style="margin-left: 5px">nguyendinhvan</div>
+                                            <div style="margin-left: 5px"><%=bill.getToltalPrice()%></div>
                                         </td>
                                         <td class="align-middle">
-                                            <div style="margin-left: 35px">7</div>
+                                            <div style="margin-left: 35px"><%=bill.getStatus()%></div>
                                         </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">3,299,000đ</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <i style="color: #0F9E5E;font-size: 25px"    class="fas fa-check-circle-o "></i>
-                                            </div>
-                                        </td>
+                                            <%
+                            }
+                        } else {
+                        %>
+                                    <tr>
+                                        <td colspan="4">No users available.</td>
                                     </tr>
-                                    <tr id="2">
-                                        <th scope="row">
-                                            <div class="d-flex align-items-center">
+                                    <%
+                                        }
+                                    %>
 
-                                                <img src="../assets/images/item/6.jpg" class="img-fluid rounded-3"
-                                                     style="width: 120px;" alt="Book">
-                                                <div class="flex-column ms-4">
-                                                    <p class="mb-2">Tây Ninh - Núi Bà Đen</p>
 
-                                                </div>
-                                            </div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">4 ngày 3 đêm</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">Đã thanh toán</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">nguyenduyvu</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 35px">5</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">2,490,000đ</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <i style="color: #0F9E5E;font-size: 25px"    class="fas fa-check-circle-o "></i>
-                                            </div>
-                                        </td>
                                     </tr>
-                                    <tr id="3">
-                                        <th scope="row">
-                                            <div class="d-flex align-items-center">
 
-                                                <img src="../assets/images/item/31.jpg" class="img-fluid rounded-3"
-                                                     style="width: 120px;" alt="Book">
-                                                <div class="flex-column ms-4">
-                                                    <p class="mb-2">Phú Quốc</p>
-
-                                                </div>
-                                            </div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">4 ngày 3 đêm</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">Đã thanh toán</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">phantantrung</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 35px">4</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">4,299,000đ</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <i style="color: #0F9E5E;font-size: 25px"    class="fas fa-check-circle-o "></i>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="4">
-                                        <th scope="row">
-                                            <div class="d-flex align-items-center">
-
-                                                <img src="../assets/images/item/9.jpg" class="img-fluid rounded-3"
-                                                     style="width: 120px;" alt="Book">
-                                                <div class="flex-column ms-4">
-                                                    <p class="mb-2">Đồng Tháp - Mộc Hóa</p>
-
-                                                </div>
-                                            </div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">4 ngày 3 đêm</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">Đã thanh toán</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">tranquangvu</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 35px">6</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">4,599,000đ</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <i style="color: #0F9E5E;font-size: 25px"    class="fas fa-check-circle-o "></i>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="5">
-                                        <th scope="row">
-                                            <div class="d-flex align-items-center">
-
-                                                <img src="../assets/images/item/112.jpg" class="img-fluid rounded-3"
-                                                     style="width: 120px;" alt="Book">
-                                                <div class="flex-column ms-4">
-                                                    <p class="mb-2">Huế - Đà Lạt</p>
-
-                                                </div>
-                                            </div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">6 ngày 5 đêm</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">Đã thanh toán</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">vominhthinh</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 35px">9</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">5,299,000đ</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <i style="color: #0F9E5E;font-size: 25px"    class="fas fa-check-circle-o "></i>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr id="6">
-                                        <th scope="row">
-                                            <div class="d-flex align-items-center">
-
-                                                <img src="../assets/images/item/114.jpg" class="img-fluid rounded-3"
-                                                     style="width: 120px;" alt="Book">
-                                                <div class="flex-column ms-4">
-                                                    <p class="mb-2">Quảng Bình - Đà Nẵng</p>
-
-                                                </div>
-                                            </div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">3 ngày 2 đêm</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0" style="font-weight: 500;">Đã thanh toán</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 5px">mixigaming</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div style="margin-left: 35px">5</div>
-                                        </td>
-                                        <td class="align-middle">
-                                            <p class="mb-0"  style="font-weight: 500;">3,399,000đ</p>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="col-md-1 col-lg-1 col-xl-1">
-                                                <i style="color: #0F9E5E;font-size: 25px"    class="fas fa-check-circle-o "></i>
-                                            </div>
-                                        </td>
-                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
