@@ -14,12 +14,12 @@ import java.sql.SQLException;
 public class TangGiamServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        {
+{
+            HttpSession sesion = request.getSession();
             response.setContentType("text/html;charset=UTF-8");
             try (PrintWriter out = response.getWriter()) {
                 String action = request.getParameter("action");
                 int id = Integer.parseInt(request.getParameter("id"));
-                String x = "ServiceServlet?id=" + (id);
                 TourDao td = new TourDao();
                 valies c = null;
                 try {
@@ -29,19 +29,25 @@ public class TangGiamServlet extends HttpServlet {
                 }
                 out.println("đã link");
                 int i = c.getNumChildren() + 1;
-                out.println(c.getNumAdult() + " " + c.getNumChildren() + " " + i);
+//                out.println(c.getNumAdult() + " " + c.getNumChildren() + " " + i);
                 c.setNumChildren(i);
-                out.println(c.getNumAdult() + " " + c.getNumChildren() + " " + i);
+//                out.println(c.getNumAdult() + " " + c.getNumChildren() + " " + i);
 
                 if (action != null && id >= 1) {
                     if (action.equals("inc")) {
-                        out.println(c.getNumAdult() + " " + c.getNumChildren() + " " + i);
-                        int quantity = c.getNumAdult();
+//                        out.println(c.getNumAdult() + " " + c.getNumChildren() + " " + i);
+                       int quantity = (int) sesion.getAttribute("quatity");
+                       if(quantity==0){
+                           quantity=1;
+                       }
                         quantity++;
-                        c.setNumAdult(quantity);
-                        out.println(" quali" +quantity);
-//                        response.sendRedirect(x);
-                        out.println(" numx" + td.numAldul(quantity));
+                       int result =  quantity;
+                         sesion.setAttribute("quantity",quantity);
+                        request.setAttribute("id",id);
+//                        request.getRequestDispatcher( "ServiceServlet?id=" + (id)).forward(request, response);
+//                        out.println(" quali" +quantity);
+                        response.sendRedirect("ServiceServlet?id=" +id);
+//                        out.println(" numx" + td.numAldul(quantity));
 
                     }
 //

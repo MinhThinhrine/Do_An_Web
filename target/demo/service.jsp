@@ -9,11 +9,31 @@
 <%
     indexDao indx = new indexDao();
     TourDao tdao = new TourDao();
-//service_tours sv = (service_tours) request.getAttribute("service");
-    tour t = (tour) request.getAttribute("tour");
+//    service_tours sv = (service_tours) request.getAttribute("service");
     ArrayList<service_tours> sv_list = (ArrayList<service_tours>) indx.service();
-    StringBuilder serList = new StringBuilder();
-    valies v = tdao.findvalibyid(t.getId());
+    tour t;
+    String id = (String) request.getAttribute("id");
+    System.out.println(id);
+    if(id!=null){
+        t = tdao.findvalibyid(Integer.parseInt(id));
+        System.out.print(t);
+        valies v = tdao.findvalibyid(t.getId());
+    }else {
+         t = (tour) request.getAttribute("tour");
+        valies v = tdao.findvalibyid(t.getId());
+    }
+    Integer quantity = (Integer) session.getAttribute("quantity");
+    int quatity = (quantity != null) ? quantity.intValue() : 0;
+    System.out.print("qtt"+quatity);
+    int x=0;
+    if(quatity == 0){
+       x = quatity;
+    }else{
+        x = Integer.valueOf(quatity);
+    }
+
+
+
 %>
 <html lang="en">
 <head>
@@ -263,7 +283,7 @@
                                              <i class="fas fa-minus" style="color: black;padding: 5px"></i>
                                         </a>
                                     </span>
-                                        <input min="0" name="numadult" id="adult"  value="<%=v.getNumAdult()%>" type="number"
+                                        <input min="0" name="numadult" id="adult"  value="<%=x%>" type="number"
                                                class="form-control form-control-sm" style="width: 55px;" readonly>
                                         <span class="plus btn-click">
                                             <a href="TangGiamServlet?action=inc&id=<%=t.getId()%>">
@@ -284,7 +304,7 @@
                                             <i class="fal fa-minus-circle"></i>
                                         </a>
                                     </span>
-                                        <input min="0" name="numadult" id="children"  value="<%=v.getNumAdult()%>" type="number"
+                                        <input min="0" name="numadult" id="children"  value="<%=x%>" type="number"
                                                class="form-control form-control-sm" style="width: 55px;" readonly>
                                         <span class="plus btn-click">
                                             <a href="TangGiamServlet?action=inc&id=<%=t.getId()%>">
@@ -324,7 +344,7 @@
                                 </div>
                                 <div class="group-fields-input-contact-adult group-fields-input-contact-wrapper mb-3">
                                     <div class="title-persona"><i class="fa-solid fa-user-tie"></i> Người lớn</div>
-                                    <% for (int i = 0; i < v.getNumAdult(); i++) { %>
+                                    <% for (int i = 0; i < x; i++) { %>
                                     <div class="row">
                                         <div class="col-lg-4 col-12">
                                             <div class="form-group">
@@ -428,7 +448,6 @@
                                         </tbody>
                                     </table>
                                     <div>
-                                        <%=serList.toString()%>
 
                                         <button type="submit" class="btn btn-primary btn-order" style="width:100%" >
                                             Thanh Toán
