@@ -415,8 +415,9 @@ public class TourDao {
 
         //add
                     TourDao dao = new TourDao();
-                 Tour t=    dao.findtourbyID(91);
-                    System.out.println(t);
+                     dao.addTour("1",1,"1","1",1111,"1111","111","111","!1111");
+
+
     }
 
 

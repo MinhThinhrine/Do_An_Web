@@ -1,9 +1,8 @@
 package vn.edu.hcmuaf.Controller;
 
 
-import vn.edu.hcmuaf.DAO.userDAO;
+import vn.edu.hcmuaf.DAO.UserDAO;
 import vn.edu.hcmuaf.bean.User;
-import vn.edu.hcmuaf.serice.Mahoa;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,7 +32,7 @@ public class RegisterController extends HttpServlet {
         User user = new User(username, email, password);
 
         // Thêm người dùng vào cơ sở dữ liệu
-        userDAO userDAO = new userDAO();
+        UserDAO userDAO = new UserDAO();
 
         // Kiểm tra email và thêm người dùng
         if (userDAO.isEmailExists(email)) {

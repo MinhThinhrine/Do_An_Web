@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class userDAO implements objectDAO {
+public class UserDAO implements objectDAO {
 
     public static Map<Integer, User> mapuser = loaduserbyID();
     Connection conn = null;
@@ -22,12 +22,12 @@ public class userDAO implements objectDAO {
     ResultSet rs = null;
 
 
-    public userDAO() {
+    public UserDAO() {
     }
     private static Connection connection;
 
     // Constructor để nhận kết nối từ bên ngoài
-    public userDAO(Connection connection) {
+    public UserDAO(Connection connection) {
         this.connection = connection;
     }
 
@@ -251,7 +251,7 @@ public class userDAO implements objectDAO {
 
             // add User
         User u = new User("asa","122131122212@gmail.com","123321");
-                userDAO userDao = new userDAO();
+                UserDAO userDao = new UserDAO();
 //                System.out.println(userDao.isEmailExists("thuc9g@gmail.com"));
                 userDao.addUser(u);
 

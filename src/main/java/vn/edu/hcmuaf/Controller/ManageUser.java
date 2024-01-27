@@ -1,6 +1,6 @@
 package vn.edu.hcmuaf.Controller;
 
-import vn.edu.hcmuaf.DAO.userDAO;
+import vn.edu.hcmuaf.DAO.UserDAO;
 import vn.edu.hcmuaf.bean.User;
 
 import javax.servlet.ServletException;
@@ -23,7 +23,7 @@ public class ManageUser extends HttpServlet {
         HttpSession session = request.getSession();
         User a = (User) session.getAttribute("user");
 
-        userDAO dao = new userDAO();
+        UserDAO dao = new UserDAO();
 
         List<User> listA = dao.getAllUser();
 

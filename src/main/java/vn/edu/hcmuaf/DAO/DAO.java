@@ -2,7 +2,6 @@ package vn.edu.hcmuaf.DAO;
 
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
 import vn.edu.hcmuaf.bean.Bill;
-import vn.edu.hcmuaf.bean.Tour;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

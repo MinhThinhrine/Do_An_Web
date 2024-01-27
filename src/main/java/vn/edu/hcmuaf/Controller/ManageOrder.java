@@ -1,9 +1,7 @@
 package vn.edu.hcmuaf.Controller;
 
 import vn.edu.hcmuaf.DAO.DAO;
-import vn.edu.hcmuaf.DAO.userDAO;
 import vn.edu.hcmuaf.bean.Bill;
-import vn.edu.hcmuaf.bean.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

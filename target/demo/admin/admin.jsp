@@ -72,16 +72,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--main content start-->
     <section id="main-content">
 
+            <h1 style="text-align: center;">WELLCOME TO ADMIN</h1>
 
 
-        </div>
         <!-- footer -->
-        <div class="footer">
-            <div class="wthree-copyright">
-                <p>&copy; 2023-2024 <a href="https://github.com/MinhThinhrine/Do_An_Web">Nhóm 18</a>. All Right
-                    Reserved.</p>
-            </div>
-        </div>
+
         <!-- / footer -->
     </section>
     <!--main content end-->

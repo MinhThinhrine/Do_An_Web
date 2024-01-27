@@ -366,7 +366,7 @@
                                             <div class="form-group select-custom-icon">
                                                 <label class="pb-1 white-space-nowrap">Giới tính <span class="text-danger">*</span></label>
                                                 <select class="form-control title title-gender hotel-flight-input" name="gender<%=i%>" required>
-                                                    <option value="">Chọn giới tính</option>
+                                                    <option value="">Giới tính</option>
                                                     <option value="nam">Nam</option>
                                                     <option value="nu">Nữ</option>
                                                 </select>
