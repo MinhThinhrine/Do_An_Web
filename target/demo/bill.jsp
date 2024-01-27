@@ -13,6 +13,9 @@
 
     User userdk = (User) session.getAttribute("userdk");
     ArrayList<Customer> dscus = (ArrayList<Customer>) session.getAttribute("dskh");
+    for (int i =0;i<dscus.size();i++){
+        System.out.println(dscus);
+    }
     String pay = (String) request.getAttribute("pay");
     String date = (String) request.getAttribute("date");
     Integer quantity = (Integer) session.getAttribute("quatity");
@@ -216,7 +219,7 @@
                     <section>
                         <div class="container" style="font-size: 18px">
                             <div class="row py-4 flex-md-row flex-column-reverse">
-                                <div class="col-md-8 col-12 left" style="border: 1px solid #d5d5d5;border-radius: 5px">
+                                <div class="col-md-8 col-12 left" style="border: 1px solid #d5d5d5;border-radius: 5px">tre
                                     <section>
                                         <div class="contact-info p-4 mb-4" style="border: 1px solid #d5d5d5;border-radius: 5px;margin-top: 30px;height: 250px">
                                             <div class="heading">
@@ -347,11 +350,11 @@
                                                 </tr>
                                                 <tr>
                                                     <td> Người lớn</td>
-                                                    <td class="t-price text-right">1</td>
+                                                    <td class="t-price text-right"><%=quantity%></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Trẻ em (40%) </td>
-                                                    <td class="t-price text-right">0</td>
+                                                    <td class="t-price text-right"><%=quantitycc%></td>
                                                 </tr>
                                                 <tr class="total">
                                                     <td>Tổng cộng</td>
@@ -379,9 +382,6 @@
                             </div>
                             <div class="d-none d-lg-block">
                                 <div class="passenger-list p-4 mb-4">
-                                    <div class="heading">
-                                        <h5 class="fw-bold tieude">DANH SÁCH HÀNH KHÁCH</h5>
-                                    </div>
                                     <table class="table booking-table">
                                         <thead>
                                         <tr class="fw-bold">
@@ -395,20 +395,23 @@
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        <%for (int i=0;i<dscus.size();i++) { %>
                                         <tr>
-                                            <%for (Customer cus: dscus) { %>
-                                            <td><%=cus.getHoten()%></td>
+                                            <td><%=dscus.get(i).getHoten()%></td>
                                             <td class="d-none">Giảm giá?</td>
-                                            <td><%=cus.getNgay()%></td>
-                                            <td><%=cus.getGoitinh()%></td>
+                                            <td><%=dscus.get(i).getNgay()%></td>
+                                            <td><%=dscus.get(i).getGoitinh()%></td>
                                             <td></td>
                                             <td>Người lớn</td>
                                             <td>Có</td>
-                                           <% }%>
                                         </tr>
+                                        <% }%>
                                         </tbody>
 
                                     </table>
+                                    <div class="heading">
+                                        <h5 class="fw-bold tieude">DANH SÁCH HÀNH KHÁCH</h5>
+                                    </div>
                                 </div>
                             </div>
                             <div class="d-none d-lg-block2">
