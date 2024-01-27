@@ -184,15 +184,7 @@
                                 </div>
                                 <div class="payment-item">
                                     <div class="pm-head">
-<<<<<<< Updated upstream
                                         <input class="check" type="radio" id="vnpay" name="pay" value="momo">
-=======
-<<<<<<< HEAD
-                                        <span class="check" id="momo"></span>
-=======
-                                        <input class="check" type="radio" id="vnpay" name="pay" value="momo">
->>>>>>> 15284e5ec0d8fa2f9e08458fac1420c2aee86bbb
->>>>>>> Stashed changes
                                         <div class="pm-head-icon" style="margin-left: 20px">
                                             <h4>Chuyển khoản qua MoMo</h4>
                                             <i class="fa-solid fa-wallet" style="margin-left: 50px"></i>
@@ -228,15 +220,7 @@
                                 <!-- momo -->
                                 <div class="payment-item">
                                     <div class="pm-head">
-<<<<<<< Updated upstream
                                         <input name="pay" type="radio" class="check" value="hoadon50">
-=======
-<<<<<<< HEAD
-                                        <input name="pay" type="radio" class="check" id="pay50">
-=======
-                                        <input name="pay" type="radio" class="check" value="hoadon50">
->>>>>>> 15284e5ec0d8fa2f9e08458fac1420c2aee86bbb
->>>>>>> Stashed changes
                                         <div class="pm-head-icon" style="margin-left: 20px">
                                             <h4>Thanh toán 50% hóa đơn</h4>
                                             <i class="fa-solid fa-circle-half-stroke" style="margin-left: 20px"></i>
@@ -249,15 +233,7 @@
                                 <!-- momo -->
                                 <div class="payment-item">
                                     <div class="pm-head">
-<<<<<<< Updated upstream
                                         <input name="pay" type="radio" class="check" value="hoadon100">
-=======
-<<<<<<< HEAD
-                                        <input name="pay" type="radio" class="check" id="pay100" checked>
-=======
-                                        <input name="pay" type="radio" class="check" value="hoadon100">
->>>>>>> 15284e5ec0d8fa2f9e08458fac1420c2aee86bbb
->>>>>>> Stashed changes
                                         <div class="pm-head-icon" style="margin-left: 20px">
                                             <h4>Thanh toán 100% hóa đơn</h4>
                                             <i class="fa-solid fa-circle" style="margin-left: 20px"></i>
@@ -512,15 +488,9 @@
                                             String []r =rs.split(" ");%>
                                         <p id="pr" style="display: none;"><%=r[0].trim()%></p>
                                         <h4>Bắt đầu chuyến đi</h4>
-<<<<<<< Updated upstream
                                         <input class="time" style="font-size: 15px;" value="<%=date%>">
-=======
-<<<<<<< HEAD
-                                        <input class="timestart" name="date" style="font-size: 15px;display: none" value="<%=date%>" >
-=======
-                                        <input class="time" style="font-size: 15px;" value="<%=date%>">
->>>>>>> 15284e5ec0d8fa2f9e08458fac1420c2aee86bbb
->>>>>>> Stashed changes
+
+<%--                                        <input class="timestart" name="date" style="font-size: 15px;display: none" value="<%=date%>" >--%>
                                         <p class="from"></p>
                                     </div>
                                 </div>
@@ -605,7 +575,7 @@
             window.location.href = "BillServlet?id=<%=t.getId()%>";
         } else {
             // Nếu chưa chọn, hiển thị thông báo
-            alert('Bạn cần đồng ý với điều khoản đăng ký online.');
+            alert('Bạn đồng ý với điều khoản đăng ký online.');
         }
     }
 </script>

@@ -9,10 +9,11 @@
     indexDao indx = new indexDao();
 //service_tours sv = (service_tours) request.getAttribute("service");
     Tour t = (Tour) request.getAttribute("tour");
-    ArrayList<service_tours> sv_list = (ArrayList<service_tours>) indx.service();
+//    ArrayList<service_tours> sv_list = (ArrayList<service_tours>) indx.service();
 
     User userdk = (User) session.getAttribute("userdk");
     ArrayList<Customer> dscus = (ArrayList<Customer>) session.getAttribute("dskh");
+
     String pay = (String) request.getAttribute("pay");
     String date = (String) request.getAttribute("date");
     Integer quantity = (Integer) session.getAttribute("quatity");
@@ -24,6 +25,11 @@
     session.setAttribute("quatitycc",quatitycc);
 
     int toltal = quantitycc+quantity;
+    session.removeAttribute("userdk");
+    session.removeAttribute("dskh");
+    session.removeAttribute("quatitycc");
+    session.removeAttribute("quatity");
+
 %>
 <html lang="en">
 <head>
@@ -260,27 +266,27 @@
                                                 <h4 class="fw-bold tieude" style="padding-bottom: 20px">CHI TIẾT BOOKING</h4>
                                             </div>
                                             <div class="row item">
-                                                <div class="col-md-3 col-12 ">Số booking</div>
+                                                <div class="col-md-3 col-12 " style="display: none">Số booking</div>
                                                 <div class="col-md-9 col-12 ">
                                                     <span class="text-primary fw-bold">231112815769</span>
                                                 </div>
                                             </div>
                                             <div class="row item">
-                                                <div class="col-md-3 col-12 ">Trị giá booking</div>
-                                                <div class="col-md-9 col-12 ">6,490,000₫</div>
+                                                <div class="col-md-3 col-12 " style="display: none">Trị giá booking</div>
+                                                <div class="col-md-9 col-12 " style="display: none">6,490,000₫</div>
                                             </div>
                                             <div class="row item">
-                                                <div class="col-md-3 col-12 ">Số tiền đã thanh toán</div>
-                                                <div class="col-md-9 col-12 ">6,490,000₫</div>
+                                                <div class="col-md-3 col-12 " style="display: none">Số tiền đã thanh toán</div>
+                                                <div class="col-md-9 col-12 " style="display: none">6,490,000₫</div>
                                             </div>
                                             <div class="row item">
-                                                <div class="col-md-3 col-12 ">Số tiền còn lại</div>
-                                                <div class="col-md-9 col-12 ">3,000,000₫</div>
+                                                <div class="col-md-3 col-12 " style="display: none">Số tiền còn lại</div>
+                                                <div class="col-md-9 col-12 " style="display: none">3,000,000₫</div>
                                             </div>
                                             <div class="row item">
                                                 <div class="col-md-3 col-12 ">Ngày đăng ký</div>
                                                 <div class="col-md-9 col-12 ">
-                                                    12/11/2023 23:29:59
+                                                    27/1/2024
                                                 </div>
                                             </div>
                                             <div class="row item">
@@ -292,13 +298,13 @@
                                             <div class="row item">
                                                 <div class="col-md-3 col-12">Tình trạng</div>
                                                 <div class="col-md-9 col-12 ">
-                                                    Booking của quý khách đã được chúng tôi xác nhận thành công
+                                                    Booking của quý khách đang được xác nhận
                                                 </div>
                                             </div>
                                             <div class="row item">
-                                                <div class="col-md-3 col-12 label">Thời gian thanh toán</div>
+                                                <div class="col-md-3 col-12 label" style="display: none">Thời gian thanh toán</div>
                                                 <div class="col-md-9 col-12 text">
-                                                    <span class="text-primary fw-bold">13/11/23 23:29:59</span> (Theo giờ Việt Nam)
+                                                    <span class="text-primary fw-bold" style="display: none">13/11/23 23:29:59</span> (Theo giờ Việt Nam)
                                                 </div>
                                             </div>
                                         </div>
@@ -347,11 +353,11 @@
                                                 </tr>
                                                 <tr>
                                                     <td> Người lớn</td>
-                                                    <td class="t-price text-right">1</td>
+                                                    <td class="t-price text-right"><%=quantity%></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Trẻ em (40%) </td>
-                                                    <td class="t-price text-right">0</td>
+                                                    <td class="t-price text-right"><%=quantitycc%></td>
                                                 </tr>
                                                 <tr class="total">
                                                     <td>Tổng cộng</td>
@@ -360,7 +366,7 @@
                                                 </tbody>
                                             </table>
                                             <div>
-                                                <button class="btn btn-primary btn-order" style="width:100% "
+                                                <button style="display: none" class="btn btn-primary btn-order" style="width:100% "
                                                         onclick="kiemTraDieuKien()">
                                                     <a href="#"></a> Hóa đơn
                                                 </button>
@@ -379,9 +385,6 @@
                             </div>
                             <div class="d-none d-lg-block">
                                 <div class="passenger-list p-4 mb-4">
-                                    <div class="heading">
-                                        <h5 class="fw-bold tieude">DANH SÁCH HÀNH KHÁCH</h5>
-                                    </div>
                                     <table class="table booking-table">
                                         <thead>
                                         <tr class="fw-bold">
@@ -395,20 +398,23 @@
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        <%for (int i=0;i<dscus.size();i++) { %>fo
                                         <tr>
-                                            <%for (Customer cus: dscus) { %>
-                                            <td><%=cus.getHoten()%></td>
+                                            <td><%=dscus.get(i).getHoten()%></td>
                                             <td class="d-none">Giảm giá?</td>
-                                            <td><%=cus.getNgay()%></td>
-                                            <td><%=cus.getGoitinh()%></td>
+                                            <td><%=dscus.get(i).getNgay()%></td>
+                                            <td><%=dscus.get(i).getGoitinh()%></td>
                                             <td></td>
                                             <td>Người lớn</td>
                                             <td>Có</td>
-                                           <% }%>
                                         </tr>
+                                        <% }%>
                                         </tbody>
 
                                     </table>
+                                    <div class="heading">
+                                        <h5 class="fw-bold tieude">DANH SÁCH HÀNH KHÁCH</h5>
+                                    </div>
                                 </div>
                             </div>
                             <div class="d-none d-lg-block2">
