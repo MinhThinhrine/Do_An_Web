@@ -13,9 +13,7 @@
 
     User userdk = (User) session.getAttribute("userdk");
     ArrayList<Customer> dscus = (ArrayList<Customer>) session.getAttribute("dskh");
-    for (int i =0;i<dscus.size();i++){
-        System.out.println(dscus);
-    }
+
     String pay = (String) request.getAttribute("pay");
     String date = (String) request.getAttribute("date");
     Integer quantity = (Integer) session.getAttribute("quatity");
@@ -27,6 +25,11 @@
     session.setAttribute("quatitycc",quatitycc);
 
     int toltal = quantitycc+quantity;
+    session.removeAttribute("userdk");
+    session.removeAttribute("dskh");
+    session.removeAttribute("quatitycc");
+    session.removeAttribute("quatity");
+
 %>
 <html lang="en">
 <head>

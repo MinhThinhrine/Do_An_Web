@@ -33,7 +33,7 @@ public class ChangePassword extends HttpServlet {
 
         if (oldpass == null || oldpass.trim().isEmpty()) {
             error = "Vui lòng nhập mật khẩu cũ";
-        } else if (passuser != null && !Mahoa.toSHA1(oldpass).equals(passuser)) {
+        } else if (passuser != null && !oldpass.equals(passuser)) {
             error = "Mật khẩu cũ không đúng";
         } else if (newpass1 == null || newpass1.trim().isEmpty()) {
             error = "Vui lòng nhập mật khẩu mới";
@@ -63,7 +63,7 @@ public class ChangePassword extends HttpServlet {
             try {
                 Connection conn = ConnectToDatabase.getConnect();
                 PreparedStatement pst = conn.prepareStatement("UPDATE users SET password = ? where users.id = ? ");
-                pst.setString(1, Mahoa.toSHA1(newpass1));
+                pst.setString(1, newpass1);
                 pst.setInt(2, user.getId());
 
                 int roundCount = pst.executeUpdate();

@@ -13,9 +13,7 @@
 
     User userdk = (User) session.getAttribute("userdk");
     ArrayList<Customer> dscus = (ArrayList<Customer>) session.getAttribute("dskh");
-    for (int i =0;i<dscus.size();i++){
-        System.out.println(dscus);
-    }
+
     String pay = (String) request.getAttribute("pay");
     String date = (String) request.getAttribute("date");
     Integer quantity = (Integer) session.getAttribute("quatity");
@@ -27,6 +25,11 @@
     session.setAttribute("quatitycc",quatitycc);
 
     int toltal = quantitycc+quantity;
+    session.removeAttribute("userdk");
+    session.removeAttribute("dskh");
+    session.removeAttribute("quatitycc");
+    session.removeAttribute("quatity");
+
 %>
 <html lang="en">
 <head>
@@ -219,7 +222,7 @@
                     <section>
                         <div class="container" style="font-size: 18px">
                             <div class="row py-4 flex-md-row flex-column-reverse">
-                                <div class="col-md-8 col-12 left" style="border: 1px solid #d5d5d5;border-radius: 5px">tre
+                                <div class="col-md-8 col-12 left" style="border: 1px solid #d5d5d5;border-radius: 5px">
                                     <section>
                                         <div class="contact-info p-4 mb-4" style="border: 1px solid #d5d5d5;border-radius: 5px;margin-top: 30px;height: 250px">
                                             <div class="heading">
@@ -395,7 +398,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <%for (int i=0;i<dscus.size();i++) { %>
+                                        <%for (int i=0;i<dscus.size();i++) { %>fo
                                         <tr>
                                             <td><%=dscus.get(i).getHoten()%></td>
                                             <td class="d-none">Giảm giá?</td>

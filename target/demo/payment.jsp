@@ -575,7 +575,7 @@
             window.location.href = "BillServlet?id=<%=t.getId()%>";
         } else {
             // Nếu chưa chọn, hiển thị thông báo
-            alert('Bạn cần đồng ý với điều khoản đăng ký online.');
+            alert('Bạn đồng ý với điều khoản đăng ký online.');
         }
     }
 </script>
