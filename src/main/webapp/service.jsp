@@ -302,18 +302,18 @@
                             <div class="customer-contact mb-3">
                                 <%--                            <form class="customer-contact-inner" action="#" method="get" id="form">--%>
                                     <div class="name">
-                                        <label>Họ và Tên <b>*</b></label><input autocomplete="off" type="text"
+                                        <label>Họ và Tên <span class="text-danger">*</span></label><input autocomplete="off" type="text"
                                                                                 class="form-control" name="ttllfullName"
                                                                                 value="" required/>
                                         <span class="error-msg" id="name-error"></span>
                                     </div>
                                     <div class="mail">
-                                        <label>Email <b>*</b></label><input type="email" class="form-control" name="ttllemail"
+                                        <label>Email <span class="text-danger">*</span></label><input type="email" class="form-control" name="ttllemail"
                                                                             value="" required/>
                                         <span class="error-msg" id="email-error"></span>
                                     </div>
                                     <div class="phone">
-                                        <label>Số điện thoại <b>*</b></label><input type="number" class="form-control"
+                                        <label>Số điện thoại <span class="text-danger">*</span></label><input type="number" class="form-control"
                                                                                     name="ttllphone" value="" required/>
                                         <span class="error-msg" id="phone-error"></span>
                                     </div>
@@ -366,7 +366,7 @@
                                             <div class="form-group select-custom-icon">
                                                 <label class="pb-1 white-space-nowrap">Giới tính <span class="text-danger">*</span></label>
                                                 <select class="form-control title title-gender hotel-flight-input" name="gender<%=i%>" required>
-                                                    <option value="">Chọn giới tính</option>
+                                                    <option value="">Giới tính</option>
                                                     <option value="nam">Nam</option>
                                                     <option value="nu">Nữ</option>
                                                 </select>
@@ -404,8 +404,8 @@
                         <div class="col-md-4 col-12 right">
                             <div class="group-checkout">
                                 <h3>Tóm tắt</h3>
-                                <input class="package-title" type="text" name="Matour" value="<%=t.getId()%>">
-<%--                                <input class="package-title"><span>Mã Tour</span> # <%=t.getId()%></input>--%>
+                                <input class="package-title" type="text" name="Matour" value="<%=t.getId()%>" style="display: none">
+                                <p class="package-title"><span>Mã Tour</span> # <%=t.getId()%></p>
                                 <div class="product">
                                     <div class="product-image">
                                         <img src="assets/images/item/<%=t.getImage()%>"
@@ -433,7 +433,7 @@
                                         <i class="fa-solid fa-calendar-days"></i>
                                         <div class="start-content">
                                             <h4>Kết thúc chuyến đi</h4>
-                                            <p class="timeend" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                            <p class="timeend" style="font-size: 15px;">Chủ Nhật, 3 Tháng 12, 2023</p>
                                             <p class="from"></p>
                                         </div>
                                     </div>
@@ -455,7 +455,8 @@
                                         </tr>
                                         <tr class="total">
                                             <td>Tổng cộng</td>
-                                            <td class="t-price text-right" id="TotalPrice"><%
+                                            <td class="t-price text-right" id="TotalPrice">
+                                                <%
                                             int rsx = (int) (t.getPrice()*x +t.getPrice()*y*0.6);
                                                 DecimalFormat decimalFormat = new DecimalFormat("#,###");
                                                 String formattedString = decimalFormat.format(rsx) ;
@@ -744,7 +745,8 @@ startDateInput.addEventListener("change", function() {
     // Gán giá trị ngày kết thúc vào phần tử HTML có class "timeend"
     var timeEndElement = document.querySelector(".timeend");
     timeEndElement.textContent = formattedEndDate;
-});</script>
+});
+</script>
 <script>
     // Lấy tham chiếu đến form
     var form = document.getElementById("form");
