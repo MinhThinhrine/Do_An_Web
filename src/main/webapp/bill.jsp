@@ -25,10 +25,10 @@
     session.setAttribute("quatitycc",quatitycc);
 
     int toltal = quantitycc+quantity;
-    session.removeAttribute("userdk");
-    session.removeAttribute("dskh");
-    session.removeAttribute("quatitycc");
-    session.removeAttribute("quatity");
+//    session.removeAttribute("userdk");
+//    session.removeAttribute("dskh");
+//    session.removeAttribute("quatitycc");
+//    session.removeAttribute("quatity");
 
 %>
 <html lang="en">
@@ -265,12 +265,12 @@
                                             <div class="heading">
                                                 <h4 class="fw-bold tieude" style="padding-bottom: 20px">CHI TIẾT BOOKING</h4>
                                             </div>
-                                            <div class="row item">
-                                                <div class="col-md-3 col-12 " style="display: none">Số booking</div>
-                                                <div class="col-md-9 col-12 ">
-                                                    <span class="text-primary fw-bold">231112815769</span>
-                                                </div>
-                                            </div>
+<%--                                            <div class="row item">--%>
+<%--                                                <div class="col-md-3 col-12 " style="display: none">Số booking</div>--%>
+<%--                                                <div class="col-md-9 col-12 ">--%>
+<%--                                                    <span class="text-primary fw-bold">231112815769</span>--%>
+<%--                                                </div>--%>
+<%--                                            </div>--%>
                                             <div class="row item">
                                                 <div class="col-md-3 col-12 " style="display: none">Trị giá booking</div>
                                                 <div class="col-md-9 col-12 " style="display: none">6,490,000₫</div>
@@ -327,8 +327,12 @@
                                             <div class="start">
                                                 <i class="fa-regular fa-calendar"></i>
                                                 <div class="start-content">
+                                                    <%String rs = t.getDuration().trim();
+                                                        String []r =rs.split(" ");%>
+                                                    <p id="pr" style="display: none;"><%=r[0].trim()%></p>
                                                     <h4>Bắt đầu chuyến đi</h4>
-                                                    <p class="time" style="font-size: 15px;"><%=date%></p>
+                                                    <input class="timestart" id="startdate" name="date" style="font-size: 15px;display: none" value="<%=date%>" >
+                                                    <span class="timestart" name="date" style="font-size: 15px;" ><%=date%></span>
                                                     <p class="from"></p>
                                                 </div>
                                             </div>
@@ -336,10 +340,7 @@
                                                 <i class="fa-solid fa-calendar-days"></i>
                                                 <div class="start-content">
                                                     <h4>Kết thúc chuyến đi</h4>
-                                                    <%
-
-                                                    %>
-                                                    <p class="time" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                                    <p class="timeend" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
                                                     <p class="from"></p>
                                                 </div>
                                             </div>
@@ -361,7 +362,15 @@
                                                 </tr>
                                                 <tr class="total">
                                                     <td>Tổng cộng</td>
-                                                    <td class="t-price text-right" id="TotalPrice">1,090,000₫</td>
+                                                    <%
+                                                        int rsx = (int) (t.getPrice()*quantity +t.getPrice()*quantitycc*0.6);
+                                                        DecimalFormat decimalFormat = new DecimalFormat("#,###");
+                                                        String formattedString = decimalFormat.format(rsx) ;
+                                                    %>
+                                                    <input type="text" style="display: none" name="total" value="<%=rsx%>" id="total">
+                                                    <td class="t-price text-right" id="TotalPrice">
+                                                        <%=formattedString%> đ
+                                                    </td>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -398,7 +407,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <%for (int i=0;i<dscus.size();i++) { %>fo
+                                        <%for (int i=0;i<dscus.size();i++) { %>
                                         <tr>
                                             <td><%=dscus.get(i).getHoten()%></td>
                                             <td class="d-none">Giảm giá?</td>
@@ -527,4 +536,45 @@
     <!-- footer-copyright end -->
 </div>
 </body>
+<script>
+    const dateInput = document.getElementById('startdate');
+    const dateValue = dateInput.value;
+
+    const dateParts = dateValue.split('-');
+    const year = dateParts[0];
+    const month = dateParts[1];
+    const day = dateParts[2];
+
+    const date = new Date(year, month - 1, day);
+    const weekdays = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
+    const weekday = weekdays[date.getDay()];
+
+    const formattedDate =weekday+', ' + day + ' tháng ' + month + ', ' + year;
+
+    const outputElement = document.querySelector('.from');
+    outputElement.textContent = formattedDate;
+    // Lấy tham chiếu đến trường input ngày bắt đầu
+
+    var startDate = new Date(dateValue);
+    var prElement = document.getElementById("pr");
+
+    // Lấy giá trị của phần tử <p>
+    var pr = parseInt(prElement.textContent.trim());
+    // Giá trị biến có sẵn
+    // Cộng thêm giá trị biến vào ngày bắt đầu
+    startDate.setDate(startDate.getDate() + pr);
+
+    // Format ngày kết thúc thành chuỗi "Thứ X, Ngày X Tháng X, Năm XXXX"
+    var formattedEndDate = startDate.toLocaleString("vi-VN", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
+
+    // Gán giá trị ngày kết thúc vào phần tử HTML có class "timeend"
+    var timeEndElement = document.querySelector(".timeend");
+    timeEndElement.textContent = formattedEndDate;
+
+</script>
 </html>

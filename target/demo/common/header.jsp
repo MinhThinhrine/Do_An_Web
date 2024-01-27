@@ -63,7 +63,7 @@
                                 <span><%= user.getUserName() %></span>
                                 <ul id="service_account">
                                     <li><a id="myInfor" href="infor.jsp">Tài Khoản</a></li>
-                                    <li><a id="bill" href="bill.jsp">Hóa Đơn </a></li>
+                                    <li><a id="bill" href="#">Hóa Đơn </a></li>
                                     <li>
                                     <form action="login" method="get">
                                         <button type="submit" name="action" id="logout" value="logout">Đăng Xuất</button>

@@ -13,17 +13,12 @@ public class BillController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-<<<<<<< HEAD
-
         int id = Integer.parseInt(request.getParameter("id"));
         TourDao tourDao = new TourDao();
         Tour tour = tourDao.findtourbyid(id);
         request.setAttribute("tour", tour);
         request.getRequestDispatcher("./bill.jsp").forward(request, response);
 
-
-=======
->>>>>>> e2c3198be4bd12d52655c6e0806f20dd815805fd
     }
 
     @Override

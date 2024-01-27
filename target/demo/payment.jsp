@@ -488,9 +488,8 @@
                                             String []r =rs.split(" ");%>
                                         <p id="pr" style="display: none;"><%=r[0].trim()%></p>
                                         <h4>Bắt đầu chuyến đi</h4>
-                                        <input class="time" style="font-size: 15px;" value="<%=date%>">
-
-<%--                                        <input class="timestart" name="date" style="font-size: 15px;display: none" value="<%=date%>" >--%>
+<%--                                        <input class="time" style="font-size: 15px;" value="<%=date%>">--%>
+                                        <input class="timestart" name="date" style="font-size: 15px;display: none" value="<%=date%>" >
                                         <p class="from"></p>
                                     </div>
                                 </div>
@@ -498,7 +497,7 @@
                                     <i class="fa-solid fa-calendar-days"></i>
                                     <div class="start-content">
                                         <h4>Kết thúc chuyến đi</h4>
-                                        <p class="timeend" style="font-size: 15px;">CN, 3 Tháng 12, 2023</p>
+                                        <p class="timeend" style="font-size: 15px;">Chủ Nhật, 3 Tháng 12, 2023</p>
                                         <p class="from"></p>
                                     </div>
                                 </div>
@@ -625,20 +624,20 @@
     var timeEndElement = document.querySelector(".timeend");
     timeEndElement.textContent = formattedEndDate;
 </script>
-<script>
-    const pay50 = document.getElementById('pay50');
-    const pay100 = document.getElementById('pay100');
-    var totalPrice = document.getElementById('TotalPrice');
-    var totalx = document.getElementById('total');
-    var total = totalx.value();
-    pay50.addEventListener('change', function() {
-        total/=2;
-        totalPrice.textContent = total.toLocaleString()
-    });
-    pay100.addEventListener('change', function() {
-        total*=2;
-        totalPrice.textContent = total.toLocaleString()
-    });
+<%--<script>--%>
+<%--    const pay50 = document.getElementById('pay50');--%>
+<%--    const pay100 = document.getElementById('pay100');--%>
+<%--    var totalPrice = document.getElementById('TotalPrice');--%>
+<%--    var totalx = document.getElementById('total');--%>
+<%--    var total = totalx.value();--%>
+<%--    pay50.addEventListener('change', function() {--%>
+<%--        total/=2;--%>
+<%--        totalPrice.textContent = total.toLocaleString()--%>
+<%--    });--%>
+<%--    pay100.addEventListener('change', function() {--%>
+<%--        total*=2;--%>
+<%--        totalPrice.textContent = total.toLocaleString()--%>
+<%--    });--%>
 
-</script>
+<%--</script>--%>
 </html>
