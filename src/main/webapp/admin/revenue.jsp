@@ -57,7 +57,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <header class="header fixed-top clearfix">
         <!--logo start-->
         <div class="brand">
-            <a href="admin1.jsp" class="logo">
+            <a href="admin.jsp" class="logo">
                 ADMIN
             </a>
             <div class="sidebar-toggle-box">
@@ -75,9 +75,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--main content start-->
     <section id="main-content">
 
-
+        <h3 style="margin-left: 50px">Thống kê số liệu</h3>
 
         <div  class="agileits-w3layouts-stats">
+
             <div class="col-md-4 stats-info widget">
                 <div class="stats-info-agileits">
                     <div class="stats-title">

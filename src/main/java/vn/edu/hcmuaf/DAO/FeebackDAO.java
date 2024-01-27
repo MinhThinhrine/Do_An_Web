@@ -1,9 +1,15 @@
 package vn.edu.hcmuaf.DAO;
 
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
+import vn.edu.hcmuaf.bean.Feedback;
+import vn.edu.hcmuaf.bean.Tour;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class FeebackDAO {
     public static boolean addFeedback(int idUser, String text){
@@ -22,7 +28,25 @@ public class FeebackDAO {
         System.out.println("kq"+kq);
         return kq;
     }
-
+    public  List<Feedback> getFeedback() {
+        List<Feedback> feedbacks = new ArrayList<Feedback>();
+        try {
+            String sql = "Select * from feedbacks";
+            ResultSet rs = ConnectToDatabase.executeQuery(sql);
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                int userId = rs.getInt("userId");
+                String text = rs.getString("text");
+                Date date = rs.getDate("date");
+                Feedback f = new Feedback(id,userId,text,date);
+                feedbacks.add(f);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        return feedbacks;
+    }
     public static void deleteFeedback(int id){
         String sql = "delete from feedbacks where id = ?";
         boolean kq = false;
@@ -58,7 +82,11 @@ public class FeebackDAO {
 
 
     public static void main(String[] args) {
-        new FeebackDAO().deleteFeedback(10);
+            FeebackDAO f = new FeebackDAO();
+    System.out.println(f.getFeedback());
     }
+
+
+
     }
 

@@ -1,6 +1,6 @@
 package vn.edu.hcmuaf.Controller;
 
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.Tour;
 import vn.edu.hcmuaf.serice.TourService;
 
 import javax.servlet.*;
@@ -38,13 +38,13 @@ public class SearchController extends HttpServlet {
             System.out.println("diemden " + endInput);
             System.out.println("--------------------------------------");
 
-            ArrayList<tour> searchResults = (ArrayList<tour>) new TourService().findAll();
+            ArrayList<Tour> searchResults = (ArrayList<Tour>) new TourService().findAll();
             int size = searchResults.size();
             System.out.println(size);
 
-            ArrayList<tour> kqtimkiem = new ArrayList<>();
+            ArrayList<Tour> kqtimkiem = new ArrayList<>();
 
-            for (tour t : searchResults) {
+            for (Tour t : searchResults) {
                 String input = t.getName();
 
 // Nếu cả hai điểm đều không được nhập
@@ -96,7 +96,7 @@ public class SearchController extends HttpServlet {
                 request.setAttribute("error", error);
                 request.getRequestDispatcher("catelogy.jsp").forward(request, response);
             }else{
-                ArrayList<tour> kqtimkiem = new TourService().getListTourbySearch(param);
+                ArrayList<Tour> kqtimkiem = new TourService().getListTourbySearch(param);
                 session.setAttribute("ListTour", kqtimkiem);
                 request.getRequestDispatcher("catelogy.jsp").forward(request, response);
             }

@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.Controller;
 
 import vn.edu.hcmuaf.DAO.TourDao;
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.Tour;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -15,7 +15,7 @@ public class CategorieServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         TourDao tourDao = new TourDao();
-        ArrayList<tour> tours = (ArrayList<tour>) tourDao.findAll();
+        ArrayList<Tour> tours = (ArrayList<Tour>) tourDao.findAll();
         session.setAttribute("ListTour", tours);
         request.getRequestDispatcher("./catelogy.jsp").forward(request, response);
     }

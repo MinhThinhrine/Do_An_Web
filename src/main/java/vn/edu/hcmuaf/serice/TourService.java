@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.serice;
 
 import vn.edu.hcmuaf.DAO.TourDao;
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.Tour;
 import vn.edu.hcmuaf.bean.valies;
 
 import java.util.ArrayList;
@@ -9,10 +9,10 @@ import java.util.List;
 
 public class TourService {
 
-    public List<tour> findAll() {
+    public List<Tour> findAll() {
         return TourDao.findAll();
     }
-    public tour findtourbyid(int id){
+    public Tour findtourbyid(int id){
         return  TourDao.findtourbyid(id);
     }
     public List<valies> getValiTour(ArrayList<valies> valiList) {
@@ -21,7 +21,7 @@ public class TourService {
     public void insertVali(ArrayList<valies> valiList) {
         TourDao.insertVali(valiList);
     }
-    public ArrayList<tour> getListTourbySearch(String search){
+    public ArrayList<Tour> getListTourbySearch(String search){
         return TourDao.getListTourbySearch(search);
     }
 }

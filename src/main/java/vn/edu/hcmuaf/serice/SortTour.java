@@ -1,6 +1,6 @@
 package vn.edu.hcmuaf.serice;
 
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.Tour;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,9 +14,9 @@ public class SortTour {
         this.listour = listour;
     }
 
-    public static ArrayList<tour> SortByRegion(ArrayList<tour> TourOnCart, String param) {
-        ArrayList<tour> result = new ArrayList<>();
-        for (vn.edu.hcmuaf.bean.tour tour : TourOnCart) {
+    public static ArrayList<Tour> SortByRegion(ArrayList<Tour> TourOnCart, String param) {
+        ArrayList<Tour> result = new ArrayList<>();
+        for (Tour tour : TourOnCart) {
             String sortBy = tour.getRegion().trim().toUpperCase();
             System.out.println("Tour Duration: " + sortBy + ", Param: " + param);
             if (sortBy.equalsIgnoreCase(param.trim().toUpperCase())) {
@@ -26,9 +26,9 @@ public class SortTour {
         return result;
     }
 
-    public static ArrayList<tour> SortByDuration(ArrayList<tour> TourOnCart, String param) {
-        ArrayList<tour> result = new ArrayList<>();
-        for (vn.edu.hcmuaf.bean.tour tour : TourOnCart) {
+    public static ArrayList<Tour> SortByDuration(ArrayList<Tour> TourOnCart, String param) {
+        ArrayList<Tour> result = new ArrayList<>();
+        for (Tour tour : TourOnCart) {
             String sortBy = tour.getDuration().trim().toUpperCase();
 //            System.out.println("Tour Duration: " + sortBy + ", Param: " + param);
             if (sortBy.contains(param.trim().toUpperCase())) {
@@ -39,9 +39,9 @@ public class SortTour {
     }
 
     // số 1 là tour bình thường @@
-    public static ArrayList<tour> SortDiscountId(ArrayList<tour> TourOnCart, int param) {
-        ArrayList<tour> result = new ArrayList<>();
-        for (vn.edu.hcmuaf.bean.tour tour : TourOnCart) {
+    public static ArrayList<Tour> SortDiscountId(ArrayList<Tour> TourOnCart, int param) {
+        ArrayList<Tour> result = new ArrayList<>();
+        for (Tour tour : TourOnCart) {
             int sortBy = tour.getDiscountId();
             System.out.println("Tour Duration: " + sortBy + ", Param: " + param);
             if (sortBy == param) {
@@ -52,9 +52,9 @@ public class SortTour {
     }
 
     // sắp xếp theo 1 khoảng tiền
-    public static ArrayList<tour> SortRangePrice(LinkedList<tour> TourOnCart, int min, int max) {
-        ArrayList<tour> result = new ArrayList<>();
-        for (vn.edu.hcmuaf.bean.tour tour : TourOnCart) {
+    public static ArrayList<Tour> SortRangePrice(LinkedList<Tour> TourOnCart, int min, int max) {
+        ArrayList<Tour> result = new ArrayList<>();
+        for (Tour tour : TourOnCart) {
             int sortBy = tour.getPrice();
             System.out.println(min+"<="+sortBy+"<="+max);
             if (min <= sortBy && sortBy <= max) {
@@ -64,11 +64,11 @@ public class SortTour {
         return result;
     }
 
-    public static ArrayList<tour> SortByPriceAscending(ArrayList<tour> TourOnCart) {
-        ArrayList<tour> result = new ArrayList<>(TourOnCart);
-        Collections.sort(result, new Comparator<tour>() {
+    public static ArrayList<Tour> SortByPriceAscending(ArrayList<Tour> TourOnCart) {
+        ArrayList<Tour> result = new ArrayList<>(TourOnCart);
+        Collections.sort(result, new Comparator<Tour>() {
             @Override
-            public int compare(tour tour1, tour tour2) {
+            public int compare(Tour tour1, Tour tour2) {
                 return Integer.compare(tour1.getPrice(), tour2.getPrice());
             }
         });
@@ -76,11 +76,11 @@ public class SortTour {
     }
 
     // Sắp xếp theo giá tiền giảm dần
-    public static ArrayList<tour> SortByPriceDescending(ArrayList<tour> TourOnCart) {
-        ArrayList<tour> result = new ArrayList<>(TourOnCart);
-        Collections.sort(result, new Comparator<tour>() {
+    public static ArrayList<Tour> SortByPriceDescending(ArrayList<Tour> TourOnCart) {
+        ArrayList<Tour> result = new ArrayList<>(TourOnCart);
+        Collections.sort(result, new Comparator<Tour>() {
             @Override
-            public int compare(tour tour1, tour tour2) {
+            public int compare(Tour tour1, Tour tour2) {
                 return Integer.compare(tour2.getPrice(), tour1.getPrice());
             }
         });
@@ -89,10 +89,10 @@ public class SortTour {
 
 
     public static void main(String[] args) {
-        ArrayList<tour> tour = new TourService().getListTourbySearch("Hà Nội");
-        ArrayList<vn.edu.hcmuaf.bean.tour> listsearch= SortByPriceDescending(tour);
+        ArrayList<Tour> tour = new TourService().getListTourbySearch("Hà Nội");
+        ArrayList<Tour> listsearch= SortByPriceDescending(tour);
         System.out.println(listsearch.size());
-        for (vn.edu.hcmuaf.bean.tour tour1: listsearch) {
+        for (Tour tour1: listsearch) {
             System.out.println(tour1);
         }
 

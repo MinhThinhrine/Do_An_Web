@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.DAO;
 
 import vn.edu.hcmuaf.DB.ConnectToDatabase;
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.Tour;
 import vn.edu.hcmuaf.bean.*;
 
 import java.sql.*;
@@ -15,8 +15,8 @@ public class TourDao {
     static ResultSet rs = null;
     static PreparedStatement preparedStatement = null;
 
-    public static List<tour> findAll() {
-        List<tour> tours = new ArrayList<>();
+    public static List<Tour> findAll() {
+        List<Tour> tours = new ArrayList<>();
         try {
             String sql = "Select * from tours";
             ResultSet rs = ConnectToDatabase.executeQuery(sql);
@@ -31,7 +31,7 @@ public class TourDao {
                 String duration = rs.getString("duration");
                 String schedule = rs.getString("schedule");
                 String description = rs.getString("description");
-                tour tour = new tour(id, region, idDis, name, image, price, startTime, duration, schedule, description);
+                Tour tour = new Tour(id, region, idDis, name, image, price, startTime, duration, schedule, description);
                 tours.add(tour);
             }
         } catch (Exception e) {
@@ -40,14 +40,12 @@ public class TourDao {
         }
         return tours;
     }
-<<<<<<< Updated upstream
-    public static tour findtourbyid(int id) {
-        tour tour = null;
-=======
+
+
 
     public static Tour findtourbyid(int id) {
         Tour tour = null;
->>>>>>> Stashed changes
+
         try {
             connection = ConnectToDatabase.getConnect();
             String sql = "SELECT * FROM tours where id =?";
@@ -55,7 +53,7 @@ public class TourDao {
             preparedStatement.setInt(1, id);
             rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                tour = new tour();
+                tour = new Tour();
                 int id1 = rs.getInt("id");
                 String region = rs.getString("region");
                 int idDis = rs.getInt("discountId");
@@ -175,13 +173,11 @@ public class TourDao {
         }
         return row;
     }
-<<<<<<< Updated upstream
+
     public int numAldul (int num){
         return num;
     }
-=======
 
->>>>>>> Stashed changes
     public static void insertVali(ArrayList<valies> valiList) {
         try {
             for (valies vl : valiList) {
@@ -226,14 +222,12 @@ public class TourDao {
         }
         return sum;
     }
-<<<<<<< Updated upstream
-    public static ArrayList<tour> getListTourbySearch(String search) {
-        ArrayList<tour> listSearch = new ArrayList<>();
-=======
+
+
 
     public static ArrayList<Tour> getListTourbySearch(String search) {
         ArrayList<Tour> listSearch = new ArrayList<>();
->>>>>>> Stashed changes
+
         String sql = "SELECT * FROM tours WHERE schedule LIKE ? ORDER BY id DESC";
         Connection connect = ConnectToDatabase.getConnect();
 
@@ -253,7 +247,7 @@ public class TourDao {
                 String duration = rs.getString("duration");
                 String schedule = rs.getString("schedule");
                 String description = rs.getString("description");
-                tour tour1 = new tour(id1, region, idDis, name, image, price, startTime, duration, schedule, description);
+                Tour tour1 = new Tour(id1, region, idDis, name, image, price, startTime, duration, schedule, description);
                 listSearch.add(tour1);
             }
         } catch (Exception e) {

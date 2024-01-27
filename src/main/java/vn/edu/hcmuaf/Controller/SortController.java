@@ -1,6 +1,6 @@
 package vn.edu.hcmuaf.Controller;
 
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.Tour;
 import vn.edu.hcmuaf.serice.SortTour;
 
 import javax.servlet.*;
@@ -17,9 +17,9 @@ public class SortController extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=utf-8");
         HttpSession session = request.getSession();
-        ArrayList<tour> ListTour = (ArrayList<tour>) session.getAttribute("ListTour");
+        ArrayList<Tour> ListTour = (ArrayList<Tour>) session.getAttribute("ListTour");
         String action = request.getParameter("action");
-        ArrayList<tour> Listsort = null;
+        ArrayList<Tour> Listsort = null;
 
 
         if (action == null) {
@@ -34,8 +34,8 @@ public class SortController extends HttpServlet {
         } else if(action.equals("sortbyDay")){
             String day = request.getParameter("day");
             System.out.println(day);
-            ArrayList<tour> ListsortDay = SortTour.SortByDuration(ListTour,day);
-            for (tour t: ListsortDay) {
+            ArrayList<Tour> ListsortDay = SortTour.SortByDuration(ListTour,day);
+            for (Tour t: ListsortDay) {
                 System.out.println(t);
             }
             request.setAttribute("ListsortDay",ListsortDay);
@@ -45,8 +45,8 @@ public class SortController extends HttpServlet {
         } else if (action.equals("sortbyregion")) {
             String region = request.getParameter("region");
             System.out.println(region);
-            ArrayList<tour> ListsortRegion = SortTour.SortByRegion(ListTour,region);
-            for (tour t: ListsortRegion) {
+            ArrayList<Tour> ListsortRegion = SortTour.SortByRegion(ListTour,region);
+            for (Tour t: ListsortRegion) {
                 System.out.println(t);
             }
             request.setAttribute("ListsortDay",ListsortRegion);

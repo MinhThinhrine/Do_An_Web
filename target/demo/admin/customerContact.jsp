@@ -1,3 +1,5 @@
+<%@ page import="vn.edu.hcmuaf.bean.Feedback" %>
+<%@ page import="java.util.List" %>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -60,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <header class="header fixed-top clearfix">
         <!--logo start-->
         <div class="brand">
-            <a href="admin1.jsp" class="logo">
+            <a href="admin.jsp" class="logo">
                 ADMIN
             </a>
             <div class="sidebar-toggle-box">
@@ -81,71 +83,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         <section id="reviewCustomer"   >
             <div class="container">
-                <h1 style="margin-left: -50px">Quản lý đánh giá</h1>
+                <h3 style="margin-left: -50px">Quản lý đánh giá</h3>
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Tên người liên hệ</th>
-                        <th>Email</th>
-                        <th>Nội dung liên hệ</th>
-                        <th>Thao tác</th>
+                        <th>FeedbackID</th>
+                        <th>UserID</th>
+                        <th>Content</th>
+                        <th>Date</th>
                     </tr>
                     </thead>
                     <tbody>
+                    <%
+                        List<Feedback> listf = (List<Feedback>) request.getAttribute("listFFF");
+                        if (listf != null && !listf.isEmpty()) {
+                            for (Feedback f : listf) {
+                    %>
                     <tr>
-                        <td>Võ Minh Thịnh</td>
-                        <td>vominhthinh@gmail.com</td>
-                        <td>Hãy review chi tiết cho tôi về những Tour du lịch miền Trung...</td>
+                        <td><%=f.getId()%></td>
+                        <td><%=f.getUserId()%></td>
+                        <td><%=f.getText()%></td>
                         <td>
-                            <button onclick="thinhCMT()" class="btn btn-primary">Xem</button>
-                            <button onclick="deleteCMT()" class="btn btn-danger">Xóa</button>
+                            <%=f.getDate()%>
                         </td>
-                    </tr>
+                            <%
+                            }
+                        } else {
+                        %>
                     <tr>
-                        <td>Mai Xuân Thức</td>
-                        <td>maixuanthuc@gmail.com</td>
-                        <td>Hãy review chi tiết cho tôi về những Tour du lịch miền Bắc..</td>
-                        <td>
-                            <button onclick="thucCMT()" class="btn btn-primary">Xem</button>
-                            <button  onclick="deleteCMT()" class="btn btn-danger">Xóa</button>
-                        </td>
+                        <td colspan="4">No Feedbacks available.</td>
                     </tr>
-                    <tr>
-                        <td>Trần Quang Vũ</td>
-                        <td>tranquangvu@gmail.com</td>
-                        <td>Hãy review chi tiết cho tôi về những Tour du lịch miền Nam..</td>
-                        <td>
-                            <button onclick="duyvuCMT()" class="btn btn-primary">Xem</button>
-                            <button onclick="deleteCMT()" class="btn btn-danger">Xóa</button>
-                        </td>
+                    <%
+                        }
+                    %>
                     </tr>
-                    <tr>
-                        <td>Nguyễn Duy Vụ</td>
-                        <td>nguyenduyvu@gmail.com</td>
-                        <td>Hãy review chi tiết cho tôi về những Tour du lịch miền Núi..</td>
-                        <td>
-                            <button onclick="duyvuCMT()" class="btn btn-primary">Xem</button>
-                            <button  onclick="deleteCMT()" class="btn btn-danger">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Trần Quốc Toàn</td>
-                        <td>tranquoctoan@gmail.com</td>
-                        <td>Hãy review chi tiết cho tôi về những Tour du lịch vùng Hải Đảo..</td>
-                        <td>
-                            <button onclick="toanCMT()" class="btn btn-primary">Xem</button>
-                            <button onclick="deleteCMT()" class="btn btn-danger">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Trần Thái Linh</td>
-                        <td>tranthailinh@gmail.com</td>
-                        <td>Hãy review chi tiết cho tôi về những Tour du lịch hấp dẫn nhất..</td>
-                        <td>
-                            <button onclick="linhCMT()" class="btn btn-primary">Xem</button>
-                            <button onclick="deleteCMT()" class="btn btn-danger">Xóa</button>
-                        </td>
-                    </tr>
+
+
+
+
 
                     </tbody>
                 </table>

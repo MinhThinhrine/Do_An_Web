@@ -4,11 +4,11 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="common/tablib.jsp" %>
 <%@ page import="java.util.Objects" %>
-<%@ page import="vn.edu.hcmuaf.bean.tour" %>
+<%@ page import="vn.edu.hcmuaf.bean.Tour" %>
 <%@ page import="java.text.DecimalFormat" %>
 <%@ page import="vn.edu.hcmuaf.bean.valies" %>
 <%@ page import="java.util.ArrayList" %>
-<% tour t = (tour) request.getAttribute("tour");%>
+<% Tour t = (Tour) request.getAttribute("tour");%>
 <head>
     <!-- META DATA -->
     <meta charset="utf-8">

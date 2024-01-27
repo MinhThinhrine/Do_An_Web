@@ -12,7 +12,7 @@
     TourDao tdao = new TourDao();
 //    service_tours sv = (service_tours) request.getAttribute("service");
     ArrayList<service_tours> sv_list = (ArrayList<service_tours>) indx.service();
-    tour t;
+    Tour t;
     String id = (String) request.getAttribute("id");
     System.out.println(id);
     if(id!=null){
@@ -20,7 +20,7 @@
         System.out.print(t);
         valies v = tdao.findvalibyid(t.getId());
     }else {
-         t = (tour) request.getAttribute("tour");
+         t = (Tour) request.getAttribute("tour");
         valies v = tdao.findvalibyid(t.getId());
     }
     Integer quantity = (Integer) session.getAttribute("quatity");

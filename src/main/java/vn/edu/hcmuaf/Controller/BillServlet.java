@@ -15,7 +15,7 @@ public class BillServlet extends HttpServlet {
 
         int id = Integer.parseInt(request.getParameter("id"));
         TourDao tourDao = new TourDao();
-        tour tour = tourDao.findtourbyid(id);
+        Tour tour = tourDao.findtourbyid(id);
         request.setAttribute("tour", tour);
         request.getRequestDispatcher("./bill.jsp").forward(request, response);
 

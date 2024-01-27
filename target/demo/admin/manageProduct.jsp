@@ -1,7 +1,7 @@
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.DAO.TourDao" %>
-<%@ page import="vn.edu.hcmuaf.bean.tour" %>
+<%@ page import="vn.edu.hcmuaf.bean.Tour" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!--A Design by W3layouts
@@ -209,6 +209,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div id="container11" style="height: 100%;">
             <section class="h-100 h-custom">
+                <h3 style="margin-left: 50px">Quản lý sản phẩm</h3>
                 <div class="container h-100 py-5">
                     <div class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col">
@@ -232,9 +233,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <tr>
                                             <%
 
-List<tour> tourss = (List<tour>) request.getAttribute("tours");
+List<Tour> tourss = (List<Tour>) request.getAttribute("tours");
 if (tourss != null && !tourss.isEmpty()) {
-                    for (tour t : tourss) {
+                    for (Tour t : tourss) {
 %>
 
                                     <tr>

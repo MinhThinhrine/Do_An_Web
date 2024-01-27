@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.Controller;
 
 import vn.edu.hcmuaf.DAO.TourDao;
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.Tour;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +15,7 @@ public class ManageItem extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         TourDao tourDao = new TourDao();
-        List<tour> tours = tourDao.findAll();
+        List<Tour> tours = tourDao.findAll();
         request.setAttribute("tours", tours);
         request.getRequestDispatcher("./manageProduct.jsp").forward(request, response);
 

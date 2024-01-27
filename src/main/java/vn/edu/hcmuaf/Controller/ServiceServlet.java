@@ -14,7 +14,7 @@ public class ServiceServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         TourDao tourDao = new TourDao();
-        tour tour = tourDao.findtourbyid(id);
+        Tour tour = tourDao.findtourbyid(id);
         request.setAttribute("tour", tour);
         request.getRequestDispatcher("./service.jsp").forward(request, response);
     }

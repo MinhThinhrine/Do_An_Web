@@ -1,14 +1,12 @@
 package vn.edu.hcmuaf.Controller;
 
 import vn.edu.hcmuaf.DAO.TourDao;
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.Tour;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
 
 @WebServlet( "/PaymentServlet")
 public class PaymentServlet extends HttpServlet {
@@ -16,7 +14,7 @@ public class PaymentServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         TourDao tourDao = new TourDao();
-        tour tour = tourDao.findtourbyid(id);
+        Tour tour = tourDao.findtourbyid(id);
         request.setAttribute("tour", tour);
         request.getRequestDispatcher("./payment.jsp").forward(request, response);
     }

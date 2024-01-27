@@ -1,8 +1,8 @@
-<%@ page import="vn.edu.hcmuaf.bean.tour" %>
+<%@ page import="vn.edu.hcmuaf.bean.Tour" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.text.DecimalFormat" %>
 <%@ page import="vn.edu.hcmuaf.DAO.indexDao" %>
-<%@ page import="vn.edu.hcmuaf.bean.feedback" %>
+<%@ page import="vn.edu.hcmuaf.bean.Feedback" %>
 <%@ page import="java.util.Random" %>
 <%@ page import="vn.edu.hcmuaf.bean.news" %>
 <!doctype html>
@@ -11,7 +11,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%
     indexDao ind = new indexDao();
-    List<feedback> fback = ind.getFeedbacks() ;
+    List<Feedback> fback = ind.getFeedbacks() ;
     List<news> news = ind.getAllNews();
 %>
 <%@include file="common/tablib.jsp" %>
@@ -558,7 +558,7 @@
         </div><!--/.gallery-header-->
 
         <div class="owl-carousel owl-theme" id="testemonial-carousel">
-            <% for (feedback f : fback) { %>
+            <% for (Feedback f : fback) { %>
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img"><% Random random = new Random();%>

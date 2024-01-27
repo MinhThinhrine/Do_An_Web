@@ -2,15 +2,13 @@ package vn.edu.hcmuaf.Controller;
 
 import vn.edu.hcmuaf.DAO.TourDao;
 import vn.edu.hcmuaf.bean.*;
-import vn.edu.hcmuaf.bean.tour;
+import vn.edu.hcmuaf.bean.Tour;
 
-import javax.mail.Session;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @WebServlet(name = "PaymentController", value = "/PaymentController")
@@ -52,7 +50,7 @@ public class PaymentController extends HttpServlet {
         TourDao tourDao = new TourDao();
         request.setAttribute("date",date);
         session.setAttribute("dskh",lcs);
-        tour tour = tourDao.findtourbyid(matour);
+        Tour tour = tourDao.findtourbyid(matour);
         request.setAttribute("tour", tour);
         request.getRequestDispatcher("payment.jsp").forward(request, response);
     }

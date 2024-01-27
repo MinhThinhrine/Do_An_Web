@@ -80,6 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         <div  id="container11" style="height: 100%;">
             <section class="h-100 h-custom">
+                <h3 style="margin-left: 50px">Quản lý đơn hàng</h3>
                 <div  class="container h-100 py-5">
                     <div  class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col">
@@ -122,7 +123,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         } else {
                         %>
                                     <tr>
-                                        <td colspan="4">No users available.</td>
+                                        <td colspan="4">No Orders available.</td>
                                     </tr>
                                     <%
                                         }

@@ -19,7 +19,7 @@
         </div><!--/.gallery-header-->
 
         <div class="owl-carousel owl-theme" id="testemonial-carousel">
-            <% for (feedback f : fback) { %>
+            <% for (Feedback f : fback) { %>
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img"><% Random random = new Random();%>

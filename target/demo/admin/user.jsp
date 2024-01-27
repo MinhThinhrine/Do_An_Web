@@ -72,6 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         <div  id="container11" style="height: 100%;">
             <section class="h-100 h-custom">
+                <h3 style="margin-left: 50px">Quản lý khách hàng</h3>
                 <div class="container h-100 py-5">
                     <div class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col">
@@ -104,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <td><%= user.getPhoneNumber() %></td>
                             <td><%= user.getAddress() %></td>
                             <td><%= user.getRoleId() %></td>
-                            <td><a href="userDetails.jsp?userId=<%= user.getId() %>">Delete</a></td>
+                            <td><a href="delete?userId=<%= user.getId() %>">Delete</a></td>
                         </tr>
                         <%
                             }

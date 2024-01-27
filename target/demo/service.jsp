@@ -12,7 +12,7 @@
     TourDao tdao = new TourDao();
 //    service_tours sv = (service_tours) request.getAttribute("service");
     ArrayList<service_tours> sv_list = (ArrayList<service_tours>) indx.service();
-    tour t;
+    Tour t;
     String id = (String) request.getAttribute("id");
     System.out.println(id);
     if(id!=null){
@@ -20,7 +20,7 @@
         System.out.print(t);
         valies v = tdao.findvalibyid(t.getId());
     }else {
-         t = (tour) request.getAttribute("tour");
+         t = (Tour) request.getAttribute("tour");
         valies v = tdao.findvalibyid(t.getId());
     }
     Integer quantity = (Integer) session.getAttribute("quatity");
@@ -321,10 +321,6 @@
                                         <label>Địa chỉ</label><input type="text" class="form-control"
                                                                      name="ttlladdress" value=""/>
                                     </div>
-<<<<<<< Updated upstream
-=======
-                                    <button type="submit">Submit</button>
->>>>>>> Stashed changes
                                 <%--                            </form>--%>
                             </div>
                             <div class="customer-notice">
@@ -357,7 +353,8 @@
                                 <div class="group-fields-input-contact-adult group-fields-input-contact-wrapper mb-3">
                                     <div class="title-persona"><i class="fa-solid fa-user-tie"></i> Người lớn</div>
                                     <% for (int i = 0; i < x; i++) { %>
-                                    <div class="row"><div class="col-lg-4 col-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-12">
                                         <div class="form-group">
                                             <label class="pb-1 font-700">Họ và tên <span class="text-danger">*</span></label>
                                             <input type="text" class="form-control fullName hotel-flight-input"
@@ -783,48 +780,40 @@ startDateInput.addEventListener("change", function() {
             phoneError.textContent = "";
         }
     });
-    // Lấy tham chiếu đến form
-    var form = document.getElementById("form");
+</script>
+<script>
+    var numberOfElements = 50;
+    for (let i = 0; i < numberOfElements; i++) {
+        const fullNameInput = document.querySelector('input[name="fullName${i}"]')[0];
+        const genderInput = document.querySelectorAll(`select[name="gender${i}"]`)[0];
+        const ngayInput = document.querySelectorAll(`input[name="ngay${i}"]`)[0];
+        const thangInput = document.querySelectorAll(`input[name="thang${i}"]`)[0];
+        const namInput = document.querySelectorAll(`input[name="nam${i}"]`)[0];
+        // Sử dụng các phần tử ở đây
 
-    // Lắng nghe sự kiện submit của form
-    form.addEventListener("submit", function(event) {
-        // Kiểm tra các trường input có giá trị rỗng
-        var fullNameInput = document.querySelector('input[name^="fullName"]');
-        var genderInput = document.querySelector('select[name^="gender"]');
-        var ngayInput = document.querySelector('input[name^="ngay"]');
-        var thangInput = document.querySelector('input[name^="thang"]');
-        var namInput = document.querySelector('input[name^="nam"]');
-        var fullNameError = document.querySelector('input[name^="fullName"] + .errorform');
-        var genderError = document.querySelector('select[name^="gender"] + .errorform');
-        var ngayError = document.querySelector('input[name^="ngay"] + .errorform');
-        var thangError = document.querySelector('input[name^="thang"] + .errorform');
-        var namError = document.querySelector('input[name^="nam"] + .errorform');
+    // Lấy phần tử hiển thị thông báo lỗi
+    const fullNameError = document.querySelector('.error-notes');
 
+    // Bắt sự kiện submit form
+    document.querySelector('form').addEventListener('submit', function(event) {
+        // Kiểm tra giá trị của trường fullNameInput
         if (fullNameInput.value.trim() === "") {
-            fullNameError.style.display = "block";
-            event.preventDefault(); // Ngăn chặn gửi form nếu có lỗi
-        } else {
-            fullNameError.style.display = "none";
+            fullNameError.style.display = 'block';
+            event.preventDefault();
         }
 
+        // Kiểm tra giá trị của trường genderInput
         if (genderInput.value === "") {
-            genderError.style.display = "block";
+            // Hiển thị thông báo lỗi cho trường genderInput (nếu cần)
             event.preventDefault();
-        } else {
-            genderError.style.display = "none";
         }
 
+        // Kiểm tra giá trị của các trường ngày, tháng, năm
         if (ngayInput.value.trim() === "" || thangInput.value.trim() === "" || namInput.value.trim() === "") {
-            ngayError.style.display = "block";
-            thangError.style.display = "block";
-            namError.style.display = "block";
+            // Hiển thị thông báo lỗi cho các trường ngày, tháng, năm (nếu cần)
             event.preventDefault();
-        } else{
-            ngayError.style.display = "none";
-            thangError.style.display = "none";
-            namError.style.display = "none";
         }
     });
-
+    }
 </script>
 </html>

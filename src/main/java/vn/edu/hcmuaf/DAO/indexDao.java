@@ -38,8 +38,8 @@ public class indexDao {
         }
         return newsList;
     }
-    public static List<feedback> getFeedbacks() {
-        List<feedback> feedbackList = new ArrayList<>();
+    public static List<Feedback> getFeedbacks() {
+        List<Feedback> feedbackList = new ArrayList<>();
         try {
             connection = ConnectToDatabase.getConnect();
             String sql = "SELECT * FROM feedbacks";
@@ -50,7 +50,7 @@ public class indexDao {
                 int userId = rs.getInt("userId");
                 String text = rs.getString("text");
                 Date date = rs.getDate("date");
-                feedback feedback = new feedback(id, userId, text, date);
+                Feedback feedback = new Feedback(id, userId, text, date);
                 feedbackList.add(feedback);
             }
         } catch (Exception e) {
@@ -120,7 +120,7 @@ public class indexDao {
 
 
     public static void main(String[] args) {
-        List<feedback> newsList = new ArrayList<>();
+        List<Feedback> newsList = new ArrayList<>();
         indexDao ind = new indexDao();
         List<news> news = ind.getAllNews();
         String name = ind.getUserNameById(1);
