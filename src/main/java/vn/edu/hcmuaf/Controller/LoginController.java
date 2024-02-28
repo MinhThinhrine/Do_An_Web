@@ -3,6 +3,7 @@ package vn.edu.hcmuaf.Controller;
 
 import vn.edu.hcmuaf.DAO.UserDAO;
 import vn.edu.hcmuaf.bean.User;
+import vn.edu.hcmuaf.serice.Mahoa;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -57,7 +58,7 @@ public class LoginController extends HttpServlet {
 
             // Sử dụng hàm getUserByEmail để lấy thông tin người dùng
            UserDAO userDAO = new UserDAO();
-            User u = userDAO.checkLogin(email, pass);
+            User u = UserDAO.checkLogin(email, Mahoa.toSHA1(pass));
             if(u != null){
                 HttpSession session = request.getSession();
                 session.setAttribute("user", u); // session này dùng để

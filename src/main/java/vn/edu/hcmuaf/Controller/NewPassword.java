@@ -61,7 +61,7 @@ public class NewPassword extends HttpServlet {
                 try {
                     Connection conn = ConnectToDatabase.getConnect();
                     PreparedStatement pst = conn.prepareStatement("update users set password = ? where email = ? ");
-                    pst.setString(1, newpass1);
+                    pst.setString(1, Mahoa.toSHA1(newpass1));
                     pst.setString(2, email);
                     int rowCount = pst.executeUpdate();
                     if (rowCount > 0) {
