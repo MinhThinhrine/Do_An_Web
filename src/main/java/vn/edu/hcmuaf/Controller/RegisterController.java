@@ -3,7 +3,6 @@ package vn.edu.hcmuaf.Controller;
 
 import vn.edu.hcmuaf.DAO.UserDAO;
 import vn.edu.hcmuaf.bean.User;
-import vn.edu.hcmuaf.serice.Mahoa;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,7 +29,7 @@ public class RegisterController extends HttpServlet {
         String username = request.getParameter("userName") == null ? "" : request.getParameter("userName");
 
         // Tạo đối tượng User
-        User user = new User(username, email, Mahoa.toSHA1(password));
+        User user = new User(username, email, password);
 
         // Thêm người dùng vào cơ sở dữ liệu
         UserDAO userDAO = new UserDAO();
