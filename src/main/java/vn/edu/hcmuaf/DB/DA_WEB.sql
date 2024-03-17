@@ -93,7 +93,7 @@ CREATE TABLE `users` (
     `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
     `phoneNumber` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `roleId` int(11) NOT NULL,
+    `roleId` int(11) DEFAULT 2,
     PRIMARY KEY (`id`),
     KEY `fk_role_id` (`roleId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -420,8 +420,9 @@ Chợ Nổi Cái Răng là một điểm đến thu hút du khách bởi không 
     ,'Quảng Bình - Đà Nẵng là hai điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
     ('Miền Trung', 1, 'Đà Lạt - Nha Trang', '116.jpg', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Đà Lạt - Ngày 2: chợ Đà Lạt- Ngày 3:Thác Datanla- Ngày 4: Nha Trang'
     ,'chuyến du lịch từ Đà Lạt tới Nha Trang sẽ mang đến cho du khách những điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
-    ('Miền Trung', 1, 'Đà Lạt - Vinpearl Safari', '117.jpg', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Đà Lạt - Ngày 2: chợ Đà Lạt- Ngày 3:Thác Datanla- Ngày 4: Vinpearl Safari')
-        ,
+    ('Miền Trung', 1, 'Đà Lạt - Vinpearl Safari', '117.jpg', 3990000, 'hằng ngày', '4 ngày 3 đêm', 'Ngày 1: Đà Lạt - Ngày 2: chợ Đà Lạt- Ngày 3:Thác Datanla- Ngày 4: Vinpearl Safari'
+    ,' chuyến du lịch từ Đà Lạt tới Nha Trang sẽ mang đến cho du khách những điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
+
     ('Miền Trung', 1, 'Đà Lạt - Nha Trang', '118.jpg', 5990000, 'hằng ngày', '6 ngày 5 đêm', 'Ngày 1: Đà Lạt- Ngày 2: chợ Đà Lạt- Ngày 3: Thác Datanla -Ngày 4: Thác Datanla- Ngày 5:Vinpearl Land- Ngày 6: Nha Trang'
     ,' chuyến du lịch từ Đà Lạt tới Nha Trang sẽ mang đến cho du khách những điểm đến du lịch nổi tiếng ở miền Trung Việt Nam với vẻ đẹp tự nhiên, văn hóa độc đáo và ẩm thực hấp dẫn.'),
 

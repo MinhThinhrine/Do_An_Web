@@ -28,6 +28,10 @@ public class RegisterController extends HttpServlet {
         String password = request.getParameter("pass1") == null ? "" : request.getParameter("pass1");
         String confirmPassword = request.getParameter("pass2") == null ? "" : request.getParameter("pass2");
         String username = request.getParameter("userName") == null ? "" : request.getParameter("userName");
+        System.out.println(email);
+        System.out.println(password);
+        System.out.println(confirmPassword);
+        System.out.println(username);
 
         // Tạo đối tượng User
         User user = new User(username, email, Mahoa.toSHA1(password));
